@@ -105,6 +105,7 @@ drop procedure if exists LISTAR_EVENTO_ALUMNO;
 
 drop procedure if exists LISTAR_EVENTOS_INSCRITOS;
 drop procedure if exists LISTAR_HISTORIAL_EVENTOS;
+drop procedure if exists LISTAR_TRES_EVENTOS_PROXIMOS;
 
 -- EVENTO_PONENTE
 drop procedure if exists INSERTAR_EVENTO_PONENTE;
