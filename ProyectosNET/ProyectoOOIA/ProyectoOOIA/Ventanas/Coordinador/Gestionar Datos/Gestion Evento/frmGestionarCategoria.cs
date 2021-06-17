@@ -121,7 +121,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             if (dgvCategoria.CurrentRow != null)
             {
                 categoriaEvento = (GestionEventoWS.categoriaEvento)dgvCategoria.CurrentRow.DataBoundItem;
-                DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar este empleado?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar esta categoria?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
                     int resultado = daoCategoria.eliminarCategoriaEvento(categoriaEvento);
@@ -136,7 +136,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
                 }
             }
             else
-                MessageBox.Show("Debe seleccionar una especialidad para eliminar.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar una categoria para eliminar.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void tsbCancelar_Click(object sender, EventArgs e)
@@ -159,7 +159,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             //Validar Especialidad
             if (txtNombre.Text == "")
             {
-                MessageBox.Show("No ha ingresado el nombre de la especialidad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No ha ingresado el nombre de la categoria", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             categoriaEvento.nombre = txtNombre.Text;

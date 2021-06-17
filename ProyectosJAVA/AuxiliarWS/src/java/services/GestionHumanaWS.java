@@ -198,7 +198,7 @@ public class GestionHumanaWS {
         return lista;
     }
     @WebMethod(operationName = "insertarPonente")
-    public int insertarInvitado(@WebParam(name = "Ponente")Ponente ponente){
+    public int insertarInvitado(@WebParam(name = "ponente")Ponente ponente){
         int resultado=0;
         try {
             resultado=this.ponente.insertar(ponente);
@@ -209,7 +209,7 @@ public class GestionHumanaWS {
         
     }
     @WebMethod(operationName = "modificarPonente")
-    public int modificarInvitado(@WebParam(name = "invitado")Ponente ponente){
+    public int modificarInvitado(@WebParam(name = "ponente")Ponente ponente){
         int resultado=0;
         try {
             resultado=this.ponente.modificar(ponente);

@@ -524,7 +524,7 @@ begin
     	from persona p 
     	inner join miembro_externo  me on p.id_persona = me.fid_persona
     	inner join ponente po on po.fid_miembro_externo = me.id_miembro_externo
-    	where p.id_ponente = _id_ponente;
+    	where po.id_ponente = _id_ponente;
     	-- persona
 	update persona set nombre = _nombre,  dni = _dni, fecha_nacimiento = _fecha_nacimiento, direccion = _direccion , correo = _correo
     	where id_persona = aux_persona;
@@ -983,7 +983,7 @@ create procedure MODIFICAR_CATEGORIA_EVENTO(
 	in _nombre varchar(150)
 )
 begin
-	update categoria set nombre = _nombre
+	update categoria_evento set nombre = _nombre
     	where id_categoria_evento = _id_categoria_evento;
 end$
 

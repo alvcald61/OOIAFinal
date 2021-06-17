@@ -76,7 +76,7 @@ public class PonenteMySQL implements PonenteDao{
             /*Ponente*/
             cs.setString("_organizacion",ponente.getOrganizacion());
             cs.executeUpdate();
-            ponente.setId_persona(cs.getInt("_id_invitado"));
+            ponente.setId_persona(cs.getInt("_id_ponente"));
             resultado = 1;
             cs.close();
         }catch(Exception ex){

@@ -601,6 +601,7 @@ C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Proy
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Bunifu_UI_v1.5.dll
+C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Card.resources
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.CardEvento.resources
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Horario.resources
@@ -667,3 +668,4 @@ C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Proy
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
