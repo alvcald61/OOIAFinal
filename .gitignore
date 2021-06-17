@@ -21,5 +21,11 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+!/ProyectosJAVA/ooiaCargaMasivaCSV/src/pe/edu/pucp/ooia/lib/mysql-connector-java-8.0.24.jar
+!/ProyectosJAVA/ooiaGestAcademicaController/src/pe/edu/pucp/ooia/gest_academica/lib/mysql-connector-java-8.0.24.jar
+!/ProyectosJAVA/ooiaGestAtencionController/src/pe/edu/pucp/ooia/gest_atencion/lib/mysql-connector-java-8.0.24.jar
+!/ProyectosJAVA/ooiaGestEventosController/src/pe/edu/pucp/gestion_eventos/lib/mysql-connector-java-8.0.24.jar
+!/ProyectosJAVA/ooiaGestHumanaController/src/pe/edu/pucp/ooia/gest_humana/lib/mysql-connector-java-8.0.24.jar
+!/ProyectosJAVA/PruebaMySql/src/lib/mysql-connector-java-8.0.24.jar
+!/ProyectosJAVA/WebServicesOOIA/src/java/pe/edu/pucp/OOIA/lib/mysql-connector-java-8.0.24.jar
 !/ProyectosJAVA/AuxiliarWS/src/java/lib/mysql-connector-java-8.0.24.jar
-/ProyectosJAVA/AuxiliarWS/dist/
