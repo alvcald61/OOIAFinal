@@ -15,7 +15,12 @@ namespace ProyectoOOIA.Ventanas
         public frmDetalleEvento(GestionEventoWS.evento evento)
         {
             InitializeComponent();
-
+            lblHeader.Text = evento.nombre;
+            dgvPonentes.AutoGenerateColumns = false;
+            txtLugar.ReadOnly = true;
+            txtCapacidad.ReadOnly = true;
+            txtCupo.ReadOnly = true;
+            txtDescripcion.ReadOnly=true;
             dtpFecha.Value = evento.fecha;
             dtpHoraInicio.Value = evento.horaInicio;
             dtpHoraInicio.Value = evento.horaFin;
@@ -23,9 +28,20 @@ namespace ProyectoOOIA.Ventanas
             txtCapacidad.Text = evento.capacidad.ToString();
             txtCupo.Text = evento.capacidad.ToString();
             txtDescripcion.Text = evento.descripcion;
-            MemoryStream ms = new MemoryStream(evento.imagen);
-            pbEvento.Image = Image.FromStream(ms);
+            MemoryStream ms;
+            if (evento.imagen != null)
+            {
+                ms = new MemoryStream(evento.imagen);
+                pbEvento.Image = Image.FromStream(ms);
+            }
+            else
+            {
+
+            }
+
             daoEventoPonente = new GestionEventoWSClient();
+            dtpFecha.Enabled = false;
+            dtpHoraInicio.Enabled = false;
             mostrarPonentes(evento);
         }
 
