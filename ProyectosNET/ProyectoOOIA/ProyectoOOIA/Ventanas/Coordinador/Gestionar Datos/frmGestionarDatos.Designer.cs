@@ -125,7 +125,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlHeader.Controls.Add(this.txtHeader);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(912, 87);
             this.pnlHeader.TabIndex = 0;
@@ -161,7 +161,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.panelGestionHumana.Controls.Add(this.tabGestionAtencion);
             this.panelGestionHumana.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGestionHumana.Location = new System.Drawing.Point(0, 87);
-            this.panelGestionHumana.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelGestionHumana.Margin = new System.Windows.Forms.Padding(4);
             this.panelGestionHumana.Name = "panelGestionHumana";
             this.panelGestionHumana.SelectedIndex = 0;
             this.panelGestionHumana.Size = new System.Drawing.Size(912, 480);
@@ -176,9 +176,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.tabGestionHumana.Controls.Add(this.pnlAsesor);
             this.tabGestionHumana.Controls.Add(this.pnlAlumno);
             this.tabGestionHumana.Location = new System.Drawing.Point(4, 25);
-            this.tabGestionHumana.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabGestionHumana.Margin = new System.Windows.Forms.Padding(4);
             this.tabGestionHumana.Name = "tabGestionHumana";
-            this.tabGestionHumana.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabGestionHumana.Padding = new System.Windows.Forms.Padding(4);
             this.tabGestionHumana.Size = new System.Drawing.Size(904, 451);
             this.tabGestionHumana.TabIndex = 0;
             this.tabGestionHumana.Text = "Gestion Humana";
@@ -192,7 +192,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.panel3.Controls.Add(this.lblEspecialidad);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(4, 493);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(875, 96);
             this.panel3.TabIndex = 41;
@@ -200,7 +200,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // btnEspecialidad
             // 
             this.btnEspecialidad.Location = new System.Drawing.Point(539, 38);
-            this.btnEspecialidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEspecialidad.Margin = new System.Windows.Forms.Padding(4);
             this.btnEspecialidad.Name = "btnEspecialidad";
             this.btnEspecialidad.Size = new System.Drawing.Size(184, 36);
             this.btnEspecialidad.TabIndex = 37;
@@ -238,7 +238,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.panel1.Controls.Add(this.label13);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(4, 397);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(875, 96);
             this.panel1.TabIndex = 40;
@@ -251,7 +251,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlCoordinador.Controls.Add(this.lblCoordinador);
             this.pnlCoordinador.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCoordinador.Location = new System.Drawing.Point(0, 0);
-            this.pnlCoordinador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCoordinador.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCoordinador.Name = "pnlCoordinador";
             this.pnlCoordinador.Size = new System.Drawing.Size(875, 96);
             this.pnlCoordinador.TabIndex = 41;
@@ -259,7 +259,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // btnCoordinador
             // 
             this.btnCoordinador.Location = new System.Drawing.Point(539, 38);
-            this.btnCoordinador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCoordinador.Margin = new System.Windows.Forms.Padding(4);
             this.btnCoordinador.Name = "btnCoordinador";
             this.btnCoordinador.Size = new System.Drawing.Size(184, 36);
             this.btnCoordinador.TabIndex = 37;
@@ -292,7 +292,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(531, 38);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(184, 36);
             this.button1.TabIndex = 37;
@@ -329,7 +329,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlEspecialidad.Controls.Add(this.lblPonente);
             this.pnlEspecialidad.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEspecialidad.Location = new System.Drawing.Point(4, 301);
-            this.pnlEspecialidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlEspecialidad.Margin = new System.Windows.Forms.Padding(4);
             this.pnlEspecialidad.Name = "pnlEspecialidad";
             this.pnlEspecialidad.Size = new System.Drawing.Size(875, 96);
             this.pnlEspecialidad.TabIndex = 39;
@@ -337,7 +337,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // btnPonente
             // 
             this.btnPonente.Location = new System.Drawing.Point(539, 38);
-            this.btnPonente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPonente.Margin = new System.Windows.Forms.Padding(4);
             this.btnPonente.Name = "btnPonente";
             this.btnPonente.Size = new System.Drawing.Size(184, 36);
             this.btnPonente.TabIndex = 37;
@@ -382,7 +382,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlAsesor.Controls.Add(this.btnAsesor);
             this.pnlAsesor.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAsesor.Location = new System.Drawing.Point(4, 139);
-            this.pnlAsesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlAsesor.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAsesor.Name = "pnlAsesor";
             this.pnlAsesor.Size = new System.Drawing.Size(875, 162);
             this.pnlAsesor.TabIndex = 38;
@@ -403,7 +403,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             this.rbPsicologo.AutoSize = true;
             this.rbPsicologo.Location = new System.Drawing.Point(652, 31);
-            this.rbPsicologo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbPsicologo.Margin = new System.Windows.Forms.Padding(4);
             this.rbPsicologo.Name = "rbPsicologo";
             this.rbPsicologo.Size = new System.Drawing.Size(90, 21);
             this.rbPsicologo.TabIndex = 39;
@@ -416,7 +416,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.rbProfesor.AutoSize = true;
             this.rbProfesor.Checked = true;
             this.rbProfesor.Location = new System.Drawing.Point(531, 31);
-            this.rbProfesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbProfesor.Margin = new System.Windows.Forms.Padding(4);
             this.rbProfesor.Name = "rbProfesor";
             this.rbProfesor.Size = new System.Drawing.Size(83, 21);
             this.rbProfesor.TabIndex = 38;
@@ -449,7 +449,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // btnAsesorCSV
             // 
             this.btnAsesorCSV.Location = new System.Drawing.Point(539, 112);
-            this.btnAsesorCSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAsesorCSV.Margin = new System.Windows.Forms.Padding(4);
             this.btnAsesorCSV.Name = "btnAsesorCSV";
             this.btnAsesorCSV.Size = new System.Drawing.Size(184, 34);
             this.btnAsesorCSV.TabIndex = 34;
@@ -483,7 +483,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             this.txtAsesor.Enabled = false;
             this.txtAsesor.Location = new System.Drawing.Point(13, 118);
-            this.txtAsesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAsesor.Margin = new System.Windows.Forms.Padding(4);
             this.txtAsesor.Name = "txtAsesor";
             this.txtAsesor.Size = new System.Drawing.Size(467, 22);
             this.txtAsesor.TabIndex = 18;
@@ -491,7 +491,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // btnAsesor
             // 
             this.btnAsesor.Location = new System.Drawing.Point(539, 59);
-            this.btnAsesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAsesor.Margin = new System.Windows.Forms.Padding(4);
             this.btnAsesor.Name = "btnAsesor";
             this.btnAsesor.Size = new System.Drawing.Size(184, 36);
             this.btnAsesor.TabIndex = 15;
@@ -511,7 +511,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlAlumno.Controls.Add(this.btnAlumno);
             this.pnlAlumno.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAlumno.Location = new System.Drawing.Point(4, 4);
-            this.pnlAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAlumno.Name = "pnlAlumno";
             this.pnlAlumno.Size = new System.Drawing.Size(875, 135);
             this.pnlAlumno.TabIndex = 37;
@@ -542,7 +542,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // btnAlumnoCSV
             // 
             this.btnAlumnoCSV.Location = new System.Drawing.Point(539, 86);
-            this.btnAlumnoCSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlumnoCSV.Margin = new System.Windows.Forms.Padding(4);
             this.btnAlumnoCSV.Name = "btnAlumnoCSV";
             this.btnAlumnoCSV.Size = new System.Drawing.Size(184, 34);
             this.btnAlumnoCSV.TabIndex = 34;
@@ -576,7 +576,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             this.txtAlumno.Enabled = false;
             this.txtAlumno.Location = new System.Drawing.Point(13, 92);
-            this.txtAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.txtAlumno.Name = "txtAlumno";
             this.txtAlumno.Size = new System.Drawing.Size(467, 22);
             this.txtAlumno.TabIndex = 18;
@@ -584,7 +584,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // btnAlumno
             // 
             this.btnAlumno.Location = new System.Drawing.Point(539, 33);
-            this.btnAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.btnAlumno.Name = "btnAlumno";
             this.btnAlumno.Size = new System.Drawing.Size(184, 36);
             this.btnAlumno.TabIndex = 15;
@@ -599,9 +599,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.tabGestionAcademica.Controls.Add(this.pnlEvaluacion);
             this.tabGestionAcademica.Controls.Add(this.pnlCursoLLevado);
             this.tabGestionAcademica.Location = new System.Drawing.Point(4, 25);
-            this.tabGestionAcademica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabGestionAcademica.Margin = new System.Windows.Forms.Padding(4);
             this.tabGestionAcademica.Name = "tabGestionAcademica";
-            this.tabGestionAcademica.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabGestionAcademica.Padding = new System.Windows.Forms.Padding(4);
             this.tabGestionAcademica.Size = new System.Drawing.Size(904, 451);
             this.tabGestionAcademica.TabIndex = 1;
             this.tabGestionAcademica.Text = "Gestion Academica";
@@ -615,7 +615,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlCurso.Controls.Add(this.lblCurso);
             this.pnlCurso.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCurso.Location = new System.Drawing.Point(4, 274);
-            this.pnlCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCurso.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCurso.Name = "pnlCurso";
             this.pnlCurso.Size = new System.Drawing.Size(896, 96);
             this.pnlCurso.TabIndex = 40;
@@ -623,12 +623,13 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // btnCurso
             // 
             this.btnCurso.Location = new System.Drawing.Point(539, 38);
-            this.btnCurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCurso.Margin = new System.Windows.Forms.Padding(4);
             this.btnCurso.Name = "btnCurso";
             this.btnCurso.Size = new System.Drawing.Size(184, 36);
             this.btnCurso.TabIndex = 37;
             this.btnCurso.Text = "Gestionar Cursos";
             this.btnCurso.UseVisualStyleBackColor = true;
+            this.btnCurso.Click += new System.EventHandler(this.btnCurso_Click);
             // 
             // lblCursoForm
             // 
@@ -664,7 +665,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlEvaluacion.Controls.Add(this.btnEvaluacion);
             this.pnlEvaluacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEvaluacion.Location = new System.Drawing.Point(4, 139);
-            this.pnlEvaluacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlEvaluacion.Margin = new System.Windows.Forms.Padding(4);
             this.pnlEvaluacion.Name = "pnlEvaluacion";
             this.pnlEvaluacion.Size = new System.Drawing.Size(896, 135);
             this.pnlEvaluacion.TabIndex = 39;
@@ -695,7 +696,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // btnEvaluacionCSV
             // 
             this.btnEvaluacionCSV.Location = new System.Drawing.Point(539, 86);
-            this.btnEvaluacionCSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEvaluacionCSV.Margin = new System.Windows.Forms.Padding(4);
             this.btnEvaluacionCSV.Name = "btnEvaluacionCSV";
             this.btnEvaluacionCSV.Size = new System.Drawing.Size(184, 34);
             this.btnEvaluacionCSV.TabIndex = 34;
@@ -729,7 +730,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             this.txtEvaluacion.Enabled = false;
             this.txtEvaluacion.Location = new System.Drawing.Point(13, 92);
-            this.txtEvaluacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEvaluacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtEvaluacion.Name = "txtEvaluacion";
             this.txtEvaluacion.Size = new System.Drawing.Size(467, 22);
             this.txtEvaluacion.TabIndex = 18;
@@ -737,7 +738,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // btnEvaluacion
             // 
             this.btnEvaluacion.Location = new System.Drawing.Point(539, 33);
-            this.btnEvaluacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEvaluacion.Margin = new System.Windows.Forms.Padding(4);
             this.btnEvaluacion.Name = "btnEvaluacion";
             this.btnEvaluacion.Size = new System.Drawing.Size(184, 36);
             this.btnEvaluacion.TabIndex = 15;
@@ -756,7 +757,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlCursoLLevado.Controls.Add(this.btnCursoLlevado);
             this.pnlCursoLLevado.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCursoLLevado.Location = new System.Drawing.Point(4, 4);
-            this.pnlCursoLLevado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCursoLLevado.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCursoLLevado.Name = "pnlCursoLLevado";
             this.pnlCursoLLevado.Size = new System.Drawing.Size(896, 135);
             this.pnlCursoLLevado.TabIndex = 38;
@@ -787,7 +788,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // btnCursoLlevadoCSV
             // 
             this.btnCursoLlevadoCSV.Location = new System.Drawing.Point(539, 86);
-            this.btnCursoLlevadoCSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCursoLlevadoCSV.Margin = new System.Windows.Forms.Padding(4);
             this.btnCursoLlevadoCSV.Name = "btnCursoLlevadoCSV";
             this.btnCursoLlevadoCSV.Size = new System.Drawing.Size(184, 34);
             this.btnCursoLlevadoCSV.TabIndex = 34;
@@ -821,7 +822,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             this.txtCursoLlevado.Enabled = false;
             this.txtCursoLlevado.Location = new System.Drawing.Point(13, 92);
-            this.txtCursoLlevado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCursoLlevado.Margin = new System.Windows.Forms.Padding(4);
             this.txtCursoLlevado.Name = "txtCursoLlevado";
             this.txtCursoLlevado.Size = new System.Drawing.Size(467, 22);
             this.txtCursoLlevado.TabIndex = 18;
@@ -829,7 +830,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // btnCursoLlevado
             // 
             this.btnCursoLlevado.Location = new System.Drawing.Point(539, 33);
-            this.btnCursoLlevado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCursoLlevado.Margin = new System.Windows.Forms.Padding(4);
             this.btnCursoLlevado.Name = "btnCursoLlevado";
             this.btnCursoLlevado.Size = new System.Drawing.Size(184, 36);
             this.btnCursoLlevado.TabIndex = 15;
@@ -842,9 +843,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.tabGestionAtencion.AutoScroll = true;
             this.tabGestionAtencion.Controls.Add(this.pnlCodigoAtencion);
             this.tabGestionAtencion.Location = new System.Drawing.Point(4, 25);
-            this.tabGestionAtencion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabGestionAtencion.Margin = new System.Windows.Forms.Padding(4);
             this.tabGestionAtencion.Name = "tabGestionAtencion";
-            this.tabGestionAtencion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabGestionAtencion.Padding = new System.Windows.Forms.Padding(4);
             this.tabGestionAtencion.Size = new System.Drawing.Size(904, 451);
             this.tabGestionAtencion.TabIndex = 2;
             this.tabGestionAtencion.Text = "Gestion Atencion";
@@ -858,7 +859,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlCodigoAtencion.Controls.Add(this.lblCodigoAtencion);
             this.pnlCodigoAtencion.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCodigoAtencion.Location = new System.Drawing.Point(4, 4);
-            this.pnlCodigoAtencion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCodigoAtencion.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCodigoAtencion.Name = "pnlCodigoAtencion";
             this.pnlCodigoAtencion.Size = new System.Drawing.Size(896, 96);
             this.pnlCodigoAtencion.TabIndex = 40;
@@ -866,7 +867,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // btnCodigoAtencion
             // 
             this.btnCodigoAtencion.Location = new System.Drawing.Point(539, 38);
-            this.btnCodigoAtencion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCodigoAtencion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCodigoAtencion.Name = "btnCodigoAtencion";
             this.btnCodigoAtencion.Size = new System.Drawing.Size(184, 36);
             this.btnCodigoAtencion.TabIndex = 37;
@@ -904,7 +905,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.ClientSize = new System.Drawing.Size(912, 567);
             this.Controls.Add(this.panelGestionHumana);
             this.Controls.Add(this.pnlHeader);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.Name = "frmCargarDatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

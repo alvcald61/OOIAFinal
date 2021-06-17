@@ -211,5 +211,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         {
             new frmCargarCursosLlevados().ShowDialog();
         }
+
+        private void btnCurso_Click(object sender, EventArgs e)
+        {
+            new frmCargarCursos().ShowDialog();
+        }
     }
 }
