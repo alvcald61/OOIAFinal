@@ -54,6 +54,16 @@ public class GestionEventoWS {
         }
         return lista;
     }
+    @WebMethod(operationName = "listar_tres_eventos_proximos")
+    public ArrayList<Evento> listar_tres_eventos_proximos() {
+        ArrayList<Evento> lista= new ArrayList<>();
+        try {
+            lista=eventoSQL.listar_tres_eventos_proximos();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return lista;
+    }
     
      @WebMethod(operationName = "listarEvento_por_fecha")
     public ArrayList<Evento> listarEvento_por_fecha(@WebParam(name = "fecha")Date fecha) {

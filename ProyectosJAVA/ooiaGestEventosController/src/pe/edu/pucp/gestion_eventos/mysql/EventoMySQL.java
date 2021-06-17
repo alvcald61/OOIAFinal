@@ -69,6 +69,47 @@ public class EventoMySQL implements EventoDAO{
         return eventos;
     }
     
+    //LISTAR_TRES_EVENTOS_PROXIMOS
+    
+    public ArrayList<Evento> listar_tres_eventos_proximos() {
+        ArrayList<Evento> eventos = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_TRES_EVENTOS_PROXIMOS()}");
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Evento evento = new Evento();
+                evento.setId_evento(rs.getInt("id_evento"));
+                evento.setNombre(rs.getString("nombre"));
+                evento.setDescripcion(rs.getString("descripcion"));
+                evento.setCategoria(new CategoriaEvento(rs.getInt("fid_categoria_evento"), 
+                rs.getString("nombre_categoria")));
+                evento.setCoordinador(new Coordinador());
+                evento.setCoordinador(obtenerCoordinador(rs.getInt("fid_coordinador")));
+                evento.setCapacidad(rs.getInt("capacidad"));
+                evento.setCupo(rs.getInt("cupo"));
+                evento.setFecha(rs.getDate("fecha"));
+                evento.setHoraInicio(rs.getTime("hora_inicio"));
+                evento.setHoraFin(rs.getTime("hora_fin"));
+                evento.setLugar(rs.getString("lugar"));
+                evento.setImagen(rs.getBytes("imagen"));
+                evento.setActivo(true);
+                evento.setPonentes(listarPonente(evento.getId_evento()));
+                eventos.add(evento);
+                
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            Logger.getLogger(EventoMySQL.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage()+"El error es aqui");};
+            
+        }
+        return eventos;
+    }
+    
     @Override
     public ArrayList<Evento> listar_x_fecha(Date fecha) {
         ArrayList<Evento> eventos = new ArrayList<>();

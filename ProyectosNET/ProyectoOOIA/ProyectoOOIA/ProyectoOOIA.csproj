@@ -220,6 +220,12 @@
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.Designer.cs">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Asesor\Citas\frmRegistrarHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Asesor\Citas\frmRegistrarHorario.Designer.cs">
+      <DependentUpon>frmRegistrarHorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Eventos\frmEliminarEventoOOIA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -560,6 +566,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Asesor\Citas\frmRegistrarHorario.resx">
+      <DependentUpon>frmRegistrarHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Coordinador\Eventos\frmEliminarEventoOOIA.resx">
       <DependentUpon>frmEliminarEventoOOIA.cs</DependentUpon>
@@ -1046,6 +1055,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listarEvento_por_nombre_categoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse.datasource">

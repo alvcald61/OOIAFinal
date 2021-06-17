@@ -64,7 +64,8 @@ namespace ProyectoOOIA.Componentes
             this.lblDia.Name = "lblDia";
             this.lblDia.Size = new System.Drawing.Size(36, 29);
             this.lblDia.TabIndex = 10;
-            this.lblDia.Text = "10";
+            this.lblDia.Text = "1";
+            this.lblDia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 

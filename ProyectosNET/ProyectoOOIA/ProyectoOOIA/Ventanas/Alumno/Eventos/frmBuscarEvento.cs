@@ -48,9 +48,9 @@ namespace ProyectoOOIA.Ventanas
         {
             evento=  dgvEventos.Rows[e.RowIndex].DataBoundItem as GestionEventoWS.evento;
             dgvEventos.Rows[e.RowIndex].Cells[0].Value = evento.nombre;
-            dgvEventos.Rows[e.RowIndex].Cells[1].Value = evento.fecha.Date;
-            dgvEventos.Rows[e.RowIndex].Cells[2].Value = evento.horaInicio.Hour;
-            dgvEventos.Rows[e.RowIndex].Cells[3].Value = evento.horaFin.Hour;
+            dgvEventos.Rows[e.RowIndex].Cells[1].Value = evento.fecha.Date.Day+"/"+evento.fecha.Month+"/"+evento.fecha.Year;
+            dgvEventos.Rows[e.RowIndex].Cells[2].Value = evento.horaInicio.TimeOfDay.Hours+":"+evento.horaInicio.Minute;
+            dgvEventos.Rows[e.RowIndex].Cells[3].Value = evento.horaFin.TimeOfDay.Hours +":"+evento.horaFin.Minute;
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

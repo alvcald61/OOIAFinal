@@ -26,6 +26,8 @@
   <xs:element name="listarEvento_por_fechaResponse" type="tns:listarEvento_por_fechaResponse" />
   <xs:element name="listarEvento_por_nombre_categoria" type="tns:listarEvento_por_nombre_categoria" />
   <xs:element name="listarEvento_por_nombre_categoriaResponse" type="tns:listarEvento_por_nombre_categoriaResponse" />
+  <xs:element name="listar_tres_eventos_proximos" type="tns:listar_tres_eventos_proximos" />
+  <xs:element name="listar_tres_eventos_proximosResponse" type="tns:listar_tres_eventos_proximosResponse" />
   <xs:element name="modificarCategoriaEvento" type="tns:modificarCategoriaEvento" />
   <xs:element name="modificarCategoriaEventoResponse" type="tns:modificarCategoriaEventoResponse" />
   <xs:element name="modificarCoordinadorEvento" type="tns:modificarCoordinadorEvento" />
@@ -158,16 +160,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarEvento_por_nombre_categoria">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarEvento_por_nombre_categoriaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="eliminarEncuestaEvento">
     <xs:sequence>
       <xs:element minOccurs="0" name="eventoAl" type="tns:eventoAlumno" />
@@ -190,14 +182,14 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarCategoriaEvento">
+  <xs:complexType name="listarEvento_por_nombre_categoria">
     <xs:sequence>
-      <xs:element minOccurs="0" name="categoria" type="tns:categoriaEvento" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarCategoriaEventoResponse">
+  <xs:complexType name="listarEvento_por_nombre_categoriaResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCoordinadorEvento">
@@ -206,6 +198,16 @@
   <xs:complexType name="listarCoordinadorEventoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:coordinador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCategoriaEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="categoria" type="tns:categoriaEvento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCategoriaEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCategoriaEvento">
@@ -226,6 +228,14 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarEncuestaEvento">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEncuestaEventoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:eventoAlumno" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="modificarEvento">
     <xs:sequence>
       <xs:element minOccurs="0" name="evento" type="tns:evento" />
@@ -236,22 +246,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarEncuestaEvento">
+  <xs:complexType name="listar_tres_eventos_proximos">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="listarEncuestaEventoResponse">
+  <xs:complexType name="listar_tres_eventos_proximosResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:eventoAlumno" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarEvento">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="evento" type="tns:evento" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarEventoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarCoordinadorEvento">
@@ -260,6 +260,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarCoordinadorEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEventoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
