@@ -26,16 +26,6 @@ namespace ProyectoOOIA.AlumnoWS {
         System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.insertarAlumnoResponse> insertarAlumnoAsync(ProyectoOOIA.AlumnoWS.insertarAlumnoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/modificarAlumnoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/AlumnoWS/modificarAlumnoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.AlumnoWS.modificarAlumnoResponse modificarAlumno(ProyectoOOIA.AlumnoWS.modificarAlumnoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/modificarAlumnoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/AlumnoWS/modificarAlumnoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.modificarAlumnoResponse> modificarAlumnoAsync(ProyectoOOIA.AlumnoWS.modificarAlumnoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/eliminarAlumnoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/AlumnoWS/eliminarAlumnoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -54,6 +44,16 @@ namespace ProyectoOOIA.AlumnoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/listarAlumnoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/AlumnoWS/listarAlumnoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.listarAlumnoResponse> listarAlumnoAsync(ProyectoOOIA.AlumnoWS.listarAlumnoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/modificarAlumnoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/AlumnoWS/modificarAlumnoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.AlumnoWS.modificarAlumnoResponse modificarAlumno(ProyectoOOIA.AlumnoWS.modificarAlumnoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/modificarAlumnoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/AlumnoWS/modificarAlumnoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.modificarAlumnoResponse> modificarAlumnoAsync(ProyectoOOIA.AlumnoWS.modificarAlumnoRequest request);
     }
     
     /// <remarks/>
@@ -460,42 +460,6 @@ namespace ProyectoOOIA.AlumnoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAlumno", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarAlumnoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.AlumnoWS.alumno alumno;
-        
-        public modificarAlumnoRequest() {
-        }
-        
-        public modificarAlumnoRequest(ProyectoOOIA.AlumnoWS.alumno alumno) {
-            this.alumno = alumno;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAlumnoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarAlumnoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarAlumnoResponse() {
-        }
-        
-        public modificarAlumnoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAlumno", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class eliminarAlumnoRequest {
         
@@ -557,6 +521,42 @@ namespace ProyectoOOIA.AlumnoWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAlumno", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarAlumnoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.AlumnoWS.alumno alumno;
+        
+        public modificarAlumnoRequest() {
+        }
+        
+        public modificarAlumnoRequest(ProyectoOOIA.AlumnoWS.alumno alumno) {
+            this.alumno = alumno;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAlumnoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarAlumnoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarAlumnoResponse() {
+        }
+        
+        public modificarAlumnoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface AlumnoWSChannel : ProyectoOOIA.AlumnoWS.AlumnoWS, System.ServiceModel.IClientChannel {
     }
@@ -608,29 +608,6 @@ namespace ProyectoOOIA.AlumnoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.AlumnoWS.modificarAlumnoResponse ProyectoOOIA.AlumnoWS.AlumnoWS.modificarAlumno(ProyectoOOIA.AlumnoWS.modificarAlumnoRequest request) {
-            return base.Channel.modificarAlumno(request);
-        }
-        
-        public int modificarAlumno(ProyectoOOIA.AlumnoWS.alumno alumno) {
-            ProyectoOOIA.AlumnoWS.modificarAlumnoRequest inValue = new ProyectoOOIA.AlumnoWS.modificarAlumnoRequest();
-            inValue.alumno = alumno;
-            ProyectoOOIA.AlumnoWS.modificarAlumnoResponse retVal = ((ProyectoOOIA.AlumnoWS.AlumnoWS)(this)).modificarAlumno(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.modificarAlumnoResponse> ProyectoOOIA.AlumnoWS.AlumnoWS.modificarAlumnoAsync(ProyectoOOIA.AlumnoWS.modificarAlumnoRequest request) {
-            return base.Channel.modificarAlumnoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.modificarAlumnoResponse> modificarAlumnoAsync(ProyectoOOIA.AlumnoWS.alumno alumno) {
-            ProyectoOOIA.AlumnoWS.modificarAlumnoRequest inValue = new ProyectoOOIA.AlumnoWS.modificarAlumnoRequest();
-            inValue.alumno = alumno;
-            return ((ProyectoOOIA.AlumnoWS.AlumnoWS)(this)).modificarAlumnoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.AlumnoWS.eliminarAlumnoResponse ProyectoOOIA.AlumnoWS.AlumnoWS.eliminarAlumno(ProyectoOOIA.AlumnoWS.eliminarAlumnoRequest request) {
             return base.Channel.eliminarAlumno(request);
         }
@@ -672,6 +649,29 @@ namespace ProyectoOOIA.AlumnoWS {
         public System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.listarAlumnoResponse> listarAlumnoAsync() {
             ProyectoOOIA.AlumnoWS.listarAlumnoRequest inValue = new ProyectoOOIA.AlumnoWS.listarAlumnoRequest();
             return ((ProyectoOOIA.AlumnoWS.AlumnoWS)(this)).listarAlumnoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.AlumnoWS.modificarAlumnoResponse ProyectoOOIA.AlumnoWS.AlumnoWS.modificarAlumno(ProyectoOOIA.AlumnoWS.modificarAlumnoRequest request) {
+            return base.Channel.modificarAlumno(request);
+        }
+        
+        public int modificarAlumno(ProyectoOOIA.AlumnoWS.alumno alumno) {
+            ProyectoOOIA.AlumnoWS.modificarAlumnoRequest inValue = new ProyectoOOIA.AlumnoWS.modificarAlumnoRequest();
+            inValue.alumno = alumno;
+            ProyectoOOIA.AlumnoWS.modificarAlumnoResponse retVal = ((ProyectoOOIA.AlumnoWS.AlumnoWS)(this)).modificarAlumno(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.modificarAlumnoResponse> ProyectoOOIA.AlumnoWS.AlumnoWS.modificarAlumnoAsync(ProyectoOOIA.AlumnoWS.modificarAlumnoRequest request) {
+            return base.Channel.modificarAlumnoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.modificarAlumnoResponse> modificarAlumnoAsync(ProyectoOOIA.AlumnoWS.alumno alumno) {
+            ProyectoOOIA.AlumnoWS.modificarAlumnoRequest inValue = new ProyectoOOIA.AlumnoWS.modificarAlumnoRequest();
+            inValue.alumno = alumno;
+            return ((ProyectoOOIA.AlumnoWS.AlumnoWS)(this)).modificarAlumnoAsync(inValue);
         }
     }
 }

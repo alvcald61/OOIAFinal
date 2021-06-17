@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="1UjJ7K7ltKnXFqRCL9nrSlq6A35271wYR4q2k/0dspk=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="QMAghCZ9Jotc/BICf9HwvauHzt1DQjw0OquyVnVHVmo=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="EspecialidadWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="EspecialidadWSPort" contract="EspecialidadWS.EspecialidadWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServicesOOIA/EspecialidadWS" bindingConfiguration="EspecialidadWSPortBinding">
+    <endpoint name="EspecialidadWSPort" contract="EspecialidadWS.EspecialidadWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/WebServicesOOIA/EspecialidadWS" bindingConfiguration="EspecialidadWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/WebServicesOOIA/EspecialidadWS</serializedValue>
+          <serializedValue>http://54.157.187.65:8080/WebServicesOOIA/EspecialidadWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

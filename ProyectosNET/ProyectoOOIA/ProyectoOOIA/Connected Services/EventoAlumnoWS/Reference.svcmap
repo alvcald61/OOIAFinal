@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/EventoAlumno?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/EventoAlumno?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EventoAlumno1.wsdl" MetadataType="Wsdl" ID="cc13ca8b-c07e-4a48-bf05-60f50ab0f95a" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoAlumno?WSDL" />
-    <MetadataFile FileName="EventoAlumno1.xsd" MetadataType="Schema" ID="e5e0b1fa-b3c7-4201-911c-35db979e0f48" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoAlumno?xsd=1" />
+    <MetadataFile FileName="EventoAlumno.xsd" MetadataType="Schema" ID="b527c39d-03aa-4a5b-b3b9-e9d6367610c7" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/EventoAlumno?xsd=1" />
+    <MetadataFile FileName="EventoAlumno.wsdl" MetadataType="Wsdl" ID="e069d55e-26c2-4e78-8cb4-b2b5eae9fea5" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/EventoAlumno?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

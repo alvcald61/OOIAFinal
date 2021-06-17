@@ -16,14 +16,14 @@ namespace ProyectoOOIA.EventoWS {
     public interface EventoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_fechaRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_fechaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.EventoWS.modificarEventoResponse modificarEvento(ProyectoOOIA.EventoWS.modificarEventoRequest request);
+        ProyectoOOIA.EventoWS.listarEvento_por_fechaResponse listarEvento_por_fecha(ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.modificarEventoResponse> modificarEventoAsync(ProyectoOOIA.EventoWS.modificarEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_fechaRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_fechaResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.listarEvento_por_fechaResponse> listarEvento_por_fechaAsync(ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/eliminarEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/eliminarEventoResponse")]
@@ -34,6 +34,16 @@ namespace ProyectoOOIA.EventoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/eliminarEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/eliminarEventoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.eliminarEventoResponse> eliminarEventoAsync(ProyectoOOIA.EventoWS.eliminarEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.EventoWS.modificarEventoResponse modificarEvento(ProyectoOOIA.EventoWS.modificarEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.modificarEventoResponse> modificarEventoAsync(ProyectoOOIA.EventoWS.modificarEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoResponse")]
@@ -58,20 +68,456 @@ namespace ProyectoOOIA.EventoWS {
             "t", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_nombre_categoriaRespon" +
             "se")]
         System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.listarEvento_por_nombre_categoriaResponse> listarEvento_por_nombre_categoriaAsync(ProyectoOOIA.EventoWS.listarEvento_por_nombre_categoriaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_fechaRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_fechaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.EventoWS.listarEvento_por_fechaResponse listarEvento_por_fecha(ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_fechaRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_fechaResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.listarEvento_por_fechaResponse> listarEvento_por_fechaAsync(ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
+    public partial class date : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroExterno))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
+    public abstract partial class persona : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string correoField;
+        
+        private string direccionField;
+        
+        private string dniField;
+        
+        private System.DateTime fecha_nacimientoField;
+        
+        private bool fecha_nacimientoFieldSpecified;
+        
+        private int id_personaField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string correo {
+            get {
+                return this.correoField;
+            }
+            set {
+                this.correoField = value;
+                this.RaisePropertyChanged("correo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string direccion {
+            get {
+                return this.direccionField;
+            }
+            set {
+                this.direccionField = value;
+                this.RaisePropertyChanged("direccion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string dni {
+            get {
+                return this.dniField;
+            }
+            set {
+                this.dniField = value;
+                this.RaisePropertyChanged("dni");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime fecha_nacimiento {
+            get {
+                return this.fecha_nacimientoField;
+            }
+            set {
+                this.fecha_nacimientoField = value;
+                this.RaisePropertyChanged("fecha_nacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fecha_nacimientoSpecified {
+            get {
+                return this.fecha_nacimientoFieldSpecified;
+            }
+            set {
+                this.fecha_nacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fecha_nacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_persona {
+            get {
+                return this.id_personaField;
+            }
+            set {
+                this.id_personaField = value;
+                this.RaisePropertyChanged("id_persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
+    public abstract partial class miembroExterno : persona {
+        
+        private int id_miembro_externoField;
+        
+        private string ocupacionField;
+        
+        private string telefonoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id_miembro_externo {
+            get {
+                return this.id_miembro_externoField;
+            }
+            set {
+                this.id_miembro_externoField = value;
+                this.RaisePropertyChanged("id_miembro_externo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string ocupacion {
+            get {
+                return this.ocupacionField;
+            }
+            set {
+                this.ocupacionField = value;
+                this.RaisePropertyChanged("ocupacion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("telefono");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
+    public partial class ponente : miembroExterno {
+        
+        private bool activoField;
+        
+        private int id_ponenteField;
+        
+        private string organizacionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_ponente {
+            get {
+                return this.id_ponenteField;
+            }
+            set {
+                this.id_ponenteField = value;
+                this.RaisePropertyChanged("id_ponente");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string organizacion {
+            get {
+                return this.organizacionField;
+            }
+            set {
+                this.organizacionField = value;
+                this.RaisePropertyChanged("organizacion");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
+    public abstract partial class miembroPUCP : persona {
+        
+        private System.DateTime fecha_inclusionField;
+        
+        private bool fecha_inclusionFieldSpecified;
+        
+        private int id_miembro_pucpField;
+        
+        private byte[] imagenDePerfilField;
+        
+        private string passwordField;
+        
+        private string usuarioField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime fecha_inclusion {
+            get {
+                return this.fecha_inclusionField;
+            }
+            set {
+                this.fecha_inclusionField = value;
+                this.RaisePropertyChanged("fecha_inclusion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fecha_inclusionSpecified {
+            get {
+                return this.fecha_inclusionFieldSpecified;
+            }
+            set {
+                this.fecha_inclusionFieldSpecified = value;
+                this.RaisePropertyChanged("fecha_inclusionSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_miembro_pucp {
+            get {
+                return this.id_miembro_pucpField;
+            }
+            set {
+                this.id_miembro_pucpField = value;
+                this.RaisePropertyChanged("id_miembro_pucp");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=2)]
+        public byte[] imagenDePerfil {
+            get {
+                return this.imagenDePerfilField;
+            }
+            set {
+                this.imagenDePerfilField = value;
+                this.RaisePropertyChanged("imagenDePerfil");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                this.passwordField = value;
+                this.RaisePropertyChanged("password");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string usuario {
+            get {
+                return this.usuarioField;
+            }
+            set {
+                this.usuarioField = value;
+                this.RaisePropertyChanged("usuario");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
+    public partial class coordinador : miembroPUCP {
+        
+        private bool activoField;
+        
+        private int id_coordinadorField;
+        
+        private string rolField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_coordinador {
+            get {
+                return this.id_coordinadorField;
+            }
+            set {
+                this.id_coordinadorField = value;
+                this.RaisePropertyChanged("id_coordinador");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string rol {
+            get {
+                return this.rolField;
+            }
+            set {
+                this.rolField = value;
+                this.RaisePropertyChanged("rol");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
+    public partial class categoriaEvento : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool activoField;
+        
+        private int id_categoriaField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_categoria {
+            get {
+                return this.id_categoriaField;
+            }
+            set {
+                this.id_categoriaField = value;
+                this.RaisePropertyChanged("id_categoria");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -326,484 +772,38 @@ namespace ProyectoOOIA.EventoWS {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
-    public partial class categoriaEvento : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvento_por_fecha", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarEvento_por_fechaRequest {
         
-        private bool activoField;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.EventoWS.date fecha;
         
-        private int id_categoriaField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
+        public listarEvento_por_fechaRequest() {
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_categoria {
-            get {
-                return this.id_categoriaField;
-            }
-            set {
-                this.id_categoriaField = value;
-                this.RaisePropertyChanged("id_categoria");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
-    public partial class date : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroExterno))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
-    public abstract partial class persona : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string correoField;
-        
-        private string direccionField;
-        
-        private string dniField;
-        
-        private System.DateTime fecha_nacimientoField;
-        
-        private bool fecha_nacimientoFieldSpecified;
-        
-        private int id_personaField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string correo {
-            get {
-                return this.correoField;
-            }
-            set {
-                this.correoField = value;
-                this.RaisePropertyChanged("correo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string direccion {
-            get {
-                return this.direccionField;
-            }
-            set {
-                this.direccionField = value;
-                this.RaisePropertyChanged("direccion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string dni {
-            get {
-                return this.dniField;
-            }
-            set {
-                this.dniField = value;
-                this.RaisePropertyChanged("dni");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime fecha_nacimiento {
-            get {
-                return this.fecha_nacimientoField;
-            }
-            set {
-                this.fecha_nacimientoField = value;
-                this.RaisePropertyChanged("fecha_nacimiento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_nacimientoSpecified {
-            get {
-                return this.fecha_nacimientoFieldSpecified;
-            }
-            set {
-                this.fecha_nacimientoFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_nacimientoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_persona {
-            get {
-                return this.id_personaField;
-            }
-            set {
-                this.id_personaField = value;
-                this.RaisePropertyChanged("id_persona");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
-    public abstract partial class miembroExterno : persona {
-        
-        private int id_miembro_externoField;
-        
-        private string ocupacionField;
-        
-        private string telefonoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_miembro_externo {
-            get {
-                return this.id_miembro_externoField;
-            }
-            set {
-                this.id_miembro_externoField = value;
-                this.RaisePropertyChanged("id_miembro_externo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string ocupacion {
-            get {
-                return this.ocupacionField;
-            }
-            set {
-                this.ocupacionField = value;
-                this.RaisePropertyChanged("ocupacion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string telefono {
-            get {
-                return this.telefonoField;
-            }
-            set {
-                this.telefonoField = value;
-                this.RaisePropertyChanged("telefono");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
-    public partial class ponente : miembroExterno {
-        
-        private bool activoField;
-        
-        private int id_ponenteField;
-        
-        private string organizacionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_ponente {
-            get {
-                return this.id_ponenteField;
-            }
-            set {
-                this.id_ponenteField = value;
-                this.RaisePropertyChanged("id_ponente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string organizacion {
-            get {
-                return this.organizacionField;
-            }
-            set {
-                this.organizacionField = value;
-                this.RaisePropertyChanged("organizacion");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
-    public abstract partial class miembroPUCP : persona {
-        
-        private System.DateTime fecha_inclusionField;
-        
-        private bool fecha_inclusionFieldSpecified;
-        
-        private int id_miembro_pucpField;
-        
-        private byte[] imagenDePerfilField;
-        
-        private string passwordField;
-        
-        private string usuarioField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime fecha_inclusion {
-            get {
-                return this.fecha_inclusionField;
-            }
-            set {
-                this.fecha_inclusionField = value;
-                this.RaisePropertyChanged("fecha_inclusion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_inclusionSpecified {
-            get {
-                return this.fecha_inclusionFieldSpecified;
-            }
-            set {
-                this.fecha_inclusionFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_inclusionSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_miembro_pucp {
-            get {
-                return this.id_miembro_pucpField;
-            }
-            set {
-                this.id_miembro_pucpField = value;
-                this.RaisePropertyChanged("id_miembro_pucp");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=2)]
-        public byte[] imagenDePerfil {
-            get {
-                return this.imagenDePerfilField;
-            }
-            set {
-                this.imagenDePerfilField = value;
-                this.RaisePropertyChanged("imagenDePerfil");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string password {
-            get {
-                return this.passwordField;
-            }
-            set {
-                this.passwordField = value;
-                this.RaisePropertyChanged("password");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string usuario {
-            get {
-                return this.usuarioField;
-            }
-            set {
-                this.usuarioField = value;
-                this.RaisePropertyChanged("usuario");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
-    public partial class coordinador : miembroPUCP {
-        
-        private bool activoField;
-        
-        private int id_coordinadorField;
-        
-        private string rolField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_coordinador {
-            get {
-                return this.id_coordinadorField;
-            }
-            set {
-                this.id_coordinadorField = value;
-                this.RaisePropertyChanged("id_coordinador");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string rol {
-            get {
-                return this.rolField;
-            }
-            set {
-                this.rolField = value;
-                this.RaisePropertyChanged("rol");
-            }
+        public listarEvento_por_fechaRequest(ProyectoOOIA.EventoWS.date fecha) {
+            this.fecha = fecha;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarEventoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvento_por_fechaResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarEvento_por_fechaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.EventoWS.evento evento;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.EventoWS.evento[] @return;
         
-        public modificarEventoRequest() {
+        public listarEvento_por_fechaResponse() {
         }
         
-        public modificarEventoRequest(ProyectoOOIA.EventoWS.evento evento) {
-            this.evento = evento;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarEventoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarEventoResponse() {
-        }
-        
-        public modificarEventoResponse(int @return) {
+        public listarEvento_por_fechaResponse(ProyectoOOIA.EventoWS.evento[] @return) {
             this.@return = @return;
         }
     }
@@ -840,6 +840,42 @@ namespace ProyectoOOIA.EventoWS {
         }
         
         public eliminarEventoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarEventoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.EventoWS.evento evento;
+        
+        public modificarEventoRequest() {
+        }
+        
+        public modificarEventoRequest(ProyectoOOIA.EventoWS.evento evento) {
+            this.evento = evento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarEventoResponse() {
+        }
+        
+        public modificarEventoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -916,42 +952,6 @@ namespace ProyectoOOIA.EventoWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvento_por_fecha", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarEvento_por_fechaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.EventoWS.date fecha;
-        
-        public listarEvento_por_fechaRequest() {
-        }
-        
-        public listarEvento_por_fechaRequest(ProyectoOOIA.EventoWS.date fecha) {
-            this.fecha = fecha;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvento_por_fechaResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarEvento_por_fechaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.EventoWS.evento[] @return;
-        
-        public listarEvento_por_fechaResponse() {
-        }
-        
-        public listarEvento_por_fechaResponse(ProyectoOOIA.EventoWS.evento[] @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface EventoWSChannel : ProyectoOOIA.EventoWS.EventoWS, System.ServiceModel.IClientChannel {
     }
@@ -980,26 +980,26 @@ namespace ProyectoOOIA.EventoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.EventoWS.modificarEventoResponse ProyectoOOIA.EventoWS.EventoWS.modificarEvento(ProyectoOOIA.EventoWS.modificarEventoRequest request) {
-            return base.Channel.modificarEvento(request);
+        ProyectoOOIA.EventoWS.listarEvento_por_fechaResponse ProyectoOOIA.EventoWS.EventoWS.listarEvento_por_fecha(ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest request) {
+            return base.Channel.listarEvento_por_fecha(request);
         }
         
-        public int modificarEvento(ProyectoOOIA.EventoWS.evento evento) {
-            ProyectoOOIA.EventoWS.modificarEventoRequest inValue = new ProyectoOOIA.EventoWS.modificarEventoRequest();
-            inValue.evento = evento;
-            ProyectoOOIA.EventoWS.modificarEventoResponse retVal = ((ProyectoOOIA.EventoWS.EventoWS)(this)).modificarEvento(inValue);
+        public ProyectoOOIA.EventoWS.evento[] listarEvento_por_fecha(ProyectoOOIA.EventoWS.date fecha) {
+            ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest inValue = new ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest();
+            inValue.fecha = fecha;
+            ProyectoOOIA.EventoWS.listarEvento_por_fechaResponse retVal = ((ProyectoOOIA.EventoWS.EventoWS)(this)).listarEvento_por_fecha(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.modificarEventoResponse> ProyectoOOIA.EventoWS.EventoWS.modificarEventoAsync(ProyectoOOIA.EventoWS.modificarEventoRequest request) {
-            return base.Channel.modificarEventoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.listarEvento_por_fechaResponse> ProyectoOOIA.EventoWS.EventoWS.listarEvento_por_fechaAsync(ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest request) {
+            return base.Channel.listarEvento_por_fechaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.modificarEventoResponse> modificarEventoAsync(ProyectoOOIA.EventoWS.evento evento) {
-            ProyectoOOIA.EventoWS.modificarEventoRequest inValue = new ProyectoOOIA.EventoWS.modificarEventoRequest();
-            inValue.evento = evento;
-            return ((ProyectoOOIA.EventoWS.EventoWS)(this)).modificarEventoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.listarEvento_por_fechaResponse> listarEvento_por_fechaAsync(ProyectoOOIA.EventoWS.date fecha) {
+            ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest inValue = new ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest();
+            inValue.fecha = fecha;
+            return ((ProyectoOOIA.EventoWS.EventoWS)(this)).listarEvento_por_fechaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1023,6 +1023,29 @@ namespace ProyectoOOIA.EventoWS {
             ProyectoOOIA.EventoWS.eliminarEventoRequest inValue = new ProyectoOOIA.EventoWS.eliminarEventoRequest();
             inValue.evento = evento;
             return ((ProyectoOOIA.EventoWS.EventoWS)(this)).eliminarEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.EventoWS.modificarEventoResponse ProyectoOOIA.EventoWS.EventoWS.modificarEvento(ProyectoOOIA.EventoWS.modificarEventoRequest request) {
+            return base.Channel.modificarEvento(request);
+        }
+        
+        public int modificarEvento(ProyectoOOIA.EventoWS.evento evento) {
+            ProyectoOOIA.EventoWS.modificarEventoRequest inValue = new ProyectoOOIA.EventoWS.modificarEventoRequest();
+            inValue.evento = evento;
+            ProyectoOOIA.EventoWS.modificarEventoResponse retVal = ((ProyectoOOIA.EventoWS.EventoWS)(this)).modificarEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.modificarEventoResponse> ProyectoOOIA.EventoWS.EventoWS.modificarEventoAsync(ProyectoOOIA.EventoWS.modificarEventoRequest request) {
+            return base.Channel.modificarEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.modificarEventoResponse> modificarEventoAsync(ProyectoOOIA.EventoWS.evento evento) {
+            ProyectoOOIA.EventoWS.modificarEventoRequest inValue = new ProyectoOOIA.EventoWS.modificarEventoRequest();
+            inValue.evento = evento;
+            return ((ProyectoOOIA.EventoWS.EventoWS)(this)).modificarEventoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1069,29 +1092,6 @@ namespace ProyectoOOIA.EventoWS {
             ProyectoOOIA.EventoWS.listarEvento_por_nombre_categoriaRequest inValue = new ProyectoOOIA.EventoWS.listarEvento_por_nombre_categoriaRequest();
             inValue.nombre = nombre;
             return ((ProyectoOOIA.EventoWS.EventoWS)(this)).listarEvento_por_nombre_categoriaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.EventoWS.listarEvento_por_fechaResponse ProyectoOOIA.EventoWS.EventoWS.listarEvento_por_fecha(ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest request) {
-            return base.Channel.listarEvento_por_fecha(request);
-        }
-        
-        public ProyectoOOIA.EventoWS.evento[] listarEvento_por_fecha(ProyectoOOIA.EventoWS.date fecha) {
-            ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest inValue = new ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest();
-            inValue.fecha = fecha;
-            ProyectoOOIA.EventoWS.listarEvento_por_fechaResponse retVal = ((ProyectoOOIA.EventoWS.EventoWS)(this)).listarEvento_por_fecha(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.listarEvento_por_fechaResponse> ProyectoOOIA.EventoWS.EventoWS.listarEvento_por_fechaAsync(ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest request) {
-            return base.Channel.listarEvento_por_fechaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.listarEvento_por_fechaResponse> listarEvento_por_fechaAsync(ProyectoOOIA.EventoWS.date fecha) {
-            ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest inValue = new ProyectoOOIA.EventoWS.listarEvento_por_fechaRequest();
-            inValue.fecha = fecha;
-            return ((ProyectoOOIA.EventoWS.EventoWS)(this)).listarEvento_por_fechaAsync(inValue);
         }
     }
 }

@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/CoordinadorWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/CoordinadorWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CoordinadorWS.wsdl" MetadataType="Wsdl" ID="99543ecb-4920-436f-9af6-7382186275ee" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CoordinadorWS?WSDL" />
-    <MetadataFile FileName="CoordinadorWS.xsd" MetadataType="Schema" ID="5a13f1ef-9651-4b04-b8fb-473143cae57e" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CoordinadorWS?xsd=1" />
+    <MetadataFile FileName="CoordinadorWS1.wsdl" MetadataType="Wsdl" ID="794a727c-021a-41e9-9cc5-1da415ae4592" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CoordinadorWS?WSDL" />
+    <MetadataFile FileName="CoordinadorWS1.xsd" MetadataType="Schema" ID="fc072be5-893c-4599-87d2-cd87f711a8b6" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CoordinadorWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

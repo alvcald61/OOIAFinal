@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.OOIA.pucp.edu.pe/" targetNamespace="http://services.OOIA.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarCita" type="tns:eliminarCita" />
+  <xs:element name="eliminarCitaResponse" type="tns:eliminarCitaResponse" />
+  <xs:element name="insertarCita" type="tns:insertarCita" />
+  <xs:element name="insertarCitaResponse" type="tns:insertarCitaResponse" />
+  <xs:element name="listarCitaHistorico" type="tns:listarCitaHistorico" />
+  <xs:element name="listarCitaHistoricoResponse" type="tns:listarCitaHistoricoResponse" />
+  <xs:element name="listarCitaPendiente" type="tns:listarCitaPendiente" />
+  <xs:element name="listarCitaPendienteResponse" type="tns:listarCitaPendienteResponse" />
+  <xs:element name="modificarCita" type="tns:modificarCita" />
+  <xs:element name="modificarCitaResponse" type="tns:modificarCitaResponse" />
+  <xs:complexType name="modificarCita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cita" type="tns:cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cita">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
+      <xs:element minOccurs="0" name="asesor" type="tns:miembroPUCP" />
+      <xs:element name="asistio" type="xs:boolean" />
+      <xs:element minOccurs="0" name="codigo_atencion" type="tns:codigoAtencion" />
+      <xs:element minOccurs="0" name="compromiso" type="xs:string" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horario" type="tns:horario" />
+      <xs:element name="id_cita" type="xs:int" />
+      <xs:element minOccurs="0" name="motivo" type="xs:string" />
+      <xs:element name="tipo_asesor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="alumno">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:miembroPUCP">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="codigo" type="xs:string" />
+          <xs:element name="craest" type="xs:double" />
+          <xs:element name="creditos_aprobados" type="xs:double" />
+          <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
+          <xs:element name="id_alumno" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="miembroPUCP" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fecha_inclusion" type="xs:dateTime" />
+          <xs:element name="id_miembro_pucp" type="xs:int" />
+          <xs:element minOccurs="0" name="imagenDePerfil" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+          <xs:element minOccurs="0" name="usuario" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_nacimiento" type="xs:dateTime" />
+      <xs:element name="id_persona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="especialidad">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="id_especialidad" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="codigoAtencion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id_codigo_atencion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="horario">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="dia" type="xs:int" />
+      <xs:element minOccurs="0" name="horaFin" type="tns:time" />
+      <xs:element minOccurs="0" name="horaInicio" type="tns:time" />
+      <xs:element name="id_horario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="time">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="modificarCitaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCitaHistorico">
+    <xs:sequence>
+      <xs:element name="id_alumno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCitaHistoricoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCitaPendiente">
+    <xs:sequence>
+      <xs:element name="id_alumno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCitaPendienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cita" type="tns:cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCitaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cita" type="tns:cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCitaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

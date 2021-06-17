@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="hb6aKGmMhG0mbIUFokSizLPf1BjTku2ikETmu5PYwYs=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="LxI7SleD2LAw0XrqHoM7YBIOuzfn+W5vlUwqJwxlhDo=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="ProfesorWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ProfesorWSPort" contract="ProfesorWS.ProfesorWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServicesOOIA/ProfesorWS" bindingConfiguration="ProfesorWSPortBinding">
+    <endpoint name="ProfesorWSPort" contract="ProfesorWS.ProfesorWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/WebServicesOOIA/ProfesorWS" bindingConfiguration="ProfesorWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/WebServicesOOIA/ProfesorWS</serializedValue>
+          <serializedValue>http://54.157.187.65:8080/WebServicesOOIA/ProfesorWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

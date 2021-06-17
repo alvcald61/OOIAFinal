@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/CursoWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/CursoWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CursoWS.wsdl" MetadataType="Wsdl" ID="c99afb5f-ebe6-45fc-be04-f97084bd9fa0" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CursoWS?wsdl" />
-    <MetadataFile FileName="CursoWS.xsd" MetadataType="Schema" ID="34e3c3d8-8b24-45e3-b047-90ca1480f27c" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CursoWS?xsd=1" />
+    <MetadataFile FileName="CursoWS1.wsdl" MetadataType="Wsdl" ID="5da78b9e-5d1b-4c8e-82c9-e661b89afe61" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CursoWS?wsdl" />
+    <MetadataFile FileName="CursoWS1.xsd" MetadataType="Schema" ID="0ca06a10-cdd9-44af-b78b-238bd670cafb" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CursoWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

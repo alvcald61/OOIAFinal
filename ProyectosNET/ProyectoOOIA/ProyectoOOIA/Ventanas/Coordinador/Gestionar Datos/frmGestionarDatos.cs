@@ -117,7 +117,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
 
         private void btnPonente_Click(object sender, EventArgs e)
         {
-            new frmGestionarEspecialidad().ShowDialog();
+            new frmGestionarPonente().ShowDialog();
         }
 
         private void btnCoordinador_Click(object sender, EventArgs e)

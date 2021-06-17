@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/AuxiliarWS/AlumnosCSVcargaWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.187.65:8080/AuxiliarWS/AlumnosCSVcargaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AlumnosCSVcargaWS.xsd" MetadataType="Schema" ID="36641384-80b7-449d-bb86-9648ac5bb0ae" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/AlumnosCSVcargaWS?xsd=1" />
-    <MetadataFile FileName="AlumnosCSVcargaWS.wsdl" MetadataType="Wsdl" ID="db2e63a8-b18e-4b3d-883f-8c3b1227a9bd" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/AlumnosCSVcargaWS?WSDL" />
+    <MetadataFile FileName="AlumnosCSVcargaWS1.xsd" MetadataType="Schema" ID="ddbae65d-b3dc-455c-8da4-dd783e9a976a" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/AlumnosCSVcargaWS?xsd=1" />
+    <MetadataFile FileName="AlumnosCSVcargaWS1.wsdl" MetadataType="Wsdl" ID="fe12332c-681f-4f47-86be-97bf6ae9c6e3" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/AlumnosCSVcargaWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

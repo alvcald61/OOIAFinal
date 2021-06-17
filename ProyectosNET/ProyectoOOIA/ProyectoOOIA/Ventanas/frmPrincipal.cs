@@ -68,6 +68,7 @@ namespace ProyectoOOIA.Ventanas
             //this.id_usuario = id_usuario;
             //this.tipoIdUsuario = tipoIdUsuario;
             this.usuario = persona;
+            eventoDao = new GestionEventoWSClient();
             if (tipo == TipoUsuario.Asesor)
             {
                 btnEventos.Enabled = false;

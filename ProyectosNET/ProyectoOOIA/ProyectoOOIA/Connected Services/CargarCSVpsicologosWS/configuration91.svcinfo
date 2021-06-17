@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="5imOl0UcPjj+l0Jqj6MyG5IieLd4SAkI2VTQP68gU2o=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="WumSC8LaCqg6k+6DoUHd4VTRqNUSmMP4rW33on9927c=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="PsicologosCSVcargaWSPortBinding2">
+    <bindingConfiguration bindingType="basicHttpBinding" name="PsicologosCSVcargaWSPortBinding1">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>PsicologosCSVcargaWSPortBinding2</serializedValue>
+          <serializedValue>PsicologosCSVcargaWSPortBinding1</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="PsicologosCSVcargaWSPort2" contract="CargarCSVpsicologosWS.PsicologosCSVcargaWS" bindingType="basicHttpBinding" address="http://localhost:8080/AuxiliarWS/PsicologosCSVcargaWS" bindingConfiguration="PsicologosCSVcargaWSPortBinding2">
+    <endpoint name="PsicologosCSVcargaWSPort1" contract="CargarCSVpsicologosWS.PsicologosCSVcargaWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/AuxiliarWS/PsicologosCSVcargaWS" bindingConfiguration="PsicologosCSVcargaWSPortBinding1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/AuxiliarWS/PsicologosCSVcargaWS</serializedValue>
+          <serializedValue>http://54.157.187.65:8080/AuxiliarWS/PsicologosCSVcargaWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -124,7 +124,7 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>PsicologosCSVcargaWSPortBinding2</serializedValue>
+          <serializedValue>PsicologosCSVcargaWSPortBinding1</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>CargarCSVpsicologosWS.PsicologosCSVcargaWS</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>PsicologosCSVcargaWSPort2</serializedValue>
+          <serializedValue>PsicologosCSVcargaWSPort1</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
