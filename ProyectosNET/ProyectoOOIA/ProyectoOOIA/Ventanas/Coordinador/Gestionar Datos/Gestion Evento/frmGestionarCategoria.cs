@@ -111,7 +111,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
                 cambiarEstado();
             }
             else
-                MessageBox.Show("Debe seleccionar una especialidad para modificar.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar una categoria para modificar.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
 
