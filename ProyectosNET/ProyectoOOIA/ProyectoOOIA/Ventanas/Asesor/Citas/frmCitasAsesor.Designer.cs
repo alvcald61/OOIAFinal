@@ -51,6 +51,7 @@ namespace ProyectoOOIA.Ventanas
             this.cbTipoHorario = new System.Windows.Forms.ComboBox();
             this.lblTipoHorario = new System.Windows.Forms.Label();
             this.btnBuscarHorario = new System.Windows.Forms.Button();
+            this.btnHorario = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorarioProf)).BeginInit();
@@ -59,6 +60,7 @@ namespace ProyectoOOIA.Ventanas
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.pnlHeader.Controls.Add(this.btnHorario);
             this.pnlHeader.Controls.Add(this.btnLogout);
             this.pnlHeader.Controls.Add(this.btnHome);
             this.pnlHeader.Controls.Add(this.lblHorario);
@@ -92,7 +94,7 @@ namespace ProyectoOOIA.Ventanas
             // btnHome
             // 
             this.btnHome.Image = global::ProyectoOOIA.Properties.Resources.home_white;
-            this.btnHome.Location = new System.Drawing.Point(11, 35);
+            this.btnHome.Location = new System.Drawing.Point(13, 30);
             this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(25, 25);
@@ -106,7 +108,7 @@ namespace ProyectoOOIA.Ventanas
             this.lblHorario.AutoSize = true;
             this.lblHorario.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHorario.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblHorario.Location = new System.Drawing.Point(40, 35);
+            this.lblHorario.Location = new System.Drawing.Point(42, 30);
             this.lblHorario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHorario.Name = "lblHorario";
             this.lblHorario.Size = new System.Drawing.Size(194, 30);
@@ -266,6 +268,21 @@ namespace ProyectoOOIA.Ventanas
             this.btnBuscarHorario.UseVisualStyleBackColor = true;
             this.btnBuscarHorario.Click += new System.EventHandler(this.btnBuscarHorario_Click);
             // 
+            // btnHorario
+            // 
+            this.btnHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.btnHorario.FlatAppearance.BorderSize = 0;
+            this.btnHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHorario.ForeColor = System.Drawing.Color.White;
+            this.btnHorario.Location = new System.Drawing.Point(823, 12);
+            this.btnHorario.Name = "btnHorario";
+            this.btnHorario.Size = new System.Drawing.Size(112, 53);
+            this.btnHorario.TabIndex = 11;
+            this.btnHorario.Text = "Registrar Horario";
+            this.btnHorario.UseVisualStyleBackColor = false;
+            this.btnHorario.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmHorarioAsesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,5 +332,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
+        private System.Windows.Forms.Button btnHorario;
     }
 }

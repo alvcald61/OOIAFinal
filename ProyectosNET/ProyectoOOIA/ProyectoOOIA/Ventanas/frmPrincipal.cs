@@ -4,7 +4,8 @@ using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using ProyectoOOIA.GestionHumanaWS;
+using ProyectoOOIA.GestionEventoWS;
+using miembroPUCP = ProyectoOOIA.GestionHumanaWS.miembroPUCP;
 
 namespace ProyectoOOIA.Ventanas
 {
@@ -17,10 +18,14 @@ namespace ProyectoOOIA.Ventanas
         private int tipoIdUsuario;
         private GestionHumanaWS.persona usuario = null;
         private GestionHumanaWS.GestionHumanaWSClient usuarioDao;
+        private GestionEventoWS.GestionEventoWSClient eventoDao;
+        private BindingList<GestionEventoWS.evento> listaEventos;
         public frmPrincipal(TipoUsuario tipoUsuario, int id_usuario, int tipoIdUsuario)
         {
             InitializeComponent();
             usuarioDao = new GestionHumanaWS.GestionHumanaWSClient();
+            listaEventos = new BindingList<evento>();
+            eventoDao = new GestionEventoWSClient();
             btnCargaDatos.Visible = false;
             tipo = tipoUsuario;
             this.id_usuario = id_usuario;
@@ -32,7 +37,7 @@ namespace ProyectoOOIA.Ventanas
                 btnEventos.Enabled = false;
                 //btnEventos.Visible = false;
                 txtEventos.Enabled = false;
-
+                
             }
 
             if (tipo == TipoUsuario.OOIA)
@@ -84,9 +89,7 @@ namespace ProyectoOOIA.Ventanas
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.Estudiante);
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.Tramite);
             imagenes.Image = listaImagenes[0];
-            //ToolTip ttEjemplo = new ToolTip();
-
-            //ttEjemplo.SetToolTip(btnCitas, "Programar citas");
+            
 
         }
 
@@ -159,6 +162,20 @@ namespace ProyectoOOIA.Ventanas
         private void frmPrincipal_Load_1(object sender, EventArgs e)
         {
             frmPrincipal_Load(sender,e);
+            iniciarEventosProximos();
+        }
+
+        private void iniciarEventosProximos()
+        {
+            listaEventos =new BindingList<evento>(eventoDao.listar_tres_eventos_proximos());
+            tarjeta1.iniciarComponentes(listaEventos[0].nombre,listaEventos[0].descripcion,listaEventos[0].fecha);
+            tarjeta2.iniciarComponentes(listaEventos[1].nombre, listaEventos[1].descripcion, listaEventos[1].fecha);
+            tarjeta3.iniciarComponentes(listaEventos[2].nombre, listaEventos[2].descripcion, listaEventos[2].fecha);
+        }
+
+        private void tarjeta1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

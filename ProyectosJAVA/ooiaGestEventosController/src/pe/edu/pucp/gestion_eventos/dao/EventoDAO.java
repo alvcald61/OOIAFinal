@@ -16,6 +16,7 @@ import pe.edu.pucp.ooia.gest_humana.model.Ponente;
  */
 public interface EventoDAO {
     public ArrayList<Evento> listar(String nombreCategoria);
+    public ArrayList<Evento> listar_tres_eventos_proximos();
     public ArrayList<Evento> listar_x_fecha(Date fecha);
     public ArrayList<Ponente> listarPonente(int id_evento);
     public int insertar(Evento evento);

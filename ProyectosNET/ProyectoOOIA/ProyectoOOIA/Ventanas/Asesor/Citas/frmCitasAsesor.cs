@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using ProyectoOOIA.Ventanas.Asesor.Citas;
 
 namespace ProyectoOOIA.Ventanas
 {
@@ -52,6 +53,12 @@ namespace ProyectoOOIA.Ventanas
         {
             new frmInicioSesion().Show();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new frmRegistrarHorario().ShowDialog();
+
         }
     }
 }

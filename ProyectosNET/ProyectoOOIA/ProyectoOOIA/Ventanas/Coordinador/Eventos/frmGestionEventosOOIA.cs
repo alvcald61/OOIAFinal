@@ -310,10 +310,17 @@ namespace ProyectoOOIA.Ventanas
                 MessageBoxIcon.Error);
                 return 0;
             }
+            else if (dtpFechaEvento.Value == DateTime.Today)
+                MessageBox.Show("El dia del evento debe ser posterior a hoy","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             else if(dtpInicio.Value>dtpFin.Value ) MessageBox.Show("La hora final debe ser mayor a la inicial", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else if(txtDescripcion.Text=="" || txtLugar.Text=="" || txtNombre.Text=="") MessageBox.Show("Debe ingresar algún texto en los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (txtDescripcion.Text == "" || txtLugar.Text == "" || txtNombre.Text == "")
+                MessageBox.Show("Debe ingresar algún texto en los campos", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            
+                
+            else return 1;
 
-            return 1;
+            return 0;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -338,6 +345,10 @@ namespace ProyectoOOIA.Ventanas
         {
             componentes(Estado.Inicial);
             limpiar();
+            if(estado==Estado.Nuevo)lista.Clear(); 
+            else if (estado == Estado.Nuevo) listaModificar.Clear();
+            dgvPonentes.RowCount = 0;
+            
         }
 
         private void limpiar()
