@@ -51,11 +51,11 @@ public class CategoriaEventoMySQL implements CategoriaEventoDAO {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
             cs = con.prepareCall("{call INSERTAR_CATEGORIA_EVENTO(?,?)}");
-            cs.registerOutParameter("_id_categoria", java.sql.Types.INTEGER);
+            cs.registerOutParameter("_id_categoria_evento", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", categoria.getNombre());
             cs.executeUpdate();
-            categoria.setId_categoria(cs.getInt("_id_categoria"));
+            categoria.setId_categoria(cs.getInt("_id_categoria_evento"));
             resultado = 1;
             cs.close();
         }catch(Exception ex){
@@ -73,7 +73,7 @@ public class CategoriaEventoMySQL implements CategoriaEventoDAO {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
             cs = con.prepareCall("{call MODIFICAR_CATEGORIA_EVENTO(?,?)}");
-            cs.setInt("_id_categoria",categoria.getId_categoria());
+            cs.setInt("_id_categoria_evento",categoria.getId_categoria());
             /*Persona*/
             cs.setString("_nombre", categoria.getNombre());
             cs.executeUpdate();
@@ -94,7 +94,7 @@ public class CategoriaEventoMySQL implements CategoriaEventoDAO {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
             cs = con.prepareCall("{call ELIMINAR_CATEGORIA_EVENTO(?)}");
-            cs.setInt("_id_categoria", id_categoria);
+            cs.setInt("_id_categoria_evento", id_categoria);
             cs.executeUpdate();
             resultado = 1;
             cs.close();

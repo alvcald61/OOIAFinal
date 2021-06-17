@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/AuxiliarWS/GesionEventoWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8082/AuxiliarWS/GesionEventoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GesionEventoWS.xsd" MetadataType="Schema" ID="975b702e-2a9a-4185-b974-e7e29416c7a9" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GesionEventoWS?xsd=1" />
-    <MetadataFile FileName="GesionEventoWS.wsdl" MetadataType="Wsdl" ID="11545778-622b-49b1-83a8-51b1e8ea5e0a" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GesionEventoWS?WSDL" />
+    <MetadataFile FileName="GesionEventoWS1.xsd" MetadataType="Schema" ID="3a8ce6d1-8492-4f56-80a3-75a9befb27a7" SourceId="1" SourceUrl="http://localhost:8082/AuxiliarWS/GesionEventoWS?xsd=1" />
+    <MetadataFile FileName="GesionEventoWS1.wsdl" MetadataType="Wsdl" ID="cabc866f-25ed-4527-9b39-e05c72446a3e" SourceId="1" SourceUrl="http://localhost:8082/AuxiliarWS/GesionEventoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
