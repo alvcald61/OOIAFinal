@@ -429,7 +429,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pnlHeader);
             this.Name = "frmGestionarPonente";
-            this.Text = "Gestionar Coordinadores";
+            this.Text = "Gestionar Ponentes";
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.toolStrip1.ResumeLayout(false);
