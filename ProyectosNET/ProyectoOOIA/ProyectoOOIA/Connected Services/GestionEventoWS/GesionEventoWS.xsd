@@ -26,6 +26,8 @@
   <xs:element name="listarEvento_por_fechaResponse" type="tns:listarEvento_por_fechaResponse" />
   <xs:element name="listarEvento_por_nombre_categoria" type="tns:listarEvento_por_nombre_categoria" />
   <xs:element name="listarEvento_por_nombre_categoriaResponse" type="tns:listarEvento_por_nombre_categoriaResponse" />
+  <xs:element name="listarPonenteXEvento" type="tns:listarPonenteXEvento" />
+  <xs:element name="listarPonenteXEventoResponse" type="tns:listarPonenteXEventoResponse" />
   <xs:element name="modificarCategoriaEvento" type="tns:modificarCategoriaEvento" />
   <xs:element name="modificarCategoriaEventoResponse" type="tns:modificarCategoriaEventoResponse" />
   <xs:element name="modificarCoordinadorEvento" type="tns:modificarCoordinadorEvento" />
@@ -188,6 +190,14 @@
   <xs:complexType name="listarEvento_por_nombre_categoriaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+  <xs:complexType name="listarPonenteXEvento">
+    <xs:sequence>
+      <xs:element name="id_evento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPonenteXEventoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ponente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCoordinadorEvento">

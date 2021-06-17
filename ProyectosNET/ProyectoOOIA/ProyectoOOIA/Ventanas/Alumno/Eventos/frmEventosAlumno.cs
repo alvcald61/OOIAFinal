@@ -95,8 +95,12 @@ namespace ProyectoOOIA.Ventanas
         {
             if (dvgInscritos.CurrentRow != null)
             {
-                new frmDetalleEvento().ShowDialog();
+                GestionEventoWS.evento evento_seleccionado =
+              (GestionEventoWS.evento)dvgInscritos.CurrentRow.DataBoundItem;
+
+                new frmDetalleEvento(evento_seleccionado).Show();
             }
+                
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -156,11 +160,12 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnDetHistorial_Click(object sender, EventArgs e)
         {
-            if (dvgHistorial.CurrentRow != null)
+            if (dvgInscritos.CurrentRow != null)
             {
-                new frmDetalleEvento().ShowDialog();
-
-            }
+                GestionEventoWS.evento evento_seleccionado =
+              (GestionEventoWS.evento)dvgHistorial.CurrentRow.DataBoundItem;
+                new frmDetalleEvento(evento_seleccionado).Show();
+            }   
         }
 
         private void btnHome_Click(object sender, EventArgs e)

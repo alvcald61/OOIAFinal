@@ -11,6 +11,12 @@
   <message name="eliminarEventoResponse">
     <part name="parameters" element="tns:eliminarEventoResponse" />
   </message>
+  <message name="listarPonenteXEvento">
+    <part name="parameters" element="tns:listarPonenteXEvento" />
+  </message>
+  <message name="listarPonenteXEventoResponse">
+    <part name="parameters" element="tns:listarPonenteXEventoResponse" />
+  </message>
   <message name="insertarEvento">
     <part name="parameters" element="tns:insertarEvento" />
   </message>
@@ -112,6 +118,10 @@
       <input wsam:Action="http://services/GestionEventoWS/eliminarEventoRequest" message="tns:eliminarEvento" />
       <output wsam:Action="http://services/GestionEventoWS/eliminarEventoResponse" message="tns:eliminarEventoResponse" />
     </operation>
+    <operation name="listarPonenteXEvento">
+      <input wsam:Action="http://services/GestionEventoWS/listarPonenteXEventoRequest" message="tns:listarPonenteXEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/listarPonenteXEventoResponse" message="tns:listarPonenteXEventoResponse" />
+    </operation>
     <operation name="insertarEvento">
       <input wsam:Action="http://services/GestionEventoWS/insertarEventoRequest" message="tns:insertarEvento" />
       <output wsam:Action="http://services/GestionEventoWS/insertarEventoResponse" message="tns:insertarEventoResponse" />
@@ -180,6 +190,15 @@
   <binding name="GestionEventoWSPortBinding" type="tns:GestionEventoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="eliminarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPonenteXEvento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

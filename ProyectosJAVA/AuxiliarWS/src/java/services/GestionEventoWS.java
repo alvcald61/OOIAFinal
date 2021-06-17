@@ -23,6 +23,7 @@ import pe.edu.pucp.gestion_eventos.mysql.EventoAlumnoMySQL;
 import pe.edu.pucp.gestion_eventos.mysql.EventoMySQL;
 import pe.edu.pucp.ooia.gest_humana.dao.CoordinadorDAO;
 import pe.edu.pucp.ooia.gest_humana.model.Coordinador;
+import pe.edu.pucp.ooia.gest_humana.model.Ponente;
 import pe.edu.pucp.ooia.gest_humana.mysql.CoordinadorMySQL;
 
 
@@ -49,6 +50,16 @@ public class GestionEventoWS {
         ArrayList<Evento> lista= new ArrayList<>();
         try {
             lista=eventoSQL.listar(nombreCategoria);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return lista;
+    }
+    @WebMethod(operationName = "listar_tres_eventos_proximos")
+    public ArrayList<Evento> listar_tres_eventos_proximos() {
+        ArrayList<Evento> lista= new ArrayList<>();
+        try {
+            lista=eventoSQL.listar_tres_eventos_proximos();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -222,4 +233,14 @@ public class GestionEventoWS {
         return resultado;
     }
     
+    @WebMethod(operationName = "listarPonenteXEvento")
+    public ArrayList<Ponente> listarPonenteXEvento(@WebParam(name="id_evento")int id_evento) {
+        ArrayList<Ponente> lista= new ArrayList<>();
+        try {
+            lista = eventoSQL.listarPonente(id_evento);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return lista;
+    }
 }

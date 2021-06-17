@@ -143,9 +143,9 @@ namespace ProyectoOOIA.Ventanas
             this.lblNombreEvento.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreEvento.Location = new System.Drawing.Point(16, 76);
             this.lblNombreEvento.Name = "lblNombreEvento";
-            this.lblNombreEvento.Size = new System.Drawing.Size(236, 21);
+            this.lblNombreEvento.Size = new System.Drawing.Size(181, 21);
             this.lblNombreEvento.TabIndex = 32;
-            this.lblNombreEvento.Text = "Ingrese categoria o nombre de evento:";
+            this.lblNombreEvento.Text = "Ingrese el nombre de evento:";
             // 
             // pnlHeader
             // 

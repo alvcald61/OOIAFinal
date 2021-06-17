@@ -248,7 +248,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             alumno.fecha_inclusionSpecified = true;
             //Alumno
             alumno.codigo = txtCodigo.Text;
-            EspecialidadWS.especialidad esp_selected = (EspecialidadWS.especialidad)cbEspecialidad.SelectedItem;
+            GestionHumanaWS.especialidad esp_selected = (GestionHumanaWS.especialidad)cbEspecialidad.SelectedItem;
             alumno.especialidad = new GestionHumanaWS.especialidad();
             alumno.especialidad.id_especialidad = esp_selected.id_especialidad;
             alumno.craest = 0;

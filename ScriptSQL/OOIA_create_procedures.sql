@@ -1254,3 +1254,19 @@ in id int
         inner join psicologo ps on ps.fid_miembro_pucp = m.id_miembro_pucp
 	where ps.activo = true and p.id_persona=id;
 end$
+
+delimiter $
+create procedure LISTAR_TRES_EVENTOS_PROXIMOS(
+)begin
+
+select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.imagen,e.cupo,
+    e.fid_coordinador, e.fid_categoria_evento, ce.nombre as nombre_categoria
+    from evento e inner join coordinador c on e.fid_coordinador = c.id_coordinador
+    inner join categoria_evento ce on ce.id_categoria_evento = e.fid_categoria_evento
+    where   e.activo=1 and e.fecha>=CURDATE()
+    order by e.fecha,e.hora_inicio ASC LIMIT 3;
+
+end$
+
+
+
