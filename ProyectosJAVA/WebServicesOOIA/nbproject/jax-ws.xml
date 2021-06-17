@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="CitaWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.CitaWS</implementation-class>
+    </service>
+    <service name="HorarioWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.HorarioWS</implementation-class>
+    </service>
+    <service name="EspecialidadWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.EspecialidadWS</implementation-class>
+    </service>
+    <service name="CodigoAtencionWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.CodigoAtencionWS</implementation-class>
+    </service>
+    <service name="PsicologoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.PsicologoWS</implementation-class>
+    </service>
+    <service name="ProfesorWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.ProfesorWS</implementation-class>
+    </service>
+    <service name="AlumnoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.AlumnoWS</implementation-class>
+    </service>
+    <service name="EventoAlumnoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.EventoAlumnoWS</implementation-class>
+    </service>
+    <service name="CoordinadorWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.CoordinadorWS</implementation-class>
+    </service>
+    <service name="PonenteWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.PonenteWS</implementation-class>
+    </service>
+    <service name="CursoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.CursoWS</implementation-class>
+    </service>
+    <service name="EventoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.EventoWS</implementation-class>
+    </service>
+    <service name="EvaluacionWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.EvaluacionWS</implementation-class>
+    </service>
+    <service name="CursoLlevadoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.CursoLlevadoWS</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>

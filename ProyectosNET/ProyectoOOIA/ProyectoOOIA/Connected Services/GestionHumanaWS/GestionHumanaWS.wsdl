@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="GestionHumanaWS" targetNamespace="http://services/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/AuxiliarWS/GestionHumanaWS?xsd=1" namespace="http://services/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarProfesor">
+    <part name="parameters" element="tns:insertarProfesor" />
+  </message>
+  <message name="insertarProfesorResponse">
+    <part name="parameters" element="tns:insertarProfesorResponse" />
+  </message>
+  <message name="modificarProfesores">
+    <part name="parameters" element="tns:modificarProfesores" />
+  </message>
+  <message name="modificarProfesoresResponse">
+    <part name="parameters" element="tns:modificarProfesoresResponse" />
+  </message>
+  <message name="modificarPonente">
+    <part name="parameters" element="tns:modificarPonente" />
+  </message>
+  <message name="modificarPonenteResponse">
+    <part name="parameters" element="tns:modificarPonenteResponse" />
+  </message>
+  <message name="tipoUsuario">
+    <part name="parameters" element="tns:tipoUsuario" />
+  </message>
+  <message name="tipoUsuarioResponse">
+    <part name="parameters" element="tns:tipoUsuarioResponse" />
+  </message>
+  <message name="listarPsicologo">
+    <part name="parameters" element="tns:listarPsicologo" />
+  </message>
+  <message name="listarPsicologoResponse">
+    <part name="parameters" element="tns:listarPsicologoResponse" />
+  </message>
+  <message name="listarAlumno">
+    <part name="parameters" element="tns:listarAlumno" />
+  </message>
+  <message name="listarAlumnoResponse">
+    <part name="parameters" element="tns:listarAlumnoResponse" />
+  </message>
+  <message name="insertarAlumno">
+    <part name="parameters" element="tns:insertarAlumno" />
+  </message>
+  <message name="insertarAlumnoResponse">
+    <part name="parameters" element="tns:insertarAlumnoResponse" />
+  </message>
+  <message name="eliminarProfesor">
+    <part name="parameters" element="tns:eliminarProfesor" />
+  </message>
+  <message name="eliminarProfesorResponse">
+    <part name="parameters" element="tns:eliminarProfesorResponse" />
+  </message>
+  <message name="eliminarAlumno">
+    <part name="parameters" element="tns:eliminarAlumno" />
+  </message>
+  <message name="eliminarAlumnoResponse">
+    <part name="parameters" element="tns:eliminarAlumnoResponse" />
+  </message>
+  <message name="listarPonente">
+    <part name="parameters" element="tns:listarPonente" />
+  </message>
+  <message name="listarPonenteResponse">
+    <part name="parameters" element="tns:listarPonenteResponse" />
+  </message>
+  <message name="modificarAlumno">
+    <part name="parameters" element="tns:modificarAlumno" />
+  </message>
+  <message name="modificarAlumnoResponse">
+    <part name="parameters" element="tns:modificarAlumnoResponse" />
+  </message>
+  <message name="eliminarPonente">
+    <part name="parameters" element="tns:eliminarPonente" />
+  </message>
+  <message name="eliminarPonenteResponse">
+    <part name="parameters" element="tns:eliminarPonenteResponse" />
+  </message>
+  <message name="listarProfesor">
+    <part name="parameters" element="tns:listarProfesor" />
+  </message>
+  <message name="listarProfesorResponse">
+    <part name="parameters" element="tns:listarProfesorResponse" />
+  </message>
+  <message name="insertarPonente">
+    <part name="parameters" element="tns:insertarPonente" />
+  </message>
+  <message name="insertarPonenteResponse">
+    <part name="parameters" element="tns:insertarPonenteResponse" />
+  </message>
+  <message name="listarEspecialidad">
+    <part name="parameters" element="tns:listarEspecialidad" />
+  </message>
+  <message name="listarEspecialidadResponse">
+    <part name="parameters" element="tns:listarEspecialidadResponse" />
+  </message>
+  <message name="modificarEspecialidad">
+    <part name="parameters" element="tns:modificarEspecialidad" />
+  </message>
+  <message name="modificarEspecialidadResponse">
+    <part name="parameters" element="tns:modificarEspecialidadResponse" />
+  </message>
+  <message name="insertarEspecialidad">
+    <part name="parameters" element="tns:insertarEspecialidad" />
+  </message>
+  <message name="insertarEspecialidadResponse">
+    <part name="parameters" element="tns:insertarEspecialidadResponse" />
+  </message>
+  <message name="eliminarCoordinador">
+    <part name="parameters" element="tns:eliminarCoordinador" />
+  </message>
+  <message name="eliminarCoordinadorResponse">
+    <part name="parameters" element="tns:eliminarCoordinadorResponse" />
+  </message>
+  <message name="modificarCoordinador">
+    <part name="parameters" element="tns:modificarCoordinador" />
+  </message>
+  <message name="modificarCoordinadorResponse">
+    <part name="parameters" element="tns:modificarCoordinadorResponse" />
+  </message>
+  <message name="insertarCoordinador">
+    <part name="parameters" element="tns:insertarCoordinador" />
+  </message>
+  <message name="insertarCoordinadorResponse">
+    <part name="parameters" element="tns:insertarCoordinadorResponse" />
+  </message>
+  <message name="listarCoordinador">
+    <part name="parameters" element="tns:listarCoordinador" />
+  </message>
+  <message name="listarCoordinadorResponse">
+    <part name="parameters" element="tns:listarCoordinadorResponse" />
+  </message>
+  <message name="listar_alumno_x_id">
+    <part name="parameters" element="tns:listar_alumno_x_id" />
+  </message>
+  <message name="listar_alumno_x_idResponse">
+    <part name="parameters" element="tns:listar_alumno_x_idResponse" />
+  </message>
+  <message name="insertarPsicologo">
+    <part name="parameters" element="tns:insertarPsicologo" />
+  </message>
+  <message name="insertarPsicologoResponse">
+    <part name="parameters" element="tns:insertarPsicologoResponse" />
+  </message>
+  <message name="listar_coordinador_x_id">
+    <part name="parameters" element="tns:listar_coordinador_x_id" />
+  </message>
+  <message name="listar_coordinador_x_idResponse">
+    <part name="parameters" element="tns:listar_coordinador_x_idResponse" />
+  </message>
+  <message name="modificarPsicologo">
+    <part name="parameters" element="tns:modificarPsicologo" />
+  </message>
+  <message name="modificarPsicologoResponse">
+    <part name="parameters" element="tns:modificarPsicologoResponse" />
+  </message>
+  <message name="eliminarPsicologo">
+    <part name="parameters" element="tns:eliminarPsicologo" />
+  </message>
+  <message name="eliminarPsicologoResponse">
+    <part name="parameters" element="tns:eliminarPsicologoResponse" />
+  </message>
+  <message name="listar_profesor_x_id">
+    <part name="parameters" element="tns:listar_profesor_x_id" />
+  </message>
+  <message name="listar_profesor_x_idResponse">
+    <part name="parameters" element="tns:listar_profesor_x_idResponse" />
+  </message>
+  <message name="eliminarEspecialidad">
+    <part name="parameters" element="tns:eliminarEspecialidad" />
+  </message>
+  <message name="eliminarEspecialidadResponse">
+    <part name="parameters" element="tns:eliminarEspecialidadResponse" />
+  </message>
+  <message name="autenticarUsuario">
+    <part name="parameters" element="tns:autenticarUsuario" />
+  </message>
+  <message name="autenticarUsuarioResponse">
+    <part name="parameters" element="tns:autenticarUsuarioResponse" />
+  </message>
+  <message name="listar_psicologo_x_id">
+    <part name="parameters" element="tns:listar_psicologo_x_id" />
+  </message>
+  <message name="listar_psicologo_x_idResponse">
+    <part name="parameters" element="tns:listar_psicologo_x_idResponse" />
+  </message>
+  <portType name="GestionHumanaWS">
+    <operation name="insertarProfesor">
+      <input wsam:Action="http://services/GestionHumanaWS/insertarProfesorRequest" message="tns:insertarProfesor" />
+      <output wsam:Action="http://services/GestionHumanaWS/insertarProfesorResponse" message="tns:insertarProfesorResponse" />
+    </operation>
+    <operation name="modificarProfesores">
+      <input wsam:Action="http://services/GestionHumanaWS/modificarProfesoresRequest" message="tns:modificarProfesores" />
+      <output wsam:Action="http://services/GestionHumanaWS/modificarProfesoresResponse" message="tns:modificarProfesoresResponse" />
+    </operation>
+    <operation name="modificarPonente">
+      <input wsam:Action="http://services/GestionHumanaWS/modificarPonenteRequest" message="tns:modificarPonente" />
+      <output wsam:Action="http://services/GestionHumanaWS/modificarPonenteResponse" message="tns:modificarPonenteResponse" />
+    </operation>
+    <operation name="tipoUsuario">
+      <input wsam:Action="http://services/GestionHumanaWS/tipoUsuarioRequest" message="tns:tipoUsuario" />
+      <output wsam:Action="http://services/GestionHumanaWS/tipoUsuarioResponse" message="tns:tipoUsuarioResponse" />
+    </operation>
+    <operation name="listarPsicologo">
+      <input wsam:Action="http://services/GestionHumanaWS/listarPsicologoRequest" message="tns:listarPsicologo" />
+      <output wsam:Action="http://services/GestionHumanaWS/listarPsicologoResponse" message="tns:listarPsicologoResponse" />
+    </operation>
+    <operation name="listarAlumno">
+      <input wsam:Action="http://services/GestionHumanaWS/listarAlumnoRequest" message="tns:listarAlumno" />
+      <output wsam:Action="http://services/GestionHumanaWS/listarAlumnoResponse" message="tns:listarAlumnoResponse" />
+    </operation>
+    <operation name="insertarAlumno">
+      <input wsam:Action="http://services/GestionHumanaWS/insertarAlumnoRequest" message="tns:insertarAlumno" />
+      <output wsam:Action="http://services/GestionHumanaWS/insertarAlumnoResponse" message="tns:insertarAlumnoResponse" />
+    </operation>
+    <operation name="eliminarProfesor">
+      <input wsam:Action="http://services/GestionHumanaWS/eliminarProfesorRequest" message="tns:eliminarProfesor" />
+      <output wsam:Action="http://services/GestionHumanaWS/eliminarProfesorResponse" message="tns:eliminarProfesorResponse" />
+    </operation>
+    <operation name="eliminarAlumno">
+      <input wsam:Action="http://services/GestionHumanaWS/eliminarAlumnoRequest" message="tns:eliminarAlumno" />
+      <output wsam:Action="http://services/GestionHumanaWS/eliminarAlumnoResponse" message="tns:eliminarAlumnoResponse" />
+    </operation>
+    <operation name="listarPonente">
+      <input wsam:Action="http://services/GestionHumanaWS/listarPonenteRequest" message="tns:listarPonente" />
+      <output wsam:Action="http://services/GestionHumanaWS/listarPonenteResponse" message="tns:listarPonenteResponse" />
+    </operation>
+    <operation name="modificarAlumno">
+      <input wsam:Action="http://services/GestionHumanaWS/modificarAlumnoRequest" message="tns:modificarAlumno" />
+      <output wsam:Action="http://services/GestionHumanaWS/modificarAlumnoResponse" message="tns:modificarAlumnoResponse" />
+    </operation>
+    <operation name="eliminarPonente">
+      <input wsam:Action="http://services/GestionHumanaWS/eliminarPonenteRequest" message="tns:eliminarPonente" />
+      <output wsam:Action="http://services/GestionHumanaWS/eliminarPonenteResponse" message="tns:eliminarPonenteResponse" />
+    </operation>
+    <operation name="listarProfesor">
+      <input wsam:Action="http://services/GestionHumanaWS/listarProfesorRequest" message="tns:listarProfesor" />
+      <output wsam:Action="http://services/GestionHumanaWS/listarProfesorResponse" message="tns:listarProfesorResponse" />
+    </operation>
+    <operation name="insertarPonente">
+      <input wsam:Action="http://services/GestionHumanaWS/insertarPonenteRequest" message="tns:insertarPonente" />
+      <output wsam:Action="http://services/GestionHumanaWS/insertarPonenteResponse" message="tns:insertarPonenteResponse" />
+    </operation>
+    <operation name="listarEspecialidad">
+      <input wsam:Action="http://services/GestionHumanaWS/listarEspecialidadRequest" message="tns:listarEspecialidad" />
+      <output wsam:Action="http://services/GestionHumanaWS/listarEspecialidadResponse" message="tns:listarEspecialidadResponse" />
+    </operation>
+    <operation name="modificarEspecialidad">
+      <input wsam:Action="http://services/GestionHumanaWS/modificarEspecialidadRequest" message="tns:modificarEspecialidad" />
+      <output wsam:Action="http://services/GestionHumanaWS/modificarEspecialidadResponse" message="tns:modificarEspecialidadResponse" />
+    </operation>
+    <operation name="insertarEspecialidad">
+      <input wsam:Action="http://services/GestionHumanaWS/insertarEspecialidadRequest" message="tns:insertarEspecialidad" />
+      <output wsam:Action="http://services/GestionHumanaWS/insertarEspecialidadResponse" message="tns:insertarEspecialidadResponse" />
+    </operation>
+    <operation name="eliminarCoordinador">
+      <input wsam:Action="http://services/GestionHumanaWS/eliminarCoordinadorRequest" message="tns:eliminarCoordinador" />
+      <output wsam:Action="http://services/GestionHumanaWS/eliminarCoordinadorResponse" message="tns:eliminarCoordinadorResponse" />
+    </operation>
+    <operation name="modificarCoordinador">
+      <input wsam:Action="http://services/GestionHumanaWS/modificarCoordinadorRequest" message="tns:modificarCoordinador" />
+      <output wsam:Action="http://services/GestionHumanaWS/modificarCoordinadorResponse" message="tns:modificarCoordinadorResponse" />
+    </operation>
+    <operation name="insertarCoordinador">
+      <input wsam:Action="http://services/GestionHumanaWS/insertarCoordinadorRequest" message="tns:insertarCoordinador" />
+      <output wsam:Action="http://services/GestionHumanaWS/insertarCoordinadorResponse" message="tns:insertarCoordinadorResponse" />
+    </operation>
+    <operation name="listarCoordinador">
+      <input wsam:Action="http://services/GestionHumanaWS/listarCoordinadorRequest" message="tns:listarCoordinador" />
+      <output wsam:Action="http://services/GestionHumanaWS/listarCoordinadorResponse" message="tns:listarCoordinadorResponse" />
+    </operation>
+    <operation name="listar_alumno_x_id">
+      <input wsam:Action="http://services/GestionHumanaWS/listar_alumno_x_idRequest" message="tns:listar_alumno_x_id" />
+      <output wsam:Action="http://services/GestionHumanaWS/listar_alumno_x_idResponse" message="tns:listar_alumno_x_idResponse" />
+    </operation>
+    <operation name="insertarPsicologo">
+      <input wsam:Action="http://services/GestionHumanaWS/insertarPsicologoRequest" message="tns:insertarPsicologo" />
+      <output wsam:Action="http://services/GestionHumanaWS/insertarPsicologoResponse" message="tns:insertarPsicologoResponse" />
+    </operation>
+    <operation name="listar_coordinador_x_id">
+      <input wsam:Action="http://services/GestionHumanaWS/listar_coordinador_x_idRequest" message="tns:listar_coordinador_x_id" />
+      <output wsam:Action="http://services/GestionHumanaWS/listar_coordinador_x_idResponse" message="tns:listar_coordinador_x_idResponse" />
+    </operation>
+    <operation name="modificarPsicologo">
+      <input wsam:Action="http://services/GestionHumanaWS/modificarPsicologoRequest" message="tns:modificarPsicologo" />
+      <output wsam:Action="http://services/GestionHumanaWS/modificarPsicologoResponse" message="tns:modificarPsicologoResponse" />
+    </operation>
+    <operation name="eliminarPsicologo">
+      <input wsam:Action="http://services/GestionHumanaWS/eliminarPsicologoRequest" message="tns:eliminarPsicologo" />
+      <output wsam:Action="http://services/GestionHumanaWS/eliminarPsicologoResponse" message="tns:eliminarPsicologoResponse" />
+    </operation>
+    <operation name="listar_profesor_x_id">
+      <input wsam:Action="http://services/GestionHumanaWS/listar_profesor_x_idRequest" message="tns:listar_profesor_x_id" />
+      <output wsam:Action="http://services/GestionHumanaWS/listar_profesor_x_idResponse" message="tns:listar_profesor_x_idResponse" />
+    </operation>
+    <operation name="eliminarEspecialidad">
+      <input wsam:Action="http://services/GestionHumanaWS/eliminarEspecialidadRequest" message="tns:eliminarEspecialidad" />
+      <output wsam:Action="http://services/GestionHumanaWS/eliminarEspecialidadResponse" message="tns:eliminarEspecialidadResponse" />
+    </operation>
+    <operation name="autenticarUsuario">
+      <input wsam:Action="http://services/GestionHumanaWS/autenticarUsuarioRequest" message="tns:autenticarUsuario" />
+      <output wsam:Action="http://services/GestionHumanaWS/autenticarUsuarioResponse" message="tns:autenticarUsuarioResponse" />
+    </operation>
+    <operation name="listar_psicologo_x_id">
+      <input wsam:Action="http://services/GestionHumanaWS/listar_psicologo_x_idRequest" message="tns:listar_psicologo_x_id" />
+      <output wsam:Action="http://services/GestionHumanaWS/listar_psicologo_x_idResponse" message="tns:listar_psicologo_x_idResponse" />
+    </operation>
+  </portType>
+  <binding name="GestionHumanaWSPortBinding" type="tns:GestionHumanaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarProfesores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPonente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="tipoUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPsicologo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPonente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPonente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPonente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEspecialidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEspecialidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEspecialidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCoordinador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCoordinador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCoordinador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCoordinador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listar_alumno_x_id">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPsicologo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listar_coordinador_x_id">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPsicologo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPsicologo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listar_profesor_x_id">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEspecialidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="autenticarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listar_psicologo_x_id">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="GestionHumanaWS">
+    <port name="GestionHumanaWSPort" binding="tns:GestionHumanaWSPortBinding">
+      <soap:address location="http://localhost:8080/AuxiliarWS/GestionHumanaWS" />
+    </port>
+  </service>
+</definitions>

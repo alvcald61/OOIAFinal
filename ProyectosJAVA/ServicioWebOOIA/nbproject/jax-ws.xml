@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="EvaluacionesCSVcargaWS">
+      <implementation-class>servicios.EvaluacionesCSVcargaWS</implementation-class>
+    </service>
+    <service name="GestionAtencionWS">
+      <implementation-class>servicios.GestionAtencionWS</implementation-class>
+    </service>
+    <service name="AlumnosCSVcargaWS1">
+      <implementation-class>servicios.AlumnosCSVcargaWS1</implementation-class>
+    </service>
+    <service name="PsicologosCSVcargaWS">
+      <implementation-class>servicios.PsicologosCSVcargaWS</implementation-class>
+    </service>
+    <service name="CursosLlevadosCSVcargaWS">
+      <implementation-class>servicios.CursosLlevadosCSVcargaWS</implementation-class>
+    </service>
+    <service name="GestionHumanaWS">
+      <implementation-class>servicios.GestionHumanaWS</implementation-class>
+    </service>
+    <service name="ProfesoresCSVcargaWS">
+      <implementation-class>servicios.ProfesoresCSVcargaWS</implementation-class>
+    </service>
+    <service name="GestionEventoWS">
+      <implementation-class>servicios.GestionEventoWS</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>

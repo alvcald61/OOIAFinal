@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.OOIA.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="EventoAlumno" targetNamespace="http://services.OOIA.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://alvaro:8080/WebServicesOOIA/EventoAlumno?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarEncuestaEvento">
+    <part name="parameters" element="tns:insertarEncuestaEvento" />
+  </message>
+  <message name="insertarEncuestaEventoResponse">
+    <part name="parameters" element="tns:insertarEncuestaEventoResponse" />
+  </message>
+  <message name="eliminarEncuestaEvento">
+    <part name="parameters" element="tns:eliminarEncuestaEvento" />
+  </message>
+  <message name="eliminarEncuestaEventoResponse">
+    <part name="parameters" element="tns:eliminarEncuestaEventoResponse" />
+  </message>
+  <message name="listarEncuestaEvento">
+    <part name="parameters" element="tns:listarEncuestaEvento" />
+  </message>
+  <message name="listarEncuestaEventoResponse">
+    <part name="parameters" element="tns:listarEncuestaEventoResponse" />
+  </message>
+  <message name="modificarEncuestaEvento">
+    <part name="parameters" element="tns:modificarEncuestaEvento" />
+  </message>
+  <message name="modificarEncuestaEventoResponse">
+    <part name="parameters" element="tns:modificarEncuestaEventoResponse" />
+  </message>
+  <portType name="EventoAlumnoWS">
+    <operation name="insertarEncuestaEvento">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoRequest" message="tns:insertarEncuestaEvento" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoResponse" message="tns:insertarEncuestaEventoResponse" />
+    </operation>
+    <operation name="eliminarEncuestaEvento">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoRequest" message="tns:eliminarEncuestaEvento" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoResponse" message="tns:eliminarEncuestaEventoResponse" />
+    </operation>
+    <operation name="listarEncuestaEvento">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/listarEncuestaEventoRequest" message="tns:listarEncuestaEvento" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/listarEncuestaEventoResponse" message="tns:listarEncuestaEventoResponse" />
+    </operation>
+    <operation name="modificarEncuestaEvento">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/modificarEncuestaEventoRequest" message="tns:modificarEncuestaEvento" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/modificarEncuestaEventoResponse" message="tns:modificarEncuestaEventoResponse" />
+    </operation>
+  </portType>
+  <binding name="EventoAlumnoWSPortBinding" type="tns:EventoAlumnoWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarEncuestaEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEncuestaEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEncuestaEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEncuestaEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EventoAlumno">
+    <port name="EventoAlumnoWSPort" binding="tns:EventoAlumnoWSPortBinding">
+      <soap:address location="http://alvaro:8080/WebServicesOOIA/EventoAlumno" />
+    </port>
+  </service>
+</definitions>

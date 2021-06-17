@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services/" targetNamespace="http://services/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarCategoriaEvento" type="tns:eliminarCategoriaEvento" />
+  <xs:element name="eliminarCategoriaEventoResponse" type="tns:eliminarCategoriaEventoResponse" />
+  <xs:element name="eliminarCoordinadorEvento" type="tns:eliminarCoordinadorEvento" />
+  <xs:element name="eliminarCoordinadorEventoResponse" type="tns:eliminarCoordinadorEventoResponse" />
+  <xs:element name="eliminarEncuestaEvento" type="tns:eliminarEncuestaEvento" />
+  <xs:element name="eliminarEncuestaEventoResponse" type="tns:eliminarEncuestaEventoResponse" />
+  <xs:element name="eliminarEvento" type="tns:eliminarEvento" />
+  <xs:element name="eliminarEventoResponse" type="tns:eliminarEventoResponse" />
+  <xs:element name="insertarCategoriaEvento" type="tns:insertarCategoriaEvento" />
+  <xs:element name="insertarCategoriaEventoResponse" type="tns:insertarCategoriaEventoResponse" />
+  <xs:element name="insertarCoordinadorEvento" type="tns:insertarCoordinadorEvento" />
+  <xs:element name="insertarCoordinadorEventoResponse" type="tns:insertarCoordinadorEventoResponse" />
+  <xs:element name="insertarEncuestaEvento" type="tns:insertarEncuestaEvento" />
+  <xs:element name="insertarEncuestaEventoResponse" type="tns:insertarEncuestaEventoResponse" />
+  <xs:element name="insertarEvento" type="tns:insertarEvento" />
+  <xs:element name="insertarEventoResponse" type="tns:insertarEventoResponse" />
+  <xs:element name="listarCategoriaEvento" type="tns:listarCategoriaEvento" />
+  <xs:element name="listarCategoriaEventoResponse" type="tns:listarCategoriaEventoResponse" />
+  <xs:element name="listarCoordinadorEvento" type="tns:listarCoordinadorEvento" />
+  <xs:element name="listarCoordinadorEventoResponse" type="tns:listarCoordinadorEventoResponse" />
+  <xs:element name="listarEncuestaEvento" type="tns:listarEncuestaEvento" />
+  <xs:element name="listarEncuestaEventoResponse" type="tns:listarEncuestaEventoResponse" />
+  <xs:element name="listarEvento_por_fecha" type="tns:listarEvento_por_fecha" />
+  <xs:element name="listarEvento_por_fechaResponse" type="tns:listarEvento_por_fechaResponse" />
+  <xs:element name="listarEvento_por_nombre_categoria" type="tns:listarEvento_por_nombre_categoria" />
+  <xs:element name="listarEvento_por_nombre_categoriaResponse" type="tns:listarEvento_por_nombre_categoriaResponse" />
+  <xs:element name="modificarCategoriaEvento" type="tns:modificarCategoriaEvento" />
+  <xs:element name="modificarCategoriaEventoResponse" type="tns:modificarCategoriaEventoResponse" />
+  <xs:element name="modificarCoordinadorEvento" type="tns:modificarCoordinadorEvento" />
+  <xs:element name="modificarCoordinadorEventoResponse" type="tns:modificarCoordinadorEventoResponse" />
+  <xs:element name="modificarEncuestaEvento" type="tns:modificarEncuestaEvento" />
+  <xs:element name="modificarEncuestaEventoResponse" type="tns:modificarEncuestaEventoResponse" />
+  <xs:element name="modificarEvento" type="tns:modificarEvento" />
+  <xs:element name="modificarEventoResponse" type="tns:modificarEventoResponse" />
+  <xs:complexType name="listarEvento_por_fecha">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="tns:date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="date">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEvento_por_fechaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="evento">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="capacidad" type="xs:int" />
+      <xs:element minOccurs="0" name="categoria" type="tns:categoriaEvento" />
+      <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
+      <xs:element name="cupo" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaInicio" type="xs:dateTime" />
+      <xs:element name="id_evento" type="xs:int" />
+      <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="lugar" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ponentes" nillable="true" type="tns:ponente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="categoriaEvento">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="id_categoria" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="coordinador">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:miembroPUCP">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element name="id_coordinador" type="xs:int" />
+          <xs:element minOccurs="0" name="rol" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="miembroPUCP" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fecha_inclusion" type="xs:dateTime" />
+          <xs:element name="id_miembro_pucp" type="xs:int" />
+          <xs:element minOccurs="0" name="imagenDePerfil" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+          <xs:element minOccurs="0" name="usuario" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_nacimiento" type="xs:dateTime" />
+      <xs:element name="id_persona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ponente">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:miembroExterno">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element name="id_ponente" type="xs:int" />
+          <xs:element minOccurs="0" name="organizacion" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="miembroExterno" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element name="id_miembro_externo" type="xs:int" />
+          <xs:element minOccurs="0" name="ocupacion" type="xs:string" />
+          <xs:element minOccurs="0" name="telefono" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="insertarCategoriaEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="categoria" type="tns:categoriaEvento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCategoriaEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCoordinadorEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCoordinadorEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEvento_por_nombre_categoria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEvento_por_nombre_categoriaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEncuestaEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eventoAl" type="tns:eventoAlumno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eventoAlumno">
+    <xs:sequence>
+      <xs:element name="asistio" type="xs:boolean" />
+      <xs:element minOccurs="0" name="comentario" type="xs:string" />
+      <xs:element name="id_alumno" type="xs:int" />
+      <xs:element name="id_encuesta" type="xs:int" />
+      <xs:element name="id_evento" type="xs:int" />
+      <xs:element name="valoracionEvento" type="xs:int" />
+      <xs:element name="valoracionPonentes" type="xs:int" />
+      <xs:element name="valoracionUtilidad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEncuestaEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCategoriaEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="categoria" type="tns:categoriaEvento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCategoriaEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCoordinadorEvento">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCoordinadorEventoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:coordinador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCategoriaEvento">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCategoriaEventoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:categoriaEvento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEncuestaEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eventoAl" type="tns:eventoAlumno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEncuestaEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEncuestaEvento">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEncuestaEventoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:eventoAlumno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCoordinadorEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCoordinadorEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEncuestaEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eventoAl" type="tns:eventoAlumno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEncuestaEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCoordinadorEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCoordinadorEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCategoriaEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="categoria" type="tns:categoriaEvento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCategoriaEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

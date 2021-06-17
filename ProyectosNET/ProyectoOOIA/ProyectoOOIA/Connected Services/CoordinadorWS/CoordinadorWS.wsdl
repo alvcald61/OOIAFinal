@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.OOIA.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CoordinadorWS" targetNamespace="http://services.OOIA.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WebServicesOOIA/CoordinadorWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="eliminarCoordinador">
+    <part name="parameters" element="tns:eliminarCoordinador" />
+  </message>
+  <message name="eliminarCoordinadorResponse">
+    <part name="parameters" element="tns:eliminarCoordinadorResponse" />
+  </message>
+  <message name="modificarCoordinador">
+    <part name="parameters" element="tns:modificarCoordinador" />
+  </message>
+  <message name="modificarCoordinadorResponse">
+    <part name="parameters" element="tns:modificarCoordinadorResponse" />
+  </message>
+  <message name="insertarCoordinador">
+    <part name="parameters" element="tns:insertarCoordinador" />
+  </message>
+  <message name="insertarCoordinadorResponse">
+    <part name="parameters" element="tns:insertarCoordinadorResponse" />
+  </message>
+  <message name="listarCoordinador">
+    <part name="parameters" element="tns:listarCoordinador" />
+  </message>
+  <message name="listarCoordinadorResponse">
+    <part name="parameters" element="tns:listarCoordinadorResponse" />
+  </message>
+  <portType name="CoordinadorWS">
+    <operation name="eliminarCoordinador">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorRequest" message="tns:eliminarCoordinador" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorResponse" message="tns:eliminarCoordinadorResponse" />
+    </operation>
+    <operation name="modificarCoordinador">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/modificarCoordinadorRequest" message="tns:modificarCoordinador" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/modificarCoordinadorResponse" message="tns:modificarCoordinadorResponse" />
+    </operation>
+    <operation name="insertarCoordinador">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/insertarCoordinadorRequest" message="tns:insertarCoordinador" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/insertarCoordinadorResponse" message="tns:insertarCoordinadorResponse" />
+    </operation>
+    <operation name="listarCoordinador">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/listarCoordinadorRequest" message="tns:listarCoordinador" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/listarCoordinadorResponse" message="tns:listarCoordinadorResponse" />
+    </operation>
+  </portType>
+  <binding name="CoordinadorWSPortBinding" type="tns:CoordinadorWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="eliminarCoordinador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCoordinador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCoordinador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCoordinador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CoordinadorWS">
+    <port name="CoordinadorWSPort" binding="tns:CoordinadorWSPortBinding">
+      <soap:address location="http://localhost:8080/WebServicesOOIA/CoordinadorWS" />
+    </port>
+  </service>
+</definitions>

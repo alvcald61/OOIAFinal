@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.OOIA.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ProfesorWS" targetNamespace="http://services.OOIA.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WebServicesOOIA/ProfesorWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarProfesor">
+    <part name="parameters" element="tns:insertarProfesor" />
+  </message>
+  <message name="insertarProfesorResponse">
+    <part name="parameters" element="tns:insertarProfesorResponse" />
+  </message>
+  <message name="eliminarProfesor">
+    <part name="parameters" element="tns:eliminarProfesor" />
+  </message>
+  <message name="eliminarProfesorResponse">
+    <part name="parameters" element="tns:eliminarProfesorResponse" />
+  </message>
+  <message name="listarProfesor">
+    <part name="parameters" element="tns:listarProfesor" />
+  </message>
+  <message name="listarProfesorResponse">
+    <part name="parameters" element="tns:listarProfesorResponse" />
+  </message>
+  <message name="modificarProfesor">
+    <part name="parameters" element="tns:modificarProfesor" />
+  </message>
+  <message name="modificarProfesorResponse">
+    <part name="parameters" element="tns:modificarProfesorResponse" />
+  </message>
+  <portType name="ProfesorWS">
+    <operation name="insertarProfesor">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesorRequest" message="tns:insertarProfesor" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesorResponse" message="tns:insertarProfesorResponse" />
+    </operation>
+    <operation name="eliminarProfesor">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest" message="tns:eliminarProfesor" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse" message="tns:eliminarProfesorResponse" />
+    </operation>
+    <operation name="listarProfesor">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesorRequest" message="tns:listarProfesor" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesorResponse" message="tns:listarProfesorResponse" />
+    </operation>
+    <operation name="modificarProfesor">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/modificarProfesorRequest" message="tns:modificarProfesor" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/modificarProfesorResponse" message="tns:modificarProfesorResponse" />
+    </operation>
+  </portType>
+  <binding name="ProfesorWSPortBinding" type="tns:ProfesorWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ProfesorWS">
+    <port name="ProfesorWSPort" binding="tns:ProfesorWSPortBinding">
+      <soap:address location="http://localhost:8080/WebServicesOOIA/ProfesorWS" />
+    </port>
+  </service>
+</definitions>

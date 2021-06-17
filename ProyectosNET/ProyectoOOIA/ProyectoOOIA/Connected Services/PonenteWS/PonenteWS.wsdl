@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.OOIA.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="PonenteWS" targetNamespace="http://services.OOIA.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WebServicesOOIA/PonenteWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="eliminarPonente">
+    <part name="parameters" element="tns:eliminarPonente" />
+  </message>
+  <message name="eliminarPonenteResponse">
+    <part name="parameters" element="tns:eliminarPonenteResponse" />
+  </message>
+  <message name="insertarPonente">
+    <part name="parameters" element="tns:insertarPonente" />
+  </message>
+  <message name="insertarPonenteResponse">
+    <part name="parameters" element="tns:insertarPonenteResponse" />
+  </message>
+  <message name="modificarPonente">
+    <part name="parameters" element="tns:modificarPonente" />
+  </message>
+  <message name="modificarPonenteResponse">
+    <part name="parameters" element="tns:modificarPonenteResponse" />
+  </message>
+  <message name="listarPonente">
+    <part name="parameters" element="tns:listarPonente" />
+  </message>
+  <message name="listarPonenteResponse">
+    <part name="parameters" element="tns:listarPonenteResponse" />
+  </message>
+  <portType name="PonenteWS">
+    <operation name="eliminarPonente">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/PonenteWS/eliminarPonenteRequest" message="tns:eliminarPonente" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/PonenteWS/eliminarPonenteResponse" message="tns:eliminarPonenteResponse" />
+    </operation>
+    <operation name="insertarPonente">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteRequest" message="tns:insertarPonente" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteResponse" message="tns:insertarPonenteResponse" />
+    </operation>
+    <operation name="modificarPonente">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/PonenteWS/modificarPonenteRequest" message="tns:modificarPonente" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/PonenteWS/modificarPonenteResponse" message="tns:modificarPonenteResponse" />
+    </operation>
+    <operation name="listarPonente">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/PonenteWS/listarPonenteRequest" message="tns:listarPonente" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/PonenteWS/listarPonenteResponse" message="tns:listarPonenteResponse" />
+    </operation>
+  </portType>
+  <binding name="PonenteWSPortBinding" type="tns:PonenteWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="eliminarPonente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPonente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPonente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPonente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PonenteWS">
+    <port name="PonenteWSPort" binding="tns:PonenteWSPortBinding">
+      <soap:address location="http://localhost:8080/WebServicesOOIA/PonenteWS" />
+    </port>
+  </service>
+</definitions>

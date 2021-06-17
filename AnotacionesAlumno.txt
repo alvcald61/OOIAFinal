@@ -1,0 +1,35 @@
+1).- Especialidad.
+2).- Curso llevado.
+3).- Agregar categoria a la clase Evaluacion.
+4).- 
+drop procedure if exists insertar_alumno;
+delimiter $
+create procedure insertar_alumno(
+	out _id_alumno int,
+    in _nombre varchar(150),
+    in _dni varchar(150),
+    in _edad int,
+    in _direccion varchar(150),
+    in _usuario_pucp varchar(150),
+    in _fecha_de_inclusion date,
+	in _codigo_pucp varchar(150),
+    in _fid_especialidad int,
+    in _craest decimal(4,2),
+    in _cursos_por_primera int ,
+    in _cursos_por_segunda int ,
+    in _cursos_por_tercera int
+)
+begin
+	declare _id_persona int; 
+    declare _id_miembro_pucp int;
+	insert into persona(nombre, dni, edad, direccion) 
+    values (_nombre, _dni, _edad, _direccion);
+	set _id_persona = @@last_insert_id;
+    insert into miembro_pucp(fid_persona, usuario_pucp, fecha_de_inclusion)
+    values (_id_persona, _usuario_pucp, _fecha_de_inclusion);
+    set _id_miembro_pucp = @@last_insert_id;
+    insert into alumno(id_alumno, codigo_pucp, fid_especialidad, craest, estado,
+    cursos_por_primera, cursos_por_segunda, cursos_por_tercera)
+    values (_id_miembro_pucp, _codigo_pucp, _fid_especialidad, _craest, 1,
+    _cursos_por_primera, _cursos_por_segunda, _cursos_por_tercera);
+end$

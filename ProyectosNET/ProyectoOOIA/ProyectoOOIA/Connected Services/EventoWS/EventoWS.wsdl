@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.OOIA.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="EventoWS" targetNamespace="http://services.OOIA.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WebServicesOOIA/EventoWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="modificarEvento">
+    <part name="parameters" element="tns:modificarEvento" />
+  </message>
+  <message name="modificarEventoResponse">
+    <part name="parameters" element="tns:modificarEventoResponse" />
+  </message>
+  <message name="eliminarEvento">
+    <part name="parameters" element="tns:eliminarEvento" />
+  </message>
+  <message name="eliminarEventoResponse">
+    <part name="parameters" element="tns:eliminarEventoResponse" />
+  </message>
+  <message name="insertarEvento">
+    <part name="parameters" element="tns:insertarEvento" />
+  </message>
+  <message name="insertarEventoResponse">
+    <part name="parameters" element="tns:insertarEventoResponse" />
+  </message>
+  <message name="listarEvento_por_nombre_categoria">
+    <part name="parameters" element="tns:listarEvento_por_nombre_categoria" />
+  </message>
+  <message name="listarEvento_por_nombre_categoriaResponse">
+    <part name="parameters" element="tns:listarEvento_por_nombre_categoriaResponse" />
+  </message>
+  <message name="listarEvento_por_fecha">
+    <part name="parameters" element="tns:listarEvento_por_fecha" />
+  </message>
+  <message name="listarEvento_por_fechaResponse">
+    <part name="parameters" element="tns:listarEvento_por_fechaResponse" />
+  </message>
+  <portType name="EventoWS">
+    <operation name="modificarEvento">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoRequest" message="tns:modificarEvento" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoResponse" message="tns:modificarEventoResponse" />
+    </operation>
+    <operation name="eliminarEvento">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/eliminarEventoRequest" message="tns:eliminarEvento" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/eliminarEventoResponse" message="tns:eliminarEventoResponse" />
+    </operation>
+    <operation name="insertarEvento">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoRequest" message="tns:insertarEvento" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoResponse" message="tns:insertarEventoResponse" />
+    </operation>
+    <operation name="listarEvento_por_nombre_categoria">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_nombre_categoriaRequest" message="tns:listarEvento_por_nombre_categoria" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_nombre_categoriaResponse" message="tns:listarEvento_por_nombre_categoriaResponse" />
+    </operation>
+    <operation name="listarEvento_por_fecha">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_fechaRequest" message="tns:listarEvento_por_fecha" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_fechaResponse" message="tns:listarEvento_por_fechaResponse" />
+    </operation>
+  </portType>
+  <binding name="EventoWSPortBinding" type="tns:EventoWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="modificarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEvento_por_nombre_categoria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEvento_por_fecha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EventoWS">
+    <port name="EventoWSPort" binding="tns:EventoWSPortBinding">
+      <soap:address location="http://localhost:8080/WebServicesOOIA/EventoWS" />
+    </port>
+  </service>
+</definitions>
