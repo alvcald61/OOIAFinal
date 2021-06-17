@@ -18,6 +18,8 @@ public interface EventoDAO {
     public ArrayList<Evento> listar(String nombreCategoria);
     public ArrayList<Evento> listar_tres_eventos_proximos();
     public ArrayList<Evento> listar_x_fecha(Date fecha);
+    public ArrayList<Evento> listar_eventos_inscritos(int idAlumno);
+    public ArrayList<Evento> listar_eventos_pasados(int idAlumno);
     public ArrayList<Ponente> listarPonente(int id_evento);
     public int insertar(Evento evento);
     public int modificar(Evento evento);

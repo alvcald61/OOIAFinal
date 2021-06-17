@@ -295,7 +295,83 @@ public class EventoMySQL implements EventoDAO{
            return lista;
            
     }
+@Override
+    public ArrayList<Evento> listar_eventos_inscritos(int idAlumno) {
+        ArrayList<Evento> eventos = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_EVENTOS_INSCRITOS(?)}");
+            cs.setInt("_id_alumno", idAlumno);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Evento evento = new Evento();
+                evento.setId_evento(rs.getInt("id_evento"));
+                evento.setNombre(rs.getString("nombre"));
+                evento.setDescripcion(rs.getString("descripcion"));
+                evento.setCategoria(new CategoriaEvento(rs.getInt("fid_categoria_evento"), 
+                rs.getString("nombre_categoria")));
+                
+                evento.setCapacidad(rs.getInt("capacidad"));
+                
+                evento.setFecha(rs.getDate("fecha"));
+                evento.setHoraInicio(rs.getTime("hora_inicio"));
+                evento.setHoraFin(rs.getTime("hora_fin"));
+                evento.setLugar(rs.getString("lugar"));
+                evento.setImagen(rs.getBytes("imagen"));
+                evento.setPonentes(listarPonente(evento.getId_evento()));
+                eventos.add(evento);
+                
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());};
+            
+        }
+        return eventos;
+    }
 
+    @Override
+    public ArrayList<Evento> listar_eventos_pasados(int idAlumno) {
+        ArrayList<Evento> eventos = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_EVENTOS_PASADOS(?)}");
+            cs.setInt("_id_alumno", idAlumno);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Evento evento = new Evento();
+                evento.setId_evento(rs.getInt("id_evento"));
+                evento.setNombre(rs.getString("nombre"));
+                evento.setDescripcion(rs.getString("descripcion"));
+                evento.setCategoria(new CategoriaEvento(rs.getInt("fid_categoria_evento"), 
+                rs.getString("nombre_categoria")));
+                
+                evento.setCapacidad(rs.getInt("capacidad"));
+                
+                evento.setFecha(rs.getDate("fecha"));
+                evento.setHoraInicio(rs.getTime("hora_inicio"));
+                evento.setHoraFin(rs.getTime("hora_fin"));
+                evento.setLugar(rs.getString("lugar"));
+                evento.setImagen(rs.getBytes("imagen"));
+                evento.setPonentes(listarPonente(evento.getId_evento()));
+                eventos.add(evento);
+                
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());};
+            
+        }
+        return eventos;
+    }
  
     
 }

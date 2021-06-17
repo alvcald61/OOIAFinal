@@ -243,4 +243,29 @@ public class GestionEventoWS {
         }
         return lista;
     }
+        @WebMethod(operationName = "Listar_eventos_inscritos")
+    public ArrayList<Evento> listarEventosInscritos(@WebParam(name="id alumno")int idAlumno){
+        ArrayList<Evento> lista= new ArrayList<>();
+        try {
+            lista=eventoSQL.listar_eventos_inscritos(idAlumno);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return lista;
+    }
+    
+    @WebMethod(operationName = "Listar_eventos_pasados")
+    public ArrayList<Evento> listarEventosPasados(@WebParam(name="id alumno")int idAlumno){
+        ArrayList<Evento> lista= new ArrayList<>();
+        try {
+            lista=eventoSQL.listar_eventos_pasados(idAlumno);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return lista;
+    }
+    
+    
+    
+    
 }
