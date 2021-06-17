@@ -22,6 +22,7 @@ namespace ProyectoOOIA.Ventanas
         private BindingList<GestionEventoWS.evento> listaEventos;
         public frmPrincipal(TipoUsuario tipoUsuario, int id_usuario, int tipoIdUsuario)
         {
+
             InitializeComponent();
             usuarioDao = new GestionHumanaWS.GestionHumanaWSClient();
             listaEventos = new BindingList<evento>();
@@ -30,6 +31,7 @@ namespace ProyectoOOIA.Ventanas
             tipo = tipoUsuario;
             this.id_usuario = id_usuario;
             this.tipoIdUsuario = tipoIdUsuario;
+            
             if (tipo == TipoUsuario.Asesor)
             {
                 if (tipoIdUsuario == 2) usuario = usuarioDao.listar_profesor_x_id(id_usuario);

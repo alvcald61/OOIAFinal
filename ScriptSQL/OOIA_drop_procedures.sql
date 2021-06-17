@@ -12,25 +12,28 @@ drop procedure if exists MODIFICAR_COORDINADOR;
 drop procedure if exists ELIMINAR_COORDINADOR;
 drop procedure if exists LISTAR_COORDINADOR;
 drop procedure if exists LISTAR_COORDINADOR_X_NOMBRE;
-
+drop procedure if exists LISTAR_COORDINADOR_X_ID;
 -- ALUMNO
 drop procedure if exists INSERTAR_ALUMNO;
 drop procedure if exists MODIFICAR_ALUMNO;
 drop procedure if exists ELIMINAR_ALUMNO;
 drop procedure if exists LISTAR_ALUMNO;
 drop procedure if exists LISTAR_ALUMNO_X_NOMBRE;
+drop procedure if exists LISTAR_ALUMNO_X_ID
 -- PROFESOR
 drop procedure if exists INSERTAR_PROFESOR;
 drop procedure if exists MODIFICAR_PROFESOR;
 drop procedure if exists ELIMINAR_PROFESOR;
 drop procedure if exists LISTAR_PROFESOR;
 drop procedure if exists LISTAR_PROFESOR_X_NOMBRE;
+drop procedure if exists LISTAR_PROFESOR_X_ID;
 -- PSICOLOGO
 drop procedure if exists INSERTAR_PSICOLOGO;
 drop procedure if exists MODIFICAR_PSICOLOGO;
 drop procedure if exists ELIMINAR_PSICOLOGO;
 drop procedure if exists LISTAR_PSICOLOGO;
 drop procedure if exists LISTAR_PSICOLOGO_X_NOMBRE;
+drop procedure if exists LISTAR_PSICOLOGO_X_ID;
 -- PONENTE
 drop procedure if exists INSERTAR_PONENTE;
 drop procedure if exists MODIFICAR_PONENTE;
@@ -99,6 +102,11 @@ drop procedure if exists INSERTAR_EVENTO_ALUMNO;
 drop procedure if exists MODIFICAR_EVENTO_ALUMNO;
 drop procedure if exists ELIMINAR_EVENTO_ALUMNO;
 drop procedure if exists LISTAR_EVENTO_ALUMNO;
+
+drop procedure if exists LISTAR_EVENTOS_INSCRITOS;
+drop procedure if exists LISTAR_HISTORIAL_EVENTOS;
+drop procedure if exists LISTAR_TRES_EVENTOS_PROXIMOS;
+
 -- EVENTO_PONENTE
 drop procedure if exists INSERTAR_EVENTO_PONENTE;
 drop procedure if exists MODIFICAR_EVENTO_PONENTE;
