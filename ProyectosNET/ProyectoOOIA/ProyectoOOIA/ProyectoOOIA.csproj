@@ -244,6 +244,12 @@
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\frmGestionarDatos.Designer.cs">
       <DependentUpon>frmGestionarDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion Evento\frmGestionarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion Evento\frmGestionarCategoria.Designer.cs">
+      <DependentUpon>frmGestionarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmBuscarCursosLlevados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -566,6 +572,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\frmGestionarDatos.resx">
       <DependentUpon>frmGestionarDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion Evento\frmGestionarCategoria.resx">
+      <DependentUpon>frmGestionarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmBuscarCursosLlevados.resx">
       <DependentUpon>frmBuscarCursosLlevados.cs</DependentUpon>
@@ -1471,5 +1480,6 @@
     <WCFMetadataStorage Include="Connected Services\PsicologosCSVcargaWS\" />
     <WCFMetadataStorage Include="Connected Services\PsicologoWS\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
