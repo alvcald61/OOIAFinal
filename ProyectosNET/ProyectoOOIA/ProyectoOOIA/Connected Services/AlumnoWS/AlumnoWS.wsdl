@@ -5,23 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServicesOOIA/AlumnoWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarAlumno">
-    <part name="parameters" element="tns:listarAlumno" />
-  </message>
-  <message name="listarAlumnoResponse">
-    <part name="parameters" element="tns:listarAlumnoResponse" />
-  </message>
   <message name="insertarAlumno">
     <part name="parameters" element="tns:insertarAlumno" />
   </message>
   <message name="insertarAlumnoResponse">
     <part name="parameters" element="tns:insertarAlumnoResponse" />
-  </message>
-  <message name="eliminarAlumno">
-    <part name="parameters" element="tns:eliminarAlumno" />
-  </message>
-  <message name="eliminarAlumnoResponse">
-    <part name="parameters" element="tns:eliminarAlumnoResponse" />
   </message>
   <message name="modificarAlumno">
     <part name="parameters" element="tns:modificarAlumno" />
@@ -29,27 +17,39 @@
   <message name="modificarAlumnoResponse">
     <part name="parameters" element="tns:modificarAlumnoResponse" />
   </message>
+  <message name="eliminarAlumno">
+    <part name="parameters" element="tns:eliminarAlumno" />
+  </message>
+  <message name="eliminarAlumnoResponse">
+    <part name="parameters" element="tns:eliminarAlumnoResponse" />
+  </message>
+  <message name="listarAlumno">
+    <part name="parameters" element="tns:listarAlumno" />
+  </message>
+  <message name="listarAlumnoResponse">
+    <part name="parameters" element="tns:listarAlumnoResponse" />
+  </message>
   <portType name="AlumnoWS">
-    <operation name="listarAlumno">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/listarAlumnoRequest" message="tns:listarAlumno" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/listarAlumnoResponse" message="tns:listarAlumnoResponse" />
-    </operation>
     <operation name="insertarAlumno">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/insertarAlumnoRequest" message="tns:insertarAlumno" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/insertarAlumnoResponse" message="tns:insertarAlumnoResponse" />
-    </operation>
-    <operation name="eliminarAlumno">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/eliminarAlumnoRequest" message="tns:eliminarAlumno" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/eliminarAlumnoResponse" message="tns:eliminarAlumnoResponse" />
     </operation>
     <operation name="modificarAlumno">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/modificarAlumnoRequest" message="tns:modificarAlumno" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/modificarAlumnoResponse" message="tns:modificarAlumnoResponse" />
     </operation>
+    <operation name="eliminarAlumno">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/eliminarAlumnoRequest" message="tns:eliminarAlumno" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/eliminarAlumnoResponse" message="tns:eliminarAlumnoResponse" />
+    </operation>
+    <operation name="listarAlumno">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/listarAlumnoRequest" message="tns:listarAlumno" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/listarAlumnoResponse" message="tns:listarAlumnoResponse" />
+    </operation>
   </portType>
   <binding name="AlumnoWSPortBinding" type="tns:AlumnoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarAlumno">
+    <operation name="insertarAlumno">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -58,7 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarAlumno">
+    <operation name="modificarAlumno">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarAlumno">
+    <operation name="listarAlumno">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

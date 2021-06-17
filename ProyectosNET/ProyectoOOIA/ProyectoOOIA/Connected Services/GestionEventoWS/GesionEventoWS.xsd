@@ -28,6 +28,8 @@
   <xs:element name="listarEvento_por_nombre_categoriaResponse" type="tns:listarEvento_por_nombre_categoriaResponse" />
   <xs:element name="listarPonenteXEvento" type="tns:listarPonenteXEvento" />
   <xs:element name="listarPonenteXEventoResponse" type="tns:listarPonenteXEventoResponse" />
+  <xs:element name="listar_tres_eventos_proximos" type="tns:listar_tres_eventos_proximos" />
+  <xs:element name="listar_tres_eventos_proximosResponse" type="tns:listar_tres_eventos_proximosResponse" />
   <xs:element name="modificarCategoriaEvento" type="tns:modificarCategoriaEvento" />
   <xs:element name="modificarCategoriaEventoResponse" type="tns:modificarCategoriaEventoResponse" />
   <xs:element name="modificarCoordinadorEvento" type="tns:modificarCoordinadorEvento" />
@@ -190,6 +192,8 @@
   <xs:complexType name="listarEvento_por_nombre_categoriaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarPonenteXEvento">
     <xs:sequence>
       <xs:element name="id_evento" type="xs:int" />
@@ -252,6 +256,14 @@
   <xs:complexType name="listarEncuestaEventoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:eventoAlumno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listar_tres_eventos_proximos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listar_tres_eventos_proximosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarEvento">

@@ -40,8 +40,8 @@ public class EventoAlumnoWS {
         }
         return lista;
     }
-    @WebMethod(operationName = "insertarEncuestaEvento")
-    public int insertarEncuestaEvento(@WebParam(name = "evento")EventoAlumno evento){
+    @WebMethod(operationName = "insertarEventoAlumno")
+    public int insertarEventoAlumno(@WebParam(name = "evento")EventoAlumno evento){
         int resultado=0;
         try {
             resultado=this.evento.insertar(evento);

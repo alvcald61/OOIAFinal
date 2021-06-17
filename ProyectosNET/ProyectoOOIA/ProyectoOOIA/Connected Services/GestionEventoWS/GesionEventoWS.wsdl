@@ -5,17 +5,23 @@
       <xsd:import schemaLocation="http://localhost:8080/AuxiliarWS/GesionEventoWS?xsd=1" namespace="http://services/" />
     </xsd:schema>
   </types>
-  <message name="eliminarEvento">
-    <part name="parameters" element="tns:eliminarEvento" />
-  </message>
-  <message name="eliminarEventoResponse">
-    <part name="parameters" element="tns:eliminarEventoResponse" />
-  </message>
   <message name="listarPonenteXEvento">
     <part name="parameters" element="tns:listarPonenteXEvento" />
   </message>
   <message name="listarPonenteXEventoResponse">
     <part name="parameters" element="tns:listarPonenteXEventoResponse" />
+  </message>
+  <message name="listar_tres_eventos_proximos">
+    <part name="parameters" element="tns:listar_tres_eventos_proximos" />
+  </message>
+  <message name="listar_tres_eventos_proximosResponse">
+    <part name="parameters" element="tns:listar_tres_eventos_proximosResponse" />
+  </message>
+  <message name="eliminarEvento">
+    <part name="parameters" element="tns:eliminarEvento" />
+  </message>
+  <message name="eliminarEventoResponse">
+    <part name="parameters" element="tns:eliminarEventoResponse" />
   </message>
   <message name="insertarEvento">
     <part name="parameters" element="tns:insertarEvento" />
@@ -114,13 +120,17 @@
     <part name="parameters" element="tns:listarEvento_por_nombre_categoriaResponse" />
   </message>
   <portType name="GestionEventoWS">
-    <operation name="eliminarEvento">
-      <input wsam:Action="http://services/GestionEventoWS/eliminarEventoRequest" message="tns:eliminarEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/eliminarEventoResponse" message="tns:eliminarEventoResponse" />
-    </operation>
     <operation name="listarPonenteXEvento">
       <input wsam:Action="http://services/GestionEventoWS/listarPonenteXEventoRequest" message="tns:listarPonenteXEvento" />
       <output wsam:Action="http://services/GestionEventoWS/listarPonenteXEventoResponse" message="tns:listarPonenteXEventoResponse" />
+    </operation>
+    <operation name="listar_tres_eventos_proximos">
+      <input wsam:Action="http://services/GestionEventoWS/listar_tres_eventos_proximosRequest" message="tns:listar_tres_eventos_proximos" />
+      <output wsam:Action="http://services/GestionEventoWS/listar_tres_eventos_proximosResponse" message="tns:listar_tres_eventos_proximosResponse" />
+    </operation>
+    <operation name="eliminarEvento">
+      <input wsam:Action="http://services/GestionEventoWS/eliminarEventoRequest" message="tns:eliminarEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/eliminarEventoResponse" message="tns:eliminarEventoResponse" />
     </operation>
     <operation name="insertarEvento">
       <input wsam:Action="http://services/GestionEventoWS/insertarEventoRequest" message="tns:insertarEvento" />
@@ -189,7 +199,7 @@
   </portType>
   <binding name="GestionEventoWSPortBinding" type="tns:GestionEventoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="eliminarEvento">
+    <operation name="listarPonenteXEvento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -198,7 +208,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarPonenteXEvento">
+    <operation name="listar_tres_eventos_proximos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEvento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

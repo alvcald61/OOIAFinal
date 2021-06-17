@@ -112,12 +112,19 @@ namespace ProyectoOOIA.Ventanas
                    MessageBoxButtons.YesNo, MessageBoxIcon.None);
                 if (dr == DialogResult.Yes)
                 {
-                    // int resultado = daoEventoAlumno.insertar(eventoAlumno);
-                    /*if (resultado != 0)
+                    eventoAlumno.id_alumno = alumno.id_alumno;
+                    eventoAlumno.id_evento = evento.id_evento;
+                    eventoAlumno.valoracionEvento = 0;
+                    eventoAlumno.valoracionPonentes = 0;
+                    eventoAlumno.valoracionUtilidad = 0;
+                    eventoAlumno.comentario = "";
+                    eventoAlumno.asistio = false;
+                    int resultado = daoEventoAlumno.insertarEventoAlumno(eventoAlumno);
+                    if (resultado != 0)
                     {
                         MessageBox.Show("El registro ha sido exitoso", "Éxito", MessageBoxButtons.OK,
                                MessageBoxIcon.Exclamation);
-                        listarEventosInscritos();
+                        //listarEventosInscritos();
                         txtNombreEvento.Text = "";
                        
                     }
@@ -125,7 +132,7 @@ namespace ProyectoOOIA.Ventanas
                     {
                         MessageBox.Show("Ha habido un error", "Error", MessageBoxButtons.RetryCancel,
                                 MessageBoxIcon.Error);
-                    }*/
+                    }
                 }
 
             }

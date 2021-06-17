@@ -220,6 +220,12 @@
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.Designer.cs">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Asesor\Citas\frmRegistrarHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Asesor\Citas\frmRegistrarHorario.Designer.cs">
+      <DependentUpon>frmRegistrarHorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Eventos\frmEliminarEventoOOIA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -560,6 +566,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Asesor\Citas\frmRegistrarHorario.resx">
+      <DependentUpon>frmRegistrarHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Coordinador\Eventos\frmEliminarEventoOOIA.resx">
       <DependentUpon>frmEliminarEventoOOIA.cs</DependentUpon>
@@ -903,8 +912,8 @@
     <None Include="Connected Services\EvaluacionesCSVcargaWS\ProyectoOOIA.EvaluacionesCSVcargaWS.CargarCSVevaluacionesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno.wsdl" />
-    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno.xsd">
+    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno1.wsdl" />
+    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse.datasource">
@@ -913,7 +922,7 @@
     <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.eventoAlumno.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse.datasource">
+    <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.insertarEventoAlumnoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.listarEncuestaEventoResponse.datasource">
@@ -1048,6 +1057,12 @@
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listarEvento_por_nombre_categoriaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1058,6 +1073,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.modificarEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.ponente1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS.wsdl" />

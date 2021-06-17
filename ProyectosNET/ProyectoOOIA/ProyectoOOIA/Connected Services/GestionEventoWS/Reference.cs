@@ -16,16 +16,6 @@ namespace ProyectoOOIA.GestionEventoWS {
     public interface GestionEventoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarEventoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.eliminarEventoResponse eliminarEvento(ProyectoOOIA.GestionEventoWS.eliminarEventoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarEventoResponse> eliminarEventoAsync(ProyectoOOIA.GestionEventoWS.eliminarEventoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarPonenteXEventoRequest", ReplyAction="http://services/GestionEventoWS/listarPonenteXEventoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -34,6 +24,26 @@ namespace ProyectoOOIA.GestionEventoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarPonenteXEventoRequest", ReplyAction="http://services/GestionEventoWS/listarPonenteXEventoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse> listarPonenteXEventoAsync(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_tres_eventos_proximosRequest", ReplyAction="http://services/GestionEventoWS/listar_tres_eventos_proximosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse listar_tres_eventos_proximos(ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_tres_eventos_proximosRequest", ReplyAction="http://services/GestionEventoWS/listar_tres_eventos_proximosResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse> listar_tres_eventos_proximosAsync(ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionEventoWS.eliminarEventoResponse eliminarEvento(ProyectoOOIA.GestionEventoWS.eliminarEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarEventoResponse> eliminarEventoAsync(ProyectoOOIA.GestionEventoWS.eliminarEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarEventoResponse")]
@@ -194,6 +204,437 @@ namespace ProyectoOOIA.GestionEventoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarEvento_por_nombre_categoriaRequest", ReplyAction="http://services/GestionEventoWS/listarEvento_por_nombre_categoriaResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarEvento_por_nombre_categoriaResponse> listarEvento_por_nombre_categoriaAsync(ProyectoOOIA.GestionEventoWS.listarEvento_por_nombre_categoriaRequest request);
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class ponente : miembroExterno {
+        
+        private bool activoField;
+        
+        private int id_ponenteField;
+        
+        private string organizacionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_ponente {
+            get {
+                return this.id_ponenteField;
+            }
+            set {
+                this.id_ponenteField = value;
+                this.RaisePropertyChanged("id_ponente");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string organizacion {
+            get {
+                return this.organizacionField;
+            }
+            set {
+                this.organizacionField = value;
+                this.RaisePropertyChanged("organizacion");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public abstract partial class miembroExterno : persona {
+        
+        private int id_miembro_externoField;
+        
+        private string ocupacionField;
+        
+        private string telefonoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id_miembro_externo {
+            get {
+                return this.id_miembro_externoField;
+            }
+            set {
+                this.id_miembro_externoField = value;
+                this.RaisePropertyChanged("id_miembro_externo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string ocupacion {
+            get {
+                return this.ocupacionField;
+            }
+            set {
+                this.ocupacionField = value;
+                this.RaisePropertyChanged("ocupacion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("telefono");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroExterno))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public abstract partial class persona : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string correoField;
+        
+        private string direccionField;
+        
+        private string dniField;
+        
+        private System.DateTime fecha_nacimientoField;
+        
+        private bool fecha_nacimientoFieldSpecified;
+        
+        private int id_personaField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string correo {
+            get {
+                return this.correoField;
+            }
+            set {
+                this.correoField = value;
+                this.RaisePropertyChanged("correo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string direccion {
+            get {
+                return this.direccionField;
+            }
+            set {
+                this.direccionField = value;
+                this.RaisePropertyChanged("direccion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string dni {
+            get {
+                return this.dniField;
+            }
+            set {
+                this.dniField = value;
+                this.RaisePropertyChanged("dni");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime fecha_nacimiento {
+            get {
+                return this.fecha_nacimientoField;
+            }
+            set {
+                this.fecha_nacimientoField = value;
+                this.RaisePropertyChanged("fecha_nacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fecha_nacimientoSpecified {
+            get {
+                return this.fecha_nacimientoFieldSpecified;
+            }
+            set {
+                this.fecha_nacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fecha_nacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_persona {
+            get {
+                return this.id_personaField;
+            }
+            set {
+                this.id_personaField = value;
+                this.RaisePropertyChanged("id_persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class date : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class eventoAlumno : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool asistioField;
+        
+        private string comentarioField;
+        
+        private int id_alumnoField;
+        
+        private int id_encuestaField;
+        
+        private int id_eventoField;
+        
+        private int valoracionEventoField;
+        
+        private int valoracionPonentesField;
+        
+        private int valoracionUtilidadField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool asistio {
+            get {
+                return this.asistioField;
+            }
+            set {
+                this.asistioField = value;
+                this.RaisePropertyChanged("asistio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string comentario {
+            get {
+                return this.comentarioField;
+            }
+            set {
+                this.comentarioField = value;
+                this.RaisePropertyChanged("comentario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id_alumno {
+            get {
+                return this.id_alumnoField;
+            }
+            set {
+                this.id_alumnoField = value;
+                this.RaisePropertyChanged("id_alumno");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int id_encuesta {
+            get {
+                return this.id_encuestaField;
+            }
+            set {
+                this.id_encuestaField = value;
+                this.RaisePropertyChanged("id_encuesta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_evento {
+            get {
+                return this.id_eventoField;
+            }
+            set {
+                this.id_eventoField = value;
+                this.RaisePropertyChanged("id_evento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int valoracionEvento {
+            get {
+                return this.valoracionEventoField;
+            }
+            set {
+                this.valoracionEventoField = value;
+                this.RaisePropertyChanged("valoracionEvento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int valoracionPonentes {
+            get {
+                return this.valoracionPonentesField;
+            }
+            set {
+                this.valoracionPonentesField = value;
+                this.RaisePropertyChanged("valoracionPonentes");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int valoracionUtilidad {
+            get {
+                return this.valoracionUtilidadField;
+            }
+            set {
+                this.valoracionUtilidadField = value;
+                this.RaisePropertyChanged("valoracionUtilidad");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class categoriaEvento : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool activoField;
+        
+        private int id_categoriaField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_categoria {
+            get {
+                return this.id_categoriaField;
+            }
+            set {
+                this.id_categoriaField = value;
+                this.RaisePropertyChanged("id_categoria");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     /// <remarks/>
@@ -458,13 +899,13 @@ namespace ProyectoOOIA.GestionEventoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class categoriaEvento : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class coordinador : miembroPUCP {
         
         private bool activoField;
         
-        private int id_categoriaField;
+        private int id_coordinadorField;
         
-        private string nombreField;
+        private string rolField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -480,405 +921,25 @@ namespace ProyectoOOIA.GestionEventoWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_categoria {
+        public int id_coordinador {
             get {
-                return this.id_categoriaField;
+                return this.id_coordinadorField;
             }
             set {
-                this.id_categoriaField = value;
-                this.RaisePropertyChanged("id_categoria");
+                this.id_coordinadorField = value;
+                this.RaisePropertyChanged("id_coordinador");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nombre {
+        public string rol {
             get {
-                return this.nombreField;
+                return this.rolField;
             }
             set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class date : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class eventoAlumno : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool asistioField;
-        
-        private string comentarioField;
-        
-        private int id_alumnoField;
-        
-        private int id_encuestaField;
-        
-        private int id_eventoField;
-        
-        private int valoracionEventoField;
-        
-        private int valoracionPonentesField;
-        
-        private int valoracionUtilidadField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool asistio {
-            get {
-                return this.asistioField;
-            }
-            set {
-                this.asistioField = value;
-                this.RaisePropertyChanged("asistio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string comentario {
-            get {
-                return this.comentarioField;
-            }
-            set {
-                this.comentarioField = value;
-                this.RaisePropertyChanged("comentario");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id_alumno {
-            get {
-                return this.id_alumnoField;
-            }
-            set {
-                this.id_alumnoField = value;
-                this.RaisePropertyChanged("id_alumno");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id_encuesta {
-            get {
-                return this.id_encuestaField;
-            }
-            set {
-                this.id_encuestaField = value;
-                this.RaisePropertyChanged("id_encuesta");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_evento {
-            get {
-                return this.id_eventoField;
-            }
-            set {
-                this.id_eventoField = value;
-                this.RaisePropertyChanged("id_evento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int valoracionEvento {
-            get {
-                return this.valoracionEventoField;
-            }
-            set {
-                this.valoracionEventoField = value;
-                this.RaisePropertyChanged("valoracionEvento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int valoracionPonentes {
-            get {
-                return this.valoracionPonentesField;
-            }
-            set {
-                this.valoracionPonentesField = value;
-                this.RaisePropertyChanged("valoracionPonentes");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public int valoracionUtilidad {
-            get {
-                return this.valoracionUtilidadField;
-            }
-            set {
-                this.valoracionUtilidadField = value;
-                this.RaisePropertyChanged("valoracionUtilidad");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroExterno))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public abstract partial class persona : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string correoField;
-        
-        private string direccionField;
-        
-        private string dniField;
-        
-        private System.DateTime fecha_nacimientoField;
-        
-        private bool fecha_nacimientoFieldSpecified;
-        
-        private int id_personaField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string correo {
-            get {
-                return this.correoField;
-            }
-            set {
-                this.correoField = value;
-                this.RaisePropertyChanged("correo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string direccion {
-            get {
-                return this.direccionField;
-            }
-            set {
-                this.direccionField = value;
-                this.RaisePropertyChanged("direccion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string dni {
-            get {
-                return this.dniField;
-            }
-            set {
-                this.dniField = value;
-                this.RaisePropertyChanged("dni");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime fecha_nacimiento {
-            get {
-                return this.fecha_nacimientoField;
-            }
-            set {
-                this.fecha_nacimientoField = value;
-                this.RaisePropertyChanged("fecha_nacimiento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_nacimientoSpecified {
-            get {
-                return this.fecha_nacimientoFieldSpecified;
-            }
-            set {
-                this.fecha_nacimientoFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_nacimientoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_persona {
-            get {
-                return this.id_personaField;
-            }
-            set {
-                this.id_personaField = value;
-                this.RaisePropertyChanged("id_persona");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public abstract partial class miembroExterno : persona {
-        
-        private int id_miembro_externoField;
-        
-        private string ocupacionField;
-        
-        private string telefonoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_miembro_externo {
-            get {
-                return this.id_miembro_externoField;
-            }
-            set {
-                this.id_miembro_externoField = value;
-                this.RaisePropertyChanged("id_miembro_externo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string ocupacion {
-            get {
-                return this.ocupacionField;
-            }
-            set {
-                this.ocupacionField = value;
-                this.RaisePropertyChanged("ocupacion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string telefono {
-            get {
-                return this.telefonoField;
-            }
-            set {
-                this.telefonoField = value;
-                this.RaisePropertyChanged("telefono");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class ponente : miembroExterno {
-        
-        private bool activoField;
-        
-        private int id_ponenteField;
-        
-        private string organizacionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_ponente {
-            get {
-                return this.id_ponenteField;
-            }
-            set {
-                this.id_ponenteField = value;
-                this.RaisePropertyChanged("id_ponente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string organizacion {
-            get {
-                return this.organizacionField;
-            }
-            set {
-                this.organizacionField = value;
-                this.RaisePropertyChanged("organizacion");
+                this.rolField = value;
+                this.RaisePropertyChanged("rol");
             }
         }
     }
@@ -977,54 +1038,67 @@ namespace ProyectoOOIA.GestionEventoWS {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class coordinador : miembroPUCP {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonenteXEvento", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarPonenteXEventoRequest {
         
-        private bool activoField;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_evento;
         
-        private int id_coordinadorField;
-        
-        private string rolField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
+        public listarPonenteXEventoRequest() {
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_coordinador {
-            get {
-                return this.id_coordinadorField;
-            }
-            set {
-                this.id_coordinadorField = value;
-                this.RaisePropertyChanged("id_coordinador");
-            }
+        public listarPonenteXEventoRequest(int id_evento) {
+            this.id_evento = id_evento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonenteXEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarPonenteXEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.ponente[] @return;
+        
+        public listarPonenteXEventoResponse() {
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string rol {
-            get {
-                return this.rolField;
-            }
-            set {
-                this.rolField = value;
-                this.RaisePropertyChanged("rol");
-            }
+        public listarPonenteXEventoResponse(ProyectoOOIA.GestionEventoWS.ponente[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_tres_eventos_proximos", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listar_tres_eventos_proximosRequest {
+        
+        public listar_tres_eventos_proximosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_tres_eventos_proximosResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listar_tres_eventos_proximosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.evento[] @return;
+        
+        public listar_tres_eventos_proximosResponse() {
+        }
+        
+        public listar_tres_eventos_proximosResponse(ProyectoOOIA.GestionEventoWS.evento[] @return) {
+            this.@return = @return;
         }
     }
     
@@ -1060,42 +1134,6 @@ namespace ProyectoOOIA.GestionEventoWS {
         }
         
         public eliminarEventoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonenteXEvento", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarPonenteXEventoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_evento;
-        
-        public listarPonenteXEventoRequest() {
-        }
-        
-        public listarPonenteXEventoRequest(int id_evento) {
-            this.id_evento = id_evento;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonenteXEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarPonenteXEventoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.ponente[] @return;
-        
-        public listarPonenteXEventoResponse() {
-        }
-        
-        public listarPonenteXEventoResponse(ProyectoOOIA.GestionEventoWS.ponente[] @return) {
             this.@return = @return;
         }
     }
@@ -1680,29 +1718,6 @@ namespace ProyectoOOIA.GestionEventoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.eliminarEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.eliminarEvento(ProyectoOOIA.GestionEventoWS.eliminarEventoRequest request) {
-            return base.Channel.eliminarEvento(request);
-        }
-        
-        public int eliminarEvento(ProyectoOOIA.GestionEventoWS.evento evento) {
-            ProyectoOOIA.GestionEventoWS.eliminarEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.eliminarEventoRequest();
-            inValue.evento = evento;
-            ProyectoOOIA.GestionEventoWS.eliminarEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).eliminarEvento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.eliminarEventoAsync(ProyectoOOIA.GestionEventoWS.eliminarEventoRequest request) {
-            return base.Channel.eliminarEventoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarEventoResponse> eliminarEventoAsync(ProyectoOOIA.GestionEventoWS.evento evento) {
-            ProyectoOOIA.GestionEventoWS.eliminarEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.eliminarEventoRequest();
-            inValue.evento = evento;
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).eliminarEventoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarPonenteXEvento(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request) {
             return base.Channel.listarPonenteXEvento(request);
         }
@@ -1723,6 +1738,50 @@ namespace ProyectoOOIA.GestionEventoWS {
             ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest();
             inValue.id_evento = id_evento;
             return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarPonenteXEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_tres_eventos_proximos(ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest request) {
+            return base.Channel.listar_tres_eventos_proximos(request);
+        }
+        
+        public ProyectoOOIA.GestionEventoWS.evento[] listar_tres_eventos_proximos() {
+            ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest();
+            ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_tres_eventos_proximos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_tres_eventos_proximosAsync(ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest request) {
+            return base.Channel.listar_tres_eventos_proximosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse> listar_tres_eventos_proximosAsync() {
+            ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest();
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_tres_eventos_proximosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionEventoWS.eliminarEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.eliminarEvento(ProyectoOOIA.GestionEventoWS.eliminarEventoRequest request) {
+            return base.Channel.eliminarEvento(request);
+        }
+        
+        public int eliminarEvento(ProyectoOOIA.GestionEventoWS.evento evento) {
+            ProyectoOOIA.GestionEventoWS.eliminarEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.eliminarEventoRequest();
+            inValue.evento = evento;
+            ProyectoOOIA.GestionEventoWS.eliminarEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).eliminarEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.eliminarEventoAsync(ProyectoOOIA.GestionEventoWS.eliminarEventoRequest request) {
+            return base.Channel.eliminarEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarEventoResponse> eliminarEventoAsync(ProyectoOOIA.GestionEventoWS.evento evento) {
+            ProyectoOOIA.GestionEventoWS.eliminarEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.eliminarEventoRequest();
+            inValue.evento = evento;
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).eliminarEventoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

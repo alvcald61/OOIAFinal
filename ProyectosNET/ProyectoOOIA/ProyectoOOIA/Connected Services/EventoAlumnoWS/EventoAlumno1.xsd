@@ -2,13 +2,13 @@
 <xs:schema xmlns:tns="http://services.OOIA.pucp.edu.pe/" targetNamespace="http://services.OOIA.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="eliminarEncuestaEvento" type="tns:eliminarEncuestaEvento" />
   <xs:element name="eliminarEncuestaEventoResponse" type="tns:eliminarEncuestaEventoResponse" />
-  <xs:element name="insertarEncuestaEvento" type="tns:insertarEncuestaEvento" />
-  <xs:element name="insertarEncuestaEventoResponse" type="tns:insertarEncuestaEventoResponse" />
+  <xs:element name="insertarEventoAlumno" type="tns:insertarEventoAlumno" />
+  <xs:element name="insertarEventoAlumnoResponse" type="tns:insertarEventoAlumnoResponse" />
   <xs:element name="listarEncuestaEvento" type="tns:listarEncuestaEvento" />
   <xs:element name="listarEncuestaEventoResponse" type="tns:listarEncuestaEventoResponse" />
   <xs:element name="modificarEncuestaEvento" type="tns:modificarEncuestaEvento" />
   <xs:element name="modificarEncuestaEventoResponse" type="tns:modificarEncuestaEventoResponse" />
-  <xs:complexType name="eliminarEncuestaEvento">
+  <xs:complexType name="insertarEventoAlumno">
     <xs:sequence>
       <xs:element minOccurs="0" name="evento" type="tns:eventoAlumno" />
     </xs:sequence>
@@ -23,6 +23,16 @@
       <xs:element name="valoracionEvento" type="xs:int" />
       <xs:element name="valoracionPonentes" type="xs:int" />
       <xs:element name="valoracionUtilidad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEventoAlumnoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEncuestaEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:eventoAlumno" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarEncuestaEventoResponse">
@@ -44,16 +54,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarEncuestaEventoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarEncuestaEvento">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="evento" type="tns:eventoAlumno" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarEncuestaEventoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
