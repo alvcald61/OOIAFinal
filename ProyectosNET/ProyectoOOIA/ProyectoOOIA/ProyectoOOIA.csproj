@@ -1048,6 +1048,9 @@
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listarEvento_por_nombre_categoriaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1058,6 +1061,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.modificarEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.ponente.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS1.wsdl" />

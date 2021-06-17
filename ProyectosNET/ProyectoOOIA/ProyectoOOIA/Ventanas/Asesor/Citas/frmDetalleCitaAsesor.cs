@@ -31,7 +31,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnDetEventosPrev_Click(object sender, EventArgs e)
         {
-            new frmDetalleEvento().Show();
+            //new frmDetalleEvento().Show();
         }
     }
 }

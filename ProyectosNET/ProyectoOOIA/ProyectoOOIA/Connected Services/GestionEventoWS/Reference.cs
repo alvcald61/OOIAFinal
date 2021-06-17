@@ -26,6 +26,16 @@ namespace ProyectoOOIA.GestionEventoWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarEvento_por_nombre_categoriaResponse> listarEvento_por_nombre_categoriaAsync(ProyectoOOIA.GestionEventoWS.listarEvento_por_nombre_categoriaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarPonenteXEventoRequest", ReplyAction="http://services/GestionEventoWS/listarPonenteXEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse listarPonenteXEvento(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarPonenteXEventoRequest", ReplyAction="http://services/GestionEventoWS/listarPonenteXEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse> listarPonenteXEventoAsync(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarEventoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -1057,6 +1067,42 @@ namespace ProyectoOOIA.GestionEventoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonenteXEvento", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarPonenteXEventoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_evento;
+        
+        public listarPonenteXEventoRequest() {
+        }
+        
+        public listarPonenteXEventoRequest(int id_evento) {
+            this.id_evento = id_evento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonenteXEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarPonenteXEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.ponente[] @return;
+        
+        public listarPonenteXEventoResponse() {
+        }
+        
+        public listarPonenteXEventoResponse(ProyectoOOIA.GestionEventoWS.ponente[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEvento", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class insertarEventoRequest {
         
@@ -1654,6 +1700,29 @@ namespace ProyectoOOIA.GestionEventoWS {
             ProyectoOOIA.GestionEventoWS.listarEvento_por_nombre_categoriaRequest inValue = new ProyectoOOIA.GestionEventoWS.listarEvento_por_nombre_categoriaRequest();
             inValue.nombre = nombre;
             return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarEvento_por_nombre_categoriaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarPonenteXEvento(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request) {
+            return base.Channel.listarPonenteXEvento(request);
+        }
+        
+        public ProyectoOOIA.GestionEventoWS.ponente[] listarPonenteXEvento(int id_evento) {
+            ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest();
+            inValue.id_evento = id_evento;
+            ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarPonenteXEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarPonenteXEventoAsync(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request) {
+            return base.Channel.listarPonenteXEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse> listarPonenteXEventoAsync(int id_evento) {
+            ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest();
+            inValue.id_evento = id_evento;
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarPonenteXEventoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

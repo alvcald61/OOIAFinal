@@ -29,100 +29,65 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblPonentes = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.pbEvento = new System.Windows.Forms.PictureBox();
             this.dgvPonentes = new System.Windows.Forms.DataGridView();
             this.nombreDelPonente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtNombreEvento = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtHoraInicio = new System.Windows.Forms.TextBox();
-            this.txtHoraFin = new System.Windows.Forms.TextBox();
-            this.btnAtras = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.lblHeader = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblCupo = new System.Windows.Forms.Label();
+            this.txtLugar = new System.Windows.Forms.TextBox();
+            this.txtCupo = new System.Windows.Forms.TextBox();
+            this.lblSlash = new System.Windows.Forms.Label();
+            this.txtCapacidad = new System.Windows.Forms.TextBox();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblA = new System.Windows.Forms.Label();
+            this.dtpHoraInicio = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEvento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblPonentes
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(37, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre de evento:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPonentes.BackColor = System.Drawing.Color.Transparent;
+            this.lblPonentes.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPonentes.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblPonentes.Location = new System.Drawing.Point(32, 289);
+            this.lblPonentes.Name = "lblPonentes";
+            this.lblPonentes.Size = new System.Drawing.Size(128, 30);
+            this.lblPonentes.TabIndex = 2;
+            this.lblPonentes.Text = "Ponentes:";
+            this.lblPonentes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // lblFecha
             // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(37, 148);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 30);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Ponentes:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblFecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblFecha.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblFecha.Location = new System.Drawing.Point(32, 106);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(91, 30);
+            this.lblFecha.TabIndex = 4;
+            this.lblFecha.Text = "Fecha:";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label4
+            // pbEvento
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(37, 304);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 30);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Descripción:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(37, 98);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 30);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Fecha:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(453, 389);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 31);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Hora inicio:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoOOIA.Properties.Resources.EEGGCC;
-            this.pictureBox1.Location = new System.Drawing.Point(453, 98);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(282, 200);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.pbEvento.Image = global::ProyectoOOIA.Properties.Resources.EEGGCC;
+            this.pbEvento.Location = new System.Drawing.Point(420, 77);
+            this.pbEvento.Name = "pbEvento";
+            this.pbEvento.Size = new System.Drawing.Size(368, 242);
+            this.pbEvento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEvento.TabIndex = 7;
+            this.pbEvento.TabStop = false;
             // 
             // dgvPonentes
             // 
@@ -132,11 +97,11 @@ namespace ProyectoOOIA.Ventanas
             this.dgvPonentes.ColumnHeadersVisible = false;
             this.dgvPonentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombreDelPonente});
-            this.dgvPonentes.Location = new System.Drawing.Point(37, 181);
+            this.dgvPonentes.Location = new System.Drawing.Point(37, 329);
             this.dgvPonentes.Name = "dgvPonentes";
             this.dgvPonentes.ReadOnly = true;
             this.dgvPonentes.RowHeadersWidth = 51;
-            this.dgvPonentes.Size = new System.Drawing.Size(303, 100);
+            this.dgvPonentes.Size = new System.Drawing.Size(352, 109);
             this.dgvPonentes.TabIndex = 9;
             // 
             // nombreDelPonente
@@ -150,115 +115,222 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(37, 337);
+            this.txtDescripcion.Location = new System.Drawing.Point(420, 329);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(304, 90);
+            this.txtDescripcion.Size = new System.Drawing.Size(368, 109);
             this.txtDescripcion.TabIndex = 10;
             // 
-            // label2
+            // dtpFecha
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(453, 337);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 30);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Hora fin:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dtpFecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.dtpFecha.Location = new System.Drawing.Point(129, 111);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(212, 20);
+            this.dtpFecha.TabIndex = 14;
             // 
-            // txtNombreEvento
+            // panel1
             // 
-            this.txtNombreEvento.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreEvento.Location = new System.Drawing.Point(295, 46);
-            this.txtNombreEvento.Name = "txtNombreEvento";
-            this.txtNombreEvento.Size = new System.Drawing.Size(441, 26);
-            this.txtNombreEvento.TabIndex = 13;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.lblHeader);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 71);
+            this.panel1.TabIndex = 44;
             // 
-            // dateTimePicker1
+            // btnBack
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(141, 105);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 14;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.Image = global::ProyectoOOIA.Properties.Resources.arrowWhite;
+            this.btnBack.Location = new System.Drawing.Point(11, 34);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(25, 25);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnBack.TabIndex = 18;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // txtHoraInicio
+            // btnLogout
             // 
-            this.txtHoraInicio.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoraInicio.Location = new System.Drawing.Point(608, 339);
-            this.txtHoraInicio.Name = "txtHoraInicio";
-            this.txtHoraInicio.Size = new System.Drawing.Size(128, 26);
-            this.txtHoraInicio.TabIndex = 15;
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackgroundImage = global::ProyectoOOIA.Properties.Resources.logout_white;
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(967, 29);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(35, 34);
+            this.btnLogout.TabIndex = 14;
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.UseVisualStyleBackColor = false;
             // 
-            // txtHoraFin
+            // lblHeader
             // 
-            this.txtHoraFin.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoraFin.Location = new System.Drawing.Point(608, 395);
-            this.txtHoraFin.Name = "txtHoraFin";
-            this.txtHoraFin.Size = new System.Drawing.Size(128, 26);
-            this.txtHoraFin.TabIndex = 16;
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblHeader.Location = new System.Drawing.Point(40, 34);
+            this.lblHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(215, 29);
+            this.lblHeader.TabIndex = 3;
+            this.lblHeader.Text = "Nombre de Evento";
             // 
-            // btnAtras
+            // label1
             // 
-            this.btnAtras.Image = global::ProyectoOOIA.Properties.Resources.arrow;
-            this.btnAtras.Location = new System.Drawing.Point(742, 10);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(43, 36);
-            this.btnAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnAtras.TabIndex = 17;
-            this.btnAtras.TabStop = false;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(32, 168);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 30);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Lugar:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblCupo
+            // 
+            this.lblCupo.BackColor = System.Drawing.Color.Transparent;
+            this.lblCupo.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCupo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCupo.Location = new System.Drawing.Point(32, 247);
+            this.lblCupo.Name = "lblCupo";
+            this.lblCupo.Size = new System.Drawing.Size(170, 30);
+            this.lblCupo.TabIndex = 47;
+            this.lblCupo.Text = "Cupos disponibles:";
+            this.lblCupo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtLugar
+            // 
+            this.txtLugar.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLugar.Location = new System.Drawing.Point(37, 201);
+            this.txtLugar.Name = "txtLugar";
+            this.txtLugar.Size = new System.Drawing.Size(304, 26);
+            this.txtLugar.TabIndex = 48;
+            // 
+            // txtCupo
+            // 
+            this.txtCupo.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCupo.Location = new System.Drawing.Point(208, 248);
+            this.txtCupo.Name = "txtCupo";
+            this.txtCupo.Size = new System.Drawing.Size(47, 26);
+            this.txtCupo.TabIndex = 49;
+            // 
+            // lblSlash
+            // 
+            this.lblSlash.BackColor = System.Drawing.Color.Transparent;
+            this.lblSlash.Font = new System.Drawing.Font("Gill Sans MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSlash.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblSlash.Location = new System.Drawing.Point(261, 244);
+            this.lblSlash.Name = "lblSlash";
+            this.lblSlash.Size = new System.Drawing.Size(27, 30);
+            this.lblSlash.TabIndex = 50;
+            this.lblSlash.Text = "/";
+            this.lblSlash.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtCapacidad
+            // 
+            this.txtCapacidad.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCapacidad.Location = new System.Drawing.Point(294, 248);
+            this.txtCapacidad.Name = "txtCapacidad";
+            this.txtCapacidad.Size = new System.Drawing.Size(47, 26);
+            this.txtCapacidad.TabIndex = 51;
+            // 
+            // lblHora
+            // 
+            this.lblHora.BackColor = System.Drawing.Color.Transparent;
+            this.lblHora.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblHora.Location = new System.Drawing.Point(32, 132);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(91, 30);
+            this.lblHora.TabIndex = 52;
+            this.lblHora.Text = "Hora:";
+            this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblA
+            // 
+            this.lblA.BackColor = System.Drawing.Color.Transparent;
+            this.lblA.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblA.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblA.Location = new System.Drawing.Point(224, 132);
+            this.lblA.Name = "lblA";
+            this.lblA.Size = new System.Drawing.Size(21, 30);
+            this.lblA.TabIndex = 53;
+            this.lblA.Text = "a";
+            this.lblA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dtpHoraInicio
+            // 
+            this.dtpHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHoraInicio.Location = new System.Drawing.Point(129, 137);
+            this.dtpHoraInicio.Name = "dtpHoraInicio";
+            this.dtpHoraInicio.Size = new System.Drawing.Size(73, 20);
+            this.dtpHoraInicio.TabIndex = 54;
             // 
             // frmDetalleEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAtras);
-            this.Controls.Add(this.txtHoraFin);
-            this.Controls.Add(this.txtHoraInicio);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.txtNombreEvento);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dtpHoraInicio);
+            this.Controls.Add(this.lblA);
+            this.Controls.Add(this.lblHora);
+            this.Controls.Add(this.txtCapacidad);
+            this.Controls.Add(this.lblSlash);
+            this.Controls.Add(this.txtCupo);
+            this.Controls.Add(this.txtLugar);
+            this.Controls.Add(this.lblCupo);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.dgvPonentes);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pbEvento);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblPonentes);
             this.Name = "frmDetalleEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vista de evento";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEvento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblPonentes;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.PictureBox pbEvento;
         private System.Windows.Forms.DataGridView dgvPonentes;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDelPonente;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNombreEvento;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox txtHoraInicio;
-        private System.Windows.Forms.TextBox txtHoraFin;
-        private System.Windows.Forms.PictureBox btnAtras;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Label lblHeader;
+        private System.Windows.Forms.PictureBox btnBack;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCupo;
+        private System.Windows.Forms.TextBox txtLugar;
+        private System.Windows.Forms.TextBox txtCupo;
+        private System.Windows.Forms.Label lblSlash;
+        private System.Windows.Forms.TextBox txtCapacidad;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblA;
+        private System.Windows.Forms.DateTimePicker dtpHoraInicio;
     }
 }

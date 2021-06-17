@@ -220,7 +220,7 @@ public class EventoMySQL implements EventoDAO{
         return resultado;
     }
     
-    private Coordinador obtenerCoordinador(int id_coordinador) {
+    public Coordinador obtenerCoordinador(int id_coordinador) {
         ArrayList<Coordinador> arrayList=new CoordinadorMySQL().listar();
         for(Coordinador aux:arrayList)
             if(aux.getId_coordinador()==id_coordinador)
@@ -228,7 +228,7 @@ public class EventoMySQL implements EventoDAO{
         return null;
     }
     
-    private ArrayList<Ponente> listarPonente(int id_evento){
+    public ArrayList<Ponente> listarPonente(int id_evento){
            ArrayList<Ponente> lista=new ArrayList<>();
         Connection con1;
         

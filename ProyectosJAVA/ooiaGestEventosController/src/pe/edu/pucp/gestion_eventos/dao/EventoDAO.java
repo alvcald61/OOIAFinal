@@ -8,6 +8,7 @@ package pe.edu.pucp.gestion_eventos.dao;
 import java.sql.Date;
 import java.util.ArrayList;
 import pe.edu.pucp.gestion_eventos.model.Evento;
+import pe.edu.pucp.ooia.gest_humana.model.Ponente;
 
 /**
  *
@@ -16,6 +17,7 @@ import pe.edu.pucp.gestion_eventos.model.Evento;
 public interface EventoDAO {
     public ArrayList<Evento> listar(String nombreCategoria);
     public ArrayList<Evento> listar_x_fecha(Date fecha);
+    public ArrayList<Ponente> listarPonente(int id_evento);
     public int insertar(Evento evento);
     public int modificar(Evento evento);
     public int eliminar(int id_evento);

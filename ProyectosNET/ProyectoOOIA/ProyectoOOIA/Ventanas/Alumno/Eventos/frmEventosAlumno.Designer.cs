@@ -148,7 +148,7 @@ namespace ProyectoOOIA.Ventanas
             this.dtpFechaInscritos.Enabled = false;
             this.dtpFechaInscritos.Location = new System.Drawing.Point(60, 94);
             this.dtpFechaInscritos.Name = "dtpFechaInscritos";
-            this.dtpFechaInscritos.Size = new System.Drawing.Size(200, 21);
+            this.dtpFechaInscritos.Size = new System.Drawing.Size(236, 21);
             this.dtpFechaInscritos.TabIndex = 42;
             // 
             // btnBuscarInscritos

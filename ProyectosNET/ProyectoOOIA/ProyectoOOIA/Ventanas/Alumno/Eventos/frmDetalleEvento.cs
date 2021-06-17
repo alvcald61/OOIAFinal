@@ -1,41 +1,41 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
     public partial class frmDetalleEvento : Form
     {
-        private int flag;
-        //frmPrincipalEventos principalEventos = null;
+        GestionEventoWS.GestionEventoWSClient daoEventoPonente;
 
-        public frmDetalleEvento()
+        public frmDetalleEvento(GestionEventoWS.evento evento)
         {
             InitializeComponent();
+
+            dtpFecha.Value = evento.fecha;
+            dtpHoraInicio.Value = evento.horaInicio;
+            dtpHoraInicio.Value = evento.horaFin;
+            txtLugar.Text = evento.lugar;
+            txtCapacidad.Text = evento.capacidad.ToString();
+            txtCupo.Text = evento.capacidad.ToString();
+            txtDescripcion.Text = evento.descripcion;
+            MemoryStream ms = new MemoryStream(evento.imagen);
+            pbEvento.Image = Image.FromStream(ms);
+            mostrarPonentes(evento);
         }
 
-
-
-        public frmDetalleEvento(int flag)
+        public void mostrarPonentes(GestionEventoWS.evento evento)
         {
-            this.flag = flag;
-            InitializeComponent();
+            BindingList<GestionEventoWS.ponente>
+                ponentes = new BindingList<GestionEventoWS.ponente>
+                (daoEventoPonente.listarPonenteXEvento(evento.id_evento).ToList());
+            dgvPonentes.DataSource = ponentes;
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-            //if (principalEventos != null)
-            //{
-            //    new frmInscripcionEvento(principalEventos).Show();
-            //}
-            // else
-            // {
-            //    new frmInscripcionEvento(listaEventos).Show();
-            //}
-            this.Close();
-        }
-
-        private void btnAtras_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
