@@ -63,7 +63,7 @@ public class EventoAlumnoMySQL implements EventoAlumnoDAO{
             //SETEAMOS los parametros
             
             //Insertamos en encuesta_evento
-            cs.setInt("_id_encuesta", eventoAlumno.getId_encuesta());
+            cs.registerOutParameter("_id_evento_alumno", java.sql.Types.INTEGER);
             cs.setInt("_fid_alumno", eventoAlumno.getId_alumno());
             cs.setInt("_fid_evento", eventoAlumno.getId_evento());
             cs.setInt("_valoracion_ponentes", eventoAlumno.getValoracionPonentes());

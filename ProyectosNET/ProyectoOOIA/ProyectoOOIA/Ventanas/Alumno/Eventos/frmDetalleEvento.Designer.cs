@@ -32,8 +32,6 @@ namespace ProyectoOOIA.Ventanas
             this.lblPonentes = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.pbEvento = new System.Windows.Forms.PictureBox();
-            this.dgvPonentes = new System.Windows.Forms.DataGridView();
-            this.nombreDelPonente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,10 +47,12 @@ namespace ProyectoOOIA.Ventanas
             this.lblHora = new System.Windows.Forms.Label();
             this.lblA = new System.Windows.Forms.Label();
             this.dtpHoraInicio = new System.Windows.Forms.DateTimePicker();
+            this.dgvPonentes = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pbEvento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPonentes
@@ -88,30 +88,6 @@ namespace ProyectoOOIA.Ventanas
             this.pbEvento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbEvento.TabIndex = 7;
             this.pbEvento.TabStop = false;
-            // 
-            // dgvPonentes
-            // 
-            this.dgvPonentes.AllowUserToAddRows = false;
-            this.dgvPonentes.AllowUserToDeleteRows = false;
-            this.dgvPonentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPonentes.ColumnHeadersVisible = false;
-            this.dgvPonentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombreDelPonente});
-            this.dgvPonentes.Location = new System.Drawing.Point(37, 329);
-            this.dgvPonentes.Name = "dgvPonentes";
-            this.dgvPonentes.ReadOnly = true;
-            this.dgvPonentes.RowHeadersWidth = 51;
-            this.dgvPonentes.Size = new System.Drawing.Size(352, 109);
-            this.dgvPonentes.TabIndex = 9;
-            // 
-            // nombreDelPonente
-            // 
-            this.nombreDelPonente.HeaderText = "Nombre del Ponente";
-            this.nombreDelPonente.MinimumWidth = 6;
-            this.nombreDelPonente.Name = "nombreDelPonente";
-            this.nombreDelPonente.ReadOnly = true;
-            this.nombreDelPonente.Visible = false;
-            this.nombreDelPonente.Width = 125;
             // 
             // txtDescripcion
             // 
@@ -277,11 +253,29 @@ namespace ProyectoOOIA.Ventanas
             this.dtpHoraInicio.Size = new System.Drawing.Size(73, 20);
             this.dtpHoraInicio.TabIndex = 54;
             // 
+            // dgvPonentes
+            // 
+            this.dgvPonentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPonentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre});
+            this.dgvPonentes.Location = new System.Drawing.Point(37, 322);
+            this.dgvPonentes.Name = "dgvPonentes";
+            this.dgvPonentes.Size = new System.Drawing.Size(304, 116);
+            this.dgvPonentes.TabIndex = 55;
+            this.dgvPonentes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPonentes_CellFormatting);
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 304;
+            // 
             // frmDetalleEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvPonentes);
             this.Controls.Add(this.dtpHoraInicio);
             this.Controls.Add(this.lblA);
             this.Controls.Add(this.lblHora);
@@ -294,18 +288,18 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.dgvPonentes);
             this.Controls.Add(this.pbEvento);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblPonentes);
             this.Name = "frmDetalleEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vista de evento";
+            this.Load += new System.EventHandler(this.frmDetalleEvento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbEvento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,9 +309,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label lblPonentes;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.PictureBox pbEvento;
-        private System.Windows.Forms.DataGridView dgvPonentes;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDelPonente;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogout;
@@ -332,5 +324,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblA;
         private System.Windows.Forms.DateTimePicker dtpHoraInicio;
+        private System.Windows.Forms.DataGridView dgvPonentes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }

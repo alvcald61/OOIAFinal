@@ -31,7 +31,7 @@ import pe.edu.pucp.ooia.gest_humana.mysql.CoordinadorMySQL;
  *
  * @author LENOVO
  */
-@WebService(serviceName = "GesionEventoWS")
+@WebService(serviceName = "GestionEventoWS")
 public class GestionEventoWS {
 
     private EventoDAO eventoSQL=new EventoMySQL();
@@ -243,8 +243,8 @@ public class GestionEventoWS {
         }
         return lista;
     }
-        @WebMethod(operationName = "Listar_eventos_inscritos")
-    public ArrayList<Evento> listarEventosInscritos(@WebParam(name="id alumno")int idAlumno){
+        @WebMethod(operationName = "listar_eventos_inscritos")
+    public ArrayList<Evento> listarEventosInscritos(@WebParam(name="id_alumno")int idAlumno){
         ArrayList<Evento> lista= new ArrayList<>();
         try {
             lista=eventoSQL.listar_eventos_inscritos(idAlumno);
@@ -254,8 +254,8 @@ public class GestionEventoWS {
         return lista;
     }
     
-    @WebMethod(operationName = "Listar_eventos_pasados")
-    public ArrayList<Evento> listarEventosPasados(@WebParam(name="id alumno")int idAlumno){
+    @WebMethod(operationName = "listar_eventos_pasados")
+    public ArrayList<Evento> listarEventosPasados(@WebParam(name="id_alumno")int idAlumno){
         ArrayList<Evento> lista= new ArrayList<>();
         try {
             lista=eventoSQL.listar_eventos_pasados(idAlumno);

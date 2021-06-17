@@ -32,6 +32,7 @@ namespace ProyectoOOIA.Ventanas
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.imagen = new OvalPictureBox();
             this.btnCargaDatos = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
@@ -50,14 +51,13 @@ namespace ProyectoOOIA.Ventanas
             this.imagenes = new System.Windows.Forms.PictureBox();
             this.ImageTimer = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.imagen = new OvalPictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.pnlCitas.SuspendLayout();
             this.pnlEventos.SuspendLayout();
             this.pnlEventosProximos.SuspendLayout();
             this.pnlEventosProx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,6 +72,16 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1014, 83);
             this.panel1.TabIndex = 18;
+            // 
+            // imagen
+            // 
+            this.imagen.BackColor = System.Drawing.Color.DarkGray;
+            this.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imagen.Location = new System.Drawing.Point(21, 7);
+            this.imagen.Name = "imagen";
+            this.imagen.Size = new System.Drawing.Size(68, 73);
+            this.imagen.TabIndex = 27;
+            this.imagen.TabStop = false;
             // 
             // btnCargaDatos
             // 
@@ -281,15 +291,6 @@ namespace ProyectoOOIA.Ventanas
             this.imageList1.Images.SetKeyName(2, "foto-29.jpg");
             this.imageList1.Images.SetKeyName(3, "pexels-pixabay-261621.jpg");
             // 
-            // imagen
-            // 
-            this.imagen.BackColor = System.Drawing.Color.DarkGray;
-            this.imagen.Location = new System.Drawing.Point(21, 7);
-            this.imagen.Name = "imagen";
-            this.imagen.Size = new System.Drawing.Size(68, 73);
-            this.imagen.TabIndex = 27;
-            this.imagen.TabStop = false;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,6 +308,7 @@ namespace ProyectoOOIA.Ventanas
             this.Load += new System.EventHandler(this.frmPrincipal_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             this.pnlCitas.ResumeLayout(false);
             this.pnlCitas.PerformLayout();
             this.pnlEventos.ResumeLayout(false);
@@ -315,7 +317,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlEventosProx.ResumeLayout(false);
             this.pnlEventosProx.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             this.ResumeLayout(false);
 
         }

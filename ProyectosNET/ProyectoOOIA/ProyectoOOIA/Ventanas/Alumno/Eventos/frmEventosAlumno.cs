@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
+using ProyectoOOIA.EventoAlumnoWS;
 
 namespace ProyectoOOIA.Ventanas
 {
@@ -13,7 +14,7 @@ namespace ProyectoOOIA.Ventanas
         private EventoAlumnoWS.eventoAlumno eventoAlumno;
         private GestionEventoWS.evento evento;
         private AlumnoWS.AlumnoWSClient daoAlumno;
-        private AlumnoWS.alumno alumno;
+        private GestionHumanaWS.alumno alumno;
         public frmRegistroEvento()
         {
             InitializeComponent();
@@ -25,8 +26,8 @@ namespace ProyectoOOIA.Ventanas
             daoEventoAlumno = new EventoAlumnoWS.EventoAlumnoWSClient();
             daoAlumno = new AlumnoWS.AlumnoWSClient();
             evento = new GestionEventoWS.evento();
-            alumno = new AlumnoWS.alumno();
-            //listarHistorial();
+            //alumno = new AlumnoWS.alumno();
+            listarHistorial();
         }
 
         public frmRegistroEvento(GestionHumanaWS.persona persona)
@@ -40,41 +41,45 @@ namespace ProyectoOOIA.Ventanas
             daoEvento = new GestionEventoWS.GestionEventoWSClient();
             daoEventoAlumno = new EventoAlumnoWS.EventoAlumnoWSClient();
             daoAlumno = new AlumnoWS.AlumnoWSClient();
-            listarAlumnos(persona.id_persona); //obtengo el alumno
+            //listarAlumnos(persona.id_persona); //obtengo el alumno
             evento = new GestionEventoWS.evento();
-            //listarHistorial();
-        }
+            this.alumno=persona as GestionHumanaWS.alumno;
+            eventoAlumno = new  EventoAlumnoWS.eventoAlumno();
+            listarHistorial();
+            listarEventosInscritos();
 
-        private void listarAlumnos(int id_persona)
-        {
-            BindingList<AlumnoWS.alumno>
-               alumnos = new BindingList<AlumnoWS.alumno>
-               (daoAlumno.listarAlumno().ToList());
+    }
 
-            foreach (AlumnoWS.alumno a in alumnos)
-            {
-                if(a.id_persona == id_persona)
-                {
-                    this.alumno = a;
-                }
-            }
-        }
+        //private void listarAlumnos(int id_persona)
+        //{
+        //    BindingList<AlumnoWS.alumno>
+        //       alumnos = new BindingList<AlumnoWS.alumno>
+        //       (daoAlumno.listarAlumno().ToList());
 
-        /*   private void listarHistorial()
+        //    foreach (AlumnoWS.alumno a in alumnos)
+        //    {
+        //        if(a.id_persona == id_persona)
+        //        {
+        //            this.alumno = a;
+        //        }
+        //    }
+        //}
+
+          private void listarHistorial()
            {
                BindingList<GestionEventoWS.evento>
                   eventosAlumnos = new BindingList<GestionEventoWS.evento>
-                  (daoEvento.listar(this.alumno.id_alumno).ToList());
+                  (daoEvento.listar_eventos_pasados(this.alumno.id_alumno).ToList());
                dvgHistorial.DataSource = eventosAlumnos;
-           }*/
+           }
 
-        /*   private void listarEventosInscritos()
+           private void listarEventosInscritos()
        {
            BindingList<GestionEventoWS.evento>
               eventosAlumnos = new BindingList<GestionEventoWS.evento>
-              (daoEvento.listar(this.alumno.id_alumno).ToList());
+              (daoEvento.listar_eventos_inscritos(this.alumno.id_alumno).ToList());
            dvgInscritos.DataSource = eventosAlumnos;
-       }*/
+       }
 
 
         private void frmEventosAlumno_Load(object sender, EventArgs e)
@@ -87,6 +92,7 @@ namespace ProyectoOOIA.Ventanas
             frmBuscarEventoAlumno aux = new frmBuscarEventoAlumno();
             aux.ShowDialog();
             this.evento = aux.Evento;
+            if (this.evento == null) return;
             txtNombreEvento.Text = evento.nombre;
             dtpFechaInscritos.Value = evento.fecha;
         }
@@ -124,7 +130,7 @@ namespace ProyectoOOIA.Ventanas
                     {
                         MessageBox.Show("El registro ha sido exitoso", "Éxito", MessageBoxButtons.OK,
                                MessageBoxIcon.Exclamation);
-                        //listarEventosInscritos();
+                        listarEventosInscritos();
                         txtNombreEvento.Text = "";
                        
                     }
@@ -138,32 +144,38 @@ namespace ProyectoOOIA.Ventanas
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            //new frmCancelarEventoAlumno().Show();
-            if (dvgInscritos.CurrentRow != null)
-            {
-                DialogResult dr =
-               MessageBox.Show("¿Desea cancelar su inscripción a este evento?", "Cancelar Evento",
-               MessageBoxButtons.YesNo, MessageBoxIcon.None);
+        //private void btnCancelar_Click(object sender, EventArgs e)
+        //{
+        //    //new frmCancelarEventoAlumno().Show();
+        //    if (dvgInscritos.CurrentRow != null)
+        //    {
+        //        DialogResult dr =
+        //       MessageBox.Show("¿Desea cancelar su inscripción a este evento?", "Cancelar Evento",
+        //       MessageBoxButtons.YesNo, MessageBoxIcon.None);
 
-                if (dr == DialogResult.Yes)
-                {
-                    // int resultado = daoEventoAlumno.eliminar(eventoAlumno);
-                    /*if (resultado != 0)
-                    {
-                        MessageBox.Show("Se ha cancelado su inscripción al evento", "Éxito", MessageBoxButtons.OK,
-                               MessageBoxIcon.Exclamation);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ha habido un error", "Error", MessageBoxButtons.RetryCancel,
-                                MessageBoxIcon.Error);
-                    }*/
-                }
-            }
-            
-        }
+        //        if (dr == DialogResult.Yes)
+        //        {
+        //            //falta verificar el elemento seleccionado
+        //            GestionEventoWS.evento evento_seleccionado =
+        //                (GestionEventoWS.evento)dvgInscritos.CurrentRow.DataBoundItem;
+        //            EventoAlumnoWS.eventoAlumno aux = new eventoAlumno();
+        //            aux.id_alumno = alumno.id_alumno;
+        //            aux.id_evento = evento_seleccionado.id_evento;
+        //            int resultado = daoEventoAlumno.eliminarEncuestaEvento(aux);
+        //            if (resultado != 0)
+        //            {
+        //                MessageBox.Show("Se ha cancelado su inscripción al evento", "Éxito", MessageBoxButtons.OK,
+        //                       MessageBoxIcon.Exclamation);
+        //            }
+        //            else
+        //            {
+        //                MessageBox.Show("Ha habido un error", "Error", MessageBoxButtons.RetryCancel,
+        //                        MessageBoxIcon.Error);
+        //            }
+        //        }
+        //    }
+
+        //}
 
         private void btnDetHistorial_Click(object sender, EventArgs e)
         {
@@ -211,14 +223,15 @@ namespace ProyectoOOIA.Ventanas
         {
             GestionEventoWS.evento data = dvgInscritos.Rows[e.RowIndex].DataBoundItem
             as GestionEventoWS.evento;
-            dvgInscritos.Rows[e.RowIndex].Cells["Categoria"].Value = data.categoria.nombre;
+            dvgInscritos.Rows[e.RowIndex].Cells[4].Value = data.categoria.nombre;
+
         }
 
         private void dvgHistorial_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             GestionEventoWS.evento data = dvgHistorial.Rows[e.RowIndex].DataBoundItem
             as GestionEventoWS.evento;
-            dvgHistorial.Rows[e.RowIndex].Cells["Categoria"].Value = data.categoria.nombre;
+            dvgHistorial.Rows[e.RowIndex].Cells[4].Value = data.categoria.nombre;
         }
     }
 }
