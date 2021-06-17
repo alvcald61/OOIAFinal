@@ -34,7 +34,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            //new frmAgregarEventoAlumno().Show();
+            
             DialogResult dr =
                MessageBox.Show("¿Desea inscribirse a este evento?", "Inscripción a Evento",
                MessageBoxButtons.YesNo, MessageBoxIcon.None);
@@ -76,6 +76,11 @@ namespace ProyectoOOIA.Ventanas
         }
 
         private void btnBuscarHistorial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dvgInscritos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -29,8 +29,8 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroEvento));
             this.tabEventos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -38,13 +38,8 @@ namespace ProyectoOOIA.Ventanas
             this.lblNombreInscritos = new System.Windows.Forms.Label();
             this.txtNombreInscritos = new System.Windows.Forms.TextBox();
             this.dtpFechaInscritos = new System.Windows.Forms.DateTimePicker();
-            this.lblCategoriaInscritos = new System.Windows.Forms.Label();
-            this.txtCategoriaInscritos = new System.Windows.Forms.TextBox();
             this.btnBuscarInscritos = new System.Windows.Forms.Button();
             this.lblFechaInscritos = new System.Windows.Forms.Label();
-            this.txtHoraInscritos = new System.Windows.Forms.TextBox();
-            this.lblHoraInscritos = new System.Windows.Forms.Label();
-            this.btnAcceder = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnDetInscritos = new System.Windows.Forms.Button();
@@ -78,8 +73,6 @@ namespace ProyectoOOIA.Ventanas
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblEventos = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabEventos.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -106,7 +99,6 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Controls.Add(this.btnAcceder);
             this.tabPage1.Controls.Add(this.btnEliminar);
             this.tabPage1.Controls.Add(this.btnRegistrar);
             this.tabPage1.Controls.Add(this.btnDetInscritos);
@@ -122,17 +114,11 @@ namespace ProyectoOOIA.Ventanas
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblNombreInscritos);
             this.panel2.Controls.Add(this.txtNombreInscritos);
             this.panel2.Controls.Add(this.dtpFechaInscritos);
-            this.panel2.Controls.Add(this.lblCategoriaInscritos);
-            this.panel2.Controls.Add(this.txtCategoriaInscritos);
             this.panel2.Controls.Add(this.btnBuscarInscritos);
             this.panel2.Controls.Add(this.lblFechaInscritos);
-            this.panel2.Controls.Add(this.txtHoraInscritos);
-            this.panel2.Controls.Add(this.lblHoraInscritos);
             this.panel2.Location = new System.Drawing.Point(25, 6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(676, 124);
@@ -160,29 +146,10 @@ namespace ProyectoOOIA.Ventanas
             // dtpFechaInscritos
             // 
             this.dtpFechaInscritos.Enabled = false;
-            this.dtpFechaInscritos.Location = new System.Drawing.Point(137, 73);
+            this.dtpFechaInscritos.Location = new System.Drawing.Point(60, 94);
             this.dtpFechaInscritos.Name = "dtpFechaInscritos";
             this.dtpFechaInscritos.Size = new System.Drawing.Size(200, 21);
             this.dtpFechaInscritos.TabIndex = 42;
-            // 
-            // lblCategoriaInscritos
-            // 
-            this.lblCategoriaInscritos.AutoSize = true;
-            this.lblCategoriaInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoriaInscritos.Location = new System.Drawing.Point(3, 44);
-            this.lblCategoriaInscritos.Name = "lblCategoriaInscritos";
-            this.lblCategoriaInscritos.Size = new System.Drawing.Size(73, 17);
-            this.lblCategoriaInscritos.TabIndex = 30;
-            this.lblCategoriaInscritos.Text = "Categoria:";
-            // 
-            // txtCategoriaInscritos
-            // 
-            this.txtCategoriaInscritos.Enabled = false;
-            this.txtCategoriaInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoriaInscritos.Location = new System.Drawing.Point(137, 44);
-            this.txtCategoriaInscritos.Name = "txtCategoriaInscritos";
-            this.txtCategoriaInscritos.Size = new System.Drawing.Size(137, 23);
-            this.txtCategoriaInscritos.TabIndex = 31;
             // 
             // btnBuscarInscritos
             // 
@@ -199,41 +166,11 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblFechaInscritos.AutoSize = true;
             this.lblFechaInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaInscritos.Location = new System.Drawing.Point(3, 73);
+            this.lblFechaInscritos.Location = new System.Drawing.Point(3, 94);
             this.lblFechaInscritos.Name = "lblFechaInscritos";
             this.lblFechaInscritos.Size = new System.Drawing.Size(51, 17);
             this.lblFechaInscritos.TabIndex = 34;
             this.lblFechaInscritos.Text = "Fecha:";
-            // 
-            // txtHoraInscritos
-            // 
-            this.txtHoraInscritos.Enabled = false;
-            this.txtHoraInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoraInscritos.Location = new System.Drawing.Point(432, 71);
-            this.txtHoraInscritos.Name = "txtHoraInscritos";
-            this.txtHoraInscritos.Size = new System.Drawing.Size(74, 23);
-            this.txtHoraInscritos.TabIndex = 35;
-            // 
-            // lblHoraInscritos
-            // 
-            this.lblHoraInscritos.AutoSize = true;
-            this.lblHoraInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraInscritos.Location = new System.Drawing.Point(349, 74);
-            this.lblHoraInscritos.Name = "lblHoraInscritos";
-            this.lblHoraInscritos.Size = new System.Drawing.Size(79, 17);
-            this.lblHoraInscritos.TabIndex = 32;
-            this.lblHoraInscritos.Text = "Hora inicio:";
-            // 
-            // btnAcceder
-            // 
-            this.btnAcceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcceder.Location = new System.Drawing.Point(634, 136);
-            this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(79, 29);
-            this.btnAcceder.TabIndex = 43;
-            this.btnAcceder.Text = "Acceder";
-            this.btnAcceder.UseVisualStyleBackColor = true;
-            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // btnEliminar
             // 
@@ -272,7 +209,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblEventosInscritos.AutoSize = true;
             this.lblEventosInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEventosInscritos.Location = new System.Drawing.Point(22, 133);
+            this.lblEventosInscritos.Location = new System.Drawing.Point(19, 148);
             this.lblEventosInscritos.Name = "lblEventosInscritos";
             this.lblEventosInscritos.Size = new System.Drawing.Size(132, 17);
             this.lblEventosInscritos.TabIndex = 37;
@@ -282,14 +219,14 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.dvgInscritos.AllowUserToDeleteRows = false;
             this.dvgInscritos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgInscritos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgInscritos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dvgInscritos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgInscritos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreEvento,
@@ -303,6 +240,7 @@ namespace ProyectoOOIA.Ventanas
             this.dvgInscritos.RowHeadersWidth = 51;
             this.dvgInscritos.Size = new System.Drawing.Size(958, 327);
             this.dvgInscritos.TabIndex = 36;
+            this.dvgInscritos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgInscritos_CellContentClick);
             // 
             // NombreEvento
             // 
@@ -479,14 +417,14 @@ namespace ProyectoOOIA.Ventanas
             // dvgHistorial
             // 
             this.dvgHistorial.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dvgHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgHistorial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -593,26 +531,6 @@ namespace ProyectoOOIA.Ventanas
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(595, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(74, 23);
-            this.textBox1.TabIndex = 44;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(527, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 17);
-            this.label1.TabIndex = 43;
-            this.label1.Text = "Hora fin:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // frmRegistroEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -653,11 +571,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Button btnBuscarInscritos;
         private System.Windows.Forms.Label lblEventosInscritos;
         private System.Windows.Forms.DataGridView dvgInscritos;
-        private System.Windows.Forms.TextBox txtHoraInscritos;
         private System.Windows.Forms.Label lblFechaInscritos;
-        private System.Windows.Forms.Label lblHoraInscritos;
-        private System.Windows.Forms.TextBox txtCategoriaInscritos;
-        private System.Windows.Forms.Label lblCategoriaInscritos;
         private System.Windows.Forms.TextBox txtNombreInscritos;
         private System.Windows.Forms.Label lblNombreInscritos;
         private System.Windows.Forms.TabPage tabHistorial;
@@ -669,7 +583,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblEventosPasados;
         private System.Windows.Forms.DateTimePicker dtpFechaInscritos;
-        private System.Windows.Forms.Button btnAcceder;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreEvento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
@@ -691,7 +604,5 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label lblFechaHistorial;
         private System.Windows.Forms.TextBox txtHoraHistorial;
         private System.Windows.Forms.Label lblHoraHistorial;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
     }
 }
