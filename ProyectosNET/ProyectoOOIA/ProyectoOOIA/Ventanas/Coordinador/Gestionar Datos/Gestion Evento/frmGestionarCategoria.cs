@@ -154,7 +154,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             dgvCategoria.DataSource = especialidades;
         }
 
-        private void tsbGuardar_Click(object sender, EventArgs e)
+        private void tsbGuardar_Click_1(object sender, EventArgs e)
         {   
             //Validar Especialidad
             if (txtNombre.Text == "")

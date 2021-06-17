@@ -31,3 +31,14 @@ hs_err_pid*
 !/ProyectosJAVA/AuxiliarWS/src/java/lib/mysql-connector-java-8.0.24.jar
 /ProyectosJAVA/AuxiliarWS/dist/
 /ProyectosJAVA/WebServicesOOIA/dist/
+/ProyectosJAVA/Interfaces/dist/
+/ProyectosJAVA/OOIAConfigMySql/dist/
+/ProyectosJAVA/ooiaGestHumanaModel/dist/
+/ProyectosJAVA/ooiaGestAcademicaModel/dist/
+/ProyectosJAVA/ooiaGestAtencionModel/dist/
+/ProyectosJAVA/ooiaGestHumanaController/dist/
+/ProyectosJAVA/ooiaGestAcademicaController/dist/
+/ProyectosJAVA/ooiaCargaMasivaCSV/dist/
+/ProyectosJAVA/ooiaGestAtencionController/dist/
+/ProyectosJAVA/ooiaGestEventosModel/dist/
+/ProyectosJAVA/ooiaGestEventosController/dist/

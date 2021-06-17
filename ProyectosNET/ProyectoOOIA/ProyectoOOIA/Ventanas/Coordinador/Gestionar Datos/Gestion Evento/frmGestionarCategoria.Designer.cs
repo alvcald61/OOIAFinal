@@ -126,7 +126,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(73, 24);
             this.tsbGuardar.Text = "Guardar";
-            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click_1);
             // 
             // tsbModificar
             // 
