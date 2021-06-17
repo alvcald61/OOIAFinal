@@ -1166,6 +1166,37 @@ begin
 	and ep.fid_evento = _id_evento;
 end$
 
+/*Eventos inscritos e historial de eventos*/
+drop procedure if exists LISTAR_EVENTOS_INSCRITOS;
+drop procedure if exists LISTAR_EVENTOS_PASADOS;
+delimiter $
+CREATE PROCEDURE LISTAR_EVENTOS_INSCRITOS(
+	in _id_alumno int
+)
+begin
+	/*tabla evento*/
+	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.imagen, 
+    e.fid_categoria_evento, ce.nombre as nombre_categoria
+    from evento e 
+    inner join evento_alumno ea on ea.fid_evento = e.id_evento
+    inner join categoria_evento ce on ce.id_categoria_evento = e.fid_categoria_evento
+    where  (e.fecha >= current_date()) and e.activo=1 and ea.fid_alumno = _id_alumno;
+end$
+
+delimiter $
+CREATE PROCEDURE LISTAR_EVENTOS_PASADOS(
+	in _id_alumno int
+)
+begin
+	/*tabla evento*/
+	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.imagen, 
+    e.fid_categoria_evento, ce.nombre as nombre_categoria
+    from evento e 
+    inner join evento_alumno ea on ea.fid_evento = e.id_evento
+    inner join categoria_evento ce on ce.id_categoria_evento = e.fid_categoria_evento
+    where  (e.fecha < current_date()) and e.activo=1 and ea.fid_alumno = _id_alumno;
+end$
+
 delimiter $
 create procedure autenticarUsuario(
 in _usuario varchar(250),
