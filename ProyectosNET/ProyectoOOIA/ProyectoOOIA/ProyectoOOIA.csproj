@@ -1328,6 +1328,7 @@
     <None Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\save.png" />
     <None Include="Resources\white_cog1.png" />
     <None Include="Resources\white_cog.jpg" />
     <None Include="Resources\white_cog.png" />

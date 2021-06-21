@@ -86,7 +86,7 @@ namespace ProyectoOOIA.Ventanas
             if(estadoCorreo == Estado.Inicial)
             {
                 txtCorreo.Enabled = true;
-                btnEditCorreo.Image = Properties.Resources.arroba;
+                btnEditCorreo.Image = Properties.Resources.save;
                 estadoCorreo = Estado.Modificar;
             }
             else if(estadoCorreo == Estado.Modificar)
@@ -94,12 +94,13 @@ namespace ProyectoOOIA.Ventanas
                 DialogResult dr = MessageBox.Show("¿Esta seguro que desea guardar los cambios a su correo?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
+                    usuario.correo = txtCorreo.Text;
                     int resultado = 0;
                     GestionHumanaWS.GestionHumanaWSClient daoUsuario = new GestionHumanaWS.GestionHumanaWSClient();
-                    if (tipo == TipoUsuario.Alumno) resultado = daoUsuario.modificarAlumno((GestionHumanaWS.alumno)usuario);
-                    if (tipo == TipoUsuario.Asesor && usuario.GetType() == typeof(GestionHumanaWS.profesor)) resultado = daoUsuario.modificarProfesores((GestionHumanaWS.profesor)usuario);
-                    if (tipo == TipoUsuario.Asesor && usuario.GetType() == typeof(GestionHumanaWS.psicologo)) resultado = daoUsuario.modificarPsicologo((GestionHumanaWS.psicologo)usuario);
-                    if (tipo == TipoUsuario.OOIA) resultado = daoUsuario.modificarCoordinador((GestionHumanaWS.coordinador)usuario);
+                    if (usuario.GetType() == typeof(GestionHumanaWS.alumno)) resultado = daoUsuario.modificarAlumno((GestionHumanaWS.alumno)usuario);
+                    if (usuario.GetType() == typeof(GestionHumanaWS.profesor)) resultado = daoUsuario.modificarProfesores((GestionHumanaWS.profesor)usuario);
+                    if (usuario.GetType() == typeof(GestionHumanaWS.psicologo)) resultado = daoUsuario.modificarPsicologo((GestionHumanaWS.psicologo)usuario);
+                    if (usuario.GetType() == typeof(GestionHumanaWS.coordinador)) resultado = daoUsuario.modificarCoordinador((GestionHumanaWS.coordinador)usuario);
                     if (resultado != 0)
                     {
                         MessageBox.Show("Se ha actualizado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
