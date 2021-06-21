@@ -352,6 +352,12 @@
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPsicologo.Designer.cs">
       <DependentUpon>frmGestionarPsicologo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmAccountSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmAccountSettings.Designer.cs">
+      <DependentUpon>frmAccountSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Old\frmCargarCSVAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -632,6 +638,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPsicologo.resx">
       <DependentUpon>frmGestionarPsicologo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmAccountSettings.resx">
+      <DependentUpon>frmAccountSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Old\frmCargarCSVAlumnos.resx">
       <DependentUpon>frmCargarCSVAlumnos.cs</DependentUpon>
@@ -1319,6 +1328,9 @@
     <None Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\white_cog1.png" />
+    <None Include="Resources\white_cog.jpg" />
+    <None Include="Resources\white_cog.png" />
     <None Include="Resources\search.png" />
     <None Include="Resources\home.png" />
     <None Include="Resources\arrowWhite.png" />
@@ -1471,6 +1483,8 @@
     <None Include="Resources\menos.png" />
     <None Include="Resources\mas.png" />
     <None Include="Resources\placeholder_profile.jpg" />
+    <None Include="Resources\edit_black.png" />
+    <None Include="Resources\edit_black1.png" />
     <Content Include="Resources\profesor.jpg" />
     <None Include="Resources\Profile.bmp" />
     <Content Include="Resources\psicologo.jpg" />

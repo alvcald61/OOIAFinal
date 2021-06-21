@@ -123,6 +123,26 @@ namespace ProyectoOOIA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap edit_black {
+            get {
+                object obj = ResourceManager.GetObject("edit_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_black1 {
+            get {
+                object obj = ResourceManager.GetObject("edit_black1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EEGGCC {
             get {
                 object obj = ResourceManager.GetObject("EEGGCC", resourceCulture);
@@ -356,6 +376,16 @@ namespace ProyectoOOIA.Properties {
         internal static System.Drawing.Bitmap Tramite {
             get {
                 object obj = ResourceManager.GetObject("Tramite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_cog {
+            get {
+                object obj = ResourceManager.GetObject("white_cog", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
