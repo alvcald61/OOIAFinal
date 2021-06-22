@@ -829,8 +829,8 @@
     <None Include="Connected Services\CitaWS\ProyectoOOIA.CitaWS.modificarCitaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CodigoAtencionWS\CodigoWS1.wsdl" />
-    <None Include="Connected Services\CodigoAtencionWS\CodigoWS1.xsd">
+    <None Include="Connected Services\CodigoAtencionWS\CodigoWS.wsdl" />
+    <None Include="Connected Services\CodigoAtencionWS\CodigoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CodigoAtencionWS\ProyectoOOIA.CodigoAtencionWS.codigoAtencion.datasource">

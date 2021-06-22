@@ -58,10 +58,18 @@ public class CodigoAtencionMySQL implements CodigoAtencionDAO {
            cs.registerOutParameter("_id_codigo_atencion",java.sql.Types.INTEGER);
            cs.setString("_codigo",codigo.getCodigo());
            cs.setString("_descripcion",codigo.getDescripcion());
-           cs.executeUpdate();
-           codigo.setId_codigo_atencion(cs.getInt("_id_codigo_atencion"));
-           resultado=1;
-           cs.close();
+           
+           int esta = verificar(codigo.getCodigo()); //-1 esta //-2 no esta
+           if(esta!=-1){
+                cs.executeUpdate();
+                codigo.setId_codigo_atencion(cs.getInt("_id_codigo_atencion"));
+                resultado=1;
+                cs.close();
+           }
+           else{
+               resultado=-1;
+           }
+           
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -97,6 +105,17 @@ public class CodigoAtencionMySQL implements CodigoAtencionDAO {
         }
         
         return resultado;
+    }
+    
+    private int verificar(String cod){
+        int esta=-2; //no esta
+        
+         ArrayList<CodigoAtencion> codigos = new CodigoAtencionMySQL().listar();
+         for(CodigoAtencion c: codigos){
+             if(c.getCodigo() == cod) esta=-1; //si es que ya esta
+         }
+        
+        return esta;
     }
 
     @Override

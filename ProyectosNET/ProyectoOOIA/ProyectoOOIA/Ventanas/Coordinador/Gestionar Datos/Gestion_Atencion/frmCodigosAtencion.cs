@@ -87,7 +87,13 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
                     this.estado = Estado.Inicial;
                     cambiarEstado();
                 }
-                else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    if(resultado==0)
+                    MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                        MessageBox.Show("El código ya se encuentra registrado", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else if (estado == Estado.Modificar)
             {

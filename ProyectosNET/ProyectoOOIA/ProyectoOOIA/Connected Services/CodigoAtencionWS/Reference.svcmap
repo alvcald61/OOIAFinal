@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/CodigoWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/CodigoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CodigoWS1.wsdl" MetadataType="Wsdl" ID="a29ceaff-0b8c-4ef7-aee9-5867dbe638d5" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CodigoWS?WSDL" />
-    <MetadataFile FileName="CodigoWS1.xsd" MetadataType="Schema" ID="2c32b2da-1221-4bcb-b2ca-066b76aa661c" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CodigoWS?xsd=1" />
+    <MetadataFile FileName="CodigoWS.wsdl" MetadataType="Wsdl" ID="5d7090e0-6097-4bde-96ed-88ada1dca765" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CodigoWS?WSDL" />
+    <MetadataFile FileName="CodigoWS.xsd" MetadataType="Schema" ID="92bdfabb-b9e8-42e7-a167-e3e087921c1c" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CodigoWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
