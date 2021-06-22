@@ -31,7 +31,7 @@ namespace ProyectoOOIA.Ventanas
         {
             this.lblOOIA = new System.Windows.Forms.Label();
             this.lblIngresarContraseña = new System.Windows.Forms.Label();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtcorreo = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnReestablecer = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -57,14 +57,15 @@ namespace ProyectoOOIA.Ventanas
             this.lblIngresarContraseña.TabIndex = 2;
             this.lblIngresarContraseña.Text = "Ingrese su correo electronico:";
             // 
-            // txtContraseña
+            // txtcorreo
             // 
-            this.txtContraseña.AccessibleName = "";
-            this.txtContraseña.Location = new System.Drawing.Point(131, 219);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(284, 20);
-            this.txtContraseña.TabIndex = 3;
-            this.txtContraseña.UseWaitCursor = true;
+            this.txtcorreo.AccessibleName = "";
+            this.txtcorreo.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.txtcorreo.Location = new System.Drawing.Point(131, 219);
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.Size = new System.Drawing.Size(284, 20);
+            this.txtcorreo.TabIndex = 3;
+            this.txtcorreo.UseWaitCursor = true;
             // 
             // btnCancelar
             // 
@@ -97,7 +98,7 @@ namespace ProyectoOOIA.Ventanas
             this.ClientSize = new System.Drawing.Size(547, 450);
             this.Controls.Add(this.btnReestablecer);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtcorreo);
             this.Controls.Add(this.lblIngresarContraseña);
             this.Controls.Add(this.lblOOIA);
             this.MaximizeBox = false;
@@ -113,7 +114,7 @@ namespace ProyectoOOIA.Ventanas
 
         private System.Windows.Forms.Label lblOOIA;
         private System.Windows.Forms.Label lblIngresarContraseña;
-        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtcorreo;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnReestablecer;
     }
