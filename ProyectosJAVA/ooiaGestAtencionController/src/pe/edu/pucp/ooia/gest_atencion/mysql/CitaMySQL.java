@@ -45,12 +45,18 @@ public class CitaMySQL implements CitaDAO{
                 cita.setTipo_asesor(rs.getInt("tipo_asesor"));
                 if(cita.getTipo_asesor() == 0){
                     cita.setAsesor(new Profesor());
-                    cita.setAsesor(obtenerProfesor(rs.getInt("fid_asesor")));
+                    //cita.setAsesor(obtenerProfesor(rs.getInt("fid_asesor")));
+                    cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
+                    cita.getAsesor().setNombre(rs.getString("nombre"));
                 }
                 else if(cita.getTipo_asesor() == 1){
                     cita.setAsesor(new Psicologo());
-                    cita.setAsesor(obtenerPsicologo(rs.getInt("fid_asesor")));
+                    //cita.setAsesor(obtenerPsicologo(rs.getInt("fid_asesor")));
+                    cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
+                    cita.getAsesor().setNombre(rs.getString("nombre"));
                 }
+                
+               
                 cita.setFecha(rs.getDate("fecha"));
                 cita.setHorario(new Horario(rs.getInt("id_horario"), rs.getInt("dia"), rs.getTime("hora_inicio"),
                         rs.getTime("hora_fin")));
@@ -90,11 +96,15 @@ public class CitaMySQL implements CitaDAO{
                 cita.setTipo_asesor(rs.getInt("tipo_asesor"));
                 if(cita.getTipo_asesor() == 0){
                     cita.setAsesor(new Profesor());
-                    cita.setAsesor(obtenerProfesor(rs.getInt("fid_asesor")));
+                    //cita.setAsesor(obtenerProfesor(rs.getInt("fid_asesor")));
+                    cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
+                    cita.getAsesor().setNombre(rs.getString("nombre"));
                 }
                 else if(cita.getTipo_asesor() == 1){
                     cita.setAsesor(new Psicologo());
-                    cita.setAsesor(obtenerPsicologo(rs.getInt("fid_asesor")));
+                    //cita.setAsesor(obtenerPsicologo(rs.getInt("fid_asesor")));
+                    cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
+                    cita.getAsesor().setNombre(rs.getString("nombre"));
                 }
                 cita.setFecha(rs.getDate("fecha"));
                 cita.setHorario(new Horario(rs.getInt("id_horario"), rs.getInt("dia"), rs.getTime("hora_inicio"),

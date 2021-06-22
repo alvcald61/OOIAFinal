@@ -52,7 +52,7 @@ public class PruebaHumanaMySQL {
     }
      public static void listarCitas(){
         ArrayList<Cita> citas = new ArrayList<>();
-        citas = daoCita.listarHistorico(124);
+        citas = daoCita.listarPendiente(124);
         for(Cita a : citas){
 //            System.out.println("Entro");
             System.out.println(a.getAsesor().getNombre()+ " " + a.getFecha()+  " " + a.getHorario().getHoraInicio()

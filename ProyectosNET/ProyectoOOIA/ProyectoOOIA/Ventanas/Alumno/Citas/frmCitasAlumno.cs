@@ -50,7 +50,7 @@ namespace ProyectoOOIA.Ventanas
             daoCita = new CitaWS.CitaWSClient();
             this.alumno = persona as GestionHumanaWS.alumno;
             
-            //listarHistorial();
+            listarHistorial();
             //listarCitasProgramadas();
         }
 
