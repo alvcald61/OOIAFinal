@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -6,16 +8,12 @@ namespace ProyectoOOIA.Ventanas
 {
     public partial class frmCitasAlumno : Form
     {
-        //private CitaOOIAWS.CitaOOIAWSClient daoCita;
-        //private HorarioAWS.HorarioAWSClient daoHorario;
-        //private MiembroPUCPAWS.MiembroPUCPAWSClient daoMiembroPUCP;
+        private CitaWS.CitaWSClient daoCita;
+        private HorarioWS.HorarioWSClient daoHorario;
+        private AlumnoWS.AlumnoWSClient daoAlumno;
         private Estado estado;
         private GestionHumanaWS.persona persona;
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd,
-            int wMsg, int wParam, int lParam);
+        private GestionHumanaWS.alumno alumno;
 
         public frmCitasAlumno()
         {
@@ -49,9 +47,28 @@ namespace ProyectoOOIA.Ventanas
             tabCitasProgramadas.HorizontalScroll.Visible = false;
             tabCitasProgramadas.HorizontalScroll.Maximum = 0;
             tabCitasProgramadas.AutoScroll = true;
+            daoCita = new CitaWS.CitaWSClient();
+            this.alumno = persona as GestionHumanaWS.alumno;
+            
+            //listarHistorial();
+            //listarCitasProgramadas();
         }
 
+        private void listarHistorial()
+        {
+            BindingList<CitaWS.cita>
+               citasAlumnos = new BindingList<CitaWS.cita>
+               (daoCita.listarCitaHistorico(this.alumno.id_alumno).ToList());
+            dgvHistorialCitas.DataSource = citasAlumnos;
+        }
 
+        private void listarCitasProgramadas()
+        {
+            BindingList<CitaWS.cita>
+               citasAlumnos = new BindingList<CitaWS.cita>
+               (daoCita.listarCitaPendiente(this.alumno.id_alumno).ToList());
+            dgvCitasProgramadas.DataSource = citasAlumnos;
+        }
 
         public void clearall()
         {
@@ -131,12 +148,6 @@ namespace ProyectoOOIA.Ventanas
             new frmDetalleCitaAlumno().ShowDialog();
             //this.Close();
             this.DialogResult = DialogResult.OK;
-        }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
 
 
@@ -261,6 +272,24 @@ namespace ProyectoOOIA.Ventanas
             this.estado = Estado.Modificar;
             cambiarEstado();
 
+        }
+
+        private void dgvCitasProgramadas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            CitaWS.cita data = dgvCitasProgramadas.Rows[e.RowIndex].DataBoundItem
+            as CitaWS.cita;
+            dgvCitasProgramadas.Rows[e.RowIndex].Cells[0].Value = data.asesor.nombre;
+            dgvCitasProgramadas.Rows[e.RowIndex].Cells[2].Value = data.horario.horaInicio;
+            dgvCitasProgramadas.Rows[e.RowIndex].Cells[3].Value = data.horario.horaFin;
+        }
+
+        private void dgvHistorialCitas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            CitaWS.cita data = dgvHistorialCitas.Rows[e.RowIndex].DataBoundItem
+            as CitaWS.cita;
+            dgvHistorialCitas.Rows[e.RowIndex].Cells[0].Value = data.asesor.nombre;
+            dgvHistorialCitas.Rows[e.RowIndex].Cells[2].Value = data.horario.horaInicio;
+            dgvHistorialCitas.Rows[e.RowIndex].Cells[3].Value = data.horario.horaFin;
         }
     }
 }

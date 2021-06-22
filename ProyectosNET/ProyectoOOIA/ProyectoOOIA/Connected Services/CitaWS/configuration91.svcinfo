@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="xuPExLX4up4vhwWidyix960DUsptbW4qGaB9sZR+7tk=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="mRWY9eYOCglogsagfjL/5w0SEMAEFstpy39M7sYjzKE=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="CitaWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="CitaWSPort" contract="CitaWS.CitaWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/WebServicesOOIA/CitaWS" bindingConfiguration="CitaWSPortBinding">
+    <endpoint name="CitaWSPort" contract="CitaWS.CitaWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServicesOOIA/CitaWS" bindingConfiguration="CitaWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.157.187.65:8080/WebServicesOOIA/CitaWS</serializedValue>
+          <serializedValue>http://localhost:8080/WebServicesOOIA/CitaWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

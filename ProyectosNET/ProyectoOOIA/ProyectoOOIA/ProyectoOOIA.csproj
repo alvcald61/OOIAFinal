@@ -807,8 +807,8 @@
     <None Include="Connected Services\CargarCSVpsicologosWS\PsicologosCSVcargaWS1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CitaWS\CitaWS1.wsdl" />
-    <None Include="Connected Services\CitaWS\CitaWS1.xsd">
+    <None Include="Connected Services\CitaWS\CitaWS.wsdl" />
+    <None Include="Connected Services\CitaWS\CitaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CitaWS\ProyectoOOIA.CitaWS.cita.datasource">
@@ -1209,8 +1209,8 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.tipoUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\HorarioWS\HorarioWS1.wsdl" />
-    <None Include="Connected Services\HorarioWS\HorarioWS1.xsd">
+    <None Include="Connected Services\HorarioWS\HorarioWS.wsdl" />
+    <None Include="Connected Services\HorarioWS\HorarioWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\HorarioWS\ProyectoOOIA.HorarioWS.eliminarHorarioResponse.datasource">
@@ -1288,8 +1288,8 @@
     <None Include="Connected Services\PsicologoWS\ProyectoOOIA.PsicologoWS.psicologo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PsicologoWS\PsicologoWS1.wsdl" />
-    <None Include="Connected Services\PsicologoWS\PsicologoWS1.xsd">
+    <None Include="Connected Services\PsicologoWS\PsicologoWS.wsdl" />
+    <None Include="Connected Services\PsicologoWS\PsicologoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\MaterialSkin.Controls.MaterialCheckBox.datasource" />

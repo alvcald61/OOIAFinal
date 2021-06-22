@@ -16,15 +16,6 @@ namespace ProyectoOOIA.HorarioWS {
     public interface HorarioWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/HorarioWS/modificarHorarioRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/HorarioWS/modificarHorarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.HorarioWS.modificarHorarioResponse modificarHorario(ProyectoOOIA.HorarioWS.modificarHorarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/HorarioWS/modificarHorarioRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/HorarioWS/modificarHorarioResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.modificarHorarioResponse> modificarHorarioAsync(ProyectoOOIA.HorarioWS.modificarHorarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/HorarioWS/eliminarHorarioRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/HorarioWS/eliminarHorarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -34,15 +25,6 @@ namespace ProyectoOOIA.HorarioWS {
         System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.eliminarHorarioResponse> eliminarHorarioAsync(ProyectoOOIA.HorarioWS.eliminarHorarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/HorarioWS/insertarHorarioRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/HorarioWS/insertarHorarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.HorarioWS.insertarHorarioResponse insertarHorario(ProyectoOOIA.HorarioWS.insertarHorarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/HorarioWS/insertarHorarioRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/HorarioWS/insertarHorarioResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.insertarHorarioResponse> insertarHorarioAsync(ProyectoOOIA.HorarioWS.insertarHorarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/HorarioWS/listarHorarioRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/HorarioWS/listarHorarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -50,6 +32,24 @@ namespace ProyectoOOIA.HorarioWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/HorarioWS/listarHorarioRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/HorarioWS/listarHorarioResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.listarHorarioResponse> listarHorarioAsync(ProyectoOOIA.HorarioWS.listarHorarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/HorarioWS/modificarHorarioRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/HorarioWS/modificarHorarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.HorarioWS.modificarHorarioResponse modificarHorario(ProyectoOOIA.HorarioWS.modificarHorarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/HorarioWS/modificarHorarioRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/HorarioWS/modificarHorarioResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.modificarHorarioResponse> modificarHorarioAsync(ProyectoOOIA.HorarioWS.modificarHorarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/HorarioWS/insertarHorarioRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/HorarioWS/insertarHorarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.HorarioWS.insertarHorarioResponse insertarHorario(ProyectoOOIA.HorarioWS.insertarHorarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/HorarioWS/insertarHorarioRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/HorarioWS/insertarHorarioResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.insertarHorarioResponse> insertarHorarioAsync(ProyectoOOIA.HorarioWS.insertarHorarioRequest request);
     }
     
     /// <remarks/>
@@ -64,9 +64,13 @@ namespace ProyectoOOIA.HorarioWS {
         
         private int diaField;
         
-        private time horaFinField;
+        private System.DateTime horaFinField;
         
-        private time horaInicioField;
+        private bool horaFinFieldSpecified;
+        
+        private System.DateTime horaInicioField;
+        
+        private bool horaInicioFieldSpecified;
         
         private int id_horarioField;
         
@@ -96,7 +100,7 @@ namespace ProyectoOOIA.HorarioWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public time horaFin {
+        public System.DateTime horaFin {
             get {
                 return this.horaFinField;
             }
@@ -107,14 +111,38 @@ namespace ProyectoOOIA.HorarioWS {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool horaFinSpecified {
+            get {
+                return this.horaFinFieldSpecified;
+            }
+            set {
+                this.horaFinFieldSpecified = value;
+                this.RaisePropertyChanged("horaFinSpecified");
+            }
+        }
+        
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public time horaInicio {
+        public System.DateTime horaInicio {
             get {
                 return this.horaInicioField;
             }
             set {
                 this.horaInicioField = value;
                 this.RaisePropertyChanged("horaInicio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool horaInicioSpecified {
+            get {
+                return this.horaInicioFieldSpecified;
+            }
+            set {
+                this.horaInicioFieldSpecified = value;
+                this.RaisePropertyChanged("horaInicioSpecified");
             }
         }
         
@@ -137,60 +165,6 @@ namespace ProyectoOOIA.HorarioWS {
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
-    public partial class time : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarHorario", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarHorarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.HorarioWS.horario horario;
-        
-        public modificarHorarioRequest() {
-        }
-        
-        public modificarHorarioRequest(ProyectoOOIA.HorarioWS.horario horario) {
-            this.horario = horario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarHorarioResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarHorarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarHorarioResponse() {
-        }
-        
-        public modificarHorarioResponse(int @return) {
-            this.@return = @return;
         }
     }
     
@@ -233,6 +207,70 @@ namespace ProyectoOOIA.HorarioWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorario", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarHorarioRequest {
+        
+        public listarHorarioRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorarioResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarHorarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.HorarioWS.horario[] @return;
+        
+        public listarHorarioResponse() {
+        }
+        
+        public listarHorarioResponse(ProyectoOOIA.HorarioWS.horario[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarHorario", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarHorarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.HorarioWS.horario horario;
+        
+        public modificarHorarioRequest() {
+        }
+        
+        public modificarHorarioRequest(ProyectoOOIA.HorarioWS.horario horario) {
+            this.horario = horario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarHorarioResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarHorarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarHorarioResponse() {
+        }
+        
+        public modificarHorarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarHorario", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarHorarioRequest {
         
@@ -266,34 +304,6 @@ namespace ProyectoOOIA.HorarioWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorario", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarHorarioRequest {
-        
-        public listarHorarioRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorarioResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarHorarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.HorarioWS.horario[] @return;
-        
-        public listarHorarioResponse() {
-        }
-        
-        public listarHorarioResponse(ProyectoOOIA.HorarioWS.horario[] @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface HorarioWSChannel : ProyectoOOIA.HorarioWS.HorarioWS, System.ServiceModel.IClientChannel {
     }
@@ -322,29 +332,6 @@ namespace ProyectoOOIA.HorarioWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.HorarioWS.modificarHorarioResponse ProyectoOOIA.HorarioWS.HorarioWS.modificarHorario(ProyectoOOIA.HorarioWS.modificarHorarioRequest request) {
-            return base.Channel.modificarHorario(request);
-        }
-        
-        public int modificarHorario(ProyectoOOIA.HorarioWS.horario horario) {
-            ProyectoOOIA.HorarioWS.modificarHorarioRequest inValue = new ProyectoOOIA.HorarioWS.modificarHorarioRequest();
-            inValue.horario = horario;
-            ProyectoOOIA.HorarioWS.modificarHorarioResponse retVal = ((ProyectoOOIA.HorarioWS.HorarioWS)(this)).modificarHorario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.modificarHorarioResponse> ProyectoOOIA.HorarioWS.HorarioWS.modificarHorarioAsync(ProyectoOOIA.HorarioWS.modificarHorarioRequest request) {
-            return base.Channel.modificarHorarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.modificarHorarioResponse> modificarHorarioAsync(ProyectoOOIA.HorarioWS.horario horario) {
-            ProyectoOOIA.HorarioWS.modificarHorarioRequest inValue = new ProyectoOOIA.HorarioWS.modificarHorarioRequest();
-            inValue.horario = horario;
-            return ((ProyectoOOIA.HorarioWS.HorarioWS)(this)).modificarHorarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.HorarioWS.eliminarHorarioResponse ProyectoOOIA.HorarioWS.HorarioWS.eliminarHorario(ProyectoOOIA.HorarioWS.eliminarHorarioRequest request) {
             return base.Channel.eliminarHorario(request);
         }
@@ -368,6 +355,50 @@ namespace ProyectoOOIA.HorarioWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.HorarioWS.listarHorarioResponse ProyectoOOIA.HorarioWS.HorarioWS.listarHorario(ProyectoOOIA.HorarioWS.listarHorarioRequest request) {
+            return base.Channel.listarHorario(request);
+        }
+        
+        public ProyectoOOIA.HorarioWS.horario[] listarHorario() {
+            ProyectoOOIA.HorarioWS.listarHorarioRequest inValue = new ProyectoOOIA.HorarioWS.listarHorarioRequest();
+            ProyectoOOIA.HorarioWS.listarHorarioResponse retVal = ((ProyectoOOIA.HorarioWS.HorarioWS)(this)).listarHorario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.listarHorarioResponse> ProyectoOOIA.HorarioWS.HorarioWS.listarHorarioAsync(ProyectoOOIA.HorarioWS.listarHorarioRequest request) {
+            return base.Channel.listarHorarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.listarHorarioResponse> listarHorarioAsync() {
+            ProyectoOOIA.HorarioWS.listarHorarioRequest inValue = new ProyectoOOIA.HorarioWS.listarHorarioRequest();
+            return ((ProyectoOOIA.HorarioWS.HorarioWS)(this)).listarHorarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.HorarioWS.modificarHorarioResponse ProyectoOOIA.HorarioWS.HorarioWS.modificarHorario(ProyectoOOIA.HorarioWS.modificarHorarioRequest request) {
+            return base.Channel.modificarHorario(request);
+        }
+        
+        public int modificarHorario(ProyectoOOIA.HorarioWS.horario horario) {
+            ProyectoOOIA.HorarioWS.modificarHorarioRequest inValue = new ProyectoOOIA.HorarioWS.modificarHorarioRequest();
+            inValue.horario = horario;
+            ProyectoOOIA.HorarioWS.modificarHorarioResponse retVal = ((ProyectoOOIA.HorarioWS.HorarioWS)(this)).modificarHorario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.modificarHorarioResponse> ProyectoOOIA.HorarioWS.HorarioWS.modificarHorarioAsync(ProyectoOOIA.HorarioWS.modificarHorarioRequest request) {
+            return base.Channel.modificarHorarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.modificarHorarioResponse> modificarHorarioAsync(ProyectoOOIA.HorarioWS.horario horario) {
+            ProyectoOOIA.HorarioWS.modificarHorarioRequest inValue = new ProyectoOOIA.HorarioWS.modificarHorarioRequest();
+            inValue.horario = horario;
+            return ((ProyectoOOIA.HorarioWS.HorarioWS)(this)).modificarHorarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.HorarioWS.insertarHorarioResponse ProyectoOOIA.HorarioWS.HorarioWS.insertarHorario(ProyectoOOIA.HorarioWS.insertarHorarioRequest request) {
             return base.Channel.insertarHorario(request);
         }
@@ -388,27 +419,6 @@ namespace ProyectoOOIA.HorarioWS {
             ProyectoOOIA.HorarioWS.insertarHorarioRequest inValue = new ProyectoOOIA.HorarioWS.insertarHorarioRequest();
             inValue.horario = horario;
             return ((ProyectoOOIA.HorarioWS.HorarioWS)(this)).insertarHorarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.HorarioWS.listarHorarioResponse ProyectoOOIA.HorarioWS.HorarioWS.listarHorario(ProyectoOOIA.HorarioWS.listarHorarioRequest request) {
-            return base.Channel.listarHorario(request);
-        }
-        
-        public ProyectoOOIA.HorarioWS.horario[] listarHorario() {
-            ProyectoOOIA.HorarioWS.listarHorarioRequest inValue = new ProyectoOOIA.HorarioWS.listarHorarioRequest();
-            ProyectoOOIA.HorarioWS.listarHorarioResponse retVal = ((ProyectoOOIA.HorarioWS.HorarioWS)(this)).listarHorario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.listarHorarioResponse> ProyectoOOIA.HorarioWS.HorarioWS.listarHorarioAsync(ProyectoOOIA.HorarioWS.listarHorarioRequest request) {
-            return base.Channel.listarHorarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.HorarioWS.listarHorarioResponse> listarHorarioAsync() {
-            ProyectoOOIA.HorarioWS.listarHorarioRequest inValue = new ProyectoOOIA.HorarioWS.listarHorarioRequest();
-            return ((ProyectoOOIA.HorarioWS.HorarioWS)(this)).listarHorarioAsync(inValue);
         }
     }
 }

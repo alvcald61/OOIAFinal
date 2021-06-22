@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="3M8V5AdzPZg8W26pCY76yRa5FL6q3m1fjqG9JrL40Vg=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="kC6TC8AR8ogzwFxEmj41Q9r5vV0g915Z686lIRoUCKA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="HorarioWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="HorarioWSPort" contract="HorarioWS.HorarioWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/WebServicesOOIA/HorarioWS" bindingConfiguration="HorarioWSPortBinding">
+    <endpoint name="HorarioWSPort" contract="HorarioWS.HorarioWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServicesOOIA/HorarioWS" bindingConfiguration="HorarioWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.157.187.65:8080/WebServicesOOIA/HorarioWS</serializedValue>
+          <serializedValue>http://localhost:8080/WebServicesOOIA/HorarioWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

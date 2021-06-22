@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="WOFI/nqxpGKMLy0DE06FEBAO/WyZw2oO+EsvzHowy9s=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="CZMyNLkoOOX7sLkmCGO7P8ezy0MOxCrRSDOoM/jcPsY=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="PsicologoWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="PsicologoWSPort" contract="PsicologoWS.PsicologoWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/WebServicesOOIA/PsicologoWS" bindingConfiguration="PsicologoWSPortBinding">
+    <endpoint name="PsicologoWSPort" contract="PsicologoWS.PsicologoWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServicesOOIA/PsicologoWS" bindingConfiguration="PsicologoWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.157.187.65:8080/WebServicesOOIA/PsicologoWS</serializedValue>
+          <serializedValue>http://localhost:8080/WebServicesOOIA/PsicologoWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
