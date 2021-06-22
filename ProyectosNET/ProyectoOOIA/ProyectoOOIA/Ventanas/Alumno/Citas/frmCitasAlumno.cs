@@ -51,7 +51,7 @@ namespace ProyectoOOIA.Ventanas
             this.alumno = persona as GestionHumanaWS.alumno;
             
             listarHistorial();
-            //listarCitasProgramadas();
+            listarCitasProgramadas();
         }
 
         private void listarHistorial()

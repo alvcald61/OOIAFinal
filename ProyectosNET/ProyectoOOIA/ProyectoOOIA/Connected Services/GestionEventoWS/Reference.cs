@@ -16,104 +16,14 @@ namespace ProyectoOOIA.GestionEventoWS {
     public interface GestionEventoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarPonenteXEventoRequest", ReplyAction="http://services/GestionEventoWS/listarPonenteXEventoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarEventoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse listarPonenteXEvento(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request);
+        ProyectoOOIA.GestionEventoWS.insertarEventoResponse insertarEvento(ProyectoOOIA.GestionEventoWS.insertarEventoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarPonenteXEventoRequest", ReplyAction="http://services/GestionEventoWS/listarPonenteXEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse> listarPonenteXEventoAsync(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_eventos_pasadosRequest", ReplyAction="http://services/GestionEventoWS/listar_eventos_pasadosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosResponse listar_eventos_pasados(ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_eventos_pasadosRequest", ReplyAction="http://services/GestionEventoWS/listar_eventos_pasadosResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosResponse> listar_eventos_pasadosAsync(ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_tres_eventos_proximosRequest", ReplyAction="http://services/GestionEventoWS/listar_tres_eventos_proximosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse listar_tres_eventos_proximos(ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_tres_eventos_proximosRequest", ReplyAction="http://services/GestionEventoWS/listar_tres_eventos_proximosResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse> listar_tres_eventos_proximosAsync(ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_eventos_inscritosRequest", ReplyAction="http://services/GestionEventoWS/listar_eventos_inscritosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosResponse listar_eventos_inscritos(ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_eventos_inscritosRequest", ReplyAction="http://services/GestionEventoWS/listar_eventos_inscritosResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosResponse> listar_eventos_inscritosAsync(ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarEvento_por_fechaRequest", ReplyAction="http://services/GestionEventoWS/listarEvento_por_fechaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaResponse listarEvento_por_fecha(ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarEvento_por_fechaRequest", ReplyAction="http://services/GestionEventoWS/listarEvento_por_fechaResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaResponse> listarEvento_por_fechaAsync(ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/listarCategoriaEventoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse listarCategoriaEvento(ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/listarCategoriaEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse> listarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarCoordinadorEventoRequest", ReplyAction="http://services/GestionEventoWS/listarCoordinadorEventoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse listarCoordinadorEvento(ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarCoordinadorEventoRequest", ReplyAction="http://services/GestionEventoWS/listarCoordinadorEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse> listarCoordinadorEventoAsync(ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/modificarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/modificarCategoriaEventoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse modificarCategoriaEvento(ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/modificarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/modificarCategoriaEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse> modificarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarCategoriaEventoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoResponse insertarCategoriaEvento(ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarCategoriaEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoResponse> insertarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarCategoriaEventoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoResponse eliminarCategoriaEvento(ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarCategoriaEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoResponse> eliminarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarEventoResponse> insertarEventoAsync(ProyectoOOIA.GestionEventoWS.insertarEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarEventoResponse")]
@@ -136,24 +46,44 @@ namespace ProyectoOOIA.GestionEventoWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarEventoResponse> modificarEventoAsync(ProyectoOOIA.GestionEventoWS.modificarEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarEventoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_eventos_inscritosRequest", ReplyAction="http://services/GestionEventoWS/listar_eventos_inscritosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.insertarEventoResponse insertarEvento(ProyectoOOIA.GestionEventoWS.insertarEventoRequest request);
+        ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosResponse listar_eventos_inscritos(ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarEventoResponse> insertarEventoAsync(ProyectoOOIA.GestionEventoWS.insertarEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_eventos_inscritosRequest", ReplyAction="http://services/GestionEventoWS/listar_eventos_inscritosResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosResponse> listar_eventos_inscritosAsync(ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarEncuestaEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarEncuestaEventoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_eventos_pasadosRequest", ReplyAction="http://services/GestionEventoWS/listar_eventos_pasadosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoResponse eliminarEncuestaEvento(ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest request);
+        ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosResponse listar_eventos_pasados(ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarEncuestaEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarEncuestaEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoResponse> eliminarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_eventos_pasadosRequest", ReplyAction="http://services/GestionEventoWS/listar_eventos_pasadosResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosResponse> listar_eventos_pasadosAsync(ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_tres_eventos_proximosRequest", ReplyAction="http://services/GestionEventoWS/listar_tres_eventos_proximosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse listar_tres_eventos_proximos(ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listar_tres_eventos_proximosRequest", ReplyAction="http://services/GestionEventoWS/listar_tres_eventos_proximosResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse> listar_tres_eventos_proximosAsync(ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarEvento_por_fechaRequest", ReplyAction="http://services/GestionEventoWS/listarEvento_por_fechaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaResponse listarEvento_por_fecha(ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarEvento_por_fechaRequest", ReplyAction="http://services/GestionEventoWS/listarEvento_por_fechaResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaResponse> listarEvento_por_fechaAsync(ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarEncuestaEventoRequest", ReplyAction="http://services/GestionEventoWS/listarEncuestaEventoResponse")]
@@ -166,14 +96,14 @@ namespace ProyectoOOIA.GestionEventoWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarEncuestaEventoResponse> listarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.listarEncuestaEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/modificarCoordinadorEventoRequest", ReplyAction="http://services/GestionEventoWS/modificarCoordinadorEventoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarEncuestaEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarEncuestaEventoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoResponse modificarCoordinadorEvento(ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest request);
+        ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoResponse insertarEncuestaEvento(ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/modificarCoordinadorEventoRequest", ReplyAction="http://services/GestionEventoWS/modificarCoordinadorEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoResponse> modificarCoordinadorEventoAsync(ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarEncuestaEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarEncuestaEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoResponse> insertarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/modificarEncuestaEventoRequest", ReplyAction="http://services/GestionEventoWS/modificarEncuestaEventoResponse")]
@@ -186,6 +116,26 @@ namespace ProyectoOOIA.GestionEventoWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarEncuestaEventoResponse> modificarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.modificarEncuestaEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarEncuestaEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarEncuestaEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoResponse eliminarEncuestaEvento(ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarEncuestaEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarEncuestaEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoResponse> eliminarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarCoordinadorEventoRequest", ReplyAction="http://services/GestionEventoWS/listarCoordinadorEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse listarCoordinadorEvento(ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarCoordinadorEventoRequest", ReplyAction="http://services/GestionEventoWS/listarCoordinadorEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse> listarCoordinadorEventoAsync(ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarCoordinadorEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarCoordinadorEventoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -196,14 +146,64 @@ namespace ProyectoOOIA.GestionEventoWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarCoordinadorEventoResponse> insertarCoordinadorEventoAsync(ProyectoOOIA.GestionEventoWS.insertarCoordinadorEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarEncuestaEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarEncuestaEventoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/listarCategoriaEventoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoResponse insertarEncuestaEvento(ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest request);
+        ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse listarCategoriaEvento(ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarEncuestaEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarEncuestaEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoResponse> insertarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/listarCategoriaEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse> listarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarCategoriaEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoResponse insertarCategoriaEvento(ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/insertarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/insertarCategoriaEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoResponse> insertarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/modificarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/modificarCategoriaEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse modificarCategoriaEvento(ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/modificarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/modificarCategoriaEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse> modificarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarCategoriaEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoResponse eliminarCategoriaEvento(ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarCategoriaEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarCategoriaEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoResponse> eliminarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarPonenteXEventoRequest", ReplyAction="http://services/GestionEventoWS/listarPonenteXEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse listarPonenteXEvento(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarPonenteXEventoRequest", ReplyAction="http://services/GestionEventoWS/listarPonenteXEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse> listarPonenteXEventoAsync(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/modificarCoordinadorEventoRequest", ReplyAction="http://services/GestionEventoWS/modificarCoordinadorEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoResponse modificarCoordinadorEvento(ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/modificarCoordinadorEventoRequest", ReplyAction="http://services/GestionEventoWS/modificarCoordinadorEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoResponse> modificarCoordinadorEventoAsync(ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/eliminarCoordinadorEventoRequest", ReplyAction="http://services/GestionEventoWS/eliminarCoordinadorEventoResponse")]
@@ -224,437 +224,6 @@ namespace ProyectoOOIA.GestionEventoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionEventoWS/listarEvento_por_nombre_categoriaRequest", ReplyAction="http://services/GestionEventoWS/listarEvento_por_nombre_categoriaResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarEvento_por_nombre_categoriaResponse> listarEvento_por_nombre_categoriaAsync(ProyectoOOIA.GestionEventoWS.listarEvento_por_nombre_categoriaRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class ponente : miembroExterno {
-        
-        private bool activoField;
-        
-        private int id_ponenteField;
-        
-        private string organizacionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_ponente {
-            get {
-                return this.id_ponenteField;
-            }
-            set {
-                this.id_ponenteField = value;
-                this.RaisePropertyChanged("id_ponente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string organizacion {
-            get {
-                return this.organizacionField;
-            }
-            set {
-                this.organizacionField = value;
-                this.RaisePropertyChanged("organizacion");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public abstract partial class miembroExterno : persona {
-        
-        private int id_miembro_externoField;
-        
-        private string ocupacionField;
-        
-        private string telefonoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_miembro_externo {
-            get {
-                return this.id_miembro_externoField;
-            }
-            set {
-                this.id_miembro_externoField = value;
-                this.RaisePropertyChanged("id_miembro_externo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string ocupacion {
-            get {
-                return this.ocupacionField;
-            }
-            set {
-                this.ocupacionField = value;
-                this.RaisePropertyChanged("ocupacion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string telefono {
-            get {
-                return this.telefonoField;
-            }
-            set {
-                this.telefonoField = value;
-                this.RaisePropertyChanged("telefono");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroExterno))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public abstract partial class persona : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string correoField;
-        
-        private string direccionField;
-        
-        private string dniField;
-        
-        private System.DateTime fecha_nacimientoField;
-        
-        private bool fecha_nacimientoFieldSpecified;
-        
-        private int id_personaField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string correo {
-            get {
-                return this.correoField;
-            }
-            set {
-                this.correoField = value;
-                this.RaisePropertyChanged("correo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string direccion {
-            get {
-                return this.direccionField;
-            }
-            set {
-                this.direccionField = value;
-                this.RaisePropertyChanged("direccion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string dni {
-            get {
-                return this.dniField;
-            }
-            set {
-                this.dniField = value;
-                this.RaisePropertyChanged("dni");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime fecha_nacimiento {
-            get {
-                return this.fecha_nacimientoField;
-            }
-            set {
-                this.fecha_nacimientoField = value;
-                this.RaisePropertyChanged("fecha_nacimiento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_nacimientoSpecified {
-            get {
-                return this.fecha_nacimientoFieldSpecified;
-            }
-            set {
-                this.fecha_nacimientoFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_nacimientoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_persona {
-            get {
-                return this.id_personaField;
-            }
-            set {
-                this.id_personaField = value;
-                this.RaisePropertyChanged("id_persona");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class eventoAlumno : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool asistioField;
-        
-        private string comentarioField;
-        
-        private int id_alumnoField;
-        
-        private int id_encuestaField;
-        
-        private int id_eventoField;
-        
-        private int valoracionEventoField;
-        
-        private int valoracionPonentesField;
-        
-        private int valoracionUtilidadField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool asistio {
-            get {
-                return this.asistioField;
-            }
-            set {
-                this.asistioField = value;
-                this.RaisePropertyChanged("asistio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string comentario {
-            get {
-                return this.comentarioField;
-            }
-            set {
-                this.comentarioField = value;
-                this.RaisePropertyChanged("comentario");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id_alumno {
-            get {
-                return this.id_alumnoField;
-            }
-            set {
-                this.id_alumnoField = value;
-                this.RaisePropertyChanged("id_alumno");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id_encuesta {
-            get {
-                return this.id_encuestaField;
-            }
-            set {
-                this.id_encuestaField = value;
-                this.RaisePropertyChanged("id_encuesta");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_evento {
-            get {
-                return this.id_eventoField;
-            }
-            set {
-                this.id_eventoField = value;
-                this.RaisePropertyChanged("id_evento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int valoracionEvento {
-            get {
-                return this.valoracionEventoField;
-            }
-            set {
-                this.valoracionEventoField = value;
-                this.RaisePropertyChanged("valoracionEvento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int valoracionPonentes {
-            get {
-                return this.valoracionPonentesField;
-            }
-            set {
-                this.valoracionPonentesField = value;
-                this.RaisePropertyChanged("valoracionPonentes");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public int valoracionUtilidad {
-            get {
-                return this.valoracionUtilidadField;
-            }
-            set {
-                this.valoracionUtilidadField = value;
-                this.RaisePropertyChanged("valoracionUtilidad");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class date : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class categoriaEvento : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool activoField;
-        
-        private int id_categoriaField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_categoria {
-            get {
-                return this.id_categoriaField;
-            }
-            set {
-                this.id_categoriaField = value;
-                this.RaisePropertyChanged("id_categoria");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
     }
     
     /// <remarks/>
@@ -919,13 +488,13 @@ namespace ProyectoOOIA.GestionEventoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class coordinador : miembroPUCP {
+    public partial class categoriaEvento : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool activoField;
         
-        private int id_coordinadorField;
+        private int id_categoriaField;
         
-        private string rolField;
+        private string nombreField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -941,25 +510,405 @@ namespace ProyectoOOIA.GestionEventoWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_coordinador {
+        public int id_categoria {
             get {
-                return this.id_coordinadorField;
+                return this.id_categoriaField;
             }
             set {
-                this.id_coordinadorField = value;
-                this.RaisePropertyChanged("id_coordinador");
+                this.id_categoriaField = value;
+                this.RaisePropertyChanged("id_categoria");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string rol {
+        public string nombre {
             get {
-                return this.rolField;
+                return this.nombreField;
             }
             set {
-                this.rolField = value;
-                this.RaisePropertyChanged("rol");
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class eventoAlumno : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool asistioField;
+        
+        private string comentarioField;
+        
+        private int id_alumnoField;
+        
+        private int id_encuestaField;
+        
+        private int id_eventoField;
+        
+        private int valoracionEventoField;
+        
+        private int valoracionPonentesField;
+        
+        private int valoracionUtilidadField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool asistio {
+            get {
+                return this.asistioField;
+            }
+            set {
+                this.asistioField = value;
+                this.RaisePropertyChanged("asistio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string comentario {
+            get {
+                return this.comentarioField;
+            }
+            set {
+                this.comentarioField = value;
+                this.RaisePropertyChanged("comentario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id_alumno {
+            get {
+                return this.id_alumnoField;
+            }
+            set {
+                this.id_alumnoField = value;
+                this.RaisePropertyChanged("id_alumno");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int id_encuesta {
+            get {
+                return this.id_encuestaField;
+            }
+            set {
+                this.id_encuestaField = value;
+                this.RaisePropertyChanged("id_encuesta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_evento {
+            get {
+                return this.id_eventoField;
+            }
+            set {
+                this.id_eventoField = value;
+                this.RaisePropertyChanged("id_evento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int valoracionEvento {
+            get {
+                return this.valoracionEventoField;
+            }
+            set {
+                this.valoracionEventoField = value;
+                this.RaisePropertyChanged("valoracionEvento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int valoracionPonentes {
+            get {
+                return this.valoracionPonentesField;
+            }
+            set {
+                this.valoracionPonentesField = value;
+                this.RaisePropertyChanged("valoracionPonentes");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int valoracionUtilidad {
+            get {
+                return this.valoracionUtilidadField;
+            }
+            set {
+                this.valoracionUtilidadField = value;
+                this.RaisePropertyChanged("valoracionUtilidad");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class date : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroExterno))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public abstract partial class persona : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string correoField;
+        
+        private string direccionField;
+        
+        private string dniField;
+        
+        private System.DateTime fecha_nacimientoField;
+        
+        private bool fecha_nacimientoFieldSpecified;
+        
+        private int id_personaField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string correo {
+            get {
+                return this.correoField;
+            }
+            set {
+                this.correoField = value;
+                this.RaisePropertyChanged("correo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string direccion {
+            get {
+                return this.direccionField;
+            }
+            set {
+                this.direccionField = value;
+                this.RaisePropertyChanged("direccion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string dni {
+            get {
+                return this.dniField;
+            }
+            set {
+                this.dniField = value;
+                this.RaisePropertyChanged("dni");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime fecha_nacimiento {
+            get {
+                return this.fecha_nacimientoField;
+            }
+            set {
+                this.fecha_nacimientoField = value;
+                this.RaisePropertyChanged("fecha_nacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fecha_nacimientoSpecified {
+            get {
+                return this.fecha_nacimientoFieldSpecified;
+            }
+            set {
+                this.fecha_nacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fecha_nacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_persona {
+            get {
+                return this.id_personaField;
+            }
+            set {
+                this.id_personaField = value;
+                this.RaisePropertyChanged("id_persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public abstract partial class miembroExterno : persona {
+        
+        private int id_miembro_externoField;
+        
+        private string ocupacionField;
+        
+        private string telefonoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id_miembro_externo {
+            get {
+                return this.id_miembro_externoField;
+            }
+            set {
+                this.id_miembro_externoField = value;
+                this.RaisePropertyChanged("id_miembro_externo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string ocupacion {
+            get {
+                return this.ocupacionField;
+            }
+            set {
+                this.ocupacionField = value;
+                this.RaisePropertyChanged("ocupacion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("telefono");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class ponente : miembroExterno {
+        
+        private bool activoField;
+        
+        private int id_ponenteField;
+        
+        private string organizacionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_ponente {
+            get {
+                return this.id_ponenteField;
+            }
+            set {
+                this.id_ponenteField = value;
+                this.RaisePropertyChanged("id_ponente");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string organizacion {
+            get {
+                return this.organizacionField;
+            }
+            set {
+                this.organizacionField = value;
+                this.RaisePropertyChanged("organizacion");
             }
         }
     }
@@ -971,7 +920,7 @@ namespace ProyectoOOIA.GestionEventoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public abstract partial class miembroPUCP : persona {
+    public partial class miembroPUCP : persona {
         
         private System.DateTime fecha_inclusionField;
         
@@ -1058,338 +1007,89 @@ namespace ProyectoOOIA.GestionEventoWS {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class coordinador : miembroPUCP {
+        
+        private bool activoField;
+        
+        private int id_coordinadorField;
+        
+        private string rolField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_coordinador {
+            get {
+                return this.id_coordinadorField;
+            }
+            set {
+                this.id_coordinadorField = value;
+                this.RaisePropertyChanged("id_coordinador");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string rol {
+            get {
+                return this.rolField;
+            }
+            set {
+                this.rolField = value;
+                this.RaisePropertyChanged("rol");
+            }
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonenteXEvento", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarPonenteXEventoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEvento", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertarEventoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_evento;
+        public ProyectoOOIA.GestionEventoWS.evento evento;
         
-        public listarPonenteXEventoRequest() {
+        public insertarEventoRequest() {
         }
         
-        public listarPonenteXEventoRequest(int id_evento) {
-            this.id_evento = id_evento;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonenteXEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarPonenteXEventoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.ponente[] @return;
-        
-        public listarPonenteXEventoResponse() {
-        }
-        
-        public listarPonenteXEventoResponse(ProyectoOOIA.GestionEventoWS.ponente[] @return) {
-            this.@return = @return;
+        public insertarEventoRequest(ProyectoOOIA.GestionEventoWS.evento evento) {
+            this.evento = evento;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_eventos_pasados", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listar_eventos_pasadosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_alumno;
-        
-        public listar_eventos_pasadosRequest() {
-        }
-        
-        public listar_eventos_pasadosRequest(int id_alumno) {
-            this.id_alumno = id_alumno;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_eventos_pasadosResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listar_eventos_pasadosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.evento[] @return;
-        
-        public listar_eventos_pasadosResponse() {
-        }
-        
-        public listar_eventos_pasadosResponse(ProyectoOOIA.GestionEventoWS.evento[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_tres_eventos_proximos", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listar_tres_eventos_proximosRequest {
-        
-        public listar_tres_eventos_proximosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_tres_eventos_proximosResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listar_tres_eventos_proximosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.evento[] @return;
-        
-        public listar_tres_eventos_proximosResponse() {
-        }
-        
-        public listar_tres_eventos_proximosResponse(ProyectoOOIA.GestionEventoWS.evento[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_eventos_inscritos", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listar_eventos_inscritosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_alumno;
-        
-        public listar_eventos_inscritosRequest() {
-        }
-        
-        public listar_eventos_inscritosRequest(int id_alumno) {
-            this.id_alumno = id_alumno;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_eventos_inscritosResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listar_eventos_inscritosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.evento[] @return;
-        
-        public listar_eventos_inscritosResponse() {
-        }
-        
-        public listar_eventos_inscritosResponse(ProyectoOOIA.GestionEventoWS.evento[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvento_por_fecha", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarEvento_por_fechaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.date fecha;
-        
-        public listarEvento_por_fechaRequest() {
-        }
-        
-        public listarEvento_por_fechaRequest(ProyectoOOIA.GestionEventoWS.date fecha) {
-            this.fecha = fecha;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvento_por_fechaResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarEvento_por_fechaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.evento[] @return;
-        
-        public listarEvento_por_fechaResponse() {
-        }
-        
-        public listarEvento_por_fechaResponse(ProyectoOOIA.GestionEventoWS.evento[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCategoriaEvento", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCategoriaEventoRequest {
-        
-        public listarCategoriaEventoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCategoriaEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCategoriaEventoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.categoriaEvento[] @return;
-        
-        public listarCategoriaEventoResponse() {
-        }
-        
-        public listarCategoriaEventoResponse(ProyectoOOIA.GestionEventoWS.categoriaEvento[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCoordinadorEvento", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCoordinadorEventoRequest {
-        
-        public listarCoordinadorEventoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCoordinadorEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCoordinadorEventoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.coordinador[] @return;
-        
-        public listarCoordinadorEventoResponse() {
-        }
-        
-        public listarCoordinadorEventoResponse(ProyectoOOIA.GestionEventoWS.coordinador[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCategoriaEvento", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class modificarCategoriaEventoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.categoriaEvento categoria;
-        
-        public modificarCategoriaEventoRequest() {
-        }
-        
-        public modificarCategoriaEventoRequest(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
-            this.categoria = categoria;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCategoriaEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class modificarCategoriaEventoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertarEventoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarCategoriaEventoResponse() {
+        public insertarEventoResponse() {
         }
         
-        public modificarCategoriaEventoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCategoriaEvento", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarCategoriaEventoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.categoriaEvento categoria;
-        
-        public insertarCategoriaEventoRequest() {
-        }
-        
-        public insertarCategoriaEventoRequest(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
-            this.categoria = categoria;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCategoriaEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarCategoriaEventoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarCategoriaEventoResponse() {
-        }
-        
-        public insertarCategoriaEventoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCategoriaEvento", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class eliminarCategoriaEventoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.categoriaEvento categoria;
-        
-        public eliminarCategoriaEventoRequest() {
-        }
-        
-        public eliminarCategoriaEventoRequest(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
-            this.categoria = categoria;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCategoriaEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class eliminarCategoriaEventoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarCategoriaEventoResponse() {
-        }
-        
-        public eliminarCategoriaEventoResponse(int @return) {
+        public insertarEventoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1469,35 +1169,35 @@ namespace ProyectoOOIA.GestionEventoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEvento", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarEventoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_eventos_inscritos", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listar_eventos_inscritosRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.evento evento;
+        public int id_alumno;
         
-        public insertarEventoRequest() {
+        public listar_eventos_inscritosRequest() {
         }
         
-        public insertarEventoRequest(ProyectoOOIA.GestionEventoWS.evento evento) {
-            this.evento = evento;
+        public listar_eventos_inscritosRequest(int id_alumno) {
+            this.id_alumno = id_alumno;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarEventoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_eventos_inscritosResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listar_eventos_inscritosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.evento[] @return;
         
-        public insertarEventoResponse() {
+        public listar_eventos_inscritosResponse() {
         }
         
-        public insertarEventoResponse(int @return) {
+        public listar_eventos_inscritosResponse(ProyectoOOIA.GestionEventoWS.evento[] @return) {
             this.@return = @return;
         }
     }
@@ -1505,35 +1205,99 @@ namespace ProyectoOOIA.GestionEventoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEncuestaEvento", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class eliminarEncuestaEventoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_eventos_pasados", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listar_eventos_pasadosRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl;
+        public int id_alumno;
         
-        public eliminarEncuestaEventoRequest() {
+        public listar_eventos_pasadosRequest() {
         }
         
-        public eliminarEncuestaEventoRequest(ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl) {
-            this.eventoAl = eventoAl;
+        public listar_eventos_pasadosRequest(int id_alumno) {
+            this.id_alumno = id_alumno;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEncuestaEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class eliminarEncuestaEventoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_eventos_pasadosResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listar_eventos_pasadosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.evento[] @return;
+        
+        public listar_eventos_pasadosResponse() {
+        }
+        
+        public listar_eventos_pasadosResponse(ProyectoOOIA.GestionEventoWS.evento[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_tres_eventos_proximos", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listar_tres_eventos_proximosRequest {
+        
+        public listar_tres_eventos_proximosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_tres_eventos_proximosResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listar_tres_eventos_proximosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.evento[] @return;
+        
+        public listar_tres_eventos_proximosResponse() {
+        }
+        
+        public listar_tres_eventos_proximosResponse(ProyectoOOIA.GestionEventoWS.evento[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvento_por_fecha", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarEvento_por_fechaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public ProyectoOOIA.GestionEventoWS.date fecha;
         
-        public eliminarEncuestaEventoResponse() {
+        public listarEvento_por_fechaRequest() {
         }
         
-        public eliminarEncuestaEventoResponse(int @return) {
+        public listarEvento_por_fechaRequest(ProyectoOOIA.GestionEventoWS.date fecha) {
+            this.fecha = fecha;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvento_por_fechaResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarEvento_por_fechaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.evento[] @return;
+        
+        public listarEvento_por_fechaResponse() {
+        }
+        
+        public listarEvento_por_fechaResponse(ProyectoOOIA.GestionEventoWS.evento[] @return) {
             this.@return = @return;
         }
     }
@@ -1569,35 +1333,35 @@ namespace ProyectoOOIA.GestionEventoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCoordinadorEvento", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class modificarCoordinadorEventoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEncuestaEvento", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertarEncuestaEventoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.coordinador coordinador;
+        public ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl;
         
-        public modificarCoordinadorEventoRequest() {
+        public insertarEncuestaEventoRequest() {
         }
         
-        public modificarCoordinadorEventoRequest(ProyectoOOIA.GestionEventoWS.coordinador coordinador) {
-            this.coordinador = coordinador;
+        public insertarEncuestaEventoRequest(ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl) {
+            this.eventoAl = eventoAl;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCoordinadorEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class modificarCoordinadorEventoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEncuestaEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertarEncuestaEventoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarCoordinadorEventoResponse() {
+        public insertarEncuestaEventoResponse() {
         }
         
-        public modificarCoordinadorEventoResponse(int @return) {
+        public insertarEncuestaEventoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1641,6 +1405,70 @@ namespace ProyectoOOIA.GestionEventoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEncuestaEvento", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class eliminarEncuestaEventoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl;
+        
+        public eliminarEncuestaEventoRequest() {
+        }
+        
+        public eliminarEncuestaEventoRequest(ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl) {
+            this.eventoAl = eventoAl;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEncuestaEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class eliminarEncuestaEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarEncuestaEventoResponse() {
+        }
+        
+        public eliminarEncuestaEventoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCoordinadorEvento", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCoordinadorEventoRequest {
+        
+        public listarCoordinadorEventoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCoordinadorEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCoordinadorEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.coordinador[] @return;
+        
+        public listarCoordinadorEventoResponse() {
+        }
+        
+        public listarCoordinadorEventoResponse(ProyectoOOIA.GestionEventoWS.coordinador[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCoordinadorEvento", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class insertarCoordinadorEventoRequest {
         
@@ -1677,35 +1505,207 @@ namespace ProyectoOOIA.GestionEventoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEncuestaEvento", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarEncuestaEventoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCategoriaEvento", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCategoriaEventoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl;
-        
-        public insertarEncuestaEventoRequest() {
-        }
-        
-        public insertarEncuestaEventoRequest(ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl) {
-            this.eventoAl = eventoAl;
+        public listarCategoriaEventoRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEncuestaEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarEncuestaEventoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCategoriaEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCategoriaEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.categoriaEvento[] @return;
+        
+        public listarCategoriaEventoResponse() {
+        }
+        
+        public listarCategoriaEventoResponse(ProyectoOOIA.GestionEventoWS.categoriaEvento[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCategoriaEvento", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertarCategoriaEventoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.categoriaEvento categoria;
+        
+        public insertarCategoriaEventoRequest() {
+        }
+        
+        public insertarCategoriaEventoRequest(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
+            this.categoria = categoria;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCategoriaEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertarCategoriaEventoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarEncuestaEventoResponse() {
+        public insertarCategoriaEventoResponse() {
         }
         
-        public insertarEncuestaEventoResponse(int @return) {
+        public insertarCategoriaEventoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCategoriaEvento", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarCategoriaEventoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.categoriaEvento categoria;
+        
+        public modificarCategoriaEventoRequest() {
+        }
+        
+        public modificarCategoriaEventoRequest(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
+            this.categoria = categoria;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCategoriaEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarCategoriaEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarCategoriaEventoResponse() {
+        }
+        
+        public modificarCategoriaEventoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCategoriaEvento", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class eliminarCategoriaEventoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.categoriaEvento categoria;
+        
+        public eliminarCategoriaEventoRequest() {
+        }
+        
+        public eliminarCategoriaEventoRequest(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
+            this.categoria = categoria;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCategoriaEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class eliminarCategoriaEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarCategoriaEventoResponse() {
+        }
+        
+        public eliminarCategoriaEventoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonenteXEvento", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarPonenteXEventoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_evento;
+        
+        public listarPonenteXEventoRequest() {
+        }
+        
+        public listarPonenteXEventoRequest(int id_evento) {
+            this.id_evento = id_evento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonenteXEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarPonenteXEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.ponente[] @return;
+        
+        public listarPonenteXEventoResponse() {
+        }
+        
+        public listarPonenteXEventoResponse(ProyectoOOIA.GestionEventoWS.ponente[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCoordinadorEvento", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarCoordinadorEventoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionEventoWS.coordinador coordinador;
+        
+        public modificarCoordinadorEventoRequest() {
+        }
+        
+        public modificarCoordinadorEventoRequest(ProyectoOOIA.GestionEventoWS.coordinador coordinador) {
+            this.coordinador = coordinador;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCoordinadorEventoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarCoordinadorEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarCoordinadorEventoResponse() {
+        }
+        
+        public modificarCoordinadorEventoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1810,227 +1810,26 @@ namespace ProyectoOOIA.GestionEventoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarPonenteXEvento(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request) {
-            return base.Channel.listarPonenteXEvento(request);
+        ProyectoOOIA.GestionEventoWS.insertarEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.insertarEvento(ProyectoOOIA.GestionEventoWS.insertarEventoRequest request) {
+            return base.Channel.insertarEvento(request);
         }
         
-        public ProyectoOOIA.GestionEventoWS.ponente[] listarPonenteXEvento(int id_evento) {
-            ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest();
-            inValue.id_evento = id_evento;
-            ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarPonenteXEvento(inValue);
+        public int insertarEvento(ProyectoOOIA.GestionEventoWS.evento evento) {
+            ProyectoOOIA.GestionEventoWS.insertarEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.insertarEventoRequest();
+            inValue.evento = evento;
+            ProyectoOOIA.GestionEventoWS.insertarEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).insertarEvento(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarPonenteXEventoAsync(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request) {
-            return base.Channel.listarPonenteXEventoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.insertarEventoAsync(ProyectoOOIA.GestionEventoWS.insertarEventoRequest request) {
+            return base.Channel.insertarEventoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse> listarPonenteXEventoAsync(int id_evento) {
-            ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest();
-            inValue.id_evento = id_evento;
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarPonenteXEventoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_eventos_pasados(ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest request) {
-            return base.Channel.listar_eventos_pasados(request);
-        }
-        
-        public ProyectoOOIA.GestionEventoWS.evento[] listar_eventos_pasados(int id_alumno) {
-            ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest();
-            inValue.id_alumno = id_alumno;
-            ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_eventos_pasados(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_eventos_pasadosAsync(ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest request) {
-            return base.Channel.listar_eventos_pasadosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosResponse> listar_eventos_pasadosAsync(int id_alumno) {
-            ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest();
-            inValue.id_alumno = id_alumno;
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_eventos_pasadosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_tres_eventos_proximos(ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest request) {
-            return base.Channel.listar_tres_eventos_proximos(request);
-        }
-        
-        public ProyectoOOIA.GestionEventoWS.evento[] listar_tres_eventos_proximos() {
-            ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest();
-            ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_tres_eventos_proximos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_tres_eventos_proximosAsync(ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest request) {
-            return base.Channel.listar_tres_eventos_proximosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse> listar_tres_eventos_proximosAsync() {
-            ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest();
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_tres_eventos_proximosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_eventos_inscritos(ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest request) {
-            return base.Channel.listar_eventos_inscritos(request);
-        }
-        
-        public ProyectoOOIA.GestionEventoWS.evento[] listar_eventos_inscritos(int id_alumno) {
-            ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest();
-            inValue.id_alumno = id_alumno;
-            ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_eventos_inscritos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_eventos_inscritosAsync(ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest request) {
-            return base.Channel.listar_eventos_inscritosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosResponse> listar_eventos_inscritosAsync(int id_alumno) {
-            ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest();
-            inValue.id_alumno = id_alumno;
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_eventos_inscritosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarEvento_por_fecha(ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest request) {
-            return base.Channel.listarEvento_por_fecha(request);
-        }
-        
-        public ProyectoOOIA.GestionEventoWS.evento[] listarEvento_por_fecha(ProyectoOOIA.GestionEventoWS.date fecha) {
-            ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest inValue = new ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest();
-            inValue.fecha = fecha;
-            ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarEvento_por_fecha(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarEvento_por_fechaAsync(ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest request) {
-            return base.Channel.listarEvento_por_fechaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaResponse> listarEvento_por_fechaAsync(ProyectoOOIA.GestionEventoWS.date fecha) {
-            ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest inValue = new ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest();
-            inValue.fecha = fecha;
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarEvento_por_fechaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarCategoriaEvento(ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest request) {
-            return base.Channel.listarCategoriaEvento(request);
-        }
-        
-        public ProyectoOOIA.GestionEventoWS.categoriaEvento[] listarCategoriaEvento() {
-            ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest();
-            ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarCategoriaEvento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest request) {
-            return base.Channel.listarCategoriaEventoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse> listarCategoriaEventoAsync() {
-            ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest();
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarCategoriaEventoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarCoordinadorEvento(ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest request) {
-            return base.Channel.listarCoordinadorEvento(request);
-        }
-        
-        public ProyectoOOIA.GestionEventoWS.coordinador[] listarCoordinadorEvento() {
-            ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest();
-            ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarCoordinadorEvento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarCoordinadorEventoAsync(ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest request) {
-            return base.Channel.listarCoordinadorEventoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse> listarCoordinadorEventoAsync() {
-            ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest();
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarCoordinadorEventoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.modificarCategoriaEvento(ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest request) {
-            return base.Channel.modificarCategoriaEvento(request);
-        }
-        
-        public int modificarCategoriaEvento(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
-            ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest();
-            inValue.categoria = categoria;
-            ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).modificarCategoriaEvento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.modificarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest request) {
-            return base.Channel.modificarCategoriaEventoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse> modificarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
-            ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest();
-            inValue.categoria = categoria;
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).modificarCategoriaEventoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.insertarCategoriaEvento(ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest request) {
-            return base.Channel.insertarCategoriaEvento(request);
-        }
-        
-        public int insertarCategoriaEvento(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
-            ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest();
-            inValue.categoria = categoria;
-            ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).insertarCategoriaEvento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.insertarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest request) {
-            return base.Channel.insertarCategoriaEventoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoResponse> insertarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
-            ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest();
-            inValue.categoria = categoria;
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).insertarCategoriaEventoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.eliminarCategoriaEvento(ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest request) {
-            return base.Channel.eliminarCategoriaEvento(request);
-        }
-        
-        public int eliminarCategoriaEvento(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
-            ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest();
-            inValue.categoria = categoria;
-            ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).eliminarCategoriaEvento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.eliminarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest request) {
-            return base.Channel.eliminarCategoriaEventoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoResponse> eliminarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
-            ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest();
-            inValue.categoria = categoria;
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).eliminarCategoriaEventoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarEventoResponse> insertarEventoAsync(ProyectoOOIA.GestionEventoWS.evento evento) {
+            ProyectoOOIA.GestionEventoWS.insertarEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.insertarEventoRequest();
+            inValue.evento = evento;
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).insertarEventoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2080,49 +1879,93 @@ namespace ProyectoOOIA.GestionEventoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.insertarEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.insertarEvento(ProyectoOOIA.GestionEventoWS.insertarEventoRequest request) {
-            return base.Channel.insertarEvento(request);
+        ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_eventos_inscritos(ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest request) {
+            return base.Channel.listar_eventos_inscritos(request);
         }
         
-        public int insertarEvento(ProyectoOOIA.GestionEventoWS.evento evento) {
-            ProyectoOOIA.GestionEventoWS.insertarEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.insertarEventoRequest();
-            inValue.evento = evento;
-            ProyectoOOIA.GestionEventoWS.insertarEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).insertarEvento(inValue);
+        public ProyectoOOIA.GestionEventoWS.evento[] listar_eventos_inscritos(int id_alumno) {
+            ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest();
+            inValue.id_alumno = id_alumno;
+            ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_eventos_inscritos(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.insertarEventoAsync(ProyectoOOIA.GestionEventoWS.insertarEventoRequest request) {
-            return base.Channel.insertarEventoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_eventos_inscritosAsync(ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest request) {
+            return base.Channel.listar_eventos_inscritosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarEventoResponse> insertarEventoAsync(ProyectoOOIA.GestionEventoWS.evento evento) {
-            ProyectoOOIA.GestionEventoWS.insertarEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.insertarEventoRequest();
-            inValue.evento = evento;
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).insertarEventoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosResponse> listar_eventos_inscritosAsync(int id_alumno) {
+            ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_eventos_inscritosRequest();
+            inValue.id_alumno = id_alumno;
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_eventos_inscritosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.eliminarEncuestaEvento(ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest request) {
-            return base.Channel.eliminarEncuestaEvento(request);
+        ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_eventos_pasados(ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest request) {
+            return base.Channel.listar_eventos_pasados(request);
         }
         
-        public int eliminarEncuestaEvento(ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl) {
-            ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest();
-            inValue.eventoAl = eventoAl;
-            ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).eliminarEncuestaEvento(inValue);
+        public ProyectoOOIA.GestionEventoWS.evento[] listar_eventos_pasados(int id_alumno) {
+            ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest();
+            inValue.id_alumno = id_alumno;
+            ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_eventos_pasados(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.eliminarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest request) {
-            return base.Channel.eliminarEncuestaEventoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_eventos_pasadosAsync(ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest request) {
+            return base.Channel.listar_eventos_pasadosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoResponse> eliminarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl) {
-            ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest();
-            inValue.eventoAl = eventoAl;
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).eliminarEncuestaEventoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosResponse> listar_eventos_pasadosAsync(int id_alumno) {
+            ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_eventos_pasadosRequest();
+            inValue.id_alumno = id_alumno;
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_eventos_pasadosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_tres_eventos_proximos(ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest request) {
+            return base.Channel.listar_tres_eventos_proximos(request);
+        }
+        
+        public ProyectoOOIA.GestionEventoWS.evento[] listar_tres_eventos_proximos() {
+            ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest();
+            ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_tres_eventos_proximos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listar_tres_eventos_proximosAsync(ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest request) {
+            return base.Channel.listar_tres_eventos_proximosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosResponse> listar_tres_eventos_proximosAsync() {
+            ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest inValue = new ProyectoOOIA.GestionEventoWS.listar_tres_eventos_proximosRequest();
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listar_tres_eventos_proximosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarEvento_por_fecha(ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest request) {
+            return base.Channel.listarEvento_por_fecha(request);
+        }
+        
+        public ProyectoOOIA.GestionEventoWS.evento[] listarEvento_por_fecha(ProyectoOOIA.GestionEventoWS.date fecha) {
+            ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest inValue = new ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest();
+            inValue.fecha = fecha;
+            ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarEvento_por_fecha(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarEvento_por_fechaAsync(ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest request) {
+            return base.Channel.listarEvento_por_fechaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaResponse> listarEvento_por_fechaAsync(ProyectoOOIA.GestionEventoWS.date fecha) {
+            ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest inValue = new ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaRequest();
+            inValue.fecha = fecha;
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarEvento_por_fechaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2147,26 +1990,26 @@ namespace ProyectoOOIA.GestionEventoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.modificarCoordinadorEvento(ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest request) {
-            return base.Channel.modificarCoordinadorEvento(request);
+        ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.insertarEncuestaEvento(ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest request) {
+            return base.Channel.insertarEncuestaEvento(request);
         }
         
-        public int modificarCoordinadorEvento(ProyectoOOIA.GestionEventoWS.coordinador coordinador) {
-            ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest();
-            inValue.coordinador = coordinador;
-            ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).modificarCoordinadorEvento(inValue);
+        public int insertarEncuestaEvento(ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl) {
+            ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest();
+            inValue.eventoAl = eventoAl;
+            ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).insertarEncuestaEvento(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.modificarCoordinadorEventoAsync(ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest request) {
-            return base.Channel.modificarCoordinadorEventoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.insertarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest request) {
+            return base.Channel.insertarEncuestaEventoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoResponse> modificarCoordinadorEventoAsync(ProyectoOOIA.GestionEventoWS.coordinador coordinador) {
-            ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest();
-            inValue.coordinador = coordinador;
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).modificarCoordinadorEventoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoResponse> insertarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl) {
+            ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest();
+            inValue.eventoAl = eventoAl;
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).insertarEncuestaEventoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2193,6 +2036,50 @@ namespace ProyectoOOIA.GestionEventoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.eliminarEncuestaEvento(ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest request) {
+            return base.Channel.eliminarEncuestaEvento(request);
+        }
+        
+        public int eliminarEncuestaEvento(ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl) {
+            ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest();
+            inValue.eventoAl = eventoAl;
+            ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).eliminarEncuestaEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.eliminarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest request) {
+            return base.Channel.eliminarEncuestaEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoResponse> eliminarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl) {
+            ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoRequest();
+            inValue.eventoAl = eventoAl;
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).eliminarEncuestaEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarCoordinadorEvento(ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest request) {
+            return base.Channel.listarCoordinadorEvento(request);
+        }
+        
+        public ProyectoOOIA.GestionEventoWS.coordinador[] listarCoordinadorEvento() {
+            ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest();
+            ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarCoordinadorEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarCoordinadorEventoAsync(ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest request) {
+            return base.Channel.listarCoordinadorEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse> listarCoordinadorEventoAsync() {
+            ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest();
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarCoordinadorEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.GestionEventoWS.insertarCoordinadorEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.insertarCoordinadorEvento(ProyectoOOIA.GestionEventoWS.insertarCoordinadorEventoRequest request) {
             return base.Channel.insertarCoordinadorEvento(request);
         }
@@ -2216,26 +2103,139 @@ namespace ProyectoOOIA.GestionEventoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.insertarEncuestaEvento(ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest request) {
-            return base.Channel.insertarEncuestaEvento(request);
+        ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarCategoriaEvento(ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest request) {
+            return base.Channel.listarCategoriaEvento(request);
         }
         
-        public int insertarEncuestaEvento(ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl) {
-            ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest();
-            inValue.eventoAl = eventoAl;
-            ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).insertarEncuestaEvento(inValue);
+        public ProyectoOOIA.GestionEventoWS.categoriaEvento[] listarCategoriaEvento() {
+            ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest();
+            ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarCategoriaEvento(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.insertarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest request) {
-            return base.Channel.insertarEncuestaEventoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest request) {
+            return base.Channel.listarCategoriaEventoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoResponse> insertarEncuestaEventoAsync(ProyectoOOIA.GestionEventoWS.eventoAlumno eventoAl) {
-            ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoRequest();
-            inValue.eventoAl = eventoAl;
-            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).insertarEncuestaEventoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse> listarCategoriaEventoAsync() {
+            ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarCategoriaEventoRequest();
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarCategoriaEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.insertarCategoriaEvento(ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest request) {
+            return base.Channel.insertarCategoriaEvento(request);
+        }
+        
+        public int insertarCategoriaEvento(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
+            ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest();
+            inValue.categoria = categoria;
+            ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).insertarCategoriaEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.insertarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest request) {
+            return base.Channel.insertarCategoriaEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoResponse> insertarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
+            ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.insertarCategoriaEventoRequest();
+            inValue.categoria = categoria;
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).insertarCategoriaEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.modificarCategoriaEvento(ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest request) {
+            return base.Channel.modificarCategoriaEvento(request);
+        }
+        
+        public int modificarCategoriaEvento(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
+            ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest();
+            inValue.categoria = categoria;
+            ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).modificarCategoriaEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.modificarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest request) {
+            return base.Channel.modificarCategoriaEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse> modificarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
+            ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoRequest();
+            inValue.categoria = categoria;
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).modificarCategoriaEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.eliminarCategoriaEvento(ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest request) {
+            return base.Channel.eliminarCategoriaEvento(request);
+        }
+        
+        public int eliminarCategoriaEvento(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
+            ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest();
+            inValue.categoria = categoria;
+            ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).eliminarCategoriaEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.eliminarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest request) {
+            return base.Channel.eliminarCategoriaEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoResponse> eliminarCategoriaEventoAsync(ProyectoOOIA.GestionEventoWS.categoriaEvento categoria) {
+            ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.eliminarCategoriaEventoRequest();
+            inValue.categoria = categoria;
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).eliminarCategoriaEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarPonenteXEvento(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request) {
+            return base.Channel.listarPonenteXEvento(request);
+        }
+        
+        public ProyectoOOIA.GestionEventoWS.ponente[] listarPonenteXEvento(int id_evento) {
+            ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest();
+            inValue.id_evento = id_evento;
+            ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarPonenteXEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.listarPonenteXEventoAsync(ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest request) {
+            return base.Channel.listarPonenteXEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarPonenteXEventoResponse> listarPonenteXEventoAsync(int id_evento) {
+            ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarPonenteXEventoRequest();
+            inValue.id_evento = id_evento;
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarPonenteXEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoResponse ProyectoOOIA.GestionEventoWS.GestionEventoWS.modificarCoordinadorEvento(ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest request) {
+            return base.Channel.modificarCoordinadorEvento(request);
+        }
+        
+        public int modificarCoordinadorEvento(ProyectoOOIA.GestionEventoWS.coordinador coordinador) {
+            ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest();
+            inValue.coordinador = coordinador;
+            ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).modificarCoordinadorEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoResponse> ProyectoOOIA.GestionEventoWS.GestionEventoWS.modificarCoordinadorEventoAsync(ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest request) {
+            return base.Channel.modificarCoordinadorEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoResponse> modificarCoordinadorEventoAsync(ProyectoOOIA.GestionEventoWS.coordinador coordinador) {
+            ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoRequest();
+            inValue.coordinador = coordinador;
+            return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).modificarCoordinadorEventoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
