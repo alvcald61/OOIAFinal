@@ -630,6 +630,7 @@ C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Proy
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmGestionarPonente.resources
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmGestionarProfesor.resources
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmGestionarPsicologo.resources
+C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmAccountSettings.resources
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVAlumnos.resources
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVProfesores.resources
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVPsicologos.resources
@@ -669,4 +670,3 @@ C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Proy
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
-C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmAccountSettings.resources
