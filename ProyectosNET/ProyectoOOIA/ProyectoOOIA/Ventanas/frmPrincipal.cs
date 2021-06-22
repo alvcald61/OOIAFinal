@@ -96,13 +96,6 @@ namespace ProyectoOOIA.Ventanas
 
         }
 
-
-
-        private void imagenes_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             indice++;
@@ -137,11 +130,6 @@ namespace ProyectoOOIA.Ventanas
 
         }
 
-        private void frmPrincipal_ClientSizeChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             lblUsername.Text = usuario.nombre;
@@ -157,11 +145,6 @@ namespace ProyectoOOIA.Ventanas
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void frmPrincipal_Load_1(object sender, EventArgs e)
         {
             frmPrincipal_Load(sender,e);
@@ -173,12 +156,12 @@ namespace ProyectoOOIA.Ventanas
             listaEventos =new BindingList<evento>(eventoDao.listar_tres_eventos_proximos());
             tarjeta1.iniciarComponentes(listaEventos[0].nombre,listaEventos[0].descripcion,listaEventos[0].fecha);
             tarjeta2.iniciarComponentes(listaEventos[1].nombre, listaEventos[1].descripcion, listaEventos[1].fecha);
-            tarjeta3.iniciarComponentes(listaEventos[2].nombre, listaEventos[2].descripcion, listaEventos[2].fecha);
+            //tarjeta3.iniciarComponentes(listaEventos[2].nombre, listaEventos[2].descripcion, listaEventos[2].fecha);
         }
 
-        private void tarjeta1_Click(object sender, EventArgs e)
+        private void btnAccountSettings_Click(object sender, EventArgs e)
         {
-            
+            new frmAccountSettings(tipo, usuario).ShowDialog();
         }
     }
 }

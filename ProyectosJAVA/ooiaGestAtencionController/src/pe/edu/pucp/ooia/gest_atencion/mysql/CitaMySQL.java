@@ -42,7 +42,7 @@ public class CitaMySQL implements CitaDAO{
                 cita.setId_cita(rs.getInt("id_cita"));
                 cita.setAlumno(new Alumno());
                 cita.setAlumno(obtenerAlumno(rs.getInt("fid_alumno")));
-                cita.setTipo_asesor(rs.getInt("id_tipo_asesor"));
+                cita.setTipo_asesor(rs.getInt("tipo_asesor"));
                 if(cita.getTipo_asesor() == 0){
                     cita.setAsesor(new Profesor());
                     cita.setAsesor(obtenerProfesor(rs.getInt("fid_asesor")));
@@ -87,7 +87,7 @@ public class CitaMySQL implements CitaDAO{
                 cita.setId_cita(rs.getInt("id_cita"));
                 cita.setAlumno(new Alumno());
                 cita.setAlumno(obtenerAlumno(rs.getInt("fid_alumno")));
-                cita.setTipo_asesor(rs.getInt("id_tipo_asesor"));
+                cita.setTipo_asesor(rs.getInt("tipo_asesor"));
                 if(cita.getTipo_asesor() == 0){
                     cita.setAsesor(new Profesor());
                     cita.setAsesor(obtenerProfesor(rs.getInt("fid_asesor")));
@@ -127,7 +127,7 @@ public class CitaMySQL implements CitaDAO{
            con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
           
-           cs = con.prepareCall("{call INSERTAR_CITA(?,?,?,?,?,?,?,?,?,?)}");
+           cs = con.prepareCall("{call INSERTAR_CITA(?,?,?,?,?,?,?,?,?)}");
            cs.registerOutParameter("_id_cita",java.sql.Types.INTEGER);
            /*Cita*/
            cs.setInt("_fid_alumno",cita.getAlumno().getId_alumno());
@@ -135,10 +135,10 @@ public class CitaMySQL implements CitaDAO{
            cs.setInt("_fid_asesor",cita.getAsesor().getId_miembro_pucp());
            cs.setInt("_fid_atencion",cita.getCodigo_atencion().getId_codigo_atencion());   
            cs.setInt("_fid_horario",cita.getHorario().getId_horario());
-           cs.setDate("_fecha",(Date) cita.getFecha());  
+           cs.setDate("_fecha",new Date (cita.getFecha().getTime()));  
            cs.setString("_motivo", cita.getMotivo());
            cs.setString("_compromiso", cita.getCompromiso());
-           cs.setBoolean("_asistio",cita.isAsistio());
+          
            cs.executeUpdate();
            cita.setId_cita(cs.getInt("_id_cita"));
            resultado=1;
@@ -170,7 +170,7 @@ public class CitaMySQL implements CitaDAO{
            cs.setInt("_fid_asesor",cita.getAsesor().getId_miembro_pucp());
            cs.setInt("_fid_atencion",cita.getCodigo_atencion().getId_codigo_atencion());   
            cs.setInt("_fid_horario",cita.getHorario().getId_horario());
-           cs.setDate("_fecha",(Date) cita.getFecha());  
+           cs.setDate("_fecha",new Date (cita.getFecha().getTime()));   
            cs.setString("_motivo", cita.getMotivo());
            cs.setString("_compromiso", cita.getCompromiso());
            cs.setBoolean("_asistio",cita.isAsistio());
