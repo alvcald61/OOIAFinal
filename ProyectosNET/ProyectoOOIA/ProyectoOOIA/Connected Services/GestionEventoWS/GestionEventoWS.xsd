@@ -91,7 +91,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="miembroPUCP" abstract="true">
+  <xs:complexType name="miembroPUCP">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:persona">
         <xs:sequence>
@@ -280,16 +280,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listar_eventos_inscritos">
-    <xs:sequence>
-      <xs:element name="id_alumno" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listar_eventos_inscritosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="eliminarEvento">
     <xs:sequence>
       <xs:element minOccurs="0" name="evento" type="tns:evento" />
@@ -298,6 +288,16 @@
   <xs:complexType name="eliminarEventoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listar_eventos_inscritos">
+    <xs:sequence>
+      <xs:element name="id_alumno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listar_eventos_inscritosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarCoordinadorEvento">

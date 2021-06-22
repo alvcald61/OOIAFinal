@@ -45,8 +45,8 @@ namespace ProyectoOOIA.Ventanas
             evento = new GestionEventoWS.evento();
             this.alumno=persona as GestionHumanaWS.alumno;
             eventoAlumno = new  EventoAlumnoWS.eventoAlumno();
-            listarHistorial();
-            listarEventosInscritos();
+           // listarHistorial();
+           // listarEventosInscritos();
 
     }
 

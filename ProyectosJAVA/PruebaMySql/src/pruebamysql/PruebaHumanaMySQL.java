@@ -45,8 +45,8 @@ public class PruebaHumanaMySQL {
         //listarHorario();
         //listarAlumno();
         //System.out.println(psicologos.get(0).getId_miembro_pucp());
-        //insertarCita();
-        listarCitas();
+        insertarCita();
+        //listarCitas();
         //insertarPsicologo();
         //listarPsicologo();
     }
@@ -74,19 +74,19 @@ public class PruebaHumanaMySQL {
         ArrayList<CodigoAtencion> codigos = new ArrayList<>();
         codigos = daoCodigo.listar();
         
-        
-        cita.setAlumno(alumnos.get(26)); //alumno con cuenta en visual
+        cita.setId_cita(2);
+        cita.setAlumno(alumnos.get(0)); //alumno con cuenta en visual
         cita.setAsesor(psicologos.get(1));
         cita.setTipo_asesor(1);
         cita.setHorario(horarios.get(0));
-        cita.setMotivo("No puedo organizarme con todos los cursos");
-        //cita.setAsistio(true);
-        cita.setCompromiso("");
+        cita.setMotivo("No puedo concentrarme en los cursos.");
+        cita.setAsistio(true);
+        cita.setCompromiso("Se comprometio a estudiar más.");
         cita.setCodigo_atencion(codigos.get(1));
         SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
-        cita.setFecha(format.parse("29-06-2021")); //cita pasada
+        cita.setFecha(format.parse("14-06-2021")); //cita pasada
         
-        int resultado = daoCita.insertar(cita);
+        int resultado = daoCita.modificar(cita);
         if(resultado !=0){
             System.out.println("Se registro la cita exitosamente"+ resultado);
         }else{
@@ -115,10 +115,10 @@ public class PruebaHumanaMySQL {
        
         Horario horario = new Horario();
        
-        horario.setDia(1);
+        horario.setDia(2);
         SimpleDateFormat format = new SimpleDateFormat("hh:mm");
-        horario.setHoraInicio(format.parse("10:30"));
-        horario.setHoraFin(format.parse("11:00"));
+        horario.setHoraInicio(format.parse("09:30"));
+        horario.setHoraFin(format.parse("10:00"));
         int resultado = daoHorario.insertar(horario);
         if(resultado !=0){
             System.out.println("Se registro el horario exitosamente"+ resultado);

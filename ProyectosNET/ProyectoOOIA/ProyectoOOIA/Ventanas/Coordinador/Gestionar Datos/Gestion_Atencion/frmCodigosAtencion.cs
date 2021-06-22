@@ -21,7 +21,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             daoCodigoAtencion = new CodigoAtencionWS.CodigoAtencionWSClient();
             dgvCodigosAtencion.AutoGenerateColumns = false;
 
-            listarCodigos();
+            //listarCodigos();
         }
 
         public void limpiar()
