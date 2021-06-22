@@ -201,7 +201,7 @@ namespace ProyectoOOIA.Ventanas
             dtpInicio.Value = evento.horaInicio;
             dtpFin.Value = evento.horaFin;
             cboCategoria.SelectedItem = evento.categoria;
-            
+            imagen = evento.imagen;
             npdCapacidad.Value = evento.capacidad;
             try
             {
@@ -411,6 +411,7 @@ namespace ProyectoOOIA.Ventanas
             frmMostrarPonentes mostrar = new frmMostrarPonentes();
             mostrar.ShowDialog();
             ponente = mostrar.Ponente;
+            if (ponente == null) return;
             //ponente = asignarPersona(mostrar.Ponente);
             txtNombrePonente.Text = ponente.nombre;
 
