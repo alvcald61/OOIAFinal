@@ -28,7 +28,7 @@ public class HorarioMySQL implements HorarioDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_HORARIOS()}");
+            cs = con.prepareCall("{call LISTAR_HORARIO()}");
             rs = cs.executeQuery();
             while(rs.next()){
                 Horario horario = new Horario();
@@ -62,8 +62,8 @@ public class HorarioMySQL implements HorarioDAO{
            cs = con.prepareCall("{call INSERTAR_HORARIO(?,?,?,?)}");
            cs.registerOutParameter("_id_horario",java.sql.Types.INTEGER);
            cs.setInt("_dia",horario.getDia());
-           cs.setTime("_hora_inicio", horario.getHoraInicio());
-           cs.setTime("_hora_fin",  horario.getHoraFin());
+           cs.setTime("_hora_inicio",new Time(horario.getHoraInicio().getTime()));
+           cs.setTime("_hora_fin",  new Time(horario.getHoraFin().getTime()));
            cs.executeUpdate();
            horario.setId_horario(cs.getInt("_id_horario"));
            resultado=1;
@@ -91,8 +91,8 @@ public class HorarioMySQL implements HorarioDAO{
            cs = con.prepareCall("{call MODIFICAR_HORARIO(?,?,?,?)}");
            cs.setInt("_id_horario",horario.getId_horario());
            cs.setInt("_dia",horario.getDia());
-           cs.setTime("_hora_inicio", horario.getHoraInicio());
-           cs.setTime("_hora_fin", horario.getHoraFin());
+           cs.setTime("_hora_inicio",new Time(horario.getHoraInicio().getTime()));
+           cs.setTime("_hora_fin",  new Time(horario.getHoraFin().getTime()));
            cs.executeUpdate();
            resultado=1;
            cs.close();
