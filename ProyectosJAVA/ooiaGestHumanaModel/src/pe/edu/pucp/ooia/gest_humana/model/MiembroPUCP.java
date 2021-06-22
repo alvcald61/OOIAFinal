@@ -3,7 +3,7 @@ package pe.edu.pucp.ooia.gest_humana.model;
 import java.util.Date;
 import pe.edu.pucp.interfaces.IConsultable;
 
-public abstract class MiembroPUCP extends Persona implements IConsultable{
+public class MiembroPUCP extends Persona implements IConsultable{
    private int id_miembro_pucp;
    private String usuario;
    private String password;
@@ -51,6 +51,11 @@ public abstract class MiembroPUCP extends Persona implements IConsultable{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String consultarDatos() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 

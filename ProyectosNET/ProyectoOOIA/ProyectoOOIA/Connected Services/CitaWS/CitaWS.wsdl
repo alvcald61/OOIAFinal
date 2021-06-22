@@ -11,17 +11,17 @@
   <message name="modificarCitaResponse">
     <part name="parameters" element="tns:modificarCitaResponse" />
   </message>
-  <message name="insertarCita">
-    <part name="parameters" element="tns:insertarCita" />
-  </message>
-  <message name="insertarCitaResponse">
-    <part name="parameters" element="tns:insertarCitaResponse" />
-  </message>
   <message name="eliminarCita">
     <part name="parameters" element="tns:eliminarCita" />
   </message>
   <message name="eliminarCitaResponse">
     <part name="parameters" element="tns:eliminarCitaResponse" />
+  </message>
+  <message name="insertarCita">
+    <part name="parameters" element="tns:insertarCita" />
+  </message>
+  <message name="insertarCitaResponse">
+    <part name="parameters" element="tns:insertarCitaResponse" />
   </message>
   <message name="listarCitaPendiente">
     <part name="parameters" element="tns:listarCitaPendiente" />
@@ -40,13 +40,13 @@
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/CitaWS/modificarCitaRequest" message="tns:modificarCita" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/CitaWS/modificarCitaResponse" message="tns:modificarCitaResponse" />
     </operation>
-    <operation name="insertarCita">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CitaWS/insertarCitaRequest" message="tns:insertarCita" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CitaWS/insertarCitaResponse" message="tns:insertarCitaResponse" />
-    </operation>
     <operation name="eliminarCita">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/CitaWS/eliminarCitaRequest" message="tns:eliminarCita" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/CitaWS/eliminarCitaResponse" message="tns:eliminarCitaResponse" />
+    </operation>
+    <operation name="insertarCita">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CitaWS/insertarCitaRequest" message="tns:insertarCita" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CitaWS/insertarCitaResponse" message="tns:insertarCitaResponse" />
     </operation>
     <operation name="listarCitaPendiente">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaPendienteRequest" message="tns:listarCitaPendiente" />
@@ -68,7 +68,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarCita">
+    <operation name="eliminarCita">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -77,7 +77,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarCita">
+    <operation name="insertarCita">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
