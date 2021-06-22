@@ -209,6 +209,7 @@ namespace ProyectoOOIA.Ventanas
             }
             catch (Exception exception)
             {
+                //exception.Message;
                 MessageBox.Show("Este evento no tiene imagen asociada", "Imagen",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             }
@@ -358,7 +359,7 @@ namespace ProyectoOOIA.Ventanas
             npdCapacidad.Value=1;
              dtpInicio.Value=DateTime.Now;
              dtpFin.Value = DateTime.Now;
-             cboCategoria.SelectedIndex = 0;
+             //cboCategoria.SelectedIndex = 0;
             txtLugar.Text="";
             txtDescripcion.Text="";
             pictureBox1.Image = null;

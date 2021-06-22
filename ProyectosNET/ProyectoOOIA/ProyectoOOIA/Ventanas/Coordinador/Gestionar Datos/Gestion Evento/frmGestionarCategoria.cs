@@ -36,9 +36,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
 
         public void mostrarEspecialidades()
         {
+            GestionEventoWS.categoriaEvento [] cat = daoCategoria.listarCategoriaEvento();
+            if (cat == null) return;
             BindingList<GestionEventoWS.categoriaEvento>
                 especialidades = new BindingList<GestionEventoWS.categoriaEvento>
-                (daoCategoria.listarCategoriaEvento().ToList());
+                (cat.ToList());
             dgvCategoria.DataSource = especialidades;
         }
 

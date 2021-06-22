@@ -3,23 +3,29 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using ProyectoOOIA.GestionAtencionWS;
+using ProyectoOOIA.GestionHumanaWS;
 
 namespace ProyectoOOIA.Ventanas
 {
     public partial class frmCitasAlumno : Form
     {
-        private CitaWS.CitaWSClient daoCita;
-        private HorarioWS.HorarioWSClient daoHorario;
-        private AlumnoWS.AlumnoWSClient daoAlumno;
+        private GestionAtencionWS.GestionAtencionWSClient daoCita;
+        private GestionAtencionWS.GestionAtencionWSClient daoHorario;
+        private GestionHumanaWS.GestionHumanaWSClient humanaDao;
         private Estado estado;
+        private GestionHumanaWS.miembroPUCP asesor;
         private GestionHumanaWS.persona persona;
         private GestionHumanaWS.alumno alumno;
+        
 
         public frmCitasAlumno()
         {
             InitializeComponent();
             this.estado = Estado.Inicial;
             cambiarEstado();
+            humanaDao = new GestionHumanaWSClient();
+            daoHorario = new GestionAtencionWSClient();
             //dgvCitasProgramadas.DataSource = 
 
             //esto hace que no se genere mas columnas de las que yo he definido en la interfaz grafica
@@ -47,7 +53,7 @@ namespace ProyectoOOIA.Ventanas
             tabCitasProgramadas.HorizontalScroll.Visible = false;
             tabCitasProgramadas.HorizontalScroll.Maximum = 0;
             tabCitasProgramadas.AutoScroll = true;
-            daoCita = new CitaWS.CitaWSClient();
+            daoCita = new GestionAtencionWS.GestionAtencionWSClient();
             this.alumno = persona as GestionHumanaWS.alumno;
             
             listarHistorial();
@@ -56,16 +62,18 @@ namespace ProyectoOOIA.Ventanas
 
         private void listarHistorial()
         {
-            BindingList<CitaWS.cita>
-               citasAlumnos = new BindingList<CitaWS.cita>
-               (daoCita.listarCitaHistorico(this.alumno.id_alumno).ToList());
+            GestionAtencionWS.cita[] aux=daoCita.listarCitaHistorico(this.alumno.id_alumno);
+            if (aux == null) return;
+            BindingList<GestionAtencionWS.cita>
+               citasAlumnos = new BindingList<GestionAtencionWS.cita>
+               (aux.ToList());
             dgvHistorialCitas.DataSource = citasAlumnos;
         }
 
         private void listarCitasProgramadas()
         {
-            BindingList<CitaWS.cita>
-               citasAlumnos = new BindingList<CitaWS.cita>
+            BindingList<GestionAtencionWS.cita>
+               citasAlumnos = new BindingList<GestionAtencionWS.cita>
                (daoCita.listarCitaPendiente(this.alumno.id_alumno).ToList());
             dgvCitasProgramadas.DataSource = citasAlumnos;
         }
@@ -228,7 +236,11 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBuscarAsesor_Click(object sender, EventArgs e)
         {
-            new frmListaTutores().Show();
+            frmListaTutores aux=new frmListaTutores();
+            aux.ShowDialog();
+            asesor = aux.Asesor;
+            if(asesor!=null)this.txtAsesor.Text = asesor.nombre;
+
         }
 
         private void btnBuscarHorario_Click(object sender, EventArgs e)

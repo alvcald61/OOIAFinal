@@ -57,6 +57,7 @@ namespace ProyectoOOIA.Ventanas.Alumno.Citas
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(230, 160);
             this.pnlDatos.TabIndex = 1;
+            this.pnlDatos.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDatos_Paint);
             // 
             // btnSeleccionar
             // 
@@ -67,7 +68,6 @@ namespace ProyectoOOIA.Ventanas.Alumno.Citas
             this.btnSeleccionar.TabIndex = 3;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // btnOpinion
             // 

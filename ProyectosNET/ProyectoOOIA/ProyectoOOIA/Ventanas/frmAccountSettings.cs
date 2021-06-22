@@ -47,8 +47,16 @@ namespace ProyectoOOIA.Ventanas
 
         public void displayImage(byte[] image)
         {
+         //   if (image == null) return;
             MemoryStream ms = new MemoryStream(image);
-            pbPerfil.Image = Image.FromStream(ms);
+            try
+            {
+                pbPerfil.Image = Image.FromStream(ms);
+            }
+            catch
+            {
+
+            }
         }
 
         public void displayData()

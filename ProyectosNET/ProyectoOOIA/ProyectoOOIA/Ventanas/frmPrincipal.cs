@@ -153,12 +153,18 @@ namespace ProyectoOOIA.Ventanas
 
         private void iniciarEventosProximos()
         {
-            listaEventos =new BindingList<evento>(eventoDao.listar_tres_eventos_proximos());
+            evento []aux=eventoDao.listar_tres_eventos_proximos();
+            if (aux == null) return;
+            listaEventos =new BindingList<evento>(aux);
             if (listaEventos.Count > 0)
                 tarjeta1.iniciarComponentes(listaEventos[0].nombre, listaEventos[0].descripcion, listaEventos[0].fecha);
-            else tarjeta1.Enabled = false;
-            tarjeta2.iniciarComponentes(listaEventos[1].nombre, listaEventos[1].descripcion, listaEventos[1].fecha);
-            tarjeta3.iniciarComponentes(listaEventos[2].nombre, listaEventos[2].descripcion, listaEventos[2].fecha);
+            else tarjeta1.Visible = false;
+            if (listaEventos.Count > 1)
+                tarjeta2.iniciarComponentes(listaEventos[1].nombre, listaEventos[1].descripcion, listaEventos[1].fecha);
+            else tarjeta2.Visible = false;
+            if (listaEventos.Count > 2)
+                tarjeta3.iniciarComponentes(listaEventos[2].nombre, listaEventos[2].descripcion, listaEventos[2].fecha);
+            else tarjeta2.Visible = false;
         }
 
         private void btnAccountSettings_Click(object sender, EventArgs e)
