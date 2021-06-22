@@ -24,6 +24,7 @@ namespace ProyectoOOIA.Ventanas
         {
             InitializeComponent();
             this.usuario = (GestionHumanaWS.miembroPUCP)usuario;
+            imagen_perfil = this.usuario.imagenDePerfil;
             displayData();
             estadoCorreo = Estado.Inicial;
             estadoUsuario = Estado.Inicial;
@@ -78,50 +79,117 @@ namespace ProyectoOOIA.Ventanas
                 br.Close();
                 fs.Close();
                 displayImage(imagen_perfil);
+                usuario.imagenDePerfil = imagen_perfil;
             }
         }
 
         private void btnEditCorreo_Click(object sender, EventArgs e)
         {
-            if(estadoCorreo == Estado.Inicial)
+            if (estadoCorreo == Estado.Inicial)
             {
                 txtCorreo.Enabled = true;
                 btnEditCorreo.Image = Properties.Resources.save;
                 estadoCorreo = Estado.Modificar;
             }
-            else if(estadoCorreo == Estado.Modificar)
+            else if (estadoCorreo == Estado.Modificar)
             {
-                DialogResult dr = MessageBox.Show("¿Esta seguro que desea guardar los cambios a su correo?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (dr == DialogResult.Yes)
+                if (!txtCorreo.Modified)
                 {
-                    usuario.correo = txtCorreo.Text;
-                    int resultado = 0;
-                    GestionHumanaWS.GestionHumanaWSClient daoUsuario = new GestionHumanaWS.GestionHumanaWSClient();
-                    if (usuario.GetType() == typeof(GestionHumanaWS.alumno)) resultado = daoUsuario.modificarAlumno((GestionHumanaWS.alumno)usuario);
-                    if (usuario.GetType() == typeof(GestionHumanaWS.profesor)) resultado = daoUsuario.modificarProfesores((GestionHumanaWS.profesor)usuario);
-                    if (usuario.GetType() == typeof(GestionHumanaWS.psicologo)) resultado = daoUsuario.modificarPsicologo((GestionHumanaWS.psicologo)usuario);
-                    if (usuario.GetType() == typeof(GestionHumanaWS.coordinador)) resultado = daoUsuario.modificarCoordinador((GestionHumanaWS.coordinador)usuario);
-                    if (resultado != 0)
-                    {
-                        MessageBox.Show("Se ha actualizado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtCorreo.Enabled = false;
-                        btnEditCorreo.Image = Properties.Resources.edit_black;
-                        estadoCorreo = Estado.Inicial;
-                    }
-                    else
-                        MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtCorreo.Enabled = false;
+                    btnEditCorreo.Image = Properties.Resources.edit_black;
+                    estadoCorreo = Estado.Inicial;
+                    return;
+                }
+                usuario.correo = txtCorreo.Text;
+                int resultado = modificarCuenta();
+                if (resultado != 0)
+                {
+                    txtCorreo.Enabled = false;
+                    btnEditCorreo.Image = Properties.Resources.edit_black;
+                    estadoCorreo = Estado.Inicial;
+                    displayData();
                 }
             }
         }
 
         private void btnEditUsuario_Click(object sender, EventArgs e)
         {
-
+            if (estadoUsuario == Estado.Inicial)
+            {
+                txtUsuario.Enabled = true;
+                btnEditUsuario.Image = Properties.Resources.save;
+                estadoUsuario = Estado.Modificar;
+            }
+            else if (estadoUsuario == Estado.Modificar)
+            {
+                if(!txtUsuario.Modified)
+                {
+                    txtUsuario.Enabled = false;
+                    btnEditUsuario.Image = Properties.Resources.edit_black;
+                    estadoUsuario = Estado.Inicial;
+                    return;
+                }
+                usuario.usuario = txtUsuario.Text;
+                int resultado = modificarCuenta();
+                if(resultado != 0)
+                {
+                    txtUsuario.Enabled = false;
+                    btnEditUsuario.Image = Properties.Resources.edit_black;
+                    estadoUsuario = Estado.Inicial;
+                    displayData();
+                }
+            }
         }
 
         private void btnEditPassword_Click(object sender, EventArgs e)
         {
-
+            if (estadoPassword == Estado.Inicial)
+            {
+                txtPassword.Enabled = true;
+                btnEditPassword.Image = Properties.Resources.save;
+                estadoPassword = Estado.Modificar;
+            }
+            else if (estadoPassword == Estado.Modificar)
+            {
+                if (!txtPassword.Modified)
+                {
+                    txtPassword.Enabled = false;
+                    btnEditPassword.Image = Properties.Resources.edit_black;
+                    estadoPassword = Estado.Inicial;
+                    return;
+                }
+                usuario.password = txtPassword.Text;
+                int resultado = modificarCuenta();
+                if (resultado != 0)
+                {
+                    txtPassword.Enabled = false;
+                    btnEditPassword.Image = Properties.Resources.edit_black;
+                    estadoPassword = Estado.Inicial;
+                    displayData();
+                }
+            }
         }
-    }
+
+        public int modificarCuenta()
+        {
+            int resultado = 0;
+            
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea guardar los cambios a su cuenta?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                GestionHumanaWS.GestionHumanaWSClient daoUsuario = new GestionHumanaWS.GestionHumanaWSClient();
+                if (this.usuario.GetType() == typeof(GestionHumanaWS.alumno)) resultado = daoUsuario.modificarAlumno((GestionHumanaWS.alumno)usuario);
+                if (this.usuario.GetType() == typeof(GestionHumanaWS.profesor)) resultado = daoUsuario.modificarProfesores((GestionHumanaWS.profesor)usuario);
+                if (this.usuario.GetType() == typeof(GestionHumanaWS.psicologo)) resultado = daoUsuario.modificarPsicologo((GestionHumanaWS.psicologo)usuario);
+                if (this.usuario.GetType() == typeof(GestionHumanaWS.coordinador)) resultado = daoUsuario.modificarCoordinador((GestionHumanaWS.coordinador)usuario);
+                if (resultado != 0)
+                {
+                    MessageBox.Show("Se ha actualizado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                    MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return resultado;
+        }
+    }      
 }

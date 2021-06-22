@@ -36,6 +36,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // horario1
@@ -53,7 +54,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(90, 27);
             this.btnSeleccionar.TabIndex = 17;
-            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.Text = "Guardar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -110,11 +111,22 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.label1.TabIndex = 18;
             this.label1.Text = "Seleccionar Horarios Disponibles";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(21, 102);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(90, 27);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Cancelar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // frmRegistrarHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 452);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.button2);
@@ -138,5 +150,6 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -30,10 +30,6 @@ namespace ProyectoOOIA.Ventanas
         private void InitializeComponent()
         {
             this.pnlRight = new System.Windows.Forms.Panel();
-            this.lblTipoIncorrecto = new System.Windows.Forms.Label();
-            this.rbtMiembroOOIA = new System.Windows.Forms.RadioButton();
-            this.rbtTutor = new System.Windows.Forms.RadioButton();
-            this.rbtAlumno = new System.Windows.Forms.RadioButton();
             this.lblPassIncorrecto = new System.Windows.Forms.Label();
             this.lblOOIA = new System.Windows.Forms.Label();
             this.linkContraseña = new System.Windows.Forms.LinkLabel();
@@ -49,7 +45,6 @@ namespace ProyectoOOIA.Ventanas
             this.pbPUCP = new System.Windows.Forms.PictureBox();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.lblIncorrecto = new System.Windows.Forms.Label();
             this.pnlRight.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPUCP)).BeginInit();
@@ -59,11 +54,6 @@ namespace ProyectoOOIA.Ventanas
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.pnlRight.Controls.Add(this.lblIncorrecto);
-            this.pnlRight.Controls.Add(this.lblTipoIncorrecto);
-            this.pnlRight.Controls.Add(this.rbtMiembroOOIA);
-            this.pnlRight.Controls.Add(this.rbtTutor);
-            this.pnlRight.Controls.Add(this.rbtAlumno);
             this.pnlRight.Controls.Add(this.lblPassIncorrecto);
             this.pnlRight.Controls.Add(this.lblOOIA);
             this.pnlRight.Controls.Add(this.linkContraseña);
@@ -78,53 +68,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlRight.Size = new System.Drawing.Size(618, 523);
             this.pnlRight.TabIndex = 8;
             this.pnlRight.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.pnlRight_PreviewKeyDown);
-            // 
-            // lblTipoIncorrecto
-            // 
-            this.lblTipoIncorrecto.AutoSize = true;
-            this.lblTipoIncorrecto.ForeColor = System.Drawing.Color.Salmon;
-            this.lblTipoIncorrecto.Location = new System.Drawing.Point(229, 325);
-            this.lblTipoIncorrecto.Name = "lblTipoIncorrecto";
-            this.lblTipoIncorrecto.Size = new System.Drawing.Size(146, 13);
-            this.lblTipoIncorrecto.TabIndex = 15;
-            this.lblTipoIncorrecto.Text = "Seleccione su tipo de usuario";
-            this.lblTipoIncorrecto.Visible = false;
-            // 
-            // rbtMiembroOOIA
-            // 
-            this.rbtMiembroOOIA.AutoSize = true;
-            this.rbtMiembroOOIA.ForeColor = System.Drawing.SystemColors.Control;
-            this.rbtMiembroOOIA.Location = new System.Drawing.Point(383, 426);
-            this.rbtMiembroOOIA.Name = "rbtMiembroOOIA";
-            this.rbtMiembroOOIA.Size = new System.Drawing.Size(94, 17);
-            this.rbtMiembroOOIA.TabIndex = 14;
-            this.rbtMiembroOOIA.TabStop = true;
-            this.rbtMiembroOOIA.Text = "Miembro OOIA";
-            this.rbtMiembroOOIA.UseVisualStyleBackColor = true;
-            // 
-            // rbtTutor
-            // 
-            this.rbtTutor.AutoSize = true;
-            this.rbtTutor.ForeColor = System.Drawing.SystemColors.Control;
-            this.rbtTutor.Location = new System.Drawing.Point(247, 426);
-            this.rbtTutor.Name = "rbtTutor";
-            this.rbtTutor.Size = new System.Drawing.Size(121, 17);
-            this.rbtTutor.TabIndex = 13;
-            this.rbtTutor.TabStop = true;
-            this.rbtTutor.Text = "Profesor o psicólogo";
-            this.rbtTutor.UseVisualStyleBackColor = true;
-            // 
-            // rbtAlumno
-            // 
-            this.rbtAlumno.AutoSize = true;
-            this.rbtAlumno.ForeColor = System.Drawing.SystemColors.Control;
-            this.rbtAlumno.Location = new System.Drawing.Point(137, 426);
-            this.rbtAlumno.Name = "rbtAlumno";
-            this.rbtAlumno.Size = new System.Drawing.Size(60, 17);
-            this.rbtAlumno.TabIndex = 12;
-            this.rbtAlumno.TabStop = true;
-            this.rbtAlumno.Text = "Alumno";
-            this.rbtAlumno.UseVisualStyleBackColor = true;
             // 
             // lblPassIncorrecto
             // 
@@ -155,7 +98,7 @@ namespace ProyectoOOIA.Ventanas
             this.linkContraseña.DisabledLinkColor = System.Drawing.Color.DarkGray;
             this.linkContraseña.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkContraseña.LinkColor = System.Drawing.Color.WhiteSmoke;
-            this.linkContraseña.Location = new System.Drawing.Point(244, 462);
+            this.linkContraseña.Location = new System.Drawing.Point(235, 418);
             this.linkContraseña.Name = "linkContraseña";
             this.linkContraseña.Size = new System.Drawing.Size(131, 13);
             this.linkContraseña.TabIndex = 6;
@@ -297,17 +240,6 @@ namespace ProyectoOOIA.Ventanas
             this.splitter1.TabIndex = 9;
             this.splitter1.TabStop = false;
             // 
-            // lblIncorrecto
-            // 
-            this.lblIncorrecto.AutoSize = true;
-            this.lblIncorrecto.ForeColor = System.Drawing.Color.Salmon;
-            this.lblIncorrecto.Location = new System.Drawing.Point(238, 325);
-            this.lblIncorrecto.Name = "lblIncorrecto";
-            this.lblIncorrecto.Size = new System.Drawing.Size(130, 13);
-            this.lblIncorrecto.TabIndex = 16;
-            this.lblIncorrecto.Text = "Tipo de usuario incorrecto";
-            this.lblIncorrecto.Visible = false;
-            // 
             // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,10 +286,5 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton rbtMiembroOOIA;
-        private System.Windows.Forms.RadioButton rbtTutor;
-        private System.Windows.Forms.RadioButton rbtAlumno;
-        private System.Windows.Forms.Label lblTipoIncorrecto;
-        private System.Windows.Forms.Label lblIncorrecto;
     }
 }
