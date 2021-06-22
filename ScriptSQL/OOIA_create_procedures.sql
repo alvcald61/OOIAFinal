@@ -416,7 +416,7 @@ create procedure MODIFICAR_COORDINADOR(
     	in _fecha_inclusion date,
     	in _imagen_perfil longblob,
 	-- coordinador
-	in rol varchar(150)
+	in _rol varchar(150)
 )
 begin
 	declare aux_persona int;	
