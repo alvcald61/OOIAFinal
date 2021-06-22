@@ -1304,5 +1304,24 @@ select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hor
 
 end$
 
+delimiter $
+create procedure listar_usuario_correo(
+in _usuario varchar(150)
+)begin
+	select 	m.id_miembro_pucp, p.correo
+	from miembro_pucp m 
+	inner join persona p on p.id_persona=m.fid_persona
+    where m.usuario = _usuario;
+    
+end$
+
+delimiter $
+create procedure cambiar_password(
+in _id int ,
+in _password varchar(150)
+)begin
+update miembro_pucp  set password = md5(_password) where id_miembro_pucp = _id;
+end$
+
 
 

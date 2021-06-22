@@ -12,5 +12,6 @@ package pe.edu.pucp.ooia.gest_humana.dao;
 public interface InicioSesionDAO {
     public int inicioSesion(String usuario, String password);
     public int tipoUsuario(int id_persona);
-    
+    public Object[] listar_usuario_correo(String correo);
+    public int cambiar_password(int id_miembro_pucp,String password);
 }

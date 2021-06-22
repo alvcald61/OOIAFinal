@@ -379,7 +379,27 @@ public class GestionHumanaWS {
         }
         return resultado;
     }
+    @WebMethod(operationName = "listar_usuario_correo")
+    public Object[] listar_usuario_correo(@WebParam(name = "usuario")String usuario){
+        Object []lista=new Object[2];
+        try {
+            lista=this.inicioSesion.listar_usuario_correo(usuario);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return lista;
+    }
     
+    @WebMethod(operationName = "cambiar_password")
+    public int cambiar_password(@WebParam(name = "id")int id,@WebParam(name = "password")String password){
+        int resultado=0;
+        try {
+            resultado=this.inicioSesion.cambiar_password(id, password);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
     
 }
 

@@ -597,7 +597,6 @@ D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Pr
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Asesor.Citas.frmRegistrarHorario.resources
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe.config
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
@@ -742,3 +741,5 @@ C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmAccountSettings.resources
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache

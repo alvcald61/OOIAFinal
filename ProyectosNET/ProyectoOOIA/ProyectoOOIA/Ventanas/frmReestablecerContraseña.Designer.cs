@@ -31,9 +31,9 @@ namespace ProyectoOOIA.Ventanas
         {
             this.lblOOIA = new System.Windows.Forms.Label();
             this.lblIngresarContraseña = new System.Windows.Forms.Label();
-            this.txtcorreo = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnReestablecer = new System.Windows.Forms.Button();
+            this.txtcorreo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblOOIA
@@ -53,19 +53,9 @@ namespace ProyectoOOIA.Ventanas
             this.lblIngresarContraseña.ForeColor = System.Drawing.Color.White;
             this.lblIngresarContraseña.Location = new System.Drawing.Point(128, 189);
             this.lblIngresarContraseña.Name = "lblIngresarContraseña";
-            this.lblIngresarContraseña.Size = new System.Drawing.Size(147, 13);
+            this.lblIngresarContraseña.Size = new System.Drawing.Size(96, 13);
             this.lblIngresarContraseña.TabIndex = 2;
-            this.lblIngresarContraseña.Text = "Ingrese su correo electronico:";
-            // 
-            // txtcorreo
-            // 
-            this.txtcorreo.AccessibleName = "";
-            this.txtcorreo.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.txtcorreo.Location = new System.Drawing.Point(131, 219);
-            this.txtcorreo.Name = "txtcorreo";
-            this.txtcorreo.Size = new System.Drawing.Size(284, 20);
-            this.txtcorreo.TabIndex = 3;
-            this.txtcorreo.UseWaitCursor = true;
+            this.lblIngresarContraseña.Text = "Ingrese su usuario:";
             // 
             // btnCancelar
             // 
@@ -89,6 +79,13 @@ namespace ProyectoOOIA.Ventanas
             this.btnReestablecer.UseVisualStyleBackColor = true;
             this.btnReestablecer.Click += new System.EventHandler(this.btnReestablecer_Click);
             // 
+            // txtcorreo
+            // 
+            this.txtcorreo.Location = new System.Drawing.Point(131, 223);
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.Size = new System.Drawing.Size(294, 20);
+            this.txtcorreo.TabIndex = 6;
+            // 
             // frmReestablecerContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,9 +93,9 @@ namespace ProyectoOOIA.Ventanas
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
             this.ClientSize = new System.Drawing.Size(547, 450);
+            this.Controls.Add(this.txtcorreo);
             this.Controls.Add(this.btnReestablecer);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtcorreo);
             this.Controls.Add(this.lblIngresarContraseña);
             this.Controls.Add(this.lblOOIA);
             this.MaximizeBox = false;
@@ -114,8 +111,8 @@ namespace ProyectoOOIA.Ventanas
 
         private System.Windows.Forms.Label lblOOIA;
         private System.Windows.Forms.Label lblIngresarContraseña;
-        private System.Windows.Forms.TextBox txtcorreo;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnReestablecer;
+        private System.Windows.Forms.TextBox txtcorreo;
     }
 }

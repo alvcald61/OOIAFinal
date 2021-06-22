@@ -64,5 +64,53 @@ public class inicioSesionMySQL implements  InicioSesionDAO{
         }
         return resultado;
     }
+        @Override
+    public  Object[]listar_usuario_correo(String correo){
+        int resultado=0;
+        Object[]lista=new Object[2];
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call listar_usuario_correo(?)}");
+            cs.setString("_usuario", correo);
+            rs=cs.executeQuery();
+            if(rs.next()){
+                lista[0]=rs.getString("correo");
+                lista[1]=rs.getInt("id_miembro_pucp");   
+            }else{
+                lista[0]=null;
+                lista[1]=0;
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return lista;
+    }
+    
+    @Override
+    public int cambiar_password(int id_miembro_pucp,String password){
+        int resultado=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call cambiar_password(?,?)}");
+            cs.setInt("_id", id_miembro_pucp);
+            cs.setString("_password", password);
+            cs.executeUpdate();
+            resultado=1;
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;
+    }
+    
     
 }
