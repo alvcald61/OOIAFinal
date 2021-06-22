@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="5isLEWfXT38+FoEUnlx4rKJF8n3iAZEWJUO19yoPaJY=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ssHaZEi9PF6PicFcbeYwiV+2i63eSNXhk1zDcfT+Tbo=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="EventoAlumnoWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="EventoAlumnoWSPort" contract="EventoAlumnoWS.EventoAlumnoWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/WebServicesOOIA/EventoAlumno" bindingConfiguration="EventoAlumnoWSPortBinding">
+    <endpoint name="EventoAlumnoWSPort" contract="EventoAlumnoWS.EventoAlumnoWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServicesOOIA/EventoAlumno" bindingConfiguration="EventoAlumnoWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.157.187.65:8080/WebServicesOOIA/EventoAlumno</serializedValue>
+          <serializedValue>http://localhost:8080/WebServicesOOIA/EventoAlumno</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

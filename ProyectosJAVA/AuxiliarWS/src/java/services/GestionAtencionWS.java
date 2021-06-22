@@ -11,12 +11,15 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import pe.edu.pucp.ooia.gest_atencion.dao.CitaDAO;
 import pe.edu.pucp.ooia.gest_atencion.dao.CodigoAtencionDAO;
+import pe.edu.pucp.ooia.gest_atencion.dao.EncuestaDAO;
 import pe.edu.pucp.ooia.gest_atencion.dao.HorarioDAO;
 import pe.edu.pucp.ooia.gest_atencion.model.Cita;
 import pe.edu.pucp.ooia.gest_atencion.model.CodigoAtencion;
+import pe.edu.pucp.ooia.gest_atencion.model.Encuesta;
 import pe.edu.pucp.ooia.gest_atencion.model.Horario;
 import pe.edu.pucp.ooia.gest_atencion.mysql.CitaMySQL;
 import pe.edu.pucp.ooia.gest_atencion.mysql.CodigoAtencionMySQL;
+import pe.edu.pucp.ooia.gest_atencion.mysql.EncuestaMySQL;
 import pe.edu.pucp.ooia.gest_atencion.mysql.HorarioMySQL;
 
 
@@ -29,10 +32,17 @@ public class GestionAtencionWS {
     private HorarioDAO horario;
     private CitaDAO cita;
     private CodigoAtencionDAO daoCodigo;
+        private EncuestaDAO daoEncuesta;
+    
+    
+    
+    
+    
     public GestionAtencionWS() {
-    cita=new CitaMySQL();
-    daoCodigo=new CodigoAtencionMySQL();
-    horario=new HorarioMySQL();
+            cita=new CitaMySQL();
+            daoCodigo=new CodigoAtencionMySQL();
+            horario=new HorarioMySQL();
+            daoEncuesta = new EncuestaMySQL();
     }
    @WebMethod(operationName = "listarCitaHistorico")
     public ArrayList<Cita> listarCitaHistorico(@WebParam(name = "id_alumno" )int id_alumno) {
@@ -165,6 +175,32 @@ public class GestionAtencionWS {
         return resultado;
         
     }
+    
+    
+    
+    @WebMethod(operationName = "listarEncuestaxAsesor")
+    public ArrayList<Encuesta> listarEncuestaxAsesor(@WebParam(name = "idAsesor") int idAsesor){
+        ArrayList<Encuesta> encuestas = new ArrayList<>();
+        try{
+            encuestas = daoEncuesta.listarXAsesor(idAsesor);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return encuestas;
+    }
+    
+    @WebMethod(operationName = "insertarEncuesta")
+    public int insertarEncuesta(@WebParam(name = "encuesta") Encuesta encuesta){
+        int resultado = 0;
+        try{
+            resultado = daoEncuesta.insertar(encuesta);//insertamos la encuesta
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    
     
     
     

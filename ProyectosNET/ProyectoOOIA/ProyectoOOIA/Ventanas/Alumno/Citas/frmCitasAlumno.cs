@@ -145,7 +145,15 @@ namespace ProyectoOOIA.Ventanas
                MessageBoxButtons.YesNo, MessageBoxIcon.None);
             if (dr == DialogResult.Yes)
             {
-                MessageBox.Show("La cita ha sido cancelada exitosamente", "Cita cancelada", MessageBoxButtons.OK);
+                if (dgvCitasProgramadas.CurrentRow.Index < 0)
+                    MessageBox.Show("Debe seleccionar una cita", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                {
+                    daoCita.eliminarCita(dgvCitasProgramadas.CurrentRow.DataBoundItem as cita);
+                    MessageBox.Show("La cita ha sido cancelada exitosamente", "Cita cancelada", MessageBoxButtons.OK);
+                }
+
+                
             }
 
         }
@@ -245,7 +253,9 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBuscarHorario_Click(object sender, EventArgs e)
         {
-            new frmHorarioCita().Show();
+            frmHorarioCita aux=new frmHorarioCita();
+            aux.ShowDialog();
+            
         }
 
         private void btnDetInscritas_Click(object sender, EventArgs e)

@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.187.65:8080/AuxiliarWS/PsicologosCSVcargaWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/AuxiliarWS/PsicologosCSVcargaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PsicologosCSVcargaWS1.xsd" MetadataType="Schema" ID="2a6f6318-a7f3-4d8f-ac81-f3929e47d851" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/PsicologosCSVcargaWS?xsd=1" />
-    <MetadataFile FileName="PsicologosCSVcargaWS1.wsdl" MetadataType="Wsdl" ID="6c90a776-c7be-45f6-8ab9-b8426a97a096" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/PsicologosCSVcargaWS?WSDL" />
+    <MetadataFile FileName="PsicologosCSVcargaWS.wsdl" MetadataType="Wsdl" ID="fa33693b-75d5-4e9a-bda3-a2da61bc5590" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/PsicologosCSVcargaWS?WSDL" />
+    <MetadataFile FileName="PsicologosCSVcargaWS.xsd" MetadataType="Schema" ID="1c4d0f9b-fe22-47f6-bd93-d333f51d72e1" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/PsicologosCSVcargaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

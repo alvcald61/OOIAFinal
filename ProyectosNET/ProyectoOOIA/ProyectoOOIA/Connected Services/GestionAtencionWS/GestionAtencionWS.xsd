@@ -59,7 +59,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="miembroPUCP" abstract="true">
+  <xs:complexType name="miembroPUCP">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:persona">
         <xs:sequence>
@@ -101,13 +101,10 @@
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
       <xs:element name="dia" type="xs:int" />
-      <xs:element minOccurs="0" name="horaFin" type="tns:time" />
-      <xs:element minOccurs="0" name="horaInicio" type="tns:time" />
+      <xs:element minOccurs="0" name="horaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaInicio" type="xs:dateTime" />
       <xs:element name="id_horario" type="xs:int" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="time">
-    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="modificarCitaResponse">
     <xs:sequence>

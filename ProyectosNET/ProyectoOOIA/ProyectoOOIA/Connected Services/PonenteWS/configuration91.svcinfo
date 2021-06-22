@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="n7qrxJnX1r79soR9J1k9uQ67R1/ks3IaQJEDfu0IJ4I=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="i1cIss9MTtHMC/RkgEIMtognD+y88BvzA4ttnj2h7DU=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="PonenteWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="PonenteWSPort" contract="PonenteWS.PonenteWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/WebServicesOOIA/PonenteWS" bindingConfiguration="PonenteWSPortBinding">
+    <endpoint name="PonenteWSPort" contract="PonenteWS.PonenteWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServicesOOIA/PonenteWS" bindingConfiguration="PonenteWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.157.187.65:8080/WebServicesOOIA/PonenteWS</serializedValue>
+          <serializedValue>http://localhost:8080/WebServicesOOIA/PonenteWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

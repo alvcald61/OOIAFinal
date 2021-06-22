@@ -8,16 +8,6 @@
   <xs:element name="listarPonenteResponse" type="tns:listarPonenteResponse" />
   <xs:element name="modificarPonente" type="tns:modificarPonente" />
   <xs:element name="modificarPonenteResponse" type="tns:modificarPonenteResponse" />
-  <xs:complexType name="eliminarPonente">
-    <xs:sequence>
-      <xs:element name="id_ponente" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarPonenteResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarPonente">
     <xs:sequence>
       <xs:element minOccurs="0" name="invitado" type="tns:ponente" />
@@ -56,6 +46,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarPonenteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPonente">
+    <xs:sequence>
+      <xs:element name="id_ponente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPonenteResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

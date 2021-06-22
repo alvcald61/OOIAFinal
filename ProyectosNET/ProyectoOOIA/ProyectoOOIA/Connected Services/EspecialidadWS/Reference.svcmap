@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/EspecialidadWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/EspecialidadWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EspecialidadWS1.xsd" MetadataType="Schema" ID="e07e2662-7c37-4c64-80c0-d0b4fd39969b" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/EspecialidadWS?xsd=1" />
-    <MetadataFile FileName="EspecialidadWS1.wsdl" MetadataType="Wsdl" ID="089ae874-0e4c-451c-8e93-56d75d0593cc" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/EspecialidadWS?WSDL" />
+    <MetadataFile FileName="EspecialidadWS.xsd" MetadataType="Schema" ID="ce1f3cfb-5cc4-414b-a17b-32c819e53d9a" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EspecialidadWS?xsd=1" />
+    <MetadataFile FileName="EspecialidadWS.wsdl" MetadataType="Wsdl" ID="d84e5a48-1083-4f4e-91a4-12d3aa138e6f" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EspecialidadWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

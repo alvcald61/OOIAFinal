@@ -16,13 +16,13 @@ namespace ProyectoOOIA.CursoWS {
     public interface CursoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/modificarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/modificarCursoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CursoWS.listarCursoResponse listarCurso(ProyectoOOIA.CursoWS.listarCursoRequest request);
+        ProyectoOOIA.CursoWS.modificarCursoResponse modificarCurso(ProyectoOOIA.CursoWS.modificarCursoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.listarCursoResponse> listarCursoAsync(ProyectoOOIA.CursoWS.listarCursoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/modificarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/modificarCursoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.modificarCursoResponse> modificarCursoAsync(ProyectoOOIA.CursoWS.modificarCursoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/eliminarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/eliminarCursoResponse")]
@@ -43,17 +43,17 @@ namespace ProyectoOOIA.CursoWS {
         System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.insertarrCursoResponse> insertarrCursoAsync(ProyectoOOIA.CursoWS.insertarrCursoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/modificarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/modificarCursoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CursoWS.modificarCursoResponse modificarCurso(ProyectoOOIA.CursoWS.modificarCursoRequest request);
+        ProyectoOOIA.CursoWS.listarCursoResponse listarCurso(ProyectoOOIA.CursoWS.listarCursoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/modificarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/modificarCursoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.modificarCursoResponse> modificarCursoAsync(ProyectoOOIA.CursoWS.modificarCursoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.listarCursoResponse> listarCursoAsync(ProyectoOOIA.CursoWS.listarCursoRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -143,27 +143,35 @@ namespace ProyectoOOIA.CursoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCurso", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCursoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCurso", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarCursoRequest {
         
-        public listarCursoRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.CursoWS.curso curso;
+        
+        public modificarCursoRequest() {
+        }
+        
+        public modificarCursoRequest(ProyectoOOIA.CursoWS.curso curso) {
+            this.curso = curso;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCursoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCursoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCursoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarCursoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.CursoWS.curso[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarCursoResponse() {
+        public modificarCursoResponse() {
         }
         
-        public listarCursoResponse(ProyectoOOIA.CursoWS.curso[] @return) {
+        public modificarCursoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -243,35 +251,27 @@ namespace ProyectoOOIA.CursoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCurso", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarCursoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCurso", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCursoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.CursoWS.curso curso;
-        
-        public modificarCursoRequest() {
-        }
-        
-        public modificarCursoRequest(ProyectoOOIA.CursoWS.curso curso) {
-            this.curso = curso;
+        public listarCursoRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCursoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarCursoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCursoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCursoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.CursoWS.curso[] @return;
         
-        public modificarCursoResponse() {
+        public listarCursoResponse() {
         }
         
-        public modificarCursoResponse(int @return) {
+        public listarCursoResponse(ProyectoOOIA.CursoWS.curso[] @return) {
             this.@return = @return;
         }
     }
@@ -304,24 +304,26 @@ namespace ProyectoOOIA.CursoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CursoWS.listarCursoResponse ProyectoOOIA.CursoWS.CursoWS.listarCurso(ProyectoOOIA.CursoWS.listarCursoRequest request) {
-            return base.Channel.listarCurso(request);
+        ProyectoOOIA.CursoWS.modificarCursoResponse ProyectoOOIA.CursoWS.CursoWS.modificarCurso(ProyectoOOIA.CursoWS.modificarCursoRequest request) {
+            return base.Channel.modificarCurso(request);
         }
         
-        public ProyectoOOIA.CursoWS.curso[] listarCurso() {
-            ProyectoOOIA.CursoWS.listarCursoRequest inValue = new ProyectoOOIA.CursoWS.listarCursoRequest();
-            ProyectoOOIA.CursoWS.listarCursoResponse retVal = ((ProyectoOOIA.CursoWS.CursoWS)(this)).listarCurso(inValue);
+        public int modificarCurso(ProyectoOOIA.CursoWS.curso curso) {
+            ProyectoOOIA.CursoWS.modificarCursoRequest inValue = new ProyectoOOIA.CursoWS.modificarCursoRequest();
+            inValue.curso = curso;
+            ProyectoOOIA.CursoWS.modificarCursoResponse retVal = ((ProyectoOOIA.CursoWS.CursoWS)(this)).modificarCurso(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.listarCursoResponse> ProyectoOOIA.CursoWS.CursoWS.listarCursoAsync(ProyectoOOIA.CursoWS.listarCursoRequest request) {
-            return base.Channel.listarCursoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.modificarCursoResponse> ProyectoOOIA.CursoWS.CursoWS.modificarCursoAsync(ProyectoOOIA.CursoWS.modificarCursoRequest request) {
+            return base.Channel.modificarCursoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.listarCursoResponse> listarCursoAsync() {
-            ProyectoOOIA.CursoWS.listarCursoRequest inValue = new ProyectoOOIA.CursoWS.listarCursoRequest();
-            return ((ProyectoOOIA.CursoWS.CursoWS)(this)).listarCursoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.modificarCursoResponse> modificarCursoAsync(ProyectoOOIA.CursoWS.curso curso) {
+            ProyectoOOIA.CursoWS.modificarCursoRequest inValue = new ProyectoOOIA.CursoWS.modificarCursoRequest();
+            inValue.curso = curso;
+            return ((ProyectoOOIA.CursoWS.CursoWS)(this)).modificarCursoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -371,26 +373,24 @@ namespace ProyectoOOIA.CursoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CursoWS.modificarCursoResponse ProyectoOOIA.CursoWS.CursoWS.modificarCurso(ProyectoOOIA.CursoWS.modificarCursoRequest request) {
-            return base.Channel.modificarCurso(request);
+        ProyectoOOIA.CursoWS.listarCursoResponse ProyectoOOIA.CursoWS.CursoWS.listarCurso(ProyectoOOIA.CursoWS.listarCursoRequest request) {
+            return base.Channel.listarCurso(request);
         }
         
-        public int modificarCurso(ProyectoOOIA.CursoWS.curso curso) {
-            ProyectoOOIA.CursoWS.modificarCursoRequest inValue = new ProyectoOOIA.CursoWS.modificarCursoRequest();
-            inValue.curso = curso;
-            ProyectoOOIA.CursoWS.modificarCursoResponse retVal = ((ProyectoOOIA.CursoWS.CursoWS)(this)).modificarCurso(inValue);
+        public ProyectoOOIA.CursoWS.curso[] listarCurso() {
+            ProyectoOOIA.CursoWS.listarCursoRequest inValue = new ProyectoOOIA.CursoWS.listarCursoRequest();
+            ProyectoOOIA.CursoWS.listarCursoResponse retVal = ((ProyectoOOIA.CursoWS.CursoWS)(this)).listarCurso(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.modificarCursoResponse> ProyectoOOIA.CursoWS.CursoWS.modificarCursoAsync(ProyectoOOIA.CursoWS.modificarCursoRequest request) {
-            return base.Channel.modificarCursoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.listarCursoResponse> ProyectoOOIA.CursoWS.CursoWS.listarCursoAsync(ProyectoOOIA.CursoWS.listarCursoRequest request) {
+            return base.Channel.listarCursoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.modificarCursoResponse> modificarCursoAsync(ProyectoOOIA.CursoWS.curso curso) {
-            ProyectoOOIA.CursoWS.modificarCursoRequest inValue = new ProyectoOOIA.CursoWS.modificarCursoRequest();
-            inValue.curso = curso;
-            return ((ProyectoOOIA.CursoWS.CursoWS)(this)).modificarCursoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.listarCursoResponse> listarCursoAsync() {
+            ProyectoOOIA.CursoWS.listarCursoRequest inValue = new ProyectoOOIA.CursoWS.listarCursoRequest();
+            return ((ProyectoOOIA.CursoWS.CursoWS)(this)).listarCursoAsync(inValue);
         }
     }
 }

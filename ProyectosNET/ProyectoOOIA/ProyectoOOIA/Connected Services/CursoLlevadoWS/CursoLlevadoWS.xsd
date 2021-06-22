@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.OOIA.pucp.edu.pe/" targetNamespace="http://services.OOIA.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="eliminarAlumno" type="tns:eliminarAlumno" />
-  <xs:element name="eliminarAlumnoResponse" type="tns:eliminarAlumnoResponse" />
-  <xs:element name="insertarAlumno" type="tns:insertarAlumno" />
-  <xs:element name="insertarAlumnoResponse" type="tns:insertarAlumnoResponse" />
-  <xs:element name="listarAlumno" type="tns:listarAlumno" />
-  <xs:element name="listarAlumnoResponse" type="tns:listarAlumnoResponse" />
-  <xs:element name="modificarAlumno" type="tns:modificarAlumno" />
-  <xs:element name="modificarAlumnoResponse" type="tns:modificarAlumnoResponse" />
-  <xs:complexType name="modificarAlumno">
+  <xs:element name="insertarCursoLlevado" type="tns:insertarCursoLlevado" />
+  <xs:element name="insertarCursoLlevadoResponse" type="tns:insertarCursoLlevadoResponse" />
+  <xs:element name="listarCursoLlevado" type="tns:listarCursoLlevado" />
+  <xs:element name="listarCursoLlevadoResponse" type="tns:listarCursoLlevadoResponse" />
+  <xs:element name="modificarCursoLlevado" type="tns:modificarCursoLlevado" />
+  <xs:element name="modificarCursoLlevadoResponse" type="tns:modificarCursoLlevadoResponse" />
+  <xs:complexType name="listarCursoLlevado">
+    <xs:sequence>
+      <xs:element name="id_alumno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursoLlevadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cursoLlevado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cursoLlevado">
     <xs:sequence>
       <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
+      <xs:element minOccurs="0" name="ciclo" type="xs:string" />
+      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+      <xs:element minOccurs="0" name="formulaCalificacion" type="xs:string" />
+      <xs:element name="id_curso_llevado" type="xs:int" />
+      <xs:element name="notaFinal" type="xs:double" />
+      <xs:element name="retirado" type="xs:boolean" />
+      <xs:element name="vez" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="alumno">
@@ -27,7 +42,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="miembroPUCP" abstract="true">
+  <xs:complexType name="miembroPUCP">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:persona">
         <xs:sequence>
@@ -57,35 +72,31 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarAlumnoResponse">
+  <xs:complexType name="curso">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="codigoCurso" type="xs:string" />
+      <xs:element name="creditos" type="xs:double" />
+      <xs:element name="id_curso" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreCurso" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCursoLlevado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="curso" type="tns:cursoLlevado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCursoLlevadoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarAlumno">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarAlumnoResponse">
+  <xs:complexType name="insertarCursoLlevado">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alumno" />
+      <xs:element minOccurs="0" name="curso" type="tns:cursoLlevado" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarAlumno">
-    <xs:sequence>
-      <xs:element name="id_alumno" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarAlumnoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarAlumno">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarAlumnoResponse">
+  <xs:complexType name="insertarCursoLlevadoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

@@ -27,7 +27,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="miembroPUCP" abstract="true">
+  <xs:complexType name="miembroPUCP">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:persona">
         <xs:sequence>

@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/CursoLlevadoWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/CursoLlevadoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CursoLlevadoWS1.xsd" MetadataType="Schema" ID="ccb1bc8a-b5ad-4a1f-98e6-dbab785d75a1" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CursoLlevadoWS?xsd=1" />
-    <MetadataFile FileName="CursoLlevadoWS1.wsdl" MetadataType="Wsdl" ID="5377b39c-7e4d-46a2-93e0-fe66c5ee2ba5" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CursoLlevadoWS?WSDL" />
+    <MetadataFile FileName="CursoLlevadoWS.xsd" MetadataType="Schema" ID="a0d75be6-df93-4d68-ba54-3937dd715691" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CursoLlevadoWS?xsd=1" />
+    <MetadataFile FileName="CursoLlevadoWS.wsdl" MetadataType="Wsdl" ID="49c6d7e3-6d63-4b33-a6f6-6f3805e8668d" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CursoLlevadoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

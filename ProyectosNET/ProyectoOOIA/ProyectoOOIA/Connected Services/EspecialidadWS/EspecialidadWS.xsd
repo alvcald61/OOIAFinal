@@ -8,9 +8,12 @@
   <xs:element name="listarEspecialidadResponse" type="tns:listarEspecialidadResponse" />
   <xs:element name="modificarEspecialidad" type="tns:modificarEspecialidad" />
   <xs:element name="modificarEspecialidadResponse" type="tns:modificarEspecialidadResponse" />
-  <xs:complexType name="modificarEspecialidad">
+  <xs:complexType name="listarEspecialidad">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEspecialidadResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:especialidad" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="especialidad">
@@ -20,25 +23,12 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="modificarEspecialidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="modificarEspecialidadResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarEspecialidad">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarEspecialidadResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:especialidad" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarEspecialidad">
-    <xs:sequence>
-      <xs:element name="id_especialidad" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarEspecialidadResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -49,6 +39,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarEspecialidadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEspecialidad">
+    <xs:sequence>
+      <xs:element name="id_especialidad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEspecialidadResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

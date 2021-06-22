@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.187.65:8080/AuxiliarWS/EvaluacionesCSVcargaWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/AuxiliarWS/EvaluacionesCSVcargaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EvaluacionesCSVcargaWS1.wsdl" MetadataType="Wsdl" ID="9cce921a-9c65-4a21-93c7-85391327d7d2" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/EvaluacionesCSVcargaWS?WSDL" />
-    <MetadataFile FileName="EvaluacionesCSVcargaWS1.xsd" MetadataType="Schema" ID="94968a53-84e1-4d14-a525-aecc3c7c39ae" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/EvaluacionesCSVcargaWS?xsd=1" />
+    <MetadataFile FileName="EvaluacionesCSVcargaWS.wsdl" MetadataType="Wsdl" ID="21993de4-121b-4b1c-bad7-4dfca4df7809" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/EvaluacionesCSVcargaWS?WSDL" />
+    <MetadataFile FileName="EvaluacionesCSVcargaWS.xsd" MetadataType="Schema" ID="e1540b80-f560-4a7a-a1c1-963e302c3572" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/EvaluacionesCSVcargaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

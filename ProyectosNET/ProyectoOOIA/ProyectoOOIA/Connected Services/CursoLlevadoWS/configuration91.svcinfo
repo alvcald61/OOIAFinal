@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="hbpKlJGO1C15fpMDBOUY5oiIZHg97nO/O3CRie+Hp6g=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="je69HMqcbqYJvJ9jUfEwhe23CqpygG8YLLAjIqSRsaw=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="CursoLlevadoWSPortBinding1">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="CursoLlevadoWSPort1" contract="CursoLlevadoWS.CursoLlevadoWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/WebServicesOOIA/CursoLlevadoWS" bindingConfiguration="CursoLlevadoWSPortBinding1">
+    <endpoint name="CursoLlevadoWSPort1" contract="CursoLlevadoWS.CursoLlevadoWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServicesOOIA/CursoLlevadoWS" bindingConfiguration="CursoLlevadoWSPortBinding1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.157.187.65:8080/WebServicesOOIA/CursoLlevadoWS</serializedValue>
+          <serializedValue>http://localhost:8080/WebServicesOOIA/CursoLlevadoWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

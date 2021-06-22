@@ -746,15 +746,15 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmDetalleEvento.resx">
       <DependentUpon>frmDetalleEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\AlumnosCSVcargaWS\AlumnosCSVcargaWS1.wsdl" />
-    <None Include="Connected Services\AlumnosCSVcargaWS\AlumnosCSVcargaWS1.xsd">
+    <None Include="Connected Services\AlumnosCSVcargaWS\AlumnosCSVcargaWS.wsdl" />
+    <None Include="Connected Services\AlumnosCSVcargaWS\AlumnosCSVcargaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AlumnosCSVcargaWS\ProyectoOOIA.AlumnosCSVcargaWS.CargarCSValumnosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\AlumnoWS\AlumnoWS1.wsdl" />
-    <None Include="Connected Services\AlumnoWS\AlumnoWS1.xsd">
+    <None Include="Connected Services\AlumnoWS\AlumnoWS.wsdl" />
+    <None Include="Connected Services\AlumnoWS\AlumnoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AlumnoWS\ProyectoOOIA.AlumnoWS.alumno.datasource">
@@ -772,29 +772,29 @@
     <None Include="Connected Services\AlumnoWS\ProyectoOOIA.AlumnoWS.modificarAlumnoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CargarCSValumnosWS\AlumnosCSVcargaWS1.wsdl" />
-    <None Include="Connected Services\CargarCSValumnosWS\AlumnosCSVcargaWS1.xsd">
+    <None Include="Connected Services\CargarCSValumnosWS\AlumnosCSVcargaWS.wsdl" />
+    <None Include="Connected Services\CargarCSValumnosWS\AlumnosCSVcargaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CargarCSValumnosWS\ProyectoOOIA.CargarCSValumnosWS.CargarCSValumnosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CargarCSVcursosLlevadosWS\CursosLlevadosCSVcargaWS1.wsdl" />
-    <None Include="Connected Services\CargarCSVcursosLlevadosWS\CursosLlevadosCSVcargaWS1.xsd">
+    <None Include="Connected Services\CargarCSVcursosLlevadosWS\CursosLlevadosCSVcargaWS.wsdl" />
+    <None Include="Connected Services\CargarCSVcursosLlevadosWS\CursosLlevadosCSVcargaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CargarCSVcursosLlevadosWS\ProyectoOOIA.CargarCSVcursosLlevadosWS.CargarCSVcursosLlevadosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CargarCSVevaluacionesWS\EvaluacionesCSVcargaWS1.wsdl" />
-    <None Include="Connected Services\CargarCSVevaluacionesWS\EvaluacionesCSVcargaWS1.xsd">
+    <None Include="Connected Services\CargarCSVevaluacionesWS\EvaluacionesCSVcargaWS.wsdl" />
+    <None Include="Connected Services\CargarCSVevaluacionesWS\EvaluacionesCSVcargaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CargarCSVevaluacionesWS\ProyectoOOIA.CargarCSVevaluacionesWS.CargarCSVevaluacionesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CargarCSVprofesoresWS\ProfesoresCSVcargaWS1.wsdl" />
-    <None Include="Connected Services\CargarCSVprofesoresWS\ProfesoresCSVcargaWS1.xsd">
+    <None Include="Connected Services\CargarCSVprofesoresWS\ProfesoresCSVcargaWS.wsdl" />
+    <None Include="Connected Services\CargarCSVprofesoresWS\ProfesoresCSVcargaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CargarCSVprofesoresWS\ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresResponse.datasource">
@@ -803,8 +803,8 @@
     <None Include="Connected Services\CargarCSVpsicologosWS\ProyectoOOIA.CargarCSVpsicologosWS.CargarCSVpsicologosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CargarCSVpsicologosWS\PsicologosCSVcargaWS1.wsdl" />
-    <None Include="Connected Services\CargarCSVpsicologosWS\PsicologosCSVcargaWS1.xsd">
+    <None Include="Connected Services\CargarCSVpsicologosWS\PsicologosCSVcargaWS.wsdl" />
+    <None Include="Connected Services\CargarCSVpsicologosWS\PsicologosCSVcargaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CitaWS\CitaWS.wsdl" />
@@ -845,8 +845,8 @@
     <None Include="Connected Services\CodigoAtencionWS\ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CoordinadorWS\CoordinadorWS1.wsdl" />
-    <None Include="Connected Services\CoordinadorWS\CoordinadorWS1.xsd">
+    <None Include="Connected Services\CoordinadorWS\CoordinadorWS.wsdl" />
+    <None Include="Connected Services\CoordinadorWS\CoordinadorWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CoordinadorWS\ProyectoOOIA.CoordinadorWS.coordinador.datasource">
@@ -864,8 +864,8 @@
     <None Include="Connected Services\CoordinadorWS\ProyectoOOIA.CoordinadorWS.modificarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CursoLlevadoWS\CursoLlevadoWS1.wsdl" />
-    <None Include="Connected Services\CursoLlevadoWS\CursoLlevadoWS1.xsd">
+    <None Include="Connected Services\CursoLlevadoWS\CursoLlevadoWS.wsdl" />
+    <None Include="Connected Services\CursoLlevadoWS\CursoLlevadoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CursoLlevadoWS\ProyectoOOIA.CursoLlevadoWS.cursoLlevado.datasource">
@@ -880,8 +880,8 @@
     <None Include="Connected Services\CursoLlevadoWS\ProyectoOOIA.CursoLlevadoWS.modificarCursoLlevadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CursoWS\CursoWS1.wsdl" />
-    <None Include="Connected Services\CursoWS\CursoWS1.xsd">
+    <None Include="Connected Services\CursoWS\CursoWS.wsdl" />
+    <None Include="Connected Services\CursoWS\CursoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CursoWS\ProyectoOOIA.CursoWS.curso.datasource">
@@ -899,8 +899,8 @@
     <None Include="Connected Services\CursoWS\ProyectoOOIA.CursoWS.modificarCursoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EspecialidadWS\EspecialidadWS1.wsdl" />
-    <None Include="Connected Services\EspecialidadWS\EspecialidadWS1.xsd">
+    <None Include="Connected Services\EspecialidadWS\EspecialidadWS.wsdl" />
+    <None Include="Connected Services\EspecialidadWS\EspecialidadWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EspecialidadWS\ProyectoOOIA.EspecialidadWS.eliminarEspecialidadResponse.datasource">
@@ -918,15 +918,15 @@
     <None Include="Connected Services\EspecialidadWS\ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EvaluacionesCSVcargaWS\EvaluacionesCSVcargaWS1.wsdl" />
-    <None Include="Connected Services\EvaluacionesCSVcargaWS\EvaluacionesCSVcargaWS1.xsd">
+    <None Include="Connected Services\EvaluacionesCSVcargaWS\EvaluacionesCSVcargaWS.wsdl" />
+    <None Include="Connected Services\EvaluacionesCSVcargaWS\EvaluacionesCSVcargaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EvaluacionesCSVcargaWS\ProyectoOOIA.EvaluacionesCSVcargaWS.CargarCSVevaluacionesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno.wsdl" />
-    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno.xsd">
+    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno1.wsdl" />
+    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse.datasource">
@@ -966,8 +966,8 @@
     <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.modificarEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS1.wsdl" />
-    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS1.xsd">
+    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS.wsdl" />
+    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.cita.datasource">
@@ -1234,8 +1234,8 @@
     <None Include="Connected Services\HorarioWS\ProyectoOOIA.HorarioWS.modificarHorarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PonenteWS\PonenteWS1.wsdl" />
-    <None Include="Connected Services\PonenteWS\PonenteWS1.xsd">
+    <None Include="Connected Services\PonenteWS\PonenteWS.wsdl" />
+    <None Include="Connected Services\PonenteWS\PonenteWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\PonenteWS\ProyectoOOIA.PonenteWS.eliminarPonenteResponse.datasource">
@@ -1275,8 +1275,8 @@
     <None Include="Connected Services\PsicologosCSVcargaWS\ProyectoOOIA.PsicologosCSVcargaWS.CargarCSVpsicologosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PsicologosCSVcargaWS\PsicologosCSVcargaWS1.wsdl" />
-    <None Include="Connected Services\PsicologosCSVcargaWS\PsicologosCSVcargaWS1.xsd">
+    <None Include="Connected Services\PsicologosCSVcargaWS\PsicologosCSVcargaWS.wsdl" />
+    <None Include="Connected Services\PsicologosCSVcargaWS\PsicologosCSVcargaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\PsicologoWS\ProyectoOOIA.PsicologoWS.eliminarPsicologoResponse.datasource">
