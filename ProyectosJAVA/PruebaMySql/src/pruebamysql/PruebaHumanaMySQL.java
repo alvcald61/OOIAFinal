@@ -1,7 +1,17 @@
 package pruebamysql;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import pe.edu.pucp.ooia.gest_atencion.dao.CitaDAO;
+import pe.edu.pucp.ooia.gest_atencion.dao.CodigoAtencionDAO;
+import pe.edu.pucp.ooia.gest_atencion.dao.HorarioDAO;
+import pe.edu.pucp.ooia.gest_atencion.model.Cita;
+import pe.edu.pucp.ooia.gest_atencion.model.CodigoAtencion;
+import pe.edu.pucp.ooia.gest_atencion.model.Horario;
+import pe.edu.pucp.ooia.gest_atencion.mysql.CitaMySQL;
+import pe.edu.pucp.ooia.gest_atencion.mysql.CodigoAtencionMySQL;
+import pe.edu.pucp.ooia.gest_atencion.mysql.HorarioMySQL;
 import pe.edu.pucp.ooia.gest_humana.dao.AlumnoDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.ProfesorDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.PsicologoDAO;
@@ -21,14 +31,67 @@ public class PruebaHumanaMySQL {
     private static AlumnoDAO daoAlumno;
     private static ProfesorDAO daoProfesor;
     private static PsicologoDAO daoPsicologo;
+    private static HorarioDAO daoHorario;
+    private static CitaDAO daoCita;
+    private static CodigoAtencionDAO daoCodigo;
     
-    
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         daoAlumno = new AlumnoMySQL();
         daoPsicologo = new PsicologoMySQL();
+        daoHorario = new HorarioMySQL();
+        daoCita = new CitaMySQL();
+        daoCodigo= new CodigoAtencionMySQL();
+        //insertarHorario();
+        //listarHorario();
+        //listarAlumno();
+        //System.out.println(psicologos.get(0).getId_miembro_pucp());
+        //insertarCita();
+        listarCitas();
+        //insertarPsicologo();
+        //listarPsicologo();
+    }
+     public static void listarCitas(){
+        ArrayList<Cita> citas = new ArrayList<>();
+        citas = daoCita.listarHistorico(124);
+        for(Cita a : citas){
+//            System.out.println("Entro");
+            System.out.println(a.getAsesor().getNombre()+ " " + a.getFecha()+  " " + a.getHorario().getHoraInicio()
+            + " " + a.getHorario().getHoraFin());
+        }
+    }
+    public static void insertarCita() throws Exception{
+       
+        Cita cita = new Cita();
+        ArrayList<Alumno> alumnos = new ArrayList<>();
+        alumnos = daoAlumno.listar();
         
-        insertarPsicologo();
-        listarPsicologo();
+        ArrayList<Psicologo> psicologos = new ArrayList<>();
+        psicologos = daoPsicologo.listar();
+        
+        ArrayList<Horario> horarios = new ArrayList<>();
+        horarios = daoHorario.listar();
+        
+        ArrayList<CodigoAtencion> codigos = new ArrayList<>();
+        codigos = daoCodigo.listar();
+        
+        
+        cita.setAlumno(alumnos.get(26)); //alumno con cuenta en visual
+        cita.setAsesor(psicologos.get(1));
+        cita.setTipo_asesor(1);
+        cita.setHorario(horarios.get(0));
+        cita.setMotivo("No puedo organizarme con todos los cursos");
+        //cita.setAsistio(true);
+        cita.setCompromiso("");
+        cita.setCodigo_atencion(codigos.get(1));
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+        cita.setFecha(format.parse("29-06-2021")); //cita pasada
+        
+        int resultado = daoCita.insertar(cita);
+        if(resultado !=0){
+            System.out.println("Se registro la cita exitosamente"+ resultado);
+        }else{
+            System.out.println("Ocurrio un error al momento de insertar");
+        }
     }
     
     public static void listarPsicologo(){
@@ -37,6 +100,30 @@ public class PruebaHumanaMySQL {
         for(Psicologo a : psicologos){
 //            System.out.println("Entro");
             System.out.println(a.getNombre() + " " + a.getCorreo()  +  " " + a.getUsuario());
+        }
+    }
+    
+    public static void listarHorario(){
+        ArrayList<Horario> horarios = new ArrayList<>();
+        horarios = daoHorario.listar();
+        for(Horario a : horarios){
+//            System.out.println("Entro");
+            System.out.println(a.getDia()+ " " + a.getHoraInicio()+  " " + a.getHoraFin());
+        }
+    }
+    public static void insertarHorario() throws Exception{
+       
+        Horario horario = new Horario();
+       
+        horario.setDia(1);
+        SimpleDateFormat format = new SimpleDateFormat("hh:mm");
+        horario.setHoraInicio(format.parse("10:30"));
+        horario.setHoraFin(format.parse("11:00"));
+        int resultado = daoHorario.insertar(horario);
+        if(resultado !=0){
+            System.out.println("Se registro el horario exitosamente"+ resultado);
+        }else{
+            System.out.println("Ocurrio un error al momento de insertar");
         }
     }
     

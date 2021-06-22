@@ -2,6 +2,7 @@
 package pe.edu.pucp.ooia.gest_atencion.model;
 
 import java.sql.Time;
+import java.util.Date;
 
 /**
  *
@@ -10,15 +11,15 @@ import java.sql.Time;
 public class Horario {
     private int id_horario;
     private int dia;
-    private Time horaInicio;
-    private Time horaFin;
+    private Date horaInicio;
+    private Date horaFin;
     private boolean activo;
 
     
     public Horario() {
     } 
 
-    public Horario(int id_horario, int dia, Time horaInicio, Time horaFin) {
+    public Horario(int id_horario, int dia, Date horaInicio, Date horaFin) {
         this.id_horario = id_horario;
         this.dia=dia;
         this.horaInicio = horaInicio;
@@ -42,22 +43,23 @@ public class Horario {
         this.dia = dia;
     }
 
-    public Time getHoraInicio() {
+    public Date getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(Time horaInicio) {
+    public void setHoraInicio(Date horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public Time getHoraFin() {
+    public Date getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(Time horaFin) {
+    public void setHoraFin(Date horaFin) {
         this.horaFin = horaFin;
     }
 
+  
     public boolean isActivo() {
         return activo;
     }
