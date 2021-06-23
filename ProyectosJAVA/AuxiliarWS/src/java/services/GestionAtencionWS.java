@@ -55,6 +55,18 @@ public class GestionAtencionWS {
         return lista;
     }
     
+    @WebMethod(operationName = "listarCitaHistoricoXNombre")
+    public ArrayList<Cita> listarCitaHistoricoXNombre(@WebParam(name = "id_alumno" )int id_alumno,
+            @WebParam(name = "nombre_profesor" )String nombre) {
+        ArrayList<Cita>lista=new ArrayList<>();
+        try {
+            lista=cita.listarHistoricoXNombre(id_alumno,nombre);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return lista;
+    }
+    
     @WebMethod(operationName = "listarCitaPendiente")
     public ArrayList<Cita> listarCitaPendiente(@WebParam(name = "id_alumno" )int id_alumno) {
         ArrayList<Cita>lista=new ArrayList<>();

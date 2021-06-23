@@ -271,7 +271,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnAgregarOpinion_Click(object sender, EventArgs e)
         {
-            new frmAgregarOpinion().ShowDialog();
+            //new frmAgregarOpinion().ShowDialog();
 
         }
 
@@ -434,7 +434,14 @@ namespace ProyectoOOIA.Ventanas
         return aux;
     }
 
-
-
-}
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            GestionAtencionWS.cita[] aux = daoCita.listarCitaHistoricoXNombre(this.alumno.id_alumno,txtNombreAsesor.Text);
+            if (aux == null) return;
+            BindingList<GestionAtencionWS.cita>
+               citasAlumnos = new BindingList<GestionAtencionWS.cita>
+               (aux.ToList());
+            dgvHistorialCitas.DataSource = citasAlumnos;
+        }
+    }
 }

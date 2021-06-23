@@ -70,7 +70,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabHistorialCitas = new System.Windows.Forms.TabPage();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombreAsesor = new System.Windows.Forms.TextBox();
             this.lblListaCitasPasadas = new System.Windows.Forms.Label();
             this.btnAgregarOpinion = new System.Windows.Forms.Button();
             this.btnDetHistorial = new System.Windows.Forms.Button();
@@ -120,7 +120,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtras.Location = new System.Drawing.Point(1289, 34);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(47, 42);
             this.btnAtras.TabIndex = 13;
@@ -334,7 +334,7 @@ namespace ProyectoOOIA.Ventanas
             this.pnlRegistrarCita.Controls.Add(this.btnBuscarHorario);
             this.pnlRegistrarCita.Controls.Add(this.txtHoraFin);
             this.pnlRegistrarCita.Location = new System.Drawing.Point(11, 68);
-            this.pnlRegistrarCita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlRegistrarCita.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRegistrarCita.Name = "pnlRegistrarCita";
             this.pnlRegistrarCita.Size = new System.Drawing.Size(773, 270);
             this.pnlRegistrarCita.TabIndex = 53;
@@ -353,7 +353,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.dtpFecha.Enabled = false;
             this.dtpFecha.Location = new System.Drawing.Point(133, 63);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(265, 25);
             this.dtpFecha.TabIndex = 52;
@@ -444,7 +444,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtHoraInicio.Enabled = false;
             this.txtHoraInicio.Location = new System.Drawing.Point(133, 96);
-            this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraInicio.Name = "txtHoraInicio";
             this.txtHoraInicio.ReadOnly = true;
             this.txtHoraInicio.Size = new System.Drawing.Size(115, 25);
@@ -513,7 +513,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabHistorialCitas.BackColor = System.Drawing.SystemColors.Control;
             this.tabHistorialCitas.Controls.Add(this.btnBuscar);
             this.tabHistorialCitas.Controls.Add(this.label1);
-            this.tabHistorialCitas.Controls.Add(this.textBox1);
+            this.tabHistorialCitas.Controls.Add(this.txtNombreAsesor);
             this.tabHistorialCitas.Controls.Add(this.lblListaCitasPasadas);
             this.tabHistorialCitas.Controls.Add(this.btnAgregarOpinion);
             this.tabHistorialCitas.Controls.Add(this.btnDetHistorial);
@@ -537,6 +537,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnBuscar.TabIndex = 55;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label1
             // 
@@ -545,17 +546,17 @@ namespace ProyectoOOIA.Ventanas
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(35, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 25);
+            this.label1.Size = new System.Drawing.Size(231, 25);
             this.label1.TabIndex = 54;
-            this.label1.Text = "Ingrese el nombre de un tutor o una fecha:";
+            this.label1.Text = "Ingrese el nombre de un tutor:";
             // 
-            // textBox1
+            // txtNombreAsesor
             // 
-            this.textBox1.Location = new System.Drawing.Point(371, 46);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(473, 25);
-            this.textBox1.TabIndex = 53;
+            this.txtNombreAsesor.Location = new System.Drawing.Point(293, 46);
+            this.txtNombreAsesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombreAsesor.Name = "txtNombreAsesor";
+            this.txtNombreAsesor.Size = new System.Drawing.Size(514, 25);
+            this.txtNombreAsesor.TabIndex = 53;
             // 
             // lblListaCitasPasadas
             // 
@@ -746,7 +747,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombreAsesor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Orientador;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
