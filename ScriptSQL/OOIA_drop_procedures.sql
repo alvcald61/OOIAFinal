@@ -114,3 +114,7 @@ drop procedure if exists ELIMINAR_EVENTO_PONENTE;
 drop procedure if exists LISTAR_EVENTO_PONENTE;
 drop procedure if exists LISTAR_EVENTO_X_NOMBRE_CATEGORIA;
  drop procedure if exists LISTAR_TRES_EVENTOS_PROXIMOS;
+ 
+-- Autenticar usuarios y demas
+drop procedure if exists autenticarUsuario;
+drop procedure if exists autenticarPersona;

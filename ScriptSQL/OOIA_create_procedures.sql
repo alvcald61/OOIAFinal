@@ -1230,6 +1230,12 @@ from miembro_pucp
 where usuario=_usuario and password=md5(_password);
 end$
 
+delimiter $
+create procedure autenticarPersona(
+	in _dni int
+)begin
+	select * from persona where dni = _dni;
+end$
 
 delimiter $
 create procedure tipoUsuario(in _id_persona int)
