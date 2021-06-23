@@ -8,19 +8,22 @@ namespace ProyectoOOIA.Ventanas
         private GestionAtencionWS.GestionAtencionWSClient daoEncuesta;
         private GestionAtencionWS.encuesta encuesta;
         private GestionAtencionWS.alumno alumno;
-        private GestionAtencionWS.persona asesor;
+        private GestionAtencionWS.miembroPUCP  asesor;
 
-        public frmAgregarOpinion(GestionAtencionWS.persona asesor, GestionAtencionWS.alumno alumno)
+        public frmAgregarOpinion(GestionAtencionWS.miembroPUCP asesor, GestionAtencionWS.alumno alumno)
         {
+            encuesta = new GestionAtencionWS.encuesta();
             this.alumno = alumno;
             this.asesor = asesor;
+            encuesta.asesor = asesor;
+            encuesta.alumno = alumno;
             daoEncuesta = new GestionAtencionWS.GestionAtencionWSClient();
             InitializeComponent();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //new frmConfirmarOpinion().ShowDialog();
+           
             DialogResult dr =
                MessageBox.Show("¿Esta seguro que desea agregar su opinión?", "Agregar opinión de Asesor",
                MessageBoxButtons.YesNo, MessageBoxIcon.None);

@@ -271,10 +271,29 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnAgregarOpinion_Click(object sender, EventArgs e)
         {
-            new frmAgregarOpinion().ShowDialog();
+            GestionAtencionWS.cita cita_seleccionado =
+              (GestionAtencionWS.cita)dgvHistorialCitas.CurrentRow.DataBoundItem;
+            if (alumno.id_alumno > 0)
+            {
+                System.Console.WriteLine("El alumno no es null");
+            }
+            else
+            {
+                System.Console.WriteLine("El alumno si es null");
+            }
+
+            if (cita_seleccionado.asesor.id_miembro_pucp > 0)
+            {
+                System.Console.WriteLine("El asesor no es null");
+            }
+            else
+            {
+                System.Console.WriteLine("El asesor si es null");
+            }
+            new frmAgregarOpinion(cita_seleccionado.asesor, asignarAlumno(alumno)).ShowDialog();
 
         }
-
+        
         private void btnBuscarAsesor_Click(object sender, EventArgs e)
         {
             frmListaTutores aux=new frmListaTutores();
@@ -403,6 +422,7 @@ namespace ProyectoOOIA.Ventanas
             aux.fecha_nacimientoSpecified = true;
             aux.dni = alumno.dni;
             aux.id_miembro_pucp = alumno.id_miembro_pucp;
+            aux.id_alumno = alumno.id_alumno;
             aux.id_persona = alumno.id_persona;
             aux.imagenDePerfil = alumno.imagenDePerfil;
             aux.password = alumno.password;
@@ -418,14 +438,14 @@ namespace ProyectoOOIA.Ventanas
         auxEspecialidad.nombre = alumno.especialidad.nombre;
         auxEspecialidad.activo = true;
         auxEspecialidad.id_especialidad = alumno.especialidad.id_especialidad;
-        aux.correo = alumno.correo;
-        aux.direccion = alumno.direccion;
-        aux.fecha_inclusion = alumno.fecha_inclusion;
-        aux.fecha_nacimiento = alumno.fecha_nacimiento;
+        aux.correo = asesor.correo;
+        aux.direccion = asesor.direccion;
+        aux.fecha_inclusion = asesor.fecha_inclusion;
+        aux.fecha_nacimiento = asesor.fecha_nacimiento;
         aux.fecha_inclusionSpecified = true;
         aux.fecha_nacimientoSpecified = true;
         aux.dni = alumno.dni;
-        aux.id_miembro_pucp = alumno.id_miembro_pucp;
+        aux.id_miembro_pucp = asesor.id_miembro_pucp;
         aux.id_persona = alumno.id_persona;
         aux.imagenDePerfil = alumno.imagenDePerfil;
         aux.password = alumno.password;
