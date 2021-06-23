@@ -788,7 +788,7 @@ create procedure INSERTAR_HORARIO_ASESOR(
 	out _id_horario_asesor int,
     	in _fid_horario int,
     	in _fid_asesor int,
-    	in _estado int
+    	in _estado varchar(50)
 )begin
 	insert into horario_asesor(fid_horario, fid_asesor, estado, activo) 
     	values(_fid_horario, _fid_asesor, _estado, true);
@@ -800,7 +800,7 @@ create procedure MODIFICAR_HORARIO_ASESOR(
 	in _id_horario_asesor int,
     	in _fid_horario int,
     	in _fid_asesor int,
-    	in _estado int
+    	in _estado varchar(50)
 )begin
 	update horario_asesor set fid_horario = _fid_horario, fid_asesor = _fid_asesor, estado = _estado
     	where id_horario_asesor = _id_horario_asesor; 
