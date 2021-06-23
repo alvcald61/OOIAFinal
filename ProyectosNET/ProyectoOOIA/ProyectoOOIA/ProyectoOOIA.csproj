@@ -982,6 +982,9 @@
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.eliminarHorarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.encuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.horario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -989,6 +992,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.insertarCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.insertarEncuestaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse.datasource">
@@ -1001,6 +1007,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarHorarioResponse.datasource">
