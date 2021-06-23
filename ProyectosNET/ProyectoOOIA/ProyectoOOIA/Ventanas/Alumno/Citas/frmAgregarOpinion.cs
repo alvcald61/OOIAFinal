@@ -9,14 +9,17 @@ namespace ProyectoOOIA.Ventanas
         private GestionAtencionWS.encuesta encuesta;
         private GestionAtencionWS.alumno alumno;
         private GestionAtencionWS.miembroPUCP  asesor;
+        private GestionAtencionWS.cita cita = new GestionAtencionWS.cita();
 
-        public frmAgregarOpinion(GestionAtencionWS.miembroPUCP asesor, GestionAtencionWS.alumno alumno)
+        public frmAgregarOpinion(int idCita,GestionAtencionWS.miembroPUCP asesor, GestionAtencionWS.alumno alumno)
         {
+            
             encuesta = new GestionAtencionWS.encuesta();
             this.alumno = alumno;
             this.asesor = asesor;
             encuesta.asesor = asesor;
             encuesta.alumno = alumno;
+            encuesta.fid_cita = idCita;
             daoEncuesta = new GestionAtencionWS.GestionAtencionWSClient();
             InitializeComponent();
         }

@@ -8,23 +8,39 @@ import pe.edu.pucp.ooia.gest_humana.model.MiembroPUCP;
 public class Encuesta {
     private int id_encuesta;
     private Alumno alumno;
+    private int fid_cita;
     private int tipo_asesor;
     private MiembroPUCP asesor;
     private double puntaje;
     private String descripcion;
     private boolean activo;
-    
-    public Encuesta(int id_encuesta, Alumno alumno, double puntaje, String descripcion, MiembroPUCP asesor) {
-        this.id_encuesta = id_encuesta;
-        this.alumno = alumno;
-        this.puntaje = puntaje;
-        this.descripcion = descripcion;
-        this.asesor = asesor;
-    }
+
+  
 
     public Encuesta() {
     }
 
+    public Encuesta(int id_encuesta, Alumno alumno, int fid_cita, int tipo_asesor, MiembroPUCP asesor, double puntaje, String descripcion, boolean activo) {
+        this.id_encuesta = id_encuesta;
+        this.alumno = alumno;
+        this.fid_cita = fid_cita;
+        this.tipo_asesor = tipo_asesor;
+        this.asesor = asesor;
+        this.puntaje = puntaje;
+        this.descripcion = descripcion;
+        this.activo = activo;
+    }
+
+    
+    public int getFid_cita() {
+        return fid_cita;
+    }
+
+    public void setFid_cita(int fid_cita) {
+        this.fid_cita = fid_cita;
+    }
+    
+    
     public int getId_encuesta() {
         return id_encuesta;
     }

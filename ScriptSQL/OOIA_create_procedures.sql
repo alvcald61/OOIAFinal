@@ -927,14 +927,15 @@ delimiter $
 create procedure INSERTAR_ENCUESTA(
 	out _id_encuesta int,
     	in _puntaje decimal(4,2),
+        in _fid_cita int,
     	in _descripcion varchar(300),
     	in _fid_alumno int,
 	in _tipo_asesor int,
     	in _fid_asesor int
 )
 BEGIN
-	insert into encuesta(puntaje, descripcion, fid_alumno, tipo_asesor, fid_asesor, activo) 
-    	values( _puntaje, _descripcion, _fid_alumno, _tipo_asesor, _fid_asesor, true);
+	insert into encuesta(puntaje, fid_cita, descripcion, fid_alumno, tipo_asesor, fid_asesor, activo) 
+    	values( _puntaje, _fid_cita,_descripcion, _fid_alumno, _tipo_asesor, _fid_asesor, true);
 	SET _id_encuesta = @@last_insert_id;
 end$
 
@@ -942,13 +943,15 @@ delimiter $
 create procedure MODIFICAR_ENCUESTA(
 	in _id_encuesta int,
     	in _puntaje decimal(4,2),
+        in _fid_cita int,
     	in _descripcion varchar(300),
     	in _fid_alumno int,
 	in _tipo_asesor int,
     	in _fid_asesor int
 )
 BEGIN
-	update encuesta SET puntaje = _puntaje, descripcion=_descripcion, fid_alumno=_fid_alumno, tipo_asesor = _tipo_asesor,
+	update encuesta SET puntaje = _puntaje, fid_cita=_fid_cita, 
+    descripcion=_descripcion, fid_alumno=_fid_alumno, tipo_asesor = _tipo_asesor,
     	fid_asesor=_fid_asesor where id_encuesta = _id_encuesta;
 end$
 
@@ -960,11 +963,12 @@ BEGIN
 	update encuesta set activo = 0 where id_encuesta = _id_encuesta;
 end$
 
+
 delimiter $
 create procedure LISTAR_ENCUESTA(
 )
 BEGIN
-	select id_encuesta, puntaje, descripcion, fid_alumno, tipo_asesor, fid_asesor
+	select id_encuesta, puntaje, descripcion, fid_cita, fid_alumno, tipo_asesor, fid_asesor
 	from encuesta;
 end$
 
@@ -978,12 +982,13 @@ BEGIN
     	where fid_asesor=_id_asesor;
 end$
 
+
 delimiter $
 create procedure LISTAR_ENCUESTA_X_ALUMNO(
 	in _id_alumno int
 )
 BEGIN
-	select id_encuesta, puntaje, descripcion, fid_alumno, tipo_asesor, fid_asesor
+	select id_encuesta, puntaje, descripcion, fid_cita, fid_alumno, tipo_asesor, fid_asesor
 	from encuesta
     	where fid_alumno=_id_alumno;
 end$

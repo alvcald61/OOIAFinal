@@ -49,7 +49,12 @@ namespace ProyectoOOIA.Ventanas
             BindingList<GestionAtencionWS.encuesta>
                opiniones = new BindingList<GestionAtencionWS.encuesta>
                (aux.ToList());
-            txtOpinion.Text = opiniones[0].descripcion;
+
+            foreach(GestionAtencionWS.encuesta e in opiniones){
+                if(e.fid_cita == cita.id_cita)
+                    txtOpinion.Text = e.descripcion;
+            }
+            
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

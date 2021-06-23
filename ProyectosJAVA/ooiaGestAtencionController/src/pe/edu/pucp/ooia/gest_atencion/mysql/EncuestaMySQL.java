@@ -39,6 +39,7 @@ public class EncuestaMySQL implements EncuestaDAO{
                 encuesta.setId_encuesta(rs.getInt("id_encuesta"));
                 encuesta.setPuntaje(rs.getDouble("puntaje"));
                 encuesta.setDescripcion(rs.getString("descripcion"));
+                encuesta.setFid_cita(rs.getInt("fid_cita"));
                 encuesta.setAlumno(new Alumno());
                 encuesta.setAlumno(obtenerAlumno(rs.getInt("fid_alumno")));
                 encuesta.setTipo_asesor(rs.getInt("tipo_asesor"));
@@ -77,6 +78,7 @@ public class EncuestaMySQL implements EncuestaDAO{
                 encuesta.setId_encuesta(rs.getInt("id_encuesta"));
                 encuesta.setPuntaje(rs.getDouble("puntaje"));
                 encuesta.setDescripcion(rs.getString("descripcion"));
+                encuesta.setFid_cita(rs.getInt("fid_cita"));
                 encuesta.setAlumno(new Alumno());
                 encuesta.setAlumno(obtenerAlumno(rs.getInt("fid_alumno")));
                 //encuesta.getAlumno().setId_alumno(rs.getInt("fid_alumno"));
@@ -147,11 +149,12 @@ public class EncuestaMySQL implements EncuestaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call INSERTAR_ENCUESTA(?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call INSERTAR_ENCUESTA(?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_encuesta", java.sql.Types.INTEGER);
             cs.setDouble("_puntaje", encuesta.getPuntaje());
             cs.setString("_descripcion", encuesta.getDescripcion());
             cs.setInt("_fid_alumno", encuesta.getAlumno().getId_alumno());
+            cs.setInt("_fid_cita", encuesta.getFid_cita());
             cs.setInt("_tipo_asesor", encuesta.getTipo_asesor());
             cs.setInt("_fid_asesor", encuesta.getAsesor().getId_miembro_pucp());
             cs.executeUpdate();
@@ -172,11 +175,12 @@ public class EncuestaMySQL implements EncuestaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call MODIFICAR_ENCUESTA(?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_ENCUESTA(?,?,?,?,?,?,?)}");
             cs.setInt("_id_encuesta", encuesta.getId_encuesta());
             cs.setDouble("_puntaje", encuesta.getPuntaje());
             cs.setString("_descripcion", encuesta.getDescripcion());
             cs.setInt("_fid_alumno", encuesta.getAlumno().getId_alumno());
+            cs.setInt("_fid_cita", encuesta.getFid_cita());
             cs.setInt("_tipo_asesor", encuesta.getTipo_asesor());
             cs.setInt("_fid_asesor", encuesta.getAsesor().getId_miembro_pucp());
             cs.executeUpdate();

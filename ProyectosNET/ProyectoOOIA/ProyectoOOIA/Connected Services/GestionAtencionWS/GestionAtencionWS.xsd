@@ -78,6 +78,7 @@
       <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
       <xs:element minOccurs="0" name="asesor" type="tns:miembroPUCP" />
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="fid_cita" type="xs:int" />
       <xs:element name="id_encuesta" type="xs:int" />
       <xs:element name="puntaje" type="xs:double" />
       <xs:element name="tipo_asesor" type="xs:int" />
