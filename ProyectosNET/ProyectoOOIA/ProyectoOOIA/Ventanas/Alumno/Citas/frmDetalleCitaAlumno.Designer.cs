@@ -43,13 +43,13 @@ namespace ProyectoOOIA.Ventanas
             this.label7 = new System.Windows.Forms.Label();
             this.txtMotivoConsulta = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtCompromiso = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtOpinion = new System.Windows.Forms.TextBox();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.rbNoAsistio = new System.Windows.Forms.RadioButton();
             this.rbAsistio = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.txtOpinion = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtCompromiso = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -80,10 +80,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.btnRegresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnRegresar.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnRegresar.Location = new System.Drawing.Point(900, 435);
+            this.btnRegresar.Location = new System.Drawing.Point(895, 426);
             this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(125, 27);
+            this.btnRegresar.Size = new System.Drawing.Size(130, 36);
             this.btnRegresar.TabIndex = 5;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
@@ -193,7 +193,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BackColor = System.Drawing.SystemColors.Window;
             this.panel2.Controls.Add(this.txtCompromiso);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.txtOpinion);
@@ -218,6 +218,47 @@ namespace ProyectoOOIA.Ventanas
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1100, 513);
             this.panel2.TabIndex = 3;
+            // 
+            // txtCompromiso
+            // 
+            this.txtCompromiso.Enabled = false;
+            this.txtCompromiso.Location = new System.Drawing.Point(41, 332);
+            this.txtCompromiso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCompromiso.Multiline = true;
+            this.txtCompromiso.Name = "txtCompromiso";
+            this.txtCompromiso.ReadOnly = true;
+            this.txtCompromiso.Size = new System.Drawing.Size(467, 95);
+            this.txtCompromiso.TabIndex = 24;
+            this.txtCompromiso.Text = "\r\n\r\n\r\n\r\n";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(553, 201);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(148, 27);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Opinión de la cita";
+            // 
+            // txtOpinion
+            // 
+            this.txtOpinion.Enabled = false;
+            this.txtOpinion.Location = new System.Drawing.Point(558, 238);
+            this.txtOpinion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtOpinion.Multiline = true;
+            this.txtOpinion.Name = "txtOpinion";
+            this.txtOpinion.ReadOnly = true;
+            this.txtOpinion.Size = new System.Drawing.Size(467, 95);
+            this.txtOpinion.TabIndex = 22;
+            this.txtOpinion.Text = "\r\n\r\n\r\n\r\n";
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Location = new System.Drawing.Point(41, 149);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(419, 22);
+            this.dtpFecha.TabIndex = 21;
             // 
             // rbNoAsistio
             // 
@@ -257,59 +298,19 @@ namespace ProyectoOOIA.Ventanas
             this.label8.TabIndex = 18;
             this.label8.Text = "Asistencia";
             // 
-            // dtpFecha
-            // 
-            this.dtpFecha.Location = new System.Drawing.Point(41, 149);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(419, 22);
-            this.dtpFecha.TabIndex = 21;
-            // 
-            // txtOpinion
-            // 
-            this.txtOpinion.Enabled = false;
-            this.txtOpinion.Location = new System.Drawing.Point(558, 238);
-            this.txtOpinion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtOpinion.Multiline = true;
-            this.txtOpinion.Name = "txtOpinion";
-            this.txtOpinion.ReadOnly = true;
-            this.txtOpinion.Size = new System.Drawing.Size(467, 95);
-            this.txtOpinion.TabIndex = 22;
-            this.txtOpinion.Text = "\r\n\r\n\r\n\r\n";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(553, 201);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(148, 27);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Opinión de la cita";
-            // 
-            // txtCompromiso
-            // 
-            this.txtCompromiso.Enabled = false;
-            this.txtCompromiso.Location = new System.Drawing.Point(41, 332);
-            this.txtCompromiso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCompromiso.Multiline = true;
-            this.txtCompromiso.Name = "txtCompromiso";
-            this.txtCompromiso.ReadOnly = true;
-            this.txtCompromiso.Size = new System.Drawing.Size(467, 95);
-            this.txtCompromiso.TabIndex = 24;
-            this.txtCompromiso.Text = "\r\n\r\n\r\n\r\n";
-            // 
             // frmDetalleCitaAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1100, 600);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDetalleCitaAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDetalleCita";
+            this.Text = "Detalle de la cita";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

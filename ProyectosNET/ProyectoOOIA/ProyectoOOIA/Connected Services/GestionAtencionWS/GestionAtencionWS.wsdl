@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/AuxiliarWS/GestionAtencionWS?xsd=1" namespace="http://services/" />
     </xsd:schema>
   </types>
+  <message name="listarEncuestaxAlumno">
+    <part name="parameters" element="tns:listarEncuestaxAlumno" />
+  </message>
+  <message name="listarEncuestaxAlumnoResponse">
+    <part name="parameters" element="tns:listarEncuestaxAlumnoResponse" />
+  </message>
   <message name="insertarEncuesta">
     <part name="parameters" element="tns:insertarEncuesta" />
   </message>
@@ -120,6 +126,10 @@
     <part name="parameters" element="tns:insertarCodigoResponse" />
   </message>
   <portType name="GestionAtencionWS">
+    <operation name="listarEncuestaxAlumno">
+      <input wsam:Action="http://services/GestionAtencionWS/listarEncuestaxAlumnoRequest" message="tns:listarEncuestaxAlumno" />
+      <output wsam:Action="http://services/GestionAtencionWS/listarEncuestaxAlumnoResponse" message="tns:listarEncuestaxAlumnoResponse" />
+    </operation>
     <operation name="insertarEncuesta">
       <input wsam:Action="http://services/GestionAtencionWS/insertarEncuestaRequest" message="tns:insertarEncuesta" />
       <output wsam:Action="http://services/GestionAtencionWS/insertarEncuestaResponse" message="tns:insertarEncuestaResponse" />
@@ -199,6 +209,15 @@
   </portType>
   <binding name="GestionAtencionWSPortBinding" type="tns:GestionAtencionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarEncuestaxAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="insertarEncuesta">
       <soap:operation soapAction="" />
       <input>

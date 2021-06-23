@@ -248,6 +248,17 @@ public class GestionAtencionWS {
         return encuestas;
     }
     
+    @WebMethod(operationName = "listarEncuestaxAlumno")
+    public ArrayList<Encuesta> listarEncuestaxAlumno(@WebParam(name = "idAlumno") int idAlumno){
+        ArrayList<Encuesta> encuestas = new ArrayList<>();
+        try{
+            encuestas = daoEncuesta.listarXAlumno(idAlumno);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return encuestas;
+    }
+    
     @WebMethod(operationName = "insertarEncuesta")
     public int insertarEncuesta(@WebParam(name = "encuesta") Encuesta encuesta){
         int resultado = 0;

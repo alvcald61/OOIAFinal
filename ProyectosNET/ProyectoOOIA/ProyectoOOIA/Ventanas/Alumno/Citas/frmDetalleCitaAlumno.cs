@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -6,14 +8,19 @@ namespace ProyectoOOIA.Ventanas
 {
     public partial class frmDetalleCitaAlumno : Form
     {
- 
+        private GestionAtencionWS.GestionAtencionWSClient daoCita;
         public frmDetalleCitaAlumno(GestionAtencionWS.cita cita)
         {
+            
             InitializeComponent();
+            daoCita = new GestionAtencionWS.GestionAtencionWSClient();
+
+            buscarOpinion(cita);
             txtOrientador.ReadOnly = true;
             txtCompromiso.ReadOnly = true;
             txtMotivoConsulta.ReadOnly = true;
             txtHoraInicio.ReadOnly = true;
+            txtOpinion.ReadOnly = true;
             rbAsistio.Enabled = false;
             rbNoAsistio.Enabled = false;
             txtHoraFin.ReadOnly = true;
@@ -33,6 +40,16 @@ namespace ProyectoOOIA.Ventanas
                 rbNoAsistio.Checked = true;
             }
 
+        }
+
+        private void buscarOpinion(GestionAtencionWS.cita cita)
+        {
+            GestionAtencionWS.encuesta[] aux = daoCita.listarEncuestaxAlumno(cita.alumno.id_alumno);
+            if (aux == null) return;
+            BindingList<GestionAtencionWS.encuesta>
+               opiniones = new BindingList<GestionAtencionWS.encuesta>
+               (aux.ToList());
+            txtOpinion.Text = opiniones[0].descripcion;
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

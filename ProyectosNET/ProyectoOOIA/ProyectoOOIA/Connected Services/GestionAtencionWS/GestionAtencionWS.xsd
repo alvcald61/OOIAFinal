@@ -24,6 +24,8 @@
   <xs:element name="listarCitaPendienteResponse" type="tns:listarCitaPendienteResponse" />
   <xs:element name="listarCodigo" type="tns:listarCodigo" />
   <xs:element name="listarCodigoResponse" type="tns:listarCodigoResponse" />
+  <xs:element name="listarEncuestaxAlumno" type="tns:listarEncuestaxAlumno" />
+  <xs:element name="listarEncuestaxAlumnoResponse" type="tns:listarEncuestaxAlumnoResponse" />
   <xs:element name="listarEncuestaxAsesor" type="tns:listarEncuestaxAsesor" />
   <xs:element name="listarEncuestaxAsesorResponse" type="tns:listarEncuestaxAsesorResponse" />
   <xs:element name="listarHorario" type="tns:listarHorario" />
@@ -192,6 +194,16 @@
   <xs:complexType name="listarCitaHistoricoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEncuestaxAlumno">
+    <xs:sequence>
+      <xs:element name="idAlumno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEncuestaxAlumnoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:encuesta" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCitaHistoricoXNombre">

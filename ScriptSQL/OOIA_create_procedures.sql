@@ -980,7 +980,7 @@ end$
 
 delimiter $
 create procedure LISTAR_ENCUESTA_X_ALUMNO(
-	in _id_alumnor int
+	in _id_alumno int
 )
 BEGIN
 	select id_encuesta, puntaje, descripcion, fid_alumno, tipo_asesor, fid_asesor
