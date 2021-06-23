@@ -6,14 +6,32 @@ namespace ProyectoOOIA.Ventanas
 {
     public partial class frmDetalleCitaAlumno : Form
     {
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd,
-            int wMsg, int wParam, int lParam);
-        public frmDetalleCitaAlumno()
+ 
+        public frmDetalleCitaAlumno(GestionAtencionWS.cita cita)
         {
             InitializeComponent();
+            txtOrientador.ReadOnly = true;
+            txtCompromiso.ReadOnly = true;
+            txtMotivoConsulta.ReadOnly = true;
+            txtHoraInicio.ReadOnly = true;
+            rbAsistio.Enabled = false;
+            rbNoAsistio.Enabled = false;
+            txtHoraFin.ReadOnly = true;
+            dtpFecha.Enabled = false;
+            dtpFecha.Value = cita.fecha;
+            txtOrientador.Text = cita.asesor.nombre;
+            txtMotivoConsulta.Text = cita.motivo;
+            txtCompromiso.Text = cita.compromiso;
+            txtHoraInicio.Text = cita.horario.horaInicio.ToString("hh:mm");
+            txtHoraFin.Text = cita.horario.horaFin.ToString("hh:mm");
+            if(cita.asistio == true)
+            {
+                rbAsistio.Checked = true;
+            }
+            else
+            {
+                rbNoAsistio.Checked = true;
+            }
 
         }
 
@@ -24,11 +42,5 @@ namespace ProyectoOOIA.Ventanas
         }
 
 
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0xA1, 0x2, 0);
-        }
     }
 }

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
-using System.Net;
-using System.Net.Mail;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ProyectoOOIA.GestionAtencionWS;
@@ -15,7 +13,6 @@ namespace ProyectoOOIA.Ventanas
         private GestionAtencionWS.GestionAtencionWSClient daoCita;
         private GestionAtencionWS.GestionAtencionWSClient daoHorario;
         private GestionHumanaWS.GestionHumanaWSClient humanaDao;
-        private GestionAtencionWS.cita citaNueva;
         private Estado estado;
         private GestionHumanaWS.miembroPUCP asesor;
         private GestionHumanaWS.persona persona;
@@ -163,10 +160,15 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnDetalleHistorial_Click(object sender, EventArgs e)
         {
-            //tenemos que almacenar los datos en la pantalla
-            new frmDetalleCitaAlumno().ShowDialog();
-            //this.Close();
-            this.DialogResult = DialogResult.OK;
+            if (dgvHistorialCitas.CurrentRow != null)
+            {
+                GestionAtencionWS.cita cita_seleccionado =
+              (GestionAtencionWS.cita)dgvHistorialCitas.CurrentRow.DataBoundItem;
+
+                new frmDetalleCitaAlumno(cita_seleccionado).Show();
+            }
+
+
         }
 
 
@@ -174,7 +176,6 @@ namespace ProyectoOOIA.Ventanas
         {
             //new frmCitaRegistroAlumno().ShowDialog();
             //new frmConfirmarCitaAlumno().ShowDialog();
-            
             if (txtAsesor.Text == "")
             {
                 MessageBox.Show("No ha ingresado el asesor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -195,155 +196,42 @@ namespace ProyectoOOIA.Ventanas
             //cita.asesor = 
             //cita.fechaRegistro = Date.Now;
 
-            citaNueva = new cita();
-            citaNueva.asesor = asignarAsesor(asesor);
-            citaNueva.alumno = asignarAlumno(alumno);
-            citaNueva.fecha = dtpFecha.Value;
-            citaNueva.estado = true;
-            citaNueva.activo = true;
-            citaNueva.asistio = false;
-            citaNueva.fechaSpecified = true;
-            //citaNueva.horario = new horario();
-            
-            citaNueva.motivo = txtMotivo.Text;
-            if (asesor is GestionHumanaWS.profesor) citaNueva.tipo_asesor = 1;
-            else citaNueva.tipo_asesor = 2;
-
-            //if (estado.Equals(Estado.Nuevo))
-            //{
+            if (estado.Equals(Estado.Nuevo))
+            {
                 DialogResult dr =
                 MessageBox.Show("¿Esta seguro que desea programar la cita?", "Registro de cita",
                 MessageBoxButtons.YesNo, MessageBoxIcon.None);
                 if (dr == DialogResult.Yes)
                 {
                     //int resultado = daoCita.insertar(cita);
-                    
-                    int resultado = daoCita.insertarCita(citaNueva);
+                    int resultado = 1;
                     if (resultado != 0)
                     {
                         MessageBox.Show("La cita ha sido registrada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        string mensaje = "Estimado " + alumno.nombre + ":\n" +
-                                         "Ustedes ha agendado satisfactoriamente una cita con la OOIA. A continuación le indicaremos los datos de la sesion: \n\n" +
-                                         "Asesor: " + asesor.nombre + "\n" +
-                                         "Fecha: " + citaNueva.fecha + "\n" +
-                                         "Desde las: " + citaNueva.horario.horaInicio + "\n" +
-                                         "Hasta: " + citaNueva.horario.horaFin + "\n" +
-                                         "Con el siguiente motivo: " + citaNueva.motivo + "\n\n\n\n" +
-                                         "Atte. Oficina de Orientación, Información y Apoyo al Estudiante\n\n ";
-                                         
-                                         
-
-                        enviarCorreo("Inscripción a Cita con "+ asesor.nombre,mensaje);
                         this.estado = Estado.Inicial;
                         cambiarEstado();
                     }
                     else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            //}
-            //else if (estado.Equals(Estado.Modificar))
-            //{
-            //    DialogResult dr =
-            //    MessageBox.Show("¿Esta seguro que desea modificar la cita?", "Modificación de cita",
-            //    MessageBoxButtons.YesNo, MessageBoxIcon.None);
-            //    if (dr == DialogResult.Yes)
-            //    {
-            //        //int resultado = daoCita.modificar(cita);
-            //        int resultado = 1;
-            //        if (resultado != 0)
-            //        {
-            //            MessageBox.Show("La cita ha sido modificada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            this.estado = Estado.Inicial;
-            //            cambiarEstado();
-            //        }
-            //        else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-        }
-
-
-        private void enviarCorreo(string motivo,string mensaje)
-        {
-            var fromAddress = new MailAddress("OOIA.no.reply@gmail.com", "OOIA");
-            var toAddress = new MailAddress(alumno.correo, alumno.nombre);
-            const string fromPassword = "sistemaOOIA123";
-             string subject = motivo;
-            string body = mensaje;
-
-            var smtp = new SmtpClient
-            {
-                Host = "smtp.gmail.com",
-                Port = 587,
-                EnableSsl = true,
-                DeliveryMethod = SmtpDeliveryMethod.Network,
-                UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
-            };
-            using (var message = new MailMessage(fromAddress, toAddress)
-            {
-                Subject = subject,
-                Body = body
-            })
-            {
-                smtp.Send(message);
             }
-        }
-
-        private GestionAtencionWS.alumno asignarAlumno(GestionHumanaWS.alumno alumno)
-        {
-            GestionAtencionWS.alumno aux = new GestionAtencionWS.alumno();
-            
-            aux.id_alumno = alumno.id_alumno;
-            aux.activo = alumno.activo;
-            aux.codigo = alumno.codigo;
-            aux.craest = alumno.craest;
-            aux.creditos_aprobados = alumno.creditos_aprobados;
-            GestionAtencionWS.especialidad auxEspecialidad = new GestionAtencionWS.especialidad();
-            auxEspecialidad.nombre = alumno.especialidad.nombre;
-            auxEspecialidad.activo = true;
-            auxEspecialidad.id_especialidad = alumno.especialidad.id_especialidad;
-             aux.especialidad = auxEspecialidad;
-             aux.correo = alumno.correo;
-             aux.direccion = alumno.direccion;
-             aux.fecha_inclusion = alumno.fecha_inclusion;
-             aux.fecha_nacimiento = alumno.fecha_nacimiento;
-             aux.fecha_inclusionSpecified = true;
-             aux.fecha_nacimientoSpecified = true;
-             aux.dni = alumno.dni;
-             aux.id_miembro_pucp = alumno.id_miembro_pucp;
-             aux.id_persona = alumno.id_persona;
-             aux.imagenDePerfil = alumno.imagenDePerfil;
-             aux.password = alumno.password;
-             aux.usuario = alumno.usuario;
-             aux.nombre = alumno.nombre;
-             return aux;
-
-
-        }
-
-        private GestionAtencionWS.miembroPUCP asignarAsesor(GestionHumanaWS.miembroPUCP asesor)
-        {
-            GestionAtencionWS.miembroPUCP aux = new GestionAtencionWS.miembroPUCP();
-
-            
-            GestionAtencionWS.especialidad auxEspecialidad = new GestionAtencionWS.especialidad();
-            auxEspecialidad.nombre = alumno.especialidad.nombre;
-            auxEspecialidad.activo = true;
-            auxEspecialidad.id_especialidad = alumno.especialidad.id_especialidad;
-            aux.correo = alumno.correo;
-            aux.direccion = alumno.direccion;
-            aux.fecha_inclusion = alumno.fecha_inclusion;
-            aux.fecha_nacimiento = alumno.fecha_nacimiento;
-            aux.fecha_inclusionSpecified = true;
-            aux.fecha_nacimientoSpecified = true;
-            aux.dni = alumno.dni;
-            aux.id_miembro_pucp = alumno.id_miembro_pucp;
-            aux.id_persona = alumno.id_persona;
-            aux.imagenDePerfil = alumno.imagenDePerfil;
-            aux.password = alumno.password;
-            aux.usuario = alumno.usuario;
-            aux.nombre = alumno.nombre;
-            return aux;
-
+            else if (estado.Equals(Estado.Modificar))
+            {
+                DialogResult dr =
+                MessageBox.Show("¿Esta seguro que desea modificar la cita?", "Modificación de cita",
+                MessageBoxButtons.YesNo, MessageBoxIcon.None);
+                if (dr == DialogResult.Yes)
+                {
+                    //int resultado = daoCita.modificar(cita);
+                    int resultado = 1;
+                    if (resultado != 0)
+                    {
+                        MessageBox.Show("La cita ha sido modificada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.estado = Estado.Inicial;
+                        cambiarEstado();
+                    }
+                    else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -377,8 +265,15 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnDetInscritas_Click(object sender, EventArgs e)
         {
-            new frmDetalleCitaAlumno().ShowDialog();
-            this.DialogResult = DialogResult.OK;
+            //new frmDetalleCitaAlumno().ShowDialog();
+            //this.DialogResult = DialogResult.OK;
+            if (dgvCitasProgramadas.CurrentRow != null)
+            {
+                GestionAtencionWS.cita cita_seleccionado =
+              (GestionAtencionWS.cita)dgvCitasProgramadas.CurrentRow.DataBoundItem;
+
+                new frmDetalleCitaAlumno(cita_seleccionado).Show();
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -415,20 +310,20 @@ namespace ProyectoOOIA.Ventanas
 
         private void dgvCitasProgramadas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            CitaWS.cita data = dgvCitasProgramadas.Rows[e.RowIndex].DataBoundItem
-            as CitaWS.cita;
+            GestionAtencionWS.cita data = dgvCitasProgramadas.Rows[e.RowIndex].DataBoundItem
+            as GestionAtencionWS.cita;
             dgvCitasProgramadas.Rows[e.RowIndex].Cells[0].Value = data.asesor.nombre;
-            dgvCitasProgramadas.Rows[e.RowIndex].Cells[2].Value = data.horario.horaInicio;
-            dgvCitasProgramadas.Rows[e.RowIndex].Cells[3].Value = data.horario.horaFin;
+            dgvCitasProgramadas.Rows[e.RowIndex].Cells[2].Value = data.horario.horaInicio.ToString("hh:mm");
+            dgvCitasProgramadas.Rows[e.RowIndex].Cells[3].Value = data.horario.horaFin.ToString("hh:mm");
         }
 
         private void dgvHistorialCitas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            CitaWS.cita data = dgvHistorialCitas.Rows[e.RowIndex].DataBoundItem
-            as CitaWS.cita;
+            GestionAtencionWS.cita data = dgvHistorialCitas.Rows[e.RowIndex].DataBoundItem
+            as GestionAtencionWS.cita;
             dgvHistorialCitas.Rows[e.RowIndex].Cells[0].Value = data.asesor.nombre;
-            dgvHistorialCitas.Rows[e.RowIndex].Cells[2].Value = data.horario.horaInicio;
-            dgvHistorialCitas.Rows[e.RowIndex].Cells[3].Value = data.horario.horaFin;
+            dgvHistorialCitas.Rows[e.RowIndex].Cells[2].Value = data.horario.horaInicio.ToString("hh:mm");
+            dgvHistorialCitas.Rows[e.RowIndex].Cells[3].Value = data.horario.horaFin.ToString("hh:mm");
         }
     }
 }
