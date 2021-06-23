@@ -111,3 +111,17 @@ insert into horario(dia,hora_inicio,hora_fin,activo) values (3,@hora,addtime(@ho
 insert into horario(dia,hora_inicio,hora_fin,activo) values (4,@hora,addtime(@hora,'0:30'),true);
 insert into horario(dia,hora_inicio,hora_fin,activo) values (5,@hora,addtime(@hora,'0:30'),true);
 
+set @hora = convert('16:00',time);
+insert into horario(dia,hora_inicio,hora_fin,activo) values (1,@hora,addtime(@hora,'0:30'),true);
+insert into horario(dia,hora_inicio,hora_fin,activo) values (2,@hora,addtime(@hora,'0:30'),true);
+insert into horario(dia,hora_inicio,hora_fin,activo) values (3,@hora,addtime(@hora,'0:30'),true);
+insert into horario(dia,hora_inicio,hora_fin,activo) values (4,@hora,addtime(@hora,'0:30'),true);
+insert into horario(dia,hora_inicio,hora_fin,activo) values (5,@hora,addtime(@hora,'0:30'),true);
+
+set @hora = convert('16:30',time);
+insert into horario(dia,hora_inicio,hora_fin,activo) values (1,@hora,addtime(@hora,'0:30'),true);
+insert into horario(dia,hora_inicio,hora_fin,activo) values (2,@hora,addtime(@hora,'0:30'),true);
+insert into horario(dia,hora_inicio,hora_fin,activo) values (3,@hora,addtime(@hora,'0:30'),true);
+insert into horario(dia,hora_inicio,hora_fin,activo) values (4,@hora,addtime(@hora,'0:30'),true);
+insert into horario(dia,hora_inicio,hora_fin,activo) values (5,@hora,addtime(@hora,'0:30'),true);
+
