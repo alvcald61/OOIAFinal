@@ -271,6 +271,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnAgregarOpinion_Click(object sender, EventArgs e)
         {
+
             GestionAtencionWS.cita cita_seleccionado =
               (GestionAtencionWS.cita)dgvHistorialCitas.CurrentRow.DataBoundItem;
             if (alumno.id_alumno > 0)
@@ -281,6 +282,7 @@ namespace ProyectoOOIA.Ventanas
             {
                 System.Console.WriteLine("El alumno si es null");
             }
+
 
             if (cita_seleccionado.asesor.id_miembro_pucp > 0)
             {
@@ -454,7 +456,14 @@ namespace ProyectoOOIA.Ventanas
         return aux;
     }
 
-
-
-}
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            GestionAtencionWS.cita[] aux = daoCita.listarCitaHistoricoXNombre(this.alumno.id_alumno,txtNombreAsesor.Text);
+            if (aux == null) return;
+            BindingList<GestionAtencionWS.cita>
+               citasAlumnos = new BindingList<GestionAtencionWS.cita>
+               (aux.ToList());
+            dgvHistorialCitas.DataSource = citasAlumnos;
+        }
+    }
 }

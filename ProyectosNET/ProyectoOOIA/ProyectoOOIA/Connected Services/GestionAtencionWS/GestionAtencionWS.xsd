@@ -14,6 +14,8 @@
   <xs:element name="insertarHorarioResponse" type="tns:insertarHorarioResponse" />
   <xs:element name="listarCitaHistorico" type="tns:listarCitaHistorico" />
   <xs:element name="listarCitaHistoricoResponse" type="tns:listarCitaHistoricoResponse" />
+  <xs:element name="listarCitaHistoricoXNombre" type="tns:listarCitaHistoricoXNombre" />
+  <xs:element name="listarCitaHistoricoXNombreResponse" type="tns:listarCitaHistoricoXNombreResponse" />
   <xs:element name="listarCitaPendiente" type="tns:listarCitaPendiente" />
   <xs:element name="listarCitaPendienteResponse" type="tns:listarCitaPendienteResponse" />
   <xs:element name="listarCodigo" type="tns:listarCodigo" />
@@ -152,6 +154,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCitaHistoricoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCitaHistoricoXNombre">
+    <xs:sequence>
+      <xs:element name="id_alumno" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_profesor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCitaHistoricoXNombreResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cita" />
     </xs:sequence>

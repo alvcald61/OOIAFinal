@@ -870,7 +870,6 @@ BEGIN
 	update cita set activo = 0 where id_cita = _id_cita;
 end$
 
-
 delimiter $
 create procedure LISTAR_CITA_PENDIENTE(
 	in _id_alumno int
@@ -882,11 +881,12 @@ begin
     	from cita c 
 	inner join horario h on c.fid_horario = h.id_horario
     inner join miembro_pucp mp on c.fid_asesor = mp.id_miembro_pucp
-    inner join persona p on mp.id_miembro_pucp= p.id_persona
+    inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
     	where c.fid_alumno=_id_alumno
 	and c.fecha >= CURDATE();
 end$
+
 
 delimiter $
 create procedure LISTAR_CITA_HISTORICO(
@@ -899,10 +899,28 @@ begin
     	from cita c 
 	inner join horario h on c.fid_horario = h.id_horario
     inner join miembro_pucp mp on c.fid_asesor = mp.id_miembro_pucp
-    inner join persona p on mp.id_miembro_pucp= p.id_persona
+    inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
     	where c.fid_alumno=_id_alumno
         and c.fecha < CURDATE();
+end$
+
+delimiter $
+create procedure LISTAR_CITA_HISTORICO_X_NOMBRE(
+	in _id_alumno int,
+    in _nombre_prof varchar(150)
+)
+begin
+	select c.id_cita, c.fid_alumno, c.tipo_asesor, c.fid_asesor, p.nombre, c.fecha, c.motivo, c.compromiso, c.asistio, 
+	h.id_horario, h.dia, h.hora_inicio, h.hora_fin,
+	ca.id_codigo_atencion, ca.codigo, ca.descripcion
+    	from cita c 
+	inner join horario h on c.fid_horario = h.id_horario
+    inner join miembro_pucp mp on c.fid_asesor = mp.id_miembro_pucp
+    inner join persona p on mp.fid_persona= p.id_persona
+    	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
+    	where c.fid_alumno=_id_alumno
+        and c.fecha < CURDATE() and (p.nombre LIKE CONCAT('%',_nombre_prof,'%'));
 end$
 
 delimiter $

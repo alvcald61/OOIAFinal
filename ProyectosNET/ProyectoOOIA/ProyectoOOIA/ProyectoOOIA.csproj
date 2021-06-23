@@ -1003,6 +1003,9 @@
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
