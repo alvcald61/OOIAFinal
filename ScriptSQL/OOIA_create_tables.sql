@@ -183,9 +183,11 @@ create table cita(
     	foreign key (fid_atencion) references codigo_atencion(id_codigo_atencion)
 )engine = innodb;
 
+
 create table encuesta(
 	id_encuesta int auto_increment,
 	fid_alumno int,
+    fid_cita int,
 	tipo_asesor int,
     	fid_asesor int,
     	puntaje decimal(4,2),
@@ -193,6 +195,7 @@ create table encuesta(
 	activo bool,
     	primary key(id_encuesta),
     	foreign key(fid_alumno) references alumno(id_alumno),
+        foreign key(fid_cita) references cita(id_cita),
     	foreign key(fid_asesor) references miembro_pucp(id_miembro_pucp)
 )engine = innodb;
 

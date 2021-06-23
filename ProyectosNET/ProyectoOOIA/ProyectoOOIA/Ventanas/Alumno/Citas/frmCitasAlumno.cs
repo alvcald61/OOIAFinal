@@ -292,7 +292,7 @@ namespace ProyectoOOIA.Ventanas
             {
                 System.Console.WriteLine("El asesor si es null");
             }
-            new frmAgregarOpinion(cita_seleccionado.asesor, asignarAlumno(alumno)).ShowDialog();
+            new frmAgregarOpinion(cita_seleccionado.id_cita ,cita_seleccionado.asesor, asignarAlumno(alumno)).ShowDialog();
 
         }
         

@@ -232,6 +232,8 @@ namespace ProyectoOOIA.GestionAtencionWS {
         
         private string descripcionField;
         
+        private int fid_citaField;
+        
         private int id_encuestaField;
         
         private double puntajeField;
@@ -288,6 +290,18 @@ namespace ProyectoOOIA.GestionAtencionWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int fid_cita {
+            get {
+                return this.fid_citaField;
+            }
+            set {
+                this.fid_citaField = value;
+                this.RaisePropertyChanged("fid_cita");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public int id_encuesta {
             get {
                 return this.id_encuestaField;
@@ -299,7 +313,7 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public double puntaje {
             get {
                 return this.puntajeField;
@@ -311,7 +325,7 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public int tipo_asesor {
             get {
                 return this.tipo_asesorField;

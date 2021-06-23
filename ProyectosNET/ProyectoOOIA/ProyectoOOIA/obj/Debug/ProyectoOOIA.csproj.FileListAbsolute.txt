@@ -742,3 +742,4 @@ C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Proy
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
+C:\Repositorios\OOIA-FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
