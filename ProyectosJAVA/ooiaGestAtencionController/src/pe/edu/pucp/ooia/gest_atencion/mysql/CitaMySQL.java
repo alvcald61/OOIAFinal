@@ -244,5 +244,55 @@ public class CitaMySQL implements CitaDAO{
                 return aux;
         return null;
     } 
+
+    @Override
+    public ArrayList<Cita> listarHistoricoXNombre(int id_alumno, String nombre) {
+         ArrayList<Cita> citas = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_CITA_HISTORICO(?,?)}");
+            cs.setInt("_id_alumno",id_alumno);
+            cs.setString("_nombre_prof",nombre);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Cita cita = new Cita();
+                /*Cita*/
+                cita.setId_cita(rs.getInt("id_cita"));
+                cita.setAlumno(new Alumno());
+                cita.setAlumno(obtenerAlumno(rs.getInt("fid_alumno")));
+                cita.setTipo_asesor(rs.getInt("tipo_asesor"));
+                if(cita.getTipo_asesor() == 0){
+                    cita.setAsesor(new Profesor());
+                    //cita.setAsesor(obtenerProfesor(rs.getInt("fid_asesor")));
+                    cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
+                    cita.getAsesor().setNombre(rs.getString("nombre"));
+                }
+                else if(cita.getTipo_asesor() == 1){
+                    cita.setAsesor(new Psicologo());
+                    //cita.setAsesor(obtenerPsicologo(rs.getInt("fid_asesor")));
+                    cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
+                    cita.getAsesor().setNombre(rs.getString("nombre"));
+                }
+                cita.setFecha(rs.getDate("fecha"));
+                cita.setHorario(new Horario(rs.getInt("id_horario"), rs.getInt("dia"), rs.getTime("hora_inicio"),
+                        rs.getTime("hora_fin")));
+                cita.setCodigo_atencion(new CodigoAtencion(rs.getInt("id_codigo_atencion"),
+                        rs.getString("codigo"), rs.getString("descripcion")));
+                cita.setMotivo(rs.getString("motivo"));
+                cita.setCompromiso(rs.getString("compromiso"));
+                cita.setAsistio(rs.getBoolean("asistio"));
+                cita.setEstado(true);
+                citas.add(cita);
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return citas;
+    }
     
 }

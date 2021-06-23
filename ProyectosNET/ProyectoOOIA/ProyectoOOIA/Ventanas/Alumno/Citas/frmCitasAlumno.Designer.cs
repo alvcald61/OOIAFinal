@@ -30,10 +30,10 @@ namespace ProyectoOOIA.Ventanas
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCitasAlumno));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.PictureBox();
@@ -70,7 +70,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabHistorialCitas = new System.Windows.Forms.TabPage();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombreAsesor = new System.Windows.Forms.TextBox();
             this.lblListaCitasPasadas = new System.Windows.Forms.Label();
             this.btnAgregarOpinion = new System.Windows.Forms.Button();
             this.btnDetHistorial = new System.Windows.Forms.Button();
@@ -120,7 +120,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtras.Location = new System.Drawing.Point(1289, 34);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(47, 42);
             this.btnAtras.TabIndex = 13;
@@ -159,14 +159,14 @@ namespace ProyectoOOIA.Ventanas
             this.dgvCitasProgramadas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCitasProgramadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCitasProgramadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCitasProgramadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvCitasProgramadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCitasProgramadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Orientador,
@@ -181,8 +181,8 @@ namespace ProyectoOOIA.Ventanas
             this.dgvCitasProgramadas.ReadOnly = true;
             this.dgvCitasProgramadas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvCitasProgramadas.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dgvCitasProgramadas.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.dgvCitasProgramadas.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvCitasProgramadas.RowTemplate.Height = 24;
             this.dgvCitasProgramadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCitasProgramadas.Size = new System.Drawing.Size(1296, 246);
@@ -307,7 +307,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(228)))), ((int)(((byte)(75)))));
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnNuevo.Location = new System.Drawing.Point(11, 6);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -334,7 +334,7 @@ namespace ProyectoOOIA.Ventanas
             this.pnlRegistrarCita.Controls.Add(this.btnBuscarHorario);
             this.pnlRegistrarCita.Controls.Add(this.txtHoraFin);
             this.pnlRegistrarCita.Location = new System.Drawing.Point(11, 68);
-            this.pnlRegistrarCita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlRegistrarCita.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRegistrarCita.Name = "pnlRegistrarCita";
             this.pnlRegistrarCita.Size = new System.Drawing.Size(773, 270);
             this.pnlRegistrarCita.TabIndex = 53;
@@ -353,7 +353,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.dtpFecha.Enabled = false;
             this.dtpFecha.Location = new System.Drawing.Point(133, 63);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(265, 25);
             this.dtpFecha.TabIndex = 52;
@@ -444,7 +444,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtHoraInicio.Enabled = false;
             this.txtHoraInicio.Location = new System.Drawing.Point(133, 96);
-            this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraInicio.Name = "txtHoraInicio";
             this.txtHoraInicio.ReadOnly = true;
             this.txtHoraInicio.Size = new System.Drawing.Size(115, 25);
@@ -513,7 +513,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabHistorialCitas.BackColor = System.Drawing.SystemColors.Control;
             this.tabHistorialCitas.Controls.Add(this.btnBuscar);
             this.tabHistorialCitas.Controls.Add(this.label1);
-            this.tabHistorialCitas.Controls.Add(this.textBox1);
+            this.tabHistorialCitas.Controls.Add(this.txtNombreAsesor);
             this.tabHistorialCitas.Controls.Add(this.lblListaCitasPasadas);
             this.tabHistorialCitas.Controls.Add(this.btnAgregarOpinion);
             this.tabHistorialCitas.Controls.Add(this.btnDetHistorial);
@@ -537,6 +537,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnBuscar.TabIndex = 55;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label1
             // 
@@ -545,17 +546,17 @@ namespace ProyectoOOIA.Ventanas
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(35, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 25);
+            this.label1.Size = new System.Drawing.Size(231, 25);
             this.label1.TabIndex = 54;
-            this.label1.Text = "Ingrese el nombre de un tutor o una fecha:";
+            this.label1.Text = "Ingrese el nombre de un tutor:";
             // 
-            // textBox1
+            // txtNombreAsesor
             // 
-            this.textBox1.Location = new System.Drawing.Point(371, 46);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(473, 25);
-            this.textBox1.TabIndex = 53;
+            this.txtNombreAsesor.Location = new System.Drawing.Point(293, 46);
+            this.txtNombreAsesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombreAsesor.Name = "txtNombreAsesor";
+            this.txtNombreAsesor.Size = new System.Drawing.Size(514, 25);
+            this.txtNombreAsesor.TabIndex = 53;
             // 
             // lblListaCitasPasadas
             // 
@@ -570,7 +571,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnAgregarOpinion
             // 
-            this.btnAgregarOpinion.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAgregarOpinion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(228)))), ((int)(((byte)(75)))));
             this.btnAgregarOpinion.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnAgregarOpinion.Location = new System.Drawing.Point(1044, 111);
             this.btnAgregarOpinion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -599,14 +600,14 @@ namespace ProyectoOOIA.Ventanas
             this.dgvHistorialCitas.AllowUserToAddRows = false;
             this.dgvHistorialCitas.AllowUserToDeleteRows = false;
             this.dgvHistorialCitas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistorialCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistorialCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvHistorialCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorialCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
@@ -620,9 +621,10 @@ namespace ProyectoOOIA.Ventanas
             this.dgvHistorialCitas.Name = "dgvHistorialCitas";
             this.dgvHistorialCitas.ReadOnly = true;
             this.dgvHistorialCitas.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgvHistorialCitas.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            this.dgvHistorialCitas.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvHistorialCitas.RowTemplate.Height = 24;
+            this.dgvHistorialCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHistorialCitas.Size = new System.Drawing.Size(1296, 460);
             this.dgvHistorialCitas.TabIndex = 5;
             this.dgvHistorialCitas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvHistorialCitas_CellFormatting);
@@ -746,7 +748,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombreAsesor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Orientador;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;

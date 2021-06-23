@@ -79,6 +79,7 @@ public class EncuestaMySQL implements EncuestaDAO{
                 encuesta.setDescripcion(rs.getString("descripcion"));
                 encuesta.setAlumno(new Alumno());
                 encuesta.setAlumno(obtenerAlumno(rs.getInt("fid_alumno")));
+                //encuesta.getAlumno().setId_alumno(rs.getInt("fid_alumno"));
                 encuesta.setTipo_asesor(rs.getInt("tipo_asesor"));
                 if(encuesta.getTipo_asesor() == 0){
                     encuesta.setAsesor(new Profesor());
