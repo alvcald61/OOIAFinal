@@ -1171,6 +1171,7 @@ namespace ProyectoOOIA.Ventanas
             this.radioButton18.TabIndex = 45;
             this.radioButton18.TabStop = true;
             this.radioButton18.UseVisualStyleBackColor = true;
+            
             // 
             // radioButton17
             // 

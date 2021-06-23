@@ -286,6 +286,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBuscarHorario_Click(object sender, EventArgs e)
         {
+            
             frmHorarioCita aux=new frmHorarioCita();
             aux.ShowDialog();
             
@@ -331,6 +332,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            
             this.estado = Estado.Modificar;
             cambiarEstado();
 

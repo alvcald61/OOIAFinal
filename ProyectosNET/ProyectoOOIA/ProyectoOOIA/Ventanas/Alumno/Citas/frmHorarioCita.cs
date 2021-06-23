@@ -18,7 +18,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -39,5 +39,7 @@ namespace ProyectoOOIA.Ventanas
 
             this.Close();
         }
+
+        
     }
 }
