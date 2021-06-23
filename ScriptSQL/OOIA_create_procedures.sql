@@ -790,8 +790,8 @@ create procedure INSERTAR_HORARIO_ASESOR(
     	in _fid_asesor int,
     	in _estado varchar(50)
 )begin
-	insert into horario_asesor(fid_horario, fid_asesor, estado, activo) 
-    	values(_fid_horario, _fid_asesor, _estado, true);
+	insert into horario_asesor(fid_horario, fid_asesor, estado) 
+    	values(_fid_horario, _fid_asesor, _estado);
 	set _id_horario_asesor = @@last_insert_id;
 end$
 
