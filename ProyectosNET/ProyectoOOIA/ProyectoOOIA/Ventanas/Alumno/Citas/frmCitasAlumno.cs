@@ -244,7 +244,7 @@ namespace ProyectoOOIA.Ventanas
                                      "Atte. Oficina de Orientación, Información y Apoyo al Estudiante\n\n ";
 
 
-                    
+                    enviarCorreo("Inscripción a cita con " + asesor.nombre,mensaje);
                     horarioAsesor.estado = "reservado";
                     
                     daoCita.modificarHorarioAsesor(horarioAsesor);
@@ -341,6 +341,10 @@ namespace ProyectoOOIA.Ventanas
             this.estado = Estado.Inicial;
             cambiarEstado();
             clearall();
+            listarCitasProgramadas();
+            horarioAsesor.estado = "disponible";
+
+            daoCita.modificarHorarioAsesor(horarioAsesor);
         }
 
         private void dgvCitasProgramadas_CellContentClick(object sender, DataGridViewCellEventArgs e)

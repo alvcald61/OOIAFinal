@@ -884,7 +884,7 @@ begin
     inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
     	where c.fid_alumno=_id_alumno
-	and c.fecha >= CURDATE();
+	and c.fecha >= CURDATE() and c.activo = 1;
 end$
 
 
@@ -902,7 +902,7 @@ begin
     inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
     	where c.fid_alumno=_id_alumno
-        and c.fecha < CURDATE();
+        and c.fecha < CURDATE() and c.activo = 1;
 end$
 
 delimiter $
