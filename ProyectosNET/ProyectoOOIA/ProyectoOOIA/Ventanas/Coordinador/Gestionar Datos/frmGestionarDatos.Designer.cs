@@ -155,9 +155,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.txtHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.txtHeader.Location = new System.Drawing.Point(41, 34);
             this.txtHeader.Name = "txtHeader";
-            this.txtHeader.Size = new System.Drawing.Size(356, 37);
+            this.txtHeader.Size = new System.Drawing.Size(366, 37);
             this.txtHeader.TabIndex = 1;
-            this.txtHeader.Text = "Carga de Datos";
+            this.txtHeader.Text = "Gestionar Información del Sistema";
             // 
             // panelGestionHumana
             // 
@@ -185,7 +185,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.tabGestionHumana.Padding = new System.Windows.Forms.Padding(3);
             this.tabGestionHumana.Size = new System.Drawing.Size(676, 364);
             this.tabGestionHumana.TabIndex = 0;
-            this.tabGestionHumana.Text = "Gestion Humana";
+            this.tabGestionHumana.Text = "Gestion de Usuarios";
             this.tabGestionHumana.UseVisualStyleBackColor = true;
             // 
             // panel3
@@ -799,7 +799,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.tabGestionAtencion.Padding = new System.Windows.Forms.Padding(3);
             this.tabGestionAtencion.Size = new System.Drawing.Size(676, 364);
             this.tabGestionAtencion.TabIndex = 2;
-            this.tabGestionAtencion.Text = "Gestion Atencion";
+            this.tabGestionAtencion.Text = "Gestion de Citas";
             this.tabGestionAtencion.UseVisualStyleBackColor = true;
             // 
             // pnlCodigoAtencion
@@ -908,7 +908,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.MinimizeBox = false;
             this.Name = "frmCargarDatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCargarDatos";
+            this.Text = "Gestionar Información";
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.panelGestionHumana.ResumeLayout(false);

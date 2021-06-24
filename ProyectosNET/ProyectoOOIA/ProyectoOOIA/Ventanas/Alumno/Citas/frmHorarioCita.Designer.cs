@@ -677,7 +677,7 @@ namespace ProyectoOOIA.Ventanas
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmHorarioCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmHorarioCita";
+            this.Text = "Busqueda de Horarios";
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();

@@ -37,7 +37,6 @@ namespace ProyectoOOIA.Ventanas
                 if (tipoIdUsuario == 2) usuario = usuarioDao.listar_profesor_x_id(id_usuario);
                 else if (tipoIdUsuario == 3) usuario = usuarioDao.listar_psicologo_x_id(id_usuario);
                 btnEventos.Enabled = false;
-                //btnEventos.Visible = false;
                 txtEventos.Enabled = false;
                 
             }
@@ -47,7 +46,6 @@ namespace ProyectoOOIA.Ventanas
                 usuario = usuarioDao.listar_coordinador_x_id(id_usuario);
                 btnCargaDatos.Visible = true;
                 btnCitas.Enabled = false;
-                //btnCitas.Visible = false;
                 txtCitas.Enabled = false;
             }
             else usuario = usuarioDao.listar_alumno_x_id(id_usuario);
