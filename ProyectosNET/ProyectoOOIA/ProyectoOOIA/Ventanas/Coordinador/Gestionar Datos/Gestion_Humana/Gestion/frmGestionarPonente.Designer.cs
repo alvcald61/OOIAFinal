@@ -61,10 +61,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblMiembroExterno = new System.Windows.Forms.Label();
-            this.lblPonente = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.txtOrganizacion = new System.Windows.Forms.TextBox();
             this.ofd_Imagen = new System.Windows.Forms.OpenFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblPag2 = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -200,11 +201,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabPersona.Padding = new System.Windows.Forms.Padding(3);
             this.tabPersona.Size = new System.Drawing.Size(736, 252);
             this.tabPersona.TabIndex = 1;
-            this.tabPersona.Text = "Datos Persona";
+            this.tabPersona.Text = "Página 1";
             this.tabPersona.UseVisualStyleBackColor = true;
             // 
             // pnlPersona
             // 
+            this.pnlPersona.Controls.Add(this.label1);
             this.pnlPersona.Controls.Add(this.dtpFechaNacimiento);
             this.pnlPersona.Controls.Add(this.txtCorreo);
             this.pnlPersona.Controls.Add(this.lblCorreo);
@@ -314,9 +316,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.lblPersona.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPersona.Location = new System.Drawing.Point(3, 0);
             this.lblPersona.Name = "lblPersona";
-            this.lblPersona.Size = new System.Drawing.Size(166, 27);
+            this.lblPersona.Size = new System.Drawing.Size(201, 27);
             this.lblPersona.TabIndex = 8;
-            this.lblPersona.Text = "Datos de Persona";
+            this.lblPersona.Text = "Información Personal";
             // 
             // tabPonente
             // 
@@ -326,17 +328,17 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabPonente.Padding = new System.Windows.Forms.Padding(3);
             this.tabPonente.Size = new System.Drawing.Size(736, 252);
             this.tabPonente.TabIndex = 0;
-            this.tabPonente.Text = "Datos Ponente";
+            this.tabPonente.Text = "Página 2";
             this.tabPonente.UseVisualStyleBackColor = true;
             // 
             // pnlDatos
             // 
+            this.pnlDatos.Controls.Add(this.lblPag2);
             this.pnlDatos.Controls.Add(this.txtTelefono);
             this.pnlDatos.Controls.Add(this.txtOcupacion);
             this.pnlDatos.Controls.Add(this.lblPassword);
             this.pnlDatos.Controls.Add(this.lblUsuario);
             this.pnlDatos.Controls.Add(this.lblMiembroExterno);
-            this.pnlDatos.Controls.Add(this.lblPonente);
             this.pnlDatos.Controls.Add(this.lblRol);
             this.pnlDatos.Controls.Add(this.txtOrganizacion);
             this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Left;
@@ -363,7 +365,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(6, 56);
+            this.lblPassword.Location = new System.Drawing.Point(6, 54);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(77, 21);
             this.lblPassword.TabIndex = 10;
@@ -385,25 +387,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.lblMiembroExterno.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMiembroExterno.Location = new System.Drawing.Point(3, 0);
             this.lblMiembroExterno.Name = "lblMiembroExterno";
-            this.lblMiembroExterno.Size = new System.Drawing.Size(241, 27);
+            this.lblMiembroExterno.Size = new System.Drawing.Size(153, 27);
             this.lblMiembroExterno.TabIndex = 7;
-            this.lblMiembroExterno.Text = "Datos de Persona Externa";
-            // 
-            // lblPonente
-            // 
-            this.lblPonente.AutoSize = true;
-            this.lblPonente.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPonente.Location = new System.Drawing.Point(5, 100);
-            this.lblPonente.Name = "lblPonente";
-            this.lblPonente.Size = new System.Drawing.Size(173, 27);
-            this.lblPonente.TabIndex = 4;
-            this.lblPonente.Text = "Datos del Ponente";
+            this.lblMiembroExterno.Text = "Datos Contacto";
             // 
             // lblRol
             // 
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.Location = new System.Drawing.Point(5, 129);
+            this.lblRol.Location = new System.Drawing.Point(6, 80);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(89, 21);
             this.lblRol.TabIndex = 1;
@@ -411,7 +403,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             // txtOrganizacion
             // 
-            this.txtOrganizacion.Location = new System.Drawing.Point(152, 130);
+            this.txtOrganizacion.Location = new System.Drawing.Point(152, 82);
             this.txtOrganizacion.Name = "txtOrganizacion";
             this.txtOrganizacion.Size = new System.Drawing.Size(145, 20);
             this.txtOrganizacion.TabIndex = 0;
@@ -419,6 +411,26 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // ofd_Imagen
             // 
             this.ofd_Imagen.FileName = "Alumno_Perfil";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(635, 225);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 21);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Página 1 de 2";
+            // 
+            // lblPag2
+            // 
+            this.lblPag2.AutoSize = true;
+            this.lblPag2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPag2.Location = new System.Drawing.Point(637, 225);
+            this.lblPag2.Name = "lblPag2";
+            this.lblPag2.Size = new System.Drawing.Size(90, 21);
+            this.lblPag2.TabIndex = 18;
+            this.lblPag2.Text = "Página 2 de 2";
             // 
             // frmGestionarPonente
             // 
@@ -482,6 +494,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.TextBox txtOrganizacion;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
-        private System.Windows.Forms.Label lblPonente;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPag2;
     }
 }

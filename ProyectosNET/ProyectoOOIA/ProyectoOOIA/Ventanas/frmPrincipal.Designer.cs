@@ -127,16 +127,17 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnCargaDatos
             // 
+            this.btnCargaDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(106)))), ((int)(((byte)(145)))));
+            this.btnCargaDatos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargaDatos.FlatAppearance.BorderSize = 0;
-            this.btnCargaDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargaDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargaDatos.ForeColor = System.Drawing.Color.White;
             this.btnCargaDatos.Location = new System.Drawing.Point(701, 17);
             this.btnCargaDatos.Name = "btnCargaDatos";
-            this.btnCargaDatos.Size = new System.Drawing.Size(128, 46);
+            this.btnCargaDatos.Size = new System.Drawing.Size(181, 46);
             this.btnCargaDatos.TabIndex = 13;
-            this.btnCargaDatos.Text = "Cargar Datos";
-            this.btnCargaDatos.UseVisualStyleBackColor = true;
+            this.btnCargaDatos.Text = "Gestionar Información";
+            this.btnCargaDatos.UseVisualStyleBackColor = false;
             this.btnCargaDatos.Click += new System.EventHandler(this.btnCargaDatos_Click);
             // 
             // lblUsername

@@ -35,6 +35,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.lblHeader = new System.Windows.Forms.Label();
             this.tsAlumno = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
@@ -51,7 +52,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.txtId_especialidad = new System.Windows.Forms.TextBox();
             this.lblId_especialidad = new System.Windows.Forms.Label();
             this.lblEspecialidad = new System.Windows.Forms.Label();
-            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.tsAlumno.SuspendLayout();
@@ -118,6 +118,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.ToolTipText = "Nuevo";
             this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
+            // 
+            // tsbGuardar
+            // 
+            this.tsbGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsbGuardar.Image")));
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(73, 24);
+            this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
             // tsbModificar
             // 
@@ -258,9 +267,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.lblId_especialidad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblId_especialidad.Location = new System.Drawing.Point(14, 36);
             this.lblId_especialidad.Name = "lblId_especialidad";
-            this.lblId_especialidad.Size = new System.Drawing.Size(102, 21);
+            this.lblId_especialidad.Size = new System.Drawing.Size(99, 21);
             this.lblId_especialidad.TabIndex = 16;
-            this.lblId_especialidad.Text = "Id_especialidad";
+            this.lblId_especialidad.Text = "Id Especialidad";
             // 
             // lblEspecialidad
             // 
@@ -272,16 +281,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.lblEspecialidad.TabIndex = 9;
             this.lblEspecialidad.Text = "Especialidad";
             // 
-            // tsbGuardar
-            // 
-            this.tsbGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsbGuardar.Image")));
-            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(73, 24);
-            this.tsbGuardar.Text = "Guardar";
-            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
-            // 
-            // frmCargarEspecialidad
+            // frmGestionarEspecialidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -289,7 +289,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.tsAlumno);
             this.Controls.Add(this.pnlHeader);
-            this.Name = "frmCargarEspecialidad";
+            this.Name = "frmGestionarEspecialidad";
             this.Text = "Gestionar Especialidades";
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
