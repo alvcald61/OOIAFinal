@@ -72,10 +72,15 @@ namespace ProyectoOOIA.Ventanas
 
         private void listarCitasProgramadas()
         {
-            BindingList<GestionAtencionWS.cita>
-               citasAlumnos = new BindingList<GestionAtencionWS.cita>
-               (daoCita.listarCitaPendiente(this.alumno.id_alumno).ToList());
-            dgvCitasProgramadas.DataSource = citasAlumnos;
+            try
+            {
+                BindingList<GestionAtencionWS.cita>
+                    citasAlumnos = new BindingList<GestionAtencionWS.cita>
+                        (daoCita.listarCitaPendiente(this.alumno.id_alumno).ToList());
+                dgvCitasProgramadas.DataSource = citasAlumnos;
+            }
+            catch { }
+            
         }
 
         public void clearall()
@@ -258,9 +263,13 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBuscarHorario_Click(object sender, EventArgs e)
         {
-            frmHorarioCita aux=new frmHorarioCita();
-            aux.ShowDialog();
-            
+            frmHorarioCita frmBuscarHorario = new frmHorarioCita(asesor);
+            if(frmBuscarHorario.ShowDialog() == DialogResult.OK)
+            {
+                dtpFecha.Value = frmBuscarHorario.Horario;
+                dtpHoraInicio.Value = frmBuscarHorario.Horario;
+                dtpHoraFin.Value = frmBuscarHorario.Horario.AddMinutes(30);
+            }
         }
 
         private void btnDetInscritas_Click(object sender, EventArgs e)
