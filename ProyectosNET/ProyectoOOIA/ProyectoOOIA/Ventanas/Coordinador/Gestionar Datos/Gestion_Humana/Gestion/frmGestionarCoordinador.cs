@@ -131,9 +131,13 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         public void displayImage(byte[] image)
         {
-            MemoryStream ms = new MemoryStream(image);
-            pbPerfil1.Image = Image.FromStream(ms);
-            pbPerfil2.Image = Image.FromStream(ms);
+            try
+            {
+                MemoryStream ms = new MemoryStream(image);
+                pbPerfil1.Image = Image.FromStream(ms);
+                pbPerfil2.Image = Image.FromStream(ms);
+            }
+            catch { };
         }
 
         /*Botones de Header*/

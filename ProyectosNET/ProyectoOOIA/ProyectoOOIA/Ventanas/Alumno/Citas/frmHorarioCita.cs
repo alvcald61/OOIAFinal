@@ -184,11 +184,11 @@ namespace ProyectoOOIA.Ventanas
                     botones[i].BackColor = System.Drawing.Color.MidnightBlue;
                     botones[i].Enabled = false;
                 }
-                //if ((i % 5) < (int)now.DayOfWeek && numWeek == 1)
-                //{
-                //    botones[i].BackColor = System.Drawing.Color.DarkGray;
-                //    botones[i].Enabled = false;
-                //}
+                if ((i % 5) < (int)now.DayOfWeek && numWeek == 1)
+                {
+                    botones[i].BackColor = System.Drawing.Color.DarkGray;
+                    botones[i].Enabled = false;
+                }
 
             }
 

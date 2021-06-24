@@ -251,7 +251,6 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.btnNextWeek.BackColor = System.Drawing.Color.Transparent;
             this.btnNextWeek.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNextWeek.Enabled = false;
             this.btnNextWeek.Image = global::ProyectoOOIA.Properties.Resources.next;
             this.btnNextWeek.Location = new System.Drawing.Point(738, 72);
             this.btnNextWeek.Margin = new System.Windows.Forms.Padding(2);
@@ -260,13 +259,11 @@ namespace ProyectoOOIA.Ventanas
             this.btnNextWeek.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnNextWeek.TabIndex = 14;
             this.btnNextWeek.TabStop = false;
-            this.btnNextWeek.Visible = false;
             this.btnNextWeek.Click += new System.EventHandler(this.btnNextWeek_Click);
             // 
             // btnPrevWeek
             // 
             this.btnPrevWeek.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrevWeek.Enabled = false;
             this.btnPrevWeek.Image = global::ProyectoOOIA.Properties.Resources.back;
             this.btnPrevWeek.Location = new System.Drawing.Point(209, 72);
             this.btnPrevWeek.Margin = new System.Windows.Forms.Padding(2);
@@ -275,7 +272,6 @@ namespace ProyectoOOIA.Ventanas
             this.btnPrevWeek.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPrevWeek.TabIndex = 2;
             this.btnPrevWeek.TabStop = false;
-            this.btnPrevWeek.Visible = false;
             this.btnPrevWeek.Click += new System.EventHandler(this.btnPrevWeek_Click);
             // 
             // tlpHorario

@@ -117,7 +117,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // imagen
             // 
-            this.imagen.BackColor = System.Drawing.Color.DarkGray;
+            this.imagen.BackColor = System.Drawing.Color.Transparent;
             this.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imagen.Location = new System.Drawing.Point(21, 7);
             this.imagen.Name = "imagen";

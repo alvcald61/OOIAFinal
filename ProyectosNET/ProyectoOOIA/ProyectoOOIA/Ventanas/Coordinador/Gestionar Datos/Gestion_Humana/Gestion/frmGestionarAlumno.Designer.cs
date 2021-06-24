@@ -322,7 +322,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(744, 278);
             this.tabControl.TabIndex = 4;
-            this.tabControl.Visible = false;
             // 
             // tabPersona
             // 
