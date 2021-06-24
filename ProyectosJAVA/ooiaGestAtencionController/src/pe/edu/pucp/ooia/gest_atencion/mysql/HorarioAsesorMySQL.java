@@ -26,7 +26,7 @@ public class HorarioAsesorMySQL implements HorarioAsesorDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_HORARIO_ASESOR()}");
+            cs = con.prepareCall("{call LISTAR_HORARIO_ASESOR(?)}");
             cs.setInt("_id_asesor",idAsesor);
             rs = cs.executeQuery();
             while(rs.next()){

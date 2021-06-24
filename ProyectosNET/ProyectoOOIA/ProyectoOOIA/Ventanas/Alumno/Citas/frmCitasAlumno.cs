@@ -306,7 +306,7 @@ namespace ProyectoOOIA.Ventanas
             frmListaTutores aux=new frmListaTutores();
             aux.ShowDialog();
             asesor = aux.Asesor;
-            if(asesor!=null)this.txtAsesor.Text = asesor.nombre;
+            if (asesor != null) this.txtAsesor.Text = asesor.nombre;
 
         }
 

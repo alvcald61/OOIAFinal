@@ -32,9 +32,10 @@ namespace ProyectoOOIA.Ventanas
             btnPrevWeek.Visible = false;
             assignWeek();
             showWeek();
-            loadHorario();
+            
             this.asesor = asesor;
-            daoHorario = new GestionAtencionWS.GestionAtencionWSClient();         
+            daoHorario = new GestionAtencionWS.GestionAtencionWSClient();
+            loadHorario();
         }
        
         public void createButtons()
@@ -128,13 +129,13 @@ namespace ProyectoOOIA.Ventanas
 
         private void loadHorario()
         {
-
-            /*try
-            {
-                BindingList<GestionAtencionWS.horario>
-                horarios = new BindingList<GestionAtencionWS.horario>(daoHorario.listarHorarioAsesor(asesor.id_miembro_pucp));
-            }
-            catch { return; }*/
+            BindingList<GestionAtencionWS.horarioAsesor>
+                horarios;
+            //try
+            //{
+                horarios = new BindingList<GestionAtencionWS.horarioAsesor>(daoHorario.listarHorarioAsesor(asesor.id_miembro_pucp));
+            //}
+            //catch { return; }
             DateTime now = DateTime.Now;
             for (int i=0; i<90; i++)
             {
@@ -146,22 +147,25 @@ namespace ProyectoOOIA.Ventanas
                     botones[i].BackColor = System.Drawing.Color.LightGray;
                     botones[i].Enabled = false;
                 }
-                /*
-                if(horarios[i].estado == "disponible") 
+
+                if (horarios[i].estado == "disponible")
                     botones[i].BackColor = System.Drawing.Color.White;
-                if(horarios[i].estado == "No disponible") {
+                if (horarios[i].estado == "No disponible")
+                {
                     botones[i].BackColor = System.Drawing.Color.LightGray;
                     botones[i].Enabled = false;
                 }
-                if(horarios[i].estado == "ocupado") {
+                if (horarios[i].estado == "ocupado")
+                {
                     botones[i].BackColor = System.Drawing.Color.Red;
                     botones[i].Enabled = false;
                 }
-                if(horarios[i].estado == "reservado") {
+                if (horarios[i].estado == "reservado")
+                {
                     botones[i].BackColor = System.Drawing.Color.Blue;
                     botones[i].Enabled = false;
                 }
-                */
+
             }
 
 
