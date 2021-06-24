@@ -1,6 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ProyectoOOIA.GestionAtencionWS;
@@ -17,7 +19,7 @@ namespace ProyectoOOIA.Ventanas
         private GestionHumanaWS.miembroPUCP asesor;
         private GestionHumanaWS.persona persona;
         private GestionHumanaWS.alumno alumno;
-        
+        private GestionAtencionWS.cita citaNueva;
 
         public frmCitasAlumno()
         {
@@ -201,42 +203,68 @@ namespace ProyectoOOIA.Ventanas
             //cita.asesor = 
             //cita.fechaRegistro = Date.Now;
 
-            if (estado.Equals(Estado.Nuevo))
-            {
+            citaNueva = new cita();
+            citaNueva.asesor = asignarAsesor(asesor);
+            citaNueva.alumno = asignarAlumno(alumno);
+            citaNueva.fecha = dtpFecha.Value;
+            citaNueva.estado = true;
+            citaNueva.activo = true;
+            citaNueva.asistio = false;
+            citaNueva.fechaSpecified = true;
+            //citaNueva.horario = new horario();
+
+            citaNueva.motivo = txtMotivo.Text;
+            if (asesor is GestionHumanaWS.profesor) citaNueva.tipo_asesor = 1;
+            else citaNueva.tipo_asesor = 2;
+
+            //if (estado.Equals(Estado.Nuevo))
+            //{
                 DialogResult dr =
                 MessageBox.Show("¿Esta seguro que desea programar la cita?", "Registro de cita",
                 MessageBoxButtons.YesNo, MessageBoxIcon.None);
                 if (dr == DialogResult.Yes)
                 {
-                    //int resultado = daoCita.insertar(cita);
-                    int resultado = 1;
-                    if (resultado != 0)
-                    {
-                        MessageBox.Show("La cita ha sido registrada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.estado = Estado.Inicial;
-                        cambiarEstado();
-                    }
-                    else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else if (estado.Equals(Estado.Modificar))
-            {
-                DialogResult dr =
-                MessageBox.Show("¿Esta seguro que desea modificar la cita?", "Modificación de cita",
-                MessageBoxButtons.YesNo, MessageBoxIcon.None);
-                if (dr == DialogResult.Yes)
+                //int resultado = daoCita.insertar(cita);
+                int resultado = daoCita.insertarCita(citaNueva);
+                if (resultado != 0)
                 {
-                    //int resultado = daoCita.modificar(cita);
-                    int resultado = 1;
-                    if (resultado != 0)
-                    {
-                        MessageBox.Show("La cita ha sido modificada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.estado = Estado.Inicial;
+                    MessageBox.Show("La cita ha sido registrada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string mensaje = "Estimado " + alumno.nombre + ":\n" +
+                                     "Ustedes ha agendado satisfactoriamente una cita con la OOIA. A continuación le indicaremos los datos de la sesion: \n\n" +
+                                     "Asesor: " + asesor.nombre + "\n" +
+                                     "Fecha: " + citaNueva.fecha + "\n" +
+                                     "Desde las: " + citaNueva.horario.horaInicio + "\n" +
+                                     "Hasta: " + citaNueva.horario.horaFin + "\n" +
+                                     "Con el siguiente motivo: " + citaNueva.motivo + "\n\n\n\n" +
+                                     "Atte. Oficina de Orientación, Información y Apoyo al Estudiante\n\n ";
+
+
+                    enviarCorreo("Inscripción a Cita con " + asesor.nombre, mensaje);
+
+                    this.estado = Estado.Inicial;
                         cambiarEstado();
                     }
                     else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
+            //}
+            //else if (estado.Equals(Estado.Modificar))
+            //{
+            //    DialogResult dr =
+            //    MessageBox.Show("¿Esta seguro que desea modificar la cita?", "Modificación de cita",
+            //    MessageBoxButtons.YesNo, MessageBoxIcon.None);
+            //    if (dr == DialogResult.Yes)
+            //    {
+            //        //int resultado = daoCita.modificar(cita);
+            //        int resultado = 1;
+            //        if (resultado != 0)
+            //        {
+            //            MessageBox.Show("La cita ha sido modificada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            this.estado = Estado.Inicial;
+            //            cambiarEstado();
+            //        }
+            //        else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -248,10 +276,31 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnAgregarOpinion_Click(object sender, EventArgs e)
         {
-            new frmAgregarOpinion().ShowDialog();
+
+            GestionAtencionWS.cita cita_seleccionado =
+              (GestionAtencionWS.cita)dgvHistorialCitas.CurrentRow.DataBoundItem;
+            if (alumno.id_alumno > 0)
+            {
+                System.Console.WriteLine("El alumno no es null");
+            }
+            else
+            {
+                System.Console.WriteLine("El alumno si es null");
+            }
+
+
+            if (cita_seleccionado.asesor.id_miembro_pucp > 0)
+            {
+                System.Console.WriteLine("El asesor no es null");
+            }
+            else
+            {
+                System.Console.WriteLine("El asesor si es null");
+            }
+            new frmAgregarOpinion(cita_seleccionado.id_cita ,cita_seleccionado.asesor, asignarAlumno(alumno)).ShowDialog();
 
         }
-
+        
         private void btnBuscarAsesor_Click(object sender, EventArgs e)
         {
             frmListaTutores aux=new frmListaTutores();
@@ -312,6 +361,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            
             this.estado = Estado.Modificar;
             cambiarEstado();
 
@@ -333,6 +383,97 @@ namespace ProyectoOOIA.Ventanas
             dgvHistorialCitas.Rows[e.RowIndex].Cells[0].Value = data.asesor.nombre;
             dgvHistorialCitas.Rows[e.RowIndex].Cells[2].Value = data.horario.horaInicio.ToString("hh:mm");
             dgvHistorialCitas.Rows[e.RowIndex].Cells[3].Value = data.horario.horaFin.ToString("hh:mm");
+        }
+
+        private void enviarCorreo(string motivo, string mensaje)
+        {
+            var fromAddress = new MailAddress("OOIA.no.reply@gmail.com", "OOIA");
+            var toAddress = new MailAddress(alumno.correo, alumno.nombre);
+            const string fromPassword = "sistemaOOIA123";
+            string subject = motivo;
+            string body = mensaje;
+            var smtp = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+            };
+            using (var message = new MailMessage(fromAddress, toAddress)
+            {
+                Subject = subject,
+                Body = body
+            })
+            {
+                smtp.Send(message);
+            }
+        }
+
+
+        private GestionAtencionWS.alumno asignarAlumno(GestionHumanaWS.alumno alumno)
+        {
+            GestionAtencionWS.alumno aux = new GestionAtencionWS.alumno();
+
+            aux.id_alumno = alumno.id_alumno;
+            aux.activo = alumno.activo;
+            aux.codigo = alumno.codigo;
+            aux.craest = alumno.craest;
+            aux.creditos_aprobados = alumno.creditos_aprobados;
+            GestionAtencionWS.especialidad auxEspecialidad = new GestionAtencionWS.especialidad();
+            auxEspecialidad.nombre = alumno.especialidad.nombre;
+            auxEspecialidad.activo = true;
+            auxEspecialidad.id_especialidad = alumno.especialidad.id_especialidad;
+            aux.especialidad = auxEspecialidad;
+            aux.correo = alumno.correo;
+            aux.direccion = alumno.direccion;
+            aux.fecha_inclusion = alumno.fecha_inclusion;
+            aux.fecha_nacimiento = alumno.fecha_nacimiento;
+            aux.fecha_inclusionSpecified = true;
+            aux.fecha_nacimientoSpecified = true;
+            aux.dni = alumno.dni;
+            aux.id_miembro_pucp = alumno.id_miembro_pucp;
+            aux.id_alumno = alumno.id_alumno;
+            aux.id_persona = alumno.id_persona;
+            aux.imagenDePerfil = alumno.imagenDePerfil;
+            aux.password = alumno.password;
+            aux.usuario = alumno.usuario;
+            aux.nombre = alumno.nombre;
+            return aux;
+    }
+    private GestionAtencionWS.miembroPUCP asignarAsesor(GestionHumanaWS.miembroPUCP asesor)
+    {
+        GestionAtencionWS.miembroPUCP aux = new GestionAtencionWS.miembroPUCP();
+
+        GestionAtencionWS.especialidad auxEspecialidad = new GestionAtencionWS.especialidad();
+        auxEspecialidad.nombre = alumno.especialidad.nombre;
+        auxEspecialidad.activo = true;
+        auxEspecialidad.id_especialidad = alumno.especialidad.id_especialidad;
+        aux.correo = asesor.correo;
+        aux.direccion = asesor.direccion;
+        aux.fecha_inclusion = asesor.fecha_inclusion;
+        aux.fecha_nacimiento = asesor.fecha_nacimiento;
+        aux.fecha_inclusionSpecified = true;
+        aux.fecha_nacimientoSpecified = true;
+        aux.dni = alumno.dni;
+        aux.id_miembro_pucp = asesor.id_miembro_pucp;
+        aux.id_persona = alumno.id_persona;
+        aux.imagenDePerfil = alumno.imagenDePerfil;
+        aux.password = alumno.password;
+        aux.usuario = alumno.usuario;
+        aux.nombre = alumno.nombre;
+        return aux;
+    }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            GestionAtencionWS.cita[] aux = daoCita.listarCitaHistoricoXNombre(this.alumno.id_alumno,txtNombreAsesor.Text);
+            if (aux == null) return;
+            BindingList<GestionAtencionWS.cita>
+               citasAlumnos = new BindingList<GestionAtencionWS.cita>
+               (aux.ToList());
+            dgvHistorialCitas.DataSource = citasAlumnos;
         }
     }
 }

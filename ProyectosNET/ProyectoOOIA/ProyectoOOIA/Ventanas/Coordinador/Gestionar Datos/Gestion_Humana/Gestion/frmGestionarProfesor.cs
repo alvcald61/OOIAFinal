@@ -241,7 +241,17 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 MessageBox.Show("No ha ingresado la categoría", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            
+
+            //Validacion de persona repetida
+            int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticarPersona(
+                int.Parse(txtDni.Text));
+
+            if (cantUsuarios == 1)
+            {
+                MessageBox.Show("Ya existe una persona registrada con el mismo DNI", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             //Persona
             profesor.dni = txtDni.Text;
             profesor.nombre = txtNombre.Text;

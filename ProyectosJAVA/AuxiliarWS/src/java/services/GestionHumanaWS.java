@@ -10,6 +10,7 @@ import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import pe.edu.pucp.ooia.gest_humana.dao.AlumnoDAO;
+import pe.edu.pucp.ooia.gest_humana.dao.AutenticarPersonaDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.CoordinadorDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.EspecialidadDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.InicioSesionDAO;
@@ -23,6 +24,7 @@ import pe.edu.pucp.ooia.gest_humana.model.Ponente;
 import pe.edu.pucp.ooia.gest_humana.model.Profesor;
 import pe.edu.pucp.ooia.gest_humana.model.Psicologo;
 import pe.edu.pucp.ooia.gest_humana.mysql.AlumnoMySQL;
+import pe.edu.pucp.ooia.gest_humana.mysql.AutenticarPersonaMySQL;
 import pe.edu.pucp.ooia.gest_humana.mysql.CoordinadorMySQL;
 import pe.edu.pucp.ooia.gest_humana.mysql.EspecialidadMySQL;
 import pe.edu.pucp.ooia.gest_humana.mysql.PonenteMySQL;
@@ -46,7 +48,8 @@ public class GestionHumanaWS {
     private PonenteDao ponente;   
     private PsicologoDAO psicologo;
     private InicioSesionDAO inicioSesion;
-        private CoordinadorDAO coordinador;
+    private CoordinadorDAO coordinador;
+    private AutenticarPersonaDAO autenticarPersona;
     
     public GestionHumanaWS() {
         alumno=new AlumnoMySQL();
@@ -55,9 +58,11 @@ public class GestionHumanaWS {
         ponente =new PonenteMySQL();
         psicologo=new PsicologoMySQL();
         inicioSesion=new inicioSesionMySQL();
-    coordinador=new CoordinadorMySQL();        
+        coordinador=new CoordinadorMySQL();    
+        autenticarPersona = new AutenticarPersonaMySQL();
     }
-@WebMethod(operationName = "listarAlumno")
+    
+    @WebMethod(operationName = "listarAlumno")
     public ArrayList<Alumno> listarAlumno(){
         ArrayList<Alumno> lista= new ArrayList<>();
         try {
@@ -78,6 +83,7 @@ public class GestionHumanaWS {
         }
         return resultado;
     }
+    
     @WebMethod(operationName = "modificarAlumno")
     public int modificarAlumno(@WebParam(name = "alumno")Alumno alumno){
         int resultado=0;
@@ -283,6 +289,17 @@ public class GestionHumanaWS {
             System.out.println(e.getMessage());
         }
         return resultado;//se devuelve el id persona
+    }
+    
+    @WebMethod(operationName = "autenticarPersona")
+    public int autenticarPersona(@WebParam(name = "dni") int dni){
+        int resultado = 0;
+        try{
+            resultado = autenticarPersona.autenticarPersona(dni);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
     }
     @WebMethod(operationName = "tipoUsuario")
     public int tipoUsuario(@WebParam(name = "id_persona")int id_persona ){

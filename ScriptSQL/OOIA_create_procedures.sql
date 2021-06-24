@@ -788,10 +788,10 @@ create procedure INSERTAR_HORARIO_ASESOR(
 	out _id_horario_asesor int,
     	in _fid_horario int,
     	in _fid_asesor int,
-    	in _estado int
+    	in _estado varchar(50)
 )begin
-	insert into horario_asesor(fid_horario, fid_asesor, estado, activo) 
-    	values(_fid_horario, _fid_asesor, _estado, true);
+	insert into horario_asesor(fid_horario, fid_asesor, estado) 
+    	values(_fid_horario, _fid_asesor, _estado);
 	set _id_horario_asesor = @@last_insert_id;
 end$
 
@@ -800,7 +800,7 @@ create procedure MODIFICAR_HORARIO_ASESOR(
 	in _id_horario_asesor int,
     	in _fid_horario int,
     	in _fid_asesor int,
-    	in _estado int
+    	in _estado varchar(50)
 )begin
 	update horario_asesor set fid_horario = _fid_horario, fid_asesor = _fid_asesor, estado = _estado
     	where id_horario_asesor = _id_horario_asesor; 
@@ -870,7 +870,6 @@ BEGIN
 	update cita set activo = 0 where id_cita = _id_cita;
 end$
 
-
 delimiter $
 create procedure LISTAR_CITA_PENDIENTE(
 	in _id_alumno int
@@ -882,11 +881,12 @@ begin
     	from cita c 
 	inner join horario h on c.fid_horario = h.id_horario
     inner join miembro_pucp mp on c.fid_asesor = mp.id_miembro_pucp
-    inner join persona p on mp.id_miembro_pucp= p.id_persona
+    inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
     	where c.fid_alumno=_id_alumno
 	and c.fecha >= CURDATE();
 end$
+
 
 delimiter $
 create procedure LISTAR_CITA_HISTORICO(
@@ -899,24 +899,43 @@ begin
     	from cita c 
 	inner join horario h on c.fid_horario = h.id_horario
     inner join miembro_pucp mp on c.fid_asesor = mp.id_miembro_pucp
-    inner join persona p on mp.id_miembro_pucp= p.id_persona
+    inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
     	where c.fid_alumno=_id_alumno
         and c.fecha < CURDATE();
 end$
 
 delimiter $
+create procedure LISTAR_CITA_HISTORICO_X_NOMBRE(
+	in _id_alumno int,
+    in _nombre_prof varchar(150)
+)
+begin
+	select c.id_cita, c.fid_alumno, c.tipo_asesor, c.fid_asesor, p.nombre, c.fecha, c.motivo, c.compromiso, c.asistio, 
+	h.id_horario, h.dia, h.hora_inicio, h.hora_fin,
+	ca.id_codigo_atencion, ca.codigo, ca.descripcion
+    	from cita c 
+	inner join horario h on c.fid_horario = h.id_horario
+    inner join miembro_pucp mp on c.fid_asesor = mp.id_miembro_pucp
+    inner join persona p on mp.fid_persona= p.id_persona
+    	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
+    	where c.fid_alumno=_id_alumno
+        and c.fecha < CURDATE() and (p.nombre LIKE CONCAT('%',_nombre_prof,'%'));
+end$
+
+delimiter $
 create procedure INSERTAR_ENCUESTA(
 	out _id_encuesta int,
     	in _puntaje decimal(4,2),
+        in _fid_cita int,
     	in _descripcion varchar(300),
     	in _fid_alumno int,
 	in _tipo_asesor int,
     	in _fid_asesor int
 )
 BEGIN
-	insert into encuesta(puntaje, descripcion, fid_alumno, tipo_asesor, fid_asesor, activo) 
-    	values( _puntaje, _descripcion, _fid_alumno, _tipo_asesor, _fid_asesor, true);
+	insert into encuesta(puntaje, fid_cita, descripcion, fid_alumno, tipo_asesor, fid_asesor, activo) 
+    	values( _puntaje, _fid_cita,_descripcion, _fid_alumno, _tipo_asesor, _fid_asesor, true);
 	SET _id_encuesta = @@last_insert_id;
 end$
 
@@ -924,13 +943,15 @@ delimiter $
 create procedure MODIFICAR_ENCUESTA(
 	in _id_encuesta int,
     	in _puntaje decimal(4,2),
+        in _fid_cita int,
     	in _descripcion varchar(300),
     	in _fid_alumno int,
 	in _tipo_asesor int,
     	in _fid_asesor int
 )
 BEGIN
-	update encuesta SET puntaje = _puntaje, descripcion=_descripcion, fid_alumno=_fid_alumno, tipo_asesor = _tipo_asesor,
+	update encuesta SET puntaje = _puntaje, fid_cita=_fid_cita, 
+    descripcion=_descripcion, fid_alumno=_fid_alumno, tipo_asesor = _tipo_asesor,
     	fid_asesor=_fid_asesor where id_encuesta = _id_encuesta;
 end$
 
@@ -942,11 +963,12 @@ BEGIN
 	update encuesta set activo = 0 where id_encuesta = _id_encuesta;
 end$
 
+
 delimiter $
 create procedure LISTAR_ENCUESTA(
 )
 BEGIN
-	select id_encuesta, puntaje, descripcion, fid_alumno, tipo_asesor, fid_asesor
+	select id_encuesta, puntaje, descripcion, fid_cita, fid_alumno, tipo_asesor, fid_asesor
 	from encuesta;
 end$
 
@@ -960,12 +982,13 @@ BEGIN
     	where fid_asesor=_id_asesor;
 end$
 
+
 delimiter $
 create procedure LISTAR_ENCUESTA_X_ALUMNO(
-	in _id_alumnor int
+	in _id_alumno int
 )
 BEGIN
-	select id_encuesta, puntaje, descripcion, fid_alumno, tipo_asesor, fid_asesor
+	select id_encuesta, puntaje, descripcion, fid_cita, fid_alumno, tipo_asesor, fid_asesor
 	from encuesta
     	where fid_alumno=_id_alumno;
 end$
@@ -1212,6 +1235,12 @@ from miembro_pucp
 where usuario=_usuario and password=md5(_password);
 end$
 
+delimiter $
+create procedure autenticarPersona(
+	in _dni int
+)begin
+	select * from persona where dni = _dni;
+end$
 
 delimiter $
 create procedure tipoUsuario(in _id_persona int)

@@ -29,7 +29,7 @@ namespace ProyectoOOIA.Ventanas.Alumno.Citas
 
         private void btnOpinion_Click(object sender, EventArgs e)
         {
-            new frmOpiniones().ShowDialog();
+            new frmOpiniones(asesor.id_miembro_pucp).ShowDialog();
         }
 
         public miembroPUCP Asesor
