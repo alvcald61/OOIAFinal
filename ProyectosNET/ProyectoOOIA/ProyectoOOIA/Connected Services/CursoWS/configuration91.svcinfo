@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Cb6L2goUYp5xU+kMzvExJ0Lz9kHm5d25pbbzBGBIBUo=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="jSJo3qYezbDSplvluLkdz2t6SgVqlM8P8B3HDceEw2k=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="CursoWSPortBinding1">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="CursoWSPort" contract="CursoWS.CursoWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServicesOOIA/CursoWS" bindingConfiguration="CursoWSPortBinding1">
+    <endpoint name="CursoWSPort" contract="CursoWS.CursoWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/WebServicesOOIA/CursoWS" bindingConfiguration="CursoWSPortBinding1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/WebServicesOOIA/CursoWS</serializedValue>
+          <serializedValue>http://54.157.187.65:8080/WebServicesOOIA/CursoWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

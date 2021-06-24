@@ -16,19 +16,8 @@ namespace ProyectoOOIA.PonenteWS {
     public interface PonenteWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.PonenteWS.insertarPonenteResponse insertarPonente(ProyectoOOIA.PonenteWS.insertarPonenteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.insertarPonenteResponse> insertarPonenteAsync(ProyectoOOIA.PonenteWS.insertarPonenteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/eliminarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/eliminarPonenteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         ProyectoOOIA.PonenteWS.eliminarPonenteResponse eliminarPonente(ProyectoOOIA.PonenteWS.eliminarPonenteRequest request);
         
@@ -54,6 +43,52 @@ namespace ProyectoOOIA.PonenteWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/modificarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/modificarPonenteResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.modificarPonenteResponse> modificarPonenteAsync(ProyectoOOIA.PonenteWS.modificarPonenteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.PonenteWS.insertarPonenteResponse insertarPonente(ProyectoOOIA.PonenteWS.insertarPonenteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.insertarPonenteResponse> insertarPonenteAsync(ProyectoOOIA.PonenteWS.insertarPonenteRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPonente", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarPonenteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_ponente;
+        
+        public eliminarPonenteRequest() {
+        }
+        
+        public eliminarPonenteRequest(int id_ponente) {
+            this.id_ponente = id_ponente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPonenteResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarPonenteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarPonenteResponse() {
+        }
+        
+        public eliminarPonenteResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
@@ -280,78 +315,6 @@ namespace ProyectoOOIA.PonenteWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPonente", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPonenteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.PonenteWS.ponente invitado;
-        
-        public insertarPonenteRequest() {
-        }
-        
-        public insertarPonenteRequest(ProyectoOOIA.PonenteWS.ponente invitado) {
-            this.invitado = invitado;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPonenteResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPonenteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarPonenteResponse() {
-        }
-        
-        public insertarPonenteResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPonente", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarPonenteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_ponente;
-        
-        public eliminarPonenteRequest() {
-        }
-        
-        public eliminarPonenteRequest(int id_ponente) {
-            this.id_ponente = id_ponente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPonenteResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarPonenteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarPonenteResponse() {
-        }
-        
-        public eliminarPonenteResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonente", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarPonenteRequest {
         
@@ -413,6 +376,42 @@ namespace ProyectoOOIA.PonenteWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPonente", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPonenteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.PonenteWS.ponente invitado;
+        
+        public insertarPonenteRequest() {
+        }
+        
+        public insertarPonenteRequest(ProyectoOOIA.PonenteWS.ponente invitado) {
+            this.invitado = invitado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPonenteResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPonenteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarPonenteResponse() {
+        }
+        
+        public insertarPonenteResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PonenteWSChannel : ProyectoOOIA.PonenteWS.PonenteWS, System.ServiceModel.IClientChannel {
     }
@@ -438,29 +437,6 @@ namespace ProyectoOOIA.PonenteWS {
         
         public PonenteWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.PonenteWS.insertarPonenteResponse ProyectoOOIA.PonenteWS.PonenteWS.insertarPonente(ProyectoOOIA.PonenteWS.insertarPonenteRequest request) {
-            return base.Channel.insertarPonente(request);
-        }
-        
-        public int insertarPonente(ProyectoOOIA.PonenteWS.ponente invitado) {
-            ProyectoOOIA.PonenteWS.insertarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.insertarPonenteRequest();
-            inValue.invitado = invitado;
-            ProyectoOOIA.PonenteWS.insertarPonenteResponse retVal = ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).insertarPonente(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.insertarPonenteResponse> ProyectoOOIA.PonenteWS.PonenteWS.insertarPonenteAsync(ProyectoOOIA.PonenteWS.insertarPonenteRequest request) {
-            return base.Channel.insertarPonenteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.insertarPonenteResponse> insertarPonenteAsync(ProyectoOOIA.PonenteWS.ponente invitado) {
-            ProyectoOOIA.PonenteWS.insertarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.insertarPonenteRequest();
-            inValue.invitado = invitado;
-            return ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).insertarPonenteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -528,6 +504,29 @@ namespace ProyectoOOIA.PonenteWS {
             ProyectoOOIA.PonenteWS.modificarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.modificarPonenteRequest();
             inValue.invitado = invitado;
             return ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).modificarPonenteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.PonenteWS.insertarPonenteResponse ProyectoOOIA.PonenteWS.PonenteWS.insertarPonente(ProyectoOOIA.PonenteWS.insertarPonenteRequest request) {
+            return base.Channel.insertarPonente(request);
+        }
+        
+        public int insertarPonente(ProyectoOOIA.PonenteWS.ponente invitado) {
+            ProyectoOOIA.PonenteWS.insertarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.insertarPonenteRequest();
+            inValue.invitado = invitado;
+            ProyectoOOIA.PonenteWS.insertarPonenteResponse retVal = ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).insertarPonente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.insertarPonenteResponse> ProyectoOOIA.PonenteWS.PonenteWS.insertarPonenteAsync(ProyectoOOIA.PonenteWS.insertarPonenteRequest request) {
+            return base.Channel.insertarPonenteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.insertarPonenteResponse> insertarPonenteAsync(ProyectoOOIA.PonenteWS.ponente invitado) {
+            ProyectoOOIA.PonenteWS.insertarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.insertarPonenteRequest();
+            inValue.invitado = invitado;
+            return ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).insertarPonenteAsync(inValue);
         }
     }
 }

@@ -19,7 +19,8 @@ namespace ProyectoOOIA.Ventanas
         private GestionHumanaWS.miembroPUCP asesor;
         private GestionHumanaWS.persona persona;
         private GestionHumanaWS.alumno alumno;
-        private GestionAtencionWS.cita citaNueva;
+        private GestionAtencionWS.horario horarioProfesor;
+        private horarioAsesor horarioAsesor;
 
         public frmCitasAlumno()
         {
@@ -88,8 +89,7 @@ namespace ProyectoOOIA.Ventanas
         public void clearall()
         {
             txtAsesor.Text = "";
-            txtHoraInicio.Text = "";
-            txtHoraFin.Text = "";
+            
             dtpFecha.Value = DateTime.Now;
             txtMotivo.Text = "";
         }
@@ -146,7 +146,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //new frmCancelarCitaAlumno().ShowDialog();
+            
             DialogResult dr =
                MessageBox.Show("¿Esta seguro que desea cancelar esta cita?", "Cancelación de cita",
                MessageBoxButtons.YesNo, MessageBoxIcon.None);
@@ -158,6 +158,7 @@ namespace ProyectoOOIA.Ventanas
                 {
                     daoCita.eliminarCita(dgvCitasProgramadas.CurrentRow.DataBoundItem as cita);
                     MessageBox.Show("La cita ha sido cancelada exitosamente", "Cita cancelada", MessageBoxButtons.OK);
+                    listarCitasProgramadas();
                 }
 
                 
@@ -188,7 +189,7 @@ namespace ProyectoOOIA.Ventanas
                 MessageBox.Show("No ha ingresado el asesor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (txtHoraInicio.Text == "" || txtHoraFin.Text == "")
+            if (dtpFecha.Value<DateTime.Now)
             {
                 MessageBox.Show("No ha ingresado el horario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -203,7 +204,7 @@ namespace ProyectoOOIA.Ventanas
             //cita.asesor = 
             //cita.fechaRegistro = Date.Now;
 
-            citaNueva = new cita();
+            GestionAtencionWS.cita citaNueva = new GestionAtencionWS.cita();
             citaNueva.asesor = asignarAsesor(asesor);
             citaNueva.alumno = asignarAlumno(alumno);
             citaNueva.fecha = dtpFecha.Value;
@@ -211,11 +212,15 @@ namespace ProyectoOOIA.Ventanas
             citaNueva.activo = true;
             citaNueva.asistio = false;
             citaNueva.fechaSpecified = true;
-            //citaNueva.horario = new horario();
-
+            citaNueva.horario = horarioProfesor;
             citaNueva.motivo = txtMotivo.Text;
-            if (asesor is GestionHumanaWS.profesor) citaNueva.tipo_asesor = 1;
-            else citaNueva.tipo_asesor = 2;
+            citaNueva.compromiso = "";
+            citaNueva.codigo_atencion = new codigoAtencion();
+            citaNueva.codigo_atencion.id_codigo_atencion = 1;
+            
+            
+            if (asesor is GestionHumanaWS.profesor) citaNueva.tipo_asesor = 0;
+            else citaNueva.tipo_asesor = 1;
 
             //if (estado.Equals(Estado.Nuevo))
             //{
@@ -232,40 +237,27 @@ namespace ProyectoOOIA.Ventanas
                     string mensaje = "Estimado " + alumno.nombre + ":\n" +
                                      "Ustedes ha agendado satisfactoriamente una cita con la OOIA. A continuación le indicaremos los datos de la sesion: \n\n" +
                                      "Asesor: " + asesor.nombre + "\n" +
-                                     "Fecha: " + citaNueva.fecha + "\n" +
-                                     "Desde las: " + citaNueva.horario.horaInicio + "\n" +
-                                     "Hasta: " + citaNueva.horario.horaFin + "\n" +
+                                     "Fecha: " + citaNueva.fecha.Date + "\n" +
+                                     "Desde las: " + citaNueva.horario.horaInicio.Hour + ":"+ citaNueva.horario.horaInicio.Minute + "\n" +
+                                     "Hasta: " + citaNueva.horario.horaFin.Hour + ":" + citaNueva.horario.horaFin.Minute + "\n" +
                                      "Con el siguiente motivo: " + citaNueva.motivo + "\n\n\n\n" +
                                      "Atte. Oficina de Orientación, Información y Apoyo al Estudiante\n\n ";
 
 
-                    enviarCorreo("Inscripción a Cita con " + asesor.nombre, mensaje);
-
+                    
+                    horarioAsesor.estado = "reservado";
+                    
+                    daoCita.modificarHorarioAsesor(horarioAsesor);
                     this.estado = Estado.Inicial;
                         cambiarEstado();
                     }
                     else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            //}
-            //else if (estado.Equals(Estado.Modificar))
-            //{
-            //    DialogResult dr =
-            //    MessageBox.Show("¿Esta seguro que desea modificar la cita?", "Modificación de cita",
-            //    MessageBoxButtons.YesNo, MessageBoxIcon.None);
-            //    if (dr == DialogResult.Yes)
-            //    {
-            //        //int resultado = daoCita.modificar(cita);
-            //        int resultado = 1;
-            //        if (resultado != 0)
-            //        {
-            //            MessageBox.Show("La cita ha sido modificada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            this.estado = Estado.Inicial;
-            //            cambiarEstado();
-            //        }
-            //        else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
+                listarCitasProgramadas();
         }
+
+
+        
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
@@ -318,6 +310,8 @@ namespace ProyectoOOIA.Ventanas
                 dtpFecha.Value = frmBuscarHorario.Horario;
                 dtpHoraInicio.Value = frmBuscarHorario.Horario;
                 dtpHoraFin.Value = frmBuscarHorario.Horario.AddMinutes(30);
+                horarioProfesor = frmBuscarHorario.Retorno;
+                horarioAsesor = frmBuscarHorario.RetornoHorarioAsesor;
             }
         }
 
@@ -474,6 +468,11 @@ namespace ProyectoOOIA.Ventanas
                citasAlumnos = new BindingList<GestionAtencionWS.cita>
                (aux.ToList());
             dgvHistorialCitas.DataSource = citasAlumnos;
+        }
+
+        private void tabCitasProgramadas_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

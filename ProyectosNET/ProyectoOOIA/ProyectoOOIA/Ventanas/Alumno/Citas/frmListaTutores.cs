@@ -93,7 +93,7 @@ namespace ProyectoOOIA.Ventanas
             foreach (ucAsesor aux in listaprof)
             {
                 Button boton;
-              //  aux.Click += btnSelec_Prof;
+              //  aux.Click += btnSelec_Prof;54.157.187.65
                 boton=aux.BtnSeleccionar;
                 boton.Click += (object sender, EventArgs e) =>
                 {

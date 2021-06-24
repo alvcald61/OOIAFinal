@@ -1,7 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Channels;
 using System.Windows.Forms;
+using ProyectoOOIA.GestionAtencionWS;
 
 namespace ProyectoOOIA.Ventanas
 {
@@ -14,6 +17,13 @@ namespace ProyectoOOIA.Ventanas
         private DateTime monday;
         private DateTime friday;
         private DateTime horario_selected;
+        private BindingList<GestionAtencionWS.horarioAsesor>
+            horarios;
+
+        private GestionAtencionWS.horarioAsesor retornoHorarioAsesor;
+
+
+        private GestionAtencionWS.horario retorno;
 
         private System.Windows.Forms.RadioButton[] botones;
 
@@ -50,6 +60,10 @@ namespace ProyectoOOIA.Ventanas
             {
                 botones[i].Tag = i + 1;
                 botones[i].Appearance = Appearance.Button;
+                //botones[i].FlatStyle = FlatStyle.Flat;
+                //botones[i].FlatAppearance.BorderSize = 0;
+                botones[i].CheckedChanged += eventoColor;
+
                 botones[i].Margin = System.Windows.Forms.Padding.Empty;
                 botones[i].Width = 94;
                 botones[i].Height = 21;
@@ -65,6 +79,14 @@ namespace ProyectoOOIA.Ventanas
                 xPos += botones[i].Width;
             }
         }
+
+        private void eventoColor(object botones, EventArgs evento)
+        {
+            RadioButton boton = botones as RadioButton;
+            if (boton.Checked == true) boton.BackColor = Color.Peru;
+            else boton.BackColor = Color.White;
+        }
+
 
         public void assignWeek()
         {
@@ -120,6 +142,8 @@ namespace ProyectoOOIA.Ventanas
                     horario_selected = horario_selected.AddMinutes((i / 5)*30);
                     this.DialogResult = DialogResult.OK;
                     this.Close();
+                    retorno = horarios[i].horario;
+                    retornoHorarioAsesor = horarios[i];
                     return;
                 }
 
@@ -129,8 +153,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void loadHorario()
         {
-            BindingList<GestionAtencionWS.horarioAsesor>
-                horarios;
+            
             //try
             //{
                 horarios = new BindingList<GestionAtencionWS.horarioAsesor>(daoHorario.listarHorarioAsesor(asesor.id_miembro_pucp));
@@ -142,29 +165,30 @@ namespace ProyectoOOIA.Ventanas
                 botones[i].BackColor = System.Drawing.Color.White;
                 botones[i].Enabled = true;
 
-                if ((i%5) < (int)now.DayOfWeek && numWeek == 1)
-                {
-                    botones[i].BackColor = System.Drawing.Color.LightGray;
-                    botones[i].Enabled = false;
-                }
+                
 
                 if (horarios[i].estado == "disponible")
                     botones[i].BackColor = System.Drawing.Color.White;
                 if (horarios[i].estado == "No disponible")
                 {
-                    botones[i].BackColor = System.Drawing.Color.LightGray;
+                    botones[i].BackColor = System.Drawing.Color.DarkGray;
                     botones[i].Enabled = false;
                 }
                 if (horarios[i].estado == "ocupado")
                 {
-                    botones[i].BackColor = System.Drawing.Color.Red;
+                    botones[i].BackColor = System.Drawing.Color.DarkCyan;
                     botones[i].Enabled = false;
                 }
                 if (horarios[i].estado == "reservado")
                 {
-                    botones[i].BackColor = System.Drawing.Color.Blue;
+                    botones[i].BackColor = System.Drawing.Color.MidnightBlue;
                     botones[i].Enabled = false;
                 }
+                //if ((i % 5) < (int)now.DayOfWeek && numWeek == 1)
+                //{
+                //    botones[i].BackColor = System.Drawing.Color.DarkGray;
+                //    botones[i].Enabled = false;
+                //}
 
             }
 
@@ -212,6 +236,16 @@ namespace ProyectoOOIA.Ventanas
             loadHorario();
         }
 
-        
+        public horario Retorno
+        {
+            get => retorno;
+            set => retorno = value;
+        }
+
+        public horarioAsesor RetornoHorarioAsesor
+        {
+            get => retornoHorarioAsesor;
+            set => retornoHorarioAsesor = value;
+        }
     }
 }

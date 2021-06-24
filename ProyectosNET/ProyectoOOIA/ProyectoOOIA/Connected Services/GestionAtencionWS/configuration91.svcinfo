@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="TuVpzd3d5CQNZhJv3PhXRUhUatxeAE1n8/z8SPt7bYc=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="9pp3B4bRaKpXUSnRZvftvKkUV2efbPtMF7vLwJHA70A=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="GestionAtencionWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="GestionAtencionWSPort" contract="GestionAtencionWS.GestionAtencionWS" bindingType="basicHttpBinding" address="http://localhost:8080/AuxiliarWS/GestionAtencionWS" bindingConfiguration="GestionAtencionWSPortBinding">
+    <endpoint name="GestionAtencionWSPort" contract="GestionAtencionWS.GestionAtencionWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/AuxiliarWS/GestionAtencionWS" bindingConfiguration="GestionAtencionWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/AuxiliarWS/GestionAtencionWS</serializedValue>
+          <serializedValue>http://54.157.187.65:8080/AuxiliarWS/GestionAtencionWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
