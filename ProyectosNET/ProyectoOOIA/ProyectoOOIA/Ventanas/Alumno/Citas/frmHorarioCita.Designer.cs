@@ -34,6 +34,15 @@ namespace ProyectoOOIA.Ventanas
             this.lblHeader = new System.Windows.Forms.Label();
             this.lblWeek = new System.Windows.Forms.Label();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.pnlLeyenda = new System.Windows.Forms.Panel();
+            this.pbReservado = new System.Windows.Forms.Button();
+            this.lblReservado = new System.Windows.Forms.Label();
+            this.pbLibre = new System.Windows.Forms.Button();
+            this.lblLibre = new System.Windows.Forms.Label();
+            this.pbNoDisponible = new System.Windows.Forms.Button();
+            this.lblNoDisponible = new System.Windows.Forms.Label();
+            this.pbOcupado = new System.Windows.Forms.Button();
+            this.lblOcupado = new System.Windows.Forms.Label();
             this.btnNextWeek = new System.Windows.Forms.PictureBox();
             this.btnPrevWeek = new System.Windows.Forms.PictureBox();
             this.tlpHorario = new System.Windows.Forms.TableLayoutPanel();
@@ -62,22 +71,13 @@ namespace ProyectoOOIA.Ventanas
             this.lbl1030 = new System.Windows.Forms.Label();
             this.lbl1630 = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.pbOcupado = new System.Windows.Forms.Button();
-            this.pbNoDisponible = new System.Windows.Forms.Button();
-            this.pbLibre = new System.Windows.Forms.Button();
-            this.lblOcupado = new System.Windows.Forms.Label();
-            this.lblNoDisponible = new System.Windows.Forms.Label();
-            this.lblLibre = new System.Windows.Forms.Label();
-            this.pnlLeyenda = new System.Windows.Forms.Panel();
-            this.lblReservado = new System.Windows.Forms.Label();
-            this.pbReservado = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnlBody.SuspendLayout();
+            this.pnlLeyenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnNextWeek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrevWeek)).BeginInit();
             this.tlpHorario.SuspendLayout();
-            this.pnlLeyenda.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -107,22 +107,22 @@ namespace ProyectoOOIA.Ventanas
             // lblHeader
             // 
             this.lblHeader.AutoSize = true;
-            this.lblHeader.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.SystemColors.Window;
             this.lblHeader.Location = new System.Drawing.Point(61, 15);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(216, 31);
+            this.lblHeader.Size = new System.Drawing.Size(218, 26);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "Seleccionar horario";
             // 
             // lblWeek
             // 
             this.lblWeek.AutoSize = true;
-            this.lblWeek.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWeek.Location = new System.Drawing.Point(370, 70);
             this.lblWeek.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblWeek.Name = "lblWeek";
-            this.lblWeek.Size = new System.Drawing.Size(271, 31);
+            this.lblWeek.Size = new System.Drawing.Size(287, 26);
             this.lblWeek.TabIndex = 13;
             this.lblWeek.Text = "dd de MMM al dd de MMMM";
             this.lblWeek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,6 +143,109 @@ namespace ProyectoOOIA.Ventanas
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(812, 526);
             this.pnlBody.TabIndex = 0;
+            // 
+            // pnlLeyenda
+            // 
+            this.pnlLeyenda.Controls.Add(this.pbReservado);
+            this.pnlLeyenda.Controls.Add(this.lblReservado);
+            this.pnlLeyenda.Controls.Add(this.pbLibre);
+            this.pnlLeyenda.Controls.Add(this.lblLibre);
+            this.pnlLeyenda.Controls.Add(this.pbNoDisponible);
+            this.pnlLeyenda.Controls.Add(this.lblNoDisponible);
+            this.pnlLeyenda.Controls.Add(this.pbOcupado);
+            this.pnlLeyenda.Controls.Add(this.lblOcupado);
+            this.pnlLeyenda.Location = new System.Drawing.Point(12, 255);
+            this.pnlLeyenda.Name = "pnlLeyenda";
+            this.pnlLeyenda.Size = new System.Drawing.Size(132, 121);
+            this.pnlLeyenda.TabIndex = 15;
+            // 
+            // pbReservado
+            // 
+            this.pbReservado.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pbReservado.Enabled = false;
+            this.pbReservado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.pbReservado.Location = new System.Drawing.Point(15, 76);
+            this.pbReservado.Margin = new System.Windows.Forms.Padding(2);
+            this.pbReservado.Name = "pbReservado";
+            this.pbReservado.Size = new System.Drawing.Size(20, 16);
+            this.pbReservado.TabIndex = 11;
+            this.pbReservado.UseVisualStyleBackColor = false;
+            // 
+            // lblReservado
+            // 
+            this.lblReservado.AutoSize = true;
+            this.lblReservado.Location = new System.Drawing.Point(39, 76);
+            this.lblReservado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblReservado.Name = "lblReservado";
+            this.lblReservado.Size = new System.Drawing.Size(59, 13);
+            this.lblReservado.TabIndex = 10;
+            this.lblReservado.Text = "Reservado";
+            // 
+            // pbLibre
+            // 
+            this.pbLibre.BackColor = System.Drawing.SystemColors.Window;
+            this.pbLibre.Enabled = false;
+            this.pbLibre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.pbLibre.Location = new System.Drawing.Point(15, 16);
+            this.pbLibre.Margin = new System.Windows.Forms.Padding(2);
+            this.pbLibre.Name = "pbLibre";
+            this.pbLibre.Size = new System.Drawing.Size(20, 16);
+            this.pbLibre.TabIndex = 7;
+            this.pbLibre.UseVisualStyleBackColor = false;
+            // 
+            // lblLibre
+            // 
+            this.lblLibre.AutoSize = true;
+            this.lblLibre.Location = new System.Drawing.Point(39, 16);
+            this.lblLibre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLibre.Name = "lblLibre";
+            this.lblLibre.Size = new System.Drawing.Size(30, 13);
+            this.lblLibre.TabIndex = 4;
+            this.lblLibre.Text = "Libre";
+            // 
+            // pbNoDisponible
+            // 
+            this.pbNoDisponible.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pbNoDisponible.Enabled = false;
+            this.pbNoDisponible.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.pbNoDisponible.Location = new System.Drawing.Point(15, 36);
+            this.pbNoDisponible.Margin = new System.Windows.Forms.Padding(2);
+            this.pbNoDisponible.Name = "pbNoDisponible";
+            this.pbNoDisponible.Size = new System.Drawing.Size(20, 16);
+            this.pbNoDisponible.TabIndex = 8;
+            this.pbNoDisponible.UseVisualStyleBackColor = false;
+            // 
+            // lblNoDisponible
+            // 
+            this.lblNoDisponible.AutoSize = true;
+            this.lblNoDisponible.Location = new System.Drawing.Point(39, 36);
+            this.lblNoDisponible.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoDisponible.Name = "lblNoDisponible";
+            this.lblNoDisponible.Size = new System.Drawing.Size(71, 13);
+            this.lblNoDisponible.TabIndex = 5;
+            this.lblNoDisponible.Text = "No disponible";
+            // 
+            // pbOcupado
+            // 
+            this.pbOcupado.BackColor = System.Drawing.Color.Red;
+            this.pbOcupado.Enabled = false;
+            this.pbOcupado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.pbOcupado.Location = new System.Drawing.Point(15, 56);
+            this.pbOcupado.Margin = new System.Windows.Forms.Padding(2);
+            this.pbOcupado.Name = "pbOcupado";
+            this.pbOcupado.Size = new System.Drawing.Size(20, 16);
+            this.pbOcupado.TabIndex = 9;
+            this.pbOcupado.UseVisualStyleBackColor = false;
+            // 
+            // lblOcupado
+            // 
+            this.lblOcupado.AutoSize = true;
+            this.lblOcupado.Location = new System.Drawing.Point(39, 56);
+            this.lblOcupado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOcupado.Name = "lblOcupado";
+            this.lblOcupado.Size = new System.Drawing.Size(51, 13);
+            this.lblOcupado.TabIndex = 6;
+            this.lblOcupado.Text = "Ocupado";
             // 
             // btnNextWeek
             // 
@@ -551,118 +654,14 @@ namespace ProyectoOOIA.Ventanas
             this.lbl1630.Text = "4:30 pm";
             this.lbl1630.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // btnSeleccionar
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(66, 248);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Libre";
-            // 
-            // pbOcupado
-            // 
-            this.pbOcupado.BackColor = System.Drawing.Color.Red;
-            this.pbOcupado.Enabled = false;
-            this.pbOcupado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.pbOcupado.Location = new System.Drawing.Point(15, 56);
-            this.pbOcupado.Margin = new System.Windows.Forms.Padding(2);
-            this.pbOcupado.Name = "pbOcupado";
-            this.pbOcupado.Size = new System.Drawing.Size(20, 16);
-            this.pbOcupado.TabIndex = 9;
-            this.pbOcupado.UseVisualStyleBackColor = false;
-            // 
-            // pbNoDisponible
-            // 
-            this.pbNoDisponible.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pbNoDisponible.Enabled = false;
-            this.pbNoDisponible.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.pbNoDisponible.Location = new System.Drawing.Point(15, 36);
-            this.pbNoDisponible.Margin = new System.Windows.Forms.Padding(2);
-            this.pbNoDisponible.Name = "pbNoDisponible";
-            this.pbNoDisponible.Size = new System.Drawing.Size(20, 16);
-            this.pbNoDisponible.TabIndex = 8;
-            this.pbNoDisponible.UseVisualStyleBackColor = false;
-            // 
-            // pbLibre
-            // 
-            this.pbLibre.BackColor = System.Drawing.SystemColors.Window;
-            this.pbLibre.Enabled = false;
-            this.pbLibre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.pbLibre.Location = new System.Drawing.Point(15, 16);
-            this.pbLibre.Margin = new System.Windows.Forms.Padding(2);
-            this.pbLibre.Name = "pbLibre";
-            this.pbLibre.Size = new System.Drawing.Size(20, 16);
-            this.pbLibre.TabIndex = 7;
-            this.pbLibre.UseVisualStyleBackColor = false;
-            // 
-            // lblOcupado
-            // 
-            this.lblOcupado.AutoSize = true;
-            this.lblOcupado.Location = new System.Drawing.Point(39, 56);
-            this.lblOcupado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblOcupado.Name = "lblOcupado";
-            this.lblOcupado.Size = new System.Drawing.Size(51, 13);
-            this.lblOcupado.TabIndex = 6;
-            this.lblOcupado.Text = "Ocupado";
-            // 
-            // lblNoDisponible
-            // 
-            this.lblNoDisponible.AutoSize = true;
-            this.lblNoDisponible.Location = new System.Drawing.Point(39, 36);
-            this.lblNoDisponible.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNoDisponible.Name = "lblNoDisponible";
-            this.lblNoDisponible.Size = new System.Drawing.Size(71, 13);
-            this.lblNoDisponible.TabIndex = 5;
-            this.lblNoDisponible.Text = "No disponible";
-            // 
-            // lblLibre
-            // 
-            this.lblLibre.AutoSize = true;
-            this.lblLibre.Location = new System.Drawing.Point(39, 16);
-            this.lblLibre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblLibre.Name = "lblLibre";
-            this.lblLibre.Size = new System.Drawing.Size(30, 13);
-            this.lblLibre.TabIndex = 4;
-            this.lblLibre.Text = "Libre";
-            // 
-            // pnlLeyenda
-            // 
-            this.pnlLeyenda.Controls.Add(this.pbReservado);
-            this.pnlLeyenda.Controls.Add(this.lblReservado);
-            this.pnlLeyenda.Controls.Add(this.pbLibre);
-            this.pnlLeyenda.Controls.Add(this.lblLibre);
-            this.pnlLeyenda.Controls.Add(this.pbNoDisponible);
-            this.pnlLeyenda.Controls.Add(this.lblNoDisponible);
-            this.pnlLeyenda.Controls.Add(this.pbOcupado);
-            this.pnlLeyenda.Controls.Add(this.lblOcupado);
-            this.pnlLeyenda.Location = new System.Drawing.Point(12, 255);
-            this.pnlLeyenda.Name = "pnlLeyenda";
-            this.pnlLeyenda.Size = new System.Drawing.Size(132, 121);
-            this.pnlLeyenda.TabIndex = 15;
-            // 
-            // lblReservado
-            // 
-            this.lblReservado.AutoSize = true;
-            this.lblReservado.Location = new System.Drawing.Point(39, 76);
-            this.lblReservado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblReservado.Name = "lblReservado";
-            this.lblReservado.Size = new System.Drawing.Size(59, 13);
-            this.lblReservado.TabIndex = 10;
-            this.lblReservado.Text = "Reservado";
-            // 
-            // pbReservado
-            // 
-            this.pbReservado.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.pbReservado.Enabled = false;
-            this.pbReservado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.pbReservado.Location = new System.Drawing.Point(15, 76);
-            this.pbReservado.Margin = new System.Windows.Forms.Padding(2);
-            this.pbReservado.Name = "pbReservado";
-            this.pbReservado.Size = new System.Drawing.Size(20, 16);
-            this.pbReservado.TabIndex = 11;
-            this.pbReservado.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Location = new System.Drawing.Point(21, 101);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(81, 23);
+            this.btnSeleccionar.TabIndex = 16;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // frmHorarioCita
             // 
@@ -680,12 +679,12 @@ namespace ProyectoOOIA.Ventanas
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.pnlBody.ResumeLayout(false);
             this.pnlBody.PerformLayout();
+            this.pnlLeyenda.ResumeLayout(false);
+            this.pnlLeyenda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnNextWeek)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrevWeek)).EndInit();
             this.tlpHorario.ResumeLayout(false);
             this.tlpHorario.PerformLayout();
-            this.pnlLeyenda.ResumeLayout(false);
-            this.pnlLeyenda.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -720,7 +719,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label lbl1500;
         private System.Windows.Forms.Label lbl1530;
         private System.Windows.Forms.Label lbl1600;
-        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Button pbOcupado;
         private System.Windows.Forms.Button pbNoDisponible;
         private System.Windows.Forms.Button pbLibre;
@@ -734,5 +732,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Panel pnlLeyenda;
         private System.Windows.Forms.Button pbReservado;
         private System.Windows.Forms.Label lblReservado;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }
