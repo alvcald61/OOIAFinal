@@ -185,6 +185,24 @@
   <message name="listarPonenteResponse">
     <part name="parameters" element="tns:listarPonenteResponse" />
   </message>
+  <message name="listar_usuario_correo">
+    <part name="parameters" element="tns:listar_usuario_correo" />
+  </message>
+  <message name="listar_usuario_correoResponse">
+    <part name="parameters" element="tns:listar_usuario_correoResponse" />
+  </message>
+  <message name="autenticarPersona">
+    <part name="parameters" element="tns:autenticarPersona" />
+  </message>
+  <message name="autenticarPersonaResponse">
+    <part name="parameters" element="tns:autenticarPersonaResponse" />
+  </message>
+  <message name="cambiar_password">
+    <part name="parameters" element="tns:cambiar_password" />
+  </message>
+  <message name="cambiar_passwordResponse">
+    <part name="parameters" element="tns:cambiar_passwordResponse" />
+  </message>
   <portType name="GestionHumanaWS">
     <operation name="listar_psicologo_x_id">
       <input wsam:Action="http://services/GestionHumanaWS/listar_psicologo_x_idRequest" message="tns:listar_psicologo_x_id" />
@@ -305,6 +323,18 @@
     <operation name="listarPonente">
       <input wsam:Action="http://services/GestionHumanaWS/listarPonenteRequest" message="tns:listarPonente" />
       <output wsam:Action="http://services/GestionHumanaWS/listarPonenteResponse" message="tns:listarPonenteResponse" />
+    </operation>
+    <operation name="listar_usuario_correo">
+      <input wsam:Action="http://services/GestionHumanaWS/listar_usuario_correoRequest" message="tns:listar_usuario_correo" />
+      <output wsam:Action="http://services/GestionHumanaWS/listar_usuario_correoResponse" message="tns:listar_usuario_correoResponse" />
+    </operation>
+    <operation name="autenticarPersona">
+      <input wsam:Action="http://services/GestionHumanaWS/autenticarPersonaRequest" message="tns:autenticarPersona" />
+      <output wsam:Action="http://services/GestionHumanaWS/autenticarPersonaResponse" message="tns:autenticarPersonaResponse" />
+    </operation>
+    <operation name="cambiar_password">
+      <input wsam:Action="http://services/GestionHumanaWS/cambiar_passwordRequest" message="tns:cambiar_password" />
+      <output wsam:Action="http://services/GestionHumanaWS/cambiar_passwordResponse" message="tns:cambiar_passwordResponse" />
     </operation>
   </portType>
   <binding name="GestionHumanaWSPortBinding" type="tns:GestionHumanaWS">
@@ -571,6 +601,33 @@
       </output>
     </operation>
     <operation name="listarPonente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listar_usuario_correo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="autenticarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cambiar_password">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
