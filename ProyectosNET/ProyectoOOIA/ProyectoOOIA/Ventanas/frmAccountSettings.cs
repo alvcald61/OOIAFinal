@@ -47,7 +47,7 @@ namespace ProyectoOOIA.Ventanas
 
         public void displayImage(byte[] image)
         {
-         //   if (image == null) return;
+            if (image == null) return;
             MemoryStream ms = new MemoryStream(image);
             try
             {

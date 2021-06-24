@@ -77,6 +77,7 @@ begin
     	set _id_alumno = @@last_insert_id;
 end$
 
+
 delimiter $
 create procedure MODIFICAR_ALUMNO(
 	in _id_alumno int,
@@ -105,7 +106,7 @@ begin
     	inner join alumno al on al.fid_miembro_pucp= mp.id_miembro_pucp
     	where al.id_alumno=_id_alumno;
     	-- persona
-	update persona set nombre = _nombre,  dni = _dni,  edad = _edad, direccion = _direccion , correo=_correo
+	update persona set nombre = _nombre,  dni = _dni,  fecha_nacimiento = _fecha_nacimiento, direccion = _direccion , correo=_correo
     	where id_persona = aux_persona;
      	-- miembro_pucp
 	update miembro_pucp set usuario = _usuario, password = _password, fecha_inclusion = _fecha_inclusion, imagen_perfil = _imagen_perfil

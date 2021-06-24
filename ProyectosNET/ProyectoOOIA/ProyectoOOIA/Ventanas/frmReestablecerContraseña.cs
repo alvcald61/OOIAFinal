@@ -34,7 +34,7 @@ namespace ProyectoOOIA.Ventanas
             }
             else
             {
-                string contra = cadenaAletaoria().Substring(0, 6).Substring(0,7);
+                string contra = cadenaAletaoria().Substring(0,7);
                 enviarContrasenia(contra, correo);
                 inicioSesion.cambiar_password(usuario, contra);
                 MessageBox.Show("La contraseña ha sido reestablecida, revise su correo:\n" + correo, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -234,15 +234,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 return;
             }
 
-            //Validacion de persona repetida
-            int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticarPersona(
-                int.Parse(txtDni.Text));
-
-            if(cantUsuarios == 1)
-            {
-                MessageBox.Show("Ya existe una persona registrada con el mismo DNI", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            
             //Persona
             alumno.dni = txtDni.Text;
             alumno.nombre = txtNombre.Text;
@@ -266,6 +258,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
             if (estado.Equals(Estado.Nuevo))
             {
+                //Validacion de persona repetida
+                int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticarPersona(
+                    int.Parse(txtDni.Text));
+
+                if (cantUsuarios == 1)
+                {
+                    MessageBox.Show("Ya existe una persona registrada con el mismo DNI", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 int resultado = daoAlumno.insertarAlumno(alumno);
                 if (resultado != 0)
                 {
