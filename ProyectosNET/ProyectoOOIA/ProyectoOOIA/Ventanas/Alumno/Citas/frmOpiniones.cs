@@ -14,16 +14,22 @@ namespace ProyectoOOIA.Ventanas
         {
             daoEncuesta = new GestionAtencionWS.GestionAtencionWSClient();
             InitializeComponent();
-            listarEncuestas(idAsesor);
             dgvOpiniones.AutoGenerateColumns = false;
+            listarEncuestas(idAsesor);
+           
         }
 
         private void listarEncuestas(int idAsesor)
         {
-            BindingList<GestionAtencionWS.encuesta> listaEncuestas = new BindingList<GestionAtencionWS.encuesta>(
-                daoEncuesta.listarEncuestaxAsesor(idAsesor).ToList());
-            if (listaEncuestas != null)
-                dgvOpiniones.DataSource = listaEncuestas;
+            try
+            {
+                BindingList<GestionAtencionWS.encuesta> listaEncuestas = new BindingList<GestionAtencionWS.encuesta>(
+                    daoEncuesta.listarEncuestaxAsesor(idAsesor).ToList());
+
+                if (listaEncuestas != null)
+                    dgvOpiniones.DataSource = listaEncuestas;
+            }
+            catch { };
         }
         private void lblOpiniones_Click(object sender, EventArgs e)
         {
