@@ -333,7 +333,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabPersona.Padding = new System.Windows.Forms.Padding(3);
             this.tabPersona.Size = new System.Drawing.Size(736, 252);
             this.tabPersona.TabIndex = 1;
-            this.tabPersona.Text = "Página 1";
+            this.tabPersona.Text = "Información personal";
             this.tabPersona.UseVisualStyleBackColor = true;
             // 
             // btnImagen1
@@ -493,7 +493,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabAlumno.Padding = new System.Windows.Forms.Padding(3);
             this.tabAlumno.Size = new System.Drawing.Size(736, 252);
             this.tabAlumno.TabIndex = 0;
-            this.tabAlumno.Text = "Página 2";
+            this.tabAlumno.Text = "Datos de Usuario";
             this.tabAlumno.UseVisualStyleBackColor = true;
             // 
             // btnImagen2

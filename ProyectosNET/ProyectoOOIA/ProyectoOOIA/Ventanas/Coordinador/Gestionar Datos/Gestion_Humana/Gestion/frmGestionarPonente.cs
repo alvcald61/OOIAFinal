@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
@@ -12,6 +13,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private GestionHumanaWS.GestionHumanaWSClient daoPonente;
         private GestionHumanaWS.ponente ponente;
         private Estado estado;
+        private Regex regex;
 
         public frmGestionarPonente()
         {
@@ -145,31 +147,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private void tsbGuardar_Click_1(object sender, EventArgs e)
         {
             //Validación Persona
-            if (txtDni.Text == "")
-            {
-                MessageBox.Show("No ha ingresado el DNI", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (txtNombre.Text == "")
-            {
-                MessageBox.Show("No ha ingresado el nombre", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (dtpFechaNacimiento.Value == DateTime.Today)
-            {
-                MessageBox.Show("No ha ingresado correctamente la fecha de nacimiento", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (txtDireccion.Text == "")
-            {
-                MessageBox.Show("No ha ingresado la dirección", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (txtCorreo.Text == "")
-            {
-                MessageBox.Show("No ha ingresado el correo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            if (!validarPersona()) return;
+
             //Validación Miembro PUCP
             if (txtTelefono.Text == "")
             {
@@ -236,6 +215,51 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             }
 
         }
+        private bool validarPersona()
+        {
+            bool retorno = true;
+            if (txtDni.Text == "")
+            {
+                MessageBox.Show("No ha ingresado el DNI", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                retorno = false;
+            }
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("No ha ingresado el nombre", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                retorno = false;
+            }
+            if (dtpFechaNacimiento.Value == DateTime.Today)
+            {
+                MessageBox.Show("No ha ingresado correctamente la fecha de nacimiento", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                retorno = false;
+            }
+            if (txtDireccion.Text == "")
+            {
+                MessageBox.Show("No ha ingresado la dirección", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                retorno = false;
+            }
+            if (txtCorreo.Text == "")
+            {
+                MessageBox.Show("No ha ingresado el correo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                retorno = false;
+            }
+
+            string patronDNI = @"\d{8}";
+            regex = new Regex(patronDNI);
+            if (!regex.IsMatch(txtDni.Text))
+            {
+                MessageBox.Show("El dni debe ser una cadena de 8 numeros", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                retorno = false;
+            }
+            string patronCorreo = @"/^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/";
+            regex = new Regex(patronCorreo);
+            if (!regex.IsMatch(txtCorreo.Text))
+            {
+                MessageBox.Show("Correo Invalido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                retorno = false;
+            }
+            return retorno;
+        }
 
         private void tsbModificar_Click(object sender, EventArgs e)
         {
@@ -276,6 +300,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.estado = Estado.Inicial;
             clearall();
             cambiarEstado();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

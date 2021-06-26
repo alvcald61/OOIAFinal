@@ -207,7 +207,7 @@ namespace ProyectoOOIA.Ventanas
             {
                 pictureBox1.Image = new Bitmap(new MemoryStream(evento.imagen));
             }
-            catch (Exception exception)
+            catch
             {
                 //exception.Message;
                 MessageBox.Show("Este evento no tiene imagen asociada", "Imagen",MessageBoxButtons.OK,MessageBoxIcon.Information);

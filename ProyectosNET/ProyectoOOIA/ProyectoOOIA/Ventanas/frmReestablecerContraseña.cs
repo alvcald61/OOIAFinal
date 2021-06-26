@@ -72,7 +72,7 @@ namespace ProyectoOOIA.Ventanas
 
         private string cadenaAletaoria()
         {
-            int longitud = 7;
+            
             Guid miGuid = Guid.NewGuid();
             string token = Convert.ToBase64String(miGuid.ToByteArray());
             token = token.Replace("=", "").Replace("+", "");
