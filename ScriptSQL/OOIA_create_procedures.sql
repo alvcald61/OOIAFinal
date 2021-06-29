@@ -1353,5 +1353,29 @@ in _password varchar(150)
 update miembro_pucp  set password = md5(_password) where id_miembro_pucp = _id;
 end$
 
+delimiter $
+create procedure listar_links(
+	in _id_cita int)
+    begin
+    select link_user,link_host
+    from cita c
+    where c.id_cita=_id_cita;
+end$
 
 
+delimiter $
+create procedure listar_proximas_cita_profesor(
+in _id_asesor int
+)
+begin
+select c.id_cita, c.fid_alumno, c.tipo_asesor, c.fid_asesor, p.nombre, c.fecha, c.motivo, c.compromiso, c.asistio, 
+	h.id_horario, h.dia, h.hora_inicio, h.hora_fin,
+	ca.id_codigo_atencion, ca.codigo, ca.descripcion
+    	from cita c 
+	inner join horario h on c.fid_horario = h.id_horario
+    inner join miembro_pucp mp on c.fid_asesor = mp.id_miembro_pucp
+    inner join persona p on mp.fid_persona= p.id_persona
+    	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
+    	where h.fid_asesor=_id_asesor;
+        
+end$

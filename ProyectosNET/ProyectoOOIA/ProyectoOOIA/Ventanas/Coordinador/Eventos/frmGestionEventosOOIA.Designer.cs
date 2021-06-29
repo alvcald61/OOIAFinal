@@ -68,6 +68,7 @@ namespace ProyectoOOIA.Ventanas
             this.label11 = new System.Windows.Forms.Label();
             this.lblBuscarEventos = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
@@ -103,7 +104,8 @@ namespace ProyectoOOIA.Ventanas
             this.btnBuscar,
             this.btnModificar,
             this.btnEliminar,
-            this.btnCancelar});
+            this.btnCancelar,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(797, 25);
@@ -470,6 +472,16 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.Size = new System.Drawing.Size(797, 71);
             this.pnlHeader.TabIndex = 73;
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(113, 22);
+            this.toolStripButton1.Text = "Registrar Asistencia";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
             // frmGestionEventosOOIA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -555,5 +567,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label lblBuscarEventos;
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.ToolStripButton btnEliminar;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
