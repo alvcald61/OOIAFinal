@@ -17,7 +17,7 @@ public class Cita {
     private Date fecha;
     private String motivo;
     private String compromiso;
-    private boolean asistio;
+    private int asistio;
     private boolean activo;
 
     public Cita(){};
@@ -101,16 +101,17 @@ public class Cita {
     public void setCompromiso(String compromiso) {
         this.compromiso = compromiso;
     }
-  
 
-    public boolean isAsistio() {
+    public int getAsistio() {
         return asistio;
     }
 
-    public void setAsistio(boolean asistio) {
+    public void setAsistio(int asistio) {
         this.asistio = asistio;
     }
+  
 
+    
     public boolean getEstado() {
         return activo;
     }

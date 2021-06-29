@@ -64,7 +64,7 @@ public class CitaMySQL implements CitaDAO{
                         rs.getString("codigo"), rs.getString("descripcion")));
                 cita.setMotivo(rs.getString("motivo"));
                 cita.setCompromiso(rs.getString("compromiso"));
-                cita.setAsistio(rs.getBoolean("asistio"));
+                cita.setAsistio(rs.getInt("asistio"));
                 cita.setEstado(true);
                 citas.add(cita);
             }
@@ -113,7 +113,7 @@ public class CitaMySQL implements CitaDAO{
                         rs.getString("codigo"), rs.getString("descripcion")));
                 cita.setMotivo(rs.getString("motivo"));
                 cita.setCompromiso(rs.getString("compromiso"));
-                cita.setAsistio(rs.getBoolean("asistio"));
+                cita.setAsistio(rs.getInt("asistio"));
                 cita.setEstado(true);
                 citas.add(cita);
             }
@@ -148,7 +148,7 @@ public class CitaMySQL implements CitaDAO{
            cs.setDate("_fecha",new Date (cita.getFecha().getTime()));  
            cs.setString("_motivo", cita.getMotivo());
            cs.setString("_compromiso", cita.getCompromiso());
-          
+           cs.setInt("_asistio",cita.getAsistio());
            cs.executeUpdate();
            cita.setId_cita(cs.getInt("_id_cita"));
            resultado=1;
@@ -183,7 +183,7 @@ public class CitaMySQL implements CitaDAO{
            cs.setDate("_fecha",new Date (cita.getFecha().getTime()));   
            cs.setString("_motivo", cita.getMotivo());
            cs.setString("_compromiso", cita.getCompromiso());
-           cs.setBoolean("_asistio",cita.isAsistio());
+           cs.setInt("_asistio",cita.getAsistio());
            cs.executeUpdate();
           
            resultado=1;
@@ -281,7 +281,7 @@ public class CitaMySQL implements CitaDAO{
                         rs.getString("codigo"), rs.getString("descripcion")));
                 cita.setMotivo(rs.getString("motivo"));
                 cita.setCompromiso(rs.getString("compromiso"));
-                cita.setAsistio(rs.getBoolean("asistio"));
+                cita.setAsistio(rs.getInt("asistio"));
                 cita.setEstado(true);
                 citas.add(cita);
             }
@@ -331,7 +331,7 @@ public class CitaMySQL implements CitaDAO{
                         rs.getString("codigo"), rs.getString("descripcion")));
                 cita.setMotivo(rs.getString("motivo"));
                 cita.setCompromiso(rs.getString("compromiso"));
-                cita.setAsistio(rs.getBoolean("asistio"));
+                cita.setAsistio(rs.getInt("asistio"));
                 cita.setEstado(true);
                 citas.add(cita);
             }

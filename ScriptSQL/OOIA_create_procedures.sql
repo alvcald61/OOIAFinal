@@ -872,6 +872,28 @@ BEGIN
 	update cita set activo = 0 where id_cita = _id_cita;
 end$
 
+create procedure LISTAR_CITA_ASESOR(
+	in _id_asesor int,
+    in _fecha_cita date,
+    in _nombre_alumno varchar(150),
+    in _estado_cita int
+)
+begin
+	select c.id_cita, c.fid_alumno, p.nombre as nombre_alumno, p.direccion, p.fecha_nacimiento, a.codigo,
+    p.correo,e.nombre as especialidad,c.fecha, c.motivo, c.compromiso, c.asistio, 
+	h.id_horario, h.dia, h.hora_inicio, h.hora_fin,
+	ca.id_codigo_atencion, ca.codigo, ca.descripcion
+    	from cita c 
+	inner join horario h on c.fid_horario = h.id_horario
+    inner join alumno a on c.fid_alumno = a.id_alumno
+    inner join especialidad e on a.fid_especialidad=e.id_especialidad
+    inner join miembro_pucp mp on mp.id_miembro_pucp = a.fid_miembro_pucp
+    inner join persona p on mp.fid_persona= p.id_persona
+    	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
+    	where c.fid_asesor=_id_asesor
+	and ( c.fecha = _fecha_cita and c.activo = 1 and (p.nombre LIKE CONCAT('%',_nombre_alumno,'%')) and _estado_cita=c.asistio);
+end$
+
 delimiter $
 create procedure LISTAR_CITA_PENDIENTE(
 	in _id_alumno int
