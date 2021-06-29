@@ -48,6 +48,8 @@ public class CitaMySQL implements CitaDAO{
                     //cita.setAsesor(obtenerProfesor(rs.getInt("fid_asesor")));
                     cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
                     cita.getAsesor().setNombre(rs.getString("nombre"));
+                    cita.setLink_user(rs.getString("link_user"));
+                    cita.setLink_Host(rs.getString("link_host"));
                 }
                 else if(cita.getTipo_asesor() == 1){
                     cita.setAsesor(new Psicologo());
@@ -114,6 +116,8 @@ public class CitaMySQL implements CitaDAO{
                 cita.setMotivo(rs.getString("motivo"));
                 cita.setCompromiso(rs.getString("compromiso"));
                 cita.setAsistio(rs.getBoolean("asistio"));
+                cita.setLink_user(rs.getString("link_user"));
+                    cita.setLink_Host(rs.getString("link_host"));
                 cita.setEstado(true);
                 citas.add(cita);
             }
@@ -188,6 +192,7 @@ public class CitaMySQL implements CitaDAO{
           
            resultado=1;
            cs.close();
+        
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -282,6 +287,8 @@ public class CitaMySQL implements CitaDAO{
                 cita.setMotivo(rs.getString("motivo"));
                 cita.setCompromiso(rs.getString("compromiso"));
                 cita.setAsistio(rs.getBoolean("asistio"));
+                cita.setLink_user(rs.getString("link_user"));
+                    cita.setLink_Host(rs.getString("link_host"));
                 cita.setEstado(true);
                 citas.add(cita);
             }
@@ -332,6 +339,8 @@ public class CitaMySQL implements CitaDAO{
                 cita.setMotivo(rs.getString("motivo"));
                 cita.setCompromiso(rs.getString("compromiso"));
                 cita.setAsistio(rs.getBoolean("asistio"));
+                cita.setLink_user(rs.getString("link_user"));
+                    cita.setLink_Host(rs.getString("link_host"));
                 cita.setEstado(true);
                 citas.add(cita);
             }
@@ -343,6 +352,31 @@ public class CitaMySQL implements CitaDAO{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
         return citas;
+    }
+
+    @Override
+    public int modificarLinks(int id_cita, String host, String user) {
+        int resultado=0;
+        try{
+            //registrar el driver
+           Class.forName("com.mysql.cj.jdbc.Driver");
+           //creamos la conexion
+           con = DriverManager.getConnection(DBManager.url,
+                   DBManager.user,DBManager.password);
+           cs=con.prepareCall("{insertar_links(?,?,?)}");
+           cs.setInt("_id_cita", id_cita);
+           cs.setString("_host", host);
+           cs.setString("_user", user);
+           cs.executeUpdate();
+           resultado=1;
+           cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        
+        return resultado;
     }
     
 }

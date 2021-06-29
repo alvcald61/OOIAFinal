@@ -32,6 +32,7 @@ namespace ProyectoOOIA.Ventanas
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHorarioAsesor));
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnHorario = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.lblHorario = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@ namespace ProyectoOOIA.Ventanas
             this.cbTipoHorario = new System.Windows.Forms.ComboBox();
             this.lblTipoHorario = new System.Windows.Forms.Label();
             this.btnBuscarHorario = new System.Windows.Forms.Button();
-            this.btnHorario = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorarioProf)).BeginInit();
@@ -70,6 +70,21 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1014, 71);
             this.pnlHeader.TabIndex = 2;
+            // 
+            // btnHorario
+            // 
+            this.btnHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.btnHorario.FlatAppearance.BorderSize = 0;
+            this.btnHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHorario.ForeColor = System.Drawing.Color.White;
+            this.btnHorario.Location = new System.Drawing.Point(823, 12);
+            this.btnHorario.Name = "btnHorario";
+            this.btnHorario.Size = new System.Drawing.Size(112, 53);
+            this.btnHorario.TabIndex = 11;
+            this.btnHorario.Text = "Registrar Horario";
+            this.btnHorario.UseVisualStyleBackColor = false;
+            this.btnHorario.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnLogout
             // 
@@ -190,7 +205,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnModificarHorario.Name = "btnModificarHorario";
             this.btnModificarHorario.Size = new System.Drawing.Size(75, 23);
             this.btnModificarHorario.TabIndex = 1;
-            this.btnModificarHorario.Text = "Modificar";
+            this.btnModificarHorario.Text = "Cancelar";
             this.btnModificarHorario.UseVisualStyleBackColor = true;
             this.btnModificarHorario.Click += new System.EventHandler(this.btnModificarHorario_Click);
             // 
@@ -267,21 +282,6 @@ namespace ProyectoOOIA.Ventanas
             this.btnBuscarHorario.TabIndex = 10;
             this.btnBuscarHorario.UseVisualStyleBackColor = true;
             this.btnBuscarHorario.Click += new System.EventHandler(this.btnBuscarHorario_Click);
-            // 
-            // btnHorario
-            // 
-            this.btnHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.btnHorario.FlatAppearance.BorderSize = 0;
-            this.btnHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario.ForeColor = System.Drawing.Color.White;
-            this.btnHorario.Location = new System.Drawing.Point(823, 12);
-            this.btnHorario.Name = "btnHorario";
-            this.btnHorario.Size = new System.Drawing.Size(112, 53);
-            this.btnHorario.TabIndex = 11;
-            this.btnHorario.Text = "Registrar Horario";
-            this.btnHorario.UseVisualStyleBackColor = false;
-            this.btnHorario.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmHorarioAsesor
             // 

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using ProyectoOOIA.ProfesorWS;
-using ProyectoOOIA.PsicologoWS;
+
 using miembroPUCP = ProyectoOOIA.GestionHumanaWS.miembroPUCP;
 
 namespace ProyectoOOIA.Ventanas.Alumno.Citas

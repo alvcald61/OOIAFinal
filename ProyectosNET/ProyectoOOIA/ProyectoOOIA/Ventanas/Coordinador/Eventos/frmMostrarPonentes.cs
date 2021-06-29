@@ -1,6 +1,4 @@
-﻿using ProyectoOOIA.AlumnoWS;
-using ProyectoOOIA.PonenteWS;
-using ProyectoOOIA.ProfesorWS;
+﻿
 using System;
 using System.Windows.Forms;
 

@@ -281,7 +281,19 @@ public class GestionAtencionWS {
         return lista;
     }
     
+    @WebMethod(operationName = "insertar_links_reunion")
+    public int insertar_links_reunion( @WebParam(name = "id_cita")int id_cita,@WebParam(name = "link_host")String link_host,@WebParam(name = "link_user")String link_user)
+    {
+    int resultado=0;
+    try{
+        resultado=cita.modificarLinks(id_cita, link_host, link_user);
+    }
+    catch(Exception e){
+        System.out.println(e.getMessage());
+    }
     
+    return resultado;
+}
     
     
 }

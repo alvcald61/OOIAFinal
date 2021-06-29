@@ -17,6 +17,8 @@ public class Cita {
     private Date fecha;
     private String motivo;
     private String compromiso;
+    private String link_user;
+    private  String link_Host;
     private boolean asistio;
     private boolean activo;
 
@@ -118,4 +120,21 @@ public class Cita {
     public void setEstado(boolean estado) {
         this.activo = estado;
     }
+
+    public String getLink_user() {
+        return link_user;
+    }
+
+    public void setLink_user(String link_user) {
+        this.link_user = link_user;
+    }
+
+    public String getLink_Host() {
+        return link_Host;
+    }
+
+    public void setLink_Host(String link_Host) {
+        this.link_Host = link_Host;
+    }
+    
 }

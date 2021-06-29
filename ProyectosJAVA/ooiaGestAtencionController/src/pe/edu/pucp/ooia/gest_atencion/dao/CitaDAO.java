@@ -13,6 +13,7 @@ public interface CitaDAO {
     public ArrayList<Cita> listarHistoricoXNombre(int id_alumno, String nombre);
     public int insertar(Cita cita);
     public int modificar(Cita cita);
+    public int modificarLinks(int id_cita,String host,String user);
     public int eliminar(int id_ita);
     public ArrayList<Cita> listar_proximas_cita_profesor(int id_profesor);
 }

@@ -8,16 +8,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
     public partial class frmBuscarPsicologo : Form
     {
-        private PsicologoWS.PsicologoWSClient daoPsicologo;
-        private PsicologoWS.psicologo _psicologo;
+        private GestionHumanaWS.GestionHumanaWSClient daoPsicologo;
+        private GestionHumanaWS.psicologo _psicologo;
 
-        public PsicologoWS.psicologo Psicologo { get => _psicologo; set => _psicologo = value; }
+        public GestionHumanaWS.psicologo Psicologo { get => _psicologo; set => _psicologo = value; }
 
         public frmBuscarPsicologo()
         {
             InitializeComponent();
             dgvPsicologos.AutoGenerateColumns = false;
-            daoPsicologo = new PsicologoWS.PsicologoWSClient();
+            daoPsicologo = new GestionHumanaWS.GestionHumanaWSClient();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -27,8 +27,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<PsicologoWS.psicologo>
-                psicologos = new BindingList<PsicologoWS.psicologo>
+            BindingList<GestionHumanaWS.psicologo>
+                psicologos = new BindingList<GestionHumanaWS.psicologo>
                 (daoPsicologo.listarPsicologo());
             dgvPsicologos.DataSource = psicologos;
         }
@@ -38,7 +38,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             if (dgvPsicologos.CurrentRow != null)
             {
                 _psicologo =
-              (PsicologoWS.psicologo)dgvPsicologos.CurrentRow.DataBoundItem;
+              (GestionHumanaWS.psicologo)dgvPsicologos.CurrentRow.DataBoundItem;
                 this.DialogResult = DialogResult.OK;
             }
         }

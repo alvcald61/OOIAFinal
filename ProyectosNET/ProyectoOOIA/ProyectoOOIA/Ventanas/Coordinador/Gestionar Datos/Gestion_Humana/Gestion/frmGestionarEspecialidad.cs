@@ -12,8 +12,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
 {
     public partial class frmGestionarEspecialidad : Form
     {
-        private EspecialidadWS.EspecialidadWSClient daoEspecialidad;
-        private EspecialidadWS.especialidad especialidad;
+        private GestionHumanaWS.GestionHumanaWSClient daoEspecialidad;
+        private GestionHumanaWS.especialidad especialidad;
         private Estado estado;
 
         public frmGestionarEspecialidad()
@@ -21,7 +21,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             InitializeComponent();
             dgvEspecialidad.AutoGenerateColumns = false;
             estado = Estado.Inicial;
-            daoEspecialidad = new EspecialidadWS.EspecialidadWSClient();
+            daoEspecialidad = new GestionHumanaWS.GestionHumanaWSClient();
             cambiarEstado();
             mostrarEspecialidades();
             clearall();
@@ -36,10 +36,18 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
 
         public void mostrarEspecialidades()
         {
-            BindingList<EspecialidadWS.especialidad>
-                especialidades = new BindingList<EspecialidadWS.especialidad>
-                (daoEspecialidad.listarEspecialidad().ToList());
-            dgvEspecialidad.DataSource = especialidades;
+            try
+            {
+                BindingList<GestionHumanaWS.especialidad>
+                  especialidades = new BindingList<GestionHumanaWS.especialidad>
+
+                  (daoEspecialidad.listarEspecialidad().ToList());
+                dgvEspecialidad.DataSource = especialidades;
+            }
+            catch
+            {
+
+            }
         }
 
         public void cambiarEstado()
@@ -93,7 +101,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            this.especialidad = new EspecialidadWS.especialidad();
+            this.especialidad = new GestionHumanaWS.especialidad();
             estado = Estado.Nuevo;
             cambiarEstado();
             clearall();
@@ -105,7 +113,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.estado = Estado.Modificar;
             if (dgvEspecialidad.CurrentRow != null)
             {
-                especialidad = (EspecialidadWS.especialidad)dgvEspecialidad.CurrentRow.DataBoundItem;
+                especialidad = (GestionHumanaWS.especialidad)dgvEspecialidad.CurrentRow.DataBoundItem;
                 txtId_especialidad.Text = especialidad.id_especialidad.ToString();
                 txtNombre.Text = especialidad.nombre;
                 cambiarEstado();
@@ -120,7 +128,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
 
             if (dgvEspecialidad.CurrentRow != null)
             {
-                especialidad = (EspecialidadWS.especialidad)dgvEspecialidad.CurrentRow.DataBoundItem;
+                especialidad = (GestionHumanaWS.especialidad)dgvEspecialidad.CurrentRow.DataBoundItem;
                 DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar este empleado?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
@@ -148,8 +156,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<EspecialidadWS.especialidad>
-                especialidades = new BindingList<EspecialidadWS.especialidad>
+            BindingList<GestionHumanaWS.especialidad>
+                especialidades = new BindingList<GestionHumanaWS.especialidad>
                 (daoEspecialidad.listarEspecialidad().ToList());
             dgvEspecialidad.DataSource = especialidades;
         }

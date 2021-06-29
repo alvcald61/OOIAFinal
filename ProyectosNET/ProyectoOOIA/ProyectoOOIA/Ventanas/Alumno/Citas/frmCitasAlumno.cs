@@ -238,7 +238,10 @@ namespace ProyectoOOIA.Ventanas
                 if (resultado != 0)
                 {
                     MessageBox.Show("La cita ha sido registrada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    string []arr=generarLlamada();
+                    //2021 - 07 - 01T18: 10:00
+                    string hora = citaNueva.fecha.ToString("yyyy-MM-dd HH:mm:00");
+                    hora.Replace(" ", "T");
+                    string []arr=generarLlamada("Reunión con "+persona.nombre,hora);
                     string mensaje = "Estimado " + alumno.nombre + ":\n" +
                                      "Ustedes ha agendado satisfactoriamente una cita con la OOIA. A continuación le indicaremos los datos de la sesion: \n\n" +
                                      "Asesor: " + asesor.nombre + "\n" +
@@ -250,7 +253,7 @@ namespace ProyectoOOIA.Ventanas
                                      "\n\n\n\n"+
                                      "\n\nAtte. Oficina de Orientación, Información y Apoyo al Estudiante\n\n ";
 
-                    
+                   
                     enviarCorreo("Inscripción a cita con " + asesor.nombre,mensaje);
                     horarioAsesor.estado = "reservado";
                     
@@ -263,7 +266,7 @@ namespace ProyectoOOIA.Ventanas
                 listarCitasProgramadas();
         }
 
-        private string[] generarLlamada()
+        private string[] generarLlamada(string nombreLlamada,string horaFecha_Inicio)
         {
             
                 var tokenHandler = new System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler();
@@ -282,7 +285,7 @@ namespace ProyectoOOIA.Ventanas
                 var client = new RestClient("https://api.zoom.us/v2/users/ooia.no.reply@gmail.com/meetings");
                 var request = new RestRequest(Method.POST);
                 request.RequestFormat = DataFormat.Json;
-                request.AddJsonBody(new { topic = "Meeting with Alvaro", duration = "30", start_time = "2021-07-01T18:10:00", type = "2" });
+                request.AddJsonBody(new { topic = nombreLlamada, duration = "30", start_time = horaFecha_Inicio, type = "2" });
 
                 request.AddHeader("authorization", String.Format("Bearer {0}", tokenString));
 

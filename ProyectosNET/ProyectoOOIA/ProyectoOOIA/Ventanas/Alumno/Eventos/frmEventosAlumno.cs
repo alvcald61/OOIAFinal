@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
-using ProyectoOOIA.EventoAlumnoWS;
+
 
 namespace ProyectoOOIA.Ventanas
 {
@@ -10,10 +10,10 @@ namespace ProyectoOOIA.Ventanas
     {
         private GestionHumanaWS.persona persona;
         private GestionEventoWS.GestionEventoWSClient daoEvento;
-        private EventoAlumnoWS.EventoAlumnoWSClient daoEventoAlumno;
-        private EventoAlumnoWS.eventoAlumno eventoAlumno;
+        private GestionEventoWS.GestionEventoWS daoEventoAlumno;
+        private GestionEventoWS.eventoAlumno eventoAlumno;
         private GestionEventoWS.evento evento;
-        private AlumnoWS.AlumnoWSClient daoAlumno;
+        private GestionHumanaWS.GestionHumanaWS daoAlumno;
         private GestionHumanaWS.alumno alumno;
         public frmRegistroEvento()
         {
@@ -23,8 +23,8 @@ namespace ProyectoOOIA.Ventanas
             dvgHistorial.AutoGenerateColumns = false;
             dvgHistorial.RowCount = 0;
             daoEvento = new GestionEventoWS.GestionEventoWSClient();
-            daoEventoAlumno = new EventoAlumnoWS.EventoAlumnoWSClient();
-            daoAlumno = new AlumnoWS.AlumnoWSClient();
+            daoEventoAlumno = new GestionEventoWS.GestionEventoWSClient();
+            daoAlumno = new GestionHumanaWS.GestionHumanaWSClient();
             evento = new GestionEventoWS.evento();
             //alumno = new AlumnoWS.alumno();
             listarHistorial();
@@ -39,12 +39,12 @@ namespace ProyectoOOIA.Ventanas
             dvgHistorial.AutoGenerateColumns = false;
             dvgHistorial.RowCount = 0;
             daoEvento = new GestionEventoWS.GestionEventoWSClient();
-            daoEventoAlumno = new EventoAlumnoWS.EventoAlumnoWSClient();
-            daoAlumno = new AlumnoWS.AlumnoWSClient();
+            daoEventoAlumno = new GestionEventoWS.GestionEventoWSClient();
+            daoAlumno = new GestionHumanaWS.GestionHumanaWSClient();
             //listarAlumnos(persona.id_persona); //obtengo el alumno
             evento = new GestionEventoWS.evento();
             this.alumno=persona as GestionHumanaWS.alumno;
-            eventoAlumno = new  EventoAlumnoWS.eventoAlumno();
+            eventoAlumno = new  GestionEventoWS.eventoAlumno();
            // listarHistorial();
            // listarEventosInscritos();
 
@@ -125,7 +125,8 @@ namespace ProyectoOOIA.Ventanas
                     eventoAlumno.valoracionUtilidad = 0;
                     eventoAlumno.comentario = "";
                     eventoAlumno.asistio = false;
-                    int resultado = daoEventoAlumno.insertarEventoAlumno(eventoAlumno);
+                    int resultado = daoEvento.insertarEncuestaEvento(eventoAlumno);
+
                     if (resultado != 0)
                     {
                         MessageBox.Show("El registro ha sido exitoso", "Éxito", MessageBoxButtons.OK,

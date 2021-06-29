@@ -1363,6 +1363,15 @@ create procedure listar_links(
     where c.id_cita=_id_cita;
 end$
 
+delimiter $
+create procedure insertar_links(
+	in _id_cita int,
+    in _host varchar(400),
+    in _user varchar(200))
+    begin
+    update cita set link_host=_host, link_user=_user where id_cita=_id_cita;
+end$
+
 
 delimiter $
 create procedure listar_proximas_cita_profesor(

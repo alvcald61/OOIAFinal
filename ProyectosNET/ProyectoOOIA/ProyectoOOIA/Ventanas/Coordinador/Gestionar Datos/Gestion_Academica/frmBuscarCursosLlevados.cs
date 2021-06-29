@@ -12,16 +12,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
 {
     public partial class frmBuscarCursosLlevados : Form
     {
-        private CursoLlevadoWS.CursoLlevadoWSClient daoCurso;
-        private CursoLlevadoWS.cursoLlevado _curso;
-        private GestionHumanaWS.alumno alumno;
+        //private CursoLlevadoWS.CursoLlevadoWSClient daoCurso;
+        //private CursoLlevadoWS.cursoLlevado _curso;
+        //private GestionHumanaWS.alumno alumno;
 
-        public CursoLlevadoWS.cursoLlevado CursoLlevado { get => _curso; set => _curso = value; }
+        //public CursoLlevadoWS.cursoLlevado CursoLlevado { get => _curso; set => _curso = value; }
         public frmBuscarCursosLlevados()
         {
             InitializeComponent();
             dgvCursos.AutoGenerateColumns = false;
-            daoCurso = new CursoLlevadoWS.CursoLlevadoWSClient();
+            //daoCurso = new CursoLlevadoWS.CursoLlevadoWSClient();
         }
 
 
@@ -36,12 +36,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             if (frmBuscar.ShowDialog() == DialogResult.OK)
             {
 
-                this.alumno = frmBuscar.Alumno;
-                txtNombre.Text = alumno.nombre;
-                BindingList<CursoLlevadoWS.cursoLlevado>
-                cursos = new BindingList<CursoLlevadoWS.cursoLlevado>
-                (daoCurso.listarCursoLlevado(alumno.id_alumno).ToList());
-                dgvCursos.DataSource = cursos;
+                //this.alumno = frmBuscar.Alumno;
+                //txtNombre.Text = alumno.nombre;
+                //BindingList<CursoLlevadoWS.cursoLlevado>
+                //cursos = new BindingList<CursoLlevadoWS.cursoLlevado>
+                //(daoCurso.listarCursoLlevado(alumno.id_alumno).ToList());
+                //dgvCursos.DataSource = cursos;
                 
             }
             
@@ -57,9 +57,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
         
         private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            CursoLlevadoWS.cursoLlevado data = dgvCursos.Rows[e.RowIndex].DataBoundItem
-           as CursoLlevadoWS.cursoLlevado;
-            dgvCursos.Rows[e.RowIndex].Cells["NombreCurso"].Value = data.curso.nombreCurso;
+           // CursoLlevadoWS.cursoLlevado data = dgvCursos.Rows[e.RowIndex].DataBoundItem
+           //as CursoLlevadoWS.cursoLlevado;
+           // dgvCursos.Rows[e.RowIndex].Cells["NombreCurso"].Value = data.curso.nombreCurso;
         }
     }
 }

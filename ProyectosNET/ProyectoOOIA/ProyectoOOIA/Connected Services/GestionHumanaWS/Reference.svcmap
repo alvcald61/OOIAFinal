@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.187.65:8080/AuxiliarWS/GestionHumanaWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/AuxiliarWS/GestionHumanaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestionHumanaWS.wsdl" MetadataType="Wsdl" ID="bf2fa931-9ada-4d3b-bf73-9aa275d4e946" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/GestionHumanaWS?WSDL" />
-    <MetadataFile FileName="GestionHumanaWS.xsd" MetadataType="Schema" ID="c3f3aac2-d017-4e88-bea4-f5469d45ec68" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/GestionHumanaWS?xsd=1" />
+    <MetadataFile FileName="GestionHumanaWS1.xsd" MetadataType="Schema" ID="25446d33-1e38-465c-abb9-7aad173779c2" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionHumanaWS?xsd=1" />
+    <MetadataFile FileName="GestionHumanaWS1.wsdl" MetadataType="Wsdl" ID="03cc3316-bb48-4533-957a-593e94d3a944" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionHumanaWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
