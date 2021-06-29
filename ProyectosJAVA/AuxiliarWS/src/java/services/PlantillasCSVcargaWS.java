@@ -25,7 +25,8 @@ public class PlantillasCSVcargaWS {
     public byte[] obtenerPlantillaCSV() {
         byte[] arreglo = null;
         try{
-            File archivo = new File("/plantillas/Plantillas de carga masiva por archivos CSV.pdf");
+            String ruta = GestionAtencionWS.class.getResource("/plantillas/Plantillas de carga masiva por archivos CSV.pdf").getPath();
+            File archivo = new File(ruta);
             arreglo = Files.readAllBytes(archivo.toPath());
         }catch(Exception ex){
             System.out.println(ex.getMessage());
