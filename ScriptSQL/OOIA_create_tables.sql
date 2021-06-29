@@ -173,7 +173,7 @@ create table cita(
     	fecha date,
     	motivo varchar(300),
 	compromiso varchar(300),
-    	asistio bool,
+    	asistio int, -- 0: no asistio, 1: asistio, 3: cancelado
     	activo bool,
 		link_host varchar(400),
 		link_user varchar(200),
