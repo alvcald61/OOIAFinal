@@ -838,11 +838,12 @@ create procedure INSERTAR_CITA(
     	in _fid_horario int,
 	in _fid_atencion int,
     	in _fecha date,
+        in _asistio int,
     	in _motivo varchar(300),
 	in _compromiso varchar(300)
 )begin
 	insert into cita(fid_alumno, tipo_asesor, fid_asesor, fid_atencion, fid_horario, fecha, motivo, compromiso, asistio, activo) 
-    	values(_fid_alumno, _tipo_asesor, _fid_asesor, _fid_atencion, _fid_horario, _fecha, _motivo, _compromiso, false, true);
+    	values(_fid_alumno, _tipo_asesor, _fid_asesor, _fid_atencion, _fid_horario, _fecha, _motivo, _compromiso, _asistio, true);
 	set _id_cita = @@last_insert_id;
 end$
 
@@ -857,7 +858,7 @@ create procedure MODIFICAR_CITA(
     	in _fecha date,
     	in _motivo varchar(300),
 	in _compromiso varchar(300),
-    	in _asistio bool
+    	in _asistio int
 )begin
 	update cita set fid_alumno = _fid_alumno, tipo_asesor = _tipo_asesor, fid_asesor = _fid_asesor, fid_horario=_fid_horario, fid_atencion=_fid_atencion, fecha = 		_fecha, motivo=_motivo, compromiso = _compromiso, asistio = _asistio
 	where id_cita = _id_cita;
