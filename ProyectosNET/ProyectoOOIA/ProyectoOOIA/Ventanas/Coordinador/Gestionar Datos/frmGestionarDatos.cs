@@ -9,13 +9,30 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
 {
     public partial class frmCargarDatos : Form
     {
+        private byte[] arreglo = null;
         public frmCargarDatos()
         {
+            
             InitializeComponent();
+            
+            //btnDescargarPlantilla.Enabled = false;
+            cargarPlantilla();
         }
 
+        private void cargarPlantilla()
+        {
+            //recordar que el . muestra la carpeta debug, de ahi con ..\\vamos a la carpeta anterior
+            string ruta = "..\\..\\Resources\\Plantilla.pdf";
+            //string ruta = System.AppDomain.CurrentDomain.BaseDirector
+            arreglo = File.ReadAllBytes(ruta);
+
+            File.WriteAllBytes("temporal.pdf", arreglo);
+            axAcroPDF1.setShowToolbar(true);
+            axAcroPDF1.LoadFile("temporal.pdf");
+        }
         private void btnBack_Click(object sender, EventArgs e)
         {
+
             this.Close();
         }
 
@@ -220,6 +237,33 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private void btnCategoria_Click(object sender, EventArgs e)
         {
             new frmGestionarCategoria().ShowDialog();
+        }
+
+        private void btnDescargarPlantilla_Click(object sender, EventArgs e)
+        {
+
+            SaveFileDialog dialogoGuardar = new SaveFileDialog();
+            dialogoGuardar.Filter = "Documento pdf|*.pdf";
+            dialogoGuardar.Title = "Guardar plantilla de carga CSV";
+            dialogoGuardar.ShowDialog();//mostramos el dialogo
+
+            if (dialogoGuardar.FileName != "")//si el dialogo no esta en blanco
+            {
+                try
+                {
+                    File.WriteAllBytes(dialogoGuardar.FileName, this.arreglo);//guardamos el archivo
+                    MessageBox.Show("Se ha guardado el archivo correctamente", "Confirmacion",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se ha podido guardar el archivo", "Mensaje de error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //System.Console.WriteLine(ex);
+                }
+
+            }
+
         }
     }
 }

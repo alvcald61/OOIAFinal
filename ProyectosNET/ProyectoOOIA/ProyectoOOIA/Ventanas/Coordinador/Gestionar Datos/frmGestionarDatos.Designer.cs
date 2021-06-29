@@ -29,6 +29,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargarDatos));
             this.archivos = new System.Windows.Forms.OpenFileDialog();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
@@ -101,6 +102,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnCategoria = new System.Windows.Forms.Button();
             this.lblCategoriaForm = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
+            this.tabPlantillaCSV = new System.Windows.Forms.TabPage();
+            this.btnDescargarPlantilla = new System.Windows.Forms.Button();
+            this.guardarPlantilla = new System.Windows.Forms.SaveFileDialog();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.panelGestionHumana.SuspendLayout();
@@ -119,6 +124,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlCodigoAtencion.SuspendLayout();
             this.tabEvento.SuspendLayout();
             this.pnlCategoria.SuspendLayout();
+            this.tabPlantillaCSV.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
             // archivos
@@ -165,6 +172,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.panelGestionHumana.Controls.Add(this.tabGestionAcademica);
             this.panelGestionHumana.Controls.Add(this.tabGestionAtencion);
             this.panelGestionHumana.Controls.Add(this.tabEvento);
+            this.panelGestionHumana.Controls.Add(this.tabPlantillaCSV);
             this.panelGestionHumana.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGestionHumana.Location = new System.Drawing.Point(0, 71);
             this.panelGestionHumana.Name = "panelGestionHumana";
@@ -897,6 +905,38 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.lblCategoria.TabIndex = 12;
             this.lblCategoria.Text = "Categoría de Evento";
             // 
+            // tabPlantillaCSV
+            // 
+            this.tabPlantillaCSV.AutoScroll = true;
+            this.tabPlantillaCSV.Controls.Add(this.axAcroPDF1);
+            this.tabPlantillaCSV.Controls.Add(this.btnDescargarPlantilla);
+            this.tabPlantillaCSV.Location = new System.Drawing.Point(4, 22);
+            this.tabPlantillaCSV.Name = "tabPlantillaCSV";
+            this.tabPlantillaCSV.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPlantillaCSV.Size = new System.Drawing.Size(676, 364);
+            this.tabPlantillaCSV.TabIndex = 4;
+            this.tabPlantillaCSV.Text = "Plantilla de carga CSV";
+            this.tabPlantillaCSV.UseVisualStyleBackColor = true;
+            // 
+            // btnDescargarPlantilla
+            // 
+            this.btnDescargarPlantilla.Location = new System.Drawing.Point(275, 4);
+            this.btnDescargarPlantilla.Name = "btnDescargarPlantilla";
+            this.btnDescargarPlantilla.Size = new System.Drawing.Size(128, 23);
+            this.btnDescargarPlantilla.TabIndex = 0;
+            this.btnDescargarPlantilla.Text = "Descargar Plantilla";
+            this.btnDescargarPlantilla.UseVisualStyleBackColor = true;
+            this.btnDescargarPlantilla.Click += new System.EventHandler(this.btnDescargarPlantilla_Click);
+            // 
+            // axAcroPDF1
+            // 
+            this.axAcroPDF1.Enabled = true;
+            this.axAcroPDF1.Location = new System.Drawing.Point(61, 33);
+            this.axAcroPDF1.Name = "axAcroPDF1";
+            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            this.axAcroPDF1.Size = new System.Drawing.Size(545, 323);
+            this.axAcroPDF1.TabIndex = 1;
+            // 
             // frmCargarDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -938,6 +978,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.tabEvento.ResumeLayout(false);
             this.pnlCategoria.ResumeLayout(false);
             this.pnlCategoria.PerformLayout();
+            this.tabPlantillaCSV.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1015,5 +1057,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private System.Windows.Forms.Button btnCategoria;
         private System.Windows.Forms.Label lblCategoriaForm;
         private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.TabPage tabPlantillaCSV;
+        private System.Windows.Forms.Button btnDescargarPlantilla;
+        private System.Windows.Forms.SaveFileDialog guardarPlantilla;
+        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
     }
 }

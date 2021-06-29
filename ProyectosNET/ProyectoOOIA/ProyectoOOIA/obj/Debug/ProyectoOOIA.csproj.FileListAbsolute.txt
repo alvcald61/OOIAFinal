@@ -530,7 +530,6 @@ C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Bunifu_UI_v1.5.dll
-C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Card.resources
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.CardEvento.resources
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Horario.resources
@@ -671,15 +670,21 @@ D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Pr
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Logging.dll
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Tokens.dll
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Newtonsoft.Json.dll
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\RestSharp.dll
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Logging.xml
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Tokens.xml
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Newtonsoft.Json.xml
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\RestSharp.xml
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Newtonsoft.Json.dll
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\RestSharp.dll
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Newtonsoft.Json.xml
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\RestSharp.xml
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Interop.AcroPDFLib.dll
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Interop.AcroPDFLib.dll
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.ResolveComReference.cache
