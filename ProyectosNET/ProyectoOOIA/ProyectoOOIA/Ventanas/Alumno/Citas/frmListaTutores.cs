@@ -4,8 +4,7 @@ using System.ComponentModel;
 using System.Runtime.Remoting.Channels;
 using System.Windows.Forms;
 using ProyectoOOIA.GestionHumanaWS;
-using ProyectoOOIA.ProfesorWS;
-using ProyectoOOIA.PsicologoWS;
+
 using miembroPUCP = ProyectoOOIA.GestionHumanaWS.miembroPUCP;
 
 namespace ProyectoOOIA.Ventanas
@@ -13,8 +12,8 @@ namespace ProyectoOOIA.Ventanas
     public partial class frmListaTutores : Form
     {
         private GestionHumanaWS.GestionHumanaWSClient humanaDao;
-        ProfesorWS.ProfesorWSClient daoProfesor;
-        PsicologoWS.PsicologoWSClient daoPsicologo;
+        GestionHumanaWS.GestionHumanaWSClient daoProfesor;
+        GestionHumanaWS.GestionHumanaWSClient daoPsicologo;
         
         private GestionHumanaWS.miembroPUCP asesor;
         private BindingList<ucAsesor> listaprof = new BindingList<ucAsesor>();
@@ -32,8 +31,8 @@ namespace ProyectoOOIA.Ventanas
             tabPsic.HorizontalScroll.Visible = false;
             tabPsic.HorizontalScroll.Maximum = 0;
             tabPsic.AutoScroll = true;
-            daoProfesor = new ProfesorWS.ProfesorWSClient();
-            daoPsicologo = new PsicologoWS.PsicologoWSClient();
+            daoProfesor = new GestionHumanaWS.GestionHumanaWSClient();
+            daoPsicologo = new GestionHumanaWS.GestionHumanaWSClient();
 
             BindingList<GestionHumanaWS.profesor>
                 profesores = new BindingList<GestionHumanaWS.profesor>

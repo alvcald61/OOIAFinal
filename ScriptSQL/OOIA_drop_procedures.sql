@@ -19,7 +19,7 @@ drop procedure if exists MODIFICAR_ALUMNO;
 drop procedure if exists ELIMINAR_ALUMNO;
 drop procedure if exists LISTAR_ALUMNO;
 drop procedure if exists LISTAR_ALUMNO_X_NOMBRE;
-drop procedure if exists LISTAR_ALUMNO_X_ID
+drop procedure if exists LISTAR_ALUMNO_X_ID;
 -- PROFESOR
 drop procedure if exists INSERTAR_PROFESOR;
 drop procedure if exists MODIFICAR_PROFESOR;
@@ -119,5 +119,6 @@ drop procedure if exists LISTAR_EVENTO_X_NOMBRE_CATEGORIA;
 drop procedure if exists autenticarUsuario;
 drop procedure if exists autenticarPersona;
 
-drop procedure if exists	listar_links
+drop procedure if exists	listar_links;
 
+drop procedure if exists insertar_links;

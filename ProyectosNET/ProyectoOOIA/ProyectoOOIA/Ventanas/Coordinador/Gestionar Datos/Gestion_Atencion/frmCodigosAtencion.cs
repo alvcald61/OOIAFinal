@@ -8,17 +8,17 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
     public partial class frmCodigosAtencion : Form
     {
         private Estado estado;
-        private CodigoAtencionWS.CodigoAtencionWSClient daoCodigoAtencion;
-        private CodigoAtencionWS.codigoAtencion codigoAtencion;
-        private CodigoAtencionWS.codigoAtencion _codigoSeleccionado;
+        private GestionAtencionWS.GestionAtencionWSClient daoCodigoAtencion;
+        private GestionAtencionWS.codigoAtencion codigoAtencion;
+        private GestionAtencionWS.codigoAtencion _codigoSeleccionado;
 
-        public CodigoAtencionWS.codigoAtencion codigoSeleccionado { get => _codigoSeleccionado; set => _codigoSeleccionado = value; }
+        public GestionAtencionWS.codigoAtencion codigoSeleccionado { get => _codigoSeleccionado; set => _codigoSeleccionado = value; }
         public frmCodigosAtencion()
         {
             InitializeComponent();
             this.estado = Estado.Inicial;
             cambiarEstado();
-            daoCodigoAtencion = new CodigoAtencionWS.CodigoAtencionWSClient();
+            daoCodigoAtencion = new GestionAtencionWS.GestionAtencionWSClient();
             dgvCodigosAtencion.AutoGenerateColumns = false;
 
             //listarCodigos();
@@ -115,14 +115,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private void listarCodigos()
         {
             //lista desde el principio los codigos de atencion
-            BindingList<CodigoAtencionWS.codigoAtencion>
-                codigos = new BindingList<CodigoAtencionWS.codigoAtencion>
+            BindingList<GestionAtencionWS.codigoAtencion>
+                codigos = new BindingList<GestionAtencionWS.codigoAtencion>
                 (daoCodigoAtencion.listarCodigo().ToList());
             dgvCodigosAtencion.DataSource = codigos;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            this.codigoAtencion = new CodigoAtencionWS.codigoAtencion();
+            this.codigoAtencion = new GestionAtencionWS.codigoAtencion();
             this.estado = Estado.Nuevo;
             cambiarEstado();
             limpiar();
@@ -142,13 +142,13 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             if (dgvCodigosAtencion.CurrentRow != null)
             {
                 _codigoSeleccionado =
-              (CodigoAtencionWS.codigoAtencion)dgvCodigosAtencion.CurrentRow.DataBoundItem;
+              (GestionAtencionWS.codigoAtencion)dgvCodigosAtencion.CurrentRow.DataBoundItem;
 
                 this.estado = Estado.Modificar;
                 cambiarEstado();
                 txtDescripcion.Text = _codigoSeleccionado.descripcion;
                 txtCodigoAtencion.Text = _codigoSeleccionado.codigo;
-                this.codigoAtencion = new CodigoAtencionWS.codigoAtencion();
+                this.codigoAtencion = new GestionAtencionWS.codigoAtencion();
                 this.codigoAtencion.id_codigo_atencion = _codigoSeleccionado.id_codigo_atencion;
             }
 

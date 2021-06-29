@@ -10,8 +10,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 {
     public partial class frmGestionarPsicologo: Form
     {
-        private PsicologoWS.PsicologoWSClient daoPsicologo;
-        private PsicologoWS.psicologo psicologo;
+        private GestionHumanaWS.GestionHumanaWSClient daoPsicologo;
+        private GestionHumanaWS.psicologo psicologo;
         private Estado estado;
         private byte[] imagen_perfil;
         private Regex regex;
@@ -22,7 +22,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             estado = Estado.Inicial;
             clearall();
             cambiarEstado();
-            daoPsicologo = new PsicologoWS.PsicologoWSClient();
+            daoPsicologo = new GestionHumanaWS.GestionHumanaWSClient();
         }
 
         public void clearall()
@@ -147,7 +147,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         /*Botones de Toolstrip*/
 
-        public void fillText(PsicologoWS.psicologo psico)
+        public void fillText(GestionHumanaWS.psicologo psico)
         {
             //Persona
             txtDni.Text = psico.dni;
@@ -166,7 +166,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            this.psicologo = new PsicologoWS.psicologo();
+            this.psicologo = new GestionHumanaWS.psicologo();
             estado = Estado.Nuevo;
             cambiarEstado();
             clearall();
@@ -284,7 +284,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 MessageBox.Show("El dni debe ser una cadena de 8 numeros", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 retorno = false;
             }
-            string patronCorreo = @"/^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/";
+            string patronCorreo = @"^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$";
             regex = new Regex(patronCorreo);
             if (!regex.IsMatch(txtCorreo.Text))
             {

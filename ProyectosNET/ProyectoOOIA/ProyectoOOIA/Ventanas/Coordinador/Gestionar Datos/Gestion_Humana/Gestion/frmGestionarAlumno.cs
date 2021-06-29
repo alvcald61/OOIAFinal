@@ -171,7 +171,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             if(imagen_perfil != null)displayImage(imagen_perfil);
             //Alumno
             txtCodigo.Text = alumno.codigo;
-            EspecialidadWS.especialidad esp_selected = new EspecialidadWS.especialidad();
+            GestionHumanaWS.especialidad esp_selected = new GestionHumanaWS.especialidad();
             esp_selected.id_especialidad = alu.especialidad.id_especialidad;
             esp_selected.nombre = alu.especialidad.nombre;
             cbEspecialidad.SelectedValue = esp_selected.id_especialidad;
@@ -305,7 +305,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 MessageBox.Show("El dni debe ser una cadena de 8 numeros", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 retorno = false;
             }
-            string patronCorreo = @"/^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/";
+            string patronCorreo = @"^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$";
             regex = new Regex(patronCorreo);
             if (!regex.IsMatch(txtCorreo.Text))
             {

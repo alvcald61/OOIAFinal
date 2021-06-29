@@ -10,7 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoOOIA.EventoWS;
+
 using ProyectoOOIA.GestionEventoWS;
 using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
 using ponente = ProyectoOOIA.GestionEventoWS.ponente;
@@ -418,9 +418,9 @@ namespace ProyectoOOIA.Ventanas
 
         }
 
-        private CoordinadorWS.coordinador asignarPersona(PonenteWS.persona mostrarPersona)
+        private GestionHumanaWS.coordinador asignarPersona(GestionHumanaWS.persona mostrarPersona)
         {
-            CoordinadorWS.coordinador aux= new CoordinadorWS.coordinador();
+            GestionHumanaWS.coordinador aux= new GestionHumanaWS.coordinador();
             aux.nombre = mostrarPersona.nombre;
             aux.correo = mostrarPersona.correo;
             aux.id_persona = mostrarPersona.id_persona;

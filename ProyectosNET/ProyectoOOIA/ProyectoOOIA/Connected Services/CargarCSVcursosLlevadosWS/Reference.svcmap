@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.187.65:8080/AuxiliarWS/CursosLlevadosCSVcargaWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/AuxiliarWS/CursosLlevadosCSVcargaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CursosLlevadosCSVcargaWS1.xsd" MetadataType="Schema" ID="e091a6d9-a0b6-43e3-93d7-83e87ba4aa8b" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/CursosLlevadosCSVcargaWS?xsd=1" />
-    <MetadataFile FileName="CursosLlevadosCSVcargaWS1.wsdl" MetadataType="Wsdl" ID="764b8827-a351-423d-8aa2-1612849017f6" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/CursosLlevadosCSVcargaWS?WSDL" />
+    <MetadataFile FileName="CursosLlevadosCSVcargaWS.wsdl" MetadataType="Wsdl" ID="c4e6d188-c3c5-48d3-9ee1-bce4a07887d3" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/CursosLlevadosCSVcargaWS?WSDL" />
+    <MetadataFile FileName="CursosLlevadosCSVcargaWS.xsd" MetadataType="Schema" ID="2085fff5-89c9-4b77-bdc9-733c2d0124cb" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/CursosLlevadosCSVcargaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

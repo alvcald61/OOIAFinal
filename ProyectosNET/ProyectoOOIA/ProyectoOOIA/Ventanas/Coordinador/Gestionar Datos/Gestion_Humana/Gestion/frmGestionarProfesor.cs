@@ -12,9 +12,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
     {
         private Regex regex;
 
-        private EspecialidadWS.EspecialidadWSClient daoEspecialidad;
-        private ProfesorWS.ProfesorWSClient daoProfesor;
-        private ProfesorWS.profesor profesor;
+        private GestionHumanaWS.GestionHumanaWSClient daoEspecialidad;
+        private GestionHumanaWS.GestionHumanaWSClient daoProfesor;
+        private GestionHumanaWS.profesor profesor;
         private byte[] imagen_perfil;
         private Estado estado;
 
@@ -24,9 +24,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             estado = Estado.Inicial;
             clearall();
             cambiarEstado();
-            daoEspecialidad = new EspecialidadWS.EspecialidadWSClient();
-            daoProfesor = new ProfesorWS.ProfesorWSClient();
-            cbEspecialidad.DataSource = new BindingList<EspecialidadWS.especialidad>
+            daoEspecialidad = new GestionHumanaWS.GestionHumanaWSClient();
+            daoProfesor = new GestionHumanaWS.GestionHumanaWSClient();
+            cbEspecialidad.DataSource = new BindingList<GestionHumanaWS.especialidad>
                 (daoEspecialidad.listarEspecialidad().ToList());
             cbEspecialidad.DisplayMember = "nombre";
             cbEspecialidad.ValueMember = "id_especialidad";
@@ -161,7 +161,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         /*Botones de Toolstrip*/
 
-        public void fillText(ProfesorWS.profesor profe)
+        public void fillText(GestionHumanaWS.profesor profe)
         {
             //Persona
             txtDni.Text = profe.dni;
@@ -182,7 +182,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            this.profesor = new ProfesorWS.profesor();
+            this.profesor = new GestionHumanaWS.profesor();
             estado = Estado.Nuevo;
             cambiarEstado();
             clearall();
@@ -264,8 +264,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             //Alumno
             profesor.facultad = txtFacultad.Text;
             profesor.categoria = txtCategoria.Text;
-            EspecialidadWS.especialidad esp_selected = (EspecialidadWS.especialidad)cbEspecialidad.SelectedItem;
-            profesor.especialidad = new ProfesorWS.especialidad();
+            GestionHumanaWS.especialidad esp_selected = (GestionHumanaWS.especialidad)cbEspecialidad.SelectedItem;
+            profesor.especialidad = new GestionHumanaWS.especialidad();
             profesor.especialidad.id_especialidad = esp_selected.id_especialidad;
             profesor.especialidad.nombre = esp_selected.nombre;
 
@@ -291,7 +291,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             }
             else if (estado == Estado.Modificar)
             {
-                int resultado = daoProfesor.modificarProfesor(profesor);
+                
+                int resultado = daoProfesor.modificarProfesores(profesor);
                 if (resultado != 0)
                 {
                     MessageBox.Show("Se ha actualizado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -340,7 +341,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 MessageBox.Show("El dni debe ser una cadena de 8 numeros", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 retorno = false;
             }
-            string patronCorreo = @"/^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/";
+            string patronCorreo = @"^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$";
             regex = new Regex(patronCorreo);
             if (!regex.IsMatch(txtCorreo.Text))
             {

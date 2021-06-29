@@ -8,16 +8,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
     public partial class frmBuscarCoordinador : Form
     {
-        private CoordinadorWS.CoordinadorWSClient daoCoordinador;
-        private CoordinadorWS.coordinador _coordinador;
+        private GestionHumanaWS.GestionHumanaWSClient daoCoordinador;
+        private GestionHumanaWS.coordinador _coordinador;
 
-        public CoordinadorWS.coordinador Coordinador { get => _coordinador; set => _coordinador = value; }
+        public GestionHumanaWS.coordinador Coordinador { get => _coordinador; set => _coordinador = value; }
 
         public frmBuscarCoordinador()
         {
             InitializeComponent();
             dgvCoordinadores.AutoGenerateColumns = false;
-            daoCoordinador = new CoordinadorWS.CoordinadorWSClient();
+            daoCoordinador = new GestionHumanaWS.GestionHumanaWSClient();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -27,8 +27,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<CoordinadorWS.coordinador>
-                coordinadores = new BindingList<CoordinadorWS.coordinador>
+            BindingList<GestionHumanaWS.coordinador>
+                coordinadores = new BindingList<GestionHumanaWS.coordinador>
                 (daoCoordinador.listarCoordinador());
             dgvCoordinadores.DataSource = coordinadores;
         }
@@ -38,7 +38,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             if (dgvCoordinadores.CurrentRow != null)
             {
                 _coordinador =
-              (CoordinadorWS.coordinador)dgvCoordinadores.CurrentRow.DataBoundItem;
+              (GestionHumanaWS.coordinador)dgvCoordinadores.CurrentRow.DataBoundItem;
                 this.DialogResult = DialogResult.OK;
             }
         }

@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Net;
+using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
     public partial class frmCancelarCitaAsesor : Form
     {
-        public frmCancelarCitaAsesor()
+        private bool respuesta = false;
+        private GestionHumanaWS.persona alumno;
+        public frmCancelarCitaAsesor(GestionHumanaWS.persona alumno)
         {
+            this.alumno = alumno;
             InitializeComponent();
         }
 
@@ -42,6 +47,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
+            respuesta = false;
             this.Close();
         }
 
@@ -53,8 +59,35 @@ namespace ProyectoOOIA.Ventanas
                MessageBoxButtons.YesNo, MessageBoxIcon.None);
             if (dr == DialogResult.Yes)
             {
+                respuesta = true;
                 MessageBox.Show("La cita ha sido cambiada exitosamente", "Cita Cancelada", MessageBoxButtons.OK);
                 this.Close();
+            }
+           
+        }
+        private void enviarCorreo(string motivo, string mensaje)
+        {
+            var fromAddress = new MailAddress("OOIA.no.reply@gmail.com", "OOIA");
+            var toAddress = new MailAddress(alumno.correo, alumno.nombre);
+            const string fromPassword = "sistemaOOIA123";
+            string subject = motivo;
+            string body = mensaje;
+            var smtp = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+            };
+            using (var message = new MailMessage(fromAddress, toAddress)
+            {
+                Subject = subject,
+                Body = body
+            })
+            {
+                smtp.Send(message);
             }
         }
 

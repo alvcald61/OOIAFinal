@@ -10,8 +10,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 {
     public partial class frmGestionarCoordinador: Form
     {
-        private CoordinadorWS.CoordinadorWSClient daoCoordinador;
-        private CoordinadorWS.coordinador coordinador;
+        private GestionHumanaWS.GestionHumanaWSClient daoCoordinador;
+        private GestionHumanaWS.coordinador coordinador;
         private Estado estado;
         private byte[] imagen_perfil;
         Regex regex;
@@ -21,7 +21,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             estado = Estado.Inicial;
             clearall();
             cambiarEstado();
-            daoCoordinador = new CoordinadorWS.CoordinadorWSClient();
+            daoCoordinador = new GestionHumanaWS.GestionHumanaWSClient();
         }
 
         public void clearall()
@@ -150,7 +150,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         /*Botones de Toolstrip*/
 
-        public void fillText(CoordinadorWS.coordinador coord)
+        public void fillText(GestionHumanaWS.coordinador coord)
         {
             //Persona
             txtDni.Text = coord.dni;
@@ -169,7 +169,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            this.coordinador = new CoordinadorWS.coordinador();
+            this.coordinador = new GestionHumanaWS.coordinador();
             estado = Estado.Nuevo;
             cambiarEstado();
             clearall();
@@ -279,7 +279,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 MessageBox.Show("El dni debe ser una cadena de 8 numeros", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 retorno = false;
             }
-            string patronCorreo = @"/^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/";
+            string patronCorreo = @"^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$";
             regex = new Regex(patronCorreo);
             if (!regex.IsMatch(txtCorreo.Text))
             {
@@ -300,7 +300,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar este coordinador?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
-                int resultado = daoCoordinador.eliminarCoordinador(coordinador.id_coordinador);
+                int resultado = daoCoordinador.eliminarCoordinador(coordinador);
                 if (resultado != 0)
                 {
                     MessageBox.Show("Se ha eliminado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
