@@ -7,6 +7,10 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ProyectoOOIA.GestionAtencionWS;
 using ProyectoOOIA.GestionHumanaWS;
+using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json.Linq;
+using RestSharp;
+using System.Text;
 
 namespace ProyectoOOIA.Ventanas
 {
@@ -234,16 +238,19 @@ namespace ProyectoOOIA.Ventanas
                 if (resultado != 0)
                 {
                     MessageBox.Show("La cita ha sido registrada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string []arr=generarLlamada();
                     string mensaje = "Estimado " + alumno.nombre + ":\n" +
                                      "Ustedes ha agendado satisfactoriamente una cita con la OOIA. A continuación le indicaremos los datos de la sesion: \n\n" +
                                      "Asesor: " + asesor.nombre + "\n" +
                                      "Fecha: " + citaNueva.fecha.Date + "\n" +
                                      "Desde las: " + citaNueva.horario.horaInicio.Hour + ":"+ citaNueva.horario.horaInicio.Minute + "\n" +
                                      "Hasta: " + citaNueva.horario.horaFin.Hour + ":" + citaNueva.horario.horaFin.Minute + "\n" +
-                                     "Con el siguiente motivo: " + citaNueva.motivo + "\n\n\n\n" +
-                                     "Atte. Oficina de Orientación, Información y Apoyo al Estudiante\n\n ";
+                                     "Con el siguiente motivo: " + citaNueva.motivo  +
+                                     "Link de la reunion disponible a partir de la feche programada: "+ arr[0]+
+                                     "\n\n\n\n"+
+                                     "\n\nAtte. Oficina de Orientación, Información y Apoyo al Estudiante\n\n ";
 
-
+                    
                     enviarCorreo("Inscripción a cita con " + asesor.nombre,mensaje);
                     horarioAsesor.estado = "reservado";
                     
@@ -256,8 +263,40 @@ namespace ProyectoOOIA.Ventanas
                 listarCitasProgramadas();
         }
 
+        private string[] generarLlamada()
+        {
+            
+                var tokenHandler = new System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler();
+                var now = DateTime.UtcNow;
+                var apiSecret = "40BLxSs4nUvOoKRUHYqENitX54CZcM1CNJh2";
+                byte[] symmetricKey = Encoding.ASCII.GetBytes(apiSecret);
 
-        
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
+                    Issuer = "AC5lcAH8TSauiI2_3jS1JQ",
+                    Expires = now.AddSeconds(300),
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(symmetricKey), SecurityAlgorithms.HmacSha256),
+                };
+                var token = tokenHandler.CreateToken(tokenDescriptor);
+                var tokenString = tokenHandler.WriteToken(token);
+                var client = new RestClient("https://api.zoom.us/v2/users/ooia.no.reply@gmail.com/meetings");
+                var request = new RestRequest(Method.POST);
+                request.RequestFormat = DataFormat.Json;
+                request.AddJsonBody(new { topic = "Meeting with Alvaro", duration = "30", start_time = "2021-07-01T18:10:00", type = "2" });
+
+                request.AddHeader("authorization", String.Format("Bearer {0}", tokenString));
+
+                IRestResponse restResponse = client.Execute(request);
+                HttpStatusCode statusCode = restResponse.StatusCode;
+                int numericStatusCode = (int)statusCode;
+                var jObject = JObject.Parse(restResponse.Content);
+                if (numericStatusCode == 404) MessageBox.Show("Error Llamada", "Error");
+                string[] arr = new string[2];
+                arr[0] = (string)jObject["start_url"];
+                arr[1] = (string)jObject["join_url"];
+            return arr;
+
+        }
 
         private void btnAtras_Click(object sender, EventArgs e)
         {

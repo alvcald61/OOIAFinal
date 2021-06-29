@@ -14,4 +14,5 @@ public interface CitaDAO {
     public int insertar(Cita cita);
     public int modificar(Cita cita);
     public int eliminar(int id_ita);
+    public ArrayList<Cita> listar_proximas_cita_profesor(int id_profesor);
 }

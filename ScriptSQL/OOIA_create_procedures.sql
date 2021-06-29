@@ -838,11 +838,12 @@ create procedure INSERTAR_CITA(
     	in _fid_horario int,
 	in _fid_atencion int,
     	in _fecha date,
+        in _asistio int,
     	in _motivo varchar(300),
 	in _compromiso varchar(300)
 )begin
 	insert into cita(fid_alumno, tipo_asesor, fid_asesor, fid_atencion, fid_horario, fecha, motivo, compromiso, asistio, activo) 
-    	values(_fid_alumno, _tipo_asesor, _fid_asesor, _fid_atencion, _fid_horario, _fecha, _motivo, _compromiso, false, true);
+    	values(_fid_alumno, _tipo_asesor, _fid_asesor, _fid_atencion, _fid_horario, _fecha, _motivo, _compromiso, _asistio, true);
 	set _id_cita = @@last_insert_id;
 end$
 
@@ -857,7 +858,7 @@ create procedure MODIFICAR_CITA(
     	in _fecha date,
     	in _motivo varchar(300),
 	in _compromiso varchar(300),
-    	in _asistio bool
+    	in _asistio int
 )begin
 	update cita set fid_alumno = _fid_alumno, tipo_asesor = _tipo_asesor, fid_asesor = _fid_asesor, fid_horario=_fid_horario, fid_atencion=_fid_atencion, fecha = 		_fecha, motivo=_motivo, compromiso = _compromiso, asistio = _asistio
 	where id_cita = _id_cita;
@@ -1353,5 +1354,29 @@ in _password varchar(150)
 update miembro_pucp  set password = md5(_password) where id_miembro_pucp = _id;
 end$
 
+delimiter $
+create procedure listar_links(
+	in _id_cita int)
+    begin
+    select link_user,link_host
+    from cita c
+    where c.id_cita=_id_cita;
+end$
 
 
+delimiter $
+create procedure listar_proximas_cita_profesor(
+in _id_asesor int
+)
+begin
+select c.id_cita, c.fid_alumno, c.tipo_asesor, c.fid_asesor, p.nombre, c.fecha, c.motivo, c.compromiso, c.asistio, 
+	h.id_horario, h.dia, h.hora_inicio, h.hora_fin,
+	ca.id_codigo_atencion, ca.codigo, ca.descripcion
+    	from cita c 
+	inner join horario h on c.fid_horario = h.id_horario
+    inner join miembro_pucp mp on c.fid_asesor = mp.id_miembro_pucp
+    inner join persona p on mp.fid_persona= p.id_persona
+    	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
+    	where h.fid_asesor=_id_asesor;
+        
+end$

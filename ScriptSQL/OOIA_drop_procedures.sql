@@ -118,3 +118,6 @@ drop procedure if exists LISTAR_EVENTO_X_NOMBRE_CATEGORIA;
 -- Autenticar usuarios y demas
 drop procedure if exists autenticarUsuario;
 drop procedure if exists autenticarPersona;
+
+drop procedure if exists	listar_links
+

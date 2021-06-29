@@ -175,7 +175,8 @@ create table cita(
 	compromiso varchar(300),
     	asistio bool,
     	activo bool,
-
+		link_host varchar(400),
+		link_user varchar(200),
     	primary key(id_cita),
     	foreign key (fid_alumno) references alumno(id_alumno),
 	foreign key (fid_asesor) references miembro_pucp(id_miembro_pucp),
