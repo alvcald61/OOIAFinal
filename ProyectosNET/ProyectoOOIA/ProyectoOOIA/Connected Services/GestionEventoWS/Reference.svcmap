@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/AuxiliarWS/GestionEventoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestionEventoWS.xsd" MetadataType="Schema" ID="d5824737-185e-4648-8596-816d714789ae" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionEventoWS?xsd=1" />
-    <MetadataFile FileName="GestionEventoWS.wsdl" MetadataType="Wsdl" ID="7af7eee0-3114-4ad8-8c17-29e959c12e25" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionEventoWS?WSDL" />
+    <MetadataFile FileName="GestionEventoWS.xsd" MetadataType="Schema" ID="03f8d6ca-30ab-4856-8798-9667315c2685" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionEventoWS?xsd=1" />
+    <MetadataFile FileName="GestionEventoWS.wsdl" MetadataType="Wsdl" ID="6d4b59b2-17dd-41ee-ac90-6783d013fd54" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionEventoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
