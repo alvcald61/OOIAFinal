@@ -93,11 +93,10 @@ public class EventoAlumnoMySQL implements EventoAlumnoDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
             
-            cs = con.prepareCall("call MODIFICAR_EVENTO_ALUMNO(?,?,?,?,?,?,?,?)");
+            cs = con.prepareCall("call MODIFICAR_EVENTO_ALUMNO(?,?,?,?,?,?,?)");
             //SETEAMOS los parametros
-            
+             
             //Insertamos en encuesta_evento
-            cs.setInt("_id_encuesta", eventoAlumno.getId_encuesta());
             cs.setInt("_fid_alumno", eventoAlumno.getId_alumno());
             cs.setInt("_fid_evento", eventoAlumno.getId_evento());
             cs.setInt("_valoracion_ponentes", eventoAlumno.getValoracionPonentes());

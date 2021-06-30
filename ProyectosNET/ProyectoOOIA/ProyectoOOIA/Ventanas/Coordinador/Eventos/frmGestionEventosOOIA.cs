@@ -10,9 +10,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using ProyectoOOIA.GestionEventoWS;
 using ProyectoOOIA.Ventanas.Coordinador.Eventos;
+//using ProyectoOOIA.Ventanas.Coordinador.Eventos;
 using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
 using ponente = ProyectoOOIA.GestionEventoWS.ponente;
 

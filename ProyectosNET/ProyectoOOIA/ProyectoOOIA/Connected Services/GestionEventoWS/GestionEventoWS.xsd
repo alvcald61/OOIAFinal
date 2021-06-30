@@ -172,16 +172,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarEvento_por_nombre_categoria">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarEvento_por_nombre_categoriaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="eliminarEncuestaEvento">
     <xs:sequence>
       <xs:element minOccurs="0" name="eventoAl" type="tns:eventoAlumno" />
@@ -204,6 +194,16 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarEvento_por_nombre_categoria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEvento_por_nombre_categoriaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarPonenteXEvento">
     <xs:sequence>
       <xs:element name="id_evento" type="xs:int" />
@@ -214,14 +214,12 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ponente" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listar_eventos_pasados">
-    <xs:sequence>
-      <xs:element name="id_alumno" type="xs:int" />
-    </xs:sequence>
+  <xs:complexType name="listarCoordinadorEvento">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="listar_eventos_pasadosResponse">
+  <xs:complexType name="listarCoordinadorEventoResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:coordinador" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarCategoriaEvento">
@@ -234,12 +232,14 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCoordinadorEvento">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarCoordinadorEventoResponse">
+  <xs:complexType name="listar_eventos_pasados">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:coordinador" />
+      <xs:element name="id_alumno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listar_eventos_pasadosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCategoriaEvento">
@@ -296,16 +296,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listar_eventos_inscritos">
-    <xs:sequence>
-      <xs:element name="id_alumno" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listar_eventos_inscritosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarCoordinador">
     <xs:sequence>
       <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
@@ -314,6 +304,16 @@
   <xs:complexType name="insertarCoordinadorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listar_eventos_inscritos">
+    <xs:sequence>
+      <xs:element name="id_alumno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listar_eventos_inscritosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarEncuestaEvento">

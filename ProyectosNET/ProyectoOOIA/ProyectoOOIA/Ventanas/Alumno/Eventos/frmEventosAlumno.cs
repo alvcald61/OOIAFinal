@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoOOIA.Ventanas.Alumno.Eventos;
+using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
@@ -45,8 +46,8 @@ namespace ProyectoOOIA.Ventanas
             evento = new GestionEventoWS.evento();
             this.alumno=persona as GestionHumanaWS.alumno;
             eventoAlumno = new  GestionEventoWS.eventoAlumno();
-           // listarHistorial();
-           // listarEventosInscritos();
+            listarHistorial();
+            listarEventosInscritos();
 
     }
 
@@ -233,6 +234,23 @@ namespace ProyectoOOIA.Ventanas
             GestionEventoWS.evento data = dvgHistorial.Rows[e.RowIndex].DataBoundItem
             as GestionEventoWS.evento;
             dvgHistorial.Rows[e.RowIndex].Cells[4].Value = data.categoria.nombre;
+        }
+
+        private void btnAgregarOpinion_Click(object sender, EventArgs e)
+        {
+            GestionEventoWS.evento eventoSeleccionado = 
+                (GestionEventoWS.evento)dvgHistorial.CurrentRow.DataBoundItem;
+
+            if(eventoSeleccionado == null)
+            {
+                MessageBox.Show("Debe de seleccionar un evento", "Mensaje de error", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                new frmAgregarOpinionEvento(eventoSeleccionado.id_evento, this.alumno.id_alumno).ShowDialog();
+            }
+
         }
     }
 }

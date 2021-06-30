@@ -1136,7 +1136,6 @@ end$
 
 delimiter $
 create procedure MODIFICAR_EVENTO_ALUMNO(
-	in _id_evento_alumno int,
     	in _fid_alumno int,
    	in _fid_evento int,
     	in _valoracion_ponente int,
@@ -1145,10 +1144,10 @@ create procedure MODIFICAR_EVENTO_ALUMNO(
     	in _asistencia bool,
     	in _comentario varchar(200)
 )begin
-	update evento_alumno set fid_alumno = _fid_alumno, fid_evento = _fid_evento, 
+	update evento_alumno set  
     	valoracion_ponentes = _valoracion_ponentes,  valoracion_evento = _valoracion_evento,
     	valoracion_utilidad = _valoracion_utilidad, asistencia = _asistencia, comentario = _comentario
-    	where id_evento_alumno = _id_evento_alumno;
+    	where id_alumno = _fid_alumno and id_evento = _fid_evento;
 end$
 
 delimiter $

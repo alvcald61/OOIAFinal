@@ -103,9 +103,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.lblCategoriaForm = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.tabPlantillaCSV = new System.Windows.Forms.TabPage();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             this.btnDescargarPlantilla = new System.Windows.Forms.Button();
             this.guardarPlantilla = new System.Windows.Forms.SaveFileDialog();
-            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.panelGestionHumana.SuspendLayout();
@@ -918,6 +918,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.tabPlantillaCSV.Text = "Plantilla de carga CSV";
             this.tabPlantillaCSV.UseVisualStyleBackColor = true;
             // 
+            // axAcroPDF1
+            // 
+            this.axAcroPDF1.Enabled = true;
+            this.axAcroPDF1.Location = new System.Drawing.Point(0, 33);
+            this.axAcroPDF1.Name = "axAcroPDF1";
+            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            this.axAcroPDF1.Size = new System.Drawing.Size(657, 453);
+            this.axAcroPDF1.TabIndex = 1;
+            // 
             // btnDescargarPlantilla
             // 
             this.btnDescargarPlantilla.Location = new System.Drawing.Point(275, 4);
@@ -927,15 +936,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnDescargarPlantilla.Text = "Descargar Plantilla";
             this.btnDescargarPlantilla.UseVisualStyleBackColor = true;
             this.btnDescargarPlantilla.Click += new System.EventHandler(this.btnDescargarPlantilla_Click);
-            // 
-            // axAcroPDF1
-            // 
-            this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(61, 33);
-            this.axAcroPDF1.Name = "axAcroPDF1";
-            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(545, 323);
-            this.axAcroPDF1.TabIndex = 1;
             // 
             // frmCargarDatos
             // 
