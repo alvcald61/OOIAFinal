@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using ProyectoOOIA.GestionEventoWS;
 using ProyectoOOIA.Ventanas.Coordinador.Eventos;
 //using ProyectoOOIA.Ventanas.Coordinador.Eventos;
+//using ProyectoOOIA.Ventanas.Coordinador.Eventos;
 using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
 using ponente = ProyectoOOIA.GestionEventoWS.ponente;
 
