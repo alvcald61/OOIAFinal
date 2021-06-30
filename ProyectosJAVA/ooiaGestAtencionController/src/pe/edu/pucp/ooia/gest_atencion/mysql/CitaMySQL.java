@@ -48,14 +48,14 @@ public class CitaMySQL implements CitaDAO{
                     //cita.setAsesor(obtenerProfesor(rs.getInt("fid_asesor")));
                     cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
                     cita.getAsesor().setNombre(rs.getString("nombre"));
-                    cita.setLink_user(rs.getString("link_user"));
-                    cita.setLink_Host(rs.getString("link_host"));
+                    
                 }
                 else if(cita.getTipo_asesor() == 1){
                     cita.setAsesor(new Psicologo());
                     //cita.setAsesor(obtenerPsicologo(rs.getInt("fid_asesor")));
                     cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
                     cita.getAsesor().setNombre(rs.getString("nombre"));
+                   
                 }
                 
                
@@ -66,8 +66,9 @@ public class CitaMySQL implements CitaDAO{
                         rs.getString("codigo"), rs.getString("descripcion")));
                 cita.setMotivo(rs.getString("motivo"));
                 cita.setCompromiso(rs.getString("compromiso"));
+            
                 cita.setAsistio(rs.getInt("asistio"));
-                cita.setEstado(true);
+                
                 citas.add(cita);
             }
             rs.close();
@@ -116,9 +117,7 @@ public class CitaMySQL implements CitaDAO{
                 cita.setMotivo(rs.getString("motivo"));
                 cita.setCompromiso(rs.getString("compromiso"));
                 cita.setAsistio(rs.getInt("asistio"));
-                cita.setLink_user(rs.getString("link_user"));
-                    cita.setLink_Host(rs.getString("link_host"));
-                cita.setEstado(true);
+                
                 citas.add(cita);
             }
             rs.close();
@@ -141,7 +140,7 @@ public class CitaMySQL implements CitaDAO{
            con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
           
-           cs = con.prepareCall("{call INSERTAR_CITA(?,?,?,?,?,?,?,?,?)}");
+           cs = con.prepareCall("{call INSERTAR_CITA(?,?,?,?,?,?,?,?,?,?)}");
            cs.registerOutParameter("_id_cita",java.sql.Types.INTEGER);
            /*Cita*/
            cs.setInt("_fid_alumno",cita.getAlumno().getId_alumno());
@@ -286,11 +285,9 @@ public class CitaMySQL implements CitaDAO{
                         rs.getString("codigo"), rs.getString("descripcion")));
                 cita.setMotivo(rs.getString("motivo"));
                 cita.setCompromiso(rs.getString("compromiso"));
-                
-                cita.setLink_user(rs.getString("link_user"));
-                    cita.setLink_Host(rs.getString("link_host"));
+              
                 cita.setAsistio(rs.getInt("asistio"));
-                cita.setEstado(true);
+             
                 citas.add(cita);
             }
             rs.close();
@@ -339,11 +336,9 @@ public class CitaMySQL implements CitaDAO{
                         rs.getString("codigo"), rs.getString("descripcion")));
                 cita.setMotivo(rs.getString("motivo"));
                 cita.setCompromiso(rs.getString("compromiso"));
-                
-                cita.setLink_user(rs.getString("link_user"));
-                    cita.setLink_Host(rs.getString("link_host"));
+            
                 cita.setAsistio(rs.getInt("asistio"));
-                cita.setEstado(true);
+            
                 citas.add(cita);
             }
             rs.close();
@@ -365,7 +360,7 @@ public class CitaMySQL implements CitaDAO{
            //creamos la conexion
            con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
-           cs=con.prepareCall("{insertar_links(?,?,?)}");
+           cs=con.prepareCall("{call insertar_links(?,?,?)}");
            cs.setInt("_id_cita", id_cita);
            cs.setString("_host", host);
            cs.setString("_user", user);
@@ -379,6 +374,11 @@ public class CitaMySQL implements CitaDAO{
         }
         
         return resultado;
+    }
+
+    @Override
+    public ArrayList<Cita> listarCitasAsesor(int id_profesor, Date fecha_cita, String nombre_alumno, int estado) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

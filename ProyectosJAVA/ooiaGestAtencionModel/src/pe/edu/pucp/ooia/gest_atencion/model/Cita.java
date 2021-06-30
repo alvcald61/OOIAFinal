@@ -114,14 +114,7 @@ public class Cita {
     }
   
 
-    
-    public boolean getEstado() {
-        return activo;
-    }
 
-    public void setEstado(boolean estado) {
-        this.activo = estado;
-    }
 
     public String getLink_user() {
         return link_user;

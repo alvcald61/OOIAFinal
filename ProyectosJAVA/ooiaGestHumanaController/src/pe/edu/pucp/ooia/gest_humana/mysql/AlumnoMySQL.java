@@ -192,6 +192,91 @@ public class AlumnoMySQL implements AlumnoDAO{
                return alumno;
     }
 
+    @Override
+    public ArrayList<Alumno> listar_x_evento(int evento) {
+        ArrayList<Alumno> alumnos = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_ALUMNO_X_EVENTO(?)}");
+            cs.setInt("_id", evento);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Alumno alumno = new Alumno();
+                /*Persona*/
+                alumno.setId_persona(rs.getInt("id_persona"));
+                alumno.setNombre(rs.getString("nombre"));
+                alumno.setDni(rs.getString("dni"));
+                alumno.setFecha_nacimiento(rs.getDate("fecha_nacimiento"));
+                alumno.setDireccion(rs.getString("direccion"));
+                alumno.setCorreo(rs.getString("correo"));
+                /*Miembro PUCP*/
+                alumno.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
+                //alumno.setUsuario(rs.getString("usuario"));
+                //alumno.setPassword(rs.getString("password"));
+                alumno.setFecha_inclusion(rs.getDate("fecha_inclusion"));
+                //alumno.setImagenDePerfil(rs.getBytes("imagen_perfil"));
+                /*Alumno*/
+                alumno.setId_alumno(rs.getInt("id_alumno") );
+                alumno.setCodigo(rs.getString("codigo"));
+                alumno.setEspecialidad(new Especialidad(rs.getInt("fid_especialidad"), rs.getString("nombre_especialidad")));
+                alumno.setCraest(rs.getDouble("craest"));
+                alumno.setCreditos_aprobados(rs.getDouble("creditos_aprobados"));
+                alumnos.add(alumno);
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return alumnos;
+    }
+
+    @Override
+    public boolean obtenerEstadoEventoAlumno(int evento, int alumno) {
+        boolean retorno=false;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_ALUMNO_X_EVENTO(?,?)}");
+                cs.setInt("_evento", evento);
+            cs.setInt("_alumno", alumno);
+            rs = cs.executeQuery();
+            rs.next();
+            retorno=rs.getBoolean("asistencia");
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return retorno;
+        
+    }
+    @Override
+    public int MODIFIACR_ASISTENCIA(int evento, int alumno,boolean estado) {
+        int retorno=0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call MODIFIACR_ASISTENCIA(?,?,?)}");
+                cs.setInt("_evento", evento);
+            cs.setInt("_alumno", alumno);
+            cs.setBoolean("estado",estado);
+             cs.executeUpdate();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return retorno;
+        
+    }
+
     
     }
   

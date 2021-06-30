@@ -154,11 +154,11 @@ namespace ProyectoOOIA.Ventanas
         private void loadHorario()
         {
             
-            //try
-            //{
+            try
+            {
                 horarios = new BindingList<GestionAtencionWS.horarioAsesor>(daoHorario.listarHorarioAsesor(asesor.id_miembro_pucp));
-            //}
-            //catch { return; }
+            }
+            catch { return; }
             DateTime now = DateTime.Now;
             for (int i=0; i<90; i++)
             {
