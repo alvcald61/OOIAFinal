@@ -1405,7 +1405,8 @@ in _id int
 	inner join miembro_pucp m on p.id_persona = m.fid_persona
         inner join alumno a on a.fid_miembro_pucp = m.id_miembro_pucp
         inner join especialidad e on e.id_especialidad = a.fid_especialidad 
-        inner join evento ev on ev.id_evento=id;
+        inner join evento_alumno ev on ev.fid_alumno=a.id_alumno
+        where ev.fid_evento=2;
 end$
 
 delimiter $
@@ -1423,8 +1424,8 @@ delimiter $
 create procedure MODIFIACR_ASISTENCIA(
 in _evento int,
 in _alumno int,
-in estado int
+in estado bool
 )
 begin
-update evento set asistio=estado where fid_alumno=_alumno and fid_evento=_evento;
+update evento_alumno set asistencia=estado where fid_alumno=_alumno and fid_evento=_evento;
 end$

@@ -12,22 +12,32 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
 {
     public partial class frmRegistroAsistencia : Form
     {
-        GestionHumanaWS.GestionHumanaWSClient daoAlumno;
-        GestionEventoWS.evento evento;
+        private GestionHumanaWS.GestionHumanaWSClient daoAlumno;
+        private GestionEventoWS.evento evento;
+        private BindingList<bool> lista;
+        private int vez = 0;
         public frmRegistroAsistencia(GestionEventoWS.evento evento)
         {
 
             
             InitializeComponent();
+            lista = new BindingList<bool>();
             this.evento=evento;
             dgvAlumnos.AutoGenerateColumns = false;
             daoAlumno = new GestionHumanaWS.GestionHumanaWSClient();
             try
             {
+                //daoAlumno.obtener_estado(evento.id_evento, data.id_alumno);
                 BindingList<GestionHumanaWS.alumno>
                 alumnos = new BindingList<GestionHumanaWS.alumno>
                 (daoAlumno.listar_alumno_x_evento(this.evento.id_evento).ToList());
                 dgvAlumnos.DataSource = alumnos;
+                for (int i = 0; i < alumnos.Count; i++)
+                {
+                    lista.Add(daoAlumno.obtener_estado(evento.id_evento, alumnos[i].id_alumno));
+                }
+                vez = 1;
+
             }
             catch
             {
@@ -36,20 +46,7 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
 
         }
 
-        private void dgvAlumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void frmRegistroAsistencia_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -57,44 +54,42 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
 
         }
 
-        private void dgvAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            GestionHumanaWS.alumno data = dgvAlumnos.Rows[e.RowIndex].DataBoundItem
-            as GestionHumanaWS.alumno;
-            dgvAlumnos.Rows[e.RowIndex].Cells[0].Value = data.codigo;
-            dgvAlumnos.Rows[e.RowIndex].Cells[1].Value = data.nombre;
-            dgvAlumnos.Rows[e.RowIndex].Cells[2].Value = data.especialidad.nombre;
-            dgvAlumnos.Rows[e.RowIndex].Cells[3].Value = daoAlumno.obtener_estado(evento.id_evento,data.id_alumno);
-        }
+     
 
         private void button1_Click(object sender, EventArgs e)
         {
             
             for(int i = 0; i < dgvAlumnos.RowCount; i++)
             {
-                int id_alumno = (dgvAlumnos.Rows[i].DataBoundItem as GestionHumanaWS.alumno).id_alumno;
-                
-                try
-                {
+                    int id_alumno = (dgvAlumnos.Rows[i].DataBoundItem as GestionHumanaWS.alumno).id_alumno;
                     bool estado=(bool)dgvAlumnos.Rows[i].Cells[3].Value;
                     daoAlumno.modifcar_asistencia(evento.id_evento, id_alumno, estado);
-                }
-                catch
-                {
-
-                }
-
-                
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void lblBuscarEventos_Click(object sender, EventArgs e)
+        private void dgvAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            GestionHumanaWS.alumno data = dgvAlumnos.Rows[e.RowIndex].DataBoundItem
+                    as GestionHumanaWS.alumno;
+            dgvAlumnos.Rows[e.RowIndex].Cells[0].Value = data.codigo;
+            dgvAlumnos.Rows[e.RowIndex].Cells[1].Value = data.nombre;
+            dgvAlumnos.Rows[e.RowIndex].Cells[2].Value = data.especialidad.nombre;
+            if (vez == 1)
+            {
+                DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)dgvAlumnos.Rows[e.RowIndex].Cells[3];
+                if (lista[e.RowIndex])
+                {
+                    chk.Value = chk.TrueValue;
+                }
+                else chk.Value = chk.FalseValue;
+
+
+            }
+            if (e.RowIndex == lista.Count - 1) vez++;
+
+
 
         }
     }

@@ -31,20 +31,20 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.PictureBox();
-            this.dgvAlumnos = new System.Windows.Forms.DataGridView();
-            this.lblBuscarEventos = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblBuscarEventos = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dgvAlumnos = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
-            this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,16 +59,42 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             this.panel1.Size = new System.Drawing.Size(688, 438);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // label1
             // 
-            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(539, 80);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Guardar Cambios";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(23, 80);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 21);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Lista de Alumnos";
+            
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.pnlHeader.Controls.Add(this.lblBuscarEventos);
+            this.pnlHeader.Controls.Add(this.btnBack);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(688, 63);
+            this.pnlHeader.TabIndex = 74;
+            // 
+            // lblBuscarEventos
+            // 
+            this.lblBuscarEventos.AutoSize = true;
+            this.lblBuscarEventos.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarEventos.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblBuscarEventos.Location = new System.Drawing.Point(56, 19);
+            this.lblBuscarEventos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBuscarEventos.Name = "lblBuscarEventos";
+            this.lblBuscarEventos.Size = new System.Drawing.Size(204, 30);
+            this.lblBuscarEventos.TabIndex = 38;
+            this.lblBuscarEventos.Text = "Registro de Asistencia";
+            
             // 
             // btnBack
             // 
@@ -82,6 +108,17 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             this.btnBack.TabIndex = 4;
             this.btnBack.TabStop = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(559, 80);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Guardar Cambios";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvAlumnos
             // 
@@ -103,35 +140,10 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             this.Asistencia});
             this.dgvAlumnos.Location = new System.Drawing.Point(27, 114);
             this.dgvAlumnos.Name = "dgvAlumnos";
-            this.dgvAlumnos.ReadOnly = true;
             this.dgvAlumnos.Size = new System.Drawing.Size(644, 312);
             this.dgvAlumnos.TabIndex = 0;
-            this.dgvAlumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnos_CellContentClick);
+            
             this.dgvAlumnos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAlumnos_CellFormatting);
-            // 
-            // lblBuscarEventos
-            // 
-            this.lblBuscarEventos.AutoSize = true;
-            this.lblBuscarEventos.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarEventos.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblBuscarEventos.Location = new System.Drawing.Point(56, 19);
-            this.lblBuscarEventos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBuscarEventos.Name = "lblBuscarEventos";
-            this.lblBuscarEventos.Size = new System.Drawing.Size(204, 30);
-            this.lblBuscarEventos.TabIndex = 38;
-            this.lblBuscarEventos.Text = "Registro de Asistencia";
-            this.lblBuscarEventos.Click += new System.EventHandler(this.lblBuscarEventos_Click);
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.pnlHeader.Controls.Add(this.lblBuscarEventos);
-            this.pnlHeader.Controls.Add(this.btnBack);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(688, 63);
-            this.pnlHeader.TabIndex = 74;
             // 
             // Codigo
             // 
@@ -157,20 +169,6 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             // 
             this.Asistencia.HeaderText = "Asistencia";
             this.Asistencia.Name = "Asistencia";
-            this.Asistencia.ReadOnly = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(23, 80);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 21);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Lista de Alumnos";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmRegistroAsistencia
             // 
@@ -182,13 +180,13 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             this.MaximizeBox = false;
             this.Name = "frmRegistroAsistencia";
             this.Text = "Registro de Asistencia";
-            this.Load += new System.EventHandler(this.frmRegistroAsistencia_Load);
+            
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
             this.ResumeLayout(false);
 
         }

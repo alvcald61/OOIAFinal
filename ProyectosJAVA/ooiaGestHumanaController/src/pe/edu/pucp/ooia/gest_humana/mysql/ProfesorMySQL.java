@@ -1,10 +1,14 @@
 package pe.edu.pucp.ooia.gest_humana.mysql;
 
+import java.nio.file.Files;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.ooia.gest_humana.dao.ProfesorDAO;
 import pe.edu.pucp.ooia.gest_humana.model.Especialidad;
@@ -160,36 +164,44 @@ public class ProfesorMySQL implements ProfesorDAO {
             cs = con.prepareCall("{call LISTAR_PROFESOR_X_ID(?)}");
             cs.setInt("_id", id);
             rs = cs.executeQuery();
-            rs.next();
             
-            /*Persona*/
-            profesor.setId_persona(rs.getInt("id_persona"));
-            profesor.setNombre(rs.getString("nombre"));
-            profesor.setDni(rs.getString("dni"));
-            profesor.setFecha_nacimiento(rs.getDate("fecha_nacimiento"));
-            profesor.setDireccion(rs.getString("direccion"));
-            profesor.setCorreo(rs.getString("correo"));
-            /*Miembro PUCP*/
-            profesor.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
-            profesor.setUsuario(rs.getString("usuario"));
-            profesor.setPassword(rs.getString("password"));
-            profesor.setFecha_inclusion(rs.getDate("fecha_inclusion"));
-            profesor.setImagenDePerfil(rs.getBytes("imagen_perfil"));
-            /*Profesor*/
-            profesor.setId_profesor(rs.getInt("id_profesor"));
-            profesor.setEspecialidad(new Especialidad(rs.getInt("id_especialidad"),rs.getString("nombre_especialidad")));
-            profesor.setFacultad(rs.getString("facultad"));
-            profesor.setCategoria(rs.getString("categoria"));
+            rs.next();
                 
+                /*Persona*/
+                profesor.setId_persona(rs.getInt("id_persona"));
+                profesor.setNombre(rs.getString("nombre"));
+                profesor.setDni(rs.getString("dni"));
+                profesor.setFecha_nacimiento(rs.getDate("fecha_nacimiento"));
+                profesor.setDireccion(rs.getString("direccion"));
+                profesor.setCorreo(rs.getString("correo"));
+                /*Miembro PUCP*/
+                
+                profesor.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
+                profesor.setUsuario(rs.getString("usuario"));
+                profesor.setPassword(rs.getString("password"));
+                profesor.setFecha_inclusion(rs.getDate("fecha_inclusion"));
+                profesor.setImagenDePerfil(rs.getBytes("imagen_perfil"));
+                /*Profesor*/
+                
+                profesor.setId_profesor(rs.getInt("id_profesor"));
+                profesor.setEspecialidad(new Especialidad(rs.getInt("id_especialidad"),rs.getString("nombre_especialidad")));
+                profesor.setFacultad(rs.getString("facultad"));
+                profesor.setCategoria(rs.getString("categoria"));
+                profesor.setActivo(true);
                 
             
             rs.close();
+        
             cs.close();
+        
         }catch(Exception ex){
-            System.out.println(ex.getMessage());
+            Logger.getLogger(ProfesorMySQL.class.getName()).log(Level.SEVERE, null, ex);
         }finally{
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage() + "Aqui");}
         }
+        
+            
+        
         return profesor;
     }
     
