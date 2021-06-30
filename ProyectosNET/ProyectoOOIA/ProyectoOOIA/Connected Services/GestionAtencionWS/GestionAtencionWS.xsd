@@ -57,7 +57,6 @@
       <xs:element name="asistio" type="xs:int" />
       <xs:element minOccurs="0" name="codigo_atencion" type="tns:codigoAtencion" />
       <xs:element minOccurs="0" name="compromiso" type="xs:string" />
-      <xs:element name="estado" type="xs:boolean" />
       <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
       <xs:element minOccurs="0" name="horario" type="tns:horario" />
       <xs:element name="id_cita" type="xs:int" />
