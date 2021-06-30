@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/AuxiliarWS/GestionHumanaWS?xsd=1" namespace="http://services/" />
     </xsd:schema>
   </types>
+  <message name="listarProfesorId">
+    <part name="parameters" element="tns:listarProfesorId" />
+  </message>
+  <message name="listarProfesorIdResponse">
+    <part name="parameters" element="tns:listarProfesorIdResponse" />
+  </message>
   <message name="listarPonente">
     <part name="parameters" element="tns:listarPonente" />
   </message>
@@ -185,12 +191,6 @@
   <message name="insertarProfesorResponse">
     <part name="parameters" element="tns:insertarProfesorResponse" />
   </message>
-  <message name="listar_profesor_x_id">
-    <part name="parameters" element="tns:listar_profesor_x_id" />
-  </message>
-  <message name="listar_profesor_x_idResponse">
-    <part name="parameters" element="tns:listar_profesor_x_idResponse" />
-  </message>
   <message name="listar_coordinador_x_id">
     <part name="parameters" element="tns:listar_coordinador_x_id" />
   </message>
@@ -204,6 +204,10 @@
     <part name="parameters" element="tns:autenticarUsuarioResponse" />
   </message>
   <portType name="GestionHumanaWS">
+    <operation name="listarProfesorId">
+      <input wsam:Action="http://services/GestionHumanaWS/listarProfesorIdRequest" message="tns:listarProfesorId" />
+      <output wsam:Action="http://services/GestionHumanaWS/listarProfesorIdResponse" message="tns:listarProfesorIdResponse" />
+    </operation>
     <operation name="listarPonente">
       <input wsam:Action="http://services/GestionHumanaWS/listarPonenteRequest" message="tns:listarPonente" />
       <output wsam:Action="http://services/GestionHumanaWS/listarPonenteResponse" message="tns:listarPonenteResponse" />
@@ -324,10 +328,6 @@
       <input wsam:Action="http://services/GestionHumanaWS/insertarProfesorRequest" message="tns:insertarProfesor" />
       <output wsam:Action="http://services/GestionHumanaWS/insertarProfesorResponse" message="tns:insertarProfesorResponse" />
     </operation>
-    <operation name="listar_profesor_x_id">
-      <input wsam:Action="http://services/GestionHumanaWS/listar_profesor_x_idRequest" message="tns:listar_profesor_x_id" />
-      <output wsam:Action="http://services/GestionHumanaWS/listar_profesor_x_idResponse" message="tns:listar_profesor_x_idResponse" />
-    </operation>
     <operation name="listar_coordinador_x_id">
       <input wsam:Action="http://services/GestionHumanaWS/listar_coordinador_x_idRequest" message="tns:listar_coordinador_x_id" />
       <output wsam:Action="http://services/GestionHumanaWS/listar_coordinador_x_idResponse" message="tns:listar_coordinador_x_idResponse" />
@@ -339,6 +339,15 @@
   </portType>
   <binding name="GestionHumanaWSPortBinding" type="tns:GestionHumanaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarProfesorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarPonente">
       <soap:operation soapAction="" />
       <input>
@@ -601,15 +610,6 @@
       </output>
     </operation>
     <operation name="insertarProfesor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listar_profesor_x_id">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -77,12 +77,6 @@
   <message name="listarCitaHistoricoXNombreResponse">
     <part name="parameters" element="tns:listarCitaHistoricoXNombreResponse" />
   </message>
-  <message name="listarCitaPendienteProfesor">
-    <part name="parameters" element="tns:listarCitaPendienteProfesor" />
-  </message>
-  <message name="listarCitaPendienteProfesorResponse">
-    <part name="parameters" element="tns:listarCitaPendienteProfesorResponse" />
-  </message>
   <message name="listarEncuestaxAsesor">
     <part name="parameters" element="tns:listarEncuestaxAsesor" />
   </message>
@@ -137,6 +131,12 @@
   <message name="insertar_links_reunionResponse">
     <part name="parameters" element="tns:insertar_links_reunionResponse" />
   </message>
+  <message name="listarCitasProfesor">
+    <part name="parameters" element="tns:listarCitasProfesor" />
+  </message>
+  <message name="listarCitasProfesorResponse">
+    <part name="parameters" element="tns:listarCitasProfesorResponse" />
+  </message>
   <portType name="GestionAtencionWS">
     <operation name="modificarCita">
       <input wsam:Action="http://services/GestionAtencionWS/modificarCitaRequest" message="tns:modificarCita" />
@@ -186,10 +186,6 @@
       <input wsam:Action="http://services/GestionAtencionWS/listarCitaHistoricoXNombreRequest" message="tns:listarCitaHistoricoXNombre" />
       <output wsam:Action="http://services/GestionAtencionWS/listarCitaHistoricoXNombreResponse" message="tns:listarCitaHistoricoXNombreResponse" />
     </operation>
-    <operation name="listarCitaPendienteProfesor">
-      <input wsam:Action="http://services/GestionAtencionWS/listarCitaPendienteProfesorRequest" message="tns:listarCitaPendienteProfesor" />
-      <output wsam:Action="http://services/GestionAtencionWS/listarCitaPendienteProfesorResponse" message="tns:listarCitaPendienteProfesorResponse" />
-    </operation>
     <operation name="listarEncuestaxAsesor">
       <input wsam:Action="http://services/GestionAtencionWS/listarEncuestaxAsesorRequest" message="tns:listarEncuestaxAsesor" />
       <output wsam:Action="http://services/GestionAtencionWS/listarEncuestaxAsesorResponse" message="tns:listarEncuestaxAsesorResponse" />
@@ -225,6 +221,10 @@
     <operation name="insertar_links_reunion">
       <input wsam:Action="http://services/GestionAtencionWS/insertar_links_reunionRequest" message="tns:insertar_links_reunion" />
       <output wsam:Action="http://services/GestionAtencionWS/insertar_links_reunionResponse" message="tns:insertar_links_reunionResponse" />
+    </operation>
+    <operation name="listarCitasProfesor">
+      <input wsam:Action="http://services/GestionAtencionWS/listarCitasProfesorRequest" message="tns:listarCitasProfesor" />
+      <output wsam:Action="http://services/GestionAtencionWS/listarCitasProfesorResponse" message="tns:listarCitasProfesorResponse" />
     </operation>
   </portType>
   <binding name="GestionAtencionWSPortBinding" type="tns:GestionAtencionWS">
@@ -337,15 +337,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarCitaPendienteProfesor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="listarEncuestaxAsesor">
       <soap:operation soapAction="" />
       <input>
@@ -419,6 +410,15 @@
       </output>
     </operation>
     <operation name="insertar_links_reunion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCitasProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

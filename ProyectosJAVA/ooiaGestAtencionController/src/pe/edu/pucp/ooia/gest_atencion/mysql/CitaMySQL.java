@@ -12,6 +12,7 @@ import pe.edu.pucp.ooia.gest_atencion.model.Horario;
 import pe.edu.pucp.ooia.gest_atencion.model.CodigoAtencion;
 import pe.edu.pucp.ooia.gest_atencion.dao.CitaDAO;
 import pe.edu.pucp.ooia.gest_humana.model.Alumno;
+import pe.edu.pucp.ooia.gest_humana.model.Especialidad;
 import pe.edu.pucp.ooia.gest_humana.model.Profesor;
 import pe.edu.pucp.ooia.gest_humana.model.Psicologo;
 import pe.edu.pucp.ooia.gest_humana.mysql.AlumnoMySQL;
@@ -314,21 +315,16 @@ public class CitaMySQL implements CitaDAO{
                 /*Cita*/
                 cita.setId_cita(rs.getInt("id_cita"));
                 cita.setAlumno(new Alumno());
-                cita.setAlumno(obtenerAlumno(rs.getInt("fid_alumno")));
+                //cita.setAlumno(obtenerAlumno(rs.getInt("fid_alumno")));
+                cita.getAlumno().setId_alumno(rs.getInt("fid_alumno"));
+                cita.getAlumno().setNombre(rs.getString("nombre_alumno"));
+                cita.getAlumno().setDireccion(rs.getString("direccion"));
+                cita.getAlumno().setFecha_nacimiento(rs.getDate("fecha_nacimiento"));
+                cita.getAlumno().setCodigo(rs.getString("codigo"));
+                cita.getAlumno().setCorreo(rs.getString("correo"));
+                cita.getAlumno().setEspecialidad(new Especialidad());
+                cita.getAlumno().getEspecialidad().setNombre(rs.getString("especialidad"));
                 
-                cita.setTipo_asesor(rs.getInt("tipo_asesor"));
-                if(cita.getTipo_asesor() == 0){
-                    cita.setAsesor(new Profesor());
-                    //cita.setAsesor(obtenerProfesor(rs.getInt("fid_asesor")));
-                    cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
-                    cita.getAsesor().setNombre(rs.getString("nombre"));
-                }
-                else if(cita.getTipo_asesor() == 1){
-                    cita.setAsesor(new Psicologo());
-                    //cita.setAsesor(obtenerPsicologo(rs.getInt("fid_asesor")));
-                    cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
-                    cita.getAsesor().setNombre(rs.getString("nombre"));
-                }
                 cita.setFecha(rs.getDate("fecha"));
                 cita.setHorario(new Horario(rs.getInt("id_horario"), rs.getInt("dia"), rs.getTime("hora_inicio"),
                         rs.getTime("hora_fin")));
@@ -376,10 +372,7 @@ public class CitaMySQL implements CitaDAO{
         return resultado;
     }
 
-    @Override
-    public ArrayList<Cita> listarCitasAsesor(int id_profesor, Date fecha_cita, String nombre_alumno, int estado) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
     
 }
 

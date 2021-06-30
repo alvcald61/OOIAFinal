@@ -872,26 +872,6 @@ BEGIN
 	update cita set activo = 0 where id_cita = _id_cita;
 end$
 
-drop procedure if exists LISTAR_CITA_ASESOR;
-delimiter $
-create procedure LISTAR_CITA_ASESOR(
-	in _id_asesor int
-)
-begin
-	select c.id_cita, c.fid_alumno, p.nombre as nombre_alumno, p.direccion, p.fecha_nacimiento, a.codigo,
-    p.correo,e.nombre as especialidad,c.fecha, c.motivo, c.compromiso, c.asistio, 
-	h.id_horario, h.dia, h.hora_inicio, h.hora_fin,
-	ca.id_codigo_atencion, ca.codigo, ca.descripcion
-    	from cita c 
-	inner join horario h on c.fid_horario = h.id_horario
-    inner join alumno a on c.fid_alumno = a.id_alumno
-    inner join especialidad e on a.fid_especialidad=e.id_especialidad
-    inner join miembro_pucp mp on mp.id_miembro_pucp = a.fid_miembro_pucp
-    inner join persona p on mp.fid_persona= p.id_persona
-    	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
-    	where c.fid_asesor=_id_asesor
-	and  c.fecha = _fecha_cita and c.activo = 1 and (p.nombre LIKE CONCAT('%',_nombre_alumno,'%')) and _estado_cita=c.asistio;
-end$
 
 delimiter $
 create procedure LISTAR_CITA_PENDIENTE(
@@ -1305,9 +1285,10 @@ in _id int
         inner join especialidad e on e.id_especialidad = a.fid_especialidad 
 	where a.activo = true and p.id_persona=_id;
 end$
+
 delimiter $
 create procedure LISTAR_PROFESOR_X_ID(
-in id int
+in _id int
 )begin
 	select 	p.id_persona, p.nombre, p.dni, p.fecha_nacimiento, p.direccion, p.correo,
 		m.id_miembro_pucp, m.usuario,  m.password, m.fecha_inclusion, m.imagen_perfil,
@@ -1316,7 +1297,7 @@ in id int
 	inner join miembro_pucp m on p.id_persona = m.fid_persona
         inner join profesor pr on pr.fid_miembro_pucp = m.id_miembro_pucp
        	inner join especialidad e on e.id_especialidad = pr.fid_especialidad
-	where pr.activo = true and p.id_persona=id;
+	where pr.activo = true and p.id_persona=_id;
 end$
 delimiter $
 create procedure LISTAR_COORDINADOR_X_ID(
@@ -1393,20 +1374,22 @@ create procedure insertar_links(
     update cita set link_host=_host, link_user=_user where id_cita=_id_cita;
 end$
 
-
+drop procedure if exists listar_proximas_cita_profesor;
 delimiter $
 create procedure listar_proximas_cita_profesor(
 in _id_asesor int
 )
 begin
-select c.id_cita, c.fid_alumno, c.tipo_asesor, c.fid_asesor, p.nombre, c.fecha, c.motivo, c.compromiso, c.asistio, 
+	select c.id_cita, c.fid_alumno, p.nombre as nombre_alumno, p.direccion, p.fecha_nacimiento, a.codigo,
+    p.correo,e.nombre as especialidad,c.fecha, c.motivo, c.compromiso, c.asistio, 
 	h.id_horario, h.dia, h.hora_inicio, h.hora_fin,
 	ca.id_codigo_atencion, ca.codigo, ca.descripcion
     	from cita c 
 	inner join horario h on c.fid_horario = h.id_horario
-    inner join miembro_pucp mp on c.fid_asesor = mp.id_miembro_pucp
+    inner join alumno a on c.fid_alumno = a.id_alumno
+    inner join especialidad e on a.fid_especialidad=e.id_especialidad
+    inner join miembro_pucp mp on mp.id_miembro_pucp = a.fid_miembro_pucp
     inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
-    	where h.fid_asesor=_id_asesor;
-        
+    	where c.fid_asesor=_id_asesor;     
 end$

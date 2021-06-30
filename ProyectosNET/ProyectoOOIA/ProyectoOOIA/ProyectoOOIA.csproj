@@ -790,10 +790,10 @@
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCitaPendienteProfesorResponse1.datasource">
+    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse.datasource">
+    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCodigoResponse.datasource">
@@ -979,6 +979,9 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listarPonenteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listarProfesorIdResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -989,9 +992,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idResponse1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listar_psicologo_x_idResponse1.datasource">

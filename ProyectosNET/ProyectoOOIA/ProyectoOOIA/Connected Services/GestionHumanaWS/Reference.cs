@@ -16,6 +16,75 @@ namespace ProyectoOOIA.GestionHumanaWS {
     public interface GestionHumanaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listarProfesorIdRequest", ReplyAction="http://services/GestionHumanaWS/listarProfesorIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAlumnoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAlumno))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(tipoUsuarioResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(tipoUsuario))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPsicologo))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEspecialidadResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEspecialidad))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarProfesoresResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarProfesores))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumnoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticarPersonaResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticarPersona))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEspecialidadResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEspecialidad))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticarUsuarioResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticarUsuario))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_coordinador_x_idResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_coordinador_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarAlumno))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(cambiar_passwordResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(cambiar_password))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPsicologoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPsicologo))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProfesorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProfesor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarProfesorResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarProfesor))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_idResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_usuario_correo))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologo))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionHumanaWS.listarProfesorIdResponse1 listarProfesorId(ProyectoOOIA.GestionHumanaWS.listarProfesorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listarProfesorIdRequest", ReplyAction="http://services/GestionHumanaWS/listarProfesorIdResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarProfesorIdResponse1> listarProfesorIdAsync(ProyectoOOIA.GestionHumanaWS.listarProfesorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listarPonenteRequest", ReplyAction="http://services/GestionHumanaWS/listarPonenteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAlumnoResponse))]
@@ -71,8 +140,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -140,8 +209,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -209,8 +278,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -278,8 +347,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -347,8 +416,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -416,8 +485,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -485,8 +554,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -554,8 +623,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -623,8 +692,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -692,8 +761,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -761,8 +830,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -830,8 +899,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -899,8 +968,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -968,8 +1037,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1037,8 +1106,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1106,8 +1175,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1175,8 +1244,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1244,8 +1313,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1313,8 +1382,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1382,8 +1451,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1451,8 +1520,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1520,8 +1589,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1589,8 +1658,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1658,8 +1727,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1727,8 +1796,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1796,8 +1865,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1865,8 +1934,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -1934,8 +2003,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -2003,8 +2072,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -2072,8 +2141,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -2084,75 +2153,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarProfesorRequest", ReplyAction="http://services/GestionHumanaWS/insertarProfesorResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarProfesorResponse1> insertarProfesorAsync(ProyectoOOIA.GestionHumanaWS.insertarProfesorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listar_profesor_x_idRequest", ReplyAction="http://services/GestionHumanaWS/listar_profesor_x_idResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAlumnoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAlumno))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(tipoUsuarioResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(tipoUsuario))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEspecialidadResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarProfesoresResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarProfesores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCoordinador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumnoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticarPersonaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticarPersona))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEspecialidadResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticarUsuarioResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticarUsuario))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_coordinador_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_coordinador_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarAlumno))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(cambiar_passwordResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(cambiar_password))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPsicologoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProfesorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProfesor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarProfesorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarProfesor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_usuario_correo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idResponse1 listar_profesor_x_id(ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listar_profesor_x_idRequest", ReplyAction="http://services/GestionHumanaWS/listar_profesor_x_idResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idResponse1> listar_profesor_x_idAsync(ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listar_coordinador_x_idRequest", ReplyAction="http://services/GestionHumanaWS/listar_coordinador_x_idResponse")]
@@ -2210,8 +2210,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -2279,8 +2279,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_profesor_x_id))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
@@ -2299,13 +2299,17 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class ponente : miembroExterno {
+    public partial class profesor : miembroPUCP {
         
         private bool activoField;
         
-        private int id_ponenteField;
+        private string categoriaField;
         
-        private string organizacionField;
+        private especialidad especialidadField;
+        
+        private string facultadField;
+        
+        private int id_profesorField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -2321,184 +2325,93 @@ namespace ProyectoOOIA.GestionHumanaWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_ponente {
+        public string categoria {
             get {
-                return this.id_ponenteField;
+                return this.categoriaField;
             }
             set {
-                this.id_ponenteField = value;
-                this.RaisePropertyChanged("id_ponente");
+                this.categoriaField = value;
+                this.RaisePropertyChanged("categoria");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string organizacion {
+        public especialidad especialidad {
             get {
-                return this.organizacionField;
+                return this.especialidadField;
             }
             set {
-                this.organizacionField = value;
-                this.RaisePropertyChanged("organizacion");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public abstract partial class miembroExterno : persona {
-        
-        private int id_miembro_externoField;
-        
-        private string ocupacionField;
-        
-        private string telefonoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_miembro_externo {
-            get {
-                return this.id_miembro_externoField;
-            }
-            set {
-                this.id_miembro_externoField = value;
-                this.RaisePropertyChanged("id_miembro_externo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string ocupacion {
-            get {
-                return this.ocupacionField;
-            }
-            set {
-                this.ocupacionField = value;
-                this.RaisePropertyChanged("ocupacion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string telefono {
-            get {
-                return this.telefonoField;
-            }
-            set {
-                this.telefonoField = value;
-                this.RaisePropertyChanged("telefono");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroExterno))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(profesor))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(alumno))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(psicologo))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public abstract partial class persona : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string correoField;
-        
-        private string direccionField;
-        
-        private string dniField;
-        
-        private System.DateTime fecha_nacimientoField;
-        
-        private bool fecha_nacimientoFieldSpecified;
-        
-        private int id_personaField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string correo {
-            get {
-                return this.correoField;
-            }
-            set {
-                this.correoField = value;
-                this.RaisePropertyChanged("correo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string direccion {
-            get {
-                return this.direccionField;
-            }
-            set {
-                this.direccionField = value;
-                this.RaisePropertyChanged("direccion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string dni {
-            get {
-                return this.dniField;
-            }
-            set {
-                this.dniField = value;
-                this.RaisePropertyChanged("dni");
+                this.especialidadField = value;
+                this.RaisePropertyChanged("especialidad");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime fecha_nacimiento {
+        public string facultad {
             get {
-                return this.fecha_nacimientoField;
+                return this.facultadField;
             }
             set {
-                this.fecha_nacimientoField = value;
-                this.RaisePropertyChanged("fecha_nacimiento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_nacimientoSpecified {
-            get {
-                return this.fecha_nacimientoFieldSpecified;
-            }
-            set {
-                this.fecha_nacimientoFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_nacimientoSpecified");
+                this.facultadField = value;
+                this.RaisePropertyChanged("facultad");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_persona {
+        public int id_profesor {
             get {
-                return this.id_personaField;
+                return this.id_profesorField;
             }
             set {
-                this.id_personaField = value;
-                this.RaisePropertyChanged("id_persona");
+                this.id_profesorField = value;
+                this.RaisePropertyChanged("id_profesor");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class especialidad : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool activoField;
+        
+        private int id_especialidadField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_especialidad {
+            get {
+                return this.id_especialidadField;
+            }
+            set {
+                this.id_especialidadField = value;
+                this.RaisePropertyChanged("id_especialidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -2799,17 +2712,101 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class profesor : miembroPUCP {
+    public partial class listarCoordinador : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class insertarAlumnoResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int returnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int @return {
+            get {
+                return this.returnField;
+            }
+            set {
+                this.returnField = value;
+                this.RaisePropertyChanged("return");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class insertarAlumno : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private alumno alumnoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public alumno alumno {
+            get {
+                return this.alumnoField;
+            }
+            set {
+                this.alumnoField = value;
+                this.RaisePropertyChanged("alumno");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class alumno : miembroPUCP {
         
         private bool activoField;
         
-        private string categoriaField;
+        private string codigoField;
+        
+        private double craestField;
+        
+        private double creditos_aprobadosField;
         
         private especialidad especialidadField;
         
-        private string facultadField;
-        
-        private int id_profesorField;
+        private int id_alumnoField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -2825,18 +2822,42 @@ namespace ProyectoOOIA.GestionHumanaWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string categoria {
+        public string codigo {
             get {
-                return this.categoriaField;
+                return this.codigoField;
             }
             set {
-                this.categoriaField = value;
-                this.RaisePropertyChanged("categoria");
+                this.codigoField = value;
+                this.RaisePropertyChanged("codigo");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public double craest {
+            get {
+                return this.craestField;
+            }
+            set {
+                this.craestField = value;
+                this.RaisePropertyChanged("craest");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public double creditos_aprobados {
+            get {
+                return this.creditos_aprobadosField;
+            }
+            set {
+                this.creditos_aprobadosField = value;
+                this.RaisePropertyChanged("creditos_aprobados");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public especialidad especialidad {
             get {
                 return this.especialidadField;
@@ -2848,86 +2869,14 @@ namespace ProyectoOOIA.GestionHumanaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string facultad {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int id_alumno {
             get {
-                return this.facultadField;
+                return this.id_alumnoField;
             }
             set {
-                this.facultadField = value;
-                this.RaisePropertyChanged("facultad");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_profesor {
-            get {
-                return this.id_profesorField;
-            }
-            set {
-                this.id_profesorField = value;
-                this.RaisePropertyChanged("id_profesor");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class especialidad : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool activoField;
-        
-        private int id_especialidadField;
-        
-        private string nombreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_especialidad {
-            get {
-                return this.id_especialidadField;
-            }
-            set {
-                this.id_especialidadField = value;
-                this.RaisePropertyChanged("id_especialidad");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+                this.id_alumnoField = value;
+                this.RaisePropertyChanged("id_alumno");
             }
         }
     }
@@ -3030,6 +2979,232 @@ namespace ProyectoOOIA.GestionHumanaWS {
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroExterno))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(profesor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(alumno))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(psicologo))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public abstract partial class persona : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string correoField;
+        
+        private string direccionField;
+        
+        private string dniField;
+        
+        private System.DateTime fecha_nacimientoField;
+        
+        private bool fecha_nacimientoFieldSpecified;
+        
+        private int id_personaField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string correo {
+            get {
+                return this.correoField;
+            }
+            set {
+                this.correoField = value;
+                this.RaisePropertyChanged("correo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string direccion {
+            get {
+                return this.direccionField;
+            }
+            set {
+                this.direccionField = value;
+                this.RaisePropertyChanged("direccion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string dni {
+            get {
+                return this.dniField;
+            }
+            set {
+                this.dniField = value;
+                this.RaisePropertyChanged("dni");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime fecha_nacimiento {
+            get {
+                return this.fecha_nacimientoField;
+            }
+            set {
+                this.fecha_nacimientoField = value;
+                this.RaisePropertyChanged("fecha_nacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fecha_nacimientoSpecified {
+            get {
+                return this.fecha_nacimientoFieldSpecified;
+            }
+            set {
+                this.fecha_nacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fecha_nacimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_persona {
+            get {
+                return this.id_personaField;
+            }
+            set {
+                this.id_personaField = value;
+                this.RaisePropertyChanged("id_persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public abstract partial class miembroExterno : persona {
+        
+        private int id_miembro_externoField;
+        
+        private string ocupacionField;
+        
+        private string telefonoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id_miembro_externo {
+            get {
+                return this.id_miembro_externoField;
+            }
+            set {
+                this.id_miembro_externoField = value;
+                this.RaisePropertyChanged("id_miembro_externo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string ocupacion {
+            get {
+                return this.ocupacionField;
+            }
+            set {
+                this.ocupacionField = value;
+                this.RaisePropertyChanged("ocupacion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("telefono");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class ponente : miembroExterno {
+        
+        private bool activoField;
+        
+        private int id_ponenteField;
+        
+        private string organizacionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_ponente {
+            get {
+                return this.id_ponenteField;
+            }
+            set {
+                this.id_ponenteField = value;
+                this.RaisePropertyChanged("id_ponente");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string organizacion {
+            get {
+                return this.organizacionField;
+            }
+            set {
+                this.organizacionField = value;
+                this.RaisePropertyChanged("organizacion");
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3086,99 +3261,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class alumno : miembroPUCP {
-        
-        private bool activoField;
-        
-        private string codigoField;
-        
-        private double craestField;
-        
-        private double creditos_aprobadosField;
-        
-        private especialidad especialidadField;
-        
-        private int id_alumnoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string codigo {
-            get {
-                return this.codigoField;
-            }
-            set {
-                this.codigoField = value;
-                this.RaisePropertyChanged("codigo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public double craest {
-            get {
-                return this.craestField;
-            }
-            set {
-                this.craestField = value;
-                this.RaisePropertyChanged("craest");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public double creditos_aprobados {
-            get {
-                return this.creditos_aprobadosField;
-            }
-            set {
-                this.creditos_aprobadosField = value;
-                this.RaisePropertyChanged("creditos_aprobados");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public especialidad especialidad {
-            get {
-                return this.especialidadField;
-            }
-            set {
-                this.especialidadField = value;
-                this.RaisePropertyChanged("especialidad");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int id_alumno {
-            get {
-                return this.id_alumnoField;
-            }
-            set {
-                this.id_alumnoField = value;
-                this.RaisePropertyChanged("id_alumno");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
     public partial class psicologo : miembroPUCP {
         
         private bool activoField;
@@ -3220,88 +3302,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
             set {
                 this.ramaField = value;
                 this.RaisePropertyChanged("rama");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class listarCoordinador : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class insertarAlumnoResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int returnField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int @return {
-            get {
-                return this.returnField;
-            }
-            set {
-                this.returnField = value;
-                this.RaisePropertyChanged("return");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class insertarAlumno : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private alumno alumnoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public alumno alumno {
-            get {
-                return this.alumnoField;
-            }
-            set {
-                this.alumnoField = value;
-                this.RaisePropertyChanged("alumno");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -4596,7 +4596,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class listar_profesor_x_idResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class listarProfesorIdResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private profesor returnField;
         
@@ -4628,7 +4628,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class listar_profesor_x_id : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class listarProfesorId : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int id_personaField;
         
@@ -4779,6 +4779,42 @@ namespace ProyectoOOIA.GestionHumanaWS {
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProfesorId", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarProfesorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_persona;
+        
+        public listarProfesorIdRequest() {
+        }
+        
+        public listarProfesorIdRequest(int id_persona) {
+            this.id_persona = id_persona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProfesorIdResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarProfesorIdResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionHumanaWS.profesor @return;
+        
+        public listarProfesorIdResponse1() {
+        }
+        
+        public listarProfesorIdResponse1(ProyectoOOIA.GestionHumanaWS.profesor @return) {
+            this.@return = @return;
         }
     }
     
@@ -5822,42 +5858,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_profesor_x_id", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listar_profesor_x_idRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_persona;
-        
-        public listar_profesor_x_idRequest() {
-        }
-        
-        public listar_profesor_x_idRequest(int id_persona) {
-            this.id_persona = id_persona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_profesor_x_idResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listar_profesor_x_idResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionHumanaWS.profesor @return;
-        
-        public listar_profesor_x_idResponse1() {
-        }
-        
-        public listar_profesor_x_idResponse1(ProyectoOOIA.GestionHumanaWS.profesor @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listar_coordinador_x_id", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class listar_coordinador_x_idRequest {
         
@@ -5957,6 +5957,29 @@ namespace ProyectoOOIA.GestionHumanaWS {
         
         public GestionHumanaWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionHumanaWS.listarProfesorIdResponse1 ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.listarProfesorId(ProyectoOOIA.GestionHumanaWS.listarProfesorIdRequest request) {
+            return base.Channel.listarProfesorId(request);
+        }
+        
+        public ProyectoOOIA.GestionHumanaWS.profesor listarProfesorId(int id_persona) {
+            ProyectoOOIA.GestionHumanaWS.listarProfesorIdRequest inValue = new ProyectoOOIA.GestionHumanaWS.listarProfesorIdRequest();
+            inValue.id_persona = id_persona;
+            ProyectoOOIA.GestionHumanaWS.listarProfesorIdResponse1 retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listarProfesorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarProfesorIdResponse1> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.listarProfesorIdAsync(ProyectoOOIA.GestionHumanaWS.listarProfesorIdRequest request) {
+            return base.Channel.listarProfesorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarProfesorIdResponse1> listarProfesorIdAsync(int id_persona) {
+            ProyectoOOIA.GestionHumanaWS.listarProfesorIdRequest inValue = new ProyectoOOIA.GestionHumanaWS.listarProfesorIdRequest();
+            inValue.id_persona = id_persona;
+            return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listarProfesorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6637,29 +6660,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
             ProyectoOOIA.GestionHumanaWS.insertarProfesorRequest inValue = new ProyectoOOIA.GestionHumanaWS.insertarProfesorRequest();
             inValue.profesor = profesor;
             return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).insertarProfesorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idResponse1 ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.listar_profesor_x_id(ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idRequest request) {
-            return base.Channel.listar_profesor_x_id(request);
-        }
-        
-        public ProyectoOOIA.GestionHumanaWS.profesor listar_profesor_x_id(int id_persona) {
-            ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idRequest inValue = new ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idRequest();
-            inValue.id_persona = id_persona;
-            ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idResponse1 retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listar_profesor_x_id(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idResponse1> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.listar_profesor_x_idAsync(ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idRequest request) {
-            return base.Channel.listar_profesor_x_idAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idResponse1> listar_profesor_x_idAsync(int id_persona) {
-            ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idRequest inValue = new ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idRequest();
-            inValue.id_persona = id_persona;
-            return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listar_profesor_x_idAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

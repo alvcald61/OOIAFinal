@@ -43,6 +43,8 @@
   <xs:element name="listarPonente" type="tns:listarPonente" />
   <xs:element name="listarPonenteResponse" type="tns:listarPonenteResponse" />
   <xs:element name="listarProfesor" type="tns:listarProfesor" />
+  <xs:element name="listarProfesorId" type="tns:listarProfesorId" />
+  <xs:element name="listarProfesorIdResponse" type="tns:listarProfesorIdResponse" />
   <xs:element name="listarProfesorResponse" type="tns:listarProfesorResponse" />
   <xs:element name="listarPsicologo" type="tns:listarPsicologo" />
   <xs:element name="listarPsicologoResponse" type="tns:listarPsicologoResponse" />
@@ -50,8 +52,6 @@
   <xs:element name="listar_alumno_x_idResponse" type="tns:listar_alumno_x_idResponse" />
   <xs:element name="listar_coordinador_x_id" type="tns:listar_coordinador_x_id" />
   <xs:element name="listar_coordinador_x_idResponse" type="tns:listar_coordinador_x_idResponse" />
-  <xs:element name="listar_profesor_x_id" type="tns:listar_profesor_x_id" />
-  <xs:element name="listar_profesor_x_idResponse" type="tns:listar_profesor_x_idResponse" />
   <xs:element name="listar_psicologo_x_id" type="tns:listar_psicologo_x_id" />
   <xs:element name="listar_psicologo_x_idResponse" type="tns:listar_psicologo_x_idResponse" />
   <xs:element name="listar_usuario_correo" type="tns:listar_usuario_correo" />
@@ -147,12 +147,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listar_profesor_x_id">
+  <xs:complexType name="listarProfesorId">
     <xs:sequence>
       <xs:element name="id_persona" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listar_profesor_x_idResponse">
+  <xs:complexType name="listarProfesorIdResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:profesor" />
     </xs:sequence>
