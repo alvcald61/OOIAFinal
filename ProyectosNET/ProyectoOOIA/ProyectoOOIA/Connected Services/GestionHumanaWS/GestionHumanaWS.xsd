@@ -201,16 +201,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listar_usuario_correo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="usuario" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listar_usuario_correoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:anyType" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listar_psicologo_x_id">
     <xs:sequence>
       <xs:element name="id_persona" type="xs:int" />
@@ -219,6 +209,16 @@
   <xs:complexType name="listar_psicologo_x_idResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:psicologo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listar_usuario_correo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listar_usuario_correoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:anyType" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarProfesor">
@@ -485,16 +485,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:psicologo" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="tipoUsuario">
-    <xs:sequence>
-      <xs:element name="id_persona" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="tipoUsuarioResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="obtener_estado">
     <xs:sequence>
       <xs:element name="id_evento" type="xs:int" />
@@ -504,6 +494,16 @@
   <xs:complexType name="obtener_estadoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoUsuario">
+    <xs:sequence>
+      <xs:element name="id_persona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listar_alumno_x_evento">
