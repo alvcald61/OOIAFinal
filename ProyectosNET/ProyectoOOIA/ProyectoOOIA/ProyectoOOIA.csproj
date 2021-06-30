@@ -914,7 +914,7 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarAlumnoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse.datasource">
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse11.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse1.datasource">
@@ -935,7 +935,7 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarAlumnoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse.datasource">
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse11.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarEspecialidadResponse1.datasource">
@@ -986,7 +986,7 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarAlumnoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse.datasource">
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse11.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarEspecialidadResponse1.datasource">

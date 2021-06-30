@@ -31,7 +31,7 @@ namespace ProyectoOOIA.Ventanas
             txtCompromiso.Text = cita.compromiso;
             txtHoraInicio.Text = cita.horario.horaInicio.ToString("hh:mm");
             txtHoraFin.Text = cita.horario.horaFin.ToString("hh:mm");
-            if(cita.asistio == true)
+            if(cita.asistio == 0)
             {
                 rbAsistio.Checked = true;
             }

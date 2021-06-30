@@ -214,7 +214,7 @@ namespace ProyectoOOIA.Ventanas
             citaNueva.fecha = dtpFecha.Value;
             citaNueva.estado = true;
             citaNueva.activo = true;
-            citaNueva.asistio = false;
+            citaNueva.asistio = 0;
             citaNueva.fechaSpecified = true;
             citaNueva.horario = horarioProfesor;
             citaNueva.motivo = txtMotivo.Text;

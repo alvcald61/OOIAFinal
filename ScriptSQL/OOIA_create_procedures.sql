@@ -872,6 +872,8 @@ BEGIN
 	update cita set activo = 0 where id_cita = _id_cita;
 end$
 
+drop procedure if exists LISTAR_CITA_ASESOR;
+delimiter $
 create procedure LISTAR_CITA_ASESOR(
 	in _id_asesor int,
     in _fecha_cita date,
@@ -891,7 +893,7 @@ begin
     inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
     	where c.fid_asesor=_id_asesor
-	and ( c.fecha = _fecha_cita and c.activo = 1 and (p.nombre LIKE CONCAT('%',_nombre_alumno,'%')) and _estado_cita=c.asistio);
+	and  c.fecha = _fecha_cita and c.activo = 1 and (p.nombre LIKE CONCAT('%',_nombre_alumno,'%')) and _estado_cita=c.asistio;
 end$
 
 delimiter $
