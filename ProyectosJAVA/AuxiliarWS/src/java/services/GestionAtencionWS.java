@@ -282,7 +282,8 @@ public class GestionAtencionWS {
     }
     
     @WebMethod(operationName = "insertar_links_reunion")
-    public int insertar_links_reunion( @WebParam(name = "id_cita")int id_cita,@WebParam(name = "link_host")String link_host,@WebParam(name = "link_user")String link_user)
+    public int insertar_links_reunion( @WebParam(name = "id_cita")int id_cita,
+            @WebParam(name = "link_host")String link_host,@WebParam(name = "link_user")String link_user)
     {
     int resultado=0;
     try{

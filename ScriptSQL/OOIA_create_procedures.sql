@@ -875,10 +875,7 @@ end$
 drop procedure if exists LISTAR_CITA_ASESOR;
 delimiter $
 create procedure LISTAR_CITA_ASESOR(
-	in _id_asesor int,
-    in _fecha_cita date,
-    in _nombre_alumno varchar(150),
-    in _estado_cita int
+	in _id_asesor int
 )
 begin
 	select c.id_cita, c.fid_alumno, p.nombre as nombre_alumno, p.direccion, p.fecha_nacimiento, a.codigo,

@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using ProyectoOOIA.GestionEventoWS;
+using ProyectoOOIA.Ventanas.Coordinador.Eventos;
 using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
 using ponente = ProyectoOOIA.GestionEventoWS.ponente;
 
@@ -566,7 +567,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            new frmRegistroAsistencia.shoe();   
+            new frmRegistroAsistencia().ShowDialog();   
         }
     }
     

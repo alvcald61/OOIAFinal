@@ -256,8 +256,6 @@ namespace ProyectoOOIA.GestionAtencionWS {
         
         private string compromisoField;
         
-        private bool estadoField;
-        
         private System.DateTime fechaField;
         
         private bool fechaFieldSpecified;
@@ -348,18 +346,6 @@ namespace ProyectoOOIA.GestionAtencionWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public bool estado {
-            get {
-                return this.estadoField;
-            }
-            set {
-                this.estadoField = value;
-                this.RaisePropertyChanged("estado");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public System.DateTime fecha {
             get {
                 return this.fechaField;
@@ -383,7 +369,7 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public horario horario {
             get {
                 return this.horarioField;
@@ -395,7 +381,7 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public int id_cita {
             get {
                 return this.id_citaField;
@@ -407,7 +393,7 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string link_Host {
             get {
                 return this.link_HostField;
@@ -419,7 +405,7 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public string link_user {
             get {
                 return this.link_userField;
@@ -431,7 +417,7 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public string motivo {
             get {
                 return this.motivoField;
@@ -443,7 +429,7 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public int tipo_asesor {
             get {
                 return this.tipo_asesorField;

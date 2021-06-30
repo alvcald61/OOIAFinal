@@ -212,7 +212,6 @@ namespace ProyectoOOIA.Ventanas
             citaNueva.asesor = asignarAsesor(asesor);
             citaNueva.alumno = asignarAlumno(alumno);
             citaNueva.fecha = dtpFecha.Value;
-            citaNueva.estado = true;
             citaNueva.activo = true;
             citaNueva.asistio = 0;
             citaNueva.fechaSpecified = true;
@@ -239,17 +238,19 @@ namespace ProyectoOOIA.Ventanas
                 {
                     MessageBox.Show("La cita ha sido registrada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //2021 - 07 - 01T18: 10:00
-                    string hora = citaNueva.fecha.ToString("yyyy-MM-dd HH:mm:00");
-                    hora.Replace(" ", "T");
+                    string hora = citaNueva.fecha.ToString("yyyy-MM-dd") + 'T' + citaNueva.horario.horaInicio.ToString("hh:mm:00");
+                    
                     string []arr=generarLlamada("Reunión con "+persona.nombre,hora);
+                    daoCita.insertar_links_reunion(citaNueva.id_cita, arr[0], arr[1]);
+
                     string mensaje = "Estimado " + alumno.nombre + ":\n" +
                                      "Ustedes ha agendado satisfactoriamente una cita con la OOIA. A continuación le indicaremos los datos de la sesion: \n\n" +
                                      "Asesor: " + asesor.nombre + "\n" +
-                                     "Fecha: " + citaNueva.fecha.Date + "\n" +
-                                     "Desde las: " + citaNueva.horario.horaInicio.Hour + ":"+ citaNueva.horario.horaInicio.Minute + "\n" +
-                                     "Hasta: " + citaNueva.horario.horaFin.Hour + ":" + citaNueva.horario.horaFin.Minute + "\n" +
-                                     "Con el siguiente motivo: " + citaNueva.motivo  +
-                                     "Link de la reunion disponible a partir de la feche programada: "+ arr[0]+
+                                     "Fecha: " + citaNueva.fecha.Date.ToString("dd/MM/yyyy") + "\n" +
+                                     "Desde las: " + citaNueva.horario.horaInicio.ToString("HH:mm") + "\n" +
+                                     "Hasta: " + citaNueva.horario.horaFin.ToString("HH:mm") + "\n" +
+                                     "Con el siguiente motivo: " + citaNueva.motivo  + "\n" +
+                                     "Link de la reunion disponible a partir de la fecha programada: " + arr[1]+
                                      "\n\n\n\n"+
                                      "\n\nAtte. Oficina de Orientación, Información y Apoyo al Estudiante\n\n ";
 
