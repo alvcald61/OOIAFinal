@@ -40,7 +40,7 @@ namespace ProyectoOOIA.Ventanas
                 txtEventos.Enabled = false;
                 
             }
-
+            else 
             if (tipo == TipoUsuario.OOIA)
             {
                 usuario = usuarioDao.listar_coordinador_x_id(id_usuario);

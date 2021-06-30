@@ -240,7 +240,7 @@ public class AlumnoMySQL implements AlumnoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_ALUMNO_X_EVENTO(?,?)}");
+            cs = con.prepareCall("{call OBTENER_ASISTENCIA(?,?)}");
                 cs.setInt("_evento", evento);
             cs.setInt("_alumno", alumno);
             rs = cs.executeQuery();
