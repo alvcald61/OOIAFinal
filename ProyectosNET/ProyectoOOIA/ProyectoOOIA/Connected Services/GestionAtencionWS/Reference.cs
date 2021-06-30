@@ -1009,7 +1009,7 @@ namespace ProyectoOOIA.GestionAtencionWS {
         
         private miembroPUCP asesorField;
         
-        private bool asistioField;
+        private int asistioField;
         
         private codigoAtencion codigo_atencionField;
         
@@ -1071,7 +1071,7 @@ namespace ProyectoOOIA.GestionAtencionWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public bool asistio {
+        public int asistio {
             get {
                 return this.asistioField;
             }

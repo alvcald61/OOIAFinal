@@ -214,7 +214,7 @@ namespace ProyectoOOIA.Ventanas
             citaNueva.fecha = dtpFecha.Value;
             citaNueva.estado = true;
             citaNueva.activo = true;
-            citaNueva.asistio = false;
+            citaNueva.asistio = 0;
             citaNueva.fechaSpecified = true;
             citaNueva.horario = horarioProfesor;
             citaNueva.motivo = txtMotivo.Text;
@@ -249,11 +249,11 @@ namespace ProyectoOOIA.Ventanas
                                      "Desde las: " + citaNueva.horario.horaInicio.Hour + ":"+ citaNueva.horario.horaInicio.Minute + "\n" +
                                      "Hasta: " + citaNueva.horario.horaFin.Hour + ":" + citaNueva.horario.horaFin.Minute + "\n" +
                                      "Con el siguiente motivo: " + citaNueva.motivo  +
-                                     "Link de la reunion disponible a partir de la feche programada: "+ arr[0]+
+                                     "\nLink de la reunion disponible a partir de la feche programada: "+ arr[1]+
                                      "\n\n\n\n"+
                                      "\n\nAtte. Oficina de Orientación, Información y Apoyo al Estudiante\n\n ";
 
-                   
+                    daoCita.insertar_links_reunion(citaNueva.id_cita, arr[0], arr[1]);
                     enviarCorreo("Inscripción a cita con " + asesor.nombre,mensaje);
                     horarioAsesor.estado = "reservado";
                     

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="0/2mt6nIfmYiALIyzEek0AxL5xKo2/Vug0FWK2VNtRE=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="WCOCnCjyFj5qwekwvwB11cbf9zUEvNNjny4EAGYU/U8=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="AlumnosCSVcargaWS1PortBinding1">
+    <bindingConfiguration bindingType="basicHttpBinding" name="AlumnosCSVcargaWS1PortBinding">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>AlumnosCSVcargaWS1PortBinding1</serializedValue>
+          <serializedValue>AlumnosCSVcargaWS1PortBinding</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="AlumnosCSVcargaWS1Port1" contract="CargarCSValumnosWS.AlumnosCSVcargaWS1" bindingType="basicHttpBinding" address="http://localhost:8080/AuxiliarWS/AlumnosCSVcargaWS" bindingConfiguration="AlumnosCSVcargaWS1PortBinding1">
+    <endpoint name="AlumnosCSVcargaWS1Port" contract="CargarCSValumnosWS.AlumnosCSVcargaWS1" bindingType="basicHttpBinding" address="http://localhost:8080/AuxiliarWS/AlumnosCSVcargaWS" bindingConfiguration="AlumnosCSVcargaWS1PortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:8080/AuxiliarWS/AlumnosCSVcargaWS</serializedValue>
@@ -124,7 +124,7 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>AlumnosCSVcargaWS1PortBinding1</serializedValue>
+          <serializedValue>AlumnosCSVcargaWS1PortBinding</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>CargarCSValumnosWS.AlumnosCSVcargaWS1</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>AlumnosCSVcargaWS1Port1</serializedValue>
+          <serializedValue>AlumnosCSVcargaWS1Port</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

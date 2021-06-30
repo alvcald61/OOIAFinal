@@ -104,8 +104,8 @@ namespace ProyectoOOIA.Ventanas
             this.btnBuscar,
             this.btnModificar,
             this.btnEliminar,
-            this.btnCancelar,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(797, 25);
@@ -259,7 +259,7 @@ namespace ProyectoOOIA.Ventanas
             this.dgvPonentes.RowHeadersWidth = 51;
             this.dgvPonentes.Size = new System.Drawing.Size(758, 123);
             this.dgvPonentes.TabIndex = 15;
-            this.dgvPonentes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPonentes_CellFormatting);
+            
             // 
             // NombreCompletoPonente
             // 
@@ -403,7 +403,7 @@ namespace ProyectoOOIA.Ventanas
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(366, 21);
             this.cboCategoria.TabIndex = 61;
-            this.cboCategoria.EnabledChanged += new System.EventHandler(this.cboCategoria_EnabledChanged);
+            
             // 
             // label8
             // 
@@ -433,7 +433,7 @@ namespace ProyectoOOIA.Ventanas
             this.dtpInicio.ShowUpDown = true;
             this.dtpInicio.Size = new System.Drawing.Size(138, 20);
             this.dtpInicio.TabIndex = 70;
-            this.dtpInicio.LocationChanged += new System.EventHandler(this.dtpInicio_LocationChanged);
+            
             this.dtpInicio.Enter += new System.EventHandler(this.dtpInicio_Enter);
             this.dtpInicio.Leave += new System.EventHandler(this.dtpInicio_Leave);
             // 

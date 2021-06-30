@@ -602,7 +602,6 @@ D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Pr
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Bunifu_UI_v1.5.dll
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\MaterialSkin.dll
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Card.resources
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.CardEvento.resources
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Horario.resources
@@ -688,3 +687,22 @@ C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Interop.AcroPDFLib.dll
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\AxInterop.AcroPDFLib.dll
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.ResolveComReference.cache
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Interop.AcroPDFLib.dll
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\AxInterop.AcroPDFLib.dll
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.ResolveComReference.cache
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Newtonsoft.Json.dll
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\RestSharp.dll
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Newtonsoft.Json.xml
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\RestSharp.xml
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Interop.AcroPDFLib.dll
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Coordinador.Eventos.frmRegistroAsistencia.resources
