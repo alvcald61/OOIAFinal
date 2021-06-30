@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services/" targetNamespace="http://services/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="obtenerPlantillaCSV" type="tns:obtenerPlantillaCSV" />
+  <xs:element name="obtenerPlantillaCSVResponse" type="tns:obtenerPlantillaCSVResponse" />
+  <xs:complexType name="obtenerPlantillaCSV">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerPlantillaCSVResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

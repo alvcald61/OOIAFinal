@@ -110,12 +110,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\ObtenerPlantillaCSVcargaWS\Reference.cs">
+    <Compile Include="Connected Services\CargarCSVprofesoresWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\CargarCSVprofesoresWS\Reference.cs">
+    <Compile Include="Connected Services\ObtenerPlantillaCSVcargaWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -163,6 +163,12 @@
     </Compile>
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.Designer.cs">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Alumno\Eventos\frmAgregarOpinionEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Alumno\Eventos\frmAgregarOpinionEvento.Designer.cs">
+      <DependentUpon>frmAgregarOpinionEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Asesor\Citas\frmRegistrarHorario.cs">
       <SubType>Form</SubType>
@@ -522,6 +528,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAgregarOpinionEvento.resx">
+      <DependentUpon>frmAgregarOpinionEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Asesor\Citas\frmRegistrarHorario.resx">
       <DependentUpon>frmRegistrarHorario.cs</DependentUpon>
@@ -909,6 +918,10 @@
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.ponente1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS.wsdl" />
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS1.wsdl" />
     <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS1.xsd">
       <SubType>Designer</SubType>
@@ -931,7 +944,7 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarAlumnoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse.datasource">
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse1.datasource">
@@ -952,7 +965,7 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarAlumnoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse.datasource">
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarEspecialidadResponse1.datasource">
@@ -988,6 +1001,9 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listarPsicologoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listar_alumno_x_eventoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listar_alumno_x_idResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1000,10 +1016,13 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listar_usuario_correoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modifcar_asistenciaResponse11.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarAlumnoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse.datasource">
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarEspecialidadResponse1.datasource">
@@ -1016,6 +1035,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarPsicologoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.obtener_estadoResponse11.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.ponente.datasource">
@@ -1157,8 +1179,8 @@
     <WCFMetadataStorage Include="Connected Services\GestionAtencionWS\" />
     <WCFMetadataStorage Include="Connected Services\GestionEventoWS\" />
     <WCFMetadataStorage Include="Connected Services\GestionHumanaWS\" />
-    <WCFMetadataStorage Include="Connected Services\ObtenerPlantillaCSVcargaWS\" />
     <WCFMetadataStorage Include="Connected Services\CargarCSVprofesoresWS\" />
+    <WCFMetadataStorage Include="Connected Services\ObtenerPlantillaCSVcargaWS\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AcroPDFLib">
