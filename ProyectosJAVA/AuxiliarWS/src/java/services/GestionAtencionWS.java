@@ -175,6 +175,19 @@ public class GestionAtencionWS {
         return resultado;
         
     }
+    
+    @WebMethod(operationName = "modificarHorarioAsesorSinID")
+    public int modificarHorarioAsesorSinID(@WebParam(name = "horarioAsesor")HorarioAsesor horario){
+        int resultado=0;
+        
+        try {
+            resultado=this.daoHorarioAsesor.modificar_sin_id(horario);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+        
+    }
     @WebMethod(operationName = "eliminarHorarioAsesor")
     public int eliminarHorarioAsesor(@WebParam(name = "id_horario_asesor")int id_horario_asesor){
         int resultado=0;

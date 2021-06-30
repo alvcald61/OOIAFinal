@@ -13,4 +13,5 @@ public interface HorarioAsesorDAO {
     public int insertar(HorarioAsesor horario);
     public int modificar(HorarioAsesor horario);
     public int eliminar(int idHorarioAsesor);  
+    public int modificar_sin_id(HorarioAsesor horario) ;
 }

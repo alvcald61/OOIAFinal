@@ -168,9 +168,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             }
 
             //Validacion de persona repetida
-            int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticarPersona(
-                int.Parse(txtDni.Text));
-
+            //int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticarPersona(
+                //int.Parse(txtDni.Text));
+            int cantUsuarios = 1;
             if (cantUsuarios == 1)
             {
                 MessageBox.Show("Ya existe una persona registrada con el mismo DNI", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);

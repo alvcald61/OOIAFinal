@@ -96,7 +96,34 @@ public class HorarioAsesorMySQL implements HorarioAsesorDAO{
            cs.setInt("_fid_asesor",horario.getFid_asesor());
            cs.setString("_estado", horario.getEstado());
            cs.executeUpdate();
-           horario.setId_horario_asesor(cs.getInt("_id_horario_asesor"));
+           //horario.setId_horario_asesor(cs.getInt("_id_horario_asesor"));
+           resultado=1;
+           cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            //esto siempre se va a ejecutar
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        
+        return resultado;
+    }
+    @Override
+    public int modificar_sin_id(HorarioAsesor horario) {
+        int resultado=0;
+        try{
+            //registrar el driver
+           Class.forName("com.mysql.cj.jdbc.Driver");
+           //creamos la conexion
+           con = DriverManager.getConnection(DBManager.url,
+                   DBManager.user,DBManager.password);
+          
+           cs = con.prepareCall("{call MODIFICAR_HORARIO_ASESOR_SIN_ID(?,?,?)}");
+           cs.setInt("_fid_horario",horario.getHorario().getId_horario());
+           cs.setInt("_fid_asesor",horario.getFid_asesor());
+           cs.setString("_estado", horario.getEstado());
+           cs.executeUpdate();
+           //horario.setId_horario_asesor(cs.getInt("_id_horario_asesor"));
            resultado=1;
            cs.close();
         }catch(Exception ex){

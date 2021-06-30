@@ -291,17 +291,20 @@ public class GestionHumanaWS {
         return resultado;//se devuelve el id persona
     }
     
-    @WebMethod(operationName = "autenticarPersona")
-    public int autenticarPersona(@WebParam(name = "dni") int dni){
-        int resultado = 0;
-        try{
-            resultado = autenticarPersona.autenticarPersona(dni);
-        }catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }
-        return resultado;
-    }
+//    @WebMethod(operationName = "autenticar_persona_dni")
+//    public int autenticarPersona(@WebParam(name = "dni_persona") int dni){
+//        int resultado = 0;
+//        try{
+//            resultado = autenticarPersona.autenticarPersona(dni);
+//        }catch(Exception ex){
+//            System.out.println(ex.getMessage());
+//        }
+//        return resultado;
+//    }
+
+
     @WebMethod(operationName = "tipoUsuario")
+
     public int tipoUsuario(@WebParam(name = "id_persona")int id_persona ){
         int resultado=0;
         try {

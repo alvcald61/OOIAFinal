@@ -44,6 +44,12 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
 
             }
 
+            dgvAlumnos.RowsAdded += (object sender, DataGridViewRowsAddedEventArgs e) =>
+              {
+                  dgvAlumnos.Rows[e.RowIndex].Cells["Asistencia"].Value = lista[e.RowIndex];
+              };
+
+
         }
 
         
@@ -54,15 +60,15 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
 
         }
 
-     
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            for(int i = 0; i < dgvAlumnos.RowCount; i++)
+            if (MessageBox.Show("¿Seguro que desea guardar los cambios?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
+            foreach(DataGridViewRow row in dgvAlumnos.Rows)
             {
-                    int id_alumno = (dgvAlumnos.Rows[i].DataBoundItem as GestionHumanaWS.alumno).id_alumno;
-                    bool estado=(bool)dgvAlumnos.Rows[i].Cells[3].Value;
+                    int id_alumno = (row.DataBoundItem as GestionHumanaWS.alumno).id_alumno;
+                    bool estado=(bool)row.Cells[3].Value;
                     daoAlumno.modifcar_asistencia(evento.id_evento, id_alumno, estado);
             }
         }
@@ -73,21 +79,22 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
         {
             GestionHumanaWS.alumno data = dgvAlumnos.Rows[e.RowIndex].DataBoundItem
                     as GestionHumanaWS.alumno;
+            
             dgvAlumnos.Rows[e.RowIndex].Cells[0].Value = data.codigo;
             dgvAlumnos.Rows[e.RowIndex].Cells[1].Value = data.nombre;
             dgvAlumnos.Rows[e.RowIndex].Cells[2].Value = data.especialidad.nombre;
-            if (vez == 1)
-            {
-                DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)dgvAlumnos.Rows[e.RowIndex].Cells[3];
-                if (lista[e.RowIndex])
-                {
-                    chk.Value = chk.TrueValue;
-                }
-                else chk.Value = chk.FalseValue;
+            //if (vez == 1)
+            //{
+            //    DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)dgvAlumnos.Rows[e.RowIndex].Cells[3];
+            //    if (lista[e.RowIndex])
+            //    {
+            //        chk.Value = chk.TrueValue;
+            //    }
+            //    else chk.Value = chk.FalseValue;
 
 
-            }
-            if (e.RowIndex == lista.Count - 1) vez++;
+            //}
+            //if (e.RowIndex == lista.Count - 1) vez++;
 
 
 
