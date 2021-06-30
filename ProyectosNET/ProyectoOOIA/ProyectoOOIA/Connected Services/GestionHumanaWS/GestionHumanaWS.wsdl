@@ -47,6 +47,12 @@
   <message name="eliminarProfesorResponse">
     <part name="parameters" element="tns:eliminarProfesorResponse" />
   </message>
+  <message name="obtener_estado">
+    <part name="parameters" element="tns:obtener_estado" />
+  </message>
+  <message name="obtener_estadoResponse">
+    <part name="parameters" element="tns:obtener_estadoResponse" />
+  </message>
   <message name="listarProfesor">
     <part name="parameters" element="tns:listarProfesor" />
   </message>
@@ -244,6 +250,10 @@
       <input wsam:Action="http://services/GestionHumanaWS/eliminarProfesorRequest" message="tns:eliminarProfesor" />
       <output wsam:Action="http://services/GestionHumanaWS/eliminarProfesorResponse" message="tns:eliminarProfesorResponse" />
     </operation>
+    <operation name="obtener_estado">
+      <input wsam:Action="http://services/GestionHumanaWS/obtener_estadoRequest" message="tns:obtener_estado" />
+      <output wsam:Action="http://services/GestionHumanaWS/obtener_estadoResponse" message="tns:obtener_estadoResponse" />
+    </operation>
     <operation name="listarProfesor">
       <input wsam:Action="http://services/GestionHumanaWS/listarProfesorRequest" message="tns:listarProfesor" />
       <output wsam:Action="http://services/GestionHumanaWS/listarProfesorResponse" message="tns:listarProfesorResponse" />
@@ -414,6 +424,15 @@
       </output>
     </operation>
     <operation name="eliminarProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtener_estado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

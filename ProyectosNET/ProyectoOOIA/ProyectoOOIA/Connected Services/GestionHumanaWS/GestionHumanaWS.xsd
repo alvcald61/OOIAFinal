@@ -74,6 +74,8 @@
   <xs:element name="modificarProfesoresResponse" type="tns:modificarProfesoresResponse" />
   <xs:element name="modificarPsicologo" type="tns:modificarPsicologo" />
   <xs:element name="modificarPsicologoResponse" type="tns:modificarPsicologoResponse" />
+  <xs:element name="obtener_estado" type="tns:obtener_estado" />
+  <xs:element name="obtener_estadoResponse" type="tns:obtener_estadoResponse" />
   <xs:element name="tipoUsuario" type="tns:tipoUsuario" />
   <xs:element name="tipoUsuarioResponse" type="tns:tipoUsuarioResponse" />
   <xs:complexType name="modificarPsicologo">
@@ -487,6 +489,17 @@
   <xs:complexType name="listarPsicologoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:psicologo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtener_estado">
+    <xs:sequence>
+      <xs:element name="id_evento" type="xs:int" />
+      <xs:element name="id_alumno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtener_estadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="tipoUsuario">

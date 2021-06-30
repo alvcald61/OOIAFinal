@@ -430,18 +430,23 @@ public class GestionHumanaWS {
         return retorno;
    }
     
-//    @WebMethod(operationName = "obtener_estado_alumno_evento")
-//    public boolean obtener_estado_alumno_evento(@WebParam(name = "id_evento")int evento,@WebParam(name = "id_alumno")int alumno){
-//        boolean retorno=false;
-//        try{
-//            retorno=this.alumno.obtenerEstadoEventoAlumno(evento, alumno);
-//        }
-//        catch(Exception e){
-//            System.out.println(e.getMessage());
-//        }
-//        return retorno;
-//    }
-//    
+    @WebMethod(operationName = "obtener_estado")
+    public boolean obtener_estado(@WebParam(name = "id_evento")int evento,@WebParam(name = "id_alumno")int alumno){
+        boolean retorno=false;
+        try{
+//            
+//            if(this.alumno.obtenerEstadoEventoAlumno(evento, alumno))
+//            retorno=1;
+//            else retorno=0;
+            retorno=this.alumno.obtenerEstadoEventoAlumno(evento, alumno);
+
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return retorno;
+    }
+    
     
     @WebMethod(operationName = "modifcar_asistencia")
     public int modifcar_asistencia(@WebParam(name = "id_evento")int evento,@WebParam(name = "id_alumno")int alumno,@WebParam(name = "estado")boolean estado){

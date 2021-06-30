@@ -1039,6 +1039,9 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarPsicologoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.obtener_estadoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.ponente.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

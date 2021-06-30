@@ -22,10 +22,18 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             this.evento=evento;
             dgvAlumnos.AutoGenerateColumns = false;
             daoAlumno = new GestionHumanaWS.GestionHumanaWSClient();
-            BindingList<GestionHumanaWS.alumno>
+            try
+            {
+                BindingList<GestionHumanaWS.alumno>
                 alumnos = new BindingList<GestionHumanaWS.alumno>
                 (daoAlumno.listar_alumno_x_evento(this.evento.id_evento).ToList());
-            dgvAlumnos.DataSource = alumnos;
+                dgvAlumnos.DataSource = alumnos;
+            }
+            catch
+            {
+
+            }
+
         }
 
         private void dgvAlumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,7 +64,7 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             dgvAlumnos.Rows[e.RowIndex].Cells[0].Value = data.codigo;
             dgvAlumnos.Rows[e.RowIndex].Cells[1].Value = data.nombre;
             dgvAlumnos.Rows[e.RowIndex].Cells[2].Value = data.especialidad.nombre;
-            //dgvAlumnos.Rows[e.RowIndex].Cells[3].Value = daoAlumno.obtener_estado_alumno_evento(evento.id_evento,data.id_alumno);
+            dgvAlumnos.Rows[e.RowIndex].Cells[3].Value = daoAlumno.obtener_estado(evento.id_evento,data.id_alumno);
         }
 
         private void button1_Click(object sender, EventArgs e)

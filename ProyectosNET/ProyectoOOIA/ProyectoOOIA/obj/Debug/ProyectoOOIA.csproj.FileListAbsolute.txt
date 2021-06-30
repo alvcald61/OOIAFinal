@@ -704,5 +704,5 @@ D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Re
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Interop.AcroPDFLib.dll
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\AxInterop.AcroPDFLib.dll
-D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Coordinador.Eventos.frmRegistroAsistencia.resources
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
