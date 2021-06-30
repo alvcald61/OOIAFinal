@@ -689,3 +689,4 @@ C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache

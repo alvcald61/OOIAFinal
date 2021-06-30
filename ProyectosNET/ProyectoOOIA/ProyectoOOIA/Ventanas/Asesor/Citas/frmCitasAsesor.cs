@@ -54,7 +54,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new frmRegistrarHorario().ShowDialog();
+            new frmRegistrarHorario((GestionHumanaWS.miembroPUCP)persona).ShowDialog();
 
         }
     }
