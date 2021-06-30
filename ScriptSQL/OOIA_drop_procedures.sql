@@ -122,3 +122,6 @@ drop procedure if exists autenticarPersona;
 drop procedure if exists	listar_links;
 
 drop procedure if exists insertar_links;
+drop procedure if exists LISTAR_ALUMNO_X_EVENTO;
+drop procedure if exists OBTENER_ASISTENCIA;
+drop procedure if exists MODIFIACR_ASISTENCIA;

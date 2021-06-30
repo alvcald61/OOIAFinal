@@ -116,7 +116,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPonentes);
             this.Name = "frmMostrarPonentes";
-            this.Text = "frmMostrarPonentes";
+            this.Text = "Buscar Ponentes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

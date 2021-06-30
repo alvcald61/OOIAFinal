@@ -10,9 +10,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using ProyectoOOIA.GestionEventoWS;
 using ProyectoOOIA.Ventanas.Coordinador.Eventos;
+//using ProyectoOOIA.Ventanas.Coordinador.Eventos;
+//using ProyectoOOIA.Ventanas.Coordinador.Eventos;
 using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
 using ponente = ProyectoOOIA.GestionEventoWS.ponente;
 
@@ -549,25 +550,11 @@ namespace ProyectoOOIA.Ventanas
             eventoDao.eliminarEvento(evento);
         }
 
-        private void cboCategoria_EnabledChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void dtpInicio_LocationChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvPonentes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-           
-            
-        }
+       
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            new frmRegistroAsistencia().ShowDialog();   
+            new frmRegistroAsistencia(evento).Show();   
         }
     }
     

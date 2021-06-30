@@ -254,7 +254,7 @@ namespace ProyectoOOIA.Ventanas
                                      "\n\n\n\n"+
                                      "\n\nAtte. Oficina de Orientación, Información y Apoyo al Estudiante\n\n ";
 
-                   
+                    daoCita.insertar_links_reunion(citaNueva.id_cita, arr[0], arr[1]);
                     enviarCorreo("Inscripción a cita con " + asesor.nombre,mensaje);
                     horarioAsesor.estado = "reservado";
                     

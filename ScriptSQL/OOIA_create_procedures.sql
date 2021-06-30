@@ -1116,7 +1116,6 @@ end$
 
 delimiter $
 create procedure MODIFICAR_EVENTO_ALUMNO(
-	in _id_evento_alumno int,
     	in _fid_alumno int,
    	in _fid_evento int,
     	in _valoracion_ponente int,
@@ -1125,10 +1124,10 @@ create procedure MODIFICAR_EVENTO_ALUMNO(
     	in _asistencia bool,
     	in _comentario varchar(200)
 )begin
-	update evento_alumno set fid_alumno = _fid_alumno, fid_evento = _fid_evento, 
+	update evento_alumno set  
     	valoracion_ponentes = _valoracion_ponentes,  valoracion_evento = _valoracion_evento,
     	valoracion_utilidad = _valoracion_utilidad, asistencia = _asistencia, comentario = _comentario
-    	where id_evento_alumno = _id_evento_alumno;
+    	where id_alumno = _fid_alumno and id_evento = _fid_evento;
 end$
 
 delimiter $
@@ -1368,7 +1367,7 @@ end$
 delimiter $
 create procedure insertar_links(
 	in _id_cita int,
-    in _host varchar(400),
+    in _host varchar(800),
     in _user varchar(200))
     begin
     update cita set link_host=_host, link_user=_user where id_cita=_id_cita;
@@ -1392,4 +1391,40 @@ begin
     inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
     	where c.fid_asesor=_id_asesor;     
+        
+end$
+
+delimiter $
+create procedure LISTAR_ALUMNO_X_EVENTO(
+in _id int
+)begin
+	select 	p.id_persona, p.nombre, p.dni, p.fecha_nacimiento, p.direccion, p.correo,
+		m.id_miembro_pucp, m.fecha_inclusion, 
+           	a.id_alumno, a.codigo, a.fid_especialidad, e.nombre as nombre_especialidad, a.craest, a.creditos_aprobados
+	from persona p 
+	inner join miembro_pucp m on p.id_persona = m.fid_persona
+        inner join alumno a on a.fid_miembro_pucp = m.id_miembro_pucp
+        inner join especialidad e on e.id_especialidad = a.fid_especialidad 
+        inner join evento ev on ev.id_evento=id;
+end$
+
+delimiter $
+create procedure OBTENER_ASISTENCIA(
+in _evento int,
+in _alumno int
+)
+begin
+	select asistencia
+    from evento_alumno
+    where fid_alumno=_alumno and fid_evento=_evento;
+end$
+
+delimiter $
+create procedure MODIFIACR_ASISTENCIA(
+in _evento int,
+in _alumno int,
+in estado int
+)
+begin
+update evento set asistio=estado where fid_alumno=_alumno and fid_evento=_evento;
 end$
