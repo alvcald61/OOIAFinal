@@ -270,8 +270,8 @@ public class GestionAtencionWS {
         return resultado;
     }
     
-    @WebMethod(operationName = "listarCitaPendienteProfesor")
-    public ArrayList<Cita> listarCitaPendienteProfesor(@WebParam(name = "id_profesor" )int id_profesor) {
+    @WebMethod(operationName = "listarCitasProfesor")
+    public ArrayList<Cita> listarCitasProfesor(@WebParam(name = "id_profesor" )int id_profesor) {
         ArrayList<Cita>lista=new ArrayList<>();
         try {
             lista=cita.listar_proximas_cita_profesor(id_profesor);

@@ -34,7 +34,8 @@ namespace ProyectoOOIA.Ventanas
             
             if (tipo == TipoUsuario.Asesor)
             {
-                if (tipoIdUsuario == 2) usuario = usuarioDao.listar_profesor_x_id(id_usuario);
+                
+                if (tipoIdUsuario == 2) usuario = usuarioDao.listarProfesorId(id_usuario);
                 else if (tipoIdUsuario == 3) usuario = usuarioDao.listar_psicologo_x_id(id_usuario);
                 btnEventos.Enabled = false;
                 txtEventos.Enabled = false;
@@ -168,6 +169,11 @@ namespace ProyectoOOIA.Ventanas
         private void btnAccountSettings_Click(object sender, EventArgs e)
         {
             new frmAccountSettings(tipo, usuario).ShowDialog();
+        }
+
+        private void txtA_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

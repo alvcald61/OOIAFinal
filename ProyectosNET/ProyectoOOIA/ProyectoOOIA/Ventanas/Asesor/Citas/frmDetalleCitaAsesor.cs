@@ -13,7 +13,8 @@ namespace ProyectoOOIA.Ventanas
         ErrorProvider errorLugar;
         ErrorProvider errorEdad;
         ErrorProvider errorDireccion;
-        public frmDetalleCitaAsesor()
+        
+        public frmDetalleCitaAsesor(GestionAtencionWS.cita cita)
         {
             InitializeComponent();
 
@@ -34,7 +35,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnDetCitasPrev_Click(object sender, EventArgs e)
         {
-            new frmDetalleCitaAsesor().Show();
+            //new frmDetalleCitaAlumno().Show();
         }
 
         private void btnDetEventosPrev_Click(object sender, EventArgs e)

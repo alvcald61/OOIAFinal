@@ -321,8 +321,8 @@ public class GestionHumanaWS {
         }
         return resultado;//se devuelve el id persona
     }
-    @WebMethod(operationName = "listar_profesor_x_id")
-    public Profesor listar_profesor_x_id(@WebParam(name = "id_persona")int id_persona ){
+    @WebMethod(operationName = "listarProfesorId")
+    public Profesor listarProfesorId(@WebParam(name = "id_persona")int id_persona ){
         Profesor resultado=null;
         try {
             resultado=this.daoProfesor.listar_x_id(id_persona);
