@@ -68,18 +68,32 @@ namespace ProyectoOOIA.Ventanas
 
           private void listarHistorial()
            {
-               BindingList<GestionEventoWS.evento>
-                  eventosAlumnos = new BindingList<GestionEventoWS.evento>
-                  (daoEvento.listar_eventos_pasados(this.alumno.id_alumno).ToList());
-               dvgHistorial.DataSource = eventosAlumnos;
+            try
+            {
+                BindingList<GestionEventoWS.evento>
+                      eventosAlumnos = new BindingList<GestionEventoWS.evento>
+                      (daoEvento.listar_eventos_pasados(this.alumno.id_alumno).ToList());
+                dvgHistorial.DataSource = eventosAlumnos;
+            }
+            catch
+            {
+                return;
+            }
            }
 
            private void listarEventosInscritos()
        {
-           BindingList<GestionEventoWS.evento>
-              eventosAlumnos = new BindingList<GestionEventoWS.evento>
-              (daoEvento.listar_eventos_inscritos(this.alumno.id_alumno).ToList());
-           dvgInscritos.DataSource = eventosAlumnos;
+            try
+            {
+                BindingList<GestionEventoWS.evento>
+                   eventosAlumnos = new BindingList<GestionEventoWS.evento>
+                   (daoEvento.listar_eventos_inscritos(this.alumno.id_alumno).ToList());
+                dvgInscritos.DataSource = eventosAlumnos;
+            }
+            catch
+            {
+                return;
+            }
        }
 
 

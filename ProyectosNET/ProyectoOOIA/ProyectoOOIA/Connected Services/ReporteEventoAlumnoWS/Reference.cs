@@ -31,13 +31,13 @@ namespace ProyectoOOIA.ReporteEventoAlumnoWS {
     public partial class generarReporteEventoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public int arg0;
+        public int id_evento;
         
         public generarReporteEventoRequest() {
         }
         
-        public generarReporteEventoRequest(int arg0) {
-            this.arg0 = arg0;
+        public generarReporteEventoRequest(int id_evento) {
+            this.id_evento = id_evento;
         }
     }
     
@@ -90,9 +90,9 @@ namespace ProyectoOOIA.ReporteEventoAlumnoWS {
             return base.Channel.generarReporteEvento(request);
         }
         
-        public byte[] generarReporteEvento(int arg0) {
+        public byte[] generarReporteEvento(int id_evento) {
             ProyectoOOIA.ReporteEventoAlumnoWS.generarReporteEventoRequest inValue = new ProyectoOOIA.ReporteEventoAlumnoWS.generarReporteEventoRequest();
-            inValue.arg0 = arg0;
+            inValue.id_evento = id_evento;
             ProyectoOOIA.ReporteEventoAlumnoWS.generarReporteEventoResponse retVal = ((ProyectoOOIA.ReporteEventoAlumnoWS.ReporteEventoAlumnoWS)(this)).generarReporteEvento(inValue);
             return retVal.@return;
         }
@@ -102,9 +102,9 @@ namespace ProyectoOOIA.ReporteEventoAlumnoWS {
             return base.Channel.generarReporteEventoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.ReporteEventoAlumnoWS.generarReporteEventoResponse> generarReporteEventoAsync(int arg0) {
+        public System.Threading.Tasks.Task<ProyectoOOIA.ReporteEventoAlumnoWS.generarReporteEventoResponse> generarReporteEventoAsync(int id_evento) {
             ProyectoOOIA.ReporteEventoAlumnoWS.generarReporteEventoRequest inValue = new ProyectoOOIA.ReporteEventoAlumnoWS.generarReporteEventoRequest();
-            inValue.arg0 = arg0;
+            inValue.id_evento = id_evento;
             return ((ProyectoOOIA.ReporteEventoAlumnoWS.ReporteEventoAlumnoWS)(this)).generarReporteEventoAsync(inValue);
         }
     }

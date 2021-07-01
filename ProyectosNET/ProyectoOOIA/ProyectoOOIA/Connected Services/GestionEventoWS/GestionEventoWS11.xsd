@@ -2,20 +2,16 @@
 <xs:schema xmlns:tns="http://services/" targetNamespace="http://services/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="eliminarCategoriaEvento" type="tns:eliminarCategoriaEvento" />
   <xs:element name="eliminarCategoriaEventoResponse" type="tns:eliminarCategoriaEventoResponse" />
-  <xs:element name="eliminarCoordinador" type="tns:eliminarCoordinador" />
-  <xs:element name="eliminarCoordinadorEvento" nillable="true" type="tns:eliminarCoordinador" />
-  <xs:element name="eliminarCoordinadorEventoResponse" nillable="true" type="tns:eliminarCoordinadorResponse" />
-  <xs:element name="eliminarCoordinadorResponse" type="tns:eliminarCoordinadorResponse" />
+  <xs:element name="eliminarCoordinadorEvento" type="tns:eliminarCoordinadorEvento" />
+  <xs:element name="eliminarCoordinadorEventoResponse" type="tns:eliminarCoordinadorEventoResponse" />
   <xs:element name="eliminarEncuestaEvento" type="tns:eliminarEncuestaEvento" />
   <xs:element name="eliminarEncuestaEventoResponse" type="tns:eliminarEncuestaEventoResponse" />
   <xs:element name="eliminarEvento" type="tns:eliminarEvento" />
   <xs:element name="eliminarEventoResponse" type="tns:eliminarEventoResponse" />
   <xs:element name="insertarCategoriaEvento" type="tns:insertarCategoriaEvento" />
   <xs:element name="insertarCategoriaEventoResponse" type="tns:insertarCategoriaEventoResponse" />
-  <xs:element name="insertarCoordinador" type="tns:insertarCoordinador" />
-  <xs:element name="insertarCoordinadorEvento" nillable="true" type="tns:insertarCoordinador" />
-  <xs:element name="insertarCoordinadorEventoResponse" nillable="true" type="tns:insertarCoordinadorResponse" />
-  <xs:element name="insertarCoordinadorResponse" type="tns:insertarCoordinadorResponse" />
+  <xs:element name="insertarCoordinadorEvento" type="tns:insertarCoordinadorEvento" />
+  <xs:element name="insertarCoordinadorEventoResponse" type="tns:insertarCoordinadorEventoResponse" />
   <xs:element name="insertarEncuestaEvento" type="tns:insertarEncuestaEvento" />
   <xs:element name="insertarEncuestaEventoResponse" type="tns:insertarEncuestaEventoResponse" />
   <xs:element name="insertarEvento" type="tns:insertarEvento" />
@@ -40,10 +36,8 @@
   <xs:element name="listar_tres_eventos_proximosResponse" type="tns:listar_tres_eventos_proximosResponse" />
   <xs:element name="modificarCategoriaEvento" type="tns:modificarCategoriaEvento" />
   <xs:element name="modificarCategoriaEventoResponse" type="tns:modificarCategoriaEventoResponse" />
-  <xs:element name="modificarCoordinador" type="tns:modificarCoordinador" />
-  <xs:element name="modificarCoordinadorEvento" nillable="true" type="tns:modificarCoordinador" />
-  <xs:element name="modificarCoordinadorEventoResponse" nillable="true" type="tns:modificarCoordinadorResponse" />
-  <xs:element name="modificarCoordinadorResponse" type="tns:modificarCoordinadorResponse" />
+  <xs:element name="modificarCoordinadorEvento" type="tns:modificarCoordinadorEvento" />
+  <xs:element name="modificarCoordinadorEventoResponse" type="tns:modificarCoordinadorEventoResponse" />
   <xs:element name="modificarEncuestaEvento" type="tns:modificarEncuestaEvento" />
   <xs:element name="modificarEncuestaEventoResponse" type="tns:modificarEncuestaEventoResponse" />
   <xs:element name="modificarEvento" type="tns:modificarEvento" />
@@ -152,12 +146,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="modificarCoordinador">
+  <xs:complexType name="modificarCoordinadorEvento">
     <xs:sequence>
       <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarCoordinadorResponse">
+  <xs:complexType name="modificarCoordinadorEventoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -306,12 +300,12 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarCoordinador">
+  <xs:complexType name="insertarCoordinadorEvento">
     <xs:sequence>
       <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarCoordinadorResponse">
+  <xs:complexType name="insertarCoordinadorEventoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -326,12 +320,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarCoordinador">
+  <xs:complexType name="eliminarCoordinadorEvento">
     <xs:sequence>
       <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarCoordinadorResponse">
+  <xs:complexType name="eliminarCoordinadorEventoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
