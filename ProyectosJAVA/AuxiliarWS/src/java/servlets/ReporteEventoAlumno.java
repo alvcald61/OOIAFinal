@@ -39,8 +39,11 @@ public class ReporteEventoAlumno extends HttpServlet {
             //
             Connection con = DBManager.getInstance().getConnection();
             
+             String rutaSubreporte = ReporteOpinionesTutor.class.getResource("/reportes/SubReporteEvento.jasper").getPath();
+            
             HashMap hm = new HashMap();
             hm.put("IdEvento", 1);
+            hm.put("RutaSubreporte", rutaSubreporte);
             
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
             con.close();
