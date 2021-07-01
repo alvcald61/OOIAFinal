@@ -29,7 +29,7 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHorarioAsesor));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnHorario = new System.Windows.Forms.Button();
@@ -52,10 +52,15 @@ namespace ProyectoOOIA.Ventanas
             this.cbTipoHorario = new System.Windows.Forms.ComboBox();
             this.lblTipoHorario = new System.Windows.Forms.Label();
             this.btnBuscarHorario = new System.Windows.Forms.Button();
-            this.btnBuscarXFecha = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbFecha = new System.Windows.Forms.RadioButton();
+            this.rbTipoNombre = new System.Windows.Forms.RadioButton();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorarioProf)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -80,7 +85,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHorario.ForeColor = System.Drawing.Color.White;
             this.btnHorario.Location = new System.Drawing.Point(1097, 15);
-            this.btnHorario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHorario.Margin = new System.Windows.Forms.Padding(4);
             this.btnHorario.Name = "btnHorario";
             this.btnHorario.Size = new System.Drawing.Size(149, 65);
             this.btnHorario.TabIndex = 11;
@@ -101,7 +106,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Location = new System.Drawing.Point(1289, 38);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(47, 42);
             this.btnLogout.TabIndex = 14;
@@ -137,14 +142,14 @@ namespace ProyectoOOIA.Ventanas
             this.dgvHorarioProf.AllowUserToAddRows = false;
             this.dgvHorarioProf.AllowUserToDeleteRows = false;
             this.dgvHorarioProf.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHorarioProf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHorarioProf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHorarioProf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHorarioProf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
@@ -154,13 +159,13 @@ namespace ProyectoOOIA.Ventanas
             this.Estado,
             this.Correo});
             this.dgvHorarioProf.EnableHeadersVisualStyles = false;
-            this.dgvHorarioProf.Location = new System.Drawing.Point(28, 159);
-            this.dgvHorarioProf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvHorarioProf.Location = new System.Drawing.Point(28, 204);
+            this.dgvHorarioProf.Margin = new System.Windows.Forms.Padding(4);
             this.dgvHorarioProf.Name = "dgvHorarioProf";
             this.dgvHorarioProf.ReadOnly = true;
             this.dgvHorarioProf.RowHeadersWidth = 51;
             this.dgvHorarioProf.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHorarioProf.Size = new System.Drawing.Size(1308, 578);
+            this.dgvHorarioProf.Size = new System.Drawing.Size(1308, 533);
             this.dgvHorarioProf.TabIndex = 0;
             this.dgvHorarioProf.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvHorarioProf_CellFormatting);
             // 
@@ -214,8 +219,8 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnModificarHorario
             // 
-            this.btnModificarHorario.Location = new System.Drawing.Point(1236, 128);
-            this.btnModificarHorario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificarHorario.Location = new System.Drawing.Point(1236, 168);
+            this.btnModificarHorario.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarHorario.Name = "btnModificarHorario";
             this.btnModificarHorario.Size = new System.Drawing.Size(100, 28);
             this.btnModificarHorario.TabIndex = 1;
@@ -225,24 +230,24 @@ namespace ProyectoOOIA.Ventanas
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(28, 127);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFecha.Location = new System.Drawing.Point(14, 29);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(265, 22);
             this.dtpFecha.TabIndex = 3;
             // 
             // tbNombre
             // 
-            this.tbNombre.Location = new System.Drawing.Point(566, 125);
-            this.tbNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNombre.Location = new System.Drawing.Point(538, 29);
+            this.tbNombre.Margin = new System.Windows.Forms.Padding(4);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(301, 22);
             this.tbNombre.TabIndex = 4;
             // 
             // btnMostrarDetalles
             // 
-            this.btnMostrarDetalles.Location = new System.Drawing.Point(1128, 128);
-            this.btnMostrarDetalles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMostrarDetalles.Location = new System.Drawing.Point(1128, 168);
+            this.btnMostrarDetalles.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrarDetalles.Name = "btnMostrarDetalles";
             this.btnMostrarDetalles.Size = new System.Drawing.Size(100, 28);
             this.btnMostrarDetalles.TabIndex = 5;
@@ -254,7 +259,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblFechaHora.AutoSize = true;
             this.lblFechaHora.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaHora.Location = new System.Drawing.Point(23, 97);
+            this.lblFechaHora.Location = new System.Drawing.Point(46, 135);
             this.lblFechaHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaHora.Name = "lblFechaHora";
             this.lblFechaHora.Size = new System.Drawing.Size(56, 27);
@@ -265,7 +270,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(561, 97);
+            this.label2.Location = new System.Drawing.Point(561, 133);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 27);
@@ -275,8 +280,8 @@ namespace ProyectoOOIA.Ventanas
             // cbTipoHorario
             // 
             this.cbTipoHorario.FormattingEnabled = true;
-            this.cbTipoHorario.Location = new System.Drawing.Point(398, 125);
-            this.cbTipoHorario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTipoHorario.Location = new System.Drawing.Point(370, 29);
+            this.cbTipoHorario.Margin = new System.Windows.Forms.Padding(4);
             this.cbTipoHorario.Name = "cbTipoHorario";
             this.cbTipoHorario.Size = new System.Drawing.Size(160, 24);
             this.cbTipoHorario.TabIndex = 8;
@@ -285,7 +290,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblTipoHorario.AutoSize = true;
             this.lblTipoHorario.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoHorario.Location = new System.Drawing.Point(393, 97);
+            this.lblTipoHorario.Location = new System.Drawing.Point(393, 133);
             this.lblTipoHorario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTipoHorario.Name = "lblTipoHorario";
             this.lblTipoHorario.Size = new System.Drawing.Size(138, 27);
@@ -297,45 +302,81 @@ namespace ProyectoOOIA.Ventanas
             this.btnBuscarHorario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarHorario.BackgroundImage")));
             this.btnBuscarHorario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscarHorario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarHorario.Location = new System.Drawing.Point(887, 121);
-            this.btnBuscarHorario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarHorario.Location = new System.Drawing.Point(943, 156);
+            this.btnBuscarHorario.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarHorario.Name = "btnBuscarHorario";
-            this.btnBuscarHorario.Size = new System.Drawing.Size(33, 28);
+            this.btnBuscarHorario.Size = new System.Drawing.Size(40, 32);
             this.btnBuscarHorario.TabIndex = 10;
             this.btnBuscarHorario.UseVisualStyleBackColor = true;
             this.btnBuscarHorario.Click += new System.EventHandler(this.btnBuscarHorario_Click);
             // 
-            // btnBuscarXFecha
+            // label1
             // 
-            this.btnBuscarXFecha.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarXFecha.BackgroundImage")));
-            this.btnBuscarXFecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscarXFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarXFecha.Location = new System.Drawing.Point(301, 123);
-            this.btnBuscarXFecha.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscarXFecha.Name = "btnBuscarXFecha";
-            this.btnBuscarXFecha.Size = new System.Drawing.Size(33, 28);
-            this.btnBuscarXFecha.TabIndex = 11;
-            this.btnBuscarXFecha.UseVisualStyleBackColor = true;
-            this.btnBuscarXFecha.Click += new System.EventHandler(this.btnBuscarXFecha_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(284, 27);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Seleccione el tipo de búsqueda:";
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(28, 204);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(883, 29);
+            this.panel1.TabIndex = 16;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbTipoNombre);
+            this.groupBox1.Controls.Add(this.dtpFecha);
+            this.groupBox1.Controls.Add(this.rbFecha);
+            this.groupBox1.Controls.Add(this.cbTipoHorario);
+            this.groupBox1.Controls.Add(this.tbNombre);
+            this.groupBox1.Location = new System.Drawing.Point(28, 135);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(883, 61);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            // 
+            // rbFecha
+            // 
+            this.rbFecha.AutoSize = true;
+            this.rbFecha.Location = new System.Drawing.Point(286, 32);
+            this.rbFecha.Name = "rbFecha";
+            this.rbFecha.Size = new System.Drawing.Size(17, 16);
+            this.rbFecha.TabIndex = 13;
+            this.rbFecha.TabStop = true;
+            this.rbFecha.UseVisualStyleBackColor = true;
+            // 
+            // rbTipoNombre
+            // 
+            this.rbTipoNombre.AutoSize = true;
+            this.rbTipoNombre.Location = new System.Drawing.Point(846, 32);
+            this.rbTipoNombre.Name = "rbTipoNombre";
+            this.rbTipoNombre.Size = new System.Drawing.Size(17, 16);
+            this.rbTipoNombre.TabIndex = 14;
+            this.rbTipoNombre.TabStop = true;
+            this.rbTipoNombre.UseVisualStyleBackColor = true;
             // 
             // frmHorarioAsesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1352, 752);
-            this.Controls.Add(this.btnBuscarXFecha);
-            this.Controls.Add(this.btnBuscarHorario);
-            this.Controls.Add(this.lblTipoHorario);
-            this.Controls.Add(this.cbTipoHorario);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblFechaHora);
+            this.Controls.Add(this.lblTipoHorario);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnBuscarHorario);
             this.Controls.Add(this.btnMostrarDetalles);
-            this.Controls.Add(this.tbNombre);
-            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.btnModificarHorario);
             this.Controls.Add(this.dgvHorarioProf);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmHorarioAsesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Horario";
@@ -343,6 +384,8 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorarioProf)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,6 +413,10 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.Button btnHorario;
-        private System.Windows.Forms.Button btnBuscarXFecha;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbTipoNombre;
+        private System.Windows.Forms.RadioButton rbFecha;
     }
 }
