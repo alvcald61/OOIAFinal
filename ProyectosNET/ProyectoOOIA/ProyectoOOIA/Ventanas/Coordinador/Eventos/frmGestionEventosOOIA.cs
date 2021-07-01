@@ -110,8 +110,10 @@ namespace ProyectoOOIA.Ventanas
                     dtpFin.Enabled = false;
                     dtpInicio.Enabled = false;
                     btnEliminar.Enabled = false;
+                    btnAsistencia.Enabled = false;
                     break;
                 case Estado.Nuevo:
+                    btnAsistencia.Enabled = false;
                     btnNuevo.Enabled = true;
                     btnAgregarImagen.Enabled = true;
                     btnAgregarPonente.Enabled = true;
@@ -137,6 +139,7 @@ namespace ProyectoOOIA.Ventanas
 
                     break;
                 case Estado.Busqueda:
+                    btnAsistencia.Enabled = true;
                     btnNuevo.Enabled = false;
                     btnAgregarImagen.Enabled = false;
                     btnAgregarPonente.Enabled = false;
@@ -184,6 +187,7 @@ namespace ProyectoOOIA.Ventanas
                     btnBuscarPonente.Enabled = true;
                     cboCategoria.Enabled = true;
                     btnEliminar.Enabled = true;
+                    btnAsistencia.Enabled = true;
                     break;
 
             }
