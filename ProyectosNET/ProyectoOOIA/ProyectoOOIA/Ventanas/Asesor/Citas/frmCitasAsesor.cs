@@ -9,7 +9,7 @@ namespace ProyectoOOIA.Ventanas
     public partial class frmHorarioAsesor : Form
     {
         private GestionAtencionWS.GestionAtencionWSClient daoCita;
-        private GestionHumanaWS.persona persona;
+        
         //private Horario _horarioSeleccionado;
         private Estado estado;
         private GestionHumanaWS.miembroPUCP asesor;
@@ -31,6 +31,8 @@ namespace ProyectoOOIA.Ventanas
             tipos_horarios.Add("Finalizada");
             tipos_horarios.Add("Cancelada");
             cbTipoHorario.DataSource = tipos_horarios;
+            
+            listarCitas(this.asesor.id_miembro_pucp, "");
             //inicialmente las citas activas y pendientes
             listarCitasPendientes(this.asesor.id_miembro_pucp,"");
         }
@@ -38,7 +40,6 @@ namespace ProyectoOOIA.Ventanas
         private void listarCitasPendientes(int id_profesor, String nombre_alumno)
         {
             listarCitas(id_profesor, nombre_alumno);
-
             //lista citas pendientes
             BindingList<GestionAtencionWS.cita> citas = new BindingList<GestionAtencionWS.cita>();
             foreach(GestionAtencionWS.cita c in citasCompletas)
@@ -48,6 +49,33 @@ namespace ProyectoOOIA.Ventanas
             
             dgvHorarioProf.DataSource = citas;
         }
+
+        private void listarCitasFinalizadas(int id_profesor, String nombre_alumno)
+        {
+            listarCitas(id_profesor, nombre_alumno);
+            //lista citas finalizadas
+            BindingList<GestionAtencionWS.cita> citas = new BindingList<GestionAtencionWS.cita>();
+            foreach (GestionAtencionWS.cita c in citasCompletas)
+            {
+                if (c.fecha <= DateTime.Now && c.activo == 1) citas.Add(c);
+            }
+
+            dgvHorarioProf.DataSource = citas;
+        }
+
+        private void listarCitasCanceladas(int id_profesor, String nombre_alumno)
+        {
+            listarCitas(id_profesor, nombre_alumno);
+            //lista citas canceladas
+            BindingList<GestionAtencionWS.cita> citas = new BindingList<GestionAtencionWS.cita>();
+            foreach (GestionAtencionWS.cita c in citasCompletas)
+            {
+                if (c.activo == 0) citas.Add(c);
+            }
+
+            dgvHorarioProf.DataSource = citas;
+        }
+
         private void listarCitas(int id_profesor, String nombre_alumno)
         {
             //lista todo
@@ -61,7 +89,7 @@ namespace ProyectoOOIA.Ventanas
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            new frmPrincipal(TipoUsuario.Asesor,persona).Show();
+            new frmPrincipal(TipoUsuario.Asesor,asesor).Show();
             this.Close();
         }
         
@@ -96,30 +124,40 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBuscarHorario_Click(object sender, EventArgs e)
         {
-            /*dgvHorarioProf.DataSource =
-                daoHorario.listarHorario(tbNombre.Text);*/
-            BindingList<GestionAtencionWS.cita> citas = new BindingList<GestionAtencionWS.cita>();
-            //lista por nombre
-            if(tbNombre.Text != "") listarCitas(this.asesor.id_miembro_pucp, tbNombre.Text);
-            if (cbTipoHorario.Text == "Pendiente") listarCitasPendientes(this.asesor.id_miembro_pucp, "");
-            else
+            
+
+            if (rbTipoNombre.Checked == true)
             {
+               
+                if (cbTipoHorario.Text == "Pendiente" && tbNombre.Text != "")
+                    listarCitasPendientes(this.asesor.id_miembro_pucp, tbNombre.Text);
+
+                if (cbTipoHorario.Text == "Pendiente" && tbNombre.Text == "")
+                    listarCitasPendientes(this.asesor.id_miembro_pucp, "");
+
+                if (cbTipoHorario.Text == "Cancelada" && tbNombre.Text != "")
+                    listarCitasCanceladas(this.asesor.id_miembro_pucp, tbNombre.Text);
+
+                if (cbTipoHorario.Text == "Cancelada" && tbNombre.Text == "")
+                    listarCitasCanceladas(this.asesor.id_miembro_pucp, "");
+
+                if (cbTipoHorario.Text == "Finalizada" && tbNombre.Text != "")
+                    listarCitasFinalizadas(this.asesor.id_miembro_pucp, tbNombre.Text);
+
+                if (cbTipoHorario.Text == "Finalizada" && tbNombre.Text == "")
+                    listarCitasFinalizadas(this.asesor.id_miembro_pucp, "");
+            }
+            if (rbFecha.Checked == true)
+            {
+                
+                BindingList<GestionAtencionWS.cita> citas = new BindingList<GestionAtencionWS.cita>();
                 foreach (GestionAtencionWS.cita c in citasCompletas)
                 {
-                    if (cbTipoHorario.Text == "Cancelada")
-                    {
-                        if (c.activo == 0) citas.Add(c);
-
-                    }
-                    if (cbTipoHorario.Text == "Finalizada")
-                    {
-                        if (c.fecha <= DateTime.Now && c.activo == 1) citas.Add(c);
-
-                    }
-                    if (c.fecha == dtpFecha.Value) citas.Add(c);
+                    if (c.fecha == dtpFecha.Value.Date) citas.Add(c);
                 }
                 dgvHorarioProf.DataSource = citas;
             }
+          
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -130,7 +168,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new frmRegistrarHorario((GestionHumanaWS.miembroPUCP)persona).ShowDialog();
+            new frmRegistrarHorario((GestionHumanaWS.miembroPUCP)asesor).ShowDialog();
 
         }
 
@@ -150,5 +188,7 @@ namespace ProyectoOOIA.Ventanas
                 dgvHorarioProf.Rows[e.RowIndex].Cells[4].Value = "Cancelada";
             dgvHorarioProf.Rows[e.RowIndex].Cells[5].Value = data.alumno.correo;
         }
+
+       
     }
 }

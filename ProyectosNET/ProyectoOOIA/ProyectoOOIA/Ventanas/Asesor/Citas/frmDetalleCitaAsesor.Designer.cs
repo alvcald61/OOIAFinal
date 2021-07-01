@@ -31,6 +31,8 @@ namespace ProyectoOOIA.Ventanas
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtHeader = new System.Windows.Forms.Label();
             this.tabDetalleCita = new System.Windows.Forms.TabControl();
             this.tabDatosAlumnos = new System.Windows.Forms.TabPage();
@@ -454,6 +456,9 @@ namespace ProyectoOOIA.Ventanas
             this.dvgEventosPasados.Name = "dvgEventosPasados";
             this.dvgEventosPasados.ReadOnly = true;
             this.dvgEventosPasados.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dvgEventosPasados.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dvgEventosPasados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgEventosPasados.Size = new System.Drawing.Size(693, 148);
             this.dvgEventosPasados.TabIndex = 52;
@@ -480,14 +485,14 @@ namespace ProyectoOOIA.Ventanas
             this.dvgCitasPasadas.AllowUserToAddRows = false;
             this.dvgCitasPasadas.AllowUserToDeleteRows = false;
             this.dvgCitasPasadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgCitasPasadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgCitasPasadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dvgCitasPasadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgCitasPasadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FechaCita,
@@ -498,6 +503,9 @@ namespace ProyectoOOIA.Ventanas
             this.dvgCitasPasadas.Name = "dvgCitasPasadas";
             this.dvgCitasPasadas.ReadOnly = true;
             this.dvgCitasPasadas.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dvgCitasPasadas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dvgCitasPasadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgCitasPasadas.Size = new System.Drawing.Size(693, 140);
             this.dvgCitasPasadas.TabIndex = 51;
