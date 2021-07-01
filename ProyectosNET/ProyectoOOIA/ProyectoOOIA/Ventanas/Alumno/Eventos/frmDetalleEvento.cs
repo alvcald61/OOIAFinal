@@ -47,10 +47,13 @@ namespace ProyectoOOIA.Ventanas
 
         public void mostrarPonentes(GestionEventoWS.evento evento)
         {
+            
+            GestionEventoWS.ponente[] aux = daoEventoPonente.listarPonenteXEvento(evento.id_evento);
+            if (aux == null) return;
             BindingList<GestionEventoWS.ponente>
-                ponentes = new BindingList<GestionEventoWS.ponente>
-                (daoEventoPonente.listarPonenteXEvento(evento.id_evento).ToList());
-            dgvPonentes.DataSource = ponentes;
+               eventosAlumnos = new BindingList<GestionEventoWS.ponente>
+               (aux.ToList());
+            dgvPonentes.DataSource = eventosAlumnos;
         }
 
         private void btnBack_Click(object sender, EventArgs e)

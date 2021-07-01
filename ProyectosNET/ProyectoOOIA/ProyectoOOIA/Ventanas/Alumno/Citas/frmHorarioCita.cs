@@ -13,9 +13,14 @@ namespace ProyectoOOIA.Ventanas
 
         private GestionHumanaWS.miembroPUCP asesor;
         private GestionAtencionWS.GestionAtencionWSClient daoHorario;
-
+        private BindingList<GestionAtencionWS.cita> listaCitas;
         private DateTime monday;
         private DateTime friday;
+        private DateTime[][] mes;
+        private DateTime[] semana1;
+        private DateTime[] semana2;
+        private DateTime[] semana3;
+        private DateTime[] semana4;
         private DateTime horario_selected;
         private BindingList<GestionAtencionWS.horarioAsesor>
             horarios;
@@ -42,10 +47,18 @@ namespace ProyectoOOIA.Ventanas
             btnPrevWeek.Visible = false;
             assignWeek();
             showWeek();
-            
+            listaCitas = new BindingList<cita>();
             this.asesor = asesor;
             daoHorario = new GestionAtencionWS.GestionAtencionWSClient();
-            loadHorario();
+            //loadHorario();
+            try
+            {
+                horarios = new BindingList<GestionAtencionWS.horarioAsesor>(daoHorario.listarHorarioAsesor(asesor.id_miembro_pucp));
+            }
+            catch { return; }
+            loadHorarioProfesor();
+            load_disponibilidad();
+            
         }
        
         public void createButtons()
@@ -90,6 +103,10 @@ namespace ProyectoOOIA.Ventanas
 
         public void assignWeek()
         {
+            semana1 = new DateTime[2];
+            semana2 = new DateTime[2];
+            semana3 = new DateTime[2];
+            semana4 = new DateTime[2];
             DateTime now = DateTime.Now;
             DayOfWeek dow = now.DayOfWeek;
             int difference = 0;
@@ -119,6 +136,23 @@ namespace ProyectoOOIA.Ventanas
             }
             this.monday = now.AddDays(difference*(-1));
             this.friday = monday.AddDays(4);
+            semana1[0] = monday;
+            semana1[1] = friday;
+
+            semana2[0] = this.friday.AddDays(3);
+            semana2[1] = semana2[0].AddDays(4);
+            
+            semana3[0] = semana2[1].AddDays(3);
+            semana3[1] = semana3[0].AddDays(4);
+
+            semana4[0] = semana3[1].AddDays(3);
+            semana4[1] = semana4[0].AddDays(4);
+            mes = new DateTime[4][];
+            mes[0] = semana1;
+            mes[1] = semana2;
+            mes[2] = semana3;
+            mes[3] = semana4;
+
         }
 
 
@@ -195,6 +229,80 @@ namespace ProyectoOOIA.Ventanas
 
         }
 
+        private void loadHorarioProfesor()
+        {
+            
+            
+            //pintar solo los ocupados o no disponibles, por defecto esta todo en disponible
+            DateTime now = DateTime.Now;
+            for (int i = 0; i < 90; i++)
+            {
+                botones[i].BackColor = System.Drawing.Color.White;
+                botones[i].Enabled = true;
+                if (horarios[i].estado == "No disponible")
+                {
+                    botones[i].BackColor = System.Drawing.Color.DarkGray;
+                    botones[i].Enabled = false;
+                }
+                if (horarios[i].estado == "ocupado")
+                {
+                    botones[i].BackColor = System.Drawing.Color.DarkCyan;
+                    botones[i].Enabled = false;
+                }
+                
+                if ((i % 5) < (int)now.DayOfWeek && numWeek == 1)
+                {
+                    botones[i].BackColor = System.Drawing.Color.DarkGray;
+                    botones[i].Enabled = false;
+                }
+
+            }
+            //falta pintar los reservados
+            
+
+        }
+
+        private void load_disponibilidad()
+        {
+            try
+            {
+                listaCitas = new BindingList<cita>(daoHorario.listarCitasProfesor(asesor.id_miembro_pucp, ""));
+            }
+            catch
+            {
+                return;
+            }
+            
+                loadHorarioProfesor();
+
+
+            foreach (cita aux in listaCitas)
+            {
+                //si esta ocupado en esa semana
+                if (aux.fecha >= mes[numWeek - 1][0] && aux.fecha <= mes[numWeek - 1][1])
+                {
+                    if (aux.fecha > DateTime.Now.Date)
+                    {
+                        botones[aux.horario.id_horario - 1].BackColor = Color.MidnightBlue;
+                        botones[aux.horario.id_horario - 1].Enabled = false;
+                    }
+                    else
+                    {
+                        botones[aux.horario.id_horario - 1].BackColor = System.Drawing.Color.DarkGray;
+                        botones[aux.horario.id_horario - 1].Enabled = false;
+                    }
+                }
+                else
+                {
+                    
+                    botones[aux.horario.id_horario - 1].BackColor = Color.White;
+                    botones[aux.horario.id_horario - 1].Enabled = true;
+                }
+
+            }
+        }
+
+
         private void btnBack_Click(object sender, EventArgs e)
         {
 
@@ -216,7 +324,9 @@ namespace ProyectoOOIA.Ventanas
             monday = monday.AddDays(7);
             friday = friday.AddDays(7);
             showWeek();
-            loadHorario();
+            //loadHorario();
+            load_disponibilidad();
+
         }
 
         private void btnPrevWeek_Click(object sender, EventArgs e)
@@ -233,7 +343,8 @@ namespace ProyectoOOIA.Ventanas
             monday = monday.AddDays(-7);
             friday = friday.AddDays(-7);
             showWeek();
-            loadHorario();
+            //loadHorario();
+            load_disponibilidad();
         }
 
         public horario Retorno

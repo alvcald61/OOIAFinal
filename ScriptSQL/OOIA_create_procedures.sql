@@ -899,7 +899,7 @@ begin
     inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
     	where c.fid_alumno=_id_alumno
-	and c.fecha > CURDATE() or (c.fecha=CURDATE() and h.hora_inicio > CURTIME())  and c.activo = 1;
+	and (c.fecha > CURDATE() or (c.fecha=CURDATE() and h.hora_inicio > CURTIME())) and c.activo = 1;
 end$
 
 drop procedure if exists LISTAR_CITA_HISTORICO;
@@ -917,7 +917,7 @@ begin
     inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
     	where c.fid_alumno=_id_alumno
-        and c.fecha < CURDATE()  or (c.fecha=CURDATE() and h.hora_fin < CURTIME()) and c.activo = 1;
+        and (c.fecha < CURDATE()  or (c.fecha=CURDATE() and h.hora_fin < CURTIME())) and c.activo = 1;
 end$
 
 delimiter $

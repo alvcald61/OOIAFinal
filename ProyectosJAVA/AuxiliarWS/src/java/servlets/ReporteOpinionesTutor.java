@@ -6,6 +6,7 @@
 package servlets;
 
 import config.DBManager;
+import java.awt.Image;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -14,6 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.ImageIcon;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -37,46 +39,27 @@ public class ReporteOpinionesTutor extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        response.setContentType("text/html;charset=UTF-8");
-//        try (PrintWriter out = response.getWriter()) {
-//            /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet ReporteOpinionesTutor</title>");            
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<h1>Servlet del sistema OOIA</h1>");
-//            out.println("</body>");
-//            out.println("</html>");
-//        }
+
         try{
             //Referencia al reporte
             JasperReport reporte  = 
                     (JasperReport)JRLoader.loadObject(ReporteOpinionesTutor.class.getResource(
                             "/reportes/ReporteTutoresOpinion.jasper"));
-           
-            //Referencia a la imagen
-//            String rutaImagen = ReporteOpinionesTutor.class.getResource(
-//                            "/reportes/ReporteTutoresOpinion.jasper").getPath();
+            String rutaSubreporte1 = ReporteOpinionesTutor.class.getResource("/reportes/SubDatosAsesor.jasper").getPath();
+            
             //Arreglo de parametros
-            
             HashMap hm = new HashMap();
-            hm.put("IdAsesor", 7);//cambiar el 7
-            
-            //Importamos la imagen si vamos a usarlo
-
-            //Conexion
-            Connection con = DBManager.getInstance().getConnection();
-            
+//            hm.put("IdAsesor", idAsesor);//cambiar el 7
+            hm.put("IdAsesor", 6);//cambiamos el 7 por id Asesor
+            hm.put("Ruta_subreporte", rutaSubreporte1);
+            //Objeto de Conexion
+            Connection con = DBManager.getInstance().getConnection();        
             //poblamos el reporte
-            
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
-            con.close();
-            
+            //Cerramos la conexion
+            con.close();          
             //Mostramos el reporte 
             JasperExportManager.exportReportToPdfStream(jp, response.getOutputStream());
-            
         }catch(Exception ex){
             System.out.println(ex.getMessage());//el error aparece en el glassfish
         }

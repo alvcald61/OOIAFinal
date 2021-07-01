@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -9,7 +10,7 @@ namespace ProyectoOOIA.Ventanas
     public partial class frmDetalleCitaAlumno : Form
     {
         private GestionAtencionWS.GestionAtencionWSClient daoCita;
-        public frmDetalleCitaAlumno(GestionAtencionWS.cita cita)
+        public frmDetalleCitaAlumno(GestionAtencionWS.cita cita, int estado_cita)
         {
             
             InitializeComponent();
@@ -30,8 +31,16 @@ namespace ProyectoOOIA.Ventanas
             txtCompromiso.Text = cita.compromiso;
             txtHoraInicio.Text = cita.horario.horaInicio.ToString("hh:mm");
             txtHoraFin.Text = cita.horario.horaFin.ToString("hh:mm");
-            
-
+            if (estado_cita == 1)
+            {
+                lbestadoCita.Text = "Pendiente";
+                lbestadoCita.ForeColor = Color.Red;
+            }
+            if (estado_cita == 2)
+            {
+                lbestadoCita.Text = "Finalizada";
+                lbestadoCita.ForeColor = Color.Green;
+            }
         }
 
         private void buscarOpinion(GestionAtencionWS.cita cita)
