@@ -23,7 +23,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             InitializeComponent();
             daoReporte = new GenerarReporteAsesorWS.ReporteAsesorOpinionWSClient();
             cargarReporte();
-            btnGuardarReporte.Enabled = false;
+            btnGuardarReporte.Enabled = true;
 
             
         }

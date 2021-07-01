@@ -1116,8 +1116,8 @@
     <None Include="Connected Services\ReporteEventoAlumnoWS\ProyectoOOIA.ReporteEventoAlumnoWS.generarReporteEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS.wsdl" />
-    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS.xsd">
+    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS1.wsdl" />
+    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />

@@ -30,7 +30,7 @@ public class ReporteEventoAlumnoWS {
     /**
      * This is a sample web service operation*/
     @WebMethod(operationName = "generarReporteEvento")
-    public byte[] generarReporteEvento(@WebParam(name = "id_evento")int idEvento){
+    public byte[] generarReporteEvento(int idEvento){
         byte[]arreglo = null;
         try{
             //Referencia al reporte

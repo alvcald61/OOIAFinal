@@ -201,6 +201,7 @@ namespace ProyectoOOIA.Ventanas
             aux.ShowDialog();
             componentes(Estado.Busqueda);
             evento = aux.Evento;
+            //txtNombrePonente.Text = evento.id_evento.ToString();
             txtNombre.Text = evento.nombre;
             txtDescripcion.Text = "Descripcion";
             txtLugar.Text = evento.lugar;
@@ -564,6 +565,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
+          
             new frmDescargarReporteEvento(evento.id_evento).Show();
         }
     }
