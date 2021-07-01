@@ -212,7 +212,7 @@ namespace ProyectoOOIA.Ventanas
             citaNueva.asesor = asignarAsesor(asesor);
             citaNueva.alumno = asignarAlumno(alumno);
             citaNueva.fecha = dtpFecha.Value;
-            citaNueva.activo = true;
+            citaNueva.activo = 1;
             citaNueva.asistio = 0;
             citaNueva.fechaSpecified = true;
             citaNueva.horario = horarioProfesor;

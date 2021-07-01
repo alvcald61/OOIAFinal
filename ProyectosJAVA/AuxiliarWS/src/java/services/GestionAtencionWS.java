@@ -284,10 +284,11 @@ public class GestionAtencionWS {
     }
     
     @WebMethod(operationName = "listarCitasProfesor")
-    public ArrayList<Cita> listarCitasProfesor(@WebParam(name = "id_profesor" )int id_profesor) {
+    public ArrayList<Cita> listarCitasProfesor(@WebParam(name = "id_profesor" )int id_profesor,
+            @WebParam(name = "nombre_alumno" )String nombre_alumno) {
         ArrayList<Cita>lista=new ArrayList<>();
         try {
-            lista=cita.listar_proximas_cita_profesor(id_profesor);
+            lista=cita.listar_proximas_cita_profesor(id_profesor,nombre_alumno);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

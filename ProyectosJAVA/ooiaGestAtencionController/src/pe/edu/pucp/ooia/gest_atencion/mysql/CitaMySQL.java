@@ -302,13 +302,15 @@ public class CitaMySQL implements CitaDAO{
     }
 
     @Override
-    public ArrayList<Cita> listar_proximas_cita_profesor(int id_profesor) {
+    public ArrayList<Cita> listar_proximas_cita_profesor(int id_profesor, String nombre_alumno) {
         ArrayList<Cita> citas = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call listar_proximas_cita_profesor(?)}");
+            cs = con.prepareCall("{call listar_proximas_cita_profesor(?,?)}");
             cs.setInt("_id_asesor",id_profesor);
+            cs.setString("_nombre_alumno",nombre_alumno);
+           
             rs = cs.executeQuery();
             while(rs.next()){
                 Cita cita = new Cita();
@@ -317,6 +319,20 @@ public class CitaMySQL implements CitaDAO{
                 cita.setAlumno(new Alumno());
                 //cita.setAlumno(obtenerAlumno(rs.getInt("fid_alumno")));
                 cita.getAlumno().setId_alumno(rs.getInt("fid_alumno"));
+                cita.setTipo_asesor(rs.getInt("tipo_asesor"));
+                if(cita.getTipo_asesor() == 0){
+                    cita.setAsesor(new Profesor());
+                    //cita.setAsesor(obtenerProfesor(rs.getInt("fid_asesor")));
+                    cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
+                    
+                }
+                else if(cita.getTipo_asesor() == 1){
+                    cita.setAsesor(new Psicologo());
+                    //cita.setAsesor(obtenerPsicologo(rs.getInt("fid_asesor")));
+                    cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
+                   
+                }
+                
                 cita.getAlumno().setNombre(rs.getString("nombre_alumno"));
                 cita.getAlumno().setDireccion(rs.getString("direccion"));
                 cita.getAlumno().setFecha_nacimiento(rs.getDate("fecha_nacimiento"));
@@ -334,7 +350,7 @@ public class CitaMySQL implements CitaDAO{
                 cita.setCompromiso(rs.getString("compromiso"));
             
                 cita.setAsistio(rs.getInt("asistio"));
-            
+                cita.setActivo(rs.getInt("activo"));
                 citas.add(cita);
             }
             rs.close();

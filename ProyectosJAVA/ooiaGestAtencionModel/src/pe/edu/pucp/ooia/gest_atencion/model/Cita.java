@@ -21,7 +21,7 @@ public class Cita {
     private  String link_Host;
     
     private int asistio;
-    private boolean activo;
+    private int activo;
 
     public Cita(){};
 
@@ -61,13 +61,15 @@ public class Cita {
         this.tipo_asesor = tipo_asesor;
     }
 
-    public boolean isActivo() {
+    public int getActivo() {
         return activo;
     }
 
-    public void setActivo(boolean activo) {
+    public void setActivo(int activo) {
         this.activo = activo;
     }
+
+    
     
     public void setAsesor(MiembroPUCP asesor) {
         this.asesor = asesor;
