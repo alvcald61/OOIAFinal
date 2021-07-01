@@ -69,6 +69,7 @@ namespace ProyectoOOIA.Ventanas
             this.label11 = new System.Windows.Forms.Label();
             this.lblBuscarEventos = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
@@ -471,6 +472,7 @@ namespace ProyectoOOIA.Ventanas
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.pnlHeader.Controls.Add(this.btnReporte);
             this.pnlHeader.Controls.Add(this.lblBuscarEventos);
             this.pnlHeader.Controls.Add(this.btnBack);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -478,6 +480,21 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(797, 63);
             this.pnlHeader.TabIndex = 73;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.btnReporte.FlatAppearance.BorderSize = 0;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.ForeColor = System.Drawing.Color.White;
+            this.btnReporte.Location = new System.Drawing.Point(481, 7);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(193, 53);
+            this.btnReporte.TabIndex = 74;
+            this.btnReporte.Text = "Descargar reporte de Eventos de alumnos";
+            this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // frmGestionEventosOOIA
             // 
@@ -565,5 +582,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripButton btnAsistencia;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

@@ -125,6 +125,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ReporteEventoAlumnoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -186,6 +191,12 @@
     </Compile>
     <Compile Include="Ventanas\Asesor\Citas\frmRegistrarHorario.Designer.cs">
       <DependentUpon>frmRegistrarHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Coordinador\Eventos\frmDescargarReporteEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Coordinador\Eventos\frmDescargarReporteEvento.Designer.cs">
+      <DependentUpon>frmDescargarReporteEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Coordinador\Eventos\frmEliminarEventoOOIA.cs">
       <SubType>Form</SubType>
@@ -548,6 +559,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Asesor\Citas\frmRegistrarHorario.resx">
       <DependentUpon>frmRegistrarHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Coordinador\Eventos\frmDescargarReporteEvento.resx">
+      <DependentUpon>frmDescargarReporteEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Coordinador\Eventos\frmEliminarEventoOOIA.resx">
       <DependentUpon>frmEliminarEventoOOIA.cs</DependentUpon>
@@ -1096,6 +1110,13 @@
     <None Include="Connected Services\ObtenerPlantillaCSVcargaWS\ProyectoOOIA.ObtenerPlantillaCSVcargaWS.obtenerPlantillaCSVResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ReporteEventoAlumnoWS\ProyectoOOIA.ReporteEventoAlumnoWS.generarReporteEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS.wsdl" />
+    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\MaterialSkin.Controls.MaterialCheckBox.datasource" />
     <None Include="Properties\Settings.settings">
@@ -1201,6 +1222,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ReporteEventoAlumnoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ReporteEventoAlumnoWS\configuration.svcinfo" />
+    <None Include="Connected Services\ReporteEventoAlumnoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Resources\Bunifu_UI_v1.5.dll" />
     <None Include="Resources\menos.png" />
     <None Include="Resources\mas.png" />
@@ -1225,6 +1252,7 @@
     <WCFMetadataStorage Include="Connected Services\CargarCSVprofesoresWS\" />
     <WCFMetadataStorage Include="Connected Services\GestionHumanaWS\" />
     <WCFMetadataStorage Include="Connected Services\ObtenerPlantillaCSVcargaWS\" />
+    <WCFMetadataStorage Include="Connected Services\ReporteEventoAlumnoWS\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AcroPDFLib">
