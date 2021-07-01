@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoOOIA.GestionEventoWS;
+using ProyectoOOIA.Ventanas.Asesor.Citas;
 using ProyectoOOIA.Ventanas.Coordinador.Eventos;
 //using ProyectoOOIA.Ventanas.Coordinador.Eventos;
 //using ProyectoOOIA.Ventanas.Coordinador.Eventos;
@@ -559,6 +560,11 @@ namespace ProyectoOOIA.Ventanas
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
             new frmRegistroAsistencia(evento).Show();   
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            new frmDescargarReporteEvento(evento.id_evento).Show();
         }
     }
     
