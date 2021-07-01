@@ -34,6 +34,7 @@ namespace ProyectoOOIA.Ventanas
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.imagen = new OvalPictureBox();
             this.btnCargaDatos = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnEventos = new System.Windows.Forms.Button();
@@ -43,22 +44,21 @@ namespace ProyectoOOIA.Ventanas
             this.pnlCitas = new System.Windows.Forms.Panel();
             this.pnlEventos = new System.Windows.Forms.Panel();
             this.pnlEventosProximos = new System.Windows.Forms.Panel();
+            this.tarjeta3 = new ProyectoOOIA.Componentes.CardEvento();
+            this.tarjeta2 = new ProyectoOOIA.Componentes.CardEvento();
+            this.tarjeta1 = new ProyectoOOIA.Componentes.CardEvento();
             this.pnlEventosProx = new System.Windows.Forms.Panel();
             this.lblEventosProximos = new System.Windows.Forms.Label();
             this.imagenes = new System.Windows.Forms.PictureBox();
             this.ImageTimer = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.tarjeta3 = new ProyectoOOIA.Componentes.CardEvento();
-            this.tarjeta2 = new ProyectoOOIA.Componentes.CardEvento();
-            this.tarjeta1 = new ProyectoOOIA.Componentes.CardEvento();
-            this.imagen = new OvalPictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.pnlCitas.SuspendLayout();
             this.pnlEventos.SuspendLayout();
             this.pnlEventosProximos.SuspendLayout();
             this.pnlEventosProx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,7 +71,7 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Controls.Add(this.lblUsername);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1352, 87);
             this.panel1.TabIndex = 18;
@@ -82,6 +82,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSettings.BackgroundImage")));
             this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSettings.Enabled = false;
             this.btnSettings.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -89,12 +90,13 @@ namespace ProyectoOOIA.Ventanas
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSettings.Location = new System.Drawing.Point(1216, 28);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(4);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(47, 42);
             this.btnSettings.TabIndex = 28;
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Visible = false;
             this.btnSettings.Click += new System.EventHandler(this.btnAccountSettings_Click);
             // 
             // btnAtras
@@ -110,13 +112,24 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtras.Location = new System.Drawing.Point(1283, 28);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(47, 42);
             this.btnAtras.TabIndex = 12;
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // imagen
+            // 
+            this.imagen.BackColor = System.Drawing.Color.Transparent;
+            this.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imagen.Location = new System.Drawing.Point(28, 9);
+            this.imagen.Margin = new System.Windows.Forms.Padding(4);
+            this.imagen.Name = "imagen";
+            this.imagen.Size = new System.Drawing.Size(83, 75);
+            this.imagen.TabIndex = 27;
+            this.imagen.TabStop = false;
             // 
             // btnCargaDatos
             // 
@@ -126,7 +139,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnCargaDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargaDatos.ForeColor = System.Drawing.Color.White;
             this.btnCargaDatos.Location = new System.Drawing.Point(935, 21);
-            this.btnCargaDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCargaDatos.Margin = new System.Windows.Forms.Padding(4);
             this.btnCargaDatos.Name = "btnCargaDatos";
             this.btnCargaDatos.Size = new System.Drawing.Size(241, 57);
             this.btnCargaDatos.TabIndex = 13;
@@ -157,7 +170,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnEventos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEventos.Location = new System.Drawing.Point(4, 41);
-            this.btnEventos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEventos.Margin = new System.Windows.Forms.Padding(4);
             this.btnEventos.Name = "btnEventos";
             this.btnEventos.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnEventos.Size = new System.Drawing.Size(449, 210);
@@ -192,7 +205,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCitas.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCitas.Location = new System.Drawing.Point(7, 48);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCitas.Margin = new System.Windows.Forms.Padding(4);
             this.btnCitas.Name = "btnCitas";
             this.btnCitas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnCitas.Size = new System.Drawing.Size(461, 207);
@@ -218,7 +231,7 @@ namespace ProyectoOOIA.Ventanas
             this.pnlCitas.Controls.Add(this.btnCitas);
             this.pnlCitas.Controls.Add(this.txtCitas);
             this.pnlCitas.Location = new System.Drawing.Point(0, 492);
-            this.pnlCitas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCitas.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCitas.Name = "pnlCitas";
             this.pnlCitas.Size = new System.Drawing.Size(472, 258);
             this.pnlCitas.TabIndex = 23;
@@ -228,7 +241,7 @@ namespace ProyectoOOIA.Ventanas
             this.pnlEventos.Controls.Add(this.txtEventos);
             this.pnlEventos.Controls.Add(this.btnEventos);
             this.pnlEventos.Location = new System.Drawing.Point(480, 496);
-            this.pnlEventos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlEventos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlEventos.Name = "pnlEventos";
             this.pnlEventos.Size = new System.Drawing.Size(453, 255);
             this.pnlEventos.TabIndex = 24;
@@ -241,59 +254,10 @@ namespace ProyectoOOIA.Ventanas
             this.pnlEventosProximos.Controls.Add(this.tarjeta2);
             this.pnlEventosProximos.Controls.Add(this.tarjeta1);
             this.pnlEventosProximos.Location = new System.Drawing.Point(935, 101);
-            this.pnlEventosProximos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlEventosProximos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlEventosProximos.Name = "pnlEventosProximos";
             this.pnlEventosProximos.Size = new System.Drawing.Size(415, 649);
             this.pnlEventosProximos.TabIndex = 25;
-            // 
-            // pnlEventosProx
-            // 
-            this.pnlEventosProx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(41)))), ((int)(((byte)(71)))));
-            this.pnlEventosProx.Controls.Add(this.lblEventosProximos);
-            this.pnlEventosProx.Location = new System.Drawing.Point(933, 86);
-            this.pnlEventosProx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnlEventosProx.Name = "pnlEventosProx";
-            this.pnlEventosProx.Size = new System.Drawing.Size(417, 86);
-            this.pnlEventosProx.TabIndex = 0;
-            // 
-            // lblEventosProximos
-            // 
-            this.lblEventosProximos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEventosProximos.AutoSize = true;
-            this.lblEventosProximos.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEventosProximos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblEventosProximos.Location = new System.Drawing.Point(75, 30);
-            this.lblEventosProximos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEventosProximos.Name = "lblEventosProximos";
-            this.lblEventosProximos.Size = new System.Drawing.Size(248, 38);
-            this.lblEventosProximos.TabIndex = 0;
-            this.lblEventosProximos.Text = "Eventos Próximos";
-            this.lblEventosProximos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // imagenes
-            // 
-            this.imagenes.Location = new System.Drawing.Point(0, 86);
-            this.imagenes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.imagenes.Name = "imagenes";
-            this.imagenes.Size = new System.Drawing.Size(933, 409);
-            this.imagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imagenes.TabIndex = 26;
-            this.imagenes.TabStop = false;
-            // 
-            // ImageTimer
-            // 
-            this.ImageTimer.Enabled = true;
-            this.ImageTimer.Interval = 5000;
-            this.ImageTimer.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "EEGGCC.jpg");
-            this.imageList1.Images.SetKeyName(1, "Estudiante.png");
-            this.imageList1.Images.SetKeyName(2, "foto-29.jpg");
-            this.imageList1.Images.SetKeyName(3, "pexels-pixabay-261621.jpg");
             // 
             // tarjeta3
             // 
@@ -319,16 +283,54 @@ namespace ProyectoOOIA.Ventanas
             this.tarjeta1.Size = new System.Drawing.Size(395, 159);
             this.tarjeta1.TabIndex = 1;
             // 
-            // imagen
+            // pnlEventosProx
             // 
-            this.imagen.BackColor = System.Drawing.Color.Transparent;
-            this.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imagen.Location = new System.Drawing.Point(28, 9);
-            this.imagen.Margin = new System.Windows.Forms.Padding(4);
-            this.imagen.Name = "imagen";
-            this.imagen.Size = new System.Drawing.Size(83, 75);
-            this.imagen.TabIndex = 27;
-            this.imagen.TabStop = false;
+            this.pnlEventosProx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(41)))), ((int)(((byte)(71)))));
+            this.pnlEventosProx.Controls.Add(this.lblEventosProximos);
+            this.pnlEventosProx.Location = new System.Drawing.Point(933, 86);
+            this.pnlEventosProx.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlEventosProx.Name = "pnlEventosProx";
+            this.pnlEventosProx.Size = new System.Drawing.Size(417, 86);
+            this.pnlEventosProx.TabIndex = 0;
+            // 
+            // lblEventosProximos
+            // 
+            this.lblEventosProximos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEventosProximos.AutoSize = true;
+            this.lblEventosProximos.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventosProximos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblEventosProximos.Location = new System.Drawing.Point(75, 30);
+            this.lblEventosProximos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEventosProximos.Name = "lblEventosProximos";
+            this.lblEventosProximos.Size = new System.Drawing.Size(248, 38);
+            this.lblEventosProximos.TabIndex = 0;
+            this.lblEventosProximos.Text = "Eventos Próximos";
+            this.lblEventosProximos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // imagenes
+            // 
+            this.imagenes.Location = new System.Drawing.Point(0, 86);
+            this.imagenes.Margin = new System.Windows.Forms.Padding(4);
+            this.imagenes.Name = "imagenes";
+            this.imagenes.Size = new System.Drawing.Size(933, 409);
+            this.imagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagenes.TabIndex = 26;
+            this.imagenes.TabStop = false;
+            // 
+            // ImageTimer
+            // 
+            this.ImageTimer.Enabled = true;
+            this.ImageTimer.Interval = 5000;
+            this.ImageTimer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "EEGGCC.jpg");
+            this.imageList1.Images.SetKeyName(1, "Estudiante.png");
+            this.imageList1.Images.SetKeyName(2, "foto-29.jpg");
+            this.imageList1.Images.SetKeyName(3, "pexels-pixabay-261621.jpg");
             // 
             // frmPrincipal
             // 
@@ -342,13 +344,14 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.pnlCitas);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú principal";
             this.Load += new System.EventHandler(this.frmPrincipal_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             this.pnlCitas.ResumeLayout(false);
             this.pnlCitas.PerformLayout();
             this.pnlEventos.ResumeLayout(false);
@@ -357,7 +360,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlEventosProx.ResumeLayout(false);
             this.pnlEventosProx.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             this.ResumeLayout(false);
 
         }
