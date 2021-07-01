@@ -124,27 +124,39 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBuscarHorario_Click(object sender, EventArgs e)
         {
-            /*dgvHorarioProf.DataSource =
-                daoHorario.listarHorario(tbNombre.Text);*/
-            BindingList<GestionAtencionWS.cita> citas = new BindingList<GestionAtencionWS.cita>();
-            //lista por nombre
-            if (cbTipoHorario.Text == "Pendiente" && tbNombre.Text != "")
-                listarCitasPendientes(this.asesor.id_miembro_pucp, tbNombre.Text);
+            
 
-            if (cbTipoHorario.Text == "Pendiente" && tbNombre.Text == "")
-                listarCitasPendientes(this.asesor.id_miembro_pucp, "");
+            if (rbTipoNombre.Checked == true)
+            {
+               
+                if (cbTipoHorario.Text == "Pendiente" && tbNombre.Text != "")
+                    listarCitasPendientes(this.asesor.id_miembro_pucp, tbNombre.Text);
 
-            if (cbTipoHorario.Text == "Cancelada" && tbNombre.Text != "")
-                listarCitasCanceladas(this.asesor.id_miembro_pucp, tbNombre.Text);
+                if (cbTipoHorario.Text == "Pendiente" && tbNombre.Text == "")
+                    listarCitasPendientes(this.asesor.id_miembro_pucp, "");
 
-            if (cbTipoHorario.Text == "Cancelada" && tbNombre.Text == "")
-                listarCitasCanceladas(this.asesor.id_miembro_pucp, "");
+                if (cbTipoHorario.Text == "Cancelada" && tbNombre.Text != "")
+                    listarCitasCanceladas(this.asesor.id_miembro_pucp, tbNombre.Text);
 
-            if (cbTipoHorario.Text == "Finalizada" && tbNombre.Text != "")
-                listarCitasFinalizadas(this.asesor.id_miembro_pucp, tbNombre.Text);
+                if (cbTipoHorario.Text == "Cancelada" && tbNombre.Text == "")
+                    listarCitasCanceladas(this.asesor.id_miembro_pucp, "");
 
-            if (cbTipoHorario.Text == "Finalizada" && tbNombre.Text == "")
-                listarCitasFinalizadas(this.asesor.id_miembro_pucp, "");
+                if (cbTipoHorario.Text == "Finalizada" && tbNombre.Text != "")
+                    listarCitasFinalizadas(this.asesor.id_miembro_pucp, tbNombre.Text);
+
+                if (cbTipoHorario.Text == "Finalizada" && tbNombre.Text == "")
+                    listarCitasFinalizadas(this.asesor.id_miembro_pucp, "");
+            }
+            if (rbFecha.Checked == true)
+            {
+                
+                BindingList<GestionAtencionWS.cita> citas = new BindingList<GestionAtencionWS.cita>();
+                foreach (GestionAtencionWS.cita c in citasCompletas)
+                {
+                    if (c.fecha == dtpFecha.Value.Date) citas.Add(c);
+                }
+                dgvHorarioProf.DataSource = citas;
+            }
           
         }
 
@@ -177,14 +189,6 @@ namespace ProyectoOOIA.Ventanas
             dgvHorarioProf.Rows[e.RowIndex].Cells[5].Value = data.alumno.correo;
         }
 
-        private void btnBuscarXFecha_Click(object sender, EventArgs e)
-        {
-            BindingList<GestionAtencionWS.cita> citas = new BindingList<GestionAtencionWS.cita>();
-            foreach (GestionAtencionWS.cita c in citasCompletas)
-            {
-                if (c.fecha == dtpFecha.Value.Date) citas.Add(c);
-            }
-            dgvHorarioProf.DataSource = citas;
-        }
+       
     }
 }

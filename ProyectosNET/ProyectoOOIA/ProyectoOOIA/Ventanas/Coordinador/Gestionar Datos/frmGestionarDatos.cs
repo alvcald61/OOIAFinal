@@ -153,8 +153,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             new frmCodigosAtencion().ShowDialog();
         }
 
-        /*TAB Gestion Academica*/
-        private void btnEvaluacionFile_Click(object sender, EventArgs e)
+       /*TAB Gestion Academica*/
+       /* private void btnEvaluacionFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
@@ -222,7 +222,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             else
                 MessageBox.Show("Ha ocurrido un error en la carga de los datos", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+        }*/
 
         private void btnCursoLlevado_Click(object sender, EventArgs e)
         {

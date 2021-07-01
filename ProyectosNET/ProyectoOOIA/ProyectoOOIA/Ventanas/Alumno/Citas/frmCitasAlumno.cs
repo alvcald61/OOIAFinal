@@ -177,7 +177,7 @@ namespace ProyectoOOIA.Ventanas
                 GestionAtencionWS.cita cita_seleccionado =
               (GestionAtencionWS.cita)dgvHistorialCitas.CurrentRow.DataBoundItem;
 
-                new frmDetalleCitaAlumno(cita_seleccionado).Show();
+                new frmDetalleCitaAlumno(cita_seleccionado,2).Show();
             }
 
 
@@ -367,7 +367,7 @@ namespace ProyectoOOIA.Ventanas
                 GestionAtencionWS.cita cita_seleccionado =
               (GestionAtencionWS.cita)dgvCitasProgramadas.CurrentRow.DataBoundItem;
 
-                new frmDetalleCitaAlumno(cita_seleccionado).Show();
+                new frmDetalleCitaAlumno(cita_seleccionado,1).Show();
             }
         }
 
@@ -415,6 +415,7 @@ namespace ProyectoOOIA.Ventanas
             dgvCitasProgramadas.Rows[e.RowIndex].Cells[0].Value = data.asesor.nombre;
             dgvCitasProgramadas.Rows[e.RowIndex].Cells[2].Value = data.horario.horaInicio.ToString("hh:mm");
             dgvCitasProgramadas.Rows[e.RowIndex].Cells[3].Value = data.horario.horaFin.ToString("hh:mm");
+            if(data.asistio==0)dgvCitasProgramadas.Rows[e.RowIndex].Cells[4].Value = "Pendiente";
         }
 
         private void dgvHistorialCitas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -424,6 +425,8 @@ namespace ProyectoOOIA.Ventanas
             dgvHistorialCitas.Rows[e.RowIndex].Cells[0].Value = data.asesor.nombre;
             dgvHistorialCitas.Rows[e.RowIndex].Cells[2].Value = data.horario.horaInicio.ToString("hh:mm");
             dgvHistorialCitas.Rows[e.RowIndex].Cells[3].Value = data.horario.horaFin.ToString("hh:mm");
+            if (data.asistio == 0) dgvHistorialCitas.Rows[e.RowIndex].Cells[4].Value = "No asistió";
+            if (data.asistio == 1) dgvHistorialCitas.Rows[e.RowIndex].Cells[4].Value = "Asistió";
         }
 
         private void enviarCorreo(string motivo, string mensaje)
