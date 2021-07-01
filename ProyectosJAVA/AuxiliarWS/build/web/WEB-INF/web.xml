@@ -4,9 +4,17 @@
         <servlet-name>ReporteOpinionesTutor</servlet-name>
         <servlet-class>servlets.ReporteOpinionesTutor</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReporteEventoAlumno</servlet-name>
+        <servlet-class>servlets.ReporteEventoAlumno</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ReporteOpinionesTutor</servlet-name>
         <url-pattern>/ReporteOpinionesTutor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReporteEventoAlumno</servlet-name>
+        <url-pattern>/ReporteEventoAlumno</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
