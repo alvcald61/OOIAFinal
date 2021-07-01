@@ -1419,7 +1419,7 @@ in _id int
         inner join alumno a on a.fid_miembro_pucp = m.id_miembro_pucp
         inner join especialidad e on e.id_especialidad = a.fid_especialidad 
         inner join evento_alumno ev on ev.fid_alumno=a.id_alumno
-        where ev.fid_evento=2;
+        where ev.fid_evento=_id;
 end$
 
 delimiter $
