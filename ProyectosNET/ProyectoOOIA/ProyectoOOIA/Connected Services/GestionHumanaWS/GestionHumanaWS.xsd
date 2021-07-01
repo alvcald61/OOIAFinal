@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://services/" targetNamespace="http://services/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="autenticarUsuario" type="tns:autenticarUsuario" />
   <xs:element name="autenticarUsuarioResponse" type="tns:autenticarUsuarioResponse" />
+  <xs:element name="autenticar_persona_dni" type="tns:autenticar_persona_dni" />
+  <xs:element name="autenticar_persona_dniResponse" type="tns:autenticar_persona_dniResponse" />
   <xs:element name="cambiar_password" type="tns:cambiar_password" />
   <xs:element name="cambiar_passwordResponse" type="tns:cambiar_passwordResponse" />
   <xs:element name="eliminarAlumno" type="tns:eliminarAlumno" />
@@ -205,16 +207,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listar_psicologo_x_id">
-    <xs:sequence>
-      <xs:element name="id_persona" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listar_psicologo_x_idResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:psicologo" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listar_usuario_correo">
     <xs:sequence>
       <xs:element minOccurs="0" name="usuario" type="xs:string" />
@@ -223,6 +215,16 @@
   <xs:complexType name="listar_usuario_correoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listar_psicologo_x_id">
+    <xs:sequence>
+      <xs:element name="id_persona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listar_psicologo_x_idResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:psicologo" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarProfesor">
@@ -385,6 +387,16 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="eliminarCoordinadorEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCoordinadorEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarPonente">
     <xs:sequence />
   </xs:complexType>
@@ -403,22 +415,22 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarCoordinadorEvento">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarCoordinadorEventoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarEspecialidad">
     <xs:sequence>
       <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarEspecialidadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="autenticar_persona_dni">
+    <xs:sequence>
+      <xs:element name="dni_persona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="autenticar_persona_dniResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -433,6 +445,14 @@
       <xs:element minOccurs="0" name="return" type="tns:alumno" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarCoordinador">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCoordinadorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:coordinador" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarAlumno">
     <xs:sequence>
       <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
@@ -441,14 +461,6 @@
   <xs:complexType name="insertarAlumnoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarCoordinador">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarCoordinadorResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:coordinador" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarProfesores">
@@ -479,6 +491,16 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:psicologo" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="tipoUsuario">
+    <xs:sequence>
+      <xs:element name="id_persona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="obtener_estado">
     <xs:sequence>
       <xs:element name="id_evento" type="xs:int" />
@@ -488,16 +510,6 @@
   <xs:complexType name="obtener_estadoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="tipoUsuario">
-    <xs:sequence>
-      <xs:element name="id_persona" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="tipoUsuarioResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listar_alumno_x_evento">

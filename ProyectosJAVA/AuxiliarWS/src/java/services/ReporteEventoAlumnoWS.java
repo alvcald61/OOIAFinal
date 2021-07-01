@@ -11,7 +11,9 @@ import java.util.HashMap;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+
 import net.sf.jasperreports.engine.JasperExportManager;
+
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
@@ -26,9 +28,7 @@ import servlets.ReporteEventoAlumno;
 public class ReporteEventoAlumnoWS {
 
     /**
-     * This is a sample web service operation
-     */
-    
+     * This is a sample web service operation*/
     @WebMethod(operationName = "generarReporteEvento")
     public byte[] generarReporteEvento(@WebParam(name = "id_evento")int idEvento){
         byte[]arreglo = null;
@@ -42,8 +42,8 @@ public class ReporteEventoAlumnoWS {
             //Arreglo de parametros
             HashMap hm = new HashMap();
 //            hm.put("IdAsesor", idAsesor);//cambiar el 7
-            hm.put("idEvento", idEvento);//cambiamos el 7 por id Asesor
-            hm.put("Ruta_subreporte", rutaSubreporte);
+            hm.put("IdEvento", idEvento);//cambiamos el 7 por id Asesor
+            hm.put("RutaSubreporte", rutaSubreporte);
             //Objeto de Conexion
             Connection con = DBManager.getInstance().getConnection();        
             //poblamos el reporte

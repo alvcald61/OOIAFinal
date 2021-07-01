@@ -272,9 +272,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             if (estado.Equals(Estado.Nuevo))
             {
                 //Validacion de persona repetida
-                //int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticarPersona(
-                //int.Parse(txtDni.Text));
-                int cantUsuarios = 1;
+                int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticar_persona_dni(
+                int.Parse(txtDni.Text));
+                //int cantUsuarios = 1;
 
                 if (cantUsuarios == 1)
                 {
