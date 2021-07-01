@@ -708,3 +708,4 @@ D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Pr
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
+D:\cato\2021-1\LP2\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
