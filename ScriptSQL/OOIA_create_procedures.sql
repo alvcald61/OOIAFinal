@@ -808,6 +808,18 @@ create procedure MODIFICAR_HORARIO_ASESOR(
 end$
 
 delimiter $
+create procedure MODIFICAR_HORARIO_ASESOR_SIN_ID(
+    	in _fid_horario int,
+    	in _fid_asesor int,
+    	in _estado varchar(50)
+)begin
+	update horario_asesor set  estado = _estado
+			where fid_horario = _fid_horario and fid_asesor = _fid_asesor;
+end$
+
+
+
+delimiter $
 create procedure ELIMINAR_HORARIO_ASESOR(
 	in _id_horario_asesor int
 )

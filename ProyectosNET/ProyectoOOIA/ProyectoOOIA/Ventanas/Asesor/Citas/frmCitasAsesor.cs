@@ -82,7 +82,15 @@ namespace ProyectoOOIA.Ventanas
         private void btnModificarHorario_Click(object sender, EventArgs e)
         {
             
-            //Se le pasa el alumno asociado al evento seleccioando new frmCancelarCitaAsesor().ShowDialog();
+             new frmCancelarCitaAsesor(dgvHorarioProf.CurrentRow.DataBoundItem as GestionAtencionWS.cita,asesor).ShowDialog();
+
+            GestionAtencionWS.horarioAsesor horario = new GestionAtencionWS.horarioAsesor();
+            horario.horario = (dgvHorarioProf.CurrentRow.DataBoundItem as GestionAtencionWS.cita).horario;
+            horario.fid_asesor = asesor.id_miembro_pucp;
+            horario.estado = "disponible";
+            //MessageBox.Show(horario.horario.id_horario + " " + horario.id_horario_asesor);
+            daoCita.modificarHorarioAsesorSinID(horario);
+
         }
 
         private void btnBuscarHorario_Click(object sender, EventArgs e)

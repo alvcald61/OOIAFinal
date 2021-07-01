@@ -43,6 +43,8 @@
   <xs:element name="modificarHorario" type="tns:modificarHorario" />
   <xs:element name="modificarHorarioAsesor" type="tns:modificarHorarioAsesor" />
   <xs:element name="modificarHorarioAsesorResponse" type="tns:modificarHorarioAsesorResponse" />
+  <xs:element name="modificarHorarioAsesorSinID" type="tns:modificarHorarioAsesorSinID" />
+  <xs:element name="modificarHorarioAsesorSinIDResponse" type="tns:modificarHorarioAsesorSinIDResponse" />
   <xs:element name="modificarHorarioResponse" type="tns:modificarHorarioResponse" />
   <xs:complexType name="insertarEncuesta">
     <xs:sequence>
@@ -204,6 +206,16 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="modificarHorarioAsesorSinID">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="horarioAsesor" type="tns:horarioAsesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarHorarioAsesorSinIDResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarCitaHistorico">
     <xs:sequence>
       <xs:element name="id_alumno" type="xs:int" />
@@ -225,6 +237,16 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cita" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarEncuestaxAlumno">
+    <xs:sequence>
+      <xs:element name="idAlumno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEncuestaxAlumnoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:encuesta" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarCitaHistoricoXNombre">
     <xs:sequence>
       <xs:element name="id_alumno" type="xs:int" />
@@ -234,16 +256,6 @@
   <xs:complexType name="listarCitaHistoricoXNombreResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cita" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarEncuestaxAlumno">
-    <xs:sequence>
-      <xs:element name="idAlumno" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarEncuestaxAlumnoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:encuesta" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarCodigo">

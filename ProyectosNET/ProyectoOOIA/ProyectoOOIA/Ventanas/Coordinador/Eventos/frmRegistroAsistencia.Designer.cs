@@ -70,7 +70,6 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             this.label1.Size = new System.Drawing.Size(108, 21);
             this.label1.TabIndex = 39;
             this.label1.Text = "Lista de Alumnos";
-            
             // 
             // pnlHeader
             // 
@@ -94,7 +93,6 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             this.lblBuscarEventos.Size = new System.Drawing.Size(204, 30);
             this.lblBuscarEventos.TabIndex = 38;
             this.lblBuscarEventos.Text = "Registro de Asistencia";
-            
             // 
             // btnBack
             // 
@@ -142,7 +140,6 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             this.dgvAlumnos.Name = "dgvAlumnos";
             this.dgvAlumnos.Size = new System.Drawing.Size(644, 312);
             this.dgvAlumnos.TabIndex = 0;
-            
             this.dgvAlumnos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAlumnos_CellFormatting);
             // 
             // Codigo
@@ -180,7 +177,6 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             this.MaximizeBox = false;
             this.Name = "frmRegistroAsistencia";
             this.Text = "Registro de Asistencia";
-            
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
