@@ -91,7 +91,10 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             if (boton.Checked == true)
             {
                 if (boton.BackColor == System.Drawing.Color.White) boton.BackColor = System.Drawing.Color.DarkCyan;
+            }else
+            {
                 if (boton.BackColor == System.Drawing.Color.DarkCyan) boton.BackColor = System.Drawing.Color.White;
+
             }
         }
 
@@ -140,7 +143,8 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
                         daoHorario.modificarHorarioAsesor(horarios[i]);
                     }
 
-                    loadHorario();
+                    //loadHorario();
+                    MessageBox.Show("Actualización Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
