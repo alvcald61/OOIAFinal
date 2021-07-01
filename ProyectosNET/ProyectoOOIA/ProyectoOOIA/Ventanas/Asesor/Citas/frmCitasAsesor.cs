@@ -75,7 +75,8 @@ namespace ProyectoOOIA.Ventanas
             horario.fid_asesor = asesor.id_miembro_pucp;
             horario.estado = "disponible";
             //MessageBox.Show(horario.horario.id_horario + " " + horario.id_horario_asesor);
-            daoCita.modificarHorarioAsesorSinID(horario);
+            //daoCita.modificarHorarioAsesorSinID(horario);
+            daoCita.modificarHorarioAsesor(horario);
 
         }
 

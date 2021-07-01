@@ -51,7 +51,7 @@ namespace ProyectoOOIA.Ventanas
                 }
                 else
                 {
-                    encuesta.puntaje = -1;
+                    encuesta.puntaje = 0;
                 }
 
                 if (daoEncuesta.insertarEncuesta(encuesta) == 1)
