@@ -38,7 +38,8 @@ namespace ProyectoOOIA.Ventanas
             btnGuardar.Visible = false;
             llenaDetalle(); //si es nueva, aun no puedo llenar datos
             //si la cita ya es pasada
-            if (this.cita.fecha < DateTime.Now) modificarFichaAtencion();
+            if ((this.cita.fecha < DateTime.Now.Date) || ((this.cita.fecha==DateTime.Now.Date) && (this.cita.horario.horaFin.Hour<DateTime.Now.Hour))) 
+                    modificarFichaAtencion();
            
 
             listarHistorialCitas();
@@ -58,7 +59,7 @@ namespace ProyectoOOIA.Ventanas
             txtFechaNac.Text = this.cita.alumno.fecha_nacimiento.ToString("dd/MM/yyyy");
             txtDireccion.Text = this.cita.alumno.direccion;
             cbCodigoAtencion.Enabled = false;
-            txtCompromiso.ReadOnly = true;
+            txtCompromiso.Enabled = false;
             rbAsistio.Enabled = false;
             rbNoAsistio.Enabled = false;
             //cbCodigoAtencion.Text = this.cita.codigo_atencion.descripcion;
@@ -67,6 +68,7 @@ namespace ProyectoOOIA.Ventanas
         private void modificarFichaAtencion()
         {
             codigos = new BindingList<GestionAtencionWS.codigoAtencion>((daoCita.listarCodigo()).ToList());
+            txtCompromiso.Enabled = true;
             txtCompromiso.ReadOnly = false;
             cbCodigoAtencion.Enabled = true;
             cbCodigoAtencion.DataSource = codigos;
@@ -119,7 +121,7 @@ namespace ProyectoOOIA.Ventanas
                 GestionAtencionWS.cita cita_seleccionado =
               (GestionAtencionWS.cita)dvgCitasPasadas.CurrentRow.DataBoundItem;
 
-                new frmDetalleCitaAlumno(cita_seleccionado).Show();
+                new frmDetalleCitaAlumno(cita_seleccionado,2).Show();
             }
         }
 
@@ -227,6 +229,7 @@ namespace ProyectoOOIA.Ventanas
                 {
                     MessageBox.Show("La ficha de atención se ha modificado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cbCodigoAtencion.Enabled = false;
+                    txtCompromiso.Enabled = false;
                     txtCompromiso.ReadOnly = true;
                     rbAsistio.Enabled = false;
                     rbNoAsistio.Enabled = false;

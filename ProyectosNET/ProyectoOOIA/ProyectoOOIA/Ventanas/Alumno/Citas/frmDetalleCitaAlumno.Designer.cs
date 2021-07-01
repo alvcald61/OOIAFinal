@@ -50,7 +50,7 @@ namespace ProyectoOOIA.Ventanas
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtValoracion = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbestadoCita = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -103,11 +103,12 @@ namespace ProyectoOOIA.Ventanas
             // txtOrientador
             // 
             this.txtOrientador.Enabled = false;
+            this.txtOrientador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOrientador.Location = new System.Drawing.Point(41, 112);
             this.txtOrientador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOrientador.Name = "txtOrientador";
             this.txtOrientador.ReadOnly = true;
-            this.txtOrientador.Size = new System.Drawing.Size(419, 22);
+            this.txtOrientador.Size = new System.Drawing.Size(419, 24);
             this.txtOrientador.TabIndex = 7;
             // 
             // label3
@@ -143,21 +144,23 @@ namespace ProyectoOOIA.Ventanas
             // txtHoraInicio
             // 
             this.txtHoraInicio.Enabled = false;
+            this.txtHoraInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoraInicio.Location = new System.Drawing.Point(41, 277);
             this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHoraInicio.Name = "txtHoraInicio";
             this.txtHoraInicio.ReadOnly = true;
-            this.txtHoraInicio.Size = new System.Drawing.Size(132, 22);
+            this.txtHoraInicio.Size = new System.Drawing.Size(132, 24);
             this.txtHoraInicio.TabIndex = 12;
             // 
             // txtHoraFin
             // 
             this.txtHoraFin.Enabled = false;
+            this.txtHoraFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoraFin.Location = new System.Drawing.Point(220, 277);
             this.txtHoraFin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHoraFin.Name = "txtHoraFin";
             this.txtHoraFin.ReadOnly = true;
-            this.txtHoraFin.Size = new System.Drawing.Size(145, 22);
+            this.txtHoraFin.Size = new System.Drawing.Size(145, 24);
             this.txtHoraFin.TabIndex = 13;
             // 
             // label6
@@ -183,6 +186,7 @@ namespace ProyectoOOIA.Ventanas
             // txtMotivoConsulta
             // 
             this.txtMotivoConsulta.Enabled = false;
+            this.txtMotivoConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMotivoConsulta.Location = new System.Drawing.Point(558, 66);
             this.txtMotivoConsulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMotivoConsulta.Multiline = true;
@@ -195,7 +199,7 @@ namespace ProyectoOOIA.Ventanas
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.lbestadoCita);
             this.panel2.Controls.Add(this.txtValoracion);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.txtCompromiso);
@@ -224,6 +228,7 @@ namespace ProyectoOOIA.Ventanas
             // txtCompromiso
             // 
             this.txtCompromiso.Enabled = false;
+            this.txtCompromiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCompromiso.Location = new System.Drawing.Point(41, 361);
             this.txtCompromiso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCompromiso.Multiline = true;
@@ -246,6 +251,7 @@ namespace ProyectoOOIA.Ventanas
             // txtOpinion
             // 
             this.txtOpinion.Enabled = false;
+            this.txtOpinion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOpinion.Location = new System.Drawing.Point(558, 238);
             this.txtOpinion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOpinion.Multiline = true;
@@ -257,9 +263,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             // dtpFecha
             // 
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Location = new System.Drawing.Point(41, 186);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(419, 22);
+            this.dtpFecha.Size = new System.Drawing.Size(419, 24);
             this.dtpFecha.TabIndex = 21;
             // 
             // label8
@@ -268,9 +275,9 @@ namespace ProyectoOOIA.Ventanas
             this.label8.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(36, 30);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 27);
+            this.label8.Size = new System.Drawing.Size(139, 27);
             this.label8.TabIndex = 18;
-            this.label8.Text = "Estado";
+            this.label8.Text = "Estado de la cita:";
             // 
             // label10
             // 
@@ -285,6 +292,7 @@ namespace ProyectoOOIA.Ventanas
             // txtValoracion
             // 
             this.txtValoracion.Enabled = false;
+            this.txtValoracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValoracion.Location = new System.Drawing.Point(558, 361);
             this.txtValoracion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtValoracion.Multiline = true;
@@ -294,14 +302,15 @@ namespace ProyectoOOIA.Ventanas
             this.txtValoracion.TabIndex = 26;
             this.txtValoracion.Text = "\r\n\r\n\r\n\r\n";
             // 
-            // label11
+            // lbestadoCita
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(170, 37);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 17);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "label11";
+            this.lbestadoCita.AutoSize = true;
+            this.lbestadoCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbestadoCita.Location = new System.Drawing.Point(199, 32);
+            this.lbestadoCita.Name = "lbestadoCita";
+            this.lbestadoCita.Size = new System.Drawing.Size(62, 20);
+            this.lbestadoCita.TabIndex = 27;
+            this.lbestadoCita.Text = "label11";
             // 
             // frmDetalleCitaAlumno
             // 
@@ -347,6 +356,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.TextBox txtOpinion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtValoracion;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbestadoCita;
     }
 }
