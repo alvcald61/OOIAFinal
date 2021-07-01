@@ -126,19 +126,19 @@ insert into horario(dia,hora_inicio,hora_fin,activo) values (4,@hora,addtime(@ho
 insert into horario(dia,hora_inicio,hora_fin,activo) values (5,@hora,addtime(@hora,'0:30'),true);
 
 
-insert into especialidad(nombre) values ('Estadística');
-insert into especialidad(nombre) values ('Física');
-insert into especialidad(nombre) values ('Matemáticas');
-insert into especialidad(nombre) values ('Química');
+insert into especialidad(nombre) values ('Estadística',true);
+insert into especialidad(nombre) values ('Física',true);
+insert into especialidad(nombre) values ('Matemáticas',true);
+insert into especialidad(nombre) values ('Química',true);
 
-insert into especialidad(nombre) values ('Ingeniería Ambiental');
-insert into especialidad(nombre) values ('Ingeniería Biomédica');
-insert into especialidad(nombre) values ('Ingeniería Civil');
-insert into especialidad(nombre) values ('Ingeniería de las Telecomunicaciones');
-insert into especialidad(nombre) values ('Ingeniería de Minas');
-insert into especialidad(nombre) values ('Ingeniería Electrónica');
-insert into especialidad(nombre) values ('Ingeniería Geológica');
-insert into especialidad(nombre) values ('Ingeniería Industrial');
-insert into especialidad(nombre) values ('Ingeniería Informática');
-insert into especialidad(nombre) values ('Ingeniería Mecánica');
-insert into especialidad(nombre) values ('Ingeniería Mecatrónica');
+insert into especialidad(nombre) values ('Ingeniería Ambiental',true);
+insert into especialidad(nombre) values ('Ingeniería Biomédica',true);
+insert into especialidad(nombre) values ('Ingeniería Civil',true);
+insert into especialidad(nombre) values ('Ingeniería de las Telecomunicaciones',true);
+insert into especialidad(nombre) values ('Ingeniería de Minas',true);
+insert into especialidad(nombre) values ('Ingeniería Electrónica',true);
+insert into especialidad(nombre) values ('Ingeniería Geológica',true);
+insert into especialidad(nombre) values ('Ingeniería Industrial',true);
+insert into especialidad(nombre) values ('Ingeniería Informática',true);
+insert into especialidad(nombre) values ('Ingeniería Mecánica',true);
+insert into especialidad(nombre) values ('Ingeniería Mecatrónica',true);
