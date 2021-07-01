@@ -31,7 +31,9 @@
     <service name="ReporteAsesorOpinionWS">
       <implementation-class>services.ReporteAsesorOpinionWS</implementation-class>
     </service>
+    <service name="ReporteEventoAlumnoWS">
+      <implementation-class>services.ReporteEventoAlumnoWS</implementation-class>
+    </service>
   </services>
   <clients/>
-  <jsr109>false</jsr109>
 </jax-ws>
