@@ -30,7 +30,7 @@ public class ReporteEventoAlumnoWS {
      */
     
     @WebMethod(operationName = "generarReporteEvento")
-    public byte[] generarReporteEvento(@WebParam(name = "id_evento")int idEvento){
+    public byte[] generarReporteEvento(int idEvento){
         byte[]arreglo = null;
         try{
             //Referencia al reporte
@@ -43,7 +43,7 @@ public class ReporteEventoAlumnoWS {
             HashMap hm = new HashMap();
 //            hm.put("IdAsesor", idAsesor);//cambiar el 7
             hm.put("idEvento", idEvento);//cambiamos el 7 por id Asesor
-            hm.put("Ruta_subreporte", rutaSubreporte);
+            hm.put("RutaSubreporte", rutaSubreporte);
             //Objeto de Conexion
             Connection con = DBManager.getInstance().getConnection();        
             //poblamos el reporte
