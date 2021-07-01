@@ -28,6 +28,9 @@
     <service name="PsicologosCSVcargaWS">
       <implementation-class>services.PsicologosCSVcargaWS</implementation-class>
     </service>
+    <service name="ReporteAsesorOpinionWS">
+      <implementation-class>services.ReporteAsesorOpinionWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>
