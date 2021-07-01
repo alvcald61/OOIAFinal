@@ -189,6 +189,9 @@ namespace ProyectoOOIA.Ventanas
             dgvHorarioProf.Rows[e.RowIndex].Cells[5].Value = data.alumno.correo;
         }
 
-       
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            new frmDescargarReporteOpinion(this.asesor.id_miembro_pucp).Show();
+        }
     }
 }
