@@ -29,8 +29,8 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroEvento));
             this.tabEventos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -78,47 +78,51 @@ namespace ProyectoOOIA.Ventanas
             this.tabEventos.Controls.Add(this.tabPage1);
             this.tabEventos.Controls.Add(this.tabHistorial);
             this.tabEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabEventos.Location = new System.Drawing.Point(0, 77);
+            this.tabEventos.Location = new System.Drawing.Point(0, 95);
+            this.tabEventos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabEventos.Name = "tabEventos";
             this.tabEventos.SelectedIndex = 0;
-            this.tabEventos.Size = new System.Drawing.Size(1014, 536);
+            this.tabEventos.Size = new System.Drawing.Size(1352, 660);
             this.tabEventos.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Controls.Add(this.btnRegistrar);
             this.tabPage1.Controls.Add(this.btnDetInscritos);
             this.tabPage1.Controls.Add(this.lblEventosInscritos);
             this.tabPage1.Controls.Add(this.dvgInscritos);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1006, 508);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1344, 629);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Eventos inscritos";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.lblNombreInscritos);
+            this.panel2.Controls.Add(this.btnRegistrar);
             this.panel2.Controls.Add(this.txtNombreEvento);
             this.panel2.Controls.Add(this.dtpFechaInscritos);
             this.panel2.Controls.Add(this.btnBuscarInscritos);
             this.panel2.Controls.Add(this.lblFechaInscritos);
-            this.panel2.Location = new System.Drawing.Point(25, 6);
+            this.panel2.Location = new System.Drawing.Point(33, 7);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(676, 124);
+            this.panel2.Size = new System.Drawing.Size(901, 153);
             this.panel2.TabIndex = 44;
             // 
             // lblNombreInscritos
             // 
             this.lblNombreInscritos.AutoSize = true;
             this.lblNombreInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreInscritos.Location = new System.Drawing.Point(3, 15);
+            this.lblNombreInscritos.Location = new System.Drawing.Point(4, 18);
+            this.lblNombreInscritos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreInscritos.Name = "lblNombreInscritos";
-            this.lblNombreInscritos.Size = new System.Drawing.Size(132, 17);
+            this.lblNombreInscritos.Size = new System.Drawing.Size(154, 20);
             this.lblNombreInscritos.TabIndex = 28;
             this.lblNombreInscritos.Text = "Nombre del evento:";
             // 
@@ -126,25 +130,28 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtNombreEvento.Enabled = false;
             this.txtNombreEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreEvento.Location = new System.Drawing.Point(137, 15);
+            this.txtNombreEvento.Location = new System.Drawing.Point(183, 18);
+            this.txtNombreEvento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreEvento.Name = "txtNombreEvento";
-            this.txtNombreEvento.Size = new System.Drawing.Size(289, 23);
+            this.txtNombreEvento.Size = new System.Drawing.Size(384, 27);
             this.txtNombreEvento.TabIndex = 29;
             // 
             // dtpFechaInscritos
             // 
             this.dtpFechaInscritos.Enabled = false;
-            this.dtpFechaInscritos.Location = new System.Drawing.Point(137, 51);
+            this.dtpFechaInscritos.Location = new System.Drawing.Point(183, 63);
+            this.dtpFechaInscritos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaInscritos.Name = "dtpFechaInscritos";
-            this.dtpFechaInscritos.Size = new System.Drawing.Size(261, 21);
+            this.dtpFechaInscritos.Size = new System.Drawing.Size(347, 24);
             this.dtpFechaInscritos.TabIndex = 42;
             // 
             // btnBuscarInscritos
             // 
             this.btnBuscarInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarInscritos.Location = new System.Drawing.Point(432, 15);
+            this.btnBuscarInscritos.Location = new System.Drawing.Point(576, 18);
+            this.btnBuscarInscritos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscarInscritos.Name = "btnBuscarInscritos";
-            this.btnBuscarInscritos.Size = new System.Drawing.Size(87, 26);
+            this.btnBuscarInscritos.Size = new System.Drawing.Size(116, 32);
             this.btnBuscarInscritos.TabIndex = 38;
             this.btnBuscarInscritos.Text = "Buscar";
             this.btnBuscarInscritos.UseVisualStyleBackColor = true;
@@ -154,29 +161,33 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblFechaInscritos.AutoSize = true;
             this.lblFechaInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaInscritos.Location = new System.Drawing.Point(3, 54);
+            this.lblFechaInscritos.Location = new System.Drawing.Point(4, 66);
+            this.lblFechaInscritos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaInscritos.Name = "lblFechaInscritos";
-            this.lblFechaInscritos.Size = new System.Drawing.Size(51, 17);
+            this.lblFechaInscritos.Size = new System.Drawing.Size(60, 20);
             this.lblFechaInscritos.TabIndex = 34;
             this.lblFechaInscritos.Text = "Fecha:";
             // 
             // btnRegistrar
             // 
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(228)))), ((int)(((byte)(75)))));
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(788, 136);
+            this.btnRegistrar.Location = new System.Drawing.Point(700, 18);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(79, 29);
+            this.btnRegistrar.Size = new System.Drawing.Size(190, 32);
             this.btnRegistrar.TabIndex = 40;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Text = "Registrarse a evento";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnDetInscritos
             // 
             this.btnDetInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetInscritos.Location = new System.Drawing.Point(885, 136);
+            this.btnDetInscritos.Location = new System.Drawing.Point(1180, 167);
+            this.btnDetInscritos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDetInscritos.Name = "btnDetInscritos";
-            this.btnDetInscritos.Size = new System.Drawing.Size(95, 29);
+            this.btnDetInscritos.Size = new System.Drawing.Size(127, 36);
             this.btnDetInscritos.TabIndex = 39;
             this.btnDetInscritos.Text = "Ver detalles";
             this.btnDetInscritos.UseVisualStyleBackColor = true;
@@ -186,9 +197,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblEventosInscritos.AutoSize = true;
             this.lblEventosInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEventosInscritos.Location = new System.Drawing.Point(19, 148);
+            this.lblEventosInscritos.Location = new System.Drawing.Point(25, 182);
+            this.lblEventosInscritos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEventosInscritos.Name = "lblEventosInscritos";
-            this.lblEventosInscritos.Size = new System.Drawing.Size(132, 17);
+            this.lblEventosInscritos.Size = new System.Drawing.Size(155, 20);
             this.lblEventosInscritos.TabIndex = 37;
             this.lblEventosInscritos.Text = "Eventos Inscritos";
             // 
@@ -197,14 +209,14 @@ namespace ProyectoOOIA.Ventanas
             this.dvgInscritos.AllowUserToAddRows = false;
             this.dvgInscritos.AllowUserToDeleteRows = false;
             this.dvgInscritos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgInscritos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgInscritos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dvgInscritos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgInscritos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreEvento,
@@ -213,11 +225,12 @@ namespace ProyectoOOIA.Ventanas
             this.HoraFin,
             this.Categoria});
             this.dvgInscritos.EnableHeadersVisualStyles = false;
-            this.dvgInscritos.Location = new System.Drawing.Point(22, 171);
+            this.dvgInscritos.Location = new System.Drawing.Point(29, 210);
+            this.dvgInscritos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dvgInscritos.Name = "dvgInscritos";
             this.dvgInscritos.ReadOnly = true;
             this.dvgInscritos.RowHeadersWidth = 51;
-            this.dvgInscritos.Size = new System.Drawing.Size(958, 327);
+            this.dvgInscritos.Size = new System.Drawing.Size(1277, 402);
             this.dvgInscritos.TabIndex = 36;
             this.dvgInscritos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgInscritos_CellContentClick);
             this.dvgInscritos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgInscritos_CellFormatting);
@@ -273,19 +286,21 @@ namespace ProyectoOOIA.Ventanas
             this.tabHistorial.Controls.Add(this.lblEventosPasados);
             this.tabHistorial.Controls.Add(this.btnDetHistorial);
             this.tabHistorial.Controls.Add(this.dvgHistorial);
-            this.tabHistorial.Location = new System.Drawing.Point(4, 24);
+            this.tabHistorial.Location = new System.Drawing.Point(4, 27);
+            this.tabHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabHistorial.Name = "tabHistorial";
-            this.tabHistorial.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHistorial.Size = new System.Drawing.Size(1006, 508);
+            this.tabHistorial.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabHistorial.Size = new System.Drawing.Size(1344, 629);
             this.tabHistorial.TabIndex = 1;
             this.tabHistorial.Text = "Historial de eventos";
             // 
             // btnAgregarOpinion
             // 
             this.btnAgregarOpinion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarOpinion.Location = new System.Drawing.Point(715, 15);
+            this.btnAgregarOpinion.Location = new System.Drawing.Point(953, 18);
+            this.btnAgregarOpinion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregarOpinion.Name = "btnAgregarOpinion";
-            this.btnAgregarOpinion.Size = new System.Drawing.Size(154, 29);
+            this.btnAgregarOpinion.Size = new System.Drawing.Size(205, 36);
             this.btnAgregarOpinion.TabIndex = 42;
             this.btnAgregarOpinion.Text = "Agregar Opinion";
             this.btnAgregarOpinion.UseVisualStyleBackColor = true;
@@ -295,18 +310,20 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblEventosPasados.AutoSize = true;
             this.lblEventosPasados.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEventosPasados.Location = new System.Drawing.Point(19, 38);
+            this.lblEventosPasados.Location = new System.Drawing.Point(25, 47);
+            this.lblEventosPasados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEventosPasados.Name = "lblEventosPasados";
-            this.lblEventosPasados.Size = new System.Drawing.Size(133, 17);
+            this.lblEventosPasados.Size = new System.Drawing.Size(154, 20);
             this.lblEventosPasados.TabIndex = 41;
             this.lblEventosPasados.Text = "Eventos Pasados";
             // 
             // btnDetHistorial
             // 
             this.btnDetHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetHistorial.Location = new System.Drawing.Point(884, 15);
+            this.btnDetHistorial.Location = new System.Drawing.Point(1179, 18);
+            this.btnDetHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDetHistorial.Name = "btnDetHistorial";
-            this.btnDetHistorial.Size = new System.Drawing.Size(95, 29);
+            this.btnDetHistorial.Size = new System.Drawing.Size(127, 36);
             this.btnDetHistorial.TabIndex = 40;
             this.btnDetHistorial.Text = "Ver detalles";
             this.btnDetHistorial.UseVisualStyleBackColor = true;
@@ -317,14 +334,14 @@ namespace ProyectoOOIA.Ventanas
             this.dvgHistorial.AllowUserToAddRows = false;
             this.dvgHistorial.AllowUserToDeleteRows = false;
             this.dvgHistorial.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dvgHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgHistorial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -333,11 +350,12 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.dvgHistorial.EnableHeadersVisualStyles = false;
-            this.dvgHistorial.Location = new System.Drawing.Point(22, 71);
+            this.dvgHistorial.Location = new System.Drawing.Point(29, 87);
+            this.dvgHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dvgHistorial.Name = "dvgHistorial";
             this.dvgHistorial.ReadOnly = true;
             this.dvgHistorial.RowHeadersWidth = 51;
-            this.dvgHistorial.Size = new System.Drawing.Size(958, 327);
+            this.dvgHistorial.Size = new System.Drawing.Size(1277, 402);
             this.dvgHistorial.TabIndex = 37;
             this.dvgHistorial.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgHistorial_CellFormatting);
             // 
@@ -393,8 +411,9 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1014, 71);
+            this.panel1.Size = new System.Drawing.Size(1352, 87);
             this.panel1.TabIndex = 43;
             // 
             // btnLogout
@@ -409,9 +428,10 @@ namespace ProyectoOOIA.Ventanas
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(967, 29);
+            this.btnLogout.Location = new System.Drawing.Point(1289, 36);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(35, 34);
+            this.btnLogout.Size = new System.Drawing.Size(47, 42);
             this.btnLogout.TabIndex = 14;
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -422,10 +442,9 @@ namespace ProyectoOOIA.Ventanas
             this.lblEventos.AutoSize = true;
             this.lblEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEventos.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblEventos.Location = new System.Drawing.Point(40, 30);
-            this.lblEventos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEventos.Location = new System.Drawing.Point(53, 37);
             this.lblEventos.Name = "lblEventos";
-            this.lblEventos.Size = new System.Drawing.Size(189, 29);
+            this.lblEventos.Size = new System.Drawing.Size(230, 33);
             this.lblEventos.TabIndex = 3;
             this.lblEventos.Text = "Lista de Eventos";
             // 
@@ -433,10 +452,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(11, 30);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Location = new System.Drawing.Point(15, 37);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(25, 25);
+            this.btnHome.Size = new System.Drawing.Size(33, 31);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 2;
             this.btnHome.TabStop = false;
@@ -444,12 +463,13 @@ namespace ProyectoOOIA.Ventanas
             // 
             // frmRegistroEvento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1014, 611);
+            this.ClientSize = new System.Drawing.Size(1352, 752);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabEventos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRegistroEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eventos";

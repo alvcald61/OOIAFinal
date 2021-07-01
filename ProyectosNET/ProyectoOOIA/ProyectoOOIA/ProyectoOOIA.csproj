@@ -95,6 +95,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\GenerarReporteAsesorWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\GestionAtencionWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -169,6 +174,12 @@
     </Compile>
     <Compile Include="Ventanas\Alumno\Eventos\frmAgregarOpinionEvento.Designer.cs">
       <DependentUpon>frmAgregarOpinionEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Asesor\Citas\frmDescargarReporteOpinion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Asesor\Citas\frmDescargarReporteOpinion.Designer.cs">
+      <DependentUpon>frmDescargarReporteOpinion.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Asesor\Citas\frmRegistrarHorario.cs">
       <SubType>Form</SubType>
@@ -532,6 +543,9 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAgregarOpinionEvento.resx">
       <DependentUpon>frmAgregarOpinionEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Asesor\Citas\frmDescargarReporteOpinion.resx">
+      <DependentUpon>frmDescargarReporteOpinion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Asesor\Citas\frmRegistrarHorario.resx">
       <DependentUpon>frmRegistrarHorario.cs</DependentUpon>
     </EmbeddedResource>
@@ -761,6 +775,13 @@
     </None>
     <None Include="Connected Services\CargarCSVpsicologosWS\PsicologosCSVcargaWS1.wsdl" />
     <None Include="Connected Services\CargarCSVpsicologosWS\PsicologosCSVcargaWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GenerarReporteAsesorWS\ProyectoOOIA.GenerarReporteAsesorWS.generarReporteAsesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GenerarReporteAsesorWS\ReporteAsesorOpinionWS.wsdl" />
+    <None Include="Connected Services\GenerarReporteAsesorWS\ReporteAsesorOpinionWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS.wsdl" />
@@ -1174,6 +1195,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\GenerarReporteAsesorWS\configuration91.svcinfo" />
+    <None Include="Connected Services\GenerarReporteAsesorWS\configuration.svcinfo" />
+    <None Include="Connected Services\GenerarReporteAsesorWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Resources\Bunifu_UI_v1.5.dll" />
     <None Include="Resources\menos.png" />
     <None Include="Resources\mas.png" />
@@ -1192,6 +1219,7 @@
     <WCFMetadataStorage Include="Connected Services\CargarCSVevaluacionesWS\" />
     <WCFMetadataStorage Include="Connected Services\CargarCSVpsicologosWS\" />
     <WCFMetadataStorage Include="Connected Services\CargarCSVcursosLlevadosWS\" />
+    <WCFMetadataStorage Include="Connected Services\GenerarReporteAsesorWS\" />
     <WCFMetadataStorage Include="Connected Services\GestionAtencionWS\" />
     <WCFMetadataStorage Include="Connected Services\GestionEventoWS\" />
     <WCFMetadataStorage Include="Connected Services\CargarCSVprofesoresWS\" />

@@ -38,8 +38,8 @@ namespace ProyectoOOIA.Ventanas
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnAsistencia = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.txtNombrePonente = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnAgregarPonente = new System.Windows.Forms.Button();
@@ -104,7 +104,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnBuscar,
             this.btnModificar,
             this.btnEliminar,
-            this.toolStripButton1,
+            this.btnAsistencia,
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -165,6 +165,16 @@ namespace ProyectoOOIA.Ventanas
             this.btnEliminar.ToolTipText = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // btnAsistencia
+            // 
+            this.btnAsistencia.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnAsistencia.Image = ((System.Drawing.Image)(resources.GetObject("btnAsistencia.Image")));
+            this.btnAsistencia.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAsistencia.Name = "btnAsistencia";
+            this.btnAsistencia.Size = new System.Drawing.Size(113, 22);
+            this.btnAsistencia.Text = "Registrar Asistencia";
+            this.btnAsistencia.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
             // btnCancelar
             // 
             this.btnCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -174,16 +184,6 @@ namespace ProyectoOOIA.Ventanas
             this.btnCancelar.Size = new System.Drawing.Size(57, 22);
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(113, 22);
-            this.toolStripButton1.Text = "Registrar Asistencia";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
             // txtNombrePonente
             // 
@@ -259,7 +259,6 @@ namespace ProyectoOOIA.Ventanas
             this.dgvPonentes.RowHeadersWidth = 51;
             this.dgvPonentes.Size = new System.Drawing.Size(758, 123);
             this.dgvPonentes.TabIndex = 15;
-            
             // 
             // NombreCompletoPonente
             // 
@@ -403,7 +402,6 @@ namespace ProyectoOOIA.Ventanas
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(366, 21);
             this.cboCategoria.TabIndex = 61;
-            
             // 
             // label8
             // 
@@ -433,7 +431,6 @@ namespace ProyectoOOIA.Ventanas
             this.dtpInicio.ShowUpDown = true;
             this.dtpInicio.Size = new System.Drawing.Size(138, 20);
             this.dtpInicio.TabIndex = 70;
-            
             this.dtpInicio.Enter += new System.EventHandler(this.dtpInicio_Enter);
             this.dtpInicio.Leave += new System.EventHandler(this.dtpInicio_Leave);
             // 
@@ -567,6 +564,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label lblBuscarEventos;
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.ToolStripButton btnEliminar;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btnAsistencia;
     }
 }

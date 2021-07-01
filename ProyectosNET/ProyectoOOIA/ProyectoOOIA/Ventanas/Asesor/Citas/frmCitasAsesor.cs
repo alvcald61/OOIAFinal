@@ -41,13 +41,22 @@ namespace ProyectoOOIA.Ventanas
         {
             listarCitas(id_profesor, nombre_alumno);
             //lista citas pendientes
-            BindingList<GestionAtencionWS.cita> citas = new BindingList<GestionAtencionWS.cita>();
-            foreach(GestionAtencionWS.cita c in citasCompletas)
+            try
             {
-                if ((c.fecha > DateTime.Now) && c.activo==1) citas.Add(c);
+                BindingList<GestionAtencionWS.cita> citas = new BindingList<GestionAtencionWS.cita>();
+                if (citasCompletas == null) return;
+            foreach (GestionAtencionWS.cita c in citasCompletas)
+                {
+                    if ((c.fecha > DateTime.Now) && c.activo == 1) citas.Add(c);
+                }
+                dgvHorarioProf.DataSource = citas;
+            }
+            catch
+            {
+                return;
             }
             
-            dgvHorarioProf.DataSource = citas;
+            
         }
 
         private void listarCitasFinalizadas(int id_profesor, String nombre_alumno)
@@ -189,6 +198,9 @@ namespace ProyectoOOIA.Ventanas
             dgvHorarioProf.Rows[e.RowIndex].Cells[5].Value = data.alumno.correo;
         }
 
-       
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            new frmDescargarReporteOpinion(this.asesor.id_miembro_pucp).Show();
+        }
     }
 }

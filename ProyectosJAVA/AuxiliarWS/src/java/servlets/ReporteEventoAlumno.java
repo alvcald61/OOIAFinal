@@ -35,7 +35,7 @@ public class ReporteEventoAlumno extends HttpServlet {
         try{
             JasperReport reporte = (JasperReport) 
                     JRLoader.loadObject(ReporteEventoAlumno.class.getResource(
-                            "/java/reportes/ReporteEvento.jasper"));
+                            "/reportes/ReporteEvento.jasper"));
             //
             Connection con = DBManager.getInstance().getConnection();
             

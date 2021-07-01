@@ -294,9 +294,16 @@ namespace ProyectoOOIA.Ventanas
                 }
                 else
                 {
-                    
-                    botones[aux.horario.id_horario - 1].BackColor = Color.White;
-                    botones[aux.horario.id_horario - 1].Enabled = true;
+                    if (((aux.horario.id_horario - 1) % 5) < (int)DateTime.Now.DayOfWeek && numWeek == 1)
+                    {
+                        botones[aux.horario.id_horario - 1].BackColor = System.Drawing.Color.DarkGray;
+                        botones[aux.horario.id_horario - 1].Enabled = false;
+                    }
+                    else
+                    {
+                        botones[aux.horario.id_horario - 1].BackColor = Color.White;
+                        botones[aux.horario.id_horario - 1].Enabled = true;
+                    }
                 }
 
             }
