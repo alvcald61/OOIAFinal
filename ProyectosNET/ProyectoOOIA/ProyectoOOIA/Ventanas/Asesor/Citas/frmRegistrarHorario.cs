@@ -32,6 +32,8 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
 
             daoHorario = new GestionAtencionWS.GestionAtencionWSClient();
             loadHorario();
+            pbCarga.Visible = false;
+
         }
 
         public void cambiarEstado()
@@ -109,13 +111,13 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             {
                 if (horarios[i].estado == "disponible")
                     botones[i].BackColor = System.Drawing.Color.White;
-                if (horarios[i].estado == "ocupado")
+                if (horarios[i].estado == "ocupado" || horarios[i].estado=="reservado")
                     botones[i].BackColor = System.Drawing.Color.DarkCyan;
-                if (horarios[i].estado == "No disponible")
-                {
-                    botones[i].BackColor = System.Drawing.Color.DarkGray;
-                    botones[i].Enabled = false;
-                }
+                //if (horarios[i].estado == "No disponible")
+                //{
+                //    botones[i].BackColor = System.Drawing.Color.DarkGray;
+                //    botones[i].Enabled = false;
+                //}
             }
         }
 
@@ -136,11 +138,16 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
               MessageBoxButtons.YesNo, MessageBoxIcon.None);
                 if (dr == DialogResult.Yes)
                 {
+                    pbCarga.Visible = true;
+                    pbCarga.Maximum = 90;
+                    pbCarga.Value = 0;
                     for (int i = 0; i < 90; i++)
                     {
                         if (botones[i].BackColor == System.Drawing.Color.White) horarios[i].estado = "disponible";
                         if (botones[i].BackColor == System.Drawing.Color.DarkCyan) horarios[i].estado = "ocupado";
                         daoHorario.modificarHorarioAsesor(horarios[i]);
+                        pbCarga.Value++;
+
                     }
 
                     //loadHorario();

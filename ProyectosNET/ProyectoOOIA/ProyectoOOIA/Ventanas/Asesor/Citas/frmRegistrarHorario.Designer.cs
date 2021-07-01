@@ -66,6 +66,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lblOcupado = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.pbCarga = new System.Windows.Forms.ProgressBar();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.tlpHorario.SuspendLayout();
@@ -80,7 +81,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(812, 60);
+            this.pnlHeader.Size = new System.Drawing.Size(814, 60);
             this.pnlHeader.TabIndex = 19;
             // 
             // btnBack
@@ -589,11 +590,19 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // pbCarga
+            // 
+            this.pbCarga.Location = new System.Drawing.Point(21, 522);
+            this.pbCarga.Name = "pbCarga";
+            this.pbCarga.Size = new System.Drawing.Size(752, 23);
+            this.pbCarga.TabIndex = 24;
+            // 
             // frmRegistrarHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 526);
+            this.ClientSize = new System.Drawing.Size(814, 571);
+            this.Controls.Add(this.pbCarga);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.pnlLeyenda);
@@ -650,5 +659,6 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
         private System.Windows.Forms.Label lblOcupado;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ProgressBar pbCarga;
     }
 }
