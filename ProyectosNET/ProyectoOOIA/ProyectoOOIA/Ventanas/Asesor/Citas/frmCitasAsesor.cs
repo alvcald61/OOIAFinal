@@ -9,7 +9,7 @@ namespace ProyectoOOIA.Ventanas
     public partial class frmHorarioAsesor : Form
     {
         private GestionAtencionWS.GestionAtencionWSClient daoCita;
-        private GestionHumanaWS.persona persona;
+        
         //private Horario _horarioSeleccionado;
         private Estado estado;
         private GestionHumanaWS.miembroPUCP asesor;
@@ -89,7 +89,7 @@ namespace ProyectoOOIA.Ventanas
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            new frmPrincipal(TipoUsuario.Asesor,persona).Show();
+            new frmPrincipal(TipoUsuario.Asesor,asesor).Show();
             this.Close();
         }
         
@@ -117,7 +117,8 @@ namespace ProyectoOOIA.Ventanas
             horario.fid_asesor = asesor.id_miembro_pucp;
             horario.estado = "disponible";
             //MessageBox.Show(horario.horario.id_horario + " " + horario.id_horario_asesor);
-            daoCita.modificarHorarioAsesorSinID(horario);
+            //daoCita.modificarHorarioAsesorSinID(horario);
+            daoCita.modificarHorarioAsesor(horario);
 
         }
 
@@ -155,7 +156,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new frmRegistrarHorario((GestionHumanaWS.miembroPUCP)persona).ShowDialog();
+            new frmRegistrarHorario((GestionHumanaWS.miembroPUCP)asesor).ShowDialog();
 
         }
 

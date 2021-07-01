@@ -191,7 +191,7 @@ create table encuesta(
     fid_cita int,
 	tipo_asesor int,
     	fid_asesor int,
-    	puntaje decimal(4,2),
+    	puntaje int default 0,
     	descripcion varchar(300),
 	activo bool,
     	primary key(id_encuesta),
