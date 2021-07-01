@@ -117,7 +117,7 @@
   </xs:complexType>
   <xs:complexType name="cita">
     <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="activo" type="xs:int" />
       <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
       <xs:element minOccurs="0" name="asesor" type="tns:miembroPUCP" />
       <xs:element name="asistio" type="xs:int" />
@@ -217,6 +217,7 @@
   <xs:complexType name="listarCitasProfesor">
     <xs:sequence>
       <xs:element name="id_profesor" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_alumno" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCitasProfesorResponse">

@@ -36,11 +36,10 @@ namespace ProyectoOOIA.Ventanas
             txtDireccion.ReadOnly = true;
             txtMotivo.ReadOnly = true;
             btnGuardar.Visible = false;
+            llenaDetalle(); //si es nueva, aun no puedo llenar datos
             //si la cita ya es pasada
             if (this.cita.fecha < DateTime.Now) modificarFichaAtencion();
-
-            //si es nueva, aun no puedo llenar datos
-            llenaDetalle();
+           
 
             listarHistorialCitas();
             listarHistorialEventos();
@@ -68,13 +67,15 @@ namespace ProyectoOOIA.Ventanas
         private void modificarFichaAtencion()
         {
             codigos = new BindingList<GestionAtencionWS.codigoAtencion>((daoCita.listarCodigo()).ToList());
+            txtCompromiso.ReadOnly = false;
+            cbCodigoAtencion.Enabled = true;
             cbCodigoAtencion.DataSource = codigos;
             cbCodigoAtencion.DisplayMember = "descripcion";
             btnGuardar.Visible = true;
-            this.cita.compromiso = txtCompromiso.Text;
-            if (rbNoAsistio.Checked == true) this.cita.asistio = 0;
-            if (rbAsistio.Checked == true) this.cita.asistio = 1;
-            this.cita.codigo_atencion = (GestionAtencionWS.codigoAtencion)cbCodigoAtencion.SelectedItem;
+          
+            rbAsistio.Enabled = true;
+            rbNoAsistio.Enabled = true;
+            
 
         }
         private void listarHistorialCitas()
@@ -210,24 +211,33 @@ namespace ProyectoOOIA.Ventanas
                 MessageBox.Show("No ha ingresado la asistencia del alumno", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            this.cita.compromiso = txtCompromiso.Text;
+            if (rbNoAsistio.Checked == true) this.cita.asistio = 0;
+            if (rbAsistio.Checked == true) this.cita.asistio = 1;
+            this.cita.codigo_atencion.id_codigo_atencion = ((GestionAtencionWS.codigoAtencion)cbCodigoAtencion.SelectedItem).id_codigo_atencion;
 
             DialogResult dr =
                MessageBox.Show("¿Esta seguro que desea modificar la ficha de atención?", "Ficha de atención",
                MessageBoxButtons.YesNo, MessageBoxIcon.None);
             if (dr == DialogResult.Yes)
             {
-
+                
                 int resultado = daoCita.modificarCita(this.cita);
                 if (resultado != 0)
                 {
                     MessageBox.Show("La ficha de atención se ha modificado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cbCodigoAtencion.Enabled = false;
+                    txtCompromiso.ReadOnly = true;
+                    rbAsistio.Enabled = false;
+                    rbNoAsistio.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
-            else
-            {
-                MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+           
         }
     }
 }

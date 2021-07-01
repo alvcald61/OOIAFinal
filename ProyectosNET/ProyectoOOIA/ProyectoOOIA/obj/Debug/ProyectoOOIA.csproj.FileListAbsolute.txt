@@ -690,6 +690,24 @@ C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto OOIA\OOIAFinal\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe.config
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Bunifu_UI_v1.5.dll
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Newtonsoft.Json.dll
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\RestSharp.dll
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Newtonsoft.Json.xml
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\RestSharp.xml
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Interop.AcroPDFLib.dll
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\AxInterop.AcroPDFLib.dll
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Interop.AcroPDFLib.dll
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\AxInterop.AcroPDFLib.dll
@@ -699,6 +717,7 @@ C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Proy
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Horario.resources
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Alumno.Citas.ucAsesor.resources
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmAccesoEvento.resources
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Alumno.Eventos.frmAgregarOpinionEvento.resources
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Asesor.Citas.frmRegistrarHorario.resources
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmEliminarEventoOOIA.resources
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmGestionEventosOOIA.resources
@@ -759,25 +778,6 @@ C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Proy
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetalleEvento.resources
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.GenerateResource.cache
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CoreCompileInputs.cache
+C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Alumno.Eventos.frmAgregarOpinionEvento.resources
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe.config
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Bunifu_UI_v1.5.dll
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Logging.dll
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Tokens.dll
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Newtonsoft.Json.dll
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\RestSharp.dll
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Logging.xml
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Microsoft.IdentityModel.Tokens.xml
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Newtonsoft.Json.xml
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\RestSharp.xml
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Interop.AcroPDFLib.dll
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\AxInterop.AcroPDFLib.dll
-C:\Repositorios\OOIA_FINAL\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete

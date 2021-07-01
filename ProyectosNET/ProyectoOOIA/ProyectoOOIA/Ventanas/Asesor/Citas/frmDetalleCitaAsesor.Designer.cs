@@ -29,12 +29,25 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtHeader = new System.Windows.Forms.Label();
             this.tabDetalleCita = new System.Windows.Forms.TabControl();
+            this.tabDatosAlumnos = new System.Windows.Forms.TabPage();
+            this.lbNombreAlumno = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.pImageAlumno = new System.Windows.Forms.PictureBox();
+            this.lbEspecialidad = new System.Windows.Forms.Label();
+            this.lblFechaNac = new System.Windows.Forms.Label();
+            this.txtFechaNac = new System.Windows.Forms.TextBox();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtEspecialidad = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.tabFichaAtencion = new System.Windows.Forms.TabPage();
             this.pnlScrollFicha = new System.Windows.Forms.Panel();
+            this.cbCodigoAtencion = new System.Windows.Forms.ComboBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtCompromiso = new System.Windows.Forms.TextBox();
             this.lblCompromiso = new System.Windows.Forms.Label();
             this.rbNoAsistio = new System.Windows.Forms.RadioButton();
@@ -51,27 +64,16 @@ namespace ProyectoOOIA.Ventanas
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dvgCitasPasadas = new System.Windows.Forms.DataGridView();
+            this.FechaCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MiembroOOIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEventosPrev = new System.Windows.Forms.Label();
             this.lblCitasPrev = new System.Windows.Forms.Label();
             this.lbNombre_eventos_cita = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtEspecialidad = new System.Windows.Forms.TextBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.lblDireccion = new System.Windows.Forms.Label();
-            this.txtFechaNac = new System.Windows.Forms.TextBox();
-            this.lblFechaNac = new System.Windows.Forms.Label();
-            this.lbEspecialidad = new System.Windows.Forms.Label();
-            this.pImageAlumno = new System.Windows.Forms.PictureBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lbNombreAlumno = new System.Windows.Forms.Label();
-            this.tabDatosAlumnos = new System.Windows.Forms.TabPage();
-            this.FechaCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MiembroOOIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.cbCodigoAtencion = new System.Windows.Forms.ComboBox();
             this.tabDetalleCita.SuspendLayout();
+            this.tabDatosAlumnos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pImageAlumno)).BeginInit();
             this.tabFichaAtencion.SuspendLayout();
             this.pnlScrollFicha.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -79,8 +81,6 @@ namespace ProyectoOOIA.Ventanas
             ((System.ComponentModel.ISupportInitialize)(this.dvgCitasPasadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pImageAlumno)).BeginInit();
-            this.tabDatosAlumnos.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtHeader
@@ -101,19 +101,147 @@ namespace ProyectoOOIA.Ventanas
             this.tabDetalleCita.Controls.Add(this.tabPage4);
             this.tabDetalleCita.Font = new System.Drawing.Font("Gill Sans MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDetalleCita.Location = new System.Drawing.Point(0, 95);
-            this.tabDetalleCita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabDetalleCita.Margin = new System.Windows.Forms.Padding(4);
             this.tabDetalleCita.Name = "tabDetalleCita";
             this.tabDetalleCita.SelectedIndex = 0;
             this.tabDetalleCita.Size = new System.Drawing.Size(1067, 458);
             this.tabDetalleCita.TabIndex = 8;
             // 
+            // tabDatosAlumnos
+            // 
+            this.tabDatosAlumnos.Controls.Add(this.lbNombreAlumno);
+            this.tabDatosAlumnos.Controls.Add(this.lblCodigo);
+            this.tabDatosAlumnos.Controls.Add(this.pImageAlumno);
+            this.tabDatosAlumnos.Controls.Add(this.lbEspecialidad);
+            this.tabDatosAlumnos.Controls.Add(this.lblFechaNac);
+            this.tabDatosAlumnos.Controls.Add(this.txtFechaNac);
+            this.tabDatosAlumnos.Controls.Add(this.lblDireccion);
+            this.tabDatosAlumnos.Controls.Add(this.txtDireccion);
+            this.tabDatosAlumnos.Controls.Add(this.txtEspecialidad);
+            this.tabDatosAlumnos.Controls.Add(this.txtCodigo);
+            this.tabDatosAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabDatosAlumnos.Location = new System.Drawing.Point(4, 30);
+            this.tabDatosAlumnos.Margin = new System.Windows.Forms.Padding(4);
+            this.tabDatosAlumnos.Name = "tabDatosAlumnos";
+            this.tabDatosAlumnos.Padding = new System.Windows.Forms.Padding(4);
+            this.tabDatosAlumnos.Size = new System.Drawing.Size(1059, 424);
+            this.tabDatosAlumnos.TabIndex = 0;
+            this.tabDatosAlumnos.Text = "Datos Alumno";
+            this.tabDatosAlumnos.UseVisualStyleBackColor = true;
+            // 
+            // lbNombreAlumno
+            // 
+            this.lbNombreAlumno.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombreAlumno.Location = new System.Drawing.Point(9, 16);
+            this.lbNombreAlumno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNombreAlumno.Name = "lbNombreAlumno";
+            this.lbNombreAlumno.Size = new System.Drawing.Size(392, 47);
+            this.lbNombreAlumno.TabIndex = 19;
+            this.lbNombreAlumno.Text = "Huertas Hortez, Jose Luis";
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(11, 79);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(180, 28);
+            this.lblCodigo.TabIndex = 21;
+            this.lblCodigo.Text = "Codigo del alumno";
+            // 
+            // pImageAlumno
+            // 
+            this.pImageAlumno.Image = global::ProyectoOOIA.Properties.Resources.Estudiante;
+            this.pImageAlumno.Location = new System.Drawing.Point(687, 39);
+            this.pImageAlumno.Margin = new System.Windows.Forms.Padding(4);
+            this.pImageAlumno.Name = "pImageAlumno";
+            this.pImageAlumno.Size = new System.Drawing.Size(312, 272);
+            this.pImageAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pImageAlumno.TabIndex = 31;
+            this.pImageAlumno.TabStop = false;
+            // 
+            // lbEspecialidad
+            // 
+            this.lbEspecialidad.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.lbEspecialidad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEspecialidad.Location = new System.Drawing.Point(11, 122);
+            this.lbEspecialidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbEspecialidad.Name = "lbEspecialidad";
+            this.lbEspecialidad.Size = new System.Drawing.Size(129, 28);
+            this.lbEspecialidad.TabIndex = 25;
+            this.lbEspecialidad.Text = "Especialidad";
+            // 
+            // lblFechaNac
+            // 
+            this.lblFechaNac.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNac.Location = new System.Drawing.Point(11, 170);
+            this.lblFechaNac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaNac.Name = "lblFechaNac";
+            this.lblFechaNac.Size = new System.Drawing.Size(180, 28);
+            this.lblFechaNac.TabIndex = 37;
+            this.lblFechaNac.Text = "Fecha de nacimiento";
+            // 
+            // txtFechaNac
+            // 
+            this.txtFechaNac.Enabled = false;
+            this.txtFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaNac.Location = new System.Drawing.Point(199, 168);
+            this.txtFechaNac.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFechaNac.Name = "txtFechaNac";
+            this.txtFechaNac.ReadOnly = true;
+            this.txtFechaNac.Size = new System.Drawing.Size(276, 29);
+            this.txtFechaNac.TabIndex = 38;
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(11, 213);
+            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(159, 28);
+            this.lblDireccion.TabIndex = 33;
+            this.lblDireccion.Text = "Direccion";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Enabled = false;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(199, 213);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.ReadOnly = true;
+            this.txtDireccion.Size = new System.Drawing.Size(450, 29);
+            this.txtDireccion.TabIndex = 34;
+            // 
+            // txtEspecialidad
+            // 
+            this.txtEspecialidad.Enabled = false;
+            this.txtEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEspecialidad.Location = new System.Drawing.Point(199, 120);
+            this.txtEspecialidad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEspecialidad.Name = "txtEspecialidad";
+            this.txtEspecialidad.ReadOnly = true;
+            this.txtEspecialidad.Size = new System.Drawing.Size(276, 29);
+            this.txtEspecialidad.TabIndex = 35;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(199, 77);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ReadOnly = true;
+            this.txtCodigo.Size = new System.Drawing.Size(144, 29);
+            this.txtCodigo.TabIndex = 22;
+            // 
             // tabFichaAtencion
             // 
             this.tabFichaAtencion.Controls.Add(this.pnlScrollFicha);
             this.tabFichaAtencion.Location = new System.Drawing.Point(4, 30);
-            this.tabFichaAtencion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabFichaAtencion.Margin = new System.Windows.Forms.Padding(4);
             this.tabFichaAtencion.Name = "tabFichaAtencion";
-            this.tabFichaAtencion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabFichaAtencion.Padding = new System.Windows.Forms.Padding(4);
             this.tabFichaAtencion.Size = new System.Drawing.Size(1059, 424);
             this.tabFichaAtencion.TabIndex = 1;
             this.tabFichaAtencion.Text = "Ficha de atencion";
@@ -135,15 +263,36 @@ namespace ProyectoOOIA.Ventanas
             this.pnlScrollFicha.Controls.Add(this.txtMotivo);
             this.pnlScrollFicha.Controls.Add(this.label5);
             this.pnlScrollFicha.Location = new System.Drawing.Point(4, 4);
-            this.pnlScrollFicha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlScrollFicha.Margin = new System.Windows.Forms.Padding(4);
             this.pnlScrollFicha.Name = "pnlScrollFicha";
             this.pnlScrollFicha.Size = new System.Drawing.Size(1052, 422);
             this.pnlScrollFicha.TabIndex = 26;
             // 
+            // cbCodigoAtencion
+            // 
+            this.cbCodigoAtencion.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCodigoAtencion.FormattingEnabled = true;
+            this.cbCodigoAtencion.Location = new System.Drawing.Point(12, 84);
+            this.cbCodigoAtencion.Name = "cbCodigoAtencion";
+            this.cbCodigoAtencion.Size = new System.Drawing.Size(502, 29);
+            this.cbCodigoAtencion.TabIndex = 60;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(228)))), ((int)(((byte)(75)))));
+            this.btnGuardar.Location = new System.Drawing.Point(793, 28);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(114, 34);
+            this.btnGuardar.TabIndex = 59;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // txtCompromiso
             // 
+            this.txtCompromiso.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCompromiso.Location = new System.Drawing.Point(7, 409);
-            this.txtCompromiso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompromiso.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompromiso.Multiline = true;
             this.txtCompromiso.Name = "txtCompromiso";
             this.txtCompromiso.ReadOnly = true;
@@ -221,8 +370,9 @@ namespace ProyectoOOIA.Ventanas
             // txtMotivo
             // 
             this.txtMotivo.Enabled = false;
+            this.txtMotivo.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMotivo.Location = new System.Drawing.Point(12, 187);
-            this.txtMotivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMotivo.Margin = new System.Windows.Forms.Padding(4);
             this.txtMotivo.Multiline = true;
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.ReadOnly = true;
@@ -250,7 +400,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabPage4.Controls.Add(this.lbNombre_eventos_cita);
             this.tabPage4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1059, 424);
             this.tabPage4.TabIndex = 3;
@@ -261,7 +411,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.btnDetEventosPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetEventosPrev.Location = new System.Drawing.Point(604, 230);
-            this.btnDetEventosPrev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDetEventosPrev.Margin = new System.Windows.Forms.Padding(4);
             this.btnDetEventosPrev.Name = "btnDetEventosPrev";
             this.btnDetEventosPrev.Size = new System.Drawing.Size(100, 28);
             this.btnDetEventosPrev.TabIndex = 54;
@@ -273,7 +423,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.btnDetCitasPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetCitasPrev.Location = new System.Drawing.Point(604, 47);
-            this.btnDetCitasPrev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDetCitasPrev.Margin = new System.Windows.Forms.Padding(4);
             this.btnDetCitasPrev.Name = "btnDetCitasPrev";
             this.btnDetCitasPrev.Size = new System.Drawing.Size(100, 28);
             this.btnDetCitasPrev.TabIndex = 53;
@@ -286,24 +436,25 @@ namespace ProyectoOOIA.Ventanas
             this.dvgEventosPasados.AllowUserToAddRows = false;
             this.dvgEventosPasados.AllowUserToDeleteRows = false;
             this.dvgEventosPasados.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgEventosPasados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgEventosPasados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dvgEventosPasados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgEventosPasados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
             this.Nombre});
             this.dvgEventosPasados.EnableHeadersVisualStyles = false;
             this.dvgEventosPasados.Location = new System.Drawing.Point(11, 266);
-            this.dvgEventosPasados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dvgEventosPasados.Margin = new System.Windows.Forms.Padding(4);
             this.dvgEventosPasados.Name = "dvgEventosPasados";
             this.dvgEventosPasados.ReadOnly = true;
             this.dvgEventosPasados.RowHeadersWidth = 51;
+            this.dvgEventosPasados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgEventosPasados.Size = new System.Drawing.Size(693, 148);
             this.dvgEventosPasados.TabIndex = 52;
             this.dvgEventosPasados.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgEventosPasados_CellFormatting);
@@ -329,27 +480,44 @@ namespace ProyectoOOIA.Ventanas
             this.dvgCitasPasadas.AllowUserToAddRows = false;
             this.dvgCitasPasadas.AllowUserToDeleteRows = false;
             this.dvgCitasPasadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgCitasPasadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgCitasPasadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dvgCitasPasadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgCitasPasadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FechaCita,
             this.MiembroOOIA});
             this.dvgCitasPasadas.EnableHeadersVisualStyles = false;
             this.dvgCitasPasadas.Location = new System.Drawing.Point(11, 82);
-            this.dvgCitasPasadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dvgCitasPasadas.Margin = new System.Windows.Forms.Padding(4);
             this.dvgCitasPasadas.Name = "dvgCitasPasadas";
             this.dvgCitasPasadas.ReadOnly = true;
             this.dvgCitasPasadas.RowHeadersWidth = 51;
+            this.dvgCitasPasadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgCitasPasadas.Size = new System.Drawing.Size(693, 140);
             this.dvgCitasPasadas.TabIndex = 51;
             this.dvgCitasPasadas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgCitasPasadas_CellFormatting);
+            // 
+            // FechaCita
+            // 
+            this.FechaCita.HeaderText = "Fecha de la cita";
+            this.FechaCita.MinimumWidth = 6;
+            this.FechaCita.Name = "FechaCita";
+            this.FechaCita.ReadOnly = true;
+            this.FechaCita.Width = 180;
+            // 
+            // MiembroOOIA
+            // 
+            this.MiembroOOIA.HeaderText = "Tutor/Psicólogo";
+            this.MiembroOOIA.MinimumWidth = 6;
+            this.MiembroOOIA.Name = "MiembroOOIA";
+            this.MiembroOOIA.ReadOnly = true;
+            this.MiembroOOIA.Width = 285;
             // 
             // lblEventosPrev
             // 
@@ -400,172 +568,10 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.Controls.Add(this.btnBack);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1067, 87);
             this.pnlHeader.TabIndex = 10;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(199, 77);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.ReadOnly = true;
-            this.txtCodigo.Size = new System.Drawing.Size(144, 29);
-            this.txtCodigo.TabIndex = 22;
-            // 
-            // txtEspecialidad
-            // 
-            this.txtEspecialidad.Enabled = false;
-            this.txtEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEspecialidad.Location = new System.Drawing.Point(199, 120);
-            this.txtEspecialidad.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEspecialidad.Name = "txtEspecialidad";
-            this.txtEspecialidad.ReadOnly = true;
-            this.txtEspecialidad.Size = new System.Drawing.Size(276, 29);
-            this.txtEspecialidad.TabIndex = 35;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Enabled = false;
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(199, 213);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.ReadOnly = true;
-            this.txtDireccion.Size = new System.Drawing.Size(450, 29);
-            this.txtDireccion.TabIndex = 34;
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(11, 213);
-            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(159, 28);
-            this.lblDireccion.TabIndex = 33;
-            this.lblDireccion.Text = "Direccion";
-            // 
-            // txtFechaNac
-            // 
-            this.txtFechaNac.Enabled = false;
-            this.txtFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechaNac.Location = new System.Drawing.Point(199, 168);
-            this.txtFechaNac.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFechaNac.Name = "txtFechaNac";
-            this.txtFechaNac.ReadOnly = true;
-            this.txtFechaNac.Size = new System.Drawing.Size(276, 29);
-            this.txtFechaNac.TabIndex = 38;
-            // 
-            // lblFechaNac
-            // 
-            this.lblFechaNac.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNac.Location = new System.Drawing.Point(11, 170);
-            this.lblFechaNac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(180, 28);
-            this.lblFechaNac.TabIndex = 37;
-            this.lblFechaNac.Text = "Fecha de nacimiento";
-            // 
-            // lbEspecialidad
-            // 
-            this.lbEspecialidad.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.lbEspecialidad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEspecialidad.Location = new System.Drawing.Point(11, 122);
-            this.lbEspecialidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbEspecialidad.Name = "lbEspecialidad";
-            this.lbEspecialidad.Size = new System.Drawing.Size(129, 28);
-            this.lbEspecialidad.TabIndex = 25;
-            this.lbEspecialidad.Text = "Especialidad";
-            // 
-            // pImageAlumno
-            // 
-            this.pImageAlumno.Image = global::ProyectoOOIA.Properties.Resources.Estudiante;
-            this.pImageAlumno.Location = new System.Drawing.Point(687, 39);
-            this.pImageAlumno.Margin = new System.Windows.Forms.Padding(4);
-            this.pImageAlumno.Name = "pImageAlumno";
-            this.pImageAlumno.Size = new System.Drawing.Size(312, 272);
-            this.pImageAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pImageAlumno.TabIndex = 31;
-            this.pImageAlumno.TabStop = false;
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(11, 79);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(180, 28);
-            this.lblCodigo.TabIndex = 21;
-            this.lblCodigo.Text = "Codigo del alumno";
-            // 
-            // lbNombreAlumno
-            // 
-            this.lbNombreAlumno.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombreAlumno.Location = new System.Drawing.Point(9, 16);
-            this.lbNombreAlumno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbNombreAlumno.Name = "lbNombreAlumno";
-            this.lbNombreAlumno.Size = new System.Drawing.Size(392, 47);
-            this.lbNombreAlumno.TabIndex = 19;
-            this.lbNombreAlumno.Text = "Huertas Hortez, Jose Luis";
-            // 
-            // tabDatosAlumnos
-            // 
-            this.tabDatosAlumnos.Controls.Add(this.lbNombreAlumno);
-            this.tabDatosAlumnos.Controls.Add(this.lblCodigo);
-            this.tabDatosAlumnos.Controls.Add(this.pImageAlumno);
-            this.tabDatosAlumnos.Controls.Add(this.lbEspecialidad);
-            this.tabDatosAlumnos.Controls.Add(this.lblFechaNac);
-            this.tabDatosAlumnos.Controls.Add(this.txtFechaNac);
-            this.tabDatosAlumnos.Controls.Add(this.lblDireccion);
-            this.tabDatosAlumnos.Controls.Add(this.txtDireccion);
-            this.tabDatosAlumnos.Controls.Add(this.txtEspecialidad);
-            this.tabDatosAlumnos.Controls.Add(this.txtCodigo);
-            this.tabDatosAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabDatosAlumnos.Location = new System.Drawing.Point(4, 30);
-            this.tabDatosAlumnos.Margin = new System.Windows.Forms.Padding(4);
-            this.tabDatosAlumnos.Name = "tabDatosAlumnos";
-            this.tabDatosAlumnos.Padding = new System.Windows.Forms.Padding(4);
-            this.tabDatosAlumnos.Size = new System.Drawing.Size(1059, 424);
-            this.tabDatosAlumnos.TabIndex = 0;
-            this.tabDatosAlumnos.Text = "Datos Alumno";
-            this.tabDatosAlumnos.UseVisualStyleBackColor = true;
-            // 
-            // FechaCita
-            // 
-            this.FechaCita.HeaderText = "Fecha de la cita";
-            this.FechaCita.MinimumWidth = 6;
-            this.FechaCita.Name = "FechaCita";
-            this.FechaCita.ReadOnly = true;
-            this.FechaCita.Width = 180;
-            // 
-            // MiembroOOIA
-            // 
-            this.MiembroOOIA.HeaderText = "Tutor/Psicólogo";
-            this.MiembroOOIA.MinimumWidth = 6;
-            this.MiembroOOIA.Name = "MiembroOOIA";
-            this.MiembroOOIA.ReadOnly = true;
-            this.MiembroOOIA.Width = 285;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(793, 28);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(114, 34);
-            this.btnGuardar.TabIndex = 59;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // cbCodigoAtencion
-            // 
-            this.cbCodigoAtencion.FormattingEnabled = true;
-            this.cbCodigoAtencion.Location = new System.Drawing.Point(12, 84);
-            this.cbCodigoAtencion.Name = "cbCodigoAtencion";
-            this.cbCodigoAtencion.Size = new System.Drawing.Size(502, 29);
-            this.cbCodigoAtencion.TabIndex = 60;
             // 
             // frmDetalleCitaAsesor
             // 
@@ -575,12 +581,15 @@ namespace ProyectoOOIA.Ventanas
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.tabDetalleCita);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.Name = "frmDetalleCitaAsesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ficha de datos alumno";
             this.tabDetalleCita.ResumeLayout(false);
+            this.tabDatosAlumnos.ResumeLayout(false);
+            this.tabDatosAlumnos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pImageAlumno)).EndInit();
             this.tabFichaAtencion.ResumeLayout(false);
             this.pnlScrollFicha.ResumeLayout(false);
             this.pnlScrollFicha.PerformLayout();
@@ -589,9 +598,6 @@ namespace ProyectoOOIA.Ventanas
             ((System.ComponentModel.ISupportInitialize)(this.dvgCitasPasadas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.pnlHeader.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pImageAlumno)).EndInit();
-            this.tabDatosAlumnos.ResumeLayout(false);
-            this.tabDatosAlumnos.PerformLayout();
             this.ResumeLayout(false);
 
         }

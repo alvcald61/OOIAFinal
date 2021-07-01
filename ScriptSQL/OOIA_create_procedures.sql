@@ -872,7 +872,7 @@ BEGIN
 	update cita set activo = 0 where id_cita = _id_cita;
 end$
 
-
+drop procedure if exists LISTAR_CITA_PENDIENTE;
 delimiter $
 create procedure LISTAR_CITA_PENDIENTE(
 	in _id_alumno int
@@ -887,10 +887,10 @@ begin
     inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
     	where c.fid_alumno=_id_alumno
-	and c.fecha >= CURDATE() and c.activo = 1;
+	and c.fecha > CURDATE() or (c.fecha=CURDATE() and h.hora_inicio > CURTIME())  and c.activo = 1;
 end$
 
-
+drop procedure if exists LISTAR_CITA_HISTORICO;
 delimiter $
 create procedure LISTAR_CITA_HISTORICO(
 	in _id_alumno int
@@ -905,7 +905,7 @@ begin
     inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
     	where c.fid_alumno=_id_alumno
-        and c.fecha < CURDATE() and c.activo = 1;
+        and c.fecha < CURDATE()  or (c.fecha=CURDATE() and h.hora_fin < CURTIME()) and c.activo = 1;
 end$
 
 delimiter $
@@ -1376,11 +1376,12 @@ end$
 drop procedure if exists listar_proximas_cita_profesor;
 delimiter $
 create procedure listar_proximas_cita_profesor(
-in _id_asesor int
+in _id_asesor int,
+in _nombre_alumno varchar(150)
 )
 begin
-	select c.id_cita, c.fid_alumno, p.nombre as nombre_alumno, p.direccion, p.fecha_nacimiento, a.codigo,
-    p.correo,e.nombre as especialidad,c.fecha, c.motivo, c.compromiso, c.asistio, 
+	select c.id_cita, c.fid_alumno,c.tipo_asesor, c.fid_asesor, p.nombre as nombre_alumno, p.direccion, p.fecha_nacimiento, a.codigo,
+    p.correo,e.nombre as especialidad,c.fecha, c.motivo, c.compromiso, c.asistio, c.activo,
 	h.id_horario, h.dia, h.hora_inicio, h.hora_fin,
 	ca.id_codigo_atencion, ca.codigo, ca.descripcion
     	from cita c 
@@ -1390,7 +1391,7 @@ begin
     inner join miembro_pucp mp on mp.id_miembro_pucp = a.fid_miembro_pucp
     inner join persona p on mp.fid_persona= p.id_persona
     	inner join codigo_atencion ca on c.fid_atencion = ca.id_codigo_atencion
-    	where c.fid_asesor=_id_asesor;     
+    	where c.fid_asesor=_id_asesor and (p.nombre LIKE CONCAT('%',_nombre_alumno,'%'));     
         
 end$
 

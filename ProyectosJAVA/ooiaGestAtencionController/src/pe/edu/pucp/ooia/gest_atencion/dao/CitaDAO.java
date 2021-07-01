@@ -16,5 +16,5 @@ public interface CitaDAO {
     public int modificar(Cita cita);
     public int modificarLinks(int id_cita,String host,String user);
     public int eliminar(int id_ita);
-    public ArrayList<Cita> listar_proximas_cita_profesor(int id_profesor);
+    public ArrayList<Cita> listar_proximas_cita_profesor(int id_profesor, String nombre_alumno);
 }

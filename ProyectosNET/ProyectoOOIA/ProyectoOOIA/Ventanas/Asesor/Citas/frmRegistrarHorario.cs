@@ -26,8 +26,9 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             InitializeComponent();
             this.asesor = asesor;
             this.estado = Estado.Inicial;
-            cambiarEstado();
             createButtons();
+            cambiarEstado();
+            
 
             daoHorario = new GestionAtencionWS.GestionAtencionWSClient();
             loadHorario();

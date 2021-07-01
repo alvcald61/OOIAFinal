@@ -508,7 +508,7 @@ namespace ProyectoOOIA.GestionAtencionWS {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
     public partial class cita : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private bool activoField;
+        private int activoField;
         
         private alumno alumnoField;
         
@@ -538,7 +538,7 @@ namespace ProyectoOOIA.GestionAtencionWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
+        public int activo {
             get {
                 return this.activoField;
             }
@@ -1928,11 +1928,16 @@ namespace ProyectoOOIA.GestionAtencionWS {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int id_profesor;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre_alumno;
+        
         public listarCitasProfesorRequest() {
         }
         
-        public listarCitasProfesorRequest(int id_profesor) {
+        public listarCitasProfesorRequest(int id_profesor, string nombre_alumno) {
             this.id_profesor = id_profesor;
+            this.nombre_alumno = nombre_alumno;
         }
     }
     
@@ -2490,9 +2495,10 @@ namespace ProyectoOOIA.GestionAtencionWS {
             return base.Channel.listarCitasProfesor(request);
         }
         
-        public ProyectoOOIA.GestionAtencionWS.cita[] listarCitasProfesor(int id_profesor) {
+        public ProyectoOOIA.GestionAtencionWS.cita[] listarCitasProfesor(int id_profesor, string nombre_alumno) {
             ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest();
             inValue.id_profesor = id_profesor;
+            inValue.nombre_alumno = nombre_alumno;
             ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitasProfesor(inValue);
             return retVal.@return;
         }
@@ -2502,9 +2508,10 @@ namespace ProyectoOOIA.GestionAtencionWS {
             return base.Channel.listarCitasProfesorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse> listarCitasProfesorAsync(int id_profesor) {
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse> listarCitasProfesorAsync(int id_profesor, string nombre_alumno) {
             ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest();
             inValue.id_profesor = id_profesor;
+            inValue.nombre_alumno = nombre_alumno;
             return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitasProfesorAsync(inValue);
         }
         

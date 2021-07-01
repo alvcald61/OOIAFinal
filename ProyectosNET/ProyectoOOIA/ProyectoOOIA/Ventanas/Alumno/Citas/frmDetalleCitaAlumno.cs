@@ -33,11 +33,11 @@ namespace ProyectoOOIA.Ventanas
             txtHoraFin.Text = cita.horario.horaFin.ToString("hh:mm");
             if(cita.asistio == 0)
             {
-                rbAsistio.Checked = true;
+                rbNoAsistio.Checked = true;
             }
             else
             {
-                rbNoAsistio.Checked = true;
+                rbAsistio.Checked = true;
             }
 
         }
