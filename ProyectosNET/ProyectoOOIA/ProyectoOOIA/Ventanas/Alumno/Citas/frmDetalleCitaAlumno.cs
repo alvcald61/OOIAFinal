@@ -21,8 +21,7 @@ namespace ProyectoOOIA.Ventanas
             txtMotivoConsulta.ReadOnly = true;
             txtHoraInicio.ReadOnly = true;
             txtOpinion.ReadOnly = true;
-            rbAsistio.Enabled = false;
-            rbNoAsistio.Enabled = false;
+            txtValoracion.ReadOnly = true;
             txtHoraFin.ReadOnly = true;
             dtpFecha.Enabled = false;
             dtpFecha.Value = cita.fecha;
@@ -31,14 +30,7 @@ namespace ProyectoOOIA.Ventanas
             txtCompromiso.Text = cita.compromiso;
             txtHoraInicio.Text = cita.horario.horaInicio.ToString("hh:mm");
             txtHoraFin.Text = cita.horario.horaFin.ToString("hh:mm");
-            if(cita.asistio == 0)
-            {
-                rbNoAsistio.Checked = true;
-            }
-            else
-            {
-                rbAsistio.Checked = true;
-            }
+            
 
         }
 
@@ -49,10 +41,22 @@ namespace ProyectoOOIA.Ventanas
             BindingList<GestionAtencionWS.encuesta>
                opiniones = new BindingList<GestionAtencionWS.encuesta>
                (aux.ToList());
-
+           
             foreach(GestionAtencionWS.encuesta e in opiniones){
-                if(e.fid_cita == cita.id_cita)
+                if (e.fid_cita == cita.id_cita)
+                {
+                    String descripcion_puntaje="";
                     txtOpinion.Text = e.descripcion;
+
+                    if (e.puntaje == 1) descripcion_puntaje = " Pésimo";
+                    if (e.puntaje == 2) descripcion_puntaje = " Malo";
+                    if (e.puntaje == 3) descripcion_puntaje = " Normal";
+                    if (e.puntaje == 4) descripcion_puntaje = " Bueno";
+                    if (e.puntaje == 5) descripcion_puntaje = " Excelente";
+
+                    txtValoracion.Text = e.puntaje.ToString() + descripcion_puntaje;
+                }
+                    
             }
             
         }
