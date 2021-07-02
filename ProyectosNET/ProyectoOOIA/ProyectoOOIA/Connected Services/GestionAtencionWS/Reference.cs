@@ -16,6 +16,15 @@ namespace ProyectoOOIA.GestionAtencionWS {
     public interface GestionAtencionWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/obtener_estadoRequest", ReplyAction="http://services/GestionAtencionWS/obtener_estadoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.obtener_estadoResponse obtener_estado(ProyectoOOIA.GestionAtencionWS.obtener_estadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/obtener_estadoRequest", ReplyAction="http://services/GestionAtencionWS/obtener_estadoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.obtener_estadoResponse> obtener_estadoAsync(ProyectoOOIA.GestionAtencionWS.obtener_estadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarEncuestaRequest", ReplyAction="http://services/GestionAtencionWS/insertarEncuestaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -244,6 +253,52 @@ namespace ProyectoOOIA.GestionAtencionWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitaHistoricoRequest", ReplyAction="http://services/GestionAtencionWS/listarCitaHistoricoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse> listarCitaHistoricoAsync(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtener_estado", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class obtener_estadoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_evento;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_alumno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int extra;
+        
+        public obtener_estadoRequest() {
+        }
+        
+        public obtener_estadoRequest(int id_evento, int id_alumno, int extra) {
+            this.id_evento = id_evento;
+            this.id_alumno = id_alumno;
+            this.extra = extra;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtener_estadoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class obtener_estadoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public obtener_estadoResponse() {
+        }
+        
+        public obtener_estadoResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
@@ -2076,6 +2131,33 @@ namespace ProyectoOOIA.GestionAtencionWS {
         
         public GestionAtencionWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.obtener_estadoResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.obtener_estado(ProyectoOOIA.GestionAtencionWS.obtener_estadoRequest request) {
+            return base.Channel.obtener_estado(request);
+        }
+        
+        public int obtener_estado(int id_evento, int id_alumno, int extra) {
+            ProyectoOOIA.GestionAtencionWS.obtener_estadoRequest inValue = new ProyectoOOIA.GestionAtencionWS.obtener_estadoRequest();
+            inValue.id_evento = id_evento;
+            inValue.id_alumno = id_alumno;
+            inValue.extra = extra;
+            ProyectoOOIA.GestionAtencionWS.obtener_estadoResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).obtener_estado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.obtener_estadoResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.obtener_estadoAsync(ProyectoOOIA.GestionAtencionWS.obtener_estadoRequest request) {
+            return base.Channel.obtener_estadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.obtener_estadoResponse> obtener_estadoAsync(int id_evento, int id_alumno, int extra) {
+            ProyectoOOIA.GestionAtencionWS.obtener_estadoRequest inValue = new ProyectoOOIA.GestionAtencionWS.obtener_estadoRequest();
+            inValue.id_evento = id_evento;
+            inValue.id_alumno = id_alumno;
+            inValue.extra = extra;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).obtener_estadoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="P6A2tAGQtw8l7lkFTkjHFPQVUGFlKBWkGRJPdt44SlE=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="XSBFfJlYSmySL5q/ML4XHGU6MHYRcKdrhD93F9rfIcA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="GestionHumanaWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="GestionHumanaWSPort" contract="GestionHumanaWS.GestionHumanaWS" bindingType="basicHttpBinding" address="http://localhost:8080/AuxiliarWS/GestionHumanaWS" bindingConfiguration="GestionHumanaWSPortBinding">
+    <endpoint name="GestionHumanaWSPort" contract="GestionHumanaWS.GestionHumanaWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/AuxiliarWS/GestionHumanaWS" bindingConfiguration="GestionHumanaWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/AuxiliarWS/GestionHumanaWS</serializedValue>
+          <serializedValue>http://54.157.187.65:8080/AuxiliarWS/GestionHumanaWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://54.157.187.65:8080/AuxiliarWS/GestionAtencionWS?xsd=1" namespace="http://services/" />
     </xsd:schema>
   </types>
+  <message name="obtener_estado">
+    <part name="parameters" element="tns:obtener_estado" />
+  </message>
+  <message name="obtener_estadoResponse">
+    <part name="parameters" element="tns:obtener_estadoResponse" />
+  </message>
   <message name="insertarEncuesta">
     <part name="parameters" element="tns:insertarEncuesta" />
   </message>
@@ -144,6 +150,10 @@
     <part name="parameters" element="tns:listarCitaHistoricoResponse" />
   </message>
   <portType name="GestionAtencionWS">
+    <operation name="obtener_estado">
+      <input wsam:Action="http://services/GestionAtencionWS/obtener_estadoRequest" message="tns:obtener_estado" />
+      <output wsam:Action="http://services/GestionAtencionWS/obtener_estadoResponse" message="tns:obtener_estadoResponse" />
+    </operation>
     <operation name="insertarEncuesta">
       <input wsam:Action="http://services/GestionAtencionWS/insertarEncuestaRequest" message="tns:insertarEncuesta" />
       <output wsam:Action="http://services/GestionAtencionWS/insertarEncuestaResponse" message="tns:insertarEncuestaResponse" />
@@ -239,6 +249,15 @@
   </portType>
   <binding name="GestionAtencionWSPortBinding" type="tns:GestionAtencionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtener_estado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="insertarEncuesta">
       <soap:operation soapAction="" />
       <input>

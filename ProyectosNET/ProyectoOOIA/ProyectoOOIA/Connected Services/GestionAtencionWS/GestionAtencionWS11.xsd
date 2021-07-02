@@ -46,6 +46,8 @@
   <xs:element name="modificarHorarioAsesorSinID" type="tns:modificarHorarioAsesorSinID" />
   <xs:element name="modificarHorarioAsesorSinIDResponse" type="tns:modificarHorarioAsesorSinIDResponse" />
   <xs:element name="modificarHorarioResponse" type="tns:modificarHorarioResponse" />
+  <xs:element name="obtener_estado" type="tns:obtener_estado" />
+  <xs:element name="obtener_estadoResponse" type="tns:obtener_estadoResponse" />
   <xs:complexType name="insertarEncuesta">
     <xs:sequence>
       <xs:element minOccurs="0" name="encuesta" type="tns:encuesta" />
@@ -350,6 +352,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarHorarioAsesorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtener_estado">
+    <xs:sequence>
+      <xs:element name="id_evento" type="xs:int" />
+      <xs:element name="id_alumno" type="xs:int" />
+      <xs:element name="extra" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtener_estadoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
