@@ -39,9 +39,6 @@ namespace ProyectoOOIA.Ventanas
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.pnlLeft = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pbPUCP = new System.Windows.Forms.PictureBox();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
@@ -67,15 +64,15 @@ namespace ProyectoOOIA.Ventanas
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Size = new System.Drawing.Size(618, 523);
             this.pnlRight.TabIndex = 8;
-            this.pnlRight.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.pnlRight_PreviewKeyDown);
             // 
             // lblPassIncorrecto
             // 
             this.lblPassIncorrecto.AutoSize = true;
+            this.lblPassIncorrecto.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassIncorrecto.ForeColor = System.Drawing.Color.Salmon;
-            this.lblPassIncorrecto.Location = new System.Drawing.Point(254, 325);
+            this.lblPassIncorrecto.Location = new System.Drawing.Point(280, 298);
             this.lblPassIncorrecto.Name = "lblPassIncorrecto";
-            this.lblPassIncorrecto.Size = new System.Drawing.Size(112, 13);
+            this.lblPassIncorrecto.Size = new System.Drawing.Size(156, 23);
             this.lblPassIncorrecto.TabIndex = 7;
             this.lblPassIncorrecto.Text = "Contraseña Incorrecta";
             this.lblPassIncorrecto.Visible = false;
@@ -85,7 +82,7 @@ namespace ProyectoOOIA.Ventanas
             this.lblOOIA.AutoSize = true;
             this.lblOOIA.Font = new System.Drawing.Font("Leelawadee", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOOIA.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblOOIA.Location = new System.Drawing.Point(171, 32);
+            this.lblOOIA.Location = new System.Drawing.Point(171, 44);
             this.lblOOIA.Name = "lblOOIA";
             this.lblOOIA.Size = new System.Drawing.Size(281, 115);
             this.lblOOIA.TabIndex = 0;
@@ -96,11 +93,12 @@ namespace ProyectoOOIA.Ventanas
             this.linkContraseña.ActiveLinkColor = System.Drawing.Color.DarkGray;
             this.linkContraseña.AutoSize = true;
             this.linkContraseña.DisabledLinkColor = System.Drawing.Color.DarkGray;
+            this.linkContraseña.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkContraseña.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkContraseña.LinkColor = System.Drawing.Color.WhiteSmoke;
-            this.linkContraseña.Location = new System.Drawing.Point(235, 418);
+            this.linkContraseña.Location = new System.Drawing.Point(233, 406);
             this.linkContraseña.Name = "linkContraseña";
-            this.linkContraseña.Size = new System.Drawing.Size(131, 13);
+            this.linkContraseña.Size = new System.Drawing.Size(174, 23);
             this.linkContraseña.TabIndex = 6;
             this.linkContraseña.TabStop = true;
             this.linkContraseña.Text = "¿Olvidaste tu contraseña?";
@@ -110,57 +108,60 @@ namespace ProyectoOOIA.Ventanas
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblContraseña.Location = new System.Drawing.Point(129, 269);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(96, 20);
+            this.lblContraseña.Size = new System.Drawing.Size(102, 23);
             this.lblContraseña.TabIndex = 2;
             this.lblContraseña.Text = "Contraseña:";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblUsuario.Location = new System.Drawing.Point(129, 197);
+            this.lblUsuario.Location = new System.Drawing.Point(129, 204);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(68, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(73, 23);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario:";
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(269, 269);
+            this.txtContraseña.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Location = new System.Drawing.Point(269, 266);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(183, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(183, 26);
             this.txtContraseña.TabIndex = 4;
             this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 
+            this.txtUsuario.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(269, 199);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(183, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(183, 26);
             this.txtUsuario.TabIndex = 3;
             // 
             // btnIngresar
             // 
+            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(106)))), ((int)(((byte)(145)))));
             this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnIngresar.Location = new System.Drawing.Point(256, 357);
+            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngresar.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.ForeColor = System.Drawing.Color.White;
+            this.btnIngresar.Location = new System.Drawing.Point(253, 357);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(99, 36);
+            this.btnIngresar.Size = new System.Drawing.Size(133, 36);
             this.btnIngresar.TabIndex = 5;
             this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // pnlLeft
             // 
-            this.pnlLeft.Controls.Add(this.button3);
-            this.pnlLeft.Controls.Add(this.button2);
-            this.pnlLeft.Controls.Add(this.button1);
             this.pnlLeft.Controls.Add(this.pbPUCP);
             this.pnlLeft.Controls.Add(this.pbImagen);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
@@ -169,49 +170,10 @@ namespace ProyectoOOIA.Ventanas
             this.pnlLeft.Size = new System.Drawing.Size(323, 523);
             this.pnlLeft.TabIndex = 0;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::ProyectoOOIA.Properties.Resources.telephone;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(70, 481);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(23, 23);
-            this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::ProyectoOOIA.Properties.Resources.mobile_phone;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(41, 481);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(23, 23);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::ProyectoOOIA.Properties.Resources.mail;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(12, 481);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 23);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // pbPUCP
             // 
             this.pbPUCP.Image = global::ProyectoOOIA.Properties.Resources.PUCP_logo;
-            this.pbPUCP.Location = new System.Drawing.Point(66, 24);
+            this.pbPUCP.Location = new System.Drawing.Point(28, 24);
             this.pbPUCP.Name = "pbPUCP";
             this.pbPUCP.Size = new System.Drawing.Size(180, 88);
             this.pbPUCP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -222,9 +184,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.pbImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbImagen.Image = global::ProyectoOOIA.Properties.Resources.EEGGCC;
-            this.pbImagen.Location = new System.Drawing.Point(53, 160);
+            this.pbImagen.Location = new System.Drawing.Point(28, 160);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(207, 211);
+            this.pbImagen.Size = new System.Drawing.Size(250, 200);
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagen.TabIndex = 0;
             this.pbImagen.TabStop = false;
@@ -253,8 +215,6 @@ namespace ProyectoOOIA.Ventanas
             this.Name = "frmInicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de Sesion";
-            this.Load += new System.EventHandler(this.frmInicioSesion_Load);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmInicioSesion_KeyPress);
             this.pnlRight.ResumeLayout(false);
             this.pnlRight.PerformLayout();
             this.pnlLeft.ResumeLayout(false);
@@ -283,8 +243,5 @@ namespace ProyectoOOIA.Ventanas
 
 
         private System.Windows.Forms.Label lblPassIncorrecto;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
     }
 }

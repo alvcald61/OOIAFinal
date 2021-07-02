@@ -136,275 +136,406 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="TipoUsuario.cs" />
-    <Compile Include="Componentes\Card.cs" />
-    <Compile Include="Componentes\Card.Designer.cs">
-      <DependentUpon>Card.cs</DependentUpon>
+    <Compile Include="Componentes\CardEvento.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Componentes\CardEvento.cs" />
     <Compile Include="Componentes\CardEvento.Designer.cs">
       <DependentUpon>CardEvento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Componentes\Horario.cs" />
+    <Compile Include="Componentes\Horario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Componentes\Horario.Designer.cs">
       <DependentUpon>Horario.cs</DependentUpon>
     </Compile>
     <Compile Include="Estado.cs" />
-    <Compile Include="Componentes\OvalPictureBox.cs" />
-    <Compile Include="Componentes\toggle.cs" />
+    <Compile Include="Componentes\OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\toggle.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Componentes\toggle.Designer.cs" />
-    <Compile Include="Ventanas\Alumno\Citas\ucAsesor.cs" />
+    <Compile Include="Ventanas\Alumno\Citas\ucAsesor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Citas\ucAsesor.Designer.cs">
       <DependentUpon>ucAsesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.cs" />
+    <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.Designer.cs">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmAgregarOpinionEvento.cs" />
+    <Compile Include="Ventanas\Alumno\Eventos\frmAgregarOpinionEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Eventos\frmAgregarOpinionEvento.Designer.cs">
       <DependentUpon>frmAgregarOpinionEvento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Asesor\Citas\frmDescargarReporteOpinion.cs" />
+    <Compile Include="Ventanas\Asesor\Citas\frmDescargarReporteOpinion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Asesor\Citas\frmDescargarReporteOpinion.Designer.cs">
       <DependentUpon>frmDescargarReporteOpinion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Asesor\Citas\frmRegistrarHorario.cs" />
+    <Compile Include="Ventanas\Asesor\Citas\frmRegistrarHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Asesor\Citas\frmRegistrarHorario.Designer.cs">
       <DependentUpon>frmRegistrarHorario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Eventos\frmDescargarReporteEvento.cs" />
+    <Compile Include="Ventanas\Coordinador\Eventos\frmDescargarReporteEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Eventos\frmDescargarReporteEvento.Designer.cs">
       <DependentUpon>frmDescargarReporteEvento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Eventos\frmEliminarEventoOOIA.cs" />
+    <Compile Include="Ventanas\Coordinador\Eventos\frmEliminarEventoOOIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Eventos\frmEliminarEventoOOIA.Designer.cs">
       <DependentUpon>frmEliminarEventoOOIA.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Eventos\frmGestionEventosOOIA.cs" />
+    <Compile Include="Ventanas\Coordinador\Eventos\frmGestionEventosOOIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Eventos\frmGestionEventosOOIA.Designer.cs">
       <DependentUpon>frmGestionEventosOOIA.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Eventos\frmMostrarPonentes.cs" />
+    <Compile Include="Ventanas\Coordinador\Eventos\frmMostrarPonentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Eventos\frmMostrarPonentes.Designer.cs">
       <DependentUpon>frmMostrarPonentes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Eventos\frmRegistroAsistencia.cs" />
+    <Compile Include="Ventanas\Coordinador\Eventos\frmRegistroAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Eventos\frmRegistroAsistencia.Designer.cs">
       <DependentUpon>frmRegistroAsistencia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\frmGestionarDatos.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\frmGestionarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\frmGestionarDatos.Designer.cs">
       <DependentUpon>frmGestionarDatos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion Evento\frmGestionarCategoria.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion Evento\frmGestionarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion Evento\frmGestionarCategoria.Designer.cs">
       <DependentUpon>frmGestionarCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmBuscarCursosLlevados.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmBuscarCursosLlevados.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmBuscarCursosLlevados.Designer.cs">
       <DependentUpon>frmBuscarCursosLlevados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarCursos.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarCursos.Designer.cs">
       <DependentUpon>frmCargarCursos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarCursosLlevados.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarCursosLlevados.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarCursosLlevados.Designer.cs">
       <DependentUpon>frmCargarCursosLlevados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarEvaluaciones.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarEvaluaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarEvaluaciones.Designer.cs">
       <DependentUpon>frmCargarEvaluaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Atencion\frmCodigosAtencion.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Atencion\frmCodigosAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Atencion\frmCodigosAtencion.Designer.cs">
       <DependentUpon>frmCodigosAtencion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarAlumno.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarAlumno.Designer.cs">
       <DependentUpon>frmBuscarAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarCoordinador.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarCoordinador.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarCoordinador.Designer.cs">
       <DependentUpon>frmBuscarCoordinador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarPonente.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarPonente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarPonente.Designer.cs">
       <DependentUpon>frmBuscarPonente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarProfesor.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarProfesor.Designer.cs">
       <DependentUpon>frmBuscarProfesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarPsicologo.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarPsicologo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarPsicologo.Designer.cs">
       <DependentUpon>frmBuscarPsicologo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarAlumno.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarAlumno.Designer.cs">
       <DependentUpon>frmGestionarAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarCoordinador.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarCoordinador.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarCoordinador.Designer.cs">
       <DependentUpon>frmGestionarCoordinador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarEspecialidad.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarEspecialidad.Designer.cs">
       <DependentUpon>frmGestionarEspecialidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPonente.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPonente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPonente.Designer.cs">
       <DependentUpon>frmGestionarPonente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarProfesor.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarProfesor.Designer.cs">
       <DependentUpon>frmGestionarProfesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPsicologo.cs" />
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPsicologo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPsicologo.Designer.cs">
       <DependentUpon>frmGestionarPsicologo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmAccountSettings.cs" />
+    <Compile Include="Ventanas\frmAccountSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\frmAccountSettings.Designer.cs">
       <DependentUpon>frmAccountSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmCargarCSVAlumnos.cs" />
+    <Compile Include="Ventanas\Old\frmCargarCSVAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmCargarCSVAlumnos.Designer.cs">
       <DependentUpon>frmCargarCSVAlumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmCargarCSVProfesores.cs" />
+    <Compile Include="Ventanas\Old\frmCargarCSVProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmCargarCSVProfesores.Designer.cs">
       <DependentUpon>frmCargarCSVProfesores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmCargarCSVPsicologos.cs" />
+    <Compile Include="Ventanas\Old\frmCargarCSVPsicologos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmCargarCSVPsicologos.Designer.cs">
       <DependentUpon>frmCargarCSVPsicologos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmAgregarEventoAlumno.cs" />
+    <Compile Include="Ventanas\Old\frmAgregarEventoAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmAgregarEventoAlumno.Designer.cs">
       <DependentUpon>frmAgregarEventoAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmAgregarEventoOOIA.cs" />
+    <Compile Include="Ventanas\Old\frmAgregarEventoOOIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmAgregarEventoOOIA.Designer.cs">
       <DependentUpon>frmAgregarEventoOOIA.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmAgregarOpinion.cs" />
+    <Compile Include="Ventanas\Alumno\Citas\frmAgregarOpinion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Citas\frmAgregarOpinion.Designer.cs">
       <DependentUpon>frmAgregarOpinion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmBuscarEvento.cs" />
+    <Compile Include="Ventanas\Alumno\Eventos\frmBuscarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Eventos\frmBuscarEvento.Designer.cs">
       <DependentUpon>frmBuscarEvento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Asesor\Citas\frmCancelarCitaAsesor.cs" />
+    <Compile Include="Ventanas\Asesor\Citas\frmCancelarCitaAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Asesor\Citas\frmCancelarCitaAsesor.Designer.cs">
       <DependentUpon>frmCancelarCitaAsesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmCancelarCitaAlumno.cs" />
+    <Compile Include="Ventanas\Old\frmCancelarCitaAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmCancelarCitaAlumno.Designer.cs">
       <DependentUpon>frmCancelarCitaAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmCitaRegistroAlumno.cs" />
+    <Compile Include="Ventanas\Old\frmCitaRegistroAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmCitaRegistroAlumno.Designer.cs">
       <DependentUpon>frmCitaRegistroAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmConfirmarCitaAlumno.cs" />
+    <Compile Include="Ventanas\Old\frmConfirmarCitaAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmConfirmarCitaAlumno.Designer.cs">
       <DependentUpon>frmConfirmarCitaAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmConfirmarCancelarAsesor.cs" />
+    <Compile Include="Ventanas\Old\frmConfirmarCancelarAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmConfirmarCancelarAsesor.Designer.cs">
       <DependentUpon>frmConfirmarCancelarAsesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmConfirmarOpinion.cs" />
+    <Compile Include="Ventanas\Old\frmConfirmarOpinion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmConfirmarOpinion.Designer.cs">
       <DependentUpon>frmConfirmarOpinion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Asesor\Citas\frmDetalleCitaAsesor.cs" />
+    <Compile Include="Ventanas\Asesor\Citas\frmDetalleCitaAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Asesor\Citas\frmDetalleCitaAsesor.Designer.cs">
       <DependentUpon>frmDetalleCitaAsesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmCancelarEventoAlumno.cs" />
+    <Compile Include="Ventanas\Old\frmCancelarEventoAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmCancelarEventoAlumno.Designer.cs">
       <DependentUpon>frmCancelarEventoAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Asesor\Citas\frmHistoriaAcademica.cs" />
+    <Compile Include="Ventanas\Asesor\Citas\frmHistoriaAcademica.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Asesor\Citas\frmHistoriaAcademica.Designer.cs">
       <DependentUpon>frmHistoriaAcademica.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmHorarioCambiado.cs" />
+    <Compile Include="Ventanas\Old\frmHorarioCambiado.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmHorarioCambiado.Designer.cs">
       <DependentUpon>frmHorarioCambiado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmHorarioCita.cs" />
+    <Compile Include="Ventanas\Alumno\Citas\frmHorarioCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Citas\frmHorarioCita.Designer.cs">
       <DependentUpon>frmHorarioCita.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmListaTutores.cs" />
+    <Compile Include="Ventanas\Alumno\Citas\frmListaTutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Citas\frmListaTutores.Designer.cs">
       <DependentUpon>frmListaTutores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Asesor\Citas\frmNotasParciales.cs" />
+    <Compile Include="Ventanas\Asesor\Citas\frmNotasParciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Asesor\Citas\frmNotasParciales.Designer.cs">
       <DependentUpon>frmNotasParciales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmPrincipal.cs" />
+    <Compile Include="Ventanas\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmOpiniones.cs" />
+    <Compile Include="Ventanas\Alumno\Citas\frmOpiniones.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Citas\frmOpiniones.Designer.cs">
       <DependentUpon>frmOpiniones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Asesor\Citas\frmCitasAsesor.cs" />
+    <Compile Include="Ventanas\Asesor\Citas\frmCitasAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Asesor\Citas\frmCitasAsesor.Designer.cs">
       <DependentUpon>frmCitasAsesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmDetalleCitaAlumno.cs" />
+    <Compile Include="Ventanas\Alumno\Citas\frmDetalleCitaAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Citas\frmDetalleCitaAlumno.Designer.cs">
       <DependentUpon>frmDetalleCitaAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmInicioSesion.cs" />
+    <Compile Include="Ventanas\frmInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmCitasAlumno.cs" />
+    <Compile Include="Ventanas\Alumno\Citas\frmCitasAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Citas\frmCitasAlumno.Designer.cs">
       <DependentUpon>frmCitasAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ventanas\Old\frmPrincipalOld.cs" />
+    <Compile Include="Ventanas\Old\frmPrincipalOld.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmPrincipalOld.designer.cs">
       <DependentUpon>frmPrincipalOld.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmPrincipalMiembroOOIA.cs" />
+    <Compile Include="Ventanas\Old\frmPrincipalMiembroOOIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmPrincipalMiembroOOIA.Designer.cs">
       <DependentUpon>frmPrincipalMiembroOOIA.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Old\frmPrincipalAsesor.cs" />
+    <Compile Include="Ventanas\Old\frmPrincipalAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Old\frmPrincipalAsesor.designer.cs">
       <DependentUpon>frmPrincipalAsesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmReestablecerContraseña.cs" />
+    <Compile Include="Ventanas\frmReestablecerContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\frmReestablecerContraseña.Designer.cs">
       <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmEventosAlumno.cs" />
+    <Compile Include="Ventanas\Alumno\Eventos\frmEventosAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Eventos\frmEventosAlumno.Designer.cs">
       <DependentUpon>frmEventosAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmRespuestaAcceso.cs" />
+    <Compile Include="Ventanas\Alumno\Eventos\frmRespuestaAcceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Eventos\frmRespuestaAcceso.Designer.cs">
       <DependentUpon>frmRespuestaAcceso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmDetalleEvento.cs" />
+    <Compile Include="Ventanas\Alumno\Eventos\frmDetalleEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Eventos\frmDetalleEvento.Designer.cs">
       <DependentUpon>frmDetalleEvento.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Componentes\Card.resx">
-      <DependentUpon>Card.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Ventanas\ucProxEvento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ventanas\ucProxEvento.Designer.cs">
+      <DependentUpon>ucProxEvento.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Componentes\CardEvento.resx">
       <DependentUpon>CardEvento.cs</DependentUpon>
     </EmbeddedResource>
@@ -601,6 +732,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmDetalleEvento.resx">
       <DependentUpon>frmDetalleEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\ucProxEvento.resx">
+      <DependentUpon>ucProxEvento.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Connected Services\CargarCSValumnosWS\AlumnosCSVcargaWS1.wsdl" />
     <None Include="Connected Services\CargarCSValumnosWS\AlumnosCSVcargaWS1.xsd">
@@ -846,8 +980,8 @@
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.ponente1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS.wsdl" />
-    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS.xsd">
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS1.wsdl" />
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.alumno.datasource">
@@ -868,7 +1002,7 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarAlumnoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse1.datasource">
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse1.datasource">
@@ -889,7 +1023,7 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarAlumnoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse1.datasource">
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarEspecialidadResponse1.datasource">
@@ -946,7 +1080,7 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarAlumnoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse1.datasource">
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarEspecialidadResponse1.datasource">

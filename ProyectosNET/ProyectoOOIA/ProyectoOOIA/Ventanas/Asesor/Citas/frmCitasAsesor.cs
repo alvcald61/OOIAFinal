@@ -98,7 +98,7 @@ namespace ProyectoOOIA.Ventanas
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            new frmPrincipal(TipoUsuario.Asesor,asesor).Show();
+            new frmPrincipal((GestionHumanaWS.miembroPUCP)asesor).Show();
             this.Close();
         }
         
