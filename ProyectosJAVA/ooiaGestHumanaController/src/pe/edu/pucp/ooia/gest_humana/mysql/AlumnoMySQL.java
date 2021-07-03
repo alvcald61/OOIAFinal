@@ -106,7 +106,7 @@ public class AlumnoMySQL implements AlumnoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call MODIFICAR_ALUMNO(?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_ALUMNO(?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.setInt("_id_alumno", alumno.getId_alumno());
             /*Persona*/
             cs.setString("_nombre", alumno.getNombre());
@@ -116,7 +116,7 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setString("_direccion", alumno.getDireccion());
             /*Miembro PUCP*/
             cs.setString("_usuario", alumno.getUsuario());
-            cs.setString("_password", alumno.getPassword());
+            //cs.setString("_password", alumno.getPassword());
             cs.setDate("_fecha_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", alumno.getImagenDePerfil());
             /*Alumno*/

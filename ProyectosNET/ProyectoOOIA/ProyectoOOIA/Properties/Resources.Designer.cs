@@ -241,6 +241,16 @@ namespace ProyectoOOIA.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon logo_pontificia_universidad_catolica_del_peru {
+            get {
+                object obj = ResourceManager.GetObject("logo_pontificia_universidad_catolica_del_peru", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap logout_white {

@@ -3,6 +3,8 @@ using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -16,10 +18,18 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private byte[] imagen_perfil;
         private Estado estado;
         private Regex regex ;
+        private ErrorProvider errorDni;
+        private ErrorProvider errorCorreo;
+        private ErrorProvider errorCodigo;
+        private ErrorProvider errorUsuario;
+        private string[] datosAnteriores;
 
         public frmGestionarAlumno()
         {
-            
+        errorCorreo = new ErrorProvider();
+            errorDni = new ErrorProvider();
+            errorCodigo = new ErrorProvider();
+            errorUsuario = new ErrorProvider();
             InitializeComponent();
             estado = Estado.Inicial;
             clearall();
@@ -30,6 +40,13 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 (daoEspecialidad.listarEspecialidad().ToList());
             cbEspecialidad.DisplayMember = "nombre";
             cbEspecialidad.ValueMember = "id_especialidad";
+            dtpFechaNacimiento.MaxDate = DateTime.Now.AddDays(-6570);
+            errorCorreo.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorCodigo.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+           errorDni.BlinkStyle= ErrorBlinkStyle.NeverBlink;
+            errorUsuario.BlinkStyle= ErrorBlinkStyle.NeverBlink;
+            datosAnteriores = new string[4];
+            for (int i = 0; i < datosAnteriores.Length; i++) datosAnteriores[i] = "";
         }
 
         public void clearall()
@@ -37,7 +54,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             /*Persona*/
             txtDni.Text = "";
             txtNombre.Text = "";
-            dtpFechaNacimiento.Value = DateTime.Today;
+            dtpFechaNacimiento.Value = DateTime.Today.AddDays(-6570);
             txtDireccion.Text = "";
             txtCorreo.Text = "";
             /*Miembro PUCP*/
@@ -50,6 +67,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             Image img = Properties.Resources.placeholder_profile;
             imagen_perfil = ImageToByte2(img);
             displayImage(imagen_perfil);
+            errorCodigo.Clear();
+            errorCorreo.Clear();
+            errorDni.Clear();
+            errorUsuario.Clear();
         }
 
         public static byte[] ImageToByte2(Image img)
@@ -166,7 +187,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             txtCorreo.Text = alu.correo;
             //Miembro PUCP
             txtUsuario.Text = alu.usuario;
-            txtPassword.Text = "*********";
+            txtPassword.Text = "";
             imagen_perfil = alu.imagenDePerfil;
             if(imagen_perfil != null)displayImage(imagen_perfil);
             //Alumno
@@ -183,7 +204,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             estado = Estado.Nuevo;
             cambiarEstado();
             clearall();
-            txtPassword.Text = "12345";
+            txtPassword.Text = "";
         }
 
         private void tsbGuardar_Click_1(object sender, EventArgs e)
@@ -196,7 +217,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 MessageBox.Show("No ha ingresado el usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (txtPassword.Text == "")
+            if (txtPassword.Text == "" && estado == Estado.Nuevo)
             {
                 MessageBox.Show("No ha ingresado la contraseña", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -260,6 +281,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 int resultado = daoAlumno.modificarAlumno(alumno);
                 if (resultado != 0)
                 {
+                    if (txtPassword.Text != "")
+                        new GestionHumanaWS.GestionHumanaWSClient().cambiar_password(alumno.id_miembro_pucp, txtPassword.Text);
+
                     MessageBox.Show("Se ha actualizado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.estado = Estado.Inicial;
                     cambiarEstado();
@@ -324,6 +348,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         {
             this.estado = Estado.Modificar;
             cambiarEstado();
+            ttContraseña.SetToolTip(txtPassword, "Dejar vacia para mantener la contraseña anterior");
         }
 
         private void tsbEliminar_Click(object sender, EventArgs e)
@@ -348,6 +373,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             if (frmBuscar.ShowDialog() == DialogResult.OK)
             {
                 this.alumno = frmBuscar.Alumno;
+                datosAnteriores[0] = alumno.dni;
+                datosAnteriores[1] = alumno.correo;
+                datosAnteriores[2] = alumno.usuario;
+                datosAnteriores[3] = alumno.codigo;
                 fillText(this.alumno);
                 estado = Estado.Busqueda;
                 cambiarEstado();
@@ -376,5 +405,87 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         }
 
+        private void txtDni_Leave(object sender, EventArgs e)
+        {//validar que el dni tenga 8 digitos
+            Control evento = (sender as Control);
+            if (evento.Name=="txtDni")
+                validarDNI(evento as TextBox);
+            if (evento.Name == "txtCorreo")
+                validarCorreo(evento as TextBox);
+            if (evento.Name == "txtUsuario")
+                validarUsuario(evento as TextBox);
+            if (evento.Name == "txtCodigo")
+                validarCodigo(evento as TextBox);            
+            
+        }
+
+        private void validarCodigo(TextBox textBox)
+        {
+            if (estado == Estado.Modificar)
+                if (datosAnteriores[3] == txtCodigo.Text) return;
+            string patronDNI = @"\d{8}";
+            regex = new Regex(patronDNI);
+            if (!regex.IsMatch(textBox.Text))
+                errorCodigo.SetError(textBox, "El codigo debe tener 8 digitos");
+        }
+
+        private void validarUsuario(TextBox textBox)
+        {
+            if (estado == Estado.Modificar)
+                if (datosAnteriores[2] == txtUsuario.Text) return;
+            if (textBox.Text == "") errorUsuario.SetError(textBox,"Debe ingresar un usuario");
+            else 
+            if(new GestionHumanaWS.GestionHumanaWSClient().validar_usuario_unico(textBox.Text)==1)
+            {
+                errorUsuario.SetError(textBox, "El usuario ya existe");
+            }
+        }
+
+        private void validarCorreo(TextBox sender)
+        {
+            string patronCorreo = @"^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$";
+            regex = new Regex(patronCorreo);
+            if (estado == Estado.Modificar)
+                if (datosAnteriores[1] == txtCorreo.Text) return;
+            if (!regex.IsMatch(txtCorreo.Text))
+            {
+                errorCorreo.SetError(sender,"El correo debe ser de la forma ejemplo@servidor.extension");
+
+            }
+
+        }
+
+        private void validarDNI(TextBox sender)
+        {
+            string patronDNI = @"\d{8}";
+            regex = new Regex(patronDNI);
+            if (estado == Estado.Modificar)
+                if (datosAnteriores[0] == txtDni.Text) return;
+            if (!regex.IsMatch(txtDni.Text))
+                errorDni.SetError(sender, "El DNI debe tener 8 digitos");
+            else
+            {
+                int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticar_persona_dni(Int32.Parse(txtDni.Text));
+                if (cantUsuarios == 1)    errorDni.SetError(sender, "Este DNI ya está registrado");   
+            }
+        }
+
+        private void txtDni_Enter(object sender, EventArgs e)
+        {
+
+            Control evento = (sender as Control);
+            if (evento.Name == "txtDni")
+                errorDni.Clear();
+            if (evento.Name == "txtCorreo")
+                errorCorreo.Clear();
+            if (evento.Name == "txtCodigo")
+                errorCodigo.Clear();
+            if (evento.Name == "txtUsuario")
+                errorUsuario.Clear();
+            //if (evento.Name == "dtpFechaNacimiento")
+                //validarFecha(sender as DateTimePicker);
+        }
+
+        
     }
 }
