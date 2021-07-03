@@ -12,6 +12,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 {
     public partial class frmGestionarAlumno : Form
     {
+
+
         private GestionHumanaWS.GestionHumanaWSClient daoEspecialidad;
         private GestionHumanaWS.GestionHumanaWSClient daoAlumno;
         private GestionHumanaWS.alumno alumno;
@@ -34,8 +36,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             estado = Estado.Inicial;
             clearall();
             cambiarEstado();
+            //Inicializar DAO
             daoEspecialidad = new GestionHumanaWS.GestionHumanaWSClient();
             daoAlumno = new GestionHumanaWS.GestionHumanaWSClient();
+            //Inicializar ComboBox Especialidad
             cbEspecialidad.DataSource = new BindingList<GestionHumanaWS.especialidad>
                 (daoEspecialidad.listarEspecialidad().ToList());
             cbEspecialidad.DisplayMember = "nombre";
@@ -204,37 +208,24 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             estado = Estado.Nuevo;
             cambiarEstado();
             clearall();
-            txtPassword.Text = "";
+
+            Guid miGuid = Guid.NewGuid();
+            string token = Convert.ToBase64String(miGuid.ToByteArray());
+            token = token.Replace("=", "").Replace("+", "");
+            string pass = token.Substring(0, 7);
+
+            txtPassword.Text = pass;
         }
 
         private void tsbGuardar_Click_1(object sender, EventArgs e)
         {
             //Validación Persona
-            if(!validarPersona())return;
+            if(!validarPersona()) return;
             //Validación Miembro PUCP
-            if (txtUsuario.Text == "")
-            {
-                MessageBox.Show("No ha ingresado el usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (txtPassword.Text == "" && estado == Estado.Nuevo)
-            {
-                MessageBox.Show("No ha ingresado la contraseña", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            if (!validarUsuario()) return;
             //Validación Alumno
-            if (txtCodigo.Text == "")
-            {
-                MessageBox.Show("No ha ingresado el código", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (cbEspecialidad.SelectedIndex == -1)
-            {
-                MessageBox.Show("No ha seleccionado la especialidad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            if (!validarAlumno()) return;
 
-            
             //Persona
             alumno.dni = txtDni.Text;
             alumno.nombre = txtNombre.Text;
@@ -296,53 +287,84 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private bool validarPersona()
         {
-            bool retorno = true;
             if (txtDni.Text == "")
             {
                 MessageBox.Show("No ha ingresado el DNI", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno =false;
+                return false;
+            }
+            if (txtDni.Text.Length != 8)
+            {
+                MessageBox.Show("El DNI debe conformarse de 8 números", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
             if (txtNombre.Text == "")
             {
                 MessageBox.Show("No ha ingresado el nombre", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno= false;
+                return false;
             }
-            if (dtpFechaNacimiento.Value == DateTime.Today)
+            if ((DateTime.Today.Year - dtpFechaNacimiento.Value.Year) < 14)
             {
-                MessageBox.Show("No ha ingresado correctamente la fecha de nacimiento", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
+                MessageBox.Show("La fecha ingresada es incorrecta", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
             if (txtDireccion.Text == "")
             {
                 MessageBox.Show("No ha ingresado la dirección", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
+                return false ;
             }
             if (txtCorreo.Text == "")
             {
                 MessageBox.Show("No ha ingresado el correo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
+                return false ;
             }
             string patronDNI = @"\d{8}";
             regex = new Regex(patronDNI);
             if (!regex.IsMatch(txtDni.Text))
             {
                 MessageBox.Show("El dni debe ser una cadena de 8 numeros", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
+                return false;
             }
             string patronCorreo = @"^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$";
             regex = new Regex(patronCorreo);
             if (!regex.IsMatch(txtCorreo.Text))
             {
                 MessageBox.Show("Correo Invalido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
+                return false;
             }
 
 
-            return retorno;
-
-
+            return true;
         }
 
+        private bool validarUsuario()
+        {
+            if (txtUsuario.Text == "")
+            {
+                MessageBox.Show("No ha ingresado el usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (txtPassword.Text == "" && estado == Estado.Nuevo)
+            {
+                MessageBox.Show("No ha ingresado la contraseña", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private bool validarAlumno()
+        {
+            if (txtCodigo.Text == "")
+            {
+                MessageBox.Show("No ha ingresado el código", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (cbEspecialidad.SelectedIndex == -1)
+            {
+                MessageBox.Show("No ha seleccionado la especialidad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
 
         private void tsbModificar_Click(object sender, EventArgs e)
         {

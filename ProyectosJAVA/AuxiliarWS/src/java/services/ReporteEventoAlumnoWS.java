@@ -39,11 +39,25 @@ public class ReporteEventoAlumnoWS {
                             "/reportes/ReporteEvento.jasper"));
             String rutaSubreporte = ReporteEventoAlumno.class.getResource("/reportes/SubReporteEvento.jasper").getPath();
             
+          
+            rutaSubreporte = rutaSubreporte.replaceAll("%20", " ");
+            
+            String rutaValoracionPonentes = ReporteEventoAlumno.class.getResource("/reportes/ValoracionPonentes.jasper").getPath();
+            rutaValoracionPonentes = rutaValoracionPonentes.replaceAll("%20", " ");
+            
+            String rutaValoracionEvento = ReporteEventoAlumno.class.getResource("/reportes/ValoracionEvento.jasper").getPath();
+            rutaValoracionEvento = rutaValoracionEvento.replaceAll("%20", " ");
+            
+            String rutaValoracionUtilidad = ReporteEventoAlumno.class.getResource("/reportes/ValoracionUtilidad.jasper").getPath();
+            rutaValoracionUtilidad = rutaValoracionUtilidad.replaceAll("%20", " ");
             //Arreglo de parametros
             HashMap hm = new HashMap();
 //            hm.put("IdAsesor", idAsesor);//cambiar el 7
             hm.put("IdEvento", idEvento);//cambiamos el 7 por id Asesor
             hm.put("RutaSubreporte", rutaSubreporte);
+            hm.put("RutaValoracionPonentes", rutaValoracionPonentes);
+            hm.put("RutaValoracionEvento", rutaValoracionEvento);
+            hm.put("RutaValoracionUtilidad", rutaValoracionUtilidad);
             //Objeto de Conexion
             Connection con = DBManager.getInstance().getConnection();        
             //poblamos el reporte
