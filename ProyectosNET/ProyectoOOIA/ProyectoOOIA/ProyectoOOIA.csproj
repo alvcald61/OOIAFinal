@@ -136,10 +136,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="TipoUsuario.cs" />
-    <Compile Include="Componentes\CardEvento.cs">
+    <Compile Include="Ventanas\Old\CardEvento.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Componentes\CardEvento.Designer.cs">
+    <Compile Include="Ventanas\Old\CardEvento.Designer.cs">
       <DependentUpon>CardEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="Componentes\Horario.cs">
@@ -536,7 +536,7 @@
     <Compile Include="Ventanas\ucProxEvento.Designer.cs">
       <DependentUpon>ucProxEvento.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Componentes\CardEvento.resx">
+    <EmbeddedResource Include="Ventanas\Old\CardEvento.resx">
       <DependentUpon>CardEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Componentes\Horario.resx">
@@ -1165,6 +1165,7 @@
     <None Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Search_noHalo_16x.png" />
     <None Include="Resources\save.png" />
     <None Include="Resources\white_cog1.png" />
     <None Include="Resources\white_cog.jpg" />
@@ -1239,12 +1240,16 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Resources\btnNuevo.Image.png" />
+    <None Include="Resources\btnGuardar.Image.png" />
     <Content Include="Resources\Bunifu_UI_v1.5.dll" />
     <None Include="Resources\menos.png" />
     <None Include="Resources\mas.png" />
     <None Include="Resources\placeholder_profile.jpg" />
     <None Include="Resources\edit_black.png" />
     <None Include="Resources\edit_black1.png" />
+    <None Include="Resources\Cancel_16x.png" />
+    <None Include="Resources\Eraser_16x.png" />
     <Content Include="Resources\profesor.jpg" />
     <None Include="Resources\Profile.bmp" />
     <Content Include="Resources\psicologo.jpg" />
