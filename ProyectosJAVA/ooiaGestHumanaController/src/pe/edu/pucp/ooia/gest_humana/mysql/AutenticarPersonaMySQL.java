@@ -60,5 +60,24 @@ public class AutenticarPersonaMySQL implements AutenticarPersonaDAO{
         }
         return resultado;
     }
+
+    @Override
+    public int validarUnicoRegistroAEvento(int id_alumno, int id_evento) {
+        int resultado=0;   
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call VALIDAR_REGISTRO_ALUMNO_EVENTO(?,?)}");
+            cs.setInt("_id_alumno", id_alumno);
+            cs.setInt("_id_evento", id_evento);
+            rs=cs.executeQuery();
+            if(rs.next())
+                resultado=1; //si ya esta inscrito el alumno
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
     
 }
