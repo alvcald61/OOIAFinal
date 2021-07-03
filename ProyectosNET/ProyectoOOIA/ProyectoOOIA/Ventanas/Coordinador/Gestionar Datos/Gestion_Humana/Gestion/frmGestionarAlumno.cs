@@ -12,14 +12,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 {
     public partial class frmGestionarAlumno : Form
     {
-        ErrorProvider errorNombre = new ErrorProvider();
-        ErrorProvider errorFecha = new ErrorProvider();
-        ErrorProvider errorDireccion = new ErrorProvider();
-        ErrorProvider errorCorreo = new ErrorProvider();
-        ErrorProvider errorUsuario = new ErrorProvider();
-        ErrorProvider errorContraseña = new ErrorProvider();
-        ErrorProvider errorCodigo = new ErrorProvider();
-        ErrorProvider errorEspecialidad = new ErrorProvider();
+
 
         private GestionHumanaWS.GestionHumanaWSClient daoEspecialidad;
         private GestionHumanaWS.GestionHumanaWSClient daoAlumno;
