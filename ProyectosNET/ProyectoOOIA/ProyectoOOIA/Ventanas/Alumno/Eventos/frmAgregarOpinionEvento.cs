@@ -62,6 +62,10 @@ namespace ProyectoOOIA.Ventanas.Alumno.Eventos
                 {
                     eventoAlumno.valoracionPonentes = 5;
                 }
+                else
+                {
+                    eventoAlumno.valoracionPonentes = 0;
+                }
 
                 if (radioButton5.Checked)
                 {
@@ -83,6 +87,10 @@ namespace ProyectoOOIA.Ventanas.Alumno.Eventos
                 {
                     eventoAlumno.valoracionEvento = 5;
                 }
+                else
+                {
+                    eventoAlumno.valoracionEvento = 0;
+                }
 
                 if (radioButton10.Checked)
                 {
@@ -103,6 +111,10 @@ namespace ProyectoOOIA.Ventanas.Alumno.Eventos
                 else if (radioButton6.Checked)
                 {
                     eventoAlumno.valoracionUtilidad = 5;
+                }
+                else
+                {
+                    eventoAlumno.valoracionUtilidad = 0;
                 }
 
                 if (daoEventoAlumno.modificarEncuestaEvento(eventoAlumno) == 1)
