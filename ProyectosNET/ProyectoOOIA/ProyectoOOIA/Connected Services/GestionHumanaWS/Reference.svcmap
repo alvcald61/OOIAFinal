@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="067c3003-d358-4471-926f-ad8b33b3e8b5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="94b5e99c-4d04-4763-861e-c7eb32409942" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/AuxiliarWS/GestionHumanaWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8082/AuxiliarWS/GestionHumanaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestionHumanaWS1.xsd" MetadataType="Schema" ID="179a85c7-402b-41ce-a7f0-7479bf555dea" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionHumanaWS?xsd=1" />
-    <MetadataFile FileName="GestionHumanaWS1.wsdl" MetadataType="Wsdl" ID="09dab3fc-42f6-476f-a040-d051b086fd20" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionHumanaWS?WSDL" />
+    <MetadataFile FileName="GestionHumanaWS1.xsd" MetadataType="Schema" ID="e6ad106f-baea-4118-ab09-e05c0a956207" SourceId="1" SourceUrl="http://localhost:8082/AuxiliarWS/GestionHumanaWS?xsd=1" />
+    <MetadataFile FileName="GestionHumanaWS1.wsdl" MetadataType="Wsdl" ID="6df552ed-3036-4d35-9f91-1973ca7f1a86" SourceId="1" SourceUrl="http://localhost:8082/AuxiliarWS/GestionHumanaWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

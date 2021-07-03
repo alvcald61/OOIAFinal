@@ -31,50 +31,62 @@ namespace ProyectoOOIA.Ventanas
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.imagen = new OvalPictureBox();
-            this.btnCargaDatos = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.btnEventos = new System.Windows.Forms.Button();
-            this.txtEventos = new System.Windows.Forms.Label();
-            this.btnCitas = new System.Windows.Forms.Button();
-            this.txtCitas = new System.Windows.Forms.Label();
-            this.pnlCitas = new System.Windows.Forms.Panel();
-            this.pnlEventos = new System.Windows.Forms.Panel();
-            this.pnlEventosProximos = new System.Windows.Forms.Panel();
-            this.tarjeta3 = new ProyectoOOIA.Componentes.CardEvento();
-            this.tarjeta2 = new ProyectoOOIA.Componentes.CardEvento();
-            this.tarjeta1 = new ProyectoOOIA.Componentes.CardEvento();
-            this.pnlEventosProx = new System.Windows.Forms.Panel();
-            this.lblEventosProximos = new System.Windows.Forms.Label();
+            this.pnlProxEventos = new System.Windows.Forms.Panel();
             this.imagenes = new System.Windows.Forms.PictureBox();
-            this.ImageTimer = new System.Windows.Forms.Timer(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.panel1.SuspendLayout();
+            this.imageTimer = new System.Windows.Forms.Timer(this.components);
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnInfo = new System.Windows.Forms.Button();
+            this.btnEventos = new System.Windows.Forms.Button();
+            this.btnAsesorias = new System.Windows.Forms.Button();
+            this.pnlBody = new System.Windows.Forms.Panel();
+            this.pnlFoot = new System.Windows.Forms.Panel();
+            this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
-            this.pnlCitas.SuspendLayout();
-            this.pnlEventos.SuspendLayout();
-            this.pnlEventosProximos.SuspendLayout();
-            this.pnlEventosProx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).BeginInit();
+            this.pnlMenu.SuspendLayout();
+            this.pnlBody.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlHeader
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.panel1.Controls.Add(this.btnSettings);
-            this.panel1.Controls.Add(this.btnAtras);
-            this.panel1.Controls.Add(this.imagen);
-            this.panel1.Controls.Add(this.btnCargaDatos);
-            this.panel1.Controls.Add(this.lblUsername);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1352, 87);
-            this.panel1.TabIndex = 18;
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.pnlHeader.Controls.Add(this.lblTitulo);
+            this.pnlHeader.Controls.Add(this.panel2);
+            this.pnlHeader.Controls.Add(this.btnSettings);
+            this.pnlHeader.Controls.Add(this.btnLogout);
+            this.pnlHeader.Controls.Add(this.imagen);
+            this.pnlHeader.Controls.Add(this.lblUsername);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(984, 70);
+            this.pnlHeader.TabIndex = 18;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(86, 8);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(288, 34);
+            this.lblTitulo.TabIndex = 29;
+            this.lblTitulo.Text = "OOIA - Tipo de Usuario";
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(0, 69);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(700, 50);
+            this.panel2.TabIndex = 27;
             // 
             // btnSettings
             // 
@@ -82,310 +94,218 @@ namespace ProyectoOOIA.Ventanas
             this.btnSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSettings.BackgroundImage")));
             this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSettings.Enabled = false;
             this.btnSettings.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(1216, 28);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSettings.Location = new System.Drawing.Point(878, 20);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(47, 42);
+            this.btnSettings.Size = new System.Drawing.Size(35, 35);
             this.btnSettings.TabIndex = 28;
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSettings.UseVisualStyleBackColor = false;
-            this.btnSettings.Visible = false;
             this.btnSettings.Click += new System.EventHandler(this.btnAccountSettings_Click);
             // 
-            // btnAtras
+            // btnLogout
             // 
-            this.btnAtras.BackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.logout_white;
-            this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtras.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnAtras.FlatAppearance.BorderSize = 0;
-            this.btnAtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(1283, 28);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(47, 42);
-            this.btnAtras.TabIndex = 12;
-            this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAtras.UseVisualStyleBackColor = false;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackgroundImage = global::ProyectoOOIA.Properties.Resources.logout_white;
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(930, 20);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(35, 35);
+            this.btnLogout.TabIndex = 12;
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // imagen
             // 
             this.imagen.BackColor = System.Drawing.Color.Transparent;
             this.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imagen.Location = new System.Drawing.Point(28, 9);
-            this.imagen.Margin = new System.Windows.Forms.Padding(4);
+            this.imagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imagen.Location = new System.Drawing.Point(20, 5);
             this.imagen.Name = "imagen";
-            this.imagen.Size = new System.Drawing.Size(83, 75);
+            this.imagen.Size = new System.Drawing.Size(60, 60);
             this.imagen.TabIndex = 27;
             this.imagen.TabStop = false;
-            // 
-            // btnCargaDatos
-            // 
-            this.btnCargaDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(106)))), ((int)(((byte)(145)))));
-            this.btnCargaDatos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCargaDatos.FlatAppearance.BorderSize = 0;
-            this.btnCargaDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargaDatos.ForeColor = System.Drawing.Color.White;
-            this.btnCargaDatos.Location = new System.Drawing.Point(935, 21);
-            this.btnCargaDatos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCargaDatos.Name = "btnCargaDatos";
-            this.btnCargaDatos.Size = new System.Drawing.Size(241, 57);
-            this.btnCargaDatos.TabIndex = 13;
-            this.btnCargaDatos.Text = "Gestionar Información";
-            this.btnCargaDatos.UseVisualStyleBackColor = false;
-            this.btnCargaDatos.Click += new System.EventHandler(this.btnCargaDatos_Click);
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(139, 27);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsername.Location = new System.Drawing.Point(88, 42);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(289, 38);
+            this.lblUsername.Size = new System.Drawing.Size(145, 23);
             this.lblUsername.TabIndex = 1;
-            this.lblUsername.Text = "Solorzano Tapia, José";
+            this.lblUsername.Text = "Nombre del Usuario";
             // 
-            // btnEventos
+            // pnlProxEventos
             // 
-            this.btnEventos.BackColor = System.Drawing.Color.Transparent;
-            this.btnEventos.BackgroundImage = global::ProyectoOOIA.Properties.Resources.Evento;
-            this.btnEventos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEventos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEventos.FlatAppearance.BorderSize = 0;
-            this.btnEventos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEventos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEventos.Location = new System.Drawing.Point(4, 41);
-            this.btnEventos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEventos.Name = "btnEventos";
-            this.btnEventos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnEventos.Size = new System.Drawing.Size(449, 210);
-            this.btnEventos.TabIndex = 22;
-            this.btnEventos.UseVisualStyleBackColor = false;
-            this.btnEventos.Click += new System.EventHandler(this.botonEventos_Click);
-            // 
-            // txtEventos
-            // 
-            this.txtEventos.AutoSize = true;
-            this.txtEventos.Font = new System.Drawing.Font("Gill Sans MT", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEventos.ForeColor = System.Drawing.Color.Black;
-            this.txtEventos.Location = new System.Drawing.Point(167, 2);
-            this.txtEventos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtEventos.Name = "txtEventos";
-            this.txtEventos.Size = new System.Drawing.Size(124, 40);
-            this.txtEventos.TabIndex = 20;
-            this.txtEventos.Text = "Eventos";
-            // 
-            // btnCitas
-            // 
-            this.btnCitas.AccessibleDescription = "Hola cliente";
-            this.btnCitas.AccessibleName = "hola";
-            this.btnCitas.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.btnCitas.BackColor = System.Drawing.Color.Transparent;
-            this.btnCitas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCitas.BackgroundImage")));
-            this.btnCitas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCitas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCitas.FlatAppearance.BorderSize = 0;
-            this.btnCitas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCitas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCitas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCitas.Location = new System.Drawing.Point(7, 48);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCitas.Name = "btnCitas";
-            this.btnCitas.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnCitas.Size = new System.Drawing.Size(461, 207);
-            this.btnCitas.TabIndex = 21;
-            this.btnCitas.UseVisualStyleBackColor = false;
-            this.btnCitas.Click += new System.EventHandler(this.botonCitas_Click);
-            // 
-            // txtCitas
-            // 
-            this.txtCitas.AutoSize = true;
-            this.txtCitas.Font = new System.Drawing.Font("Gill Sans MT", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCitas.ForeColor = System.Drawing.Color.Black;
-            this.txtCitas.Location = new System.Drawing.Point(185, 9);
-            this.txtCitas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtCitas.Name = "txtCitas";
-            this.txtCitas.Size = new System.Drawing.Size(86, 40);
-            this.txtCitas.TabIndex = 19;
-            this.txtCitas.Text = "Citas";
-            this.txtCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlCitas
-            // 
-            this.pnlCitas.Controls.Add(this.btnCitas);
-            this.pnlCitas.Controls.Add(this.txtCitas);
-            this.pnlCitas.Location = new System.Drawing.Point(0, 492);
-            this.pnlCitas.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlCitas.Name = "pnlCitas";
-            this.pnlCitas.Size = new System.Drawing.Size(472, 258);
-            this.pnlCitas.TabIndex = 23;
-            // 
-            // pnlEventos
-            // 
-            this.pnlEventos.Controls.Add(this.txtEventos);
-            this.pnlEventos.Controls.Add(this.btnEventos);
-            this.pnlEventos.Location = new System.Drawing.Point(480, 496);
-            this.pnlEventos.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlEventos.Name = "pnlEventos";
-            this.pnlEventos.Size = new System.Drawing.Size(453, 255);
-            this.pnlEventos.TabIndex = 24;
-            // 
-            // pnlEventosProximos
-            // 
-            this.pnlEventosProximos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(149)))), ((int)(((byte)(199)))));
-            this.pnlEventosProximos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlEventosProximos.Controls.Add(this.tarjeta3);
-            this.pnlEventosProximos.Controls.Add(this.tarjeta2);
-            this.pnlEventosProximos.Controls.Add(this.tarjeta1);
-            this.pnlEventosProximos.Location = new System.Drawing.Point(935, 101);
-            this.pnlEventosProximos.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlEventosProximos.Name = "pnlEventosProximos";
-            this.pnlEventosProximos.Size = new System.Drawing.Size(415, 649);
-            this.pnlEventosProximos.TabIndex = 25;
-            // 
-            // tarjeta3
-            // 
-            this.tarjeta3.Location = new System.Drawing.Point(-3, 434);
-            this.tarjeta3.Margin = new System.Windows.Forms.Padding(5);
-            this.tarjeta3.Name = "tarjeta3";
-            this.tarjeta3.Size = new System.Drawing.Size(428, 159);
-            this.tarjeta3.TabIndex = 3;
-            // 
-            // tarjeta2
-            // 
-            this.tarjeta2.Location = new System.Drawing.Point(-1, 258);
-            this.tarjeta2.Margin = new System.Windows.Forms.Padding(5);
-            this.tarjeta2.Name = "tarjeta2";
-            this.tarjeta2.Size = new System.Drawing.Size(412, 159);
-            this.tarjeta2.TabIndex = 2;
-            // 
-            // tarjeta1
-            // 
-            this.tarjeta1.Location = new System.Drawing.Point(-1, 92);
-            this.tarjeta1.Margin = new System.Windows.Forms.Padding(5);
-            this.tarjeta1.Name = "tarjeta1";
-            this.tarjeta1.Size = new System.Drawing.Size(395, 159);
-            this.tarjeta1.TabIndex = 1;
-            // 
-            // pnlEventosProx
-            // 
-            this.pnlEventosProx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(41)))), ((int)(((byte)(71)))));
-            this.pnlEventosProx.Controls.Add(this.lblEventosProximos);
-            this.pnlEventosProx.Location = new System.Drawing.Point(933, 86);
-            this.pnlEventosProx.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlEventosProx.Name = "pnlEventosProx";
-            this.pnlEventosProx.Size = new System.Drawing.Size(417, 86);
-            this.pnlEventosProx.TabIndex = 0;
-            // 
-            // lblEventosProximos
-            // 
-            this.lblEventosProximos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEventosProximos.AutoSize = true;
-            this.lblEventosProximos.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEventosProximos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblEventosProximos.Location = new System.Drawing.Point(75, 30);
-            this.lblEventosProximos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEventosProximos.Name = "lblEventosProximos";
-            this.lblEventosProximos.Size = new System.Drawing.Size(248, 38);
-            this.lblEventosProximos.TabIndex = 0;
-            this.lblEventosProximos.Text = "Eventos Próximos";
-            this.lblEventosProximos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pnlProxEventos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(146)))), ((int)(((byte)(199)))));
+            this.pnlProxEventos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlProxEventos.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlProxEventos.Location = new System.Drawing.Point(707, 0);
+            this.pnlProxEventos.Name = "pnlProxEventos";
+            this.pnlProxEventos.Size = new System.Drawing.Size(277, 387);
+            this.pnlProxEventos.TabIndex = 25;
             // 
             // imagenes
             // 
-            this.imagenes.Location = new System.Drawing.Point(0, 86);
-            this.imagenes.Margin = new System.Windows.Forms.Padding(4);
+            this.imagenes.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imagenes.Location = new System.Drawing.Point(0, 0);
             this.imagenes.Name = "imagenes";
-            this.imagenes.Size = new System.Drawing.Size(933, 409);
+            this.imagenes.Size = new System.Drawing.Size(708, 387);
             this.imagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imagenes.TabIndex = 26;
             this.imagenes.TabStop = false;
             // 
-            // ImageTimer
+            // imageTimer
             // 
-            this.ImageTimer.Enabled = true;
-            this.ImageTimer.Interval = 5000;
-            this.ImageTimer.Tick += new System.EventHandler(this.timer1_Tick);
+            this.imageTimer.Enabled = true;
+            this.imageTimer.Interval = 5000;
+            this.imageTimer.Tick += new System.EventHandler(this.imageTimer_Tick);
             // 
-            // imageList1
+            // imageList
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "EEGGCC.jpg");
-            this.imageList1.Images.SetKeyName(1, "Estudiante.png");
-            this.imageList1.Images.SetKeyName(2, "foto-29.jpg");
-            this.imageList1.Images.SetKeyName(3, "pexels-pixabay-261621.jpg");
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "EEGGCC.jpg");
+            this.imageList.Images.SetKeyName(1, "Estudiante.png");
+            this.imageList.Images.SetKeyName(2, "foto-29.jpg");
+            this.imageList.Images.SetKeyName(3, "pexels-pixabay-261621.jpg");
+            // 
+            // pnlMenu
+            // 
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(106)))), ((int)(((byte)(145)))));
+            this.pnlMenu.Controls.Add(this.btnInfo);
+            this.pnlMenu.Controls.Add(this.btnEventos);
+            this.pnlMenu.Controls.Add(this.btnAsesorias);
+            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlMenu.Location = new System.Drawing.Point(0, 70);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(984, 50);
+            this.pnlMenu.TabIndex = 27;
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnInfo.Location = new System.Drawing.Point(248, 6);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(138, 38);
+            this.btnInfo.TabIndex = 2;
+            this.btnInfo.Text = "Base de Datos";
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
+            // btnEventos
+            // 
+            this.btnEventos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEventos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEventos.FlatAppearance.BorderSize = 0;
+            this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEventos.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEventos.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEventos.Location = new System.Drawing.Point(130, 6);
+            this.btnEventos.Name = "btnEventos";
+            this.btnEventos.Size = new System.Drawing.Size(112, 38);
+            this.btnEventos.TabIndex = 1;
+            this.btnEventos.Text = "Eventos";
+            this.btnEventos.UseVisualStyleBackColor = true;
+            this.btnEventos.Click += new System.EventHandler(this.btnEvento_Click);
+            // 
+            // btnAsesorias
+            // 
+            this.btnAsesorias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAsesorias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAsesorias.FlatAppearance.BorderSize = 0;
+            this.btnAsesorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsesorias.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsesorias.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAsesorias.Location = new System.Drawing.Point(12, 6);
+            this.btnAsesorias.Name = "btnAsesorias";
+            this.btnAsesorias.Size = new System.Drawing.Size(112, 38);
+            this.btnAsesorias.TabIndex = 0;
+            this.btnAsesorias.Text = "Asesorías";
+            this.btnAsesorias.UseVisualStyleBackColor = true;
+            this.btnAsesorias.Click += new System.EventHandler(this.btnAsesoria_Click);
+            // 
+            // pnlBody
+            // 
+            this.pnlBody.Controls.Add(this.pnlProxEventos);
+            this.pnlBody.Controls.Add(this.imagenes);
+            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlBody.Location = new System.Drawing.Point(0, 120);
+            this.pnlBody.Name = "pnlBody";
+            this.pnlBody.Size = new System.Drawing.Size(984, 387);
+            this.pnlBody.TabIndex = 28;
+            // 
+            // pnlFoot
+            // 
+            this.pnlFoot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(106)))), ((int)(((byte)(145)))));
+            this.pnlFoot.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlFoot.Location = new System.Drawing.Point(0, 507);
+            this.pnlFoot.Name = "pnlFoot";
+            this.pnlFoot.Size = new System.Drawing.Size(984, 54);
+            this.pnlFoot.TabIndex = 29;
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1352, 752);
-            this.Controls.Add(this.pnlEventosProx);
-            this.Controls.Add(this.imagenes);
-            this.Controls.Add(this.pnlEventosProximos);
-            this.Controls.Add(this.pnlEventos);
-            this.Controls.Add(this.pnlCitas);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.pnlFoot);
+            this.Controls.Add(this.pnlBody);
+            this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menú principal";
-            this.Load += new System.EventHandler(this.frmPrincipal_Load_1);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Text = "Portal OOIA";
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
-            this.pnlCitas.ResumeLayout(false);
-            this.pnlCitas.PerformLayout();
-            this.pnlEventos.ResumeLayout(false);
-            this.pnlEventos.PerformLayout();
-            this.pnlEventosProximos.ResumeLayout(false);
-            this.pnlEventosProx.ResumeLayout(false);
-            this.pnlEventosProx.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).EndInit();
+            this.pnlMenu.ResumeLayout(false);
+            this.pnlBody.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Button btnAtras;
-        private System.Windows.Forms.Button btnEventos;
-        private System.Windows.Forms.Label txtEventos;
-        private System.Windows.Forms.Button btnCitas;
-        private System.Windows.Forms.Label txtCitas;
-        private System.Windows.Forms.Panel pnlCitas;
-        private System.Windows.Forms.Panel pnlEventos;
-        private System.Windows.Forms.Panel pnlEventosProximos;
-        private System.Windows.Forms.Panel pnlEventosProx;
-        private System.Windows.Forms.Label lblEventosProximos;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Panel pnlProxEventos;
         private System.Windows.Forms.PictureBox imagenes;
-        private System.Windows.Forms.Timer ImageTimer;
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button btnCargaDatos;
-        private Componentes.CardEvento tarjeta3;
-        private Componentes.CardEvento tarjeta2;
-        private Componentes.CardEvento tarjeta1;
+        private System.Windows.Forms.Timer imageTimer;
+        private System.Windows.Forms.ImageList imageList;
         private OvalPictureBox imagen;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.Button btnInfo;
+        private System.Windows.Forms.Button btnEventos;
+        private System.Windows.Forms.Button btnAsesorias;
+        private System.Windows.Forms.Panel pnlBody;
+        private System.Windows.Forms.Panel pnlFoot;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

@@ -144,7 +144,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            new frmPrincipal(TipoUsuario.Alumno,persona).Show();
+            new frmPrincipal((GestionHumanaWS.miembroPUCP)persona).Show();
             this.Close();
         }
 

@@ -241,7 +241,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            new frmPrincipal(TipoUsuario.OOIA,persona).Show();
+            new frmPrincipal((GestionHumanaWS.miembroPUCP)persona).Show();
             this.Close();
         }
 
