@@ -983,8 +983,8 @@
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.ponente1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS1.wsdl" />
-    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS1.xsd">
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS.wsdl" />
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.alumno.datasource">
@@ -1096,6 +1096,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarPsicologoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.obtener_estadoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.ponente.datasource">

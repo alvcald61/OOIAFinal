@@ -33,11 +33,13 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
                 (daoAlumno.listar_alumno_x_evento(this.evento.id_evento).ToList());
                 dgvAlumnos.DataSource = alumnos;
                 bool b;
+
                 for (int i = 0; i < alumnos.Count; i++)
                 {
-                    if (new GestionAtencionWS.GestionAtencionWSClient().obtener_estado(evento.id_evento, alumnos[i].id_alumno, 0) == 1) b = true;
-                    else b = false;
-                    lista.Add(b);
+                    //if (new GestionAtencionWS.GestionAtencionWSClient().obtener_estado(evento.id_evento, alumnos[i].id_alumno, 0) == 1) b = true;
+                    //else b = false;
+                    //lista.Add(b);
+                    lista.Add(daoAlumno.obtener_estado(this.evento.id_evento, alumnos[i].id_alumno));
                 }
                 vez = 1;
 

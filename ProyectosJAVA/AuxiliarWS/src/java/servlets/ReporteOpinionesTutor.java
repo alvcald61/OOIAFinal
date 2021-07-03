@@ -44,21 +44,28 @@ public class ReporteOpinionesTutor extends HttpServlet {
             //Referencia al reporte
             JasperReport reporte  = 
                     (JasperReport)JRLoader.loadObject(ReporteOpinionesTutor.class.getResource(
-                            "/reportes/ReporteTutoresOpinion.jasper"));
+                            "/reportes/ReporteTutoresOpinion.jasper"));     
+            //Referencias a los subreportes 
             String rutaSubreporte1 = ReporteOpinionesTutor.class.getResource("/reportes/SubDatosAsesor.jasper").getPath();
-            
-            //Arreglo de parametros
+            rutaSubreporte1 = rutaSubreporte1.replaceAll("%20", " ");     
+            String rutaSubreporteGrafico = ReporteOpinionesTutor.class.getResource("/reportes/ReporteGrafico.jasper").getPath();
+            rutaSubreporteGrafico = rutaSubreporteGrafico.replaceAll("%20", " ");         
+            //Referencia a la imagen
+            String rutaImagen = ReporteOpinionesTutor.class.getResource("/imagenes/cabeceraPUCP.png").getPath();
+            Image cabecera = (new ImageIcon(rutaImagen)).getImage();       
+            //Arreglo de parametros que ingresan al reporte
             HashMap hm = new HashMap();
-//            hm.put("IdAsesor", idAsesor);//cambiar el 7
             hm.put("IdAsesor", 6);//cambiamos el 7 por id Asesor
             hm.put("Ruta_subreporte", rutaSubreporte1);
+            hm.put("Ruta_grafico", rutaSubreporteGrafico);
+            hm.put("Imagen", cabecera);
             //Objeto de Conexion
             Connection con = DBManager.getInstance().getConnection();        
             //poblamos el reporte
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
             //Cerramos la conexion
             con.close();          
-            //Mostramos el reporte 
+            //Mostramos el reporte via web
             JasperExportManager.exportReportToPdfStream(jp, response.getOutputStream());
         }catch(Exception ex){
             System.out.println(ex.getMessage());//el error aparece en el glassfish

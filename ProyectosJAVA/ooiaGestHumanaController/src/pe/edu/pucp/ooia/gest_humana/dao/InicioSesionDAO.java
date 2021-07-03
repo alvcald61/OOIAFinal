@@ -14,4 +14,5 @@ public interface InicioSesionDAO {
     public int tipoUsuario(int id_persona);
     public Object[] listar_usuario_correo(String correo);
     public int cambiar_password(int id_miembro_pucp,String password);
+    
 }

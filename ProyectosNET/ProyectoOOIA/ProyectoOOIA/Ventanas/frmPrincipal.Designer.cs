@@ -132,6 +132,19 @@ namespace ProyectoOOIA.Ventanas
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // imagen
+            // 
+            this.imagen.BackColor = System.Drawing.Color.Transparent;
+            this.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imagen.Image = global::ProyectoOOIA.Properties.Resources.placeholder_profile;
+            this.imagen.Location = new System.Drawing.Point(20, 5);
+            this.imagen.Name = "imagen";
+            this.imagen.Size = new System.Drawing.Size(60, 60);
+            this.imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imagen.TabIndex = 27;
+            this.imagen.TabStop = false;
+            // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;

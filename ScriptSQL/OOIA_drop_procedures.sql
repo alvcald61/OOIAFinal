@@ -126,3 +126,6 @@ drop procedure if exists LISTAR_ALUMNO_X_EVENTO;
 drop procedure if exists OBTENER_ASISTENCIA;
 drop procedure if exists MODIFIACR_ASISTENCIA;
 drop procedure if exists MODIFICAR_HORARIO_ASESOR_SIN_ID;
+drop procedure if exists VALIDAR_USUARIO_UNICO;
+
+

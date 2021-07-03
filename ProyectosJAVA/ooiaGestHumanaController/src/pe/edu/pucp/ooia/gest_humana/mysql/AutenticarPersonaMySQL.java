@@ -43,6 +43,22 @@ public class AutenticarPersonaMySQL implements AutenticarPersonaDAO{
         }
         return resultado;//si el resultado es 0 entonces la persona es nueva
     }
-    
+    @Override
+    public int autenticarUsuarioUnico(String usuario){
+        int resultado=0;   
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call VALIDAR_USUARIO_UNICO(?)}");
+            cs.setString("_usuario", usuario);
+            rs=cs.executeQuery();
+            if(rs.next())
+                resultado=1;
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
     
 }

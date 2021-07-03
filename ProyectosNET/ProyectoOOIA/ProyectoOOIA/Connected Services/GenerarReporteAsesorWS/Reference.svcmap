@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.187.65:8080/AuxiliarWS/ReporteAsesorOpinionWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/AuxiliarWS/ReporteAsesorOpinionWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReporteAsesorOpinionWS1.wsdl" MetadataType="Wsdl" ID="c0ac671e-0bb6-4486-9ef5-d86fb83f7d3b" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/ReporteAsesorOpinionWS?WSDL" />
-    <MetadataFile FileName="ReporteAsesorOpinionWS1.xsd" MetadataType="Schema" ID="be27f809-e83f-4571-a7d5-201cb358eb0b" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/ReporteAsesorOpinionWS?xsd=1" />
+    <MetadataFile FileName="ReporteAsesorOpinionWS.wsdl" MetadataType="Wsdl" ID="e64277c8-21e6-4f04-8df5-d451f99f823e" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/ReporteAsesorOpinionWS?WSDL" />
+    <MetadataFile FileName="ReporteAsesorOpinionWS.xsd" MetadataType="Schema" ID="e6b97e45-f83b-4a02-885e-cd6821f68b34" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/ReporteAsesorOpinionWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -29,6 +29,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarPsicologo));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
@@ -71,6 +72,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.lblRama = new System.Windows.Forms.Label();
             this.txtRama = new System.Windows.Forms.TextBox();
             this.ofd_Imagen = new System.Windows.Forms.OpenFileDialog();
+            this.ttContra = new System.Windows.Forms.ToolTip(this.components);
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -278,6 +280,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(271, 20);
             this.txtCorreo.TabIndex = 21;
+            this.txtCorreo.Enter += new System.EventHandler(this.txtDni_Enter);
+            this.txtCorreo.Leave += new System.EventHandler(this.txtDni_Leave);
             // 
             // lblCorreo
             // 
@@ -339,6 +343,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(100, 20);
             this.txtDni.TabIndex = 13;
+            this.txtDni.Enter += new System.EventHandler(this.txtDni_Enter);
+            this.txtDni.Leave += new System.EventHandler(this.txtDni_Leave);
             // 
             // lblDni
             // 
@@ -427,6 +433,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(145, 20);
             this.txtUsuario.TabIndex = 13;
+            this.txtUsuario.Enter += new System.EventHandler(this.txtDni_Enter);
+            this.txtUsuario.MouseHover += new System.EventHandler(this.txtDni_Leave);
             // 
             // txtPassword
             // 
@@ -497,6 +505,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // ofd_Imagen
             // 
             this.ofd_Imagen.FileName = "Alumno_Perfil";
+            // 
+            // ttContra
+            // 
+            this.ttContra.AutomaticDelay = 100;
+            this.ttContra.AutoPopDelay = 2000;
+            this.ttContra.InitialDelay = 100;
+            this.ttContra.IsBalloon = true;
+            this.ttContra.ReshowDelay = 20;
+            this.ttContra.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttContra.ToolTipTitle = "Consejo";
             // 
             // frmGestionarPsicologo
             // 
@@ -569,5 +587,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.Label lblPag2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolTip ttContra;
     }
 }
