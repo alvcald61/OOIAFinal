@@ -152,7 +152,15 @@ namespace ProyectoOOIA.Ventanas
 
         private void iniciarEventosProximos()
         {
-            evento []aux=eventoDao.listar_tres_eventos_proximos();
+            evento[] aux;
+            try
+            {
+                 aux = eventoDao.listar_tres_eventos_proximos();
+            }
+            catch
+            {
+                return;
+            }
             if (aux == null) return;
             listaEventos =new BindingList<evento>(aux);
             if (listaEventos.Count > 0)

@@ -226,6 +226,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(145, 20);
             this.txtUsuario.TabIndex = 13;
+            this.txtUsuario.Enter += new System.EventHandler(this.txtDni_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtDni_Leave);
             // 
             // txtPassword
             // 
@@ -301,6 +303,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.Enter += new System.EventHandler(this.txtDni_Enter);
+            this.txtCodigo.Leave += new System.EventHandler(this.txtDni_Leave);
             // 
             // lblCodigo
             // 
@@ -401,6 +405,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(271, 20);
             this.txtCorreo.TabIndex = 21;
+            this.txtCorreo.Enter += new System.EventHandler(this.txtDni_Enter);
+            this.txtCorreo.Leave += new System.EventHandler(this.txtDni_Leave);
             // 
             // lblCorreo
             // 
@@ -462,6 +468,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(100, 20);
             this.txtDni.TabIndex = 13;
+            this.txtDni.Enter += new System.EventHandler(this.txtDni_Enter);
+            this.txtDni.Leave += new System.EventHandler(this.txtDni_Leave);
             // 
             // lblDni
             // 
@@ -529,6 +537,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.tsAlumno);
             this.Controls.Add(this.pnlHeader);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionarAlumno";
             this.Text = "Gestionar Alumnos";
             this.pnlHeader.ResumeLayout(false);

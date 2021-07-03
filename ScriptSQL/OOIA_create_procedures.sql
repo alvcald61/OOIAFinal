@@ -89,7 +89,7 @@ create procedure MODIFICAR_ALUMNO(
     	in _correo varchar(150),
     	-- miembro_pucp
     	in _usuario varchar(150),
-    	in _password varchar(150),
+    	
     	in _fecha_inclusion date,
     	in _imagen_perfil longblob,
 	-- alumno
@@ -109,7 +109,7 @@ begin
 	update persona set nombre = _nombre,  dni = _dni,  fecha_nacimiento = _fecha_nacimiento, direccion = _direccion , correo=_correo
     	where id_persona = aux_persona;
      	-- miembro_pucp
-	update miembro_pucp set usuario = _usuario, password = _password, fecha_inclusion = _fecha_inclusion, imagen_perfil = _imagen_perfil
+	update miembro_pucp set usuario = _usuario,  fecha_inclusion = _fecha_inclusion, imagen_perfil = _imagen_perfil
     	where fid_persona = aux_persona;
     	-- alumno
     	update alumno set codigo = _codigo, fid_especialidad = _fid_especialidad, craest = _craest, creditos_aprobados = _creditos_aprobados
@@ -201,7 +201,7 @@ create procedure MODIFICAR_PROFESOR(
     	in _correo varchar(150),
     	-- miembro_pucp
     	in _usuario varchar(150),
-    	in _password varchar(150),
+    	
     	in _fecha_inclusion date,
     	in _imagen_perfil longblob,
 	-- profesor
@@ -220,7 +220,7 @@ begin
     	update persona set nombre = _nombre,  dni = _dni,  fecha_nacimiento = _fecha_nacimiento, direccion = _direccion ,correo=_correo
     	where id_persona = aux_persona;
      	-- miembro_pucp
-	update miembro_pucp set usuario = _usuario, password = MD5(_password), fecha_inclusion = _fecha_inclusion, imagen_perfil = _imagen_perfil
+	update miembro_pucp set usuario = _usuario, fecha_inclusion = _fecha_inclusion, imagen_perfil = _imagen_perfil
     	where fid_persona = aux_persona;
     	-- profesor
     	update profesor set fid_especialidad = _fid_especialidad, facultad = _facultad, categoria = _categoria
@@ -309,7 +309,7 @@ create procedure MODIFICAR_PSICOLOGO(
     	in _correo varchar(150),
     	-- miembro_pucp
     	in _usuario varchar(150),
-    	in _password varchar(150),
+    	
     	in _fecha_inclusion date,
     	in _imagen_perfil longblob,
 	-- psicologo
@@ -326,7 +326,7 @@ begin
     	update persona set nombre = _nombre,  dni = _dni,  fecha_nacimiento = _fecha_nacimiento, direccion = _direccion , correo=_correo
     	where id_persona = aux_persona;
      	-- miembro_pucp
-	update miembro_pucp set usuario = _usuario, password = MD5(_password), fecha_inclusion = _fecha_inclusion, imagen_perfil = _imagen_perfil
+	update miembro_pucp set usuario = _usuario, fecha_inclusion = _fecha_inclusion, imagen_perfil = _imagen_perfil
     	where fid_persona = aux_persona;
 	-- psicologo
 	update psicologo set rama = _rama
@@ -1441,4 +1441,14 @@ in estado bool
 )
 begin
 update evento_alumno set asistencia=estado where fid_alumno=_alumno and fid_evento=_evento;
+end$
+
+delimiter $
+create procedure VALIDAR_USUARIO_UNICO(
+in _usuario varchar(100))
+begin
+select usuario
+from miembro_pucp
+where usuario=_usuario;
+
 end$
