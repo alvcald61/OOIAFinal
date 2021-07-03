@@ -36,7 +36,6 @@ namespace ProyectoOOIA.Ventanas
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.imagen = new OvalPictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.pnlProxEventos = new System.Windows.Forms.Panel();
             this.imagenes = new System.Windows.Forms.PictureBox();
@@ -48,11 +47,12 @@ namespace ProyectoOOIA.Ventanas
             this.btnAsesorias = new System.Windows.Forms.Button();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.pnlFoot = new System.Windows.Forms.Panel();
+            this.imagen = new OvalPictureBox();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).BeginInit();
             this.pnlMenu.SuspendLayout();
             this.pnlBody.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -128,19 +128,6 @@ namespace ProyectoOOIA.Ventanas
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // imagen
-            // 
-            this.imagen.BackColor = System.Drawing.Color.Transparent;
-            this.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imagen.Image = global::ProyectoOOIA.Properties.Resources.placeholder_profile;
-            this.imagen.Location = new System.Drawing.Point(20, 5);
-            this.imagen.Name = "imagen";
-            this.imagen.Size = new System.Drawing.Size(60, 60);
-            this.imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imagen.TabIndex = 27;
-            this.imagen.TabStop = false;
             // 
             // lblUsername
             // 
@@ -267,6 +254,18 @@ namespace ProyectoOOIA.Ventanas
             this.pnlFoot.Size = new System.Drawing.Size(984, 54);
             this.pnlFoot.TabIndex = 29;
             // 
+            // imagen
+            // 
+            this.imagen.BackColor = System.Drawing.Color.Transparent;
+            this.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imagen.Location = new System.Drawing.Point(20, 5);
+            this.imagen.Name = "imagen";
+            this.imagen.Size = new System.Drawing.Size(60, 60);
+            this.imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imagen.TabIndex = 27;
+            this.imagen.TabStop = false;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,10 +281,10 @@ namespace ProyectoOOIA.Ventanas
             this.Text = "Portal OOIA";
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.pnlBody.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             this.ResumeLayout(false);
 
         }

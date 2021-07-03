@@ -1012,6 +1012,9 @@
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.modificarEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.obtener_estadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.ponente1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1040,9 +1043,6 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse11.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1062,9 +1062,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse11.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarEspecialidadResponse1.datasource">
@@ -1124,9 +1121,6 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse11.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarEspecialidadResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1137,9 +1131,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarPsicologoResponse1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.obtener_estadoResponse11.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.ponente.datasource">

@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import pe.edu.pucp.config.DBManager;
+import pe.edu.pucp.ooia.gest_humana.dao.AlumnoDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.AutenticarPersonaDAO;
 
 /**
@@ -43,6 +44,10 @@ public class AutenticarPersonaMySQL implements AutenticarPersonaDAO{
         }
         return resultado;//si el resultado es 0 entonces la persona es nueva
     }
+    
+    
+    
+    
     @Override
     public int autenticarUsuarioUnico(String usuario){
         int resultado=0;   
