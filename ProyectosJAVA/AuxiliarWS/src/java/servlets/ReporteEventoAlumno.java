@@ -39,12 +39,25 @@ public class ReporteEventoAlumno extends HttpServlet {
             //
             Connection con = DBManager.getInstance().getConnection();
             
-             String rutaSubreporte = ReporteOpinionesTutor.class.getResource("/reportes/SubReporteEvento.jasper").getPath();
+            String rutaSubreporte = ReporteEventoAlumno.class.getResource("/reportes/SubReporteEvento.jasper").getPath();
+            rutaSubreporte = rutaSubreporte.replaceAll("%20", " ");
             
+            String rutaValoracionPonentes = ReporteEventoAlumno.class.getResource("/reportes/ValoracionPonentes.jasper").getPath();
+            rutaValoracionPonentes = rutaValoracionPonentes.replaceAll("%20", " ");
+            
+            String rutaValoracionEvento = ReporteEventoAlumno.class.getResource("/reportes/ValoracionEvento.jasper").getPath();
+            rutaValoracionEvento = rutaValoracionEvento.replaceAll("%20", " ");
+            
+            String rutaValoracionUtilidad = ReporteEventoAlumno.class.getResource("/reportes/ValoracionUtilidad.jasper").getPath();
+            rutaValoracionUtilidad = rutaValoracionUtilidad.replaceAll("%20", " ");
+            
+           
             HashMap hm = new HashMap();
             hm.put("IdEvento", 1);
             hm.put("RutaSubreporte", rutaSubreporte);
-            
+            hm.put("RutaValoracionPonentes", rutaValoracionPonentes);
+            hm.put("RutaValoracionEvento", rutaValoracionEvento);
+            hm.put("RutaValoracionUtilidad", rutaValoracionUtilidad);
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
             con.close();
             

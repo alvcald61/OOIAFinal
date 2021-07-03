@@ -58,11 +58,11 @@ namespace ProyectoOOIA.Ventanas
                 lblTitulo.Text = "OOIA - Alumno";
                 //Visible
                 btnAsesorias.Visible = true;
-                btnEventos.Visible = false;
+                btnEventos.Visible = true;
                 btnInfo.Visible = false;
                 //Enabled
                 btnAsesorias.Enabled = true;
-                btnEventos.Enabled = false;
+                btnEventos.Enabled = true;
                 btnInfo.Enabled = false;
                 //Positions
                 btnAsesorias.Location = new Point(12,6);
@@ -105,7 +105,7 @@ namespace ProyectoOOIA.Ventanas
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.profesor);
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.EEGGCC);
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.Estudiante);
-            listaImagenes.Add(ProyectoOOIA.Properties.Resources.Tramite);
+            listaImagenes.Add(ProyectoOOIA.Properties.Resources.Evento);
             imagenes.Image = listaImagenes[0];
         }
 

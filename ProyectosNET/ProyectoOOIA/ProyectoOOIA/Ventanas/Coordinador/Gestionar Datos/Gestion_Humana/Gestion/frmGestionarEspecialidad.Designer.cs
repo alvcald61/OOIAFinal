@@ -30,6 +30,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarEspecialidad));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.lblHeader = new System.Windows.Forms.Label();
@@ -68,7 +69,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(744, 76);
+            this.pnlHeader.Size = new System.Drawing.Size(744, 70);
             this.pnlHeader.TabIndex = 2;
             // 
             // btnBack
@@ -96,16 +97,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             // 
             // tsAlumno
             // 
-            this.tsAlumno.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.tsAlumno.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tsbGuardar,
             this.tsbModificar,
             this.tsbEliminar,
             this.tsbCancelar});
-            this.tsAlumno.Location = new System.Drawing.Point(0, 76);
+            this.tsAlumno.Location = new System.Drawing.Point(0, 70);
             this.tsAlumno.Name = "tsAlumno";
-            this.tsAlumno.Size = new System.Drawing.Size(744, 27);
+            this.tsAlumno.Size = new System.Drawing.Size(744, 25);
             this.tsAlumno.TabIndex = 3;
             this.tsAlumno.Text = "tsAlumno";
             // 
@@ -114,9 +114,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.tsbNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNuevo.Image")));
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(66, 24);
-            this.tsbNuevo.Text = "Nuevo";
-            this.tsbNuevo.ToolTipText = "Nuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "&Nuevo";
+            this.tsbNuevo.ToolTipText = "&Nuevo";
             this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbGuardar
@@ -124,8 +124,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.tsbGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsbGuardar.Image")));
             this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(73, 24);
-            this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Text = "&Guardar";
             this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
             // tsbModificar
@@ -133,25 +133,25 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(82, 24);
+            this.tsbModificar.Size = new System.Drawing.Size(78, 22);
             this.tsbModificar.Text = "Modificar";
             this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
             // 
             // tsbEliminar
             // 
-            this.tsbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminar.Image")));
+            this.tsbEliminar.Image = global::ProyectoOOIA.Properties.Resources.Eraser_16x;
             this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEliminar.Name = "tsbEliminar";
-            this.tsbEliminar.Size = new System.Drawing.Size(74, 24);
+            this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
             this.tsbEliminar.Text = "Eliminar";
             this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
             // tsbCancelar
             // 
-            this.tsbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancelar.Image")));
+            this.tsbCancelar.Image = global::ProyectoOOIA.Properties.Resources.Cancel_16x;
             this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(77, 24);
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
             this.tsbCancelar.Text = "Cancelar";
             this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
@@ -168,7 +168,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.pnlDatos.Controls.Add(this.lblId_especialidad);
             this.pnlDatos.Controls.Add(this.lblEspecialidad);
             this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDatos.Location = new System.Drawing.Point(0, 103);
+            this.pnlDatos.Location = new System.Drawing.Point(0, 95);
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(744, 296);
             this.pnlDatos.TabIndex = 4;
@@ -214,28 +214,41 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             // 
             this.dgvEspecialidad.AllowUserToAddRows = false;
             this.dgvEspecialidad.AllowUserToDeleteRows = false;
+            this.dgvEspecialidad.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEspecialidad.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEspecialidad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEspecialidad.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_especialidad,
             this.nombre});
+            this.dgvEspecialidad.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvEspecialidad.EnableHeadersVisualStyles = false;
             this.dgvEspecialidad.Location = new System.Drawing.Point(17, 155);
             this.dgvEspecialidad.Name = "dgvEspecialidad";
+            this.dgvEspecialidad.RowHeadersVisible = false;
+            this.dgvEspecialidad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEspecialidad.Size = new System.Drawing.Size(515, 131);
             this.dgvEspecialidad.TabIndex = 20;
             // 
             // id_especialidad
             // 
             this.id_especialidad.DataPropertyName = "id_especialidad";
-            this.id_especialidad.HeaderText = "Id Especialidad";
+            this.id_especialidad.HeaderText = "Id";
             this.id_especialidad.Name = "id_especialidad";
-            this.id_especialidad.Width = 150;
+            this.id_especialidad.Width = 80;
             // 
             // nombre
             // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nombre.DataPropertyName = "nombre";
             this.nombre.HeaderText = "Nombre de la especialidad";
             this.nombre.Name = "nombre";
-            this.nombre.Width = 320;
             // 
             // txtNombre
             // 
@@ -290,6 +303,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.Controls.Add(this.tsAlumno);
             this.Controls.Add(this.pnlHeader);
             this.Name = "frmGestionarEspecialidad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Gestionar Especialidades";
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
@@ -324,8 +338,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
         private System.Windows.Forms.DataGridView dgvEspecialidad;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_especialidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.ToolStripButton tsbGuardar;
     }
 }

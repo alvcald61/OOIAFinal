@@ -12,4 +12,5 @@ package pe.edu.pucp.ooia.gest_humana.dao;
 public interface AutenticarPersonaDAO {
     public int autenticarPersona(int dni);
     public int autenticarUsuarioUnico(String usuario);
+    public int validarUnicoRegistroAEvento(int id_alumno,int id_evento);
 }

@@ -1257,6 +1257,14 @@ create procedure autenticarPersona(
 end$
 
 delimiter $
+create procedure VALIDAR_REGISTRO_ALUMNO_EVENTO(
+	in _id_alumno int,
+    in _id_evento int
+)begin
+	select * from evento_alumno where fid_alumno = _id_alumno and fid_evento =_id_evento;
+end$
+
+delimiter $
 create procedure tipoUsuario(in _id_persona int)
 begin
 select  case

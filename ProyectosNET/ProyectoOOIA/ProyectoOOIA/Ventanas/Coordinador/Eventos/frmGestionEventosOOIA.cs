@@ -31,6 +31,7 @@ namespace ProyectoOOIA.Ventanas
         ErrorProvider errorInicio = new ErrorProvider();
         ErrorProvider errorDescripcion = new ErrorProvider();
         ErrorProvider errorLugar = new ErrorProvider();
+
         private GestionEventoWS.GestionEventoWSClient eventoDao;
         private GestionEventoWS.evento evento;
         private BindingList<GestionEventoWS.ponente> lista = new BindingList<GestionEventoWS.ponente>();
@@ -76,9 +77,7 @@ namespace ProyectoOOIA.Ventanas
             cboCategoria.DataSource = eventoDao.listarCategoriaEvento();
 
             cboCategoria.DisplayMember = "nombre";
-            
-
-
+          
         }
 
         private void componentes(Estado estado)
@@ -508,13 +507,6 @@ namespace ProyectoOOIA.Ventanas
                 errorLugar.SetError(txtLugar,"El campo es obligatorio");
         }
 
-     
-
-      
-        
-
-      
-
         private void dtpInicio_Enter(object sender, EventArgs e)
         {
             errorInicio.Clear();
@@ -555,8 +547,6 @@ namespace ProyectoOOIA.Ventanas
         {
             eventoDao.eliminarEvento(evento);
         }
-
-       
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {

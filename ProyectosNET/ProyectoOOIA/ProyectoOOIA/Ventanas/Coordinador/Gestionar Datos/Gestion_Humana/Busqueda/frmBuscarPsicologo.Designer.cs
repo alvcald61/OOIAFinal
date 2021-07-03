@@ -29,6 +29,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.txtHeader = new System.Windows.Forms.Label();
@@ -54,7 +55,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(725, 76);
+            this.pnlHeader.Size = new System.Drawing.Size(724, 70);
             this.pnlHeader.TabIndex = 2;
             // 
             // btnBack
@@ -84,14 +85,25 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.dgvPsicologos.AllowUserToAddRows = false;
             this.dgvPsicologos.AllowUserToDeleteRows = false;
+            this.dgvPsicologos.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPsicologos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPsicologos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPsicologos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dni,
             this.nombre,
             this.rama});
+            this.dgvPsicologos.EnableHeadersVisualStyles = false;
             this.dgvPsicologos.Location = new System.Drawing.Point(12, 114);
             this.dgvPsicologos.Name = "dgvPsicologos";
             this.dgvPsicologos.ReadOnly = true;
+            this.dgvPsicologos.RowHeadersVisible = false;
             this.dgvPsicologos.RowHeadersWidth = 51;
             this.dgvPsicologos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPsicologos.Size = new System.Drawing.Size(704, 215);
@@ -99,7 +111,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(616, 85);
+            this.btnSeleccionar.Location = new System.Drawing.Point(619, 85);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(97, 23);
             this.btnSeleccionar.TabIndex = 8;
@@ -109,7 +121,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(378, 85);
+            this.btnBuscar.Location = new System.Drawing.Point(402, 85);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 7;
@@ -119,18 +131,19 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(126, 87);
+            this.txtNombre.Font = new System.Drawing.Font("Gill Sans MT Ext Condensed Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(150, 85);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(246, 20);
+            this.txtNombre.Size = new System.Drawing.Size(246, 23);
             this.txtNombre.TabIndex = 6;
             // 
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.Location = new System.Drawing.Point(12, 90);
+            this.lblBuscar.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Location = new System.Drawing.Point(12, 85);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(108, 18);
+            this.lblBuscar.Size = new System.Drawing.Size(132, 23);
             this.lblBuscar.TabIndex = 5;
             this.lblBuscar.Text = "Ingrese el nombre:";
             // 
@@ -154,17 +167,17 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             // rama
             // 
+            this.rama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.rama.DataPropertyName = "rama";
             this.rama.HeaderText = "Rama";
             this.rama.Name = "rama";
             this.rama.ReadOnly = true;
-            this.rama.Width = 225;
             // 
             // frmBuscarPsicologo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 356);
+            this.ClientSize = new System.Drawing.Size(724, 361);
             this.Controls.Add(this.dgvPsicologos);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnBuscar);
