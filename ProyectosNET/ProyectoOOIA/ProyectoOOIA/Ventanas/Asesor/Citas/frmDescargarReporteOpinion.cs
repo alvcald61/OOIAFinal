@@ -24,8 +24,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             daoReporte = new GenerarReporteAsesorWS.ReporteAsesorOpinionWSClient();
             cargarReporte();
             btnGuardarReporte.Enabled = true;
-
-            
+         
         }
 
         private void cargarReporte()
@@ -33,8 +32,9 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             try
             {
                 arreglo = daoReporte.generarReporteAsesor(this.idAsesor);
-            }catch
+            }catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 return;
             }
             

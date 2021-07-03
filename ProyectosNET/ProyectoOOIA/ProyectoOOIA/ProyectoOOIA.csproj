@@ -120,12 +120,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\GestionHumanaWS\Reference.cs">
+    <Compile Include="Connected Services\ReporteEventoAlumnoWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\ReporteEventoAlumnoWS\Reference.cs">
+    <Compile Include="Connected Services\GestionHumanaWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -136,10 +136,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="TipoUsuario.cs" />
-    <Compile Include="Ventanas\Old\CardEvento.cs">
+    <Compile Include="Componentes\CardEvento.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ventanas\Old\CardEvento.Designer.cs">
+    <Compile Include="Componentes\CardEvento.Designer.cs">
       <DependentUpon>CardEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="Componentes\Horario.cs">
@@ -536,7 +536,7 @@
     <Compile Include="Ventanas\ucProxEvento.Designer.cs">
       <DependentUpon>ucProxEvento.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Ventanas\Old\CardEvento.resx">
+    <EmbeddedResource Include="Componentes\CardEvento.resx">
       <DependentUpon>CardEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Componentes\Horario.resx">
@@ -802,10 +802,6 @@
     <None Include="Connected Services\GenerarReporteAsesorWS\ReporteAsesorOpinionWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS.wsdl" />
-    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS1.wsdl" />
     <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS1.xsd">
       <SubType>Designer</SubType>
@@ -900,10 +896,6 @@
     </None>
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.obtener_estadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\GestionEventoWS.wsdl" />
-    <None Include="Connected Services\GestionEventoWS\GestionEventoWS.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionEventoWS\GestionEventoWS1.wsdl" />
     <None Include="Connected Services\GestionEventoWS\GestionEventoWS1.xsd">
@@ -1134,8 +1126,12 @@
     <None Include="Connected Services\ReporteEventoAlumnoWS\ProyectoOOIA.ReporteEventoAlumnoWS.generarReporteEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS.wsdl" />
-    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS.xsd">
+    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS1.wsdl" />
+    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS11.wsdl" />
+    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS11.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -1175,7 +1171,6 @@
     <None Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Search_noHalo_16x.png" />
     <None Include="Resources\save.png" />
     <None Include="Resources\white_cog1.png" />
     <None Include="Resources\white_cog.jpg" />
@@ -1238,17 +1233,15 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\configuration91.svcinfo" />
-    <None Include="Connected Services\GestionHumanaWS\configuration.svcinfo" />
-    <None Include="Connected Services\GestionHumanaWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Resources\btnNuevo.Image.png" />
-    <None Include="Resources\btnGuardar.Image.png" />
     <None Include="Connected Services\ReporteEventoAlumnoWS\configuration91.svcinfo" />
     <None Include="Connected Services\ReporteEventoAlumnoWS\configuration.svcinfo" />
     <None Include="Connected Services\ReporteEventoAlumnoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\GestionHumanaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\GestionHumanaWS\configuration.svcinfo" />
+    <None Include="Connected Services\GestionHumanaWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -1258,8 +1251,6 @@
     <None Include="Resources\placeholder_profile.jpg" />
     <None Include="Resources\edit_black.png" />
     <None Include="Resources\edit_black1.png" />
-    <None Include="Resources\Cancel_16x.png" />
-    <None Include="Resources\Eraser_16x.png" />
     <Content Include="Resources\profesor.jpg" />
     <None Include="Resources\Profile.bmp" />
     <Content Include="Resources\psicologo.jpg" />
@@ -1277,8 +1268,8 @@
     <WCFMetadataStorage Include="Connected Services\GestionEventoWS\" />
     <WCFMetadataStorage Include="Connected Services\CargarCSVprofesoresWS\" />
     <WCFMetadataStorage Include="Connected Services\ObtenerPlantillaCSVcargaWS\" />
-    <WCFMetadataStorage Include="Connected Services\GestionHumanaWS\" />
     <WCFMetadataStorage Include="Connected Services\ReporteEventoAlumnoWS\" />
+    <WCFMetadataStorage Include="Connected Services\GestionHumanaWS\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AcroPDFLib">
