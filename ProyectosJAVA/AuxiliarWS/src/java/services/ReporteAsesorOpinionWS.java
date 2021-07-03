@@ -6,11 +6,13 @@
 package services;
 
 import config.DBManager;
+import java.awt.Image;
 import java.sql.Connection;
 import java.util.HashMap;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.swing.ImageIcon;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -38,13 +40,20 @@ public class ReporteAsesorOpinionWS {
             JasperReport reporte  = 
                     (JasperReport)JRLoader.loadObject(ReporteOpinionesTutor.class.getResource(
                             "/reportes/ReporteTutoresOpinion.jasper"));
+             //Referencias a los subreportes 
             String rutaSubreporte1 = ReporteOpinionesTutor.class.getResource("/reportes/SubDatosAsesor.jasper").getPath();
-            
-            //Arreglo de parametros
+            rutaSubreporte1 = rutaSubreporte1.replaceAll("%20", " ");     
+            String rutaSubreporteGrafico = ReporteOpinionesTutor.class.getResource("/reportes/ReporteGrafico.jasper").getPath();
+            rutaSubreporteGrafico = rutaSubreporteGrafico.replaceAll("%20", " ");         
+            //Referencia a la imagen
+            String rutaImagen = ReporteOpinionesTutor.class.getResource("/imagenes/cabeceraPUCP.png").getPath();
+            Image cabecera = (new ImageIcon(rutaImagen)).getImage();       
+            //Arreglo de parametros que ingresan al reporte
             HashMap hm = new HashMap();
-//            hm.put("IdAsesor", idAsesor);//cambiar el 7
             hm.put("IdAsesor", idAsesor);//cambiamos el 7 por id Asesor
             hm.put("Ruta_subreporte", rutaSubreporte1);
+            hm.put("Ruta_grafico", rutaSubreporteGrafico);
+            hm.put("Imagen", cabecera);
             //Objeto de Conexion
             Connection con = DBManager.getInstance().getConnection();        
             //poblamos el reporte
