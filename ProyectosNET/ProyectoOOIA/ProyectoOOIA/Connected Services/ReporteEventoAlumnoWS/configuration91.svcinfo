@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="XMImj5TYqvvzmjcKngcMJfHMa7j3z5JzTSkQs/fUHN4=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ZwHqyN2u2OCTfOXEfy6pL+Z2kNJ8tl9w0A4iFDYHme8=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="ReporteEventoAlumnoWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ReporteEventoAlumnoWSPort" contract="ReporteEventoAlumnoWS.ReporteEventoAlumnoWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/AuxiliarWS/ReporteEventoAlumnoWS" bindingConfiguration="ReporteEventoAlumnoWSPortBinding">
+    <endpoint name="ReporteEventoAlumnoWSPort" contract="ReporteEventoAlumnoWS.ReporteEventoAlumnoWS" bindingType="basicHttpBinding" address="http://localhost:8080/AuxiliarWS/ReporteEventoAlumnoWS" bindingConfiguration="ReporteEventoAlumnoWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.157.187.65:8080/AuxiliarWS/ReporteEventoAlumnoWS</serializedValue>
+          <serializedValue>http://localhost:8080/AuxiliarWS/ReporteEventoAlumnoWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

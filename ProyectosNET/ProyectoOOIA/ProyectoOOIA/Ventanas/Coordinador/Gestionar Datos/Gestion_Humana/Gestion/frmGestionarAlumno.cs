@@ -22,10 +22,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private ErrorProvider errorCorreo;
         private ErrorProvider errorCodigo;
         private ErrorProvider errorUsuario;
-        public frmGestionarAlumno()
+        private string[] datosAnteriores;
 
+        public frmGestionarAlumno()
         {
-            errorCorreo = new ErrorProvider();
+        errorCorreo = new ErrorProvider();
             errorDni = new ErrorProvider();
             errorCodigo = new ErrorProvider();
             errorUsuario = new ErrorProvider();
@@ -44,6 +45,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             errorCodigo.BlinkStyle = ErrorBlinkStyle.NeverBlink;
            errorDni.BlinkStyle= ErrorBlinkStyle.NeverBlink;
             errorUsuario.BlinkStyle= ErrorBlinkStyle.NeverBlink;
+            datosAnteriores = new string[4];
+            for (int i = 0; i < datosAnteriores.Length; i++) datosAnteriores[i] = "";
         }
 
         public void clearall()
@@ -214,7 +217,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 MessageBox.Show("No ha ingresado el usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (txtPassword.Text == "")
+            if (txtPassword.Text == "" && estado == Estado.Nuevo)
             {
                 MessageBox.Show("No ha ingresado la contraseña", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -278,6 +281,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 int resultado = daoAlumno.modificarAlumno(alumno);
                 if (resultado != 0)
                 {
+                    if (txtPassword.Text != "")
+                        new GestionHumanaWS.GestionHumanaWSClient().cambiar_password(alumno.id_miembro_pucp, txtPassword.Text);
+
                     MessageBox.Show("Se ha actualizado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.estado = Estado.Inicial;
                     cambiarEstado();
@@ -342,6 +348,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         {
             this.estado = Estado.Modificar;
             cambiarEstado();
+            ttContraseña.SetToolTip(txtPassword, "Dejar vacia para mantener la contraseña anterior");
         }
 
         private void tsbEliminar_Click(object sender, EventArgs e)
@@ -366,6 +373,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             if (frmBuscar.ShowDialog() == DialogResult.OK)
             {
                 this.alumno = frmBuscar.Alumno;
+                datosAnteriores[0] = alumno.dni;
+                datosAnteriores[1] = alumno.correo;
+                datosAnteriores[2] = alumno.usuario;
+                datosAnteriores[3] = alumno.codigo;
                 fillText(this.alumno);
                 estado = Estado.Busqueda;
                 cambiarEstado();
@@ -410,6 +421,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void validarCodigo(TextBox textBox)
         {
+            if (estado == Estado.Modificar)
+                if (datosAnteriores[3] == txtCodigo.Text) return;
             string patronDNI = @"\d{8}";
             regex = new Regex(patronDNI);
             if (!regex.IsMatch(textBox.Text))
@@ -418,6 +431,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void validarUsuario(TextBox textBox)
         {
+            if (estado == Estado.Modificar)
+                if (datosAnteriores[2] == txtUsuario.Text) return;
+            if (textBox.Text == "") errorUsuario.SetError(textBox,"Debe ingresar un usuario");
+            else 
             if(new GestionHumanaWS.GestionHumanaWSClient().validar_usuario_unico(textBox.Text)==1)
             {
                 errorUsuario.SetError(textBox, "El usuario ya existe");
@@ -428,6 +445,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         {
             string patronCorreo = @"^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$";
             regex = new Regex(patronCorreo);
+            if (estado == Estado.Modificar)
+                if (datosAnteriores[1] == txtCorreo.Text) return;
             if (!regex.IsMatch(txtCorreo.Text))
             {
                 errorCorreo.SetError(sender,"El correo debe ser de la forma ejemplo@servidor.extension");
@@ -440,6 +459,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         {
             string patronDNI = @"\d{8}";
             regex = new Regex(patronDNI);
+            if (estado == Estado.Modificar)
+                if (datosAnteriores[0] == txtDni.Text) return;
             if (!regex.IsMatch(txtDni.Text))
                 errorDni.SetError(sender, "El DNI debe tener 8 digitos");
             else
