@@ -262,7 +262,7 @@ public class EventoMySQL implements EventoDAO{
     }
     
     public Coordinador obtenerCoordinador(int id_coordinador) {
-        ArrayList<Coordinador> arrayList=new CoordinadorMySQL().listar();
+        ArrayList<Coordinador> arrayList=new CoordinadorMySQL().listar("");
         for(Coordinador aux:arrayList)
             if(aux.getId_coordinador()==id_coordinador)
                 return aux;

@@ -28,7 +28,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
 
 
             ponente = new GestionEventoWS.ponente();
-            dgvPonentes.DataSource = new GestionHumanaWS.GestionHumanaWSClient().listarPonente();
+            dgvPonentes.DataSource = new GestionHumanaWS.GestionHumanaWSClient().listarPonente(txtNombre.Text);
 
         }
 

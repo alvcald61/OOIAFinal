@@ -283,7 +283,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarAlumno">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarAlumnoResponse">
     <xs:sequence>
@@ -303,7 +305,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarProfesor">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarProfesorResponse">
     <xs:sequence>
@@ -402,7 +406,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPonente">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPonenteResponse">
     <xs:sequence>
@@ -470,7 +476,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCoordinador">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCoordinadorResponse">
     <xs:sequence>
@@ -498,7 +506,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPsicologo">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPsicologoResponse">
     <xs:sequence>

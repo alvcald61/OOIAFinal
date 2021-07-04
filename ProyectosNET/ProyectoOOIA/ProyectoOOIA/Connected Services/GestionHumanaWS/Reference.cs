@@ -3300,6 +3300,20 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
     public partial class listarPsicologo : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -3877,6 +3891,20 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
     public partial class listarCoordinador : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -4278,6 +4306,20 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
     public partial class listarPonente : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -4713,6 +4755,20 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
     public partial class listarProfesor : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -4822,6 +4878,20 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
     public partial class listarAlumno : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -5617,7 +5687,15 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonente", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class listarPonenteRequest {
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
         public listarPonenteRequest() {
+        }
+        
+        public listarPonenteRequest(string nombre) {
+            this.nombre = nombre;
         }
     }
     
@@ -5722,7 +5800,15 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarAlumno", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class listarAlumnoRequest {
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
         public listarAlumnoRequest() {
+        }
+        
+        public listarAlumnoRequest(string nombre) {
+            this.nombre = nombre;
         }
     }
     
@@ -5822,7 +5908,15 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarPsicologo", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class listarPsicologoRequest {
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
         public listarPsicologoRequest() {
+        }
+        
+        public listarPsicologoRequest(string nombre) {
+            this.nombre = nombre;
         }
     }
     
@@ -6030,7 +6124,15 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarProfesor", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class listarProfesorRequest {
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
         public listarProfesorRequest() {
+        }
+        
+        public listarProfesorRequest(string nombre) {
+            this.nombre = nombre;
         }
     }
     
@@ -6058,7 +6160,15 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarCoordinador", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class listarCoordinadorRequest {
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
         public listarCoordinadorRequest() {
+        }
+        
+        public listarCoordinadorRequest(string nombre) {
+            this.nombre = nombre;
         }
     }
     
@@ -6962,8 +7072,9 @@ namespace ProyectoOOIA.GestionHumanaWS {
             return base.Channel.listarPonente(request);
         }
         
-        public ProyectoOOIA.GestionHumanaWS.ponente[] listarPonente() {
+        public ProyectoOOIA.GestionHumanaWS.ponente[] listarPonente(string nombre) {
             ProyectoOOIA.GestionHumanaWS.listarPonenteRequest inValue = new ProyectoOOIA.GestionHumanaWS.listarPonenteRequest();
+            inValue.nombre = nombre;
             ProyectoOOIA.GestionHumanaWS.listarPonenteResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listarPonente(inValue);
             return retVal.@return;
         }
@@ -6973,8 +7084,9 @@ namespace ProyectoOOIA.GestionHumanaWS {
             return base.Channel.listarPonenteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarPonenteResponse> listarPonenteAsync() {
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarPonenteResponse> listarPonenteAsync(string nombre) {
             ProyectoOOIA.GestionHumanaWS.listarPonenteRequest inValue = new ProyectoOOIA.GestionHumanaWS.listarPonenteRequest();
+            inValue.nombre = nombre;
             return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listarPonenteAsync(inValue);
         }
         
@@ -7031,8 +7143,9 @@ namespace ProyectoOOIA.GestionHumanaWS {
             return base.Channel.listarAlumno(request);
         }
         
-        public ProyectoOOIA.GestionHumanaWS.alumno[] listarAlumno() {
+        public ProyectoOOIA.GestionHumanaWS.alumno[] listarAlumno(string nombre) {
             ProyectoOOIA.GestionHumanaWS.listarAlumnoRequest inValue = new ProyectoOOIA.GestionHumanaWS.listarAlumnoRequest();
+            inValue.nombre = nombre;
             ProyectoOOIA.GestionHumanaWS.listarAlumnoResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listarAlumno(inValue);
             return retVal.@return;
         }
@@ -7042,8 +7155,9 @@ namespace ProyectoOOIA.GestionHumanaWS {
             return base.Channel.listarAlumnoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarAlumnoResponse> listarAlumnoAsync() {
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarAlumnoResponse> listarAlumnoAsync(string nombre) {
             ProyectoOOIA.GestionHumanaWS.listarAlumnoRequest inValue = new ProyectoOOIA.GestionHumanaWS.listarAlumnoRequest();
+            inValue.nombre = nombre;
             return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listarAlumnoAsync(inValue);
         }
         
@@ -7098,8 +7212,9 @@ namespace ProyectoOOIA.GestionHumanaWS {
             return base.Channel.listarPsicologo(request);
         }
         
-        public ProyectoOOIA.GestionHumanaWS.psicologo[] listarPsicologo() {
+        public ProyectoOOIA.GestionHumanaWS.psicologo[] listarPsicologo(string nombre) {
             ProyectoOOIA.GestionHumanaWS.listarPsicologoRequest inValue = new ProyectoOOIA.GestionHumanaWS.listarPsicologoRequest();
+            inValue.nombre = nombre;
             ProyectoOOIA.GestionHumanaWS.listarPsicologoResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listarPsicologo(inValue);
             return retVal.@return;
         }
@@ -7109,8 +7224,9 @@ namespace ProyectoOOIA.GestionHumanaWS {
             return base.Channel.listarPsicologoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarPsicologoResponse> listarPsicologoAsync() {
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarPsicologoResponse> listarPsicologoAsync(string nombre) {
             ProyectoOOIA.GestionHumanaWS.listarPsicologoRequest inValue = new ProyectoOOIA.GestionHumanaWS.listarPsicologoRequest();
+            inValue.nombre = nombre;
             return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listarPsicologoAsync(inValue);
         }
         
@@ -7234,8 +7350,9 @@ namespace ProyectoOOIA.GestionHumanaWS {
             return base.Channel.listarProfesor(request);
         }
         
-        public ProyectoOOIA.GestionHumanaWS.profesor[] listarProfesor() {
+        public ProyectoOOIA.GestionHumanaWS.profesor[] listarProfesor(string nombre) {
             ProyectoOOIA.GestionHumanaWS.listarProfesorRequest inValue = new ProyectoOOIA.GestionHumanaWS.listarProfesorRequest();
+            inValue.nombre = nombre;
             ProyectoOOIA.GestionHumanaWS.listarProfesorResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listarProfesor(inValue);
             return retVal.@return;
         }
@@ -7245,8 +7362,9 @@ namespace ProyectoOOIA.GestionHumanaWS {
             return base.Channel.listarProfesorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarProfesorResponse> listarProfesorAsync() {
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarProfesorResponse> listarProfesorAsync(string nombre) {
             ProyectoOOIA.GestionHumanaWS.listarProfesorRequest inValue = new ProyectoOOIA.GestionHumanaWS.listarProfesorRequest();
+            inValue.nombre = nombre;
             return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listarProfesorAsync(inValue);
         }
         
@@ -7255,8 +7373,9 @@ namespace ProyectoOOIA.GestionHumanaWS {
             return base.Channel.listarCoordinador(request);
         }
         
-        public ProyectoOOIA.GestionHumanaWS.coordinador[] listarCoordinador() {
+        public ProyectoOOIA.GestionHumanaWS.coordinador[] listarCoordinador(string nombre) {
             ProyectoOOIA.GestionHumanaWS.listarCoordinadorRequest inValue = new ProyectoOOIA.GestionHumanaWS.listarCoordinadorRequest();
+            inValue.nombre = nombre;
             ProyectoOOIA.GestionHumanaWS.listarCoordinadorResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listarCoordinador(inValue);
             return retVal.@return;
         }
@@ -7266,8 +7385,9 @@ namespace ProyectoOOIA.GestionHumanaWS {
             return base.Channel.listarCoordinadorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarCoordinadorResponse> listarCoordinadorAsync() {
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarCoordinadorResponse> listarCoordinadorAsync(string nombre) {
             ProyectoOOIA.GestionHumanaWS.listarCoordinadorRequest inValue = new ProyectoOOIA.GestionHumanaWS.listarCoordinadorRequest();
+            inValue.nombre = nombre;
             return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listarCoordinadorAsync(inValue);
         }
         

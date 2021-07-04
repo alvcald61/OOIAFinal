@@ -1366,7 +1366,15 @@ namespace ProyectoOOIA.GestionEventoWS {
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarCoordinadorEvento", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class listarCoordinadorEventoRequest {
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
         public listarCoordinadorEventoRequest() {
+        }
+        
+        public listarCoordinadorEventoRequest(string nombre) {
+            this.nombre = nombre;
         }
     }
     
@@ -2050,8 +2058,9 @@ namespace ProyectoOOIA.GestionEventoWS {
             return base.Channel.listarCoordinadorEvento(request);
         }
         
-        public ProyectoOOIA.GestionEventoWS.coordinador[] listarCoordinadorEvento() {
+        public ProyectoOOIA.GestionEventoWS.coordinador[] listarCoordinadorEvento(string nombre) {
             ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest();
+            inValue.nombre = nombre;
             ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse retVal = ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarCoordinadorEvento(inValue);
             return retVal.@return;
         }
@@ -2061,8 +2070,9 @@ namespace ProyectoOOIA.GestionEventoWS {
             return base.Channel.listarCoordinadorEventoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse> listarCoordinadorEventoAsync() {
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse> listarCoordinadorEventoAsync(string nombre) {
             ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest inValue = new ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoRequest();
+            inValue.nombre = nombre;
             return ((ProyectoOOIA.GestionEventoWS.GestionEventoWS)(this)).listarCoordinadorEventoAsync(inValue);
         }
         

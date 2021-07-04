@@ -8,7 +8,7 @@ import pe.edu.pucp.ooia.gest_humana.model.Psicologo;
  * @author Gerardo
  */
 public interface PsicologoDAO {
-    public ArrayList<Psicologo> listar();
+    public ArrayList<Psicologo> listar(String nombre);
     public Psicologo listar_x_id(int id);
     public int insertar(Psicologo psicologo);
     public int modificar(Psicologo psicologo);

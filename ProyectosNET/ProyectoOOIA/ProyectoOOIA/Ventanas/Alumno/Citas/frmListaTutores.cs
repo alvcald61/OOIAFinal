@@ -36,11 +36,11 @@ namespace ProyectoOOIA.Ventanas
 
             BindingList<GestionHumanaWS.profesor>
                 profesores = new BindingList<GestionHumanaWS.profesor>
-                (humanaDao.listarProfesor());
+                (humanaDao.listarProfesor(""));
 
             BindingList<GestionHumanaWS.psicologo>
                 psicologos = new BindingList<GestionHumanaWS.psicologo>
-                (humanaDao.listarPsicologo());
+                (humanaDao.listarPsicologo(""));
 
             for (int i = 0; i < profesores.Count / 2; i++)
             {

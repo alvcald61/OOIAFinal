@@ -18,13 +18,14 @@ public class CoordinadorMySQL implements CoordinadorDAO{
     CallableStatement cs;
     
     @Override
-    public ArrayList<Coordinador> listar() {
+    public ArrayList<Coordinador> listar(String nombre) {
         
         ArrayList<Coordinador> coordinadores = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_COORDINADOR()}");
+            cs = con.prepareCall("{call LISTAR_COORDINADOR_X_NOMBRE(?)}");
+            cs.setString("_nombre", nombre);
             rs = cs.executeQuery();
             while(rs.next()){
                 Coordinador coordinador = new Coordinador();
