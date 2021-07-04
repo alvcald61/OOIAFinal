@@ -1198,7 +1198,7 @@ CREATE PROCEDURE LISTAR_EVENTO_PONENTE(
 	in _id_evento int
 )
 begin
-	select per.id_persona, me.id_miembro_externo, p.id_ponente, per.nombre as nombre_ponente, e.id_evento, e.nombre as nombre_evento
+	select per.id_persona, me.id_miembro_externo, me.ocupacion, me.telefono, p.organizacion, p.id_ponente, per.nombre as nombre_ponente, e.id_evento, e.nombre as nombre_evento
 	from evento_ponente ep
 	inner join ponente p on ep.fid_ponente = p.id_ponente
     inner join miembro_externo me on me.id_miembro_externo=p.fid_miembro_externo
@@ -1419,7 +1419,7 @@ in _nombre_alumno varchar(150)
 )
 begin
 	select c.id_cita, c.fid_alumno,c.tipo_asesor, c.fid_asesor, p.nombre as nombre_alumno, p.direccion, p.fecha_nacimiento, a.codigo,
-    p.correo,e.nombre as especialidad,c.fecha, c.motivo, c.compromiso, c.asistio, c.activo,
+    p.correo,e.nombre as especialidad,c.fecha, c.motivo, c.compromiso, c.asistio, c.activo, c.link_host,c.link_user,
 	h.id_horario, h.dia, h.hora_inicio, h.hora_fin,
 	ca.id_codigo_atencion, ca.codigo, ca.descripcion
     	from cita c 

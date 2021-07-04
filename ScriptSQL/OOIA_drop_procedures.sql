@@ -129,3 +129,4 @@ drop procedure if exists MODIFICAR_HORARIO_ASESOR_SIN_ID;
 drop procedure if exists VALIDAR_USUARIO_UNICO;
 
 
+drop procedure if exists listar_proximas_cita_profesor;

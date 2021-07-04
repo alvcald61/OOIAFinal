@@ -155,6 +155,7 @@ public class CitaMySQL implements CitaDAO{
            cs.setInt("_asistio",cita.getAsistio());
            cs.executeUpdate();
            cita.setId_cita(cs.getInt("_id_cita"));
+            System.out.println(cs.getInt("_id_cita"));
            resultado=1;
            cs.close();
         }catch(Exception ex){
@@ -163,7 +164,7 @@ public class CitaMySQL implements CitaDAO{
             //esto siempre se va a ejecutar
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
-        
+        System.out.println(cita.getId_cita());
         return resultado;
     }
 
@@ -227,7 +228,7 @@ public class CitaMySQL implements CitaDAO{
     }
     
     private Alumno obtenerAlumno(int id_alumno) {
-        ArrayList<Alumno> arrayList=new AlumnoMySQL().listar();
+        ArrayList<Alumno> arrayList=new AlumnoMySQL().listar("");
         for(Alumno aux:arrayList)
             if(aux.getId_alumno()==id_alumno)
                 return aux;
@@ -235,7 +236,7 @@ public class CitaMySQL implements CitaDAO{
     } 
     
     private Profesor obtenerProfesor(int id_profesor) {
-        ArrayList<Profesor> arrayList=new ProfesorMySQL().listar();
+        ArrayList<Profesor> arrayList=new ProfesorMySQL().listar("");
         for(Profesor aux:arrayList)
             if(aux.getId_profesor()==id_profesor)
                 return aux;
@@ -243,7 +244,7 @@ public class CitaMySQL implements CitaDAO{
     } 
     
     private Psicologo obtenerPsicologo(int id_psicologo) {
-        ArrayList<Psicologo> arrayList=new PsicologoMySQL().listar();
+        ArrayList<Psicologo> arrayList=new PsicologoMySQL().listar("");
         for(Psicologo aux:arrayList)
             if(aux.getId_psicologo()==id_psicologo)
                 return aux;
@@ -340,7 +341,8 @@ public class CitaMySQL implements CitaDAO{
                 cita.getAlumno().setCorreo(rs.getString("correo"));
                 cita.getAlumno().setEspecialidad(new Especialidad());
                 cita.getAlumno().getEspecialidad().setNombre(rs.getString("especialidad"));
-                
+                cita.setLink_Host(rs.getString("link_host"));
+                cita.setLink_user(rs.getString("link_user"));
                 cita.setFecha(rs.getDate("fecha"));
                 cita.setHorario(new Horario(rs.getInt("id_horario"), rs.getInt("dia"), rs.getTime("hora_inicio"),
                         rs.getTime("hora_fin")));

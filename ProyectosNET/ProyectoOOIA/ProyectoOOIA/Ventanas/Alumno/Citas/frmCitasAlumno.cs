@@ -251,7 +251,7 @@ namespace ProyectoOOIA.Ventanas
                     string hora = citaNueva.fecha.ToString("yyyy-MM-dd") + 'T' + citaNueva.horario.horaInicio.ToString("hh:mm:00");
                     
                     string []arr=generarLlamada("Reunión con "+persona.nombre,hora);
-                    daoCita.insertar_links_reunion(citaNueva.id_cita, arr[0], arr[1]);
+                    daoCita.insertar_links_reunion(resultado, arr[0], arr[1]);
 
                     string mensaje = "Estimado " + alumno.nombre + ":\n" +
                                      "Ustedes ha agendado satisfactoriamente una cita con la OOIA. A continuación le indicaremos los datos de la sesion: \n\n" +
@@ -264,7 +264,7 @@ namespace ProyectoOOIA.Ventanas
                                      "\n\n\n\n"+
                                      "\n\nAtte. Oficina de Orientación, Información y Apoyo al Estudiante\n\n ";
 
-                    daoCita.insertar_links_reunion(citaNueva.id_cita, arr[0], arr[1]);
+                    //daoCita.insertar_links_reunion(citaNueva.id_cita, arr[0], arr[1]);
                     enviarCorreo("Inscripción a cita con " + asesor.nombre,mensaje);
                     horarioAsesor.estado = "reservado";
                     

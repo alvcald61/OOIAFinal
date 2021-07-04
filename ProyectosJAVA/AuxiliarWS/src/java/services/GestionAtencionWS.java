@@ -102,6 +102,8 @@ public class GestionAtencionWS {
        int resultado=0;
         try {
             resultado=this.cita.insertar(cita);
+            if(resultado==1)resultado=cita.getId_cita();
+            else resultado=0;
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

@@ -25,12 +25,13 @@ public class ProfesorMySQL implements ProfesorDAO {
     CallableStatement cs;
     
     @Override
-    public ArrayList<Profesor> listar() {
+    public ArrayList<Profesor> listar(String nombre) {
         ArrayList<Profesor> profesores = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_PROFESOR()}");
+            cs = con.prepareCall("{call LISTAR_PROFESOR_X_NOMBRE(?)}");
+            cs.setString("_nombre", nombre);
             rs = cs.executeQuery();
             while(rs.next()){
                 Profesor profesor = new Profesor();

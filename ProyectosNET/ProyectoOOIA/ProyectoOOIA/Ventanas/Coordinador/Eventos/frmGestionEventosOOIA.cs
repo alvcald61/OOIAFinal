@@ -75,9 +75,9 @@ namespace ProyectoOOIA.Ventanas
             eventoDao = new GestionEventoWS.GestionEventoWSClient();
             this.persona = persona;
             cboCategoria.DataSource = eventoDao.listarCategoriaEvento();
-
             cboCategoria.DisplayMember = "nombre";
-          
+            btnReporte.Visible=false;
+            btnReporte.Enabled = false;
         }
 
         private void componentes(Estado estado)
@@ -198,46 +198,56 @@ namespace ProyectoOOIA.Ventanas
         {
             frmBuscarEventoAlumno aux=new frmBuscarEventoAlumno();
             aux.ShowDialog();
-            componentes(Estado.Busqueda);
             evento = aux.Evento;
             //txtNombrePonente.Text = evento.id_evento.ToString();
-            txtNombre.Text = evento.nombre;
-            txtDescripcion.Text = evento.descripcion;
-            txtLugar.Text = evento.lugar;
-            dtpFechaEvento.Value = evento.fecha;
-            dtpInicio.Value = evento.horaInicio;
-            dtpFin.Value = evento.horaFin;
-            cboCategoria.SelectedItem = evento.categoria;
-            imagen = evento.imagen;
-            npdCapacidad.Value = evento.capacidad;
-            try
+            if (evento != null)
             {
-                pictureBox1.Image = new Bitmap(new MemoryStream(evento.imagen));
-            }
-            catch
-            {
-                //exception.Message;
-                MessageBox.Show("Este evento no tiene imagen asociada", "Imagen",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                componentes(Estado.Busqueda);
+                txtNombre.Text = evento.nombre;
+                txtDescripcion.Text = evento.descripcion;
+                txtLugar.Text = evento.lugar;
+                dtpFechaEvento.Value = evento.fecha;
+                dtpInicio.Value = evento.horaInicio;
+                dtpFin.Value = evento.horaFin;
+                cboCategoria.SelectedItem = evento.categoria;
+                imagen = evento.imagen;
+                npdCapacidad.Value = evento.capacidad;
+                if (evento.fecha <= DateTime.Today)
+                {
+                    btnReporte.Visible = true;
+                    btnReporte.Enabled = true;
+                }
+                else
+                {
+                    btnReporte.Visible = false;
+                    btnReporte.Enabled = false;
+                }
 
-            }
-            lista = new BindingList<ponente>();
-            if (evento.ponentes== null) return;
-            foreach (GestionEventoWS.ponente auxPonente in evento.ponentes)
+                try
+                {
+                    pictureBox1.Image = new Bitmap(new MemoryStream(evento.imagen));
+                }
+                catch
+                {
+                    //exception.Message;
+                    MessageBox.Show("Este evento no tiene imagen asociada", "Imagen",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
-            {
-                dgvPonentes.Rows.Add();
-                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[0].Value = auxPonente.nombre;
-                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[1].Value = auxPonente.ocupacion;
-                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[2].Value = auxPonente.organizacion;
-                listaModificar.Add(auxPonente);
-                
+                }
+                lista = new BindingList<ponente>();
+                if (evento.ponentes == null) return;
+                foreach (GestionEventoWS.ponente auxPonente in evento.ponentes)
 
+                {
+                    dgvPonentes.Rows.Add();
+                    dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[0].Value = auxPonente.nombre;
+                    dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[1].Value = auxPonente.ocupacion;
+                    dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[2].Value = auxPonente.organizacion;
+                    listaModificar.Add(auxPonente);
+
+
+                }
             }
             
-            
-
-
-
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -280,7 +290,9 @@ namespace ProyectoOOIA.Ventanas
                         if (eventoDao.insertarEvento(evento) == 1)
                         {
                             MessageBox.Show("El registro ha sido exitoso", "Exito", MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
+                                MessageBoxIcon.Information);
+                            evento = null;
+                            limpiar();
                         }
                         else
                             MessageBox.Show("Ha habido un error", "Error", MessageBoxButtons.RetryCancel,
@@ -296,7 +308,10 @@ namespace ProyectoOOIA.Ventanas
                         if (eventoDao.modificarEvento(evento) == 1)
                         {
                             MessageBox.Show("La modificacion ha sido exitoso", "Exito", MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
+                                MessageBoxIcon.Information);
+                            evento = null;
+                            limpiar();
+
                         }
                         else
                             MessageBox.Show("Ha habido un error en la modificación", "Error", MessageBoxButtons.RetryCancel,
@@ -374,6 +389,7 @@ namespace ProyectoOOIA.Ventanas
             pictureBox1.Image = null;
             lista.Clear();
             evento.coordinador = null;
+            txtNombrePonente.Text = "";
         }
         private void btnModificar_Click(object sender, EventArgs e)
         {
@@ -384,18 +400,42 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnAgregarPonente_Click(object sender, EventArgs e)
         {
-            if (estado == Estado.Nuevo) agregaNuevo();
-            else agregaModificar();
+            
+
+            if (estado == Estado.Nuevo)
+            {
+                
+                foreach (ponente aux in lista)
+                    if (aux.id_ponente == ponente.id_ponente)
+                    {
+                        MessageBox.Show("Este ponente ya se encuentra relacionado a este evento", "Operación invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                agregaNuevo();
+            }
+            else
+            {
+                foreach (ponente aux in listaModificar)
+                    if (aux.id_ponente == ponente.id_ponente)
+                    {
+                        MessageBox.Show("Este ponente ya se encuentra relacionado a este evento", "Operación invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                agregaModificar();
+            }
         }
 
         private void agregaModificar()
         {
+            
             if (ponente != null)
             {
                 dgvPonentes.Rows.Add();
                 dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[0].Value = ponente.nombre;
+                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[1].Value = ponente.ocupacion;
+                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[2].Value = ponente.organizacion;
                 listaModificar.Add(ponente);
-                ponente = null;
+                //ponente = null;
             }
             else
                 MessageBox.Show("no puede agregar a un ponente dos veces", "error", MessageBoxButtons.OK,
@@ -409,8 +449,10 @@ namespace ProyectoOOIA.Ventanas
             {
                 dgvPonentes.Rows.Add();
                 dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[0].Value = ponente.nombre;
+                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[1].Value = ponente.ocupacion;
+                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[2].Value = ponente.organizacion;
                 lista.Add(ponente);
-                ponente = null;
+               // ponente = null;
             }
             else
                 MessageBox.Show("no puede agregar a un ponente dos veces", "error", MessageBoxButtons.OK,
@@ -560,7 +602,6 @@ namespace ProyectoOOIA.Ventanas
           
             new frmDescargarReporteEvento(evento.id_evento).Show();
         }
-
     }
     
 }

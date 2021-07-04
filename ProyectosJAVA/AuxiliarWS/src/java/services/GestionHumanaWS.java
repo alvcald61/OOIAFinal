@@ -66,10 +66,10 @@ public class GestionHumanaWS {
     }
     
     @WebMethod(operationName = "listarAlumno")
-    public ArrayList<Alumno> listarAlumno(){
+    public ArrayList<Alumno> listarAlumno(@WebParam(name = "nombre")String nombre){
         ArrayList<Alumno> lista= new ArrayList<>();
         try {
-            lista=alumno.listar();
+            lista=alumno.listar(nombre);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -150,10 +150,10 @@ public class GestionHumanaWS {
     }
  
     @WebMethod(operationName = "listarProfesor")
-    public ArrayList <Profesor>listarProfesores(){
+    public ArrayList <Profesor>listarProfesores(@WebParam(name = "nombre")String nombre){
         ArrayList<Profesor> empleador=new ArrayList<>();
         try {
-            empleador= daoProfesor.listar();
+            empleador= daoProfesor.listar(nombre);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -197,10 +197,10 @@ public class GestionHumanaWS {
     }
     
     @WebMethod(operationName = "listarPonente")
-    public ArrayList<Ponente> listarPonente(){
+    public ArrayList<Ponente> listarPonente(@WebParam(name = "nombre")String nombre){
         ArrayList<Ponente> lista=new ArrayList<>();
         try {
-            lista=ponente.listar();
+            lista=ponente.listar(nombre);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -241,10 +241,10 @@ public class GestionHumanaWS {
     }
     
     @WebMethod(operationName = "listarPsicologo")
-    public ArrayList<Psicologo> listarPsicologo(){
+    public ArrayList<Psicologo> listarPsicologo(@WebParam(name = "nombre")String nombre){
         ArrayList<Psicologo> lista=new ArrayList<>();
         try {
-            lista=psicologo.listar();
+            lista=psicologo.listar(nombre);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -363,10 +363,10 @@ public class GestionHumanaWS {
     
 
     @WebMethod(operationName = "listarCoordinador")
-    public ArrayList<Coordinador> listarCoordinadorEvento() {
+    public ArrayList<Coordinador> listarCoordinadorEvento(@WebParam(name = "nombre")String nombre) {
         ArrayList<Coordinador> lista= new ArrayList<>();
         try {
-            lista=coordinador.listar();
+            lista=coordinador.listar(nombre);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

@@ -166,10 +166,10 @@ public class GestionEventoWS {
     }
     
     @WebMethod(operationName = "listarCoordinadorEvento")
-    public ArrayList<Coordinador> listarCoordinador() {
+    public ArrayList<Coordinador> listarCoordinador(@WebParam(name = "nombre")String nombre) {
         ArrayList<Coordinador> lista= new ArrayList<>();
         try {
-            lista=coordinador.listar();
+            lista=coordinador.listar(nombre);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
