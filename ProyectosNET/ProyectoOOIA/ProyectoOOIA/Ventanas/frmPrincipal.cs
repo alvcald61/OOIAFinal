@@ -146,7 +146,26 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnAccountSettings_Click(object sender, EventArgs e)
         {
-            new frmAccountSettings(tipo, usuario).ShowDialog();
+            frmAccountSettings aux=new frmAccountSettings(tipo, usuario);
+            aux.ShowDialog();
+            usuario = aux.Usuario;
+            arrangeMenu();
+            displayImage(usuario.imagenDePerfil);
+            
+        }
+
+        public void displayImage(byte[] image)
+        {
+            if (image == null) return;
+            MemoryStream ms = new MemoryStream(image);
+            try
+            {
+                imagen.Image = Image.FromStream(ms);
+            }
+            catch
+            {
+
+            }
         }
 
 

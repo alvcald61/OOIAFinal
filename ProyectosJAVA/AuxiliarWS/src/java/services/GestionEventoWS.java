@@ -21,9 +21,13 @@ import pe.edu.pucp.gestion_eventos.model.EventoAlumno;
 import pe.edu.pucp.gestion_eventos.mysql.CategoriaEventoMySQL;
 import pe.edu.pucp.gestion_eventos.mysql.EventoAlumnoMySQL;
 import pe.edu.pucp.gestion_eventos.mysql.EventoMySQL;
+import pe.edu.pucp.ooia.gest_humana.dao.AlumnoDAO;
+import pe.edu.pucp.ooia.gest_humana.dao.AutenticarPersonaDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.CoordinadorDAO;
 import pe.edu.pucp.ooia.gest_humana.model.Coordinador;
 import pe.edu.pucp.ooia.gest_humana.model.Ponente;
+import pe.edu.pucp.ooia.gest_humana.mysql.AlumnoMySQL;
+import pe.edu.pucp.ooia.gest_humana.mysql.AutenticarPersonaMySQL;
 import pe.edu.pucp.ooia.gest_humana.mysql.CoordinadorMySQL;
 
 
@@ -264,7 +268,22 @@ public class GestionEventoWS {
         }
         return lista;
     }
+    private AlumnoDAO alumno;
+        
     
+        @WebMethod(operationName = "obtener_estado")
+    public boolean obtener_estado(@WebParam(name = "id_evento")int evento,@WebParam(name = "id_alumno")int alumno){
+        boolean retorno=false;
+        this.alumno=new AlumnoMySQL();
+        try{
+            retorno=this.alumno.obtenerEstadoEventoAlumno(evento, alumno);
+
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return retorno;
+    }
     
     
     

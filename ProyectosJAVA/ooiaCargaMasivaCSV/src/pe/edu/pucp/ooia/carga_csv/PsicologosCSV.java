@@ -12,8 +12,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
+import pe.edu.pucp.ooia.gest_humana.dao.AutenticarPersonaDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.PsicologoDAO;
 import pe.edu.pucp.ooia.gest_humana.model.Psicologo;
+import pe.edu.pucp.ooia.gest_humana.mysql.AutenticarPersonaMySQL;
 import pe.edu.pucp.ooia.gest_humana.mysql.PsicologoMySQL;
 
 /**
@@ -23,16 +25,17 @@ import pe.edu.pucp.ooia.gest_humana.mysql.PsicologoMySQL;
 public class PsicologosCSV {
     private Scanner sc;
     private PsicologoDAO daoPsicologo;
-    
+    private AutenticarPersonaDAO daoAutenticar;
     public void setRutaCSV(FileInputStream archivo) throws FileNotFoundException{
         sc = new Scanner(archivo);
         daoPsicologo = new PsicologoMySQL();
+        daoAutenticar = new AutenticarPersonaMySQL();
     }
 
     
     public int cargarDatos() throws ParseException{
         sc.useDelimiter("\n");
-        int cargaCorrecta = 0;
+        int cargaCorrecta = 0, resultado;
         while(sc.hasNext()){
             Psicologo psicologo = new Psicologo();
             String[] datos = sc.next().split(",");
@@ -56,8 +59,14 @@ public class PsicologosCSV {
             Date date1=new SimpleDateFormat("yyyy-MM-dd").parse(datosCorrectos[7]); 
             psicologo.setFecha_inclusion(date1);
             psicologo.setRama(datosCorrectos[8]);
-            int resultado = daoPsicologo.insertar(psicologo);
-            if(resultado == 0){
+            //Verificamos repetidos
+            if(daoAutenticar.autenticarPersona(Integer.valueOf(psicologo.getDni())) == 0 &&
+                    daoAutenticar.autenticarUsuarioUnico(psicologo.getUsuario()) == 0){
+                resultado = daoPsicologo.insertar(psicologo);
+                if(resultado == 0){
+                    cargaCorrecta++;
+                }
+            }else{
                 cargaCorrecta++;
             }
         }

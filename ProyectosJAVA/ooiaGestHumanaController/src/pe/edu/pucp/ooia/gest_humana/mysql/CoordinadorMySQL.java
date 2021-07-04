@@ -99,7 +99,7 @@ public class CoordinadorMySQL implements CoordinadorDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call MODIFICAR_COORDINADOR(?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_COORDINADOR(?,?,?,?,?,?,?,?,?,?)}");
             cs.setInt("_id_coordinador", coordinador.getId_coordinador());
             /*Persona*/
             cs.setString("_nombre", coordinador.getNombre());
@@ -109,7 +109,7 @@ public class CoordinadorMySQL implements CoordinadorDAO{
             cs.setString("_correo", coordinador.getCorreo());
             /*Miembro PUCP*/
             cs.setString("_usuario", coordinador.getUsuario());
-            cs.setString("_password", coordinador.getPassword());
+            //cs.setString("_password", coordinador.getPassword());
             cs.setDate("_fecha_inclusion", new java.sql.Date(coordinador.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", coordinador.getImagenDePerfil());
             /*Coordinador*/
