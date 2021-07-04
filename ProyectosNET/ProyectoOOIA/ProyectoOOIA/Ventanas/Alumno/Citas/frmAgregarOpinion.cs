@@ -51,9 +51,17 @@ namespace ProyectoOOIA.Ventanas
                 }
                 else
                 {
-                    encuesta.puntaje = 0;
+                    encuesta.puntaje = 0;//no ha ingresado nada
                 }
 
+                int cantOpiniones = new GestionHumanaWS.GestionHumanaWSClient().validar_registro_opinion_cita(
+                    alumno.id_alumno, asesor.id_miembro_pucp,encuesta.fid_cita);
+
+                if (cantOpiniones == 1)
+                {
+                    MessageBox.Show("Ya ha registrado una opinión de la cita", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 if (daoEncuesta.insertarEncuesta(encuesta) == 1)
                 {
                     MessageBox.Show("El registro ha sido exitoso", "Exito", MessageBoxButtons.OK,

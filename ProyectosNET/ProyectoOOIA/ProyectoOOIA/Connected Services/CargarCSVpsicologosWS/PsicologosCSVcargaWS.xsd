@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services/" targetNamespace="http://services/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="CargarCSVpsicologos" type="tns:CargarCSVpsicologos" />
-  <xs:element name="CargarCSVpsicologosResponse" type="tns:CargarCSVpsicologosResponse" />
+  <xs:element name="CargarCSVprofesores" type="tns:CargarCSVprofesores" />
+  <xs:element name="CargarCSVprofesoresResponse" type="tns:CargarCSVprofesoresResponse" />
+  <xs:element name="CargarCSVpsicologos" nillable="true" type="tns:CargarCSVprofesores" />
+  <xs:element name="CargarCSVpsicologosResponse" nillable="true" type="tns:CargarCSVprofesoresResponse" />
   <xs:element name="FileNotFoundException" type="tns:FileNotFoundException" />
   <xs:element name="IOException" type="tns:IOException" />
   <xs:element name="ParseException" type="tns:ParseException" />
-  <xs:complexType name="CargarCSVpsicologos">
+  <xs:complexType name="CargarCSVprofesores">
     <xs:sequence>
       <xs:element minOccurs="0" name="RutaArchivo" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="CargarCSVpsicologosResponse">
+  <xs:complexType name="CargarCSVprofesoresResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

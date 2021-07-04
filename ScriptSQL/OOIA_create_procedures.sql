@@ -413,7 +413,7 @@ create procedure MODIFICAR_COORDINADOR(
     	in _correo varchar(150),
     	-- miembro_pucp
     	in _usuario varchar(150),
-    	in _password varchar(150),
+    	
     	in _fecha_inclusion date,
     	in _imagen_perfil longblob,
 	-- coordinador
@@ -430,7 +430,7 @@ begin
     	update persona set nombre = _nombre,  dni = _dni,  fecha_nacimiento = _fecha_nacimiento, direccion = _direccion, correo=_correo
     	where id_persona = aux_persona;
      	-- miembro_pucp
-	update miembro_pucp set usuario = _usuario, password = MD5(_password), fecha_inclusion = _fecha_inclusion, imagen_perfil = _imagen_perfil
+	update miembro_pucp set usuario = _usuario,  fecha_inclusion = _fecha_inclusion, imagen_perfil = _imagen_perfil
     	where fid_persona = aux_persona;
 	-- coordinador
 	update coordinador set rol = _rol
@@ -1254,6 +1254,23 @@ create procedure autenticarPersona(
 	in _dni int
 )begin
 	select * from persona where dni = _dni;
+end$
+
+delimiter $
+create procedure VALIDAR_REGISTRO_ALUMNO_EVENTO(
+	in _id_alumno int,
+    in _id_evento int
+)begin
+	select * from evento_alumno where fid_alumno = _id_alumno and fid_evento =_id_evento;
+end$
+
+delimiter $
+create procedure VALIDAR_REGISTRO_OPINION_CITA(
+	in _id_alumno int,
+    in _fid_asesor int,
+    in _fid_cita int
+)begin
+	select * from encuesta where fid_alumno = _id_alumno and fid_asesor =_fid_asesor and fid_cita= _fid_cita;
 end$
 
 delimiter $

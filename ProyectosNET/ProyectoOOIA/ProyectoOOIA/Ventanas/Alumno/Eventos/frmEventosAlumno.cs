@@ -140,6 +140,15 @@ namespace ProyectoOOIA.Ventanas
                     eventoAlumno.valoracionUtilidad = 0;
                     eventoAlumno.comentario = "";
                     eventoAlumno.asistio = false;
+
+                    int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().validar_registro_alumno_evento(
+                    alumno.id_alumno, evento.id_evento);
+                    
+                    if (cantUsuarios == 1)
+                    {
+                        MessageBox.Show("Ya se encuentra registrado en el evento", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                     int resultado = daoEvento.insertarEncuestaEvento(eventoAlumno);
 
                     if (resultado != 0)

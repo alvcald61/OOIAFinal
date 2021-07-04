@@ -12,9 +12,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
+import pe.edu.pucp.ooia.gest_humana.dao.AutenticarPersonaDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.ProfesorDAO;
 import pe.edu.pucp.ooia.gest_humana.model.Especialidad;
 import pe.edu.pucp.ooia.gest_humana.model.Profesor;
+import pe.edu.pucp.ooia.gest_humana.mysql.AutenticarPersonaMySQL;
 import pe.edu.pucp.ooia.gest_humana.mysql.ProfesorMySQL;
 
 
@@ -25,15 +27,16 @@ import pe.edu.pucp.ooia.gest_humana.mysql.ProfesorMySQL;
 public class ProfesoresCSV {
     private Scanner sc;
     private ProfesorDAO daoProfesor;
-    
+    private AutenticarPersonaDAO daoAutenticar;
     public void setRutaCSV(FileInputStream archivo) throws FileNotFoundException{
         sc = new Scanner(archivo);
         daoProfesor = new ProfesorMySQL();
+        daoAutenticar = new AutenticarPersonaMySQL();
     }
     
     public int cargarDatos() throws ParseException{
         sc.useDelimiter("\n");
-        int cargaCorrecta = 0;
+        int cargaCorrecta = 0, resultado;
         while(sc.hasNext()){
             Profesor profesor = new Profesor();
             String[] datos = sc.next().split(",");
@@ -62,8 +65,13 @@ public class ProfesoresCSV {
             profesor.setCategoria(datosCorrectos[10]);
            
             
-            int resultado = daoProfesor.insertar(profesor);
-            if(resultado == 0){
+            if(daoAutenticar.autenticarPersona(Integer.valueOf(profesor.getDni())) == 0 &&
+                    daoAutenticar.autenticarUsuarioUnico(profesor.getUsuario()) == 0){
+                resultado = daoProfesor.insertar(profesor);
+                if(resultado == 0){
+                    cargaCorrecta++;
+                }
+            }else{
                 cargaCorrecta++;
             }
         }

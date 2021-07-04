@@ -39,7 +39,7 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
                     //if (new GestionAtencionWS.GestionAtencionWSClient().obtener_estado(evento.id_evento, alumnos[i].id_alumno, 0) == 1) b = true;
                     //else b = false;
                     //lista.Add(b);
-                    lista.Add(daoAlumno.obtener_estado(this.evento.id_evento, alumnos[i].id_alumno));
+                    lista.Add(new GestionEventoWS.GestionEventoWSClient().obtener_estado(this.evento.id_evento, alumnos[i].id_alumno));
                 }
                 vez = 1;
 

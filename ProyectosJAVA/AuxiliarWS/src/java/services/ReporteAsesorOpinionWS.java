@@ -46,7 +46,8 @@ public class ReporteAsesorOpinionWS {
             String rutaSubreporteGrafico = ReporteOpinionesTutor.class.getResource("/reportes/ReporteGrafico.jasper").getPath();
             rutaSubreporteGrafico = rutaSubreporteGrafico.replaceAll("%20", " ");         
             //Referencia a la imagen
-            String rutaImagen = ReporteOpinionesTutor.class.getResource("/imagenes/cabeceraPUCP.png").getPath();
+            String rutaImagen = ReporteOpinionesTutor.class.getResource("/imagenes/cabeceraPUCP.jpg").getPath();
+            rutaImagen = rutaImagen.replaceAll("%20", " ");
             Image cabecera = (new ImageIcon(rutaImagen)).getImage();       
             //Arreglo de parametros que ingresan al reporte
             HashMap hm = new HashMap();

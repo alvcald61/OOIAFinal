@@ -52,6 +52,7 @@ public class GestionHumanaWS {
     private AutenticarPersonaDAO autenticarPersona;
     
     public GestionHumanaWS() {
+    
         alumno=new AlumnoMySQL();
         especialidad=new EspecialidadMySQL();
         daoProfesor=new ProfesorMySQL();
@@ -433,18 +434,7 @@ public class GestionHumanaWS {
         return retorno;
    }
     
-    @WebMethod(operationName = "obtener_estado")
-    public boolean obtener_estado(@WebParam(name = "id_evento")int evento,@WebParam(name = "id_alumno")int alumno){
-        boolean retorno=false;
-        try{
-            retorno=this.alumno.obtenerEstadoEventoAlumno(evento, alumno);
 
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        return retorno;
-    }
     
     
     @WebMethod(operationName = "modifcar_asistencia")
@@ -458,11 +448,37 @@ public class GestionHumanaWS {
         }
         return retorno;
     }
-    @WebMethod(operationName = "validar_usuario_unico")
-    public int validar_usuario_unico(@WebParam(name = "id_evento")String usuario){
+        @WebMethod(operationName = "validar_usuario_unico")
+    public int validar_usuario_unico(@WebParam(name = "usuario")String usuario){
         int retorno=0;
         try{
            retorno=this.autenticarPersona.autenticarUsuarioUnico(usuario);
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return retorno;
+    }
+    
+     @WebMethod(operationName = "validar_registro_alumno_evento")
+    public int validar_registro_alumno_evento(@WebParam(name = "id_alumno")int id_alumno,
+            @WebParam(name = "id_evento")int id_evento){
+        int retorno=0;
+        try{
+           retorno=this.autenticarPersona.validarUnicoRegistroAEvento(id_alumno,id_evento);
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return retorno;
+    }
+    
+     @WebMethod(operationName = "validar_registro_opinion_cita")
+    public int validar_registro_opinion_cita(@WebParam(name = "id_alumno")int id_alumno,
+            @WebParam(name = "id_asesor")int id_asesor,@WebParam(name = "id_cita")int id_cita ){
+        int retorno=0;
+        try{
+           retorno=this.autenticarPersona.validarUnicaOpinionCita(id_alumno,id_asesor,id_cita);
         }
         catch(Exception e){
             System.out.println(e.getMessage());

@@ -29,37 +29,36 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.lblHeader = new System.Windows.Forms.Label();
-            this.btnEditCorreo = new System.Windows.Forms.PictureBox();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtConfirmacion = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtPasswordNew = new System.Windows.Forms.TextBox();
             this.pnlImage = new System.Windows.Forms.Panel();
             this.btnImagen = new System.Windows.Forms.Button();
             this.pnlData = new System.Windows.Forms.Panel();
-            this.btnEditPassword = new System.Windows.Forms.PictureBox();
-            this.btnEditUsuario = new System.Windows.Forms.PictureBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblTipo = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.ofd_Imagen = new System.Windows.Forms.OpenFileDialog();
+            this.ttContra = new System.Windows.Forms.ToolTip(this.components);
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditCorreo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
             this.pnlBody.SuspendLayout();
             this.pnlImage.SuspendLayout();
             this.pnlData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -70,7 +69,7 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(584, 71);
+            this.pnlHeader.Size = new System.Drawing.Size(911, 71);
             this.pnlHeader.TabIndex = 19;
             // 
             // btnBack
@@ -96,38 +95,93 @@ namespace ProyectoOOIA.Ventanas
             this.lblHeader.TabIndex = 20;
             this.lblHeader.Text = "Cuenta de Usuario";
             // 
-            // btnEditCorreo
-            // 
-            this.btnEditCorreo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditCorreo.Image = global::ProyectoOOIA.Properties.Resources.edit_black1;
-            this.btnEditCorreo.Location = new System.Drawing.Point(263, 166);
-            this.btnEditCorreo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditCorreo.Name = "btnEditCorreo";
-            this.btnEditCorreo.Size = new System.Drawing.Size(25, 25);
-            this.btnEditCorreo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnEditCorreo.TabIndex = 22;
-            this.btnEditCorreo.TabStop = false;
-            this.btnEditCorreo.Click += new System.EventHandler(this.btnEditCorreo_Click);
-            // 
             // pbPerfil
             // 
             this.pbPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbPerfil.Location = new System.Drawing.Point(10, 10);
+            this.pbPerfil.Location = new System.Drawing.Point(15, 17);
             this.pbPerfil.Margin = new System.Windows.Forms.Padding(10);
             this.pbPerfil.Name = "pbPerfil";
-            this.pbPerfil.Size = new System.Drawing.Size(196, 202);
+            this.pbPerfil.Size = new System.Drawing.Size(180, 190);
             this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPerfil.TabIndex = 20;
             this.pbPerfil.TabStop = false;
             // 
             // pnlBody
             // 
+            this.pnlBody.Controls.Add(this.button1);
+            this.pnlBody.Controls.Add(this.label2);
+            this.pnlBody.Controls.Add(this.txtConfirmacion);
+            this.pnlBody.Controls.Add(this.label1);
+            this.pnlBody.Controls.Add(this.txtPassword);
+            this.pnlBody.Controls.Add(this.txtPasswordNew);
             this.pnlBody.Controls.Add(this.pnlImage);
             this.pnlBody.Controls.Add(this.pnlData);
-            this.pnlBody.Location = new System.Drawing.Point(8, 77);
+            this.pnlBody.Controls.Add(this.lblPassword);
+            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBody.Location = new System.Drawing.Point(0, 71);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(571, 333);
+            this.pnlBody.Size = new System.Drawing.Size(911, 334);
             this.pnlBody.TabIndex = 21;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(355, 276);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 38);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Guardar Cambios";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(577, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(191, 27);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Confirmar Contraseña:";
+            // 
+            // txtConfirmacion
+            // 
+            this.txtConfirmacion.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmacion.Location = new System.Drawing.Point(582, 169);
+            this.txtConfirmacion.Name = "txtConfirmacion";
+            this.txtConfirmacion.Size = new System.Drawing.Size(292, 30);
+            this.txtConfirmacion.TabIndex = 31;
+            this.txtConfirmacion.Enter += new System.EventHandler(this.errorEntrada);
+            this.txtConfirmacion.Leave += new System.EventHandler(this.errorSalida);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(577, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 27);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Contraseña Nueva:";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(582, 43);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(292, 30);
+            this.txtPassword.TabIndex = 30;
+            this.txtPassword.Enter += new System.EventHandler(this.errorEntrada);
+            this.txtPassword.Leave += new System.EventHandler(this.errorSalida);
+            // 
+            // txtPasswordNew
+            // 
+            this.txtPasswordNew.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswordNew.Location = new System.Drawing.Point(582, 106);
+            this.txtPasswordNew.Name = "txtPasswordNew";
+            this.txtPasswordNew.Size = new System.Drawing.Size(292, 30);
+            this.txtPasswordNew.TabIndex = 32;
+            this.txtPasswordNew.Enter += new System.EventHandler(this.errorEntrada);
+            this.txtPasswordNew.Leave += new System.EventHandler(this.errorSalida);
             // 
             // pnlImage
             // 
@@ -135,13 +189,13 @@ namespace ProyectoOOIA.Ventanas
             this.pnlImage.Controls.Add(this.btnImagen);
             this.pnlImage.Location = new System.Drawing.Point(4, 3);
             this.pnlImage.Name = "pnlImage";
-            this.pnlImage.Size = new System.Drawing.Size(217, 330);
+            this.pnlImage.Size = new System.Drawing.Size(217, 261);
             this.pnlImage.TabIndex = 28;
             // 
             // btnImagen
             // 
             this.btnImagen.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImagen.Location = new System.Drawing.Point(36, 222);
+            this.btnImagen.Location = new System.Drawing.Point(40, 220);
             this.btnImagen.Name = "btnImagen";
             this.btnImagen.Size = new System.Drawing.Size(139, 32);
             this.btnImagen.TabIndex = 26;
@@ -151,81 +205,36 @@ namespace ProyectoOOIA.Ventanas
             // 
             // pnlData
             // 
-            this.pnlData.Controls.Add(this.btnEditPassword);
-            this.pnlData.Controls.Add(this.btnEditUsuario);
-            this.pnlData.Controls.Add(this.btnEditCorreo);
-            this.pnlData.Controls.Add(this.txtPassword);
             this.pnlData.Controls.Add(this.txtUsuario);
-            this.pnlData.Controls.Add(this.txtTipo);
             this.pnlData.Controls.Add(this.txtCorreo);
             this.pnlData.Controls.Add(this.txtNombre);
             this.pnlData.Controls.Add(this.lblNombre);
-            this.pnlData.Controls.Add(this.lblTipo);
             this.pnlData.Controls.Add(this.lblUsuario);
-            this.pnlData.Controls.Add(this.lblPassword);
             this.pnlData.Controls.Add(this.lblCorreo);
             this.pnlData.Location = new System.Drawing.Point(227, 3);
             this.pnlData.Name = "pnlData";
-            this.pnlData.Size = new System.Drawing.Size(341, 330);
+            this.pnlData.Size = new System.Drawing.Size(344, 261);
             this.pnlData.TabIndex = 27;
-            // 
-            // btnEditPassword
-            // 
-            this.btnEditPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditPassword.Image = global::ProyectoOOIA.Properties.Resources.edit_black1;
-            this.btnEditPassword.Location = new System.Drawing.Point(213, 292);
-            this.btnEditPassword.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPassword.Name = "btnEditPassword";
-            this.btnEditPassword.Size = new System.Drawing.Size(25, 25);
-            this.btnEditPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnEditPassword.TabIndex = 32;
-            this.btnEditPassword.TabStop = false;
-            this.btnEditPassword.Click += new System.EventHandler(this.btnEditPassword_Click);
-            // 
-            // btnEditUsuario
-            // 
-            this.btnEditUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditUsuario.Image = global::ProyectoOOIA.Properties.Resources.edit_black1;
-            this.btnEditUsuario.Location = new System.Drawing.Point(213, 229);
-            this.btnEditUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditUsuario.Name = "btnEditUsuario";
-            this.btnEditUsuario.Size = new System.Drawing.Size(25, 25);
-            this.btnEditUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnEditUsuario.TabIndex = 31;
-            this.btnEditUsuario.TabStop = false;
-            this.btnEditUsuario.Click += new System.EventHandler(this.btnEditUsuario_Click);
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(8, 292);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(200, 30);
-            this.txtPassword.TabIndex = 30;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(8, 229);
+            this.txtUsuario.Location = new System.Drawing.Point(8, 166);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(200, 30);
+            this.txtUsuario.Size = new System.Drawing.Size(300, 30);
             this.txtUsuario.TabIndex = 29;
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.Location = new System.Drawing.Point(8, 103);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(163, 30);
-            this.txtTipo.TabIndex = 28;
+            this.txtUsuario.Enter += new System.EventHandler(this.errorEntrada);
+            this.txtUsuario.Leave += new System.EventHandler(this.errorSalida);
             // 
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(8, 166);
+            this.txtCorreo.Location = new System.Drawing.Point(8, 103);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(250, 30);
+            this.txtCorreo.Size = new System.Drawing.Size(300, 30);
             this.txtCorreo.TabIndex = 27;
+            this.txtCorreo.Enter += new System.EventHandler(this.errorEntrada);
+            this.txtCorreo.Leave += new System.EventHandler(this.errorSalida);
             // 
             // txtNombre
             // 
@@ -233,7 +242,9 @@ namespace ProyectoOOIA.Ventanas
             this.txtNombre.Location = new System.Drawing.Point(8, 40);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(300, 30);
-            this.txtNombre.TabIndex = 26;
+            this.txtNombre.TabIndex = 30;
+            this.txtNombre.Enter += new System.EventHandler(this.errorEntrada);
+            this.txtNombre.Leave += new System.EventHandler(this.errorSalida);
             // 
             // lblNombre
             // 
@@ -241,59 +252,59 @@ namespace ProyectoOOIA.Ventanas
             this.lblNombre.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(3, 10);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(79, 27);
+            this.lblNombre.Size = new System.Drawing.Size(83, 27);
             this.lblNombre.TabIndex = 21;
-            this.lblNombre.Text = "Nombre";
-            // 
-            // lblTipo
-            // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.Location = new System.Drawing.Point(3, 73);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(136, 27);
-            this.lblTipo.TabIndex = 24;
-            this.lblTipo.Text = "Tipo de Usuario";
+            this.lblNombre.Text = "Nombre:";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(3, 199);
+            this.lblUsuario.Location = new System.Drawing.Point(3, 136);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(72, 27);
+            this.lblUsuario.Size = new System.Drawing.Size(76, 27);
             this.lblUsuario.TabIndex = 22;
-            this.lblUsuario.Text = "Usuario";
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(3, 262);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(101, 27);
-            this.lblPassword.TabIndex = 23;
-            this.lblPassword.Text = "Contraseña";
+            this.lblUsuario.Text = "Usuario:";
             // 
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(3, 136);
+            this.lblCorreo.Location = new System.Drawing.Point(3, 73);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(162, 27);
+            this.lblCorreo.Size = new System.Drawing.Size(166, 27);
             this.lblCorreo.TabIndex = 25;
-            this.lblCorreo.Text = "Correo Electrónico";
+            this.lblCorreo.Text = "Correo Electrónico:";
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(577, 13);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(159, 27);
+            this.lblPassword.TabIndex = 23;
+            this.lblPassword.Text = "Contraseña Actual:";
             // 
             // ofd_Imagen
             // 
             this.ofd_Imagen.FileName = "openFileDialog1";
             // 
+            // ttContra
+            // 
+            this.ttContra.AutomaticDelay = 100;
+            this.ttContra.AutoPopDelay = 3000;
+            this.ttContra.InitialDelay = 100;
+            this.ttContra.IsBalloon = true;
+            this.ttContra.ReshowDelay = 20;
+            this.ttContra.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttContra.ToolTipTitle = "Consejo";
+            // 
             // frmAccountSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 411);
+            this.ClientSize = new System.Drawing.Size(911, 405);
             this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.pnlHeader);
             this.Name = "frmAccountSettings";
@@ -301,14 +312,12 @@ namespace ProyectoOOIA.Ventanas
             this.Text = "Propiedades de Cuenta";
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditCorreo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.pnlBody.ResumeLayout(false);
+            this.pnlBody.PerformLayout();
             this.pnlImage.ResumeLayout(false);
             this.pnlData.ResumeLayout(false);
             this.pnlData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -322,7 +331,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Panel pnlBody;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Panel pnlImage;
@@ -330,12 +338,14 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Panel pnlData;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.PictureBox btnEditCorreo;
-        private System.Windows.Forms.PictureBox btnEditPassword;
-        private System.Windows.Forms.PictureBox btnEditUsuario;
         private System.Windows.Forms.OpenFileDialog ofd_Imagen;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtConfirmacion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPasswordNew;
+        private System.Windows.Forms.ToolTip ttContra;
     }
 }
