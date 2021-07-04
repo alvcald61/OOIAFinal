@@ -52,6 +52,7 @@ public class GestionHumanaWS {
     private AutenticarPersonaDAO autenticarPersona;
     
     public GestionHumanaWS() {
+    
         alumno=new AlumnoMySQL();
         especialidad=new EspecialidadMySQL();
         daoProfesor=new ProfesorMySQL();
@@ -433,18 +434,7 @@ public class GestionHumanaWS {
         return retorno;
    }
     
-    @WebMethod(operationName = "obtener_estado")
-    public boolean obtener_estado(@WebParam(name = "id_evento")int evento,@WebParam(name = "id_alumno")int alumno){
-        boolean retorno=false;
-        try{
-            retorno=this.alumno.obtenerEstadoEventoAlumno(evento, alumno);
 
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        return retorno;
-    }
     
     
     @WebMethod(operationName = "modifcar_asistencia")
@@ -458,8 +448,8 @@ public class GestionHumanaWS {
         }
         return retorno;
     }
-    @WebMethod(operationName = "validar_usuario_unico")
-    public int validar_usuario_unico(@WebParam(name = "id_evento")String usuario){
+        @WebMethod(operationName = "validar_usuario_unico")
+    public int validar_usuario_unico(@WebParam(name = "usuario")String usuario){
         int retorno=0;
         try{
            retorno=this.autenticarPersona.autenticarUsuarioUnico(usuario);
@@ -482,7 +472,6 @@ public class GestionHumanaWS {
         }
         return retorno;
     }
-    
     
     
     

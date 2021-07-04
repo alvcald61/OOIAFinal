@@ -413,7 +413,7 @@ create procedure MODIFICAR_COORDINADOR(
     	in _correo varchar(150),
     	-- miembro_pucp
     	in _usuario varchar(150),
-    	in _password varchar(150),
+    	
     	in _fecha_inclusion date,
     	in _imagen_perfil longblob,
 	-- coordinador
@@ -430,7 +430,7 @@ begin
     	update persona set nombre = _nombre,  dni = _dni,  fecha_nacimiento = _fecha_nacimiento, direccion = _direccion, correo=_correo
     	where id_persona = aux_persona;
      	-- miembro_pucp
-	update miembro_pucp set usuario = _usuario, password = MD5(_password), fecha_inclusion = _fecha_inclusion, imagen_perfil = _imagen_perfil
+	update miembro_pucp set usuario = _usuario,  fecha_inclusion = _fecha_inclusion, imagen_perfil = _imagen_perfil
     	where fid_persona = aux_persona;
 	-- coordinador
 	update coordinador set rol = _rol
