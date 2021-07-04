@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8082/AuxiliarWS/ReporteEventoAlumnoWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/AuxiliarWS/ReporteEventoAlumnoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReporteEventoAlumnoWS12.wsdl" MetadataType="Wsdl" ID="e8c51a88-edf1-4780-974e-477853ff72ca" SourceId="1" SourceUrl="http://localhost:8082/AuxiliarWS/ReporteEventoAlumnoWS?WSDL" />
-    <MetadataFile FileName="ReporteEventoAlumnoWS12.xsd" MetadataType="Schema" ID="6ebc4d15-c4d4-4699-bf6e-5abb3245ed06" SourceId="1" SourceUrl="http://localhost:8082/AuxiliarWS/ReporteEventoAlumnoWS?xsd=1" />
+    <MetadataFile FileName="ReporteEventoAlumnoWS2.xsd" MetadataType="Schema" ID="3abad73c-7dd3-49a8-824d-06e44c7ce39c" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/ReporteEventoAlumnoWS?xsd=1" />
+    <MetadataFile FileName="ReporteEventoAlumnoWS2.wsdl" MetadataType="Wsdl" ID="63422bd5-48bd-4266-a69e-1c7dbac2e9da" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/ReporteEventoAlumnoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

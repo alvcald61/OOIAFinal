@@ -16,163 +16,24 @@ namespace ProyectoOOIA.GestionAtencionWS {
     public interface GestionAtencionWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/validar_usuario_unicoRequest", ReplyAction="http://services/GestionAtencionWS/validar_usuario_unicoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse validar_usuario_unico(ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/validar_usuario_unicoRequest", ReplyAction="http://services/GestionAtencionWS/validar_usuario_unicoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse> validar_usuario_unicoAsync(ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarEncuestaxAsesorRequest", ReplyAction="http://services/GestionAtencionWS/listarEncuestaxAsesorResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarCitaRequest", ReplyAction="http://services/GestionAtencionWS/modificarCitaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse listarEncuestaxAsesor(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest request);
+        ProyectoOOIA.GestionAtencionWS.modificarCitaResponse modificarCita(ProyectoOOIA.GestionAtencionWS.modificarCitaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarEncuestaxAsesorRequest", ReplyAction="http://services/GestionAtencionWS/listarEncuestaxAsesorResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse> listarEncuestaxAsesorAsync(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarCitaRequest", ReplyAction="http://services/GestionAtencionWS/modificarCitaResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarCitaResponse> modificarCitaAsync(ProyectoOOIA.GestionAtencionWS.modificarCitaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/eliminarHorarioAsesorResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarCitaRequest", ReplyAction="http://services/GestionAtencionWS/eliminarCitaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorResponse eliminarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest request);
+        ProyectoOOIA.GestionAtencionWS.eliminarCitaResponse eliminarCita(ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/eliminarHorarioAsesorResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorResponse> eliminarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitaHistoricoXNombreRequest", ReplyAction="http://services/GestionAtencionWS/listarCitaHistoricoXNombreResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse listarCitaHistoricoXNombre(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitaHistoricoXNombreRequest", ReplyAction="http://services/GestionAtencionWS/listarCitaHistoricoXNombreResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse> listarCitaHistoricoXNombreAsync(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertar_links_reunionRequest", ReplyAction="http://services/GestionAtencionWS/insertar_links_reunionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.insertar_links_reunionResponse insertar_links_reunion(ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertar_links_reunionRequest", ReplyAction="http://services/GestionAtencionWS/insertar_links_reunionResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertar_links_reunionResponse> insertar_links_reunionAsync(ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/listarHorarioAsesorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorResponse listarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/listarHorarioAsesorResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorResponse> listarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarEncuestaxAlumnoRequest", ReplyAction="http://services/GestionAtencionWS/listarEncuestaxAlumnoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoResponse listarEncuestaxAlumno(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarEncuestaxAlumnoRequest", ReplyAction="http://services/GestionAtencionWS/listarEncuestaxAlumnoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoResponse> listarEncuestaxAlumnoAsync(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitaHistoricoRequest", ReplyAction="http://services/GestionAtencionWS/listarCitaHistoricoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse listarCitaHistorico(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitaHistoricoRequest", ReplyAction="http://services/GestionAtencionWS/listarCitaHistoricoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse> listarCitaHistoricoAsync(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitasProfesorRequest", ReplyAction="http://services/GestionAtencionWS/listarCitasProfesorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse listarCitasProfesor(ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitasProfesorRequest", ReplyAction="http://services/GestionAtencionWS/listarCitasProfesorResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse> listarCitasProfesorAsync(ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/modificarHorarioAsesorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorResponse modificarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/modificarHorarioAsesorResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorResponse> modificarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/insertarHorarioAsesorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorResponse insertarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/insertarHorarioAsesorResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorResponse> insertarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitaPendienteRequest", ReplyAction="http://services/GestionAtencionWS/listarCitaPendienteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse listarCitaPendiente(ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitaPendienteRequest", ReplyAction="http://services/GestionAtencionWS/listarCitaPendienteResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse> listarCitaPendienteAsync(ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarHorarioAsesorSinIDRequest", ReplyAction="http://services/GestionAtencionWS/modificarHorarioAsesorSinIDResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDResponse modificarHorarioAsesorSinID(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarHorarioAsesorSinIDRequest", ReplyAction="http://services/GestionAtencionWS/modificarHorarioAsesorSinIDResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDResponse> modificarHorarioAsesorSinIDAsync(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarCodigoRequest", ReplyAction="http://services/GestionAtencionWS/modificarCodigoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.modificarCodigoResponse modificarCodigo(ProyectoOOIA.GestionAtencionWS.modificarCodigoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarCodigoRequest", ReplyAction="http://services/GestionAtencionWS/modificarCodigoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarCodigoResponse> modificarCodigoAsync(ProyectoOOIA.GestionAtencionWS.modificarCodigoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarHorarioRequest", ReplyAction="http://services/GestionAtencionWS/insertarHorarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse insertarHorario(ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarHorarioRequest", ReplyAction="http://services/GestionAtencionWS/insertarHorarioResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse> insertarHorarioAsync(ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCodigoRequest", ReplyAction="http://services/GestionAtencionWS/listarCodigoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.listarCodigoResponse listarCodigo(ProyectoOOIA.GestionAtencionWS.listarCodigoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCodigoRequest", ReplyAction="http://services/GestionAtencionWS/listarCodigoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCodigoResponse> listarCodigoAsync(ProyectoOOIA.GestionAtencionWS.listarCodigoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarCitaRequest", ReplyAction="http://services/GestionAtencionWS/eliminarCitaResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarCitaResponse> eliminarCitaAsync(ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarHorarioRequest", ReplyAction="http://services/GestionAtencionWS/listarHorarioResponse")]
@@ -185,34 +46,14 @@ namespace ProyectoOOIA.GestionAtencionWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarHorarioResponse> listarHorarioAsync(ProyectoOOIA.GestionAtencionWS.listarHorarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarCitaRequest", ReplyAction="http://services/GestionAtencionWS/modificarCitaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarCodigoRequest", ReplyAction="http://services/GestionAtencionWS/modificarCodigoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.modificarCitaResponse modificarCita(ProyectoOOIA.GestionAtencionWS.modificarCitaRequest request);
+        ProyectoOOIA.GestionAtencionWS.modificarCodigoResponse modificarCodigo(ProyectoOOIA.GestionAtencionWS.modificarCodigoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarCitaRequest", ReplyAction="http://services/GestionAtencionWS/modificarCitaResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarCitaResponse> modificarCitaAsync(ProyectoOOIA.GestionAtencionWS.modificarCitaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarHorarioRequest", ReplyAction="http://services/GestionAtencionWS/eliminarHorarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.eliminarHorarioResponse eliminarHorario(ProyectoOOIA.GestionAtencionWS.eliminarHorarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarHorarioRequest", ReplyAction="http://services/GestionAtencionWS/eliminarHorarioResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarHorarioResponse> eliminarHorarioAsync(ProyectoOOIA.GestionAtencionWS.eliminarHorarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarCitaRequest", ReplyAction="http://services/GestionAtencionWS/insertarCitaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.insertarCitaResponse insertarCita(ProyectoOOIA.GestionAtencionWS.insertarCitaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarCitaRequest", ReplyAction="http://services/GestionAtencionWS/insertarCitaResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarCitaResponse> insertarCitaAsync(ProyectoOOIA.GestionAtencionWS.insertarCitaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarCodigoRequest", ReplyAction="http://services/GestionAtencionWS/modificarCodigoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarCodigoResponse> modificarCodigoAsync(ProyectoOOIA.GestionAtencionWS.modificarCodigoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarEncuestaRequest", ReplyAction="http://services/GestionAtencionWS/insertarEncuestaResponse")]
@@ -225,14 +66,44 @@ namespace ProyectoOOIA.GestionAtencionWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarEncuestaResponse> insertarEncuestaAsync(ProyectoOOIA.GestionAtencionWS.insertarEncuestaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarCitaRequest", ReplyAction="http://services/GestionAtencionWS/eliminarCitaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarHorarioRequest", ReplyAction="http://services/GestionAtencionWS/eliminarHorarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionAtencionWS.eliminarCitaResponse eliminarCita(ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest request);
+        ProyectoOOIA.GestionAtencionWS.eliminarHorarioResponse eliminarHorario(ProyectoOOIA.GestionAtencionWS.eliminarHorarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarCitaRequest", ReplyAction="http://services/GestionAtencionWS/eliminarCitaResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarCitaResponse> eliminarCitaAsync(ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarHorarioRequest", ReplyAction="http://services/GestionAtencionWS/eliminarHorarioResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarHorarioResponse> eliminarHorarioAsync(ProyectoOOIA.GestionAtencionWS.eliminarHorarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCodigoRequest", ReplyAction="http://services/GestionAtencionWS/listarCodigoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.listarCodigoResponse listarCodigo(ProyectoOOIA.GestionAtencionWS.listarCodigoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCodigoRequest", ReplyAction="http://services/GestionAtencionWS/listarCodigoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCodigoResponse> listarCodigoAsync(ProyectoOOIA.GestionAtencionWS.listarCodigoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarHorarioRequest", ReplyAction="http://services/GestionAtencionWS/insertarHorarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse insertarHorario(ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarHorarioRequest", ReplyAction="http://services/GestionAtencionWS/insertarHorarioResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse> insertarHorarioAsync(ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarCitaRequest", ReplyAction="http://services/GestionAtencionWS/insertarCitaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.insertarCitaResponse insertarCita(ProyectoOOIA.GestionAtencionWS.insertarCitaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarCitaRequest", ReplyAction="http://services/GestionAtencionWS/insertarCitaResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarCitaResponse> insertarCitaAsync(ProyectoOOIA.GestionAtencionWS.insertarCitaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarCodigoRequest", ReplyAction="http://services/GestionAtencionWS/insertarCodigoResponse")]
@@ -253,42 +124,146 @@ namespace ProyectoOOIA.GestionAtencionWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarHorarioRequest", ReplyAction="http://services/GestionAtencionWS/modificarHorarioResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarHorarioResponse> modificarHorarioAsync(ProyectoOOIA.GestionAtencionWS.modificarHorarioRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validar_usuario_unico", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class validar_usuario_unicoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string usuario;
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/insertarHorarioAsesorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorResponse insertarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest request);
         
-        public validar_usuario_unicoRequest() {
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/insertarHorarioAsesorResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorResponse> insertarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest request);
         
-        public validar_usuario_unicoRequest(string usuario) {
-            this.usuario = usuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validar_usuario_unicoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class validar_usuario_unicoResponse {
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/eliminarHorarioAsesorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorResponse eliminarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/eliminarHorarioAsesorResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorResponse> eliminarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest request);
         
-        public validar_usuario_unicoResponse() {
-        }
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertar_links_reunionRequest", ReplyAction="http://services/GestionAtencionWS/insertar_links_reunionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.insertar_links_reunionResponse insertar_links_reunion(ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest request);
         
-        public validar_usuario_unicoResponse(int @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/insertar_links_reunionRequest", ReplyAction="http://services/GestionAtencionWS/insertar_links_reunionResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertar_links_reunionResponse> insertar_links_reunionAsync(ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarHorarioAsesorSinIDRequest", ReplyAction="http://services/GestionAtencionWS/modificarHorarioAsesorSinIDResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDResponse modificarHorarioAsesorSinID(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarHorarioAsesorSinIDRequest", ReplyAction="http://services/GestionAtencionWS/modificarHorarioAsesorSinIDResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDResponse> modificarHorarioAsesorSinIDAsync(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitaHistoricoRequest", ReplyAction="http://services/GestionAtencionWS/listarCitaHistoricoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse listarCitaHistorico(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitaHistoricoRequest", ReplyAction="http://services/GestionAtencionWS/listarCitaHistoricoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse> listarCitaHistoricoAsync(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitaHistoricoXNombreRequest", ReplyAction="http://services/GestionAtencionWS/listarCitaHistoricoXNombreResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse listarCitaHistoricoXNombre(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitaHistoricoXNombreRequest", ReplyAction="http://services/GestionAtencionWS/listarCitaHistoricoXNombreResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse> listarCitaHistoricoXNombreAsync(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitasProfesorRequest", ReplyAction="http://services/GestionAtencionWS/listarCitasProfesorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse listarCitasProfesor(ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitasProfesorRequest", ReplyAction="http://services/GestionAtencionWS/listarCitasProfesorResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse> listarCitasProfesorAsync(ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarEncuestaxAlumnoRequest", ReplyAction="http://services/GestionAtencionWS/listarEncuestaxAlumnoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoResponse listarEncuestaxAlumno(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarEncuestaxAlumnoRequest", ReplyAction="http://services/GestionAtencionWS/listarEncuestaxAlumnoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoResponse> listarEncuestaxAlumnoAsync(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitaPendienteRequest", ReplyAction="http://services/GestionAtencionWS/listarCitaPendienteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse listarCitaPendiente(ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarCitaPendienteRequest", ReplyAction="http://services/GestionAtencionWS/listarCitaPendienteResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse> listarCitaPendienteAsync(ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/modificarHorarioAsesorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorResponse modificarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/modificarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/modificarHorarioAsesorResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorResponse> modificarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/listarHorarioAsesorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorResponse listarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/listarHorarioAsesorResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorResponse> listarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarEncuestaxAsesorRequest", ReplyAction="http://services/GestionAtencionWS/listarEncuestaxAsesorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse listarEncuestaxAsesor(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/listarEncuestaxAsesorRequest", ReplyAction="http://services/GestionAtencionWS/listarEncuestaxAsesorResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse> listarEncuestaxAsesorAsync(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/validar_usuario_unicoRequest", ReplyAction="http://services/GestionAtencionWS/validar_usuario_unicoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse validar_usuario_unico(ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/validar_usuario_unicoRequest", ReplyAction="http://services/GestionAtencionWS/validar_usuario_unicoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse> validar_usuario_unicoAsync(ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/validar_registro_alumno_citaRequest", ReplyAction="http://services/GestionAtencionWS/validar_registro_alumno_citaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaResponse validar_registro_alumno_cita(ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/validar_registro_alumno_citaRequest", ReplyAction="http://services/GestionAtencionWS/validar_registro_alumno_citaResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaResponse> validar_registro_alumno_citaAsync(ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaRequest request);
     }
     
     /// <remarks/>
@@ -297,27 +272,39 @@ namespace ProyectoOOIA.GestionAtencionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class encuesta : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class cita : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private bool activoField;
+        private int activoField;
         
         private alumno alumnoField;
         
         private miembroPUCP asesorField;
         
-        private string descripcionField;
+        private int asistioField;
         
-        private int fid_citaField;
+        private codigoAtencion codigo_atencionField;
         
-        private int id_encuestaField;
+        private string compromisoField;
         
-        private double puntajeField;
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private horario horarioField;
+        
+        private int id_citaField;
+        
+        private string link_HostField;
+        
+        private string link_userField;
+        
+        private string motivoField;
         
         private int tipo_asesorField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
+        public int activo {
             get {
                 return this.activoField;
             }
@@ -353,54 +340,126 @@ namespace ProyectoOOIA.GestionAtencionWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string descripcion {
+        public int asistio {
             get {
-                return this.descripcionField;
+                return this.asistioField;
             }
             set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
+                this.asistioField = value;
+                this.RaisePropertyChanged("asistio");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int fid_cita {
+        public codigoAtencion codigo_atencion {
             get {
-                return this.fid_citaField;
+                return this.codigo_atencionField;
             }
             set {
-                this.fid_citaField = value;
-                this.RaisePropertyChanged("fid_cita");
+                this.codigo_atencionField = value;
+                this.RaisePropertyChanged("codigo_atencion");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int id_encuesta {
+        public string compromiso {
             get {
-                return this.id_encuestaField;
+                return this.compromisoField;
             }
             set {
-                this.id_encuestaField = value;
-                this.RaisePropertyChanged("id_encuesta");
+                this.compromisoField = value;
+                this.RaisePropertyChanged("compromiso");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public double puntaje {
+        public System.DateTime fecha {
             get {
-                return this.puntajeField;
+                return this.fechaField;
             }
             set {
-                this.puntajeField = value;
-                this.RaisePropertyChanged("puntaje");
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public horario horario {
+            get {
+                return this.horarioField;
+            }
+            set {
+                this.horarioField = value;
+                this.RaisePropertyChanged("horario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public int id_cita {
+            get {
+                return this.id_citaField;
+            }
+            set {
+                this.id_citaField = value;
+                this.RaisePropertyChanged("id_cita");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string link_Host {
+            get {
+                return this.link_HostField;
+            }
+            set {
+                this.link_HostField = value;
+                this.RaisePropertyChanged("link_Host");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string link_user {
+            get {
+                return this.link_userField;
+            }
+            set {
+                this.link_userField = value;
+                this.RaisePropertyChanged("link_user");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public string motivo {
+            get {
+                return this.motivoField;
+            }
+            set {
+                this.motivoField = value;
+                this.RaisePropertyChanged("motivo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public int tipo_asesor {
             get {
                 return this.tipo_asesorField;
@@ -770,113 +829,27 @@ namespace ProyectoOOIA.GestionAtencionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class codigoAtencion : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class encuesta : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool activoField;
-        
-        private string codigoField;
-        
-        private string descripcionField;
-        
-        private int id_codigo_atencionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string codigo {
-            get {
-                return this.codigoField;
-            }
-            set {
-                this.codigoField = value;
-                this.RaisePropertyChanged("codigo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id_codigo_atencion {
-            get {
-                return this.id_codigo_atencionField;
-            }
-            set {
-                this.id_codigo_atencionField = value;
-                this.RaisePropertyChanged("id_codigo_atencion");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class cita : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int activoField;
         
         private alumno alumnoField;
         
         private miembroPUCP asesorField;
         
-        private int asistioField;
+        private string descripcionField;
         
-        private codigoAtencion codigo_atencionField;
+        private int fid_citaField;
         
-        private string compromisoField;
+        private int id_encuestaField;
         
-        private System.DateTime fechaField;
-        
-        private bool fechaFieldSpecified;
-        
-        private horario horarioField;
-        
-        private int id_citaField;
-        
-        private string link_HostField;
-        
-        private string link_userField;
-        
-        private string motivoField;
+        private double puntajeField;
         
         private int tipo_asesorField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int activo {
+        public bool activo {
             get {
                 return this.activoField;
             }
@@ -912,126 +885,54 @@ namespace ProyectoOOIA.GestionAtencionWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int asistio {
+        public string descripcion {
             get {
-                return this.asistioField;
+                return this.descripcionField;
             }
             set {
-                this.asistioField = value;
-                this.RaisePropertyChanged("asistio");
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public codigoAtencion codigo_atencion {
+        public int fid_cita {
             get {
-                return this.codigo_atencionField;
+                return this.fid_citaField;
             }
             set {
-                this.codigo_atencionField = value;
-                this.RaisePropertyChanged("codigo_atencion");
+                this.fid_citaField = value;
+                this.RaisePropertyChanged("fid_cita");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string compromiso {
+        public int id_encuesta {
             get {
-                return this.compromisoField;
+                return this.id_encuestaField;
             }
             set {
-                this.compromisoField = value;
-                this.RaisePropertyChanged("compromiso");
+                this.id_encuestaField = value;
+                this.RaisePropertyChanged("id_encuesta");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public System.DateTime fecha {
+        public double puntaje {
             get {
-                return this.fechaField;
+                return this.puntajeField;
             }
             set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("fecha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSpecified {
-            get {
-                return this.fechaFieldSpecified;
-            }
-            set {
-                this.fechaFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSpecified");
+                this.puntajeField = value;
+                this.RaisePropertyChanged("puntaje");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public horario horario {
-            get {
-                return this.horarioField;
-            }
-            set {
-                this.horarioField = value;
-                this.RaisePropertyChanged("horario");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public int id_cita {
-            get {
-                return this.id_citaField;
-            }
-            set {
-                this.id_citaField = value;
-                this.RaisePropertyChanged("id_cita");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string link_Host {
-            get {
-                return this.link_HostField;
-            }
-            set {
-                this.link_HostField = value;
-                this.RaisePropertyChanged("link_Host");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string link_user {
-            get {
-                return this.link_userField;
-            }
-            set {
-                this.link_userField = value;
-                this.RaisePropertyChanged("link_user");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public string motivo {
-            get {
-                return this.motivoField;
-            }
-            set {
-                this.motivoField = value;
-                this.RaisePropertyChanged("motivo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public int tipo_asesor {
             get {
                 return this.tipo_asesorField;
@@ -1264,161 +1165,112 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEncuestaxAsesor", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarEncuestaxAsesorRequest {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class codigoAtencion : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idAsesor;
+        private bool activoField;
         
-        public listarEncuestaxAsesorRequest() {
+        private string codigoField;
+        
+        private string descripcionField;
+        
+        private int id_codigo_atencionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
         }
         
-        public listarEncuestaxAsesorRequest(int idAsesor) {
-            this.idAsesor = idAsesor;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string codigo {
+            get {
+                return this.codigoField;
+            }
+            set {
+                this.codigoField = value;
+                this.RaisePropertyChanged("codigo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int id_codigo_atencion {
+            get {
+                return this.id_codigo_atencionField;
+            }
+            set {
+                this.id_codigo_atencionField = value;
+                this.RaisePropertyChanged("id_codigo_atencion");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEncuestaxAsesorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarEncuestaxAsesorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCita", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarCitaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.encuesta[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.cita cita;
         
-        public listarEncuestaxAsesorResponse() {
+        public modificarCitaRequest() {
         }
         
-        public listarEncuestaxAsesorResponse(ProyectoOOIA.GestionAtencionWS.encuesta[] @return) {
-            this.@return = @return;
+        public modificarCitaRequest(ProyectoOOIA.GestionAtencionWS.cita cita) {
+            this.cita = cita;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarHorarioAsesor", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class eliminarHorarioAsesorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_horario_asesor;
-        
-        public eliminarHorarioAsesorRequest() {
-        }
-        
-        public eliminarHorarioAsesorRequest(int id_horario_asesor) {
-            this.id_horario_asesor = id_horario_asesor;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarHorarioAsesorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class eliminarHorarioAsesorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarHorarioAsesorResponse() {
-        }
-        
-        public eliminarHorarioAsesorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaHistoricoXNombre", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCitaHistoricoXNombreRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_alumno;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre_profesor;
-        
-        public listarCitaHistoricoXNombreRequest() {
-        }
-        
-        public listarCitaHistoricoXNombreRequest(int id_alumno, string nombre_profesor) {
-            this.id_alumno = id_alumno;
-            this.nombre_profesor = nombre_profesor;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaHistoricoXNombreResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCitaHistoricoXNombreResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.cita[] @return;
-        
-        public listarCitaHistoricoXNombreResponse() {
-        }
-        
-        public listarCitaHistoricoXNombreResponse(ProyectoOOIA.GestionAtencionWS.cita[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertar_links_reunion", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertar_links_reunionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_cita;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string link_host;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string link_user;
-        
-        public insertar_links_reunionRequest() {
-        }
-        
-        public insertar_links_reunionRequest(int id_cita, string link_host, string link_user) {
-            this.id_cita = id_cita;
-            this.link_host = link_host;
-            this.link_user = link_user;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertar_links_reunionResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertar_links_reunionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCitaResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarCitaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertar_links_reunionResponse() {
+        public modificarCitaResponse() {
         }
         
-        public insertar_links_reunionResponse(int @return) {
+        public modificarCitaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1426,184 +1278,35 @@ namespace ProyectoOOIA.GestionAtencionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorarioAsesor", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarHorarioAsesorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCita", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class eliminarCitaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idAsesor;
+        public ProyectoOOIA.GestionAtencionWS.cita cita;
         
-        public listarHorarioAsesorRequest() {
+        public eliminarCitaRequest() {
         }
         
-        public listarHorarioAsesorRequest(int idAsesor) {
-            this.idAsesor = idAsesor;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorarioAsesorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarHorarioAsesorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.horarioAsesor[] @return;
-        
-        public listarHorarioAsesorResponse() {
-        }
-        
-        public listarHorarioAsesorResponse(ProyectoOOIA.GestionAtencionWS.horarioAsesor[] @return) {
-            this.@return = @return;
+        public eliminarCitaRequest(ProyectoOOIA.GestionAtencionWS.cita cita) {
+            this.cita = cita;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEncuestaxAlumno", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarEncuestaxAlumnoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idAlumno;
-        
-        public listarEncuestaxAlumnoRequest() {
-        }
-        
-        public listarEncuestaxAlumnoRequest(int idAlumno) {
-            this.idAlumno = idAlumno;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEncuestaxAlumnoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarEncuestaxAlumnoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.encuesta[] @return;
-        
-        public listarEncuestaxAlumnoResponse() {
-        }
-        
-        public listarEncuestaxAlumnoResponse(ProyectoOOIA.GestionAtencionWS.encuesta[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaHistorico", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCitaHistoricoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_alumno;
-        
-        public listarCitaHistoricoRequest() {
-        }
-        
-        public listarCitaHistoricoRequest(int id_alumno) {
-            this.id_alumno = id_alumno;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaHistoricoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCitaHistoricoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.cita[] @return;
-        
-        public listarCitaHistoricoResponse() {
-        }
-        
-        public listarCitaHistoricoResponse(ProyectoOOIA.GestionAtencionWS.cita[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitasProfesor", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCitasProfesorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_profesor;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre_alumno;
-        
-        public listarCitasProfesorRequest() {
-        }
-        
-        public listarCitasProfesorRequest(int id_profesor, string nombre_alumno) {
-            this.id_profesor = id_profesor;
-            this.nombre_alumno = nombre_alumno;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitasProfesorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCitasProfesorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.cita[] @return;
-        
-        public listarCitasProfesorResponse() {
-        }
-        
-        public listarCitasProfesorResponse(ProyectoOOIA.GestionAtencionWS.cita[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarHorarioAsesor", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class modificarHorarioAsesorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor;
-        
-        public modificarHorarioAsesorRequest() {
-        }
-        
-        public modificarHorarioAsesorRequest(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
-            this.horarioAsesor = horarioAsesor;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarHorarioAsesorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class modificarHorarioAsesorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCitaResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class eliminarCitaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarHorarioAsesorResponse() {
+        public eliminarCitaResponse() {
         }
         
-        public modificarHorarioAsesorResponse(int @return) {
+        public eliminarCitaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1611,107 +1314,27 @@ namespace ProyectoOOIA.GestionAtencionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarHorarioAsesor", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarHorarioAsesorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorario", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarHorarioRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor;
-        
-        public insertarHorarioAsesorRequest() {
-        }
-        
-        public insertarHorarioAsesorRequest(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
-            this.horarioAsesor = horarioAsesor;
+        public listarHorarioRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarHorarioAsesorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarHorarioAsesorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarHorarioAsesorResponse() {
-        }
-        
-        public insertarHorarioAsesorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaPendiente", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCitaPendienteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_alumno;
-        
-        public listarCitaPendienteRequest() {
-        }
-        
-        public listarCitaPendienteRequest(int id_alumno) {
-            this.id_alumno = id_alumno;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaPendienteResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCitaPendienteResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorarioResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarHorarioResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.cita[] @return;
+        public ProyectoOOIA.GestionAtencionWS.horario[] @return;
         
-        public listarCitaPendienteResponse() {
+        public listarHorarioResponse() {
         }
         
-        public listarCitaPendienteResponse(ProyectoOOIA.GestionAtencionWS.cita[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarHorarioAsesorSinID", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class modificarHorarioAsesorSinIDRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor;
-        
-        public modificarHorarioAsesorSinIDRequest() {
-        }
-        
-        public modificarHorarioAsesorSinIDRequest(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
-            this.horarioAsesor = horarioAsesor;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarHorarioAsesorSinIDResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class modificarHorarioAsesorSinIDResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarHorarioAsesorSinIDResponse() {
-        }
-        
-        public modificarHorarioAsesorSinIDResponse(int @return) {
+        public listarHorarioResponse(ProyectoOOIA.GestionAtencionWS.horario[] @return) {
             this.@return = @return;
         }
     }
@@ -1755,127 +1378,35 @@ namespace ProyectoOOIA.GestionAtencionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarHorario", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarHorarioRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEncuesta", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertarEncuestaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.horario horario;
+        public ProyectoOOIA.GestionAtencionWS.encuesta encuesta;
         
-        public insertarHorarioRequest() {
+        public insertarEncuestaRequest() {
         }
         
-        public insertarHorarioRequest(ProyectoOOIA.GestionAtencionWS.horario horario) {
-            this.horario = horario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarHorarioResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarHorarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarHorarioResponse() {
-        }
-        
-        public insertarHorarioResponse(int @return) {
-            this.@return = @return;
+        public insertarEncuestaRequest(ProyectoOOIA.GestionAtencionWS.encuesta encuesta) {
+            this.encuesta = encuesta;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCodigo", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCodigoRequest {
-        
-        public listarCodigoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCodigoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCodigoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.codigoAtencion[] @return;
-        
-        public listarCodigoResponse() {
-        }
-        
-        public listarCodigoResponse(ProyectoOOIA.GestionAtencionWS.codigoAtencion[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorario", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarHorarioRequest {
-        
-        public listarHorarioRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorarioResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarHorarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.horario[] @return;
-        
-        public listarHorarioResponse() {
-        }
-        
-        public listarHorarioResponse(ProyectoOOIA.GestionAtencionWS.horario[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCita", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class modificarCitaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.cita cita;
-        
-        public modificarCitaRequest() {
-        }
-        
-        public modificarCitaRequest(ProyectoOOIA.GestionAtencionWS.cita cita) {
-            this.cita = cita;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCitaResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class modificarCitaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEncuestaResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertarEncuestaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarCitaResponse() {
+        public insertarEncuestaResponse() {
         }
         
-        public modificarCitaResponse(int @return) {
+        public insertarEncuestaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1919,6 +1450,70 @@ namespace ProyectoOOIA.GestionAtencionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCodigo", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCodigoRequest {
+        
+        public listarCodigoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCodigoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCodigoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.codigoAtencion[] @return;
+        
+        public listarCodigoResponse() {
+        }
+        
+        public listarCodigoResponse(ProyectoOOIA.GestionAtencionWS.codigoAtencion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarHorario", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertarHorarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.horario horario;
+        
+        public insertarHorarioRequest() {
+        }
+        
+        public insertarHorarioRequest(ProyectoOOIA.GestionAtencionWS.horario horario) {
+            this.horario = horario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarHorarioResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertarHorarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarHorarioResponse() {
+        }
+        
+        public insertarHorarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCita", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class insertarCitaRequest {
         
@@ -1948,78 +1543,6 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
         
         public insertarCitaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEncuesta", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarEncuestaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.encuesta encuesta;
-        
-        public insertarEncuestaRequest() {
-        }
-        
-        public insertarEncuestaRequest(ProyectoOOIA.GestionAtencionWS.encuesta encuesta) {
-            this.encuesta = encuesta;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEncuestaResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarEncuestaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarEncuestaResponse() {
-        }
-        
-        public insertarEncuestaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCita", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class eliminarCitaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionAtencionWS.cita cita;
-        
-        public eliminarCitaRequest() {
-        }
-        
-        public eliminarCitaRequest(ProyectoOOIA.GestionAtencionWS.cita cita) {
-            this.cita = cita;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCitaResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class eliminarCitaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarCitaResponse() {
-        }
-        
-        public eliminarCitaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -2096,6 +1619,540 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarHorarioAsesor", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertarHorarioAsesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor;
+        
+        public insertarHorarioAsesorRequest() {
+        }
+        
+        public insertarHorarioAsesorRequest(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
+            this.horarioAsesor = horarioAsesor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarHorarioAsesorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertarHorarioAsesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarHorarioAsesorResponse() {
+        }
+        
+        public insertarHorarioAsesorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarHorarioAsesor", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class eliminarHorarioAsesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_horario_asesor;
+        
+        public eliminarHorarioAsesorRequest() {
+        }
+        
+        public eliminarHorarioAsesorRequest(int id_horario_asesor) {
+            this.id_horario_asesor = id_horario_asesor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarHorarioAsesorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class eliminarHorarioAsesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarHorarioAsesorResponse() {
+        }
+        
+        public eliminarHorarioAsesorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertar_links_reunion", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertar_links_reunionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_cita;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string link_host;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string link_user;
+        
+        public insertar_links_reunionRequest() {
+        }
+        
+        public insertar_links_reunionRequest(int id_cita, string link_host, string link_user) {
+            this.id_cita = id_cita;
+            this.link_host = link_host;
+            this.link_user = link_user;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertar_links_reunionResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class insertar_links_reunionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertar_links_reunionResponse() {
+        }
+        
+        public insertar_links_reunionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarHorarioAsesorSinID", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarHorarioAsesorSinIDRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor;
+        
+        public modificarHorarioAsesorSinIDRequest() {
+        }
+        
+        public modificarHorarioAsesorSinIDRequest(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
+            this.horarioAsesor = horarioAsesor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarHorarioAsesorSinIDResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarHorarioAsesorSinIDResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarHorarioAsesorSinIDResponse() {
+        }
+        
+        public modificarHorarioAsesorSinIDResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaHistorico", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCitaHistoricoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_alumno;
+        
+        public listarCitaHistoricoRequest() {
+        }
+        
+        public listarCitaHistoricoRequest(int id_alumno) {
+            this.id_alumno = id_alumno;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaHistoricoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCitaHistoricoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.cita[] @return;
+        
+        public listarCitaHistoricoResponse() {
+        }
+        
+        public listarCitaHistoricoResponse(ProyectoOOIA.GestionAtencionWS.cita[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaHistoricoXNombre", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCitaHistoricoXNombreRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_alumno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre_profesor;
+        
+        public listarCitaHistoricoXNombreRequest() {
+        }
+        
+        public listarCitaHistoricoXNombreRequest(int id_alumno, string nombre_profesor) {
+            this.id_alumno = id_alumno;
+            this.nombre_profesor = nombre_profesor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaHistoricoXNombreResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCitaHistoricoXNombreResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.cita[] @return;
+        
+        public listarCitaHistoricoXNombreResponse() {
+        }
+        
+        public listarCitaHistoricoXNombreResponse(ProyectoOOIA.GestionAtencionWS.cita[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitasProfesor", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCitasProfesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_profesor;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre_alumno;
+        
+        public listarCitasProfesorRequest() {
+        }
+        
+        public listarCitasProfesorRequest(int id_profesor, string nombre_alumno) {
+            this.id_profesor = id_profesor;
+            this.nombre_alumno = nombre_alumno;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitasProfesorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCitasProfesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.cita[] @return;
+        
+        public listarCitasProfesorResponse() {
+        }
+        
+        public listarCitasProfesorResponse(ProyectoOOIA.GestionAtencionWS.cita[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEncuestaxAlumno", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarEncuestaxAlumnoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idAlumno;
+        
+        public listarEncuestaxAlumnoRequest() {
+        }
+        
+        public listarEncuestaxAlumnoRequest(int idAlumno) {
+            this.idAlumno = idAlumno;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEncuestaxAlumnoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarEncuestaxAlumnoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.encuesta[] @return;
+        
+        public listarEncuestaxAlumnoResponse() {
+        }
+        
+        public listarEncuestaxAlumnoResponse(ProyectoOOIA.GestionAtencionWS.encuesta[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaPendiente", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCitaPendienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_alumno;
+        
+        public listarCitaPendienteRequest() {
+        }
+        
+        public listarCitaPendienteRequest(int id_alumno) {
+            this.id_alumno = id_alumno;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaPendienteResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarCitaPendienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.cita[] @return;
+        
+        public listarCitaPendienteResponse() {
+        }
+        
+        public listarCitaPendienteResponse(ProyectoOOIA.GestionAtencionWS.cita[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarHorarioAsesor", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarHorarioAsesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor;
+        
+        public modificarHorarioAsesorRequest() {
+        }
+        
+        public modificarHorarioAsesorRequest(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
+            this.horarioAsesor = horarioAsesor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarHorarioAsesorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarHorarioAsesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarHorarioAsesorResponse() {
+        }
+        
+        public modificarHorarioAsesorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorarioAsesor", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarHorarioAsesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idAsesor;
+        
+        public listarHorarioAsesorRequest() {
+        }
+        
+        public listarHorarioAsesorRequest(int idAsesor) {
+            this.idAsesor = idAsesor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarHorarioAsesorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarHorarioAsesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.horarioAsesor[] @return;
+        
+        public listarHorarioAsesorResponse() {
+        }
+        
+        public listarHorarioAsesorResponse(ProyectoOOIA.GestionAtencionWS.horarioAsesor[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEncuestaxAsesor", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarEncuestaxAsesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idAsesor;
+        
+        public listarEncuestaxAsesorRequest() {
+        }
+        
+        public listarEncuestaxAsesorRequest(int idAsesor) {
+            this.idAsesor = idAsesor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEncuestaxAsesorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarEncuestaxAsesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.encuesta[] @return;
+        
+        public listarEncuestaxAsesorResponse() {
+        }
+        
+        public listarEncuestaxAsesorResponse(ProyectoOOIA.GestionAtencionWS.encuesta[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validar_usuario_unico", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class validar_usuario_unicoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string usuario;
+        
+        public validar_usuario_unicoRequest() {
+        }
+        
+        public validar_usuario_unicoRequest(string usuario) {
+            this.usuario = usuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validar_usuario_unicoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class validar_usuario_unicoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public validar_usuario_unicoResponse() {
+        }
+        
+        public validar_usuario_unicoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validar_registro_alumno_cita", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class validar_registro_alumno_citaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_alumno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_horario;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionAtencionWS.cita cita;
+        
+        public validar_registro_alumno_citaRequest() {
+        }
+        
+        public validar_registro_alumno_citaRequest(int id_alumno, int id_horario, ProyectoOOIA.GestionAtencionWS.cita cita) {
+            this.id_alumno = id_alumno;
+            this.id_horario = id_horario;
+            this.cita = cita;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validar_registro_alumno_citaResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class validar_registro_alumno_citaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public validar_registro_alumno_citaResponse() {
+        }
+        
+        public validar_registro_alumno_citaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface GestionAtencionWSChannel : ProyectoOOIA.GestionAtencionWS.GestionAtencionWS, System.ServiceModel.IClientChannel {
     }
@@ -2124,310 +2181,70 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.validar_usuario_unico(ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest request) {
-            return base.Channel.validar_usuario_unico(request);
+        ProyectoOOIA.GestionAtencionWS.modificarCitaResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.modificarCita(ProyectoOOIA.GestionAtencionWS.modificarCitaRequest request) {
+            return base.Channel.modificarCita(request);
         }
         
-        public int validar_usuario_unico(string usuario) {
-            ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest inValue = new ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest();
-            inValue.usuario = usuario;
-            ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).validar_usuario_unico(inValue);
+        public int modificarCita(ProyectoOOIA.GestionAtencionWS.cita cita) {
+            ProyectoOOIA.GestionAtencionWS.modificarCitaRequest inValue = new ProyectoOOIA.GestionAtencionWS.modificarCitaRequest();
+            inValue.cita = cita;
+            ProyectoOOIA.GestionAtencionWS.modificarCitaResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).modificarCita(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.validar_usuario_unicoAsync(ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest request) {
-            return base.Channel.validar_usuario_unicoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarCitaResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.modificarCitaAsync(ProyectoOOIA.GestionAtencionWS.modificarCitaRequest request) {
+            return base.Channel.modificarCitaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse> validar_usuario_unicoAsync(string usuario) {
-            ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest inValue = new ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest();
-            inValue.usuario = usuario;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).validar_usuario_unicoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarCitaResponse> modificarCitaAsync(ProyectoOOIA.GestionAtencionWS.cita cita) {
+            ProyectoOOIA.GestionAtencionWS.modificarCitaRequest inValue = new ProyectoOOIA.GestionAtencionWS.modificarCitaRequest();
+            inValue.cita = cita;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).modificarCitaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarEncuestaxAsesor(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest request) {
-            return base.Channel.listarEncuestaxAsesor(request);
+        ProyectoOOIA.GestionAtencionWS.eliminarCitaResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.eliminarCita(ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest request) {
+            return base.Channel.eliminarCita(request);
         }
         
-        public ProyectoOOIA.GestionAtencionWS.encuesta[] listarEncuestaxAsesor(int idAsesor) {
-            ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest();
-            inValue.idAsesor = idAsesor;
-            ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarEncuestaxAsesor(inValue);
+        public int eliminarCita(ProyectoOOIA.GestionAtencionWS.cita cita) {
+            ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest inValue = new ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest();
+            inValue.cita = cita;
+            ProyectoOOIA.GestionAtencionWS.eliminarCitaResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).eliminarCita(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarEncuestaxAsesorAsync(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest request) {
-            return base.Channel.listarEncuestaxAsesorAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarCitaResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.eliminarCitaAsync(ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest request) {
+            return base.Channel.eliminarCitaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse> listarEncuestaxAsesorAsync(int idAsesor) {
-            ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest();
-            inValue.idAsesor = idAsesor;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarEncuestaxAsesorAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarCitaResponse> eliminarCitaAsync(ProyectoOOIA.GestionAtencionWS.cita cita) {
+            ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest inValue = new ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest();
+            inValue.cita = cita;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).eliminarCitaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.eliminarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest request) {
-            return base.Channel.eliminarHorarioAsesor(request);
+        ProyectoOOIA.GestionAtencionWS.listarHorarioResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarHorario(ProyectoOOIA.GestionAtencionWS.listarHorarioRequest request) {
+            return base.Channel.listarHorario(request);
         }
         
-        public int eliminarHorarioAsesor(int id_horario_asesor) {
-            ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest();
-            inValue.id_horario_asesor = id_horario_asesor;
-            ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).eliminarHorarioAsesor(inValue);
+        public ProyectoOOIA.GestionAtencionWS.horario[] listarHorario() {
+            ProyectoOOIA.GestionAtencionWS.listarHorarioRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarHorarioRequest();
+            ProyectoOOIA.GestionAtencionWS.listarHorarioResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarHorario(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.eliminarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest request) {
-            return base.Channel.eliminarHorarioAsesorAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarHorarioResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarHorarioAsync(ProyectoOOIA.GestionAtencionWS.listarHorarioRequest request) {
+            return base.Channel.listarHorarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorResponse> eliminarHorarioAsesorAsync(int id_horario_asesor) {
-            ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest();
-            inValue.id_horario_asesor = id_horario_asesor;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).eliminarHorarioAsesorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitaHistoricoXNombre(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest request) {
-            return base.Channel.listarCitaHistoricoXNombre(request);
-        }
-        
-        public ProyectoOOIA.GestionAtencionWS.cita[] listarCitaHistoricoXNombre(int id_alumno, string nombre_profesor) {
-            ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest();
-            inValue.id_alumno = id_alumno;
-            inValue.nombre_profesor = nombre_profesor;
-            ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitaHistoricoXNombre(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitaHistoricoXNombreAsync(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest request) {
-            return base.Channel.listarCitaHistoricoXNombreAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse> listarCitaHistoricoXNombreAsync(int id_alumno, string nombre_profesor) {
-            ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest();
-            inValue.id_alumno = id_alumno;
-            inValue.nombre_profesor = nombre_profesor;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitaHistoricoXNombreAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.insertar_links_reunionResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertar_links_reunion(ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest request) {
-            return base.Channel.insertar_links_reunion(request);
-        }
-        
-        public int insertar_links_reunion(int id_cita, string link_host, string link_user) {
-            ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest();
-            inValue.id_cita = id_cita;
-            inValue.link_host = link_host;
-            inValue.link_user = link_user;
-            ProyectoOOIA.GestionAtencionWS.insertar_links_reunionResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertar_links_reunion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertar_links_reunionResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertar_links_reunionAsync(ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest request) {
-            return base.Channel.insertar_links_reunionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertar_links_reunionResponse> insertar_links_reunionAsync(int id_cita, string link_host, string link_user) {
-            ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest();
-            inValue.id_cita = id_cita;
-            inValue.link_host = link_host;
-            inValue.link_user = link_user;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertar_links_reunionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest request) {
-            return base.Channel.listarHorarioAsesor(request);
-        }
-        
-        public ProyectoOOIA.GestionAtencionWS.horarioAsesor[] listarHorarioAsesor(int idAsesor) {
-            ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest();
-            inValue.idAsesor = idAsesor;
-            ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarHorarioAsesor(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest request) {
-            return base.Channel.listarHorarioAsesorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorResponse> listarHorarioAsesorAsync(int idAsesor) {
-            ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest();
-            inValue.idAsesor = idAsesor;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarHorarioAsesorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarEncuestaxAlumno(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest request) {
-            return base.Channel.listarEncuestaxAlumno(request);
-        }
-        
-        public ProyectoOOIA.GestionAtencionWS.encuesta[] listarEncuestaxAlumno(int idAlumno) {
-            ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest();
-            inValue.idAlumno = idAlumno;
-            ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarEncuestaxAlumno(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarEncuestaxAlumnoAsync(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest request) {
-            return base.Channel.listarEncuestaxAlumnoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoResponse> listarEncuestaxAlumnoAsync(int idAlumno) {
-            ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest();
-            inValue.idAlumno = idAlumno;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarEncuestaxAlumnoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitaHistorico(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest request) {
-            return base.Channel.listarCitaHistorico(request);
-        }
-        
-        public ProyectoOOIA.GestionAtencionWS.cita[] listarCitaHistorico(int id_alumno) {
-            ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest();
-            inValue.id_alumno = id_alumno;
-            ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitaHistorico(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitaHistoricoAsync(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest request) {
-            return base.Channel.listarCitaHistoricoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse> listarCitaHistoricoAsync(int id_alumno) {
-            ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest();
-            inValue.id_alumno = id_alumno;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitaHistoricoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitasProfesor(ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest request) {
-            return base.Channel.listarCitasProfesor(request);
-        }
-        
-        public ProyectoOOIA.GestionAtencionWS.cita[] listarCitasProfesor(int id_profesor, string nombre_alumno) {
-            ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest();
-            inValue.id_profesor = id_profesor;
-            inValue.nombre_alumno = nombre_alumno;
-            ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitasProfesor(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitasProfesorAsync(ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest request) {
-            return base.Channel.listarCitasProfesorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse> listarCitasProfesorAsync(int id_profesor, string nombre_alumno) {
-            ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest();
-            inValue.id_profesor = id_profesor;
-            inValue.nombre_alumno = nombre_alumno;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitasProfesorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.modificarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest request) {
-            return base.Channel.modificarHorarioAsesor(request);
-        }
-        
-        public int modificarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
-            ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest();
-            inValue.horarioAsesor = horarioAsesor;
-            ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).modificarHorarioAsesor(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.modificarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest request) {
-            return base.Channel.modificarHorarioAsesorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorResponse> modificarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
-            ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest();
-            inValue.horarioAsesor = horarioAsesor;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).modificarHorarioAsesorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest request) {
-            return base.Channel.insertarHorarioAsesor(request);
-        }
-        
-        public int insertarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
-            ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest();
-            inValue.horarioAsesor = horarioAsesor;
-            ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertarHorarioAsesor(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest request) {
-            return base.Channel.insertarHorarioAsesorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorResponse> insertarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
-            ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest();
-            inValue.horarioAsesor = horarioAsesor;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertarHorarioAsesorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitaPendiente(ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest request) {
-            return base.Channel.listarCitaPendiente(request);
-        }
-        
-        public ProyectoOOIA.GestionAtencionWS.cita[] listarCitaPendiente(int id_alumno) {
-            ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest();
-            inValue.id_alumno = id_alumno;
-            ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitaPendiente(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitaPendienteAsync(ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest request) {
-            return base.Channel.listarCitaPendienteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse> listarCitaPendienteAsync(int id_alumno) {
-            ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest();
-            inValue.id_alumno = id_alumno;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitaPendienteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.modificarHorarioAsesorSinID(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest request) {
-            return base.Channel.modificarHorarioAsesorSinID(request);
-        }
-        
-        public int modificarHorarioAsesorSinID(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
-            ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest inValue = new ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest();
-            inValue.horarioAsesor = horarioAsesor;
-            ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).modificarHorarioAsesorSinID(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.modificarHorarioAsesorSinIDAsync(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest request) {
-            return base.Channel.modificarHorarioAsesorSinIDAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDResponse> modificarHorarioAsesorSinIDAsync(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
-            ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest inValue = new ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest();
-            inValue.horarioAsesor = horarioAsesor;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).modificarHorarioAsesorSinIDAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarHorarioResponse> listarHorarioAsync() {
+            ProyectoOOIA.GestionAtencionWS.listarHorarioRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarHorarioRequest();
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarHorarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2454,91 +2271,26 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertarHorario(ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest request) {
-            return base.Channel.insertarHorario(request);
+        ProyectoOOIA.GestionAtencionWS.insertarEncuestaResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertarEncuesta(ProyectoOOIA.GestionAtencionWS.insertarEncuestaRequest request) {
+            return base.Channel.insertarEncuesta(request);
         }
         
-        public int insertarHorario(ProyectoOOIA.GestionAtencionWS.horario horario) {
-            ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest();
-            inValue.horario = horario;
-            ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertarHorario(inValue);
+        public int insertarEncuesta(ProyectoOOIA.GestionAtencionWS.encuesta encuesta) {
+            ProyectoOOIA.GestionAtencionWS.insertarEncuestaRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertarEncuestaRequest();
+            inValue.encuesta = encuesta;
+            ProyectoOOIA.GestionAtencionWS.insertarEncuestaResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertarEncuesta(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertarHorarioAsync(ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest request) {
-            return base.Channel.insertarHorarioAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarEncuestaResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertarEncuestaAsync(ProyectoOOIA.GestionAtencionWS.insertarEncuestaRequest request) {
+            return base.Channel.insertarEncuestaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse> insertarHorarioAsync(ProyectoOOIA.GestionAtencionWS.horario horario) {
-            ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest();
-            inValue.horario = horario;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertarHorarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.listarCodigoResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCodigo(ProyectoOOIA.GestionAtencionWS.listarCodigoRequest request) {
-            return base.Channel.listarCodigo(request);
-        }
-        
-        public ProyectoOOIA.GestionAtencionWS.codigoAtencion[] listarCodigo() {
-            ProyectoOOIA.GestionAtencionWS.listarCodigoRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCodigoRequest();
-            ProyectoOOIA.GestionAtencionWS.listarCodigoResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCodigo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCodigoResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCodigoAsync(ProyectoOOIA.GestionAtencionWS.listarCodigoRequest request) {
-            return base.Channel.listarCodigoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCodigoResponse> listarCodigoAsync() {
-            ProyectoOOIA.GestionAtencionWS.listarCodigoRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCodigoRequest();
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCodigoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.listarHorarioResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarHorario(ProyectoOOIA.GestionAtencionWS.listarHorarioRequest request) {
-            return base.Channel.listarHorario(request);
-        }
-        
-        public ProyectoOOIA.GestionAtencionWS.horario[] listarHorario() {
-            ProyectoOOIA.GestionAtencionWS.listarHorarioRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarHorarioRequest();
-            ProyectoOOIA.GestionAtencionWS.listarHorarioResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarHorario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarHorarioResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarHorarioAsync(ProyectoOOIA.GestionAtencionWS.listarHorarioRequest request) {
-            return base.Channel.listarHorarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarHorarioResponse> listarHorarioAsync() {
-            ProyectoOOIA.GestionAtencionWS.listarHorarioRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarHorarioRequest();
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarHorarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.modificarCitaResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.modificarCita(ProyectoOOIA.GestionAtencionWS.modificarCitaRequest request) {
-            return base.Channel.modificarCita(request);
-        }
-        
-        public int modificarCita(ProyectoOOIA.GestionAtencionWS.cita cita) {
-            ProyectoOOIA.GestionAtencionWS.modificarCitaRequest inValue = new ProyectoOOIA.GestionAtencionWS.modificarCitaRequest();
-            inValue.cita = cita;
-            ProyectoOOIA.GestionAtencionWS.modificarCitaResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).modificarCita(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarCitaResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.modificarCitaAsync(ProyectoOOIA.GestionAtencionWS.modificarCitaRequest request) {
-            return base.Channel.modificarCitaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarCitaResponse> modificarCitaAsync(ProyectoOOIA.GestionAtencionWS.cita cita) {
-            ProyectoOOIA.GestionAtencionWS.modificarCitaRequest inValue = new ProyectoOOIA.GestionAtencionWS.modificarCitaRequest();
-            inValue.cita = cita;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).modificarCitaAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarEncuestaResponse> insertarEncuestaAsync(ProyectoOOIA.GestionAtencionWS.encuesta encuesta) {
+            ProyectoOOIA.GestionAtencionWS.insertarEncuestaRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertarEncuestaRequest();
+            inValue.encuesta = encuesta;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertarEncuestaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2565,6 +2317,50 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.listarCodigoResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCodigo(ProyectoOOIA.GestionAtencionWS.listarCodigoRequest request) {
+            return base.Channel.listarCodigo(request);
+        }
+        
+        public ProyectoOOIA.GestionAtencionWS.codigoAtencion[] listarCodigo() {
+            ProyectoOOIA.GestionAtencionWS.listarCodigoRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCodigoRequest();
+            ProyectoOOIA.GestionAtencionWS.listarCodigoResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCodigo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCodigoResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCodigoAsync(ProyectoOOIA.GestionAtencionWS.listarCodigoRequest request) {
+            return base.Channel.listarCodigoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCodigoResponse> listarCodigoAsync() {
+            ProyectoOOIA.GestionAtencionWS.listarCodigoRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCodigoRequest();
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCodigoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertarHorario(ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest request) {
+            return base.Channel.insertarHorario(request);
+        }
+        
+        public int insertarHorario(ProyectoOOIA.GestionAtencionWS.horario horario) {
+            ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest();
+            inValue.horario = horario;
+            ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertarHorario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertarHorarioAsync(ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest request) {
+            return base.Channel.insertarHorarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse> insertarHorarioAsync(ProyectoOOIA.GestionAtencionWS.horario horario) {
+            ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertarHorarioRequest();
+            inValue.horario = horario;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertarHorarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.GestionAtencionWS.insertarCitaResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertarCita(ProyectoOOIA.GestionAtencionWS.insertarCitaRequest request) {
             return base.Channel.insertarCita(request);
         }
@@ -2585,52 +2381,6 @@ namespace ProyectoOOIA.GestionAtencionWS {
             ProyectoOOIA.GestionAtencionWS.insertarCitaRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertarCitaRequest();
             inValue.cita = cita;
             return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertarCitaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.insertarEncuestaResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertarEncuesta(ProyectoOOIA.GestionAtencionWS.insertarEncuestaRequest request) {
-            return base.Channel.insertarEncuesta(request);
-        }
-        
-        public int insertarEncuesta(ProyectoOOIA.GestionAtencionWS.encuesta encuesta) {
-            ProyectoOOIA.GestionAtencionWS.insertarEncuestaRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertarEncuestaRequest();
-            inValue.encuesta = encuesta;
-            ProyectoOOIA.GestionAtencionWS.insertarEncuestaResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertarEncuesta(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarEncuestaResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertarEncuestaAsync(ProyectoOOIA.GestionAtencionWS.insertarEncuestaRequest request) {
-            return base.Channel.insertarEncuestaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarEncuestaResponse> insertarEncuestaAsync(ProyectoOOIA.GestionAtencionWS.encuesta encuesta) {
-            ProyectoOOIA.GestionAtencionWS.insertarEncuestaRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertarEncuestaRequest();
-            inValue.encuesta = encuesta;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertarEncuestaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionAtencionWS.eliminarCitaResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.eliminarCita(ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest request) {
-            return base.Channel.eliminarCita(request);
-        }
-        
-        public int eliminarCita(ProyectoOOIA.GestionAtencionWS.cita cita) {
-            ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest inValue = new ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest();
-            inValue.cita = cita;
-            ProyectoOOIA.GestionAtencionWS.eliminarCitaResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).eliminarCita(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarCitaResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.eliminarCitaAsync(ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest request) {
-            return base.Channel.eliminarCitaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarCitaResponse> eliminarCitaAsync(ProyectoOOIA.GestionAtencionWS.cita cita) {
-            ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest inValue = new ProyectoOOIA.GestionAtencionWS.eliminarCitaRequest();
-            inValue.cita = cita;
-            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).eliminarCitaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2677,6 +2427,340 @@ namespace ProyectoOOIA.GestionAtencionWS {
             ProyectoOOIA.GestionAtencionWS.modificarHorarioRequest inValue = new ProyectoOOIA.GestionAtencionWS.modificarHorarioRequest();
             inValue.horario = horario;
             return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).modificarHorarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest request) {
+            return base.Channel.insertarHorarioAsesor(request);
+        }
+        
+        public int insertarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
+            ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest();
+            inValue.horarioAsesor = horarioAsesor;
+            ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertarHorarioAsesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest request) {
+            return base.Channel.insertarHorarioAsesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorResponse> insertarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
+            ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertarHorarioAsesorRequest();
+            inValue.horarioAsesor = horarioAsesor;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertarHorarioAsesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.eliminarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest request) {
+            return base.Channel.eliminarHorarioAsesor(request);
+        }
+        
+        public int eliminarHorarioAsesor(int id_horario_asesor) {
+            ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest();
+            inValue.id_horario_asesor = id_horario_asesor;
+            ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).eliminarHorarioAsesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.eliminarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest request) {
+            return base.Channel.eliminarHorarioAsesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorResponse> eliminarHorarioAsesorAsync(int id_horario_asesor) {
+            ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest();
+            inValue.id_horario_asesor = id_horario_asesor;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).eliminarHorarioAsesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.insertar_links_reunionResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertar_links_reunion(ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest request) {
+            return base.Channel.insertar_links_reunion(request);
+        }
+        
+        public int insertar_links_reunion(int id_cita, string link_host, string link_user) {
+            ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest();
+            inValue.id_cita = id_cita;
+            inValue.link_host = link_host;
+            inValue.link_user = link_user;
+            ProyectoOOIA.GestionAtencionWS.insertar_links_reunionResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertar_links_reunion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertar_links_reunionResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.insertar_links_reunionAsync(ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest request) {
+            return base.Channel.insertar_links_reunionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.insertar_links_reunionResponse> insertar_links_reunionAsync(int id_cita, string link_host, string link_user) {
+            ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest inValue = new ProyectoOOIA.GestionAtencionWS.insertar_links_reunionRequest();
+            inValue.id_cita = id_cita;
+            inValue.link_host = link_host;
+            inValue.link_user = link_user;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).insertar_links_reunionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.modificarHorarioAsesorSinID(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest request) {
+            return base.Channel.modificarHorarioAsesorSinID(request);
+        }
+        
+        public int modificarHorarioAsesorSinID(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
+            ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest inValue = new ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest();
+            inValue.horarioAsesor = horarioAsesor;
+            ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).modificarHorarioAsesorSinID(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.modificarHorarioAsesorSinIDAsync(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest request) {
+            return base.Channel.modificarHorarioAsesorSinIDAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDResponse> modificarHorarioAsesorSinIDAsync(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
+            ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest inValue = new ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorSinIDRequest();
+            inValue.horarioAsesor = horarioAsesor;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).modificarHorarioAsesorSinIDAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitaHistorico(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest request) {
+            return base.Channel.listarCitaHistorico(request);
+        }
+        
+        public ProyectoOOIA.GestionAtencionWS.cita[] listarCitaHistorico(int id_alumno) {
+            ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest();
+            inValue.id_alumno = id_alumno;
+            ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitaHistorico(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitaHistoricoAsync(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest request) {
+            return base.Channel.listarCitaHistoricoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse> listarCitaHistoricoAsync(int id_alumno) {
+            ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoRequest();
+            inValue.id_alumno = id_alumno;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitaHistoricoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitaHistoricoXNombre(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest request) {
+            return base.Channel.listarCitaHistoricoXNombre(request);
+        }
+        
+        public ProyectoOOIA.GestionAtencionWS.cita[] listarCitaHistoricoXNombre(int id_alumno, string nombre_profesor) {
+            ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest();
+            inValue.id_alumno = id_alumno;
+            inValue.nombre_profesor = nombre_profesor;
+            ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitaHistoricoXNombre(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitaHistoricoXNombreAsync(ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest request) {
+            return base.Channel.listarCitaHistoricoXNombreAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreResponse> listarCitaHistoricoXNombreAsync(int id_alumno, string nombre_profesor) {
+            ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoXNombreRequest();
+            inValue.id_alumno = id_alumno;
+            inValue.nombre_profesor = nombre_profesor;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitaHistoricoXNombreAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitasProfesor(ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest request) {
+            return base.Channel.listarCitasProfesor(request);
+        }
+        
+        public ProyectoOOIA.GestionAtencionWS.cita[] listarCitasProfesor(int id_profesor, string nombre_alumno) {
+            ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest();
+            inValue.id_profesor = id_profesor;
+            inValue.nombre_alumno = nombre_alumno;
+            ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitasProfesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitasProfesorAsync(ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest request) {
+            return base.Channel.listarCitasProfesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitasProfesorResponse> listarCitasProfesorAsync(int id_profesor, string nombre_alumno) {
+            ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitasProfesorRequest();
+            inValue.id_profesor = id_profesor;
+            inValue.nombre_alumno = nombre_alumno;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitasProfesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarEncuestaxAlumno(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest request) {
+            return base.Channel.listarEncuestaxAlumno(request);
+        }
+        
+        public ProyectoOOIA.GestionAtencionWS.encuesta[] listarEncuestaxAlumno(int idAlumno) {
+            ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest();
+            inValue.idAlumno = idAlumno;
+            ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarEncuestaxAlumno(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarEncuestaxAlumnoAsync(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest request) {
+            return base.Channel.listarEncuestaxAlumnoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoResponse> listarEncuestaxAlumnoAsync(int idAlumno) {
+            ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarEncuestaxAlumnoRequest();
+            inValue.idAlumno = idAlumno;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarEncuestaxAlumnoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitaPendiente(ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest request) {
+            return base.Channel.listarCitaPendiente(request);
+        }
+        
+        public ProyectoOOIA.GestionAtencionWS.cita[] listarCitaPendiente(int id_alumno) {
+            ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest();
+            inValue.id_alumno = id_alumno;
+            ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitaPendiente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarCitaPendienteAsync(ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest request) {
+            return base.Channel.listarCitaPendienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse> listarCitaPendienteAsync(int id_alumno) {
+            ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarCitaPendienteRequest();
+            inValue.id_alumno = id_alumno;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarCitaPendienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.modificarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest request) {
+            return base.Channel.modificarHorarioAsesor(request);
+        }
+        
+        public int modificarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
+            ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest();
+            inValue.horarioAsesor = horarioAsesor;
+            ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).modificarHorarioAsesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.modificarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest request) {
+            return base.Channel.modificarHorarioAsesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorResponse> modificarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.horarioAsesor horarioAsesor) {
+            ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.modificarHorarioAsesorRequest();
+            inValue.horarioAsesor = horarioAsesor;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).modificarHorarioAsesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarHorarioAsesor(ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest request) {
+            return base.Channel.listarHorarioAsesor(request);
+        }
+        
+        public ProyectoOOIA.GestionAtencionWS.horarioAsesor[] listarHorarioAsesor(int idAsesor) {
+            ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest();
+            inValue.idAsesor = idAsesor;
+            ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarHorarioAsesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest request) {
+            return base.Channel.listarHorarioAsesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorResponse> listarHorarioAsesorAsync(int idAsesor) {
+            ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarHorarioAsesorRequest();
+            inValue.idAsesor = idAsesor;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarHorarioAsesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarEncuestaxAsesor(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest request) {
+            return base.Channel.listarEncuestaxAsesor(request);
+        }
+        
+        public ProyectoOOIA.GestionAtencionWS.encuesta[] listarEncuestaxAsesor(int idAsesor) {
+            ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest();
+            inValue.idAsesor = idAsesor;
+            ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarEncuestaxAsesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.listarEncuestaxAsesorAsync(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest request) {
+            return base.Channel.listarEncuestaxAsesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse> listarEncuestaxAsesorAsync(int idAsesor) {
+            ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest();
+            inValue.idAsesor = idAsesor;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarEncuestaxAsesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.validar_usuario_unico(ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest request) {
+            return base.Channel.validar_usuario_unico(request);
+        }
+        
+        public int validar_usuario_unico(string usuario) {
+            ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest inValue = new ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest();
+            inValue.usuario = usuario;
+            ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).validar_usuario_unico(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.validar_usuario_unicoAsync(ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest request) {
+            return base.Channel.validar_usuario_unicoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse> validar_usuario_unicoAsync(string usuario) {
+            ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest inValue = new ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest();
+            inValue.usuario = usuario;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).validar_usuario_unicoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.validar_registro_alumno_cita(ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaRequest request) {
+            return base.Channel.validar_registro_alumno_cita(request);
+        }
+        
+        public int validar_registro_alumno_cita(int id_alumno, int id_horario, ProyectoOOIA.GestionAtencionWS.cita cita) {
+            ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaRequest inValue = new ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaRequest();
+            inValue.id_alumno = id_alumno;
+            inValue.id_horario = id_horario;
+            inValue.cita = cita;
+            ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).validar_registro_alumno_cita(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.validar_registro_alumno_citaAsync(ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaRequest request) {
+            return base.Channel.validar_registro_alumno_citaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaResponse> validar_registro_alumno_citaAsync(int id_alumno, int id_horario, ProyectoOOIA.GestionAtencionWS.cita cita) {
+            ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaRequest inValue = new ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaRequest();
+            inValue.id_alumno = id_alumno;
+            inValue.id_horario = id_horario;
+            inValue.cita = cita;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).validar_registro_alumno_citaAsync(inValue);
         }
     }
 }

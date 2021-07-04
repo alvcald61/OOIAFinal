@@ -143,6 +143,12 @@
   <message name="listarEncuestaxAsesorResponse">
     <part name="parameters" element="tns:listarEncuestaxAsesorResponse" />
   </message>
+  <message name="validar_usuario_unico">
+    <part name="parameters" element="tns:validar_usuario_unico" />
+  </message>
+  <message name="validar_usuario_unicoResponse">
+    <part name="parameters" element="tns:validar_usuario_unicoResponse" />
+  </message>
   <message name="validar_registro_alumno_cita">
     <part name="parameters" element="tns:validar_registro_alumno_cita" />
   </message>
@@ -241,6 +247,10 @@
     <operation name="listarEncuestaxAsesor">
       <input wsam:Action="http://services/GestionAtencionWS/listarEncuestaxAsesorRequest" message="tns:listarEncuestaxAsesor" />
       <output wsam:Action="http://services/GestionAtencionWS/listarEncuestaxAsesorResponse" message="tns:listarEncuestaxAsesorResponse" />
+    </operation>
+    <operation name="validar_usuario_unico">
+      <input wsam:Action="http://services/GestionAtencionWS/validar_usuario_unicoRequest" message="tns:validar_usuario_unico" />
+      <output wsam:Action="http://services/GestionAtencionWS/validar_usuario_unicoResponse" message="tns:validar_usuario_unicoResponse" />
     </operation>
     <operation name="validar_registro_alumno_cita">
       <input wsam:Action="http://services/GestionAtencionWS/validar_registro_alumno_citaRequest" message="tns:validar_registro_alumno_cita" />
@@ -448,6 +458,15 @@
       </output>
     </operation>
     <operation name="listarEncuestaxAsesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validar_usuario_unico">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

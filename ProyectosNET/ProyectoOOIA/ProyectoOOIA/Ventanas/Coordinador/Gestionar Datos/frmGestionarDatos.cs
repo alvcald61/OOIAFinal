@@ -75,7 +75,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
                 MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",
                     MessageBoxButtons.OK);
             else
-                MessageBox.Show("Ha ocurrido un error en la carga de los datos", "Error",
+                MessageBox.Show("Hubieron " + resultado + " filas que no pudieron cargarse", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
@@ -128,7 +128,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
                 MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             else 
-                MessageBox.Show("Ha ocurrido un error en la carga de los datos", "Error",
+                MessageBox.Show("Hubieron " + resultado + " filas que no pudieron cargarse", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
@@ -153,86 +153,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             new frmCodigosAtencion().ShowDialog();
         }
 
-       /*TAB Gestion Academica*/
-       /* private void btnEvaluacionFile_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                string ruta = openFileDialog.FileName;
-                txtEvaluacion.Text = ruta;
-            }
-        }
-
-        private void btnEvaluacionCSV_Click(object sender, EventArgs e)
-        {
-            if (txtEvaluacion.Text == "")
-            {
-                MessageBox.Show("Debe seleccionar una archivo de carga.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            FileStream fs = new FileStream(txtEvaluacion.Text, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(fs);
-            CargarCSVevaluacionesWS.EvaluacionesCSVcargaWSClient cargaCSVevaluaciones =
-                new CargarCSVevaluacionesWS.EvaluacionesCSVcargaWSClient();
-            int resultado = 1;
-            resultado = cargaCSVevaluaciones.CargarCSVevaluaciones(br.ReadBytes((int)fs.Length));
-            br.Close();
-            fs.Close();
-            if (resultado == 0)
-                MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",
-                    MessageBoxButtons.OK);
-            else
-                MessageBox.Show("Ha ocurrido un error en la carga de los datos", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private void btnCursoLlevadoFile_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                string ruta = openFileDialog.FileName;
-                txtCursoLlevado.Text = ruta;
-            }
-        }
-
-        private void btnCursoLlevadoCSV_Click(object sender, EventArgs e)
-        {
-            if (txtCursoLlevado.Text == "")
-            {
-                MessageBox.Show("Debe seleccionar una archivo de carga.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            FileStream fs = new FileStream(txtCursoLlevado.Text, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(fs);
-            CargarCSVcursosLlevadosWS.CursosLlevadosCSVcargaWSClient cargaCSVcursosLlevados =
-                new CargarCSVcursosLlevadosWS.CursosLlevadosCSVcargaWSClient();
-            int resultado = 1;
-            resultado = cargaCSVcursosLlevados.CargarCSVcursosLlevados(br.ReadBytes((int)fs.Length));
-            br.Close();
-            fs.Close();
-            if (resultado == 0)
-                MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",
-                    MessageBoxButtons.OK);
-            else
-                MessageBox.Show("Ha ocurrido un error en la carga de los datos", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }*/
-
-        private void btnCursoLlevado_Click(object sender, EventArgs e)
-        {
-            new frmCargarCursosLlevados().ShowDialog();
-        }
-
-        private void btnCurso_Click(object sender, EventArgs e)
-        {
-            new frmCargarCursos().ShowDialog();
-        }
 
         private void btnCategoria_Click(object sender, EventArgs e)
         {

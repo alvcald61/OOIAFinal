@@ -328,5 +328,16 @@ public class GestionAtencionWS {
     return resultado;
 }
     
-    
+    @WebMethod(operationName = "validar_registro_alumno_cita")
+    public int validar_registro_alumno_cita(@WebParam(name = "id_alumno")int id_alumno,
+            @WebParam(name = "id_horario")int id_horario,@WebParam(name = "cita")Cita cita ){
+        int retorno=0;
+        try{
+           retorno=this.daoAutenticar.validarRegistroACita(id_alumno,id_horario,cita);
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return retorno;
+    }
 }

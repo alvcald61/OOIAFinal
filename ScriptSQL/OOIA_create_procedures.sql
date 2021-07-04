@@ -1265,6 +1265,15 @@ create procedure VALIDAR_REGISTRO_ALUMNO_EVENTO(
 end$
 
 delimiter $
+create procedure VALIDAR_REGISTRO_ALUMNO_CITA(
+	in _id_alumno int,
+    in _id_horario int,
+    in _fecha date
+)begin
+	select * from cita where fid_alumno = _id_alumno and fid_horario =_id_horario and fecha = _fecha;
+end$
+
+delimiter $
 create procedure VALIDAR_REGISTRO_OPINION_CITA(
 	in _id_alumno int,
     in _fid_asesor int,

@@ -330,6 +330,14 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarEspecialidad">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEspecialidadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:especialidad" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="modificarPonente">
     <xs:sequence>
       <xs:element minOccurs="0" name="ponente" type="tns:ponente" />
@@ -360,14 +368,6 @@
   <xs:complexType name="modificarPonenteResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarEspecialidad">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarEspecialidadResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:especialidad" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listar_coordinador_x_id">
@@ -401,16 +401,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarCoordinadorEvento">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarCoordinadorEventoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarPonente">
     <xs:sequence />
   </xs:complexType>
@@ -425,6 +415,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarPonenteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCoordinadorEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCoordinadorEventoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -459,14 +459,6 @@
       <xs:element minOccurs="0" name="return" type="tns:alumno" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCoordinador">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarCoordinadorResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:coordinador" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarAlumno">
     <xs:sequence>
       <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
@@ -475,6 +467,14 @@
   <xs:complexType name="insertarAlumnoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCoordinador">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCoordinadorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:coordinador" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarProfesores">
