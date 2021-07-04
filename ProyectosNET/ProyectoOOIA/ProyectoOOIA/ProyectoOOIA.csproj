@@ -75,6 +75,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Componentes\CardEvento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\CardEvento.Designer.cs">
+      <DependentUpon>CardEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Connected Services\CargarCSValumnosWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,12 +145,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="TipoUsuario.cs" />
-    <Compile Include="Ventanas\Old\CardEvento.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Ventanas\Old\CardEvento.Designer.cs">
-      <DependentUpon>CardEvento.cs</DependentUpon>
-    </Compile>
     <Compile Include="Componentes\Horario.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,9 +152,6 @@
       <DependentUpon>Horario.cs</DependentUpon>
     </Compile>
     <Compile Include="Estado.cs" />
-    <Compile Include="Componentes\OvalPictureBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Componentes\toggle.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -536,7 +536,7 @@
     <Compile Include="Ventanas\ucProxEvento.Designer.cs">
       <DependentUpon>ucProxEvento.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Ventanas\Old\CardEvento.resx">
+    <EmbeddedResource Include="Componentes\CardEvento.resx">
       <DependentUpon>CardEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Componentes\Horario.resx">
@@ -818,6 +818,10 @@
     <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS12.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS3.wsdl" />
+    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.cita.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -905,6 +909,9 @@
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.obtener_estadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -918,6 +925,10 @@
     </None>
     <None Include="Connected Services\GestionEventoWS\GestionEventoWS12.wsdl" />
     <None Include="Connected Services\GestionEventoWS\GestionEventoWS12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionEventoWS\GestionEventoWS3.wsdl" />
+    <None Include="Connected Services\GestionEventoWS\GestionEventoWS3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.categoriaEvento.datasource">
@@ -1001,8 +1012,15 @@
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.ponente1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.reducir_cupoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS1.wsdl" />
     <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS11.wsdl" />
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS11.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.alumno.datasource">

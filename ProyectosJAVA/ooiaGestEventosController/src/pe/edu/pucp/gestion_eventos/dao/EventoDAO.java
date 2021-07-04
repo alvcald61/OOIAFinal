@@ -24,4 +24,5 @@ public interface EventoDAO {
     public int insertar(Evento evento);
     public int modificar(Evento evento);
     public int eliminar(int id_evento);
+    public int reducir_cupo(int id_evento);
 }

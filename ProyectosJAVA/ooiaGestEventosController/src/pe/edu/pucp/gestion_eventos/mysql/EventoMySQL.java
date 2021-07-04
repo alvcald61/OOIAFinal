@@ -373,5 +373,26 @@ public class EventoMySQL implements EventoDAO{
         return eventos;
     }
  
+    public int reducir_cupo(int id_evento) {
+        int resultado = 0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("call REDUCIR_CUPO_EVENTO(?)");
+            //SETEAMOS los parametros
+            cs.setInt("_id_evento", id_evento);
+            //Hacemos la eliminacion logica
+            cs.executeUpdate();
+            resultado = 1;
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());};
+        }
+        return resultado;
+    }
+            
+    
     
 }

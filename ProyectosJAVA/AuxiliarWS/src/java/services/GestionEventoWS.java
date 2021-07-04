@@ -113,6 +113,17 @@ public class GestionEventoWS {
         return resultado;
     }
     
+    @WebMethod(operationName = "reducir_cupo")
+    public int reducirCupo(@WebParam(name = "evento")Evento evento){
+        int resultado=0;
+        try {
+            resultado=this.eventoSQL.reducir_cupo(evento.getId_evento());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
+    
     @WebMethod(operationName = "listarEncuestaEvento")
     public ArrayList<EventoAlumno> listarEncuestaEvento() {
         ArrayList<EventoAlumno> lista= new ArrayList<>();
