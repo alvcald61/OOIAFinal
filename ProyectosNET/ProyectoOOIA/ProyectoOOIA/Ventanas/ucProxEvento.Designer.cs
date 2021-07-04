@@ -40,11 +40,11 @@ namespace ProyectoOOIA.Ventanas
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Black;
             this.lblNombre.Location = new System.Drawing.Point(4, 14);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(207, 30);
+            this.lblNombre.Size = new System.Drawing.Size(184, 30);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre del Evento";
             // 
