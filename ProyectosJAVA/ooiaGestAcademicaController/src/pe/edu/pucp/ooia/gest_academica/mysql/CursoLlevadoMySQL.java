@@ -122,7 +122,7 @@ public class CursoLlevadoMySQL implements CursoLlevadoDAO{
     }
 
     private Alumno obtenerAlumno(int id_alumno) {
-        ArrayList<Alumno> arrayList=new AlumnoMySQL().listar();
+        ArrayList<Alumno> arrayList=new AlumnoMySQL().listar("");
         for(Alumno aux:arrayList)
             if(aux.getId_alumno()==id_alumno)
                 return aux;

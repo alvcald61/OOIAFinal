@@ -29,7 +29,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         {
             BindingList<GestionHumanaWS.psicologo>
                 psicologos = new BindingList<GestionHumanaWS.psicologo>
-                (daoPsicologo.listarPsicologo());
+                (daoPsicologo.listarPsicologo(txtNombre.Text));
             dgvPsicologos.DataSource = psicologos;
         }
 

@@ -27,10 +27,17 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<GestionHumanaWS.alumno>
-                alumnos = new BindingList<GestionHumanaWS.alumno>
-                (daoAlumno.listarAlumno().ToList());
-            dgvAlumnos.DataSource = alumnos;
+            try
+            {
+                BindingList<GestionHumanaWS.alumno>
+                    alumnos = new BindingList<GestionHumanaWS.alumno>
+                    (daoAlumno.listarAlumno(txtNombre.Text).ToList());
+                dgvAlumnos.DataSource = alumnos;
+            }
+            catch
+            {
+                return;
+            }
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
