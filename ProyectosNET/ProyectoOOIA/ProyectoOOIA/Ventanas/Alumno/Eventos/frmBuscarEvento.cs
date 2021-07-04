@@ -29,6 +29,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            evento = null;
             this.Close();
         }
 
@@ -49,8 +50,8 @@ namespace ProyectoOOIA.Ventanas
             evento=  dgvEventos.Rows[e.RowIndex].DataBoundItem as GestionEventoWS.evento;
             dgvEventos.Rows[e.RowIndex].Cells[0].Value = evento.nombre;
             dgvEventos.Rows[e.RowIndex].Cells[1].Value = evento.fecha.Date.Day+"/"+evento.fecha.Month+"/"+evento.fecha.Year;
-            dgvEventos.Rows[e.RowIndex].Cells[2].Value = evento.horaInicio.TimeOfDay.Hours+":"+evento.horaInicio.Minute;
-            dgvEventos.Rows[e.RowIndex].Cells[3].Value = evento.horaFin.TimeOfDay.Hours +":"+evento.horaFin.Minute;
+            dgvEventos.Rows[e.RowIndex].Cells[2].Value = evento.horaInicio.ToString("hh:mm");
+            dgvEventos.Rows[e.RowIndex].Cells[3].Value = evento.horaFin.ToString("hh:mm");
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

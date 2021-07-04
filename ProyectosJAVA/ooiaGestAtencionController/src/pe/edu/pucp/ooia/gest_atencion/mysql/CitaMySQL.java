@@ -155,6 +155,7 @@ public class CitaMySQL implements CitaDAO{
            cs.setInt("_asistio",cita.getAsistio());
            cs.executeUpdate();
            cita.setId_cita(cs.getInt("_id_cita"));
+            System.out.println(cs.getInt("_id_cita"));
            resultado=1;
            cs.close();
         }catch(Exception ex){
@@ -163,7 +164,7 @@ public class CitaMySQL implements CitaDAO{
             //esto siempre se va a ejecutar
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
-        
+        System.out.println(cita.getId_cita());
         return resultado;
     }
 
@@ -340,7 +341,8 @@ public class CitaMySQL implements CitaDAO{
                 cita.getAlumno().setCorreo(rs.getString("correo"));
                 cita.getAlumno().setEspecialidad(new Especialidad());
                 cita.getAlumno().getEspecialidad().setNombre(rs.getString("especialidad"));
-                
+                cita.setLink_Host(rs.getString("link_host"));
+                cita.setLink_user(rs.getString("link_user"));
                 cita.setFecha(rs.getDate("fecha"));
                 cita.setHorario(new Horario(rs.getInt("id_horario"), rs.getInt("dia"), rs.getTime("hora_inicio"),
                         rs.getTime("hora_fin")));

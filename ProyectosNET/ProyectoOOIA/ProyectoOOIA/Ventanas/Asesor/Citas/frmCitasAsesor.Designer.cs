@@ -29,7 +29,7 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCitasAsesor));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -55,6 +55,9 @@ namespace ProyectoOOIA.Ventanas
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGVEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.llamada = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorarioProf)).BeginInit();
@@ -71,7 +74,7 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1014, 71);
+            this.pnlHeader.Size = new System.Drawing.Size(1165, 71);
             this.pnlHeader.TabIndex = 2;
             // 
             // btnLogout
@@ -86,7 +89,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(967, 28);
+            this.btnLogout.Location = new System.Drawing.Point(1118, 24);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(35, 34);
             this.btnLogout.TabIndex = 14;
@@ -124,7 +127,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnDescargarReporte.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDescargarReporte.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDescargarReporte.ForeColor = System.Drawing.Color.White;
-            this.btnDescargarReporte.Location = new System.Drawing.Point(746, 81);
+            this.btnDescargarReporte.Location = new System.Drawing.Point(897, 81);
             this.btnDescargarReporte.Name = "btnDescargarReporte";
             this.btnDescargarReporte.Size = new System.Drawing.Size(256, 37);
             this.btnDescargarReporte.TabIndex = 15;
@@ -138,7 +141,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnHorario.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnHorario.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHorario.ForeColor = System.Drawing.Color.White;
-            this.btnHorario.Location = new System.Drawing.Point(586, 81);
+            this.btnHorario.Location = new System.Drawing.Point(737, 81);
             this.btnHorario.Name = "btnHorario";
             this.btnHorario.Size = new System.Drawing.Size(154, 37);
             this.btnHorario.TabIndex = 11;
@@ -151,30 +154,39 @@ namespace ProyectoOOIA.Ventanas
             this.dgvHorarioProf.AllowUserToAddRows = false;
             this.dgvHorarioProf.AllowUserToDeleteRows = false;
             this.dgvHorarioProf.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHorarioProf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHorarioProf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHorarioProf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHorarioProf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Fecha,
+            this.Hora,
+            this.Especialidad,
+            this.Nombre,
+            this.Correo,
+            this.DGVEstado,
+            this.llamada});
             this.dgvHorarioProf.EnableHeadersVisualStyles = false;
             this.dgvHorarioProf.Location = new System.Drawing.Point(21, 202);
             this.dgvHorarioProf.Name = "dgvHorarioProf";
             this.dgvHorarioProf.ReadOnly = true;
             this.dgvHorarioProf.RowHeadersWidth = 51;
             this.dgvHorarioProf.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHorarioProf.Size = new System.Drawing.Size(981, 397);
+            this.dgvHorarioProf.Size = new System.Drawing.Size(1132, 397);
             this.dgvHorarioProf.TabIndex = 0;
+            this.dgvHorarioProf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHorarioProf_CellContentClick);
             this.dgvHorarioProf.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvHorarioProf_CellFormatting);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(876, 170);
+            this.btnCancelar.Location = new System.Drawing.Point(1027, 170);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(126, 25);
             this.btnCancelar.TabIndex = 1;
@@ -199,7 +211,7 @@ namespace ProyectoOOIA.Ventanas
             // btnMostrarDetalles
             // 
             this.btnMostrarDetalles.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarDetalles.Location = new System.Drawing.Point(795, 171);
+            this.btnMostrarDetalles.Location = new System.Drawing.Point(947, 170);
             this.btnMostrarDetalles.Name = "btnMostrarDetalles";
             this.btnMostrarDetalles.Size = new System.Drawing.Size(75, 25);
             this.btnMostrarDetalles.TabIndex = 5;
@@ -314,6 +326,7 @@ namespace ProyectoOOIA.Ventanas
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.MinimumWidth = 6;
             this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
             this.Fecha.Width = 125;
             // 
             // Hora
@@ -321,6 +334,7 @@ namespace ProyectoOOIA.Ventanas
             this.Hora.HeaderText = "Hora";
             this.Hora.MinimumWidth = 6;
             this.Hora.Name = "Hora";
+            this.Hora.ReadOnly = true;
             this.Hora.Width = 125;
             // 
             // Especialidad
@@ -328,6 +342,7 @@ namespace ProyectoOOIA.Ventanas
             this.Especialidad.HeaderText = "Especialidad";
             this.Especialidad.MinimumWidth = 6;
             this.Especialidad.Name = "Especialidad";
+            this.Especialidad.ReadOnly = true;
             this.Especialidad.Width = 170;
             // 
             // Nombre
@@ -335,13 +350,36 @@ namespace ProyectoOOIA.Ventanas
             this.Nombre.HeaderText = "Nombre del Alumno";
             this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             this.Nombre.Width = 250;
+            // 
+            // Correo
+            // 
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            this.Correo.Width = 200;
+            // 
+            // DGVEstado
+            // 
+            this.DGVEstado.HeaderText = "Estado de Cita";
+            this.DGVEstado.Name = "DGVEstado";
+            this.DGVEstado.ReadOnly = true;
+            this.DGVEstado.Width = 110;
+            // 
+            // llamada
+            // 
+            this.llamada.HeaderText = "Iniciar Llamada";
+            this.llamada.Name = "llamada";
+            this.llamada.ReadOnly = true;
+            this.llamada.Text = "Iniciar Llamada";
+            
             // 
             // frmCitasAsesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1014, 611);
+            this.ClientSize = new System.Drawing.Size(1165, 611);
             this.Controls.Add(this.btnHorario);
             this.Controls.Add(this.btnDescargarReporte);
             this.Controls.Add(this.label1);
@@ -389,5 +427,8 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
         private System.Windows.Forms.DataGridViewTextBoxColumn Especialidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DGVEstado;
+        private System.Windows.Forms.DataGridViewButtonColumn llamada;
     }
 }

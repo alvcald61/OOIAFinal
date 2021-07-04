@@ -35,6 +35,7 @@ namespace ProyectoOOIA.Ventanas
             listarCitas(this.asesor.id_miembro_pucp, "");
             //inicialmente las citas activas y pendientes
             listarCitasPendientes(this.asesor.id_miembro_pucp,"");
+            
         }
 
         private void listarCitasPendientes(int id_profesor, String nombre_alumno)
@@ -190,12 +191,16 @@ namespace ProyectoOOIA.Ventanas
             dgvHorarioProf.Rows[e.RowIndex].Cells[2].Value = data.alumno.especialidad.nombre;
             dgvHorarioProf.Rows[e.RowIndex].Cells[3].Value = data.alumno.nombre;
             if((data.fecha >= DateTime.Now) && data.activo==1)
-                dgvHorarioProf.Rows[e.RowIndex].Cells[4].Value = "Pendiente";
+                dgvHorarioProf.Rows[e.RowIndex].Cells[5].Value = "Pendiente";
             if ((data.fecha < DateTime.Now) && data.activo == 1)
-                dgvHorarioProf.Rows[e.RowIndex].Cells[4].Value = "Finalizada";
+            {
+                dgvHorarioProf.Rows[e.RowIndex].Cells[5].Value = "Finalizada";
+                //dgvHorarioProf.Rows[e.RowIndex].Cells[6] = false;
+            }
             if (data.activo == 0)
-                dgvHorarioProf.Rows[e.RowIndex].Cells[4].Value = "Cancelada";
-            dgvHorarioProf.Rows[e.RowIndex].Cells[5].Value = data.alumno.correo;
+                dgvHorarioProf.Rows[e.RowIndex].Cells[5].Value = "Cancelada";
+            dgvHorarioProf.Rows[e.RowIndex].Cells[4].Value = data.alumno.correo;
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -203,5 +208,24 @@ namespace ProyectoOOIA.Ventanas
             new frmDescargarReporteOpinion(this.asesor.id_miembro_pucp).Show();
         }
 
+        private void dgvHorarioProf_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrd = (DataGridView) sender;
+            if (senderGrd.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                GestionAtencionWS.cita data = dgvHorarioProf.Rows[e.RowIndex].DataBoundItem
+                    as GestionAtencionWS.cita;
+                if (dgvHorarioProf.Rows[e.RowIndex].Cells[5].Value == "Pendiente")
+                    try
+                    {
+                        System.Diagnostics.Process.Start(data.link_Host);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No tiene Link asociado", "Error", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                    }
+            }
+        }
     }
 }

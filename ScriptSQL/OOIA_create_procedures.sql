@@ -1410,7 +1410,7 @@ in _nombre_alumno varchar(150)
 )
 begin
 	select c.id_cita, c.fid_alumno,c.tipo_asesor, c.fid_asesor, p.nombre as nombre_alumno, p.direccion, p.fecha_nacimiento, a.codigo,
-    p.correo,e.nombre as especialidad,c.fecha, c.motivo, c.compromiso, c.asistio, c.activo,
+    p.correo,e.nombre as especialidad,c.fecha, c.motivo, c.compromiso, c.asistio, c.activo, c.link_host,c.link_user,
 	h.id_horario, h.dia, h.hora_inicio, h.hora_fin,
 	ca.id_codigo_atencion, ca.codigo, ca.descripcion
     	from cita c 
