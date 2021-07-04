@@ -232,6 +232,13 @@ namespace ProyectoOOIA.Ventanas
                 MessageBoxButtons.YesNo, MessageBoxIcon.None);
                 if (dr == DialogResult.Yes)
                 {
+                int cantCitas = new GestionAtencionWS.GestionAtencionWSClient().validar_registro_alumno_cita(
+                    alumno.id_alumno, citaNueva.horario.id_horario,citaNueva);
+                if (cantCitas == 1)
+                {
+                    MessageBox.Show("Ya ha registrado una cita con el mismo horario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 //int resultado = daoCita.insertar(cita);
                 int resultado = daoCita.insertarCita(citaNueva);
                 if (resultado != 0)

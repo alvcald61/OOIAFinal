@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ProyectosNET",
+    "\\ProyectosNET\\ProyectoOOIA"
   ],
-  "SelectedNode": "\\ProyectoOOIA.sln",
+  "SelectedNode": "\\ProyectosNET\\ProyectoOOIA\\ProyectoOOIA.sln",
   "PreviewInSolutionExplorer": false
 }

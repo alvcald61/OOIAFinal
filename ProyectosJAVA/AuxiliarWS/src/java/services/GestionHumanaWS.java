@@ -5,10 +5,12 @@
  */
 package services;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import pe.edu.pucp.ooia.gest_atencion.model.Cita;
 import pe.edu.pucp.ooia.gest_humana.dao.AlumnoDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.AutenticarPersonaDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.CoordinadorDAO;
@@ -485,6 +487,9 @@ public class GestionHumanaWS {
         }
         return retorno;
     }
+    
+     
+    
     
     
     

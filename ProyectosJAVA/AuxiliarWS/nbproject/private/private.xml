@@ -5,9 +5,8 @@
         <group>
             <file>file:/C:/Repositorios/OOIA_FINAL/ProyectosJAVA/AuxiliarWS/src/java/services/ReporteAsesorOpinionWS.java</file>
             <file>file:/C:/Repositorios/OOIA_FINAL/ProyectosJAVA/AuxiliarWS/src/java/services/GestionHumanaWS.java</file>
-            <file>file:/C:/Repositorios/OOIA_FINAL/ProyectosJAVA/AuxiliarWS/src/java/services/ReporteEventoAlumnoWS.java</file>
-            <file>file:/C:/Repositorios/OOIA_FINAL/ProyectosJAVA/AuxiliarWS/src/java/services/GestionAtencionWS.java</file>
             <file>file:/C:/Repositorios/OOIA_FINAL/ProyectosJAVA/AuxiliarWS/src/java/servlets/ReporteEventoAlumno.java</file>
+            <file>file:/C:/Repositorios/OOIA_FINAL/ProyectosJAVA/AuxiliarWS/src/java/services/GestionAtencionWS.java</file>
         </group>
     </open-files>
 </project-private>

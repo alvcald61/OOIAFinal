@@ -24,6 +24,8 @@ import pe.edu.pucp.ooia.gest_atencion.mysql.CodigoAtencionMySQL;
 import pe.edu.pucp.ooia.gest_atencion.mysql.EncuestaMySQL;
 import pe.edu.pucp.ooia.gest_atencion.mysql.HorarioAsesorMySQL;
 import pe.edu.pucp.ooia.gest_atencion.mysql.HorarioMySQL;
+import pe.edu.pucp.ooia.gest_humana.dao.AutenticarPersonaDAO;
+import pe.edu.pucp.ooia.gest_humana.mysql.AutenticarPersonaMySQL;
 
 
 /**
@@ -37,6 +39,7 @@ public class GestionAtencionWS {
     private CodigoAtencionDAO daoCodigo;
         private EncuestaDAO daoEncuesta;
     private HorarioAsesorDAO daoHorarioAsesor;
+    private AutenticarPersonaDAO autenticarPersona;
     
     public GestionAtencionWS() {
             cita=new CitaMySQL();
@@ -44,6 +47,7 @@ public class GestionAtencionWS {
             horario=new HorarioMySQL();
             daoHorarioAsesor = new HorarioAsesorMySQL();
             daoEncuesta = new EncuestaMySQL();
+            autenticarPersona = new AutenticarPersonaMySQL();
     }
    @WebMethod(operationName = "listarCitaHistorico")
     public ArrayList<Cita> listarCitaHistorico(@WebParam(name = "id_alumno" )int id_alumno) {
@@ -310,5 +314,16 @@ public class GestionAtencionWS {
     return resultado;
 }
     
-    
+    @WebMethod(operationName = "validar_registro_alumno_cita")
+    public int validar_registro_alumno_cita(@WebParam(name = "id_alumno")int id_alumno,
+            @WebParam(name = "id_horario")int id_horario,@WebParam(name = "cita")Cita cita ){
+        int retorno=0;
+        try{
+           retorno=this.autenticarPersona.validarRegistroACita(id_alumno,id_horario,cita);
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return retorno;
+    }
 }
