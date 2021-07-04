@@ -14,9 +14,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 import pe.edu.pucp.ooia.gest_humana.dao.AlumnoDAO;
+import pe.edu.pucp.ooia.gest_humana.dao.AutenticarPersonaDAO;
 import pe.edu.pucp.ooia.gest_humana.model.Alumno;
 import pe.edu.pucp.ooia.gest_humana.model.Especialidad;
 import pe.edu.pucp.ooia.gest_humana.mysql.AlumnoMySQL;
+import pe.edu.pucp.ooia.gest_humana.mysql.AutenticarPersonaMySQL;
 
 /**
  *
@@ -26,15 +28,17 @@ public class AlumnosCSV {
     
     private Scanner sc;
     private AlumnoDAO daoAlumno;
+    private AutenticarPersonaDAO daoAutenticar;
     
     public void setRutaCSV(FileInputStream archivo) throws FileNotFoundException{
         sc = new Scanner(archivo);
         daoAlumno = new AlumnoMySQL();
+        daoAutenticar = new AutenticarPersonaMySQL();//inicializamos esta clase para verficiar usuario
     }
     public int cargarDatos() throws ParseException{
         sc.useDelimiter("\n");
         
-        int cargaCorrecta = 0;//indica el numero de filas malas
+        int cargaCorrecta = 0, resultado;//indica el numero de filas malas
         while(sc.hasNext()){
             Alumno alumno = new Alumno();
             String[] datos = sc.next().split(",");
@@ -62,8 +66,15 @@ public class AlumnosCSV {
             alumno.setCraest(Double.parseDouble(datosCorrectos[10]));
             alumno.setCreditos_aprobados(Double.parseDouble(datosCorrectos[11]));
             
-            int resultado = daoAlumno.insertar(alumno);
-            if(resultado == 0){
+            //Tenemos que hacer la verificacion de alumnos repetidos
+            //No puede haber alumnos con el mismo DNI ni con el mismo usuario
+            if(daoAutenticar.autenticarPersona(Integer.valueOf(alumno.getDni())) == 0 &&
+                    daoAutenticar.autenticarUsuarioUnico(alumno.getUsuario()) == 0){
+                resultado = daoAlumno.insertar(alumno);
+                if(resultado == 0){
+                    cargaCorrecta++;
+                }
+            }else{
                 cargaCorrecta++;
             }
         }
