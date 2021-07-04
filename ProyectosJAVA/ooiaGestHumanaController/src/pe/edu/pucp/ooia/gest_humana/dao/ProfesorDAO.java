@@ -8,7 +8,7 @@ import pe.edu.pucp.ooia.gest_humana.model.Profesor;
  * @author Gerardo
  */
 public interface ProfesorDAO {
-    public ArrayList<Profesor> listar();
+    public ArrayList<Profesor> listar(String nombre);
     public Profesor listar_x_id(int id);
     public int insertar(Profesor profesor);
     public int modificar(Profesor profesor);

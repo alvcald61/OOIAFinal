@@ -1198,7 +1198,7 @@ CREATE PROCEDURE LISTAR_EVENTO_PONENTE(
 	in _id_evento int
 )
 begin
-	select per.id_persona, me.id_miembro_externo, p.id_ponente, per.nombre as nombre_ponente, e.id_evento, e.nombre as nombre_evento
+	select per.id_persona, me.id_miembro_externo, me.ocupacion, me.telefono, p.organizacion, p.id_ponente, per.nombre as nombre_ponente, e.id_evento, e.nombre as nombre_evento
 	from evento_ponente ep
 	inner join ponente p on ep.fid_ponente = p.id_ponente
     inner join miembro_externo me on me.id_miembro_externo=p.fid_miembro_externo
@@ -1262,6 +1262,15 @@ create procedure VALIDAR_REGISTRO_ALUMNO_EVENTO(
     in _id_evento int
 )begin
 	select * from evento_alumno where fid_alumno = _id_alumno and fid_evento =_id_evento;
+end$
+
+delimiter $
+create procedure VALIDAR_REGISTRO_ALUMNO_CITA(
+	in _id_alumno int,
+    in _id_horario int,
+    in _fecha date
+)begin
+	select * from cita where fid_alumno = _id_alumno and fid_horario =_id_horario and fecha = _fecha;
 end$
 
 delimiter $

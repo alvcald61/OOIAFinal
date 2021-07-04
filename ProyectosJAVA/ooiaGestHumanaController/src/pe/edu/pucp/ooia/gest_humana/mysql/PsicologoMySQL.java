@@ -20,12 +20,13 @@ public class PsicologoMySQL implements PsicologoDAO {
     CallableStatement cs;
     
     @Override
-    public ArrayList<Psicologo> listar() {
+    public ArrayList<Psicologo> listar(String nombre) {
         ArrayList<Psicologo> psicologos = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_PSICOLOGO()}");
+            cs = con.prepareCall("{call LISTAR_PSICOLOGO_X_NOMBRE(?)}");
+            cs.setString("_nombre", nombre);
             rs = cs.executeQuery();
             while(rs.next()){
                 Psicologo psicologo = new Psicologo();

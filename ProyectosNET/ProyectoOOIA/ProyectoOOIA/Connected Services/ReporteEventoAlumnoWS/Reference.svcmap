@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/AuxiliarWS/ReporteEventoAlumnoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReporteEventoAlumnoWS2.xsd" MetadataType="Schema" ID="69c976e4-9b9b-45bd-aae5-63b2861a7afb" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/ReporteEventoAlumnoWS?xsd=1" />
-    <MetadataFile FileName="ReporteEventoAlumnoWS2.wsdl" MetadataType="Wsdl" ID="da325274-1905-409e-87db-222dd8f24c18" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/ReporteEventoAlumnoWS?WSDL" />
+    <MetadataFile FileName="ReporteEventoAlumnoWS2.xsd" MetadataType="Schema" ID="3abad73c-7dd3-49a8-824d-06e44c7ce39c" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/ReporteEventoAlumnoWS?xsd=1" />
+    <MetadataFile FileName="ReporteEventoAlumnoWS2.wsdl" MetadataType="Wsdl" ID="63422bd5-48bd-4266-a69e-1c7dbac2e9da" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/ReporteEventoAlumnoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

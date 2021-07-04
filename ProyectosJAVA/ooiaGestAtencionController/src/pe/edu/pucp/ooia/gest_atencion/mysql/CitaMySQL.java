@@ -228,7 +228,7 @@ public class CitaMySQL implements CitaDAO{
     }
     
     private Alumno obtenerAlumno(int id_alumno) {
-        ArrayList<Alumno> arrayList=new AlumnoMySQL().listar();
+        ArrayList<Alumno> arrayList=new AlumnoMySQL().listar("");
         for(Alumno aux:arrayList)
             if(aux.getId_alumno()==id_alumno)
                 return aux;
@@ -236,7 +236,7 @@ public class CitaMySQL implements CitaDAO{
     } 
     
     private Profesor obtenerProfesor(int id_profesor) {
-        ArrayList<Profesor> arrayList=new ProfesorMySQL().listar();
+        ArrayList<Profesor> arrayList=new ProfesorMySQL().listar("");
         for(Profesor aux:arrayList)
             if(aux.getId_profesor()==id_profesor)
                 return aux;
@@ -244,7 +244,7 @@ public class CitaMySQL implements CitaDAO{
     } 
     
     private Psicologo obtenerPsicologo(int id_psicologo) {
-        ArrayList<Psicologo> arrayList=new PsicologoMySQL().listar();
+        ArrayList<Psicologo> arrayList=new PsicologoMySQL().listar("");
         for(Psicologo aux:arrayList)
             if(aux.getId_psicologo()==id_psicologo)
                 return aux;

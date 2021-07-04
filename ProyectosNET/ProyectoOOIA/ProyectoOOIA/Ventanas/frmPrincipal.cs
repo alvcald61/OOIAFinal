@@ -102,9 +102,8 @@ namespace ProyectoOOIA.Ventanas
 
         public void loadImages()
         {
-            listaImagenes.Add(ProyectoOOIA.Properties.Resources.profesor);
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.EEGGCC);
-            listaImagenes.Add(ProyectoOOIA.Properties.Resources.Estudiante);
+            listaImagenes.Add(ProyectoOOIA.Properties.Resources._02_abre_50_anos_nuevo);
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.Evento);
             imagenes.Image = listaImagenes[0];
         }

@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/AuxiliarWS/GestionAtencionWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestionAtencionWS2.wsdl" MetadataType="Wsdl" ID="d977a2a4-fe87-4692-af27-4cacb796cdfd" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionAtencionWS?WSDL" />
-    <MetadataFile FileName="GestionAtencionWS2.xsd" MetadataType="Schema" ID="7a4d080e-34df-485f-a6ee-97a2a0f9969c" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionAtencionWS?xsd=1" />
+    <MetadataFile FileName="GestionAtencionWS2.wsdl" MetadataType="Wsdl" ID="ece00da2-cfd6-43ef-8f6f-a9ef808da356" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionAtencionWS?WSDL" />
+    <MetadataFile FileName="GestionAtencionWS2.xsd" MetadataType="Schema" ID="29d51641-0c75-4d18-a229-63b9cf0de99f" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionAtencionWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

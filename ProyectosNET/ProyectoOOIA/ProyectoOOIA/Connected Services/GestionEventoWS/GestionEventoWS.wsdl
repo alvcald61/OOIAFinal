@@ -5,107 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/AuxiliarWS/GestionEventoWS?xsd=1" namespace="http://services/" />
     </xsd:schema>
   </types>
-  <message name="modificarEncuestaEvento">
-    <part name="parameters" element="tns:modificarEncuestaEvento" />
+  <message name="obtener_estado">
+    <part name="parameters" element="tns:obtener_estado" />
   </message>
-  <message name="modificarEncuestaEventoResponse">
-    <part name="parameters" element="tns:modificarEncuestaEventoResponse" />
+  <message name="obtener_estadoResponse">
+    <part name="parameters" element="tns:obtener_estadoResponse" />
   </message>
-  <message name="eliminarCategoriaEvento">
-    <part name="parameters" element="tns:eliminarCategoriaEvento" />
+  <message name="modificarEvento">
+    <part name="parameters" element="tns:modificarEvento" />
   </message>
-  <message name="eliminarCategoriaEventoResponse">
-    <part name="parameters" element="tns:eliminarCategoriaEventoResponse" />
-  </message>
-  <message name="listarPonenteXEvento">
-    <part name="parameters" element="tns:listarPonenteXEvento" />
-  </message>
-  <message name="listarPonenteXEventoResponse">
-    <part name="parameters" element="tns:listarPonenteXEventoResponse" />
-  </message>
-  <message name="insertarEncuestaEvento">
-    <part name="parameters" element="tns:insertarEncuestaEvento" />
-  </message>
-  <message name="insertarEncuestaEventoResponse">
-    <part name="parameters" element="tns:insertarEncuestaEventoResponse" />
-  </message>
-  <message name="listarEncuestaEvento">
-    <part name="parameters" element="tns:listarEncuestaEvento" />
-  </message>
-  <message name="listarEncuestaEventoResponse">
-    <part name="parameters" element="tns:listarEncuestaEventoResponse" />
-  </message>
-  <message name="listarCategoriaEvento">
-    <part name="parameters" element="tns:listarCategoriaEvento" />
-  </message>
-  <message name="listarCategoriaEventoResponse">
-    <part name="parameters" element="tns:listarCategoriaEventoResponse" />
-  </message>
-  <message name="modificarCategoriaEvento">
-    <part name="parameters" element="tns:modificarCategoriaEvento" />
-  </message>
-  <message name="modificarCategoriaEventoResponse">
-    <part name="parameters" element="tns:modificarCategoriaEventoResponse" />
-  </message>
-  <message name="eliminarEncuestaEvento">
-    <part name="parameters" element="tns:eliminarEncuestaEvento" />
-  </message>
-  <message name="eliminarEncuestaEventoResponse">
-    <part name="parameters" element="tns:eliminarEncuestaEventoResponse" />
-  </message>
-  <message name="listar_tres_eventos_proximos">
-    <part name="parameters" element="tns:listar_tres_eventos_proximos" />
-  </message>
-  <message name="listar_tres_eventos_proximosResponse">
-    <part name="parameters" element="tns:listar_tres_eventos_proximosResponse" />
-  </message>
-  <message name="insertarCoordinadorEvento">
-    <part name="parameters" element="tns:insertarCoordinadorEvento" />
-  </message>
-  <message name="insertarCoordinadorEventoResponse">
-    <part name="parameters" element="tns:insertarCoordinadorEventoResponse" />
-  </message>
-  <message name="listar_eventos_inscritos">
-    <part name="parameters" element="tns:listar_eventos_inscritos" />
-  </message>
-  <message name="listar_eventos_inscritosResponse">
-    <part name="parameters" element="tns:listar_eventos_inscritosResponse" />
-  </message>
-  <message name="listarEvento_por_fecha">
-    <part name="parameters" element="tns:listarEvento_por_fecha" />
-  </message>
-  <message name="listarEvento_por_fechaResponse">
-    <part name="parameters" element="tns:listarEvento_por_fechaResponse" />
-  </message>
-  <message name="modificarCoordinadorEvento">
-    <part name="parameters" element="tns:modificarCoordinadorEvento" />
-  </message>
-  <message name="modificarCoordinadorEventoResponse">
-    <part name="parameters" element="tns:modificarCoordinadorEventoResponse" />
-  </message>
-  <message name="listar_eventos_pasados">
-    <part name="parameters" element="tns:listar_eventos_pasados" />
-  </message>
-  <message name="listar_eventos_pasadosResponse">
-    <part name="parameters" element="tns:listar_eventos_pasadosResponse" />
-  </message>
-  <message name="eliminarCoordinadorEvento">
-    <part name="parameters" element="tns:eliminarCoordinadorEvento" />
-  </message>
-  <message name="eliminarCoordinadorEventoResponse">
-    <part name="parameters" element="tns:eliminarCoordinadorEventoResponse" />
-  </message>
-  <message name="insertarCategoriaEvento">
-    <part name="parameters" element="tns:insertarCategoriaEvento" />
-  </message>
-  <message name="insertarCategoriaEventoResponse">
-    <part name="parameters" element="tns:insertarCategoriaEventoResponse" />
-  </message>
-  <message name="listarCoordinadorEvento">
-    <part name="parameters" element="tns:listarCoordinadorEvento" />
-  </message>
-  <message name="listarCoordinadorEventoResponse">
-    <part name="parameters" element="tns:listarCoordinadorEventoResponse" />
+  <message name="modificarEventoResponse">
+    <part name="parameters" element="tns:modificarEventoResponse" />
   </message>
   <message name="eliminarEvento">
     <part name="parameters" element="tns:eliminarEvento" />
@@ -119,86 +29,122 @@
   <message name="insertarEventoResponse">
     <part name="parameters" element="tns:insertarEventoResponse" />
   </message>
-  <message name="modificarEvento">
-    <part name="parameters" element="tns:modificarEvento" />
-  </message>
-  <message name="modificarEventoResponse">
-    <part name="parameters" element="tns:modificarEventoResponse" />
-  </message>
   <message name="listarEvento_por_nombre_categoria">
     <part name="parameters" element="tns:listarEvento_por_nombre_categoria" />
   </message>
   <message name="listarEvento_por_nombre_categoriaResponse">
     <part name="parameters" element="tns:listarEvento_por_nombre_categoriaResponse" />
   </message>
+  <message name="listarEvento_por_fecha">
+    <part name="parameters" element="tns:listarEvento_por_fecha" />
+  </message>
+  <message name="listarEvento_por_fechaResponse">
+    <part name="parameters" element="tns:listarEvento_por_fechaResponse" />
+  </message>
+  <message name="insertarEncuestaEvento">
+    <part name="parameters" element="tns:insertarEncuestaEvento" />
+  </message>
+  <message name="insertarEncuestaEventoResponse">
+    <part name="parameters" element="tns:insertarEncuestaEventoResponse" />
+  </message>
+  <message name="eliminarEncuestaEvento">
+    <part name="parameters" element="tns:eliminarEncuestaEvento" />
+  </message>
+  <message name="eliminarEncuestaEventoResponse">
+    <part name="parameters" element="tns:eliminarEncuestaEventoResponse" />
+  </message>
+  <message name="listarCoordinadorEvento">
+    <part name="parameters" element="tns:listarCoordinadorEvento" />
+  </message>
+  <message name="listarCoordinadorEventoResponse">
+    <part name="parameters" element="tns:listarCoordinadorEventoResponse" />
+  </message>
+  <message name="modificarCoordinadorEvento">
+    <part name="parameters" element="tns:modificarCoordinadorEvento" />
+  </message>
+  <message name="modificarCoordinadorEventoResponse">
+    <part name="parameters" element="tns:modificarCoordinadorEventoResponse" />
+  </message>
+  <message name="eliminarCoordinadorEvento">
+    <part name="parameters" element="tns:eliminarCoordinadorEvento" />
+  </message>
+  <message name="eliminarCoordinadorEventoResponse">
+    <part name="parameters" element="tns:eliminarCoordinadorEventoResponse" />
+  </message>
+  <message name="listarEncuestaEvento">
+    <part name="parameters" element="tns:listarEncuestaEvento" />
+  </message>
+  <message name="listarEncuestaEventoResponse">
+    <part name="parameters" element="tns:listarEncuestaEventoResponse" />
+  </message>
+  <message name="listarCategoriaEvento">
+    <part name="parameters" element="tns:listarCategoriaEvento" />
+  </message>
+  <message name="listarCategoriaEventoResponse">
+    <part name="parameters" element="tns:listarCategoriaEventoResponse" />
+  </message>
+  <message name="listar_tres_eventos_proximos">
+    <part name="parameters" element="tns:listar_tres_eventos_proximos" />
+  </message>
+  <message name="listar_tres_eventos_proximosResponse">
+    <part name="parameters" element="tns:listar_tres_eventos_proximosResponse" />
+  </message>
+  <message name="modificarEncuestaEvento">
+    <part name="parameters" element="tns:modificarEncuestaEvento" />
+  </message>
+  <message name="modificarEncuestaEventoResponse">
+    <part name="parameters" element="tns:modificarEncuestaEventoResponse" />
+  </message>
+  <message name="insertarCoordinadorEvento">
+    <part name="parameters" element="tns:insertarCoordinadorEvento" />
+  </message>
+  <message name="insertarCoordinadorEventoResponse">
+    <part name="parameters" element="tns:insertarCoordinadorEventoResponse" />
+  </message>
+  <message name="insertarCategoriaEvento">
+    <part name="parameters" element="tns:insertarCategoriaEvento" />
+  </message>
+  <message name="insertarCategoriaEventoResponse">
+    <part name="parameters" element="tns:insertarCategoriaEventoResponse" />
+  </message>
+  <message name="modificarCategoriaEvento">
+    <part name="parameters" element="tns:modificarCategoriaEvento" />
+  </message>
+  <message name="modificarCategoriaEventoResponse">
+    <part name="parameters" element="tns:modificarCategoriaEventoResponse" />
+  </message>
+  <message name="eliminarCategoriaEvento">
+    <part name="parameters" element="tns:eliminarCategoriaEvento" />
+  </message>
+  <message name="eliminarCategoriaEventoResponse">
+    <part name="parameters" element="tns:eliminarCategoriaEventoResponse" />
+  </message>
+  <message name="listarPonenteXEvento">
+    <part name="parameters" element="tns:listarPonenteXEvento" />
+  </message>
+  <message name="listarPonenteXEventoResponse">
+    <part name="parameters" element="tns:listarPonenteXEventoResponse" />
+  </message>
+  <message name="listar_eventos_inscritos">
+    <part name="parameters" element="tns:listar_eventos_inscritos" />
+  </message>
+  <message name="listar_eventos_inscritosResponse">
+    <part name="parameters" element="tns:listar_eventos_inscritosResponse" />
+  </message>
+  <message name="listar_eventos_pasados">
+    <part name="parameters" element="tns:listar_eventos_pasados" />
+  </message>
+  <message name="listar_eventos_pasadosResponse">
+    <part name="parameters" element="tns:listar_eventos_pasadosResponse" />
+  </message>
   <portType name="GestionEventoWS">
-    <operation name="modificarEncuestaEvento">
-      <input wsam:Action="http://services/GestionEventoWS/modificarEncuestaEventoRequest" message="tns:modificarEncuestaEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/modificarEncuestaEventoResponse" message="tns:modificarEncuestaEventoResponse" />
+    <operation name="obtener_estado">
+      <input wsam:Action="http://services/GestionEventoWS/obtener_estadoRequest" message="tns:obtener_estado" />
+      <output wsam:Action="http://services/GestionEventoWS/obtener_estadoResponse" message="tns:obtener_estadoResponse" />
     </operation>
-    <operation name="eliminarCategoriaEvento">
-      <input wsam:Action="http://services/GestionEventoWS/eliminarCategoriaEventoRequest" message="tns:eliminarCategoriaEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/eliminarCategoriaEventoResponse" message="tns:eliminarCategoriaEventoResponse" />
-    </operation>
-    <operation name="listarPonenteXEvento">
-      <input wsam:Action="http://services/GestionEventoWS/listarPonenteXEventoRequest" message="tns:listarPonenteXEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/listarPonenteXEventoResponse" message="tns:listarPonenteXEventoResponse" />
-    </operation>
-    <operation name="insertarEncuestaEvento">
-      <input wsam:Action="http://services/GestionEventoWS/insertarEncuestaEventoRequest" message="tns:insertarEncuestaEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/insertarEncuestaEventoResponse" message="tns:insertarEncuestaEventoResponse" />
-    </operation>
-    <operation name="listarEncuestaEvento">
-      <input wsam:Action="http://services/GestionEventoWS/listarEncuestaEventoRequest" message="tns:listarEncuestaEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/listarEncuestaEventoResponse" message="tns:listarEncuestaEventoResponse" />
-    </operation>
-    <operation name="listarCategoriaEvento">
-      <input wsam:Action="http://services/GestionEventoWS/listarCategoriaEventoRequest" message="tns:listarCategoriaEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/listarCategoriaEventoResponse" message="tns:listarCategoriaEventoResponse" />
-    </operation>
-    <operation name="modificarCategoriaEvento">
-      <input wsam:Action="http://services/GestionEventoWS/modificarCategoriaEventoRequest" message="tns:modificarCategoriaEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/modificarCategoriaEventoResponse" message="tns:modificarCategoriaEventoResponse" />
-    </operation>
-    <operation name="eliminarEncuestaEvento">
-      <input wsam:Action="http://services/GestionEventoWS/eliminarEncuestaEventoRequest" message="tns:eliminarEncuestaEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/eliminarEncuestaEventoResponse" message="tns:eliminarEncuestaEventoResponse" />
-    </operation>
-    <operation name="listar_tres_eventos_proximos">
-      <input wsam:Action="http://services/GestionEventoWS/listar_tres_eventos_proximosRequest" message="tns:listar_tres_eventos_proximos" />
-      <output wsam:Action="http://services/GestionEventoWS/listar_tres_eventos_proximosResponse" message="tns:listar_tres_eventos_proximosResponse" />
-    </operation>
-    <operation name="insertarCoordinadorEvento">
-      <input wsam:Action="http://services/GestionEventoWS/insertarCoordinadorEventoRequest" message="tns:insertarCoordinadorEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/insertarCoordinadorEventoResponse" message="tns:insertarCoordinadorEventoResponse" />
-    </operation>
-    <operation name="listar_eventos_inscritos">
-      <input wsam:Action="http://services/GestionEventoWS/listar_eventos_inscritosRequest" message="tns:listar_eventos_inscritos" />
-      <output wsam:Action="http://services/GestionEventoWS/listar_eventos_inscritosResponse" message="tns:listar_eventos_inscritosResponse" />
-    </operation>
-    <operation name="listarEvento_por_fecha">
-      <input wsam:Action="http://services/GestionEventoWS/listarEvento_por_fechaRequest" message="tns:listarEvento_por_fecha" />
-      <output wsam:Action="http://services/GestionEventoWS/listarEvento_por_fechaResponse" message="tns:listarEvento_por_fechaResponse" />
-    </operation>
-    <operation name="modificarCoordinadorEvento">
-      <input wsam:Action="http://services/GestionEventoWS/modificarCoordinadorEventoRequest" message="tns:modificarCoordinadorEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/modificarCoordinadorEventoResponse" message="tns:modificarCoordinadorEventoResponse" />
-    </operation>
-    <operation name="listar_eventos_pasados">
-      <input wsam:Action="http://services/GestionEventoWS/listar_eventos_pasadosRequest" message="tns:listar_eventos_pasados" />
-      <output wsam:Action="http://services/GestionEventoWS/listar_eventos_pasadosResponse" message="tns:listar_eventos_pasadosResponse" />
-    </operation>
-    <operation name="eliminarCoordinadorEvento">
-      <input wsam:Action="http://services/GestionEventoWS/eliminarCoordinadorEventoRequest" message="tns:eliminarCoordinadorEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/eliminarCoordinadorEventoResponse" message="tns:eliminarCoordinadorEventoResponse" />
-    </operation>
-    <operation name="insertarCategoriaEvento">
-      <input wsam:Action="http://services/GestionEventoWS/insertarCategoriaEventoRequest" message="tns:insertarCategoriaEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/insertarCategoriaEventoResponse" message="tns:insertarCategoriaEventoResponse" />
-    </operation>
-    <operation name="listarCoordinadorEvento">
-      <input wsam:Action="http://services/GestionEventoWS/listarCoordinadorEventoRequest" message="tns:listarCoordinadorEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/listarCoordinadorEventoResponse" message="tns:listarCoordinadorEventoResponse" />
+    <operation name="modificarEvento">
+      <input wsam:Action="http://services/GestionEventoWS/modificarEventoRequest" message="tns:modificarEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/modificarEventoResponse" message="tns:modificarEventoResponse" />
     </operation>
     <operation name="eliminarEvento">
       <input wsam:Action="http://services/GestionEventoWS/eliminarEventoRequest" message="tns:eliminarEvento" />
@@ -208,18 +154,82 @@
       <input wsam:Action="http://services/GestionEventoWS/insertarEventoRequest" message="tns:insertarEvento" />
       <output wsam:Action="http://services/GestionEventoWS/insertarEventoResponse" message="tns:insertarEventoResponse" />
     </operation>
-    <operation name="modificarEvento">
-      <input wsam:Action="http://services/GestionEventoWS/modificarEventoRequest" message="tns:modificarEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/modificarEventoResponse" message="tns:modificarEventoResponse" />
-    </operation>
     <operation name="listarEvento_por_nombre_categoria">
       <input wsam:Action="http://services/GestionEventoWS/listarEvento_por_nombre_categoriaRequest" message="tns:listarEvento_por_nombre_categoria" />
       <output wsam:Action="http://services/GestionEventoWS/listarEvento_por_nombre_categoriaResponse" message="tns:listarEvento_por_nombre_categoriaResponse" />
     </operation>
+    <operation name="listarEvento_por_fecha">
+      <input wsam:Action="http://services/GestionEventoWS/listarEvento_por_fechaRequest" message="tns:listarEvento_por_fecha" />
+      <output wsam:Action="http://services/GestionEventoWS/listarEvento_por_fechaResponse" message="tns:listarEvento_por_fechaResponse" />
+    </operation>
+    <operation name="insertarEncuestaEvento">
+      <input wsam:Action="http://services/GestionEventoWS/insertarEncuestaEventoRequest" message="tns:insertarEncuestaEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/insertarEncuestaEventoResponse" message="tns:insertarEncuestaEventoResponse" />
+    </operation>
+    <operation name="eliminarEncuestaEvento">
+      <input wsam:Action="http://services/GestionEventoWS/eliminarEncuestaEventoRequest" message="tns:eliminarEncuestaEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/eliminarEncuestaEventoResponse" message="tns:eliminarEncuestaEventoResponse" />
+    </operation>
+    <operation name="listarCoordinadorEvento">
+      <input wsam:Action="http://services/GestionEventoWS/listarCoordinadorEventoRequest" message="tns:listarCoordinadorEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/listarCoordinadorEventoResponse" message="tns:listarCoordinadorEventoResponse" />
+    </operation>
+    <operation name="modificarCoordinadorEvento">
+      <input wsam:Action="http://services/GestionEventoWS/modificarCoordinadorEventoRequest" message="tns:modificarCoordinadorEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/modificarCoordinadorEventoResponse" message="tns:modificarCoordinadorEventoResponse" />
+    </operation>
+    <operation name="eliminarCoordinadorEvento">
+      <input wsam:Action="http://services/GestionEventoWS/eliminarCoordinadorEventoRequest" message="tns:eliminarCoordinadorEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/eliminarCoordinadorEventoResponse" message="tns:eliminarCoordinadorEventoResponse" />
+    </operation>
+    <operation name="listarEncuestaEvento">
+      <input wsam:Action="http://services/GestionEventoWS/listarEncuestaEventoRequest" message="tns:listarEncuestaEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/listarEncuestaEventoResponse" message="tns:listarEncuestaEventoResponse" />
+    </operation>
+    <operation name="listarCategoriaEvento">
+      <input wsam:Action="http://services/GestionEventoWS/listarCategoriaEventoRequest" message="tns:listarCategoriaEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/listarCategoriaEventoResponse" message="tns:listarCategoriaEventoResponse" />
+    </operation>
+    <operation name="listar_tres_eventos_proximos">
+      <input wsam:Action="http://services/GestionEventoWS/listar_tres_eventos_proximosRequest" message="tns:listar_tres_eventos_proximos" />
+      <output wsam:Action="http://services/GestionEventoWS/listar_tres_eventos_proximosResponse" message="tns:listar_tres_eventos_proximosResponse" />
+    </operation>
+    <operation name="modificarEncuestaEvento">
+      <input wsam:Action="http://services/GestionEventoWS/modificarEncuestaEventoRequest" message="tns:modificarEncuestaEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/modificarEncuestaEventoResponse" message="tns:modificarEncuestaEventoResponse" />
+    </operation>
+    <operation name="insertarCoordinadorEvento">
+      <input wsam:Action="http://services/GestionEventoWS/insertarCoordinadorEventoRequest" message="tns:insertarCoordinadorEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/insertarCoordinadorEventoResponse" message="tns:insertarCoordinadorEventoResponse" />
+    </operation>
+    <operation name="insertarCategoriaEvento">
+      <input wsam:Action="http://services/GestionEventoWS/insertarCategoriaEventoRequest" message="tns:insertarCategoriaEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/insertarCategoriaEventoResponse" message="tns:insertarCategoriaEventoResponse" />
+    </operation>
+    <operation name="modificarCategoriaEvento">
+      <input wsam:Action="http://services/GestionEventoWS/modificarCategoriaEventoRequest" message="tns:modificarCategoriaEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/modificarCategoriaEventoResponse" message="tns:modificarCategoriaEventoResponse" />
+    </operation>
+    <operation name="eliminarCategoriaEvento">
+      <input wsam:Action="http://services/GestionEventoWS/eliminarCategoriaEventoRequest" message="tns:eliminarCategoriaEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/eliminarCategoriaEventoResponse" message="tns:eliminarCategoriaEventoResponse" />
+    </operation>
+    <operation name="listarPonenteXEvento">
+      <input wsam:Action="http://services/GestionEventoWS/listarPonenteXEventoRequest" message="tns:listarPonenteXEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/listarPonenteXEventoResponse" message="tns:listarPonenteXEventoResponse" />
+    </operation>
+    <operation name="listar_eventos_inscritos">
+      <input wsam:Action="http://services/GestionEventoWS/listar_eventos_inscritosRequest" message="tns:listar_eventos_inscritos" />
+      <output wsam:Action="http://services/GestionEventoWS/listar_eventos_inscritosResponse" message="tns:listar_eventos_inscritosResponse" />
+    </operation>
+    <operation name="listar_eventos_pasados">
+      <input wsam:Action="http://services/GestionEventoWS/listar_eventos_pasadosRequest" message="tns:listar_eventos_pasados" />
+      <output wsam:Action="http://services/GestionEventoWS/listar_eventos_pasadosResponse" message="tns:listar_eventos_pasadosResponse" />
+    </operation>
   </portType>
   <binding name="GestionEventoWSPortBinding" type="tns:GestionEventoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="modificarEncuestaEvento">
+    <operation name="obtener_estado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -228,142 +238,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarCategoriaEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPonenteXEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarEncuestaEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarEncuestaEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarCategoriaEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarCategoriaEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarEncuestaEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listar_tres_eventos_proximos">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarCoordinadorEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listar_eventos_inscritos">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarEvento_por_fecha">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarCoordinadorEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listar_eventos_pasados">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarCoordinadorEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarCategoriaEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarCoordinadorEvento">
+    <operation name="modificarEvento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -390,7 +265,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarEvento">
+    <operation name="listarEvento_por_nombre_categoria">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -399,7 +274,151 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarEvento_por_nombre_categoria">
+    <operation name="listarEvento_por_fecha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEncuestaEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEncuestaEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCoordinadorEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCoordinadorEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCoordinadorEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEncuestaEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCategoriaEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listar_tres_eventos_proximos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEncuestaEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCoordinadorEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCategoriaEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCategoriaEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCategoriaEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPonenteXEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listar_eventos_inscritos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listar_eventos_pasados">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

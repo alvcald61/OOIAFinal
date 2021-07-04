@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/AuxiliarWS/GestionHumanaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestionHumanaWS.xsd" MetadataType="Schema" ID="226c09a5-02bc-454a-9b60-a47eca7793e0" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionHumanaWS?xsd=1" />
-    <MetadataFile FileName="GestionHumanaWS.wsdl" MetadataType="Wsdl" ID="80a6069e-5928-4d35-a390-ba4c8c556ced" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionHumanaWS?WSDL" />
+    <MetadataFile FileName="GestionHumanaWS.xsd" MetadataType="Schema" ID="279150da-a616-49cf-865a-d689704ee003" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionHumanaWS?xsd=1" />
+    <MetadataFile FileName="GestionHumanaWS.wsdl" MetadataType="Wsdl" ID="4e3514db-ffd9-44ce-bfea-f7c34b819a6e" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionHumanaWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

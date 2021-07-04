@@ -7,9 +7,11 @@ package pe.edu.pucp.ooia.gest_humana.mysql;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import pe.edu.pucp.config.DBManager;
+import pe.edu.pucp.ooia.gest_atencion.model.Cita;
 import pe.edu.pucp.ooia.gest_humana.dao.AlumnoDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.AutenticarPersonaDAO;
 
@@ -98,6 +100,26 @@ public class AutenticarPersonaMySQL implements AutenticarPersonaDAO{
             rs=cs.executeQuery();
             if(rs.next())
                 resultado=1; //si ya esta inscrito la opinion del alumno
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+
+    @Override
+    public int validarRegistroACita(int id_alumno, int id_horario, Cita cita) {
+        int resultado=0;   
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call VALIDAR_REGISTRO_ALUMNO_CITA(?,?,?)}");
+            cs.setInt("_id_alumno", id_alumno);
+            cs.setInt("_id_horario", id_horario);
+            cs.setDate("_fecha", new java.sql.Date(cita.getFecha().getTime()));
+            rs=cs.executeQuery();
+            if(rs.next())
+                resultado=1; //si ya esta inscrito a la cita
         }
         catch (Exception ex) {
             System.out.println(ex.getMessage());

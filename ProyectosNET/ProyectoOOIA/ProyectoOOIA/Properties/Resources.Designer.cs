@@ -63,6 +63,16 @@ namespace ProyectoOOIA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _02_abre_50_anos_nuevo {
+            get {
+                object obj = ResourceManager.GetObject("02-abre-50-anos_nuevo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arroba {
             get {
                 object obj = ResourceManager.GetObject("arroba", resourceCulture);
@@ -86,6 +96,16 @@ namespace ProyectoOOIA.Properties {
         internal static System.Drawing.Bitmap arrowWhite {
             get {
                 object obj = ResourceManager.GetObject("arrowWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap asesores {
+            get {
+                object obj = ResourceManager.GetObject("asesores", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +196,16 @@ namespace ProyectoOOIA.Properties {
         internal static System.Drawing.Bitmap EEGGCC {
             get {
                 object obj = ResourceManager.GetObject("EEGGCC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eeggcc2 {
+            get {
+                object obj = ResourceManager.GetObject("eeggcc2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
