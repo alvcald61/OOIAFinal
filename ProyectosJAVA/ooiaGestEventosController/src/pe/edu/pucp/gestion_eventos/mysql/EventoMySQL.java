@@ -283,6 +283,11 @@ public class EventoMySQL implements EventoDAO{
             rs1=cs1.executeQuery();
             while(rs1.next()){
                 Ponente ponente=new Ponente();
+                ponente.setId_persona(rs1.getInt("id_persona"));
+                ponente.setId_miembro_externo(rs1.getInt("id_miembro_externo"));
+                ponente.setOcupacion(rs1.getString("ocupacion"));
+                ponente.setTelefono(rs1.getString("telefono"));
+                ponente.setOrganizacion(rs1.getString("organizacion"));
                 ponente.setId_ponente(rs1.getInt("id_ponente"));
                 ponente.setNombre(rs1.getString("nombre_ponente"));
                 lista.add(ponente);
@@ -290,9 +295,8 @@ public class EventoMySQL implements EventoDAO{
         } catch (Exception e) {
              System.out.println(e.getMessage() + "Aqui");
         }
-            
-           
-           return lista;
+ 
+        return lista;
            
     }
 @Override
