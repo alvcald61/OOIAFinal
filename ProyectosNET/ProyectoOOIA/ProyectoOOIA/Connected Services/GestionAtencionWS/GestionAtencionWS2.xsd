@@ -75,25 +75,20 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarCita">
+  <xs:complexType name="insertarEncuesta">
     <xs:sequence>
-      <xs:element minOccurs="0" name="cita" type="tns:cita" />
+      <xs:element minOccurs="0" name="encuesta" type="tns:encuesta" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="cita">
+  <xs:complexType name="encuesta">
     <xs:sequence>
-      <xs:element name="activo" type="xs:int" />
+      <xs:element name="activo" type="xs:boolean" />
       <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
       <xs:element minOccurs="0" name="asesor" type="tns:miembroPUCP" />
-      <xs:element name="asistio" type="xs:int" />
-      <xs:element minOccurs="0" name="codigo_atencion" type="tns:codigoAtencion" />
-      <xs:element minOccurs="0" name="compromiso" type="xs:string" />
-      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="horario" type="tns:horario" />
-      <xs:element name="id_cita" type="xs:int" />
-      <xs:element minOccurs="0" name="link_Host" type="xs:string" />
-      <xs:element minOccurs="0" name="link_user" type="xs:string" />
-      <xs:element minOccurs="0" name="motivo" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="fid_cita" type="xs:int" />
+      <xs:element name="id_encuesta" type="xs:int" />
+      <xs:element name="puntaje" type="xs:double" />
       <xs:element name="tipo_asesor" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
@@ -141,6 +136,33 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="insertarEncuestaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cita" type="tns:cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cita">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
+      <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
+      <xs:element minOccurs="0" name="asesor" type="tns:miembroPUCP" />
+      <xs:element name="asistio" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo_atencion" type="tns:codigoAtencion" />
+      <xs:element minOccurs="0" name="compromiso" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horario" type="tns:horario" />
+      <xs:element name="id_cita" type="xs:int" />
+      <xs:element minOccurs="0" name="link_Host" type="xs:string" />
+      <xs:element minOccurs="0" name="link_user" type="xs:string" />
+      <xs:element minOccurs="0" name="motivo" type="xs:string" />
+      <xs:element name="tipo_asesor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="codigoAtencion">
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
@@ -154,24 +176,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarEncuesta">
+  <xs:complexType name="eliminarHorarioAsesor">
     <xs:sequence>
-      <xs:element minOccurs="0" name="encuesta" type="tns:encuesta" />
+      <xs:element name="id_horario_asesor" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="encuesta">
-    <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
-      <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
-      <xs:element minOccurs="0" name="asesor" type="tns:miembroPUCP" />
-      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element name="fid_cita" type="xs:int" />
-      <xs:element name="id_encuesta" type="xs:int" />
-      <xs:element name="puntaje" type="xs:double" />
-      <xs:element name="tipo_asesor" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarEncuestaResponse">
+  <xs:complexType name="eliminarHorarioAsesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -182,16 +192,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="validar_usuario_unicoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarHorarioAsesor">
-    <xs:sequence>
-      <xs:element name="id_horario_asesor" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarHorarioAsesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -218,16 +218,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCitaHistorico">
-    <xs:sequence>
-      <xs:element name="id_alumno" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarCitaHistoricoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cita" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarHorarioAsesorSinID">
     <xs:sequence>
       <xs:element minOccurs="0" name="horarioAsesor" type="tns:horarioAsesor" />
@@ -236,6 +226,16 @@
   <xs:complexType name="modificarHorarioAsesorSinIDResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCitaHistorico">
+    <xs:sequence>
+      <xs:element name="id_alumno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCitaHistoricoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cita" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCitasProfesor">
