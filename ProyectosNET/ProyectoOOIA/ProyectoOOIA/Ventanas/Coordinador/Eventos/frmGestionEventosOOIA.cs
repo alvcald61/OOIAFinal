@@ -202,7 +202,7 @@ namespace ProyectoOOIA.Ventanas
             evento = aux.Evento;
             //txtNombrePonente.Text = evento.id_evento.ToString();
             txtNombre.Text = evento.nombre;
-            txtDescripcion.Text = "Descripcion";
+            txtDescripcion.Text = evento.descripcion;
             txtLugar.Text = evento.lugar;
             dtpFechaEvento.Value = evento.fecha;
             dtpInicio.Value = evento.horaInicio;
@@ -227,6 +227,8 @@ namespace ProyectoOOIA.Ventanas
             {
                 dgvPonentes.Rows.Add();
                 dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[0].Value = auxPonente.nombre;
+                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[1].Value = auxPonente.ocupacion;
+                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[2].Value = auxPonente.organizacion;
                 listaModificar.Add(auxPonente);
                 
 
@@ -558,6 +560,7 @@ namespace ProyectoOOIA.Ventanas
           
             new frmDescargarReporteEvento(evento.id_evento).Show();
         }
+
     }
     
 }

@@ -55,7 +55,7 @@ namespace ProyectoOOIA.Ventanas
             {
                 horarios = new BindingList<GestionAtencionWS.horarioAsesor>(daoHorario.listarHorarioAsesor(asesor.id_miembro_pucp));
             }
-            catch { return; }
+            catch (Exception ex){ return; }
             loadHorarioProfesor();
             load_disponibilidad();
             

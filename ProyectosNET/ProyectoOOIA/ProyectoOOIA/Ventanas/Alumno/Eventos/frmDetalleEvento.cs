@@ -23,7 +23,7 @@ namespace ProyectoOOIA.Ventanas
             txtDescripcion.ReadOnly=true;
             dtpFecha.Value = evento.fecha;
             dtpHoraInicio.Value = evento.horaInicio;
-            dtpHoraInicio.Value = evento.horaFin;
+            dtpHoraFin.Value = evento.horaFin;
             txtLugar.Text = evento.lugar;
             txtCapacidad.Text = evento.capacidad.ToString();
             txtCupo.Text = evento.capacidad.ToString();
@@ -61,10 +61,6 @@ namespace ProyectoOOIA.Ventanas
             this.Close();
         }
 
-        private void frmDetalleEvento_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void dgvPonentes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -73,5 +69,6 @@ namespace ProyectoOOIA.Ventanas
                 as GestionEventoWS.ponente;
             dgvPonentes.Rows[e.RowIndex].Cells[0].Value = data.nombre;
         }
+
     }
 }

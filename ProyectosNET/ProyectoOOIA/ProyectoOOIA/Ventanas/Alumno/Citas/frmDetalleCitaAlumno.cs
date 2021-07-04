@@ -20,17 +20,15 @@ namespace ProyectoOOIA.Ventanas
             txtOrientador.ReadOnly = true;
             txtCompromiso.ReadOnly = true;
             txtMotivoConsulta.ReadOnly = true;
-            txtHoraInicio.ReadOnly = true;
             txtOpinion.ReadOnly = true;
             txtValoracion.ReadOnly = true;
-            txtHoraFin.ReadOnly = true;
             dtpFecha.Enabled = false;
             dtpFecha.Value = cita.fecha;
             txtOrientador.Text = cita.asesor.nombre;
             txtMotivoConsulta.Text = cita.motivo;
             txtCompromiso.Text = cita.compromiso;
-            txtHoraInicio.Text = cita.horario.horaInicio.ToString("hh:mm");
-            txtHoraFin.Text = cita.horario.horaFin.ToString("hh:mm");
+            dtpHoraInicio.Value = cita.horario.horaInicio;
+            dtpHoraFin.Value = cita.horario.horaFin;
             if (estado_cita == 1)
             {
                 lbestadoCita.Text = "Pendiente";
@@ -70,12 +68,9 @@ namespace ProyectoOOIA.Ventanas
             
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-
             this.Close();
         }
-
-
     }
 }

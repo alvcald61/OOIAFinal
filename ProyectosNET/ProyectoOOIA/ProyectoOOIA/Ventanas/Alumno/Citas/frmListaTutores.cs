@@ -46,23 +46,27 @@ namespace ProyectoOOIA.Ventanas
             {
                 ucAsesor uc = new ucAsesor(profesores[i]);
                 listaprof.Add(uc);
-                pnlTutorLeft.Controls.Add(uc);
+                pnlTutorRight.Controls.Add(uc);
                 uc.Dock = DockStyle.Top;
+                uc.Width = 450;
+                uc.Height = 180;
                 Panel pnl = new Panel();
-                pnlTutorLeft.Controls.Add(pnl);
+                pnlTutorRight.Controls.Add(pnl);
                 pnl.Dock = DockStyle.Top;
-                pnl.Height = 30;
+                pnl.Height = 16;
             }
             for (int i = profesores.Count / 2; i < profesores.Count; i++)
             {
                 ucAsesor uc = new ucAsesor(profesores[i]);
                 listaprof.Add(uc);
-                pnlTutorRight.Controls.Add(uc);
+                pnlTutorLeft.Controls.Add(uc);
                 uc.Dock = DockStyle.Top;
+                uc.Width = 450;
+                uc.Height = 180;
                 Panel pnl = new Panel();
-                pnlTutorRight.Controls.Add(pnl);
+                pnlTutorLeft.Controls.Add(pnl);
                 pnl.Dock = DockStyle.Top;
-                pnl.Height = 30;
+                pnl.Height = 16;
             }
 
             for (int j = 0; j < psicologos.Count / 2; j++)
@@ -70,23 +74,27 @@ namespace ProyectoOOIA.Ventanas
 
                 ucAsesor uc = new ucAsesor(psicologos[j]);
                 listapsi.Add(uc);
-                pnlPsicLeft.Controls.Add(uc);
+                pnlPsicRight.Controls.Add(uc);
                 uc.Dock = DockStyle.Top;
+                uc.Width = 450;
+                uc.Height = 180;
                 Panel pnl = new Panel();
-                pnlPsicLeft.Controls.Add(pnl);
+                pnlPsicRight.Controls.Add(pnl);
                 pnl.Dock = DockStyle.Top;
-                pnl.Height = 30;
+                pnl.Height = 16;
             }
             for (int j = psicologos.Count / 2; j < psicologos.Count; j++)
             {
                 ucAsesor uc = new ucAsesor(psicologos[j]);
                 listapsi.Add(uc);
-                pnlPsicRight.Controls.Add(uc);
+                pnlPsicLeft.Controls.Add(uc);
                 uc.Dock = DockStyle.Top;
+                uc.Width = 450;
+                uc.Height = 180;
                 Panel pnl = new Panel();
-                pnlPsicRight.Controls.Add(pnl);
+                pnlPsicLeft.Controls.Add(pnl);
                 pnl.Dock = DockStyle.Top;
-                pnl.Height = 30;
+                pnl.Height = 16;
             }
 
             foreach (ucAsesor aux in listaprof)

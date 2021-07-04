@@ -165,7 +165,7 @@ namespace ProyectoOOIA.Ventanas
         private void btnAsesoria_Click(object sender, EventArgs e)
         {
             if (tipo == TipoUsuario.Alumno) new frmCitasAlumno(usuario).Show();
-            if (tipo == TipoUsuario.Asesor) new frmHorarioAsesor(usuario).Show();
+            if (tipo == TipoUsuario.Asesor) new frmCitasAsesor(usuario).Show();
             this.Close();
         }
     }

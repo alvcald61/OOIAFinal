@@ -265,5 +265,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             }
 
         }
+
+        
     }
 }

@@ -6,7 +6,7 @@ using ProyectoOOIA.Ventanas.Asesor.Citas;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmHorarioAsesor : Form
+    public partial class frmCitasAsesor : Form
     {
         private GestionAtencionWS.GestionAtencionWSClient daoCita;
         
@@ -15,12 +15,12 @@ namespace ProyectoOOIA.Ventanas
         private GestionHumanaWS.miembroPUCP asesor;
         private BindingList<GestionAtencionWS.cita> citasCompletas;
         private BindingList<String> tipos_horarios;
-        public frmHorarioAsesor()
+        public frmCitasAsesor()
         {
             InitializeComponent();
         }
 
-        public frmHorarioAsesor(GestionHumanaWS.persona persona)
+        public frmCitasAsesor(GestionHumanaWS.persona persona)
         {
             InitializeComponent();
             this.asesor = persona as GestionHumanaWS.miembroPUCP;
@@ -202,5 +202,6 @@ namespace ProyectoOOIA.Ventanas
         {
             new frmDescargarReporteOpinion(this.asesor.id_miembro_pucp).Show();
         }
+
     }
 }

@@ -37,10 +37,10 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             // 
             // btnGuardarReporte
             // 
-            this.btnGuardarReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnGuardarReporte.Location = new System.Drawing.Point(269, 12);
+            this.btnGuardarReporte.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarReporte.Location = new System.Drawing.Point(558, 12);
             this.btnGuardarReporte.Name = "btnGuardarReporte";
-            this.btnGuardarReporte.Size = new System.Drawing.Size(215, 28);
+            this.btnGuardarReporte.Size = new System.Drawing.Size(230, 28);
             this.btnGuardarReporte.TabIndex = 0;
             this.btnGuardarReporte.Text = "Descargar Reporte";
             this.btnGuardarReporte.UseVisualStyleBackColor = true;
@@ -52,7 +52,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.axAcroPDF.Location = new System.Drawing.Point(12, 46);
             this.axAcroPDF.Name = "axAcroPDF";
             this.axAcroPDF.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF.OcxState")));
-            this.axAcroPDF.Size = new System.Drawing.Size(766, 406);
+            this.axAcroPDF.Size = new System.Drawing.Size(776, 406);
             this.axAcroPDF.TabIndex = 2;
             // 
             // frmDescargarReporteOpinion
@@ -63,7 +63,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.Controls.Add(this.axAcroPDF);
             this.Controls.Add(this.btnGuardarReporte);
             this.Name = "frmDescargarReporteOpinion";
-            this.Text = "frmDescargarReporteOpinion";
+            this.Text = "Descargar Reporte de Opiniones";
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).EndInit();
             this.ResumeLayout(false);
 
