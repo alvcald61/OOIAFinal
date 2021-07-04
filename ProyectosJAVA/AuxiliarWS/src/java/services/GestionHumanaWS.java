@@ -483,6 +483,20 @@ public class GestionHumanaWS {
         return retorno;
     }
     
+     @WebMethod(operationName = "validar_registro_opinion_cita")
+    public int validar_registro_opinion_cita(@WebParam(name = "id_alumno")int id_alumno,
+            @WebParam(name = "id_asesor")int id_asesor,@WebParam(name = "id_cita")int id_cita ){
+        int retorno=0;
+        try{
+           retorno=this.autenticarPersona.validarUnicaOpinionCita(id_alumno,id_asesor,id_cita);
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return retorno;
+    }
+    
+    
     
     
     

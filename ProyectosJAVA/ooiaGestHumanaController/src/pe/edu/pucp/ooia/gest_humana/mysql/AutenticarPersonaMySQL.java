@@ -79,5 +79,25 @@ public class AutenticarPersonaMySQL implements AutenticarPersonaDAO{
         }
         return resultado;
     }
+
+    @Override
+    public int validarUnicaOpinionCita(int id_alumno, int fid_asesor, int fid_cita) {
+    int resultado=0;   
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call VALIDAR_REGISTRO_OPINION_CITA(?,?,?)}");
+            cs.setInt("_id_alumno", id_alumno);
+            cs.setInt("_fid_asesor", fid_asesor);
+            cs.setInt("_fid_cita", fid_cita);
+            rs=cs.executeQuery();
+            if(rs.next())
+                resultado=1; //si ya esta inscrito la opinion del alumno
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
     
 }

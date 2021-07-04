@@ -1265,6 +1265,15 @@ create procedure VALIDAR_REGISTRO_ALUMNO_EVENTO(
 end$
 
 delimiter $
+create procedure VALIDAR_REGISTRO_OPINION_CITA(
+	in _id_alumno int,
+    in _fid_asesor int,
+    in _fid_cita int
+)begin
+	select * from encuesta where fid_alumno = _id_alumno and fid_asesor =_fid_asesor and fid_cita= _fid_cita;
+end$
+
+delimiter $
 create procedure tipoUsuario(in _id_persona int)
 begin
 select  case
