@@ -30,6 +30,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarCategoria));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.lblHeader = new System.Windows.Forms.Label();
@@ -68,14 +69,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(744, 76);
+            this.pnlHeader.Size = new System.Drawing.Size(744, 70);
             this.pnlHeader.TabIndex = 2;
             // 
             // btnBack
             // 
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Image = global::ProyectoOOIA.Properties.Resources.arrowWhite;
-            this.btnBack.Location = new System.Drawing.Point(26, 28);
+            this.btnBack.Location = new System.Drawing.Point(16, 28);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(25, 25);
@@ -88,43 +89,42 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             // 
             this.lblHeader.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblHeader.Location = new System.Drawing.Point(66, 28);
+            this.lblHeader.Location = new System.Drawing.Point(60, 28);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(238, 35);
+            this.lblHeader.Size = new System.Drawing.Size(352, 35);
             this.lblHeader.TabIndex = 2;
-            this.lblHeader.Text = "Gestionar Categorías";
+            this.lblHeader.Text = "Gestionar Categorías de Eventos";
             // 
             // tsAlumno
             // 
-            this.tsAlumno.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.tsAlumno.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tsbGuardar,
             this.tsbModificar,
             this.tsbEliminar,
             this.tsbCancelar});
-            this.tsAlumno.Location = new System.Drawing.Point(0, 76);
+            this.tsAlumno.Location = new System.Drawing.Point(0, 70);
             this.tsAlumno.Name = "tsAlumno";
-            this.tsAlumno.Size = new System.Drawing.Size(744, 27);
+            this.tsAlumno.Size = new System.Drawing.Size(744, 25);
             this.tsAlumno.TabIndex = 3;
             this.tsAlumno.Text = "tsAlumno";
             // 
             // tsbNuevo
             // 
-            this.tsbNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNuevo.Image")));
+            this.tsbNuevo.Image = global::ProyectoOOIA.Properties.Resources.btnNuevo_Image;
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(66, 24);
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.ToolTipText = "Nuevo";
             this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbGuardar
             // 
-            this.tsbGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsbGuardar.Image")));
+            this.tsbGuardar.Image = global::ProyectoOOIA.Properties.Resources.btnGuardar_Image;
             this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(73, 24);
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsbGuardar.Text = "Guardar";
             this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click_1);
             // 
@@ -133,25 +133,25 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(82, 24);
+            this.tsbModificar.Size = new System.Drawing.Size(78, 22);
             this.tsbModificar.Text = "Modificar";
             this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
             // 
             // tsbEliminar
             // 
-            this.tsbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminar.Image")));
+            this.tsbEliminar.Image = global::ProyectoOOIA.Properties.Resources.Eraser_16x;
             this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEliminar.Name = "tsbEliminar";
-            this.tsbEliminar.Size = new System.Drawing.Size(74, 24);
+            this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
             this.tsbEliminar.Text = "Eliminar";
             this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
             // tsbCancelar
             // 
-            this.tsbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancelar.Image")));
+            this.tsbCancelar.Image = global::ProyectoOOIA.Properties.Resources.Cancel_16x;
             this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(77, 24);
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
             this.tsbCancelar.Text = "Cancelar";
             this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
@@ -168,7 +168,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.pnlDatos.Controls.Add(this.lblId_categoria);
             this.pnlDatos.Controls.Add(this.lblCategoria);
             this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDatos.Location = new System.Drawing.Point(0, 103);
+            this.pnlDatos.Location = new System.Drawing.Point(0, 95);
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(744, 296);
             this.pnlDatos.TabIndex = 4;
@@ -214,12 +214,23 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             // 
             this.dgvCategoria.AllowUserToAddRows = false;
             this.dgvCategoria.AllowUserToDeleteRows = false;
+            this.dgvCategoria.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCategoria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategoria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_categoria,
             this.nombre});
+            this.dgvCategoria.EnableHeadersVisualStyles = false;
             this.dgvCategoria.Location = new System.Drawing.Point(17, 155);
             this.dgvCategoria.Name = "dgvCategoria";
+            this.dgvCategoria.RowHeadersVisible = false;
             this.dgvCategoria.Size = new System.Drawing.Size(515, 131);
             this.dgvCategoria.TabIndex = 20;
             // 
@@ -263,9 +274,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.lblCategoria.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.Location = new System.Drawing.Point(12, 9);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(100, 27);
+            this.lblCategoria.Size = new System.Drawing.Size(193, 27);
             this.lblCategoria.TabIndex = 9;
-            this.lblCategoria.Text = "Categoria";
+            this.lblCategoria.Text = "Categoria de Evento";
             // 
             // id_categoria
             // 
@@ -276,10 +287,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             // 
             // nombre
             // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nombre.DataPropertyName = "nombre";
             this.nombre.HeaderText = "Nombre de la Categoría";
             this.nombre.Name = "nombre";
-            this.nombre.Width = 320;
             // 
             // frmGestionarCategoria
             // 

@@ -10,12 +10,13 @@ namespace ProyectoOOIA.Ventanas
     {
         private GestionAtencionWS.GestionAtencionWSClient daoEncuesta;
 
-        public frmOpiniones(int idAsesor)
+        public frmOpiniones(GestionHumanaWS.miembroPUCP asesor)
         {
             daoEncuesta = new GestionAtencionWS.GestionAtencionWSClient();
             InitializeComponent();
             dgvOpiniones.AutoGenerateColumns = false;
-            listarEncuestas(idAsesor);
+            lblAsesor.Text = "Asesor: " + asesor.nombre;
+            listarEncuestas(asesor.id_miembro_pucp);
            
         }
 
@@ -30,10 +31,6 @@ namespace ProyectoOOIA.Ventanas
                     dgvOpiniones.DataSource = listaEncuestas;
             }
             catch { };
-        }
-        private void lblOpiniones_Click(object sender, EventArgs e)
-        {
-
         }
 
 
@@ -51,5 +48,6 @@ namespace ProyectoOOIA.Ventanas
             dgvOpiniones.Rows[e.RowIndex].Cells[0].Value = data.alumno.nombre;
             dgvOpiniones.Rows[e.RowIndex].Cells[1].Value = data.descripcion;
         }
+
     }
 }

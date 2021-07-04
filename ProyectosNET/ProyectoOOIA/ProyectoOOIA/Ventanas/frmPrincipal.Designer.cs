@@ -36,6 +36,7 @@ namespace ProyectoOOIA.Ventanas
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.imagen = new OvalPictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.pnlProxEventos = new System.Windows.Forms.Panel();
             this.imagenes = new System.Windows.Forms.PictureBox();
@@ -46,14 +47,13 @@ namespace ProyectoOOIA.Ventanas
             this.btnEventos = new System.Windows.Forms.Button();
             this.btnAsesorias = new System.Windows.Forms.Button();
             this.pnlBody = new System.Windows.Forms.Panel();
-            this.pnlFoot = new System.Windows.Forms.Panel();
-            this.imagen = new OvalPictureBox();
             this.pnlImage = new System.Windows.Forms.Panel();
+            this.pnlFoot = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).BeginInit();
             this.pnlMenu.SuspendLayout();
             this.pnlBody.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.pnlImage.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -261,6 +261,16 @@ namespace ProyectoOOIA.Ventanas
             this.pnlBody.Size = new System.Drawing.Size(984, 441);
             this.pnlBody.TabIndex = 28;
             // 
+            // pnlImage
+            // 
+            this.pnlImage.AutoSize = true;
+            this.pnlImage.Controls.Add(this.imagenes);
+            this.pnlImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlImage.Location = new System.Drawing.Point(0, 0);
+            this.pnlImage.Name = "pnlImage";
+            this.pnlImage.Size = new System.Drawing.Size(714, 441);
+            this.pnlImage.TabIndex = 27;
+            // 
             // pnlFoot
             // 
             this.pnlFoot.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -271,27 +281,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlFoot.Name = "pnlFoot";
             this.pnlFoot.Size = new System.Drawing.Size(984, 54);
             this.pnlFoot.TabIndex = 29;
-            // 
-            // imagen
-            // 
-            this.imagen.BackColor = System.Drawing.Color.Transparent;
-            this.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imagen.Location = new System.Drawing.Point(20, 5);
-            this.imagen.Name = "imagen";
-            this.imagen.Size = new System.Drawing.Size(60, 60);
-            this.imagen.TabIndex = 27;
-            this.imagen.TabStop = false;
-            // 
-            // pnlImage
-            // 
-            this.pnlImage.AutoSize = true;
-            this.pnlImage.Controls.Add(this.imagenes);
-            this.pnlImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlImage.Location = new System.Drawing.Point(0, 0);
-            this.pnlImage.Name = "pnlImage";
-            this.pnlImage.Size = new System.Drawing.Size(714, 441);
-            this.pnlImage.TabIndex = 27;
             // 
             // frmPrincipal
             // 
@@ -308,11 +297,11 @@ namespace ProyectoOOIA.Ventanas
             this.Text = "Portal OOIA";
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.pnlBody.ResumeLayout(false);
             this.pnlBody.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             this.pnlImage.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

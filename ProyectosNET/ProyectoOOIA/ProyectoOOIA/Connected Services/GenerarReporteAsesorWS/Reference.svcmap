@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/AuxiliarWS/ReporteAsesorOpinionWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReporteAsesorOpinionWS.wsdl" MetadataType="Wsdl" ID="e64277c8-21e6-4f04-8df5-d451f99f823e" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/ReporteAsesorOpinionWS?WSDL" />
-    <MetadataFile FileName="ReporteAsesorOpinionWS.xsd" MetadataType="Schema" ID="e6b97e45-f83b-4a02-885e-cd6821f68b34" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/ReporteAsesorOpinionWS?xsd=1" />
+    <MetadataFile FileName="ReporteAsesorOpinionWS2.wsdl" MetadataType="Wsdl" ID="ac943301-9bc6-4f7b-97e8-15d95f5885bc" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/ReporteAsesorOpinionWS?WSDL" />
+    <MetadataFile FileName="ReporteAsesorOpinionWS2.xsd" MetadataType="Schema" ID="2f9d3b26-58dc-486e-987f-a71fce2d15dd" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/ReporteAsesorOpinionWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

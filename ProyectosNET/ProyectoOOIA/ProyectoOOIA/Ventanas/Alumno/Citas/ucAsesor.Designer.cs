@@ -44,6 +44,7 @@ namespace ProyectoOOIA.Ventanas.Alumno.Citas
             this.pbPerfil.Location = new System.Drawing.Point(13, 12);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(140, 160);
+            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPerfil.TabIndex = 0;
             this.pbPerfil.TabStop = false;
             // 
@@ -55,29 +56,37 @@ namespace ProyectoOOIA.Ventanas.Alumno.Citas
             this.pnlDatos.Controls.Add(this.lblNombre);
             this.pnlDatos.Location = new System.Drawing.Point(161, 12);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(230, 160);
+            this.pnlDatos.Size = new System.Drawing.Size(274, 160);
             this.pnlDatos.TabIndex = 1;
             this.pnlDatos.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDatos_Paint);
             // 
             // btnSeleccionar
             // 
+            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(106)))), ((int)(((byte)(145)))));
+            this.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
             this.btnSeleccionar.Location = new System.Drawing.Point(9, 99);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(116, 36);
+            this.btnSeleccionar.Size = new System.Drawing.Size(150, 36);
             this.btnSeleccionar.TabIndex = 3;
             this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
             // 
             // btnOpinion
             // 
+            this.btnOpinion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(106)))), ((int)(((byte)(145)))));
+            this.btnOpinion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpinion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpinion.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpinion.ForeColor = System.Drawing.Color.White;
             this.btnOpinion.Location = new System.Drawing.Point(9, 57);
             this.btnOpinion.Name = "btnOpinion";
-            this.btnOpinion.Size = new System.Drawing.Size(116, 36);
+            this.btnOpinion.Size = new System.Drawing.Size(150, 36);
             this.btnOpinion.TabIndex = 2;
             this.btnOpinion.Text = "Ver Opiniones";
-            this.btnOpinion.UseVisualStyleBackColor = true;
+            this.btnOpinion.UseVisualStyleBackColor = false;
             this.btnOpinion.Click += new System.EventHandler(this.btnOpinion_Click);
             // 
             // lblEspecialidad
@@ -104,14 +113,13 @@ namespace ProyectoOOIA.Ventanas.Alumno.Citas
             // 
             // ucAsesor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.pbPerfil);
             this.Name = "ucAsesor";
-            this.Size = new System.Drawing.Size(398, 178);
+            this.Size = new System.Drawing.Size(450, 180);
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();

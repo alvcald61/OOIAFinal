@@ -46,7 +46,7 @@ namespace ProyectoOOIA.Ventanas
             lblUsername.Text = usuario.nombre;
             try
             {
-                imagen.BackgroundImage = new Bitmap(new MemoryStream(((miembroPUCP)usuario).imagenDePerfil));
+                displayImage(usuario.imagenDePerfil);
             }
             catch (Exception exception)
             {
@@ -184,7 +184,7 @@ namespace ProyectoOOIA.Ventanas
         private void btnAsesoria_Click(object sender, EventArgs e)
         {
             if (tipo == TipoUsuario.Alumno) new frmCitasAlumno(usuario).Show();
-            if (tipo == TipoUsuario.Asesor) new frmHorarioAsesor(usuario).Show();
+            if (tipo == TipoUsuario.Asesor) new frmCitasAsesor(usuario).Show();
             this.Close();
         }
     }

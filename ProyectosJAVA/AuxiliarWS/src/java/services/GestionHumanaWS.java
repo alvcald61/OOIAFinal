@@ -450,19 +450,8 @@ public class GestionHumanaWS {
         }
         return retorno;
     }
-        @WebMethod(operationName = "validar_usuario_unico")
-    public int validar_usuario_unico(@WebParam(name = "usuario")String usuario){
-        int retorno=0;
-        try{
-           retorno=this.autenticarPersona.autenticarUsuarioUnico(usuario);
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        return retorno;
-    }
     
-     @WebMethod(operationName = "validar_registro_alumno_evento")
+        @WebMethod(operationName = "validar_registro_alumno_evento")
     public int validar_registro_alumno_evento(@WebParam(name = "id_alumno")int id_alumno,
             @WebParam(name = "id_evento")int id_evento){
         int retorno=0;

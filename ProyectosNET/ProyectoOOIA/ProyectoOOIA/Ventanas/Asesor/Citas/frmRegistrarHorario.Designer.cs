@@ -32,6 +32,18 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.lblHeader = new System.Windows.Forms.Label();
+            this.pbCarga = new System.Windows.Forms.ProgressBar();
+            this.pnlSide = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.pnlLeyenda = new System.Windows.Forms.Panel();
+            this.pbLibre = new System.Windows.Forms.Button();
+            this.lblLibre = new System.Windows.Forms.Label();
+            this.pbNoDisponible = new System.Windows.Forms.Button();
+            this.lblNoDisponible = new System.Windows.Forms.Label();
+            this.pbOcupado = new System.Windows.Forms.Button();
+            this.lblOcupado = new System.Windows.Forms.Label();
+            this.pnlSchedule = new System.Windows.Forms.Panel();
             this.tlpHorario = new System.Windows.Forms.TableLayoutPanel();
             this.lblFriday = new System.Windows.Forms.Label();
             this.lblThursday = new System.Windows.Forms.Label();
@@ -57,20 +69,12 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1100 = new System.Windows.Forms.Label();
             this.lbl1030 = new System.Windows.Forms.Label();
             this.lbl1630 = new System.Windows.Forms.Label();
-            this.pnlLeyenda = new System.Windows.Forms.Panel();
-            this.pbLibre = new System.Windows.Forms.Button();
-            this.lblLibre = new System.Windows.Forms.Label();
-            this.pbNoDisponible = new System.Windows.Forms.Button();
-            this.lblNoDisponible = new System.Windows.Forms.Label();
-            this.pbOcupado = new System.Windows.Forms.Button();
-            this.lblOcupado = new System.Windows.Forms.Label();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.pbCarga = new System.Windows.Forms.ProgressBar();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
-            this.tlpHorario.SuspendLayout();
+            this.pnlSide.SuspendLayout();
             this.pnlLeyenda.SuspendLayout();
+            this.pnlSchedule.SuspendLayout();
+            this.tlpHorario.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -81,31 +85,165 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(814, 60);
+            this.pnlHeader.Size = new System.Drawing.Size(814, 70);
             this.pnlHeader.TabIndex = 19;
             // 
             // btnBack
             // 
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Image = global::ProyectoOOIA.Properties.Resources.arrowWhite;
-            this.btnBack.Location = new System.Drawing.Point(21, 15);
+            this.btnBack.Location = new System.Drawing.Point(16, 28);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(33, 29);
+            this.btnBack.Size = new System.Drawing.Size(25, 25);
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBack.TabIndex = 1;
             this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblHeader
             // 
             this.lblHeader.AutoSize = true;
-            this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Font = new System.Drawing.Font("Gill Sans MT", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblHeader.Location = new System.Drawing.Point(61, 15);
+            this.lblHeader.Location = new System.Drawing.Point(60, 28);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(276, 26);
+            this.lblHeader.Size = new System.Drawing.Size(255, 33);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "Horario de disponibilidad";
+            // 
+            // pbCarga
+            // 
+            this.pbCarga.Location = new System.Drawing.Point(21, 522);
+            this.pbCarga.Name = "pbCarga";
+            this.pbCarga.Size = new System.Drawing.Size(752, 23);
+            this.pbCarga.TabIndex = 24;
+            // 
+            // pnlSide
+            // 
+            this.pnlSide.Controls.Add(this.btnCancelar);
+            this.pnlSide.Controls.Add(this.btnModificar);
+            this.pnlSide.Controls.Add(this.pnlLeyenda);
+            this.pnlSide.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlSide.Location = new System.Drawing.Point(614, 70);
+            this.pnlSide.Name = "pnlSide";
+            this.pnlSide.Size = new System.Drawing.Size(200, 471);
+            this.pnlSide.TabIndex = 25;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnCancelar.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(28, 70);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(145, 36);
+            this.btnCancelar.TabIndex = 26;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnModificar.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(28, 28);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(145, 36);
+            this.btnModificar.TabIndex = 25;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            // 
+            // pnlLeyenda
+            // 
+            this.pnlLeyenda.Controls.Add(this.pbLibre);
+            this.pnlLeyenda.Controls.Add(this.lblLibre);
+            this.pnlLeyenda.Controls.Add(this.pbNoDisponible);
+            this.pnlLeyenda.Controls.Add(this.lblNoDisponible);
+            this.pnlLeyenda.Controls.Add(this.pbOcupado);
+            this.pnlLeyenda.Controls.Add(this.lblOcupado);
+            this.pnlLeyenda.Location = new System.Drawing.Point(28, 112);
+            this.pnlLeyenda.Name = "pnlLeyenda";
+            this.pnlLeyenda.Size = new System.Drawing.Size(145, 84);
+            this.pnlLeyenda.TabIndex = 24;
+            // 
+            // pbLibre
+            // 
+            this.pbLibre.BackColor = System.Drawing.SystemColors.Window;
+            this.pbLibre.Enabled = false;
+            this.pbLibre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.pbLibre.Location = new System.Drawing.Point(15, 16);
+            this.pbLibre.Margin = new System.Windows.Forms.Padding(2);
+            this.pbLibre.Name = "pbLibre";
+            this.pbLibre.Size = new System.Drawing.Size(20, 16);
+            this.pbLibre.TabIndex = 7;
+            this.pbLibre.UseVisualStyleBackColor = false;
+            // 
+            // lblLibre
+            // 
+            this.lblLibre.AutoSize = true;
+            this.lblLibre.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLibre.Location = new System.Drawing.Point(39, 16);
+            this.lblLibre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLibre.Name = "lblLibre";
+            this.lblLibre.Size = new System.Drawing.Size(66, 18);
+            this.lblLibre.TabIndex = 4;
+            this.lblLibre.Text = "Disponible";
+            // 
+            // pbNoDisponible
+            // 
+            this.pbNoDisponible.BackColor = System.Drawing.Color.DarkGray;
+            this.pbNoDisponible.Enabled = false;
+            this.pbNoDisponible.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.pbNoDisponible.Location = new System.Drawing.Point(15, 36);
+            this.pbNoDisponible.Margin = new System.Windows.Forms.Padding(2);
+            this.pbNoDisponible.Name = "pbNoDisponible";
+            this.pbNoDisponible.Size = new System.Drawing.Size(20, 16);
+            this.pbNoDisponible.TabIndex = 8;
+            this.pbNoDisponible.UseVisualStyleBackColor = false;
+            // 
+            // lblNoDisponible
+            // 
+            this.lblNoDisponible.AutoSize = true;
+            this.lblNoDisponible.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoDisponible.Location = new System.Drawing.Point(39, 36);
+            this.lblNoDisponible.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoDisponible.Name = "lblNoDisponible";
+            this.lblNoDisponible.Size = new System.Drawing.Size(84, 18);
+            this.lblNoDisponible.TabIndex = 5;
+            this.lblNoDisponible.Text = "No disponible";
+            // 
+            // pbOcupado
+            // 
+            this.pbOcupado.BackColor = System.Drawing.Color.DarkCyan;
+            this.pbOcupado.Enabled = false;
+            this.pbOcupado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.pbOcupado.Location = new System.Drawing.Point(15, 56);
+            this.pbOcupado.Margin = new System.Windows.Forms.Padding(2);
+            this.pbOcupado.Name = "pbOcupado";
+            this.pbOcupado.Size = new System.Drawing.Size(20, 16);
+            this.pbOcupado.TabIndex = 9;
+            this.pbOcupado.UseVisualStyleBackColor = false;
+            // 
+            // lblOcupado
+            // 
+            this.lblOcupado.AutoSize = true;
+            this.lblOcupado.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcupado.Location = new System.Drawing.Point(39, 56);
+            this.lblOcupado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOcupado.Name = "lblOcupado";
+            this.lblOcupado.Size = new System.Drawing.Size(59, 18);
+            this.lblOcupado.TabIndex = 6;
+            this.lblOcupado.Text = "Ocupado";
+            // 
+            // pnlSchedule
+            // 
+            this.pnlSchedule.Controls.Add(this.tlpHorario);
+            this.pnlSchedule.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlSchedule.Location = new System.Drawing.Point(0, 70);
+            this.pnlSchedule.Name = "pnlSchedule";
+            this.pnlSchedule.Size = new System.Drawing.Size(614, 471);
+            this.pnlSchedule.TabIndex = 26;
             // 
             // tlpHorario
             // 
@@ -141,7 +279,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.tlpHorario.Controls.Add(this.lbl1100, 0, 7);
             this.tlpHorario.Controls.Add(this.lbl1030, 0, 6);
             this.tlpHorario.Controls.Add(this.lbl1630, 0, 18);
-            this.tlpHorario.Location = new System.Drawing.Point(211, 98);
+            this.tlpHorario.Location = new System.Drawing.Point(23, 28);
             this.tlpHorario.Margin = new System.Windows.Forms.Padding(0);
             this.tlpHorario.Name = "tlpHorario";
             this.tlpHorario.RowCount = 19;
@@ -165,13 +303,14 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.tlpHorario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tlpHorario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tlpHorario.Size = new System.Drawing.Size(564, 401);
-            this.tlpHorario.TabIndex = 20;
+            this.tlpHorario.TabIndex = 21;
             // 
             // lblFriday
             // 
             this.lblFriday.AutoSize = true;
             this.lblFriday.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.lblFriday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFriday.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFriday.ForeColor = System.Drawing.SystemColors.Window;
             this.lblFriday.Location = new System.Drawing.Point(472, 0);
             this.lblFriday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -186,6 +325,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lblThursday.AutoSize = true;
             this.lblThursday.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.lblThursday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblThursday.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThursday.ForeColor = System.Drawing.SystemColors.Window;
             this.lblThursday.Location = new System.Drawing.Point(378, 0);
             this.lblThursday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -200,6 +340,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lblMonday.AutoSize = true;
             this.lblMonday.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.lblMonday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblMonday.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMonday.ForeColor = System.Drawing.SystemColors.Window;
             this.lblMonday.Location = new System.Drawing.Point(96, 0);
             this.lblMonday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -214,6 +355,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lblTuesday.AutoSize = true;
             this.lblTuesday.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.lblTuesday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTuesday.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTuesday.ForeColor = System.Drawing.SystemColors.Window;
             this.lblTuesday.Location = new System.Drawing.Point(190, 0);
             this.lblTuesday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -228,6 +370,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lblWednesday.AutoSize = true;
             this.lblWednesday.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.lblWednesday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblWednesday.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWednesday.ForeColor = System.Drawing.SystemColors.Window;
             this.lblWednesday.Location = new System.Drawing.Point(284, 0);
             this.lblWednesday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -242,6 +385,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lblHora.AutoSize = true;
             this.lblHora.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.lblHora.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblHora.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.SystemColors.Window;
             this.lblHora.Location = new System.Drawing.Point(2, 0);
             this.lblHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -257,6 +401,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl800.BackColor = System.Drawing.Color.LightGreen;
             this.lbl800.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl800.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl800.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl800.Location = new System.Drawing.Point(2, 21);
             this.lbl800.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl800.Name = "lbl800";
@@ -271,6 +416,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl830.BackColor = System.Drawing.Color.LightGreen;
             this.lbl830.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl830.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lbl830.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl830.Location = new System.Drawing.Point(2, 42);
             this.lbl830.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl830.Name = "lbl830";
@@ -284,6 +430,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl900.AutoSize = true;
             this.lbl900.BackColor = System.Drawing.Color.LightGreen;
             this.lbl900.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl900.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl900.Location = new System.Drawing.Point(2, 63);
             this.lbl900.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl900.Name = "lbl900";
@@ -297,6 +444,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl930.AutoSize = true;
             this.lbl930.BackColor = System.Drawing.Color.LightGreen;
             this.lbl930.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl930.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl930.Location = new System.Drawing.Point(2, 84);
             this.lbl930.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl930.Name = "lbl930";
@@ -310,6 +458,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1000.AutoSize = true;
             this.lbl1000.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1000.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1000.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1000.Location = new System.Drawing.Point(2, 105);
             this.lbl1000.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1000.Name = "lbl1000";
@@ -323,6 +472,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1600.AutoSize = true;
             this.lbl1600.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1600.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1600.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1600.Location = new System.Drawing.Point(2, 357);
             this.lbl1600.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1600.Name = "lbl1600";
@@ -336,6 +486,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1530.AutoSize = true;
             this.lbl1530.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1530.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1530.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1530.Location = new System.Drawing.Point(2, 336);
             this.lbl1530.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1530.Name = "lbl1530";
@@ -349,6 +500,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1500.AutoSize = true;
             this.lbl1500.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1500.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1500.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1500.Location = new System.Drawing.Point(2, 315);
             this.lbl1500.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1500.Name = "lbl1500";
@@ -362,6 +514,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1430.AutoSize = true;
             this.lbl1430.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1430.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1430.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1430.Location = new System.Drawing.Point(2, 294);
             this.lbl1430.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1430.Name = "lbl1430";
@@ -375,6 +528,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1400.AutoSize = true;
             this.lbl1400.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1400.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1400.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1400.Location = new System.Drawing.Point(2, 273);
             this.lbl1400.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1400.Name = "lbl1400";
@@ -388,6 +542,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1330.AutoSize = true;
             this.lbl1330.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1330.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1330.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1330.Location = new System.Drawing.Point(2, 252);
             this.lbl1330.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1330.Name = "lbl1330";
@@ -401,6 +556,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1300.AutoSize = true;
             this.lbl1300.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1300.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1300.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1300.Location = new System.Drawing.Point(2, 231);
             this.lbl1300.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1300.Name = "lbl1300";
@@ -414,6 +570,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1230.AutoSize = true;
             this.lbl1230.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1230.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1230.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1230.Location = new System.Drawing.Point(2, 210);
             this.lbl1230.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1230.Name = "lbl1230";
@@ -427,6 +584,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1200.AutoSize = true;
             this.lbl1200.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1200.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1200.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1200.Location = new System.Drawing.Point(2, 189);
             this.lbl1200.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1200.Name = "lbl1200";
@@ -440,6 +598,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1130.AutoSize = true;
             this.lbl1130.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1130.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1130.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1130.Location = new System.Drawing.Point(2, 168);
             this.lbl1130.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1130.Name = "lbl1130";
@@ -453,6 +612,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1100.AutoSize = true;
             this.lbl1100.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1100.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1100.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1100.Location = new System.Drawing.Point(2, 147);
             this.lbl1100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1100.Name = "lbl1100";
@@ -466,6 +626,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1030.AutoSize = true;
             this.lbl1030.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1030.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1030.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1030.Location = new System.Drawing.Point(2, 126);
             this.lbl1030.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1030.Name = "lbl1030";
@@ -479,6 +640,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1630.AutoSize = true;
             this.lbl1630.BackColor = System.Drawing.Color.LightGreen;
             this.lbl1630.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1630.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1630.Location = new System.Drawing.Point(2, 378);
             this.lbl1630.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1630.Name = "lbl1630";
@@ -487,136 +649,26 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1630.Text = "4:30 pm";
             this.lbl1630.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pnlLeyenda
-            // 
-            this.pnlLeyenda.Controls.Add(this.pbLibre);
-            this.pnlLeyenda.Controls.Add(this.lblLibre);
-            this.pnlLeyenda.Controls.Add(this.pbNoDisponible);
-            this.pnlLeyenda.Controls.Add(this.lblNoDisponible);
-            this.pnlLeyenda.Controls.Add(this.pbOcupado);
-            this.pnlLeyenda.Controls.Add(this.lblOcupado);
-            this.pnlLeyenda.Location = new System.Drawing.Point(21, 182);
-            this.pnlLeyenda.Name = "pnlLeyenda";
-            this.pnlLeyenda.Size = new System.Drawing.Size(187, 84);
-            this.pnlLeyenda.TabIndex = 21;
-            // 
-            // pbLibre
-            // 
-            this.pbLibre.BackColor = System.Drawing.SystemColors.Window;
-            this.pbLibre.Enabled = false;
-            this.pbLibre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.pbLibre.Location = new System.Drawing.Point(15, 16);
-            this.pbLibre.Margin = new System.Windows.Forms.Padding(2);
-            this.pbLibre.Name = "pbLibre";
-            this.pbLibre.Size = new System.Drawing.Size(20, 16);
-            this.pbLibre.TabIndex = 7;
-            this.pbLibre.UseVisualStyleBackColor = false;
-            // 
-            // lblLibre
-            // 
-            this.lblLibre.AutoSize = true;
-            this.lblLibre.Location = new System.Drawing.Point(39, 16);
-            this.lblLibre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblLibre.Name = "lblLibre";
-            this.lblLibre.Size = new System.Drawing.Size(56, 13);
-            this.lblLibre.TabIndex = 4;
-            this.lblLibre.Text = "Disponible";
-            // 
-            // pbNoDisponible
-            // 
-            this.pbNoDisponible.BackColor = System.Drawing.Color.DarkGray;
-            this.pbNoDisponible.Enabled = false;
-            this.pbNoDisponible.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.pbNoDisponible.Location = new System.Drawing.Point(15, 36);
-            this.pbNoDisponible.Margin = new System.Windows.Forms.Padding(2);
-            this.pbNoDisponible.Name = "pbNoDisponible";
-            this.pbNoDisponible.Size = new System.Drawing.Size(20, 16);
-            this.pbNoDisponible.TabIndex = 8;
-            this.pbNoDisponible.UseVisualStyleBackColor = false;
-            // 
-            // lblNoDisponible
-            // 
-            this.lblNoDisponible.AutoSize = true;
-            this.lblNoDisponible.Location = new System.Drawing.Point(39, 36);
-            this.lblNoDisponible.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNoDisponible.Name = "lblNoDisponible";
-            this.lblNoDisponible.Size = new System.Drawing.Size(71, 13);
-            this.lblNoDisponible.TabIndex = 5;
-            this.lblNoDisponible.Text = "No disponible";
-            // 
-            // pbOcupado
-            // 
-            this.pbOcupado.BackColor = System.Drawing.Color.DarkCyan;
-            this.pbOcupado.Enabled = false;
-            this.pbOcupado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.pbOcupado.Location = new System.Drawing.Point(15, 56);
-            this.pbOcupado.Margin = new System.Windows.Forms.Padding(2);
-            this.pbOcupado.Name = "pbOcupado";
-            this.pbOcupado.Size = new System.Drawing.Size(20, 16);
-            this.pbOcupado.TabIndex = 9;
-            this.pbOcupado.UseVisualStyleBackColor = false;
-            // 
-            // lblOcupado
-            // 
-            this.lblOcupado.AutoSize = true;
-            this.lblOcupado.Location = new System.Drawing.Point(39, 56);
-            this.lblOcupado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblOcupado.Name = "lblOcupado";
-            this.lblOcupado.Size = new System.Drawing.Size(51, 13);
-            this.lblOcupado.TabIndex = 6;
-            this.lblOcupado.Text = "Ocupado";
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnModificar.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(21, 98);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(145, 36);
-            this.btnModificar.TabIndex = 22;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnCancelar.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(21, 140);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(145, 36);
-            this.btnCancelar.TabIndex = 23;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // pbCarga
-            // 
-            this.pbCarga.Location = new System.Drawing.Point(21, 522);
-            this.pbCarga.Name = "pbCarga";
-            this.pbCarga.Size = new System.Drawing.Size(752, 23);
-            this.pbCarga.TabIndex = 24;
-            // 
             // frmRegistrarHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 571);
+            this.ClientSize = new System.Drawing.Size(814, 541);
+            this.Controls.Add(this.pnlSchedule);
+            this.Controls.Add(this.pnlSide);
             this.Controls.Add(this.pbCarga);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.pnlLeyenda);
-            this.Controls.Add(this.tlpHorario);
             this.Controls.Add(this.pnlHeader);
             this.Name = "frmRegistrarHorario";
-            this.Text = "frmRegistrarHorario";
+            this.Text = "Horario de Disponibilidad";
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
-            this.tlpHorario.ResumeLayout(false);
-            this.tlpHorario.PerformLayout();
+            this.pnlSide.ResumeLayout(false);
             this.pnlLeyenda.ResumeLayout(false);
             this.pnlLeyenda.PerformLayout();
+            this.pnlSchedule.ResumeLayout(false);
+            this.tlpHorario.ResumeLayout(false);
+            this.tlpHorario.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -625,6 +677,18 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.PictureBox btnBack;
         private System.Windows.Forms.Label lblHeader;
+        private System.Windows.Forms.ProgressBar pbCarga;
+        private System.Windows.Forms.Panel pnlSide;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Panel pnlLeyenda;
+        private System.Windows.Forms.Button pbLibre;
+        private System.Windows.Forms.Label lblLibre;
+        private System.Windows.Forms.Button pbNoDisponible;
+        private System.Windows.Forms.Label lblNoDisponible;
+        private System.Windows.Forms.Button pbOcupado;
+        private System.Windows.Forms.Label lblOcupado;
+        private System.Windows.Forms.Panel pnlSchedule;
         private System.Windows.Forms.TableLayoutPanel tlpHorario;
         private System.Windows.Forms.Label lblFriday;
         private System.Windows.Forms.Label lblThursday;
@@ -650,15 +714,5 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
         private System.Windows.Forms.Label lbl1100;
         private System.Windows.Forms.Label lbl1030;
         private System.Windows.Forms.Label lbl1630;
-        private System.Windows.Forms.Panel pnlLeyenda;
-        private System.Windows.Forms.Button pbLibre;
-        private System.Windows.Forms.Label lblLibre;
-        private System.Windows.Forms.Button pbNoDisponible;
-        private System.Windows.Forms.Label lblNoDisponible;
-        private System.Windows.Forms.Button pbOcupado;
-        private System.Windows.Forms.Label lblOcupado;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.ProgressBar pbCarga;
     }
 }

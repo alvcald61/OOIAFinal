@@ -42,7 +42,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new frmHorarioAsesor().Show();
+            new frmCitasAsesor().Show();
             this.Close();
         }
 

@@ -163,6 +163,9 @@ namespace ProyectoOOIA.Ventanas
                     daoCita.eliminarCita(dgvCitasProgramadas.CurrentRow.DataBoundItem as cita);
                     MessageBox.Show("La cita ha sido cancelada exitosamente", "Cita cancelada", MessageBoxButtons.OK);
                     listarCitasProgramadas();
+                    horarioAsesor.estado = "disponible";
+
+                    daoCita.modificarHorarioAsesor(horarioAsesor);
                 }
 
                 
@@ -318,29 +321,36 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnAgregarOpinion_Click(object sender, EventArgs e)
         {
-
-            GestionAtencionWS.cita cita_seleccionado =
-              (GestionAtencionWS.cita)dgvHistorialCitas.CurrentRow.DataBoundItem;
-            if (alumno.id_alumno > 0)
+            try
             {
-                System.Console.WriteLine("El alumno no es null");
-            }
-            else
-            {
-                System.Console.WriteLine("El alumno si es null");
-            }
+                if (dgvHistorialCitas.CurrentRow != null)
+                {
+                    GestionAtencionWS.cita cita_seleccionado =
+                      (GestionAtencionWS.cita)dgvHistorialCitas.CurrentRow.DataBoundItem;
+                    if (alumno.id_alumno > 0)
+                    {
+                        System.Console.WriteLine("El alumno no es null");
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("El alumno si es null");
+                    }
+                    if (cita_seleccionado.asesor.id_miembro_pucp > 0)
+                    {
+                        System.Console.WriteLine("El asesor no es null");
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("El asesor si es null");
+                    }
+                    new frmAgregarOpinion(cita_seleccionado.id_cita, cita_seleccionado.asesor, asignarAlumno(alumno)).ShowDialog();
+                }
+                else MessageBox.Show("Debe Seleccionar una cita", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-
-            if (cita_seleccionado.asesor.id_miembro_pucp > 0)
-            {
-                System.Console.WriteLine("El asesor no es null");
             }
-            else
-            {
-                System.Console.WriteLine("El asesor si es null");
+            catch (Exception ex){
+                return;
             }
-            new frmAgregarOpinion(cita_seleccionado.id_cita ,cita_seleccionado.asesor, asignarAlumno(alumno)).ShowDialog();
-
         }
         
         private void btnBuscarAsesor_Click(object sender, EventArgs e)
@@ -354,14 +364,21 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBuscarHorario_Click(object sender, EventArgs e)
         {
-            frmHorarioCita frmBuscarHorario = new frmHorarioCita(asesor);
-            if(frmBuscarHorario.ShowDialog() == DialogResult.OK)
+            if (asesor != null)
             {
-                dtpFecha.Value = frmBuscarHorario.Horario;
-                dtpHoraInicio.Value = frmBuscarHorario.Horario;
-                dtpHoraFin.Value = frmBuscarHorario.Horario.AddMinutes(30);
-                horarioProfesor = frmBuscarHorario.Retorno;
-                horarioAsesor = frmBuscarHorario.RetornoHorarioAsesor;
+                frmHorarioCita frmBuscarHorario = new frmHorarioCita(asesor);
+                if (frmBuscarHorario.ShowDialog() == DialogResult.OK)
+                {
+                    dtpFecha.Value = frmBuscarHorario.Horario;
+                    dtpHoraInicio.Value = frmBuscarHorario.Horario;
+                    dtpHoraFin.Value = frmBuscarHorario.Horario.AddMinutes(30);
+                    horarioProfesor = frmBuscarHorario.Retorno;
+                    horarioAsesor = frmBuscarHorario.RetornoHorarioAsesor;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un asesor para visualizar su horario", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -392,9 +409,8 @@ namespace ProyectoOOIA.Ventanas
             cambiarEstado();
             clearall();
             listarCitasProgramadas();
-            horarioAsesor.estado = "disponible";
-
-            daoCita.modificarHorarioAsesor(horarioAsesor);
+            this.asesor = null;
+            this.horarioAsesor = null;
         }
 
         private void dgvCitasProgramadas_CellContentClick(object sender, DataGridViewCellEventArgs e)

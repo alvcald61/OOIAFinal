@@ -29,40 +29,41 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroEvento));
             this.tabEventos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblNombreInscritos = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtNombreEvento = new System.Windows.Forms.TextBox();
             this.dtpFechaInscritos = new System.Windows.Forms.DateTimePicker();
             this.btnBuscarInscritos = new System.Windows.Forms.Button();
             this.lblFechaInscritos = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnDetInscritos = new System.Windows.Forms.Button();
             this.lblEventosInscritos = new System.Windows.Forms.Label();
             this.dvgInscritos = new System.Windows.Forms.DataGridView();
-            this.NombreEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabHistorial = new System.Windows.Forms.TabPage();
             this.btnAgregarOpinion = new System.Windows.Forms.Button();
             this.lblEventosPasados = new System.Windows.Forms.Label();
             this.btnDetHistorial = new System.Windows.Forms.Button();
             this.dvgHistorial = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.lblEventos = new System.Windows.Forms.Label();
+            this.btnHome = new System.Windows.Forms.PictureBox();
+            this.NombreEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.lblEventos = new System.Windows.Forms.Label();
-            this.btnHome = new System.Windows.Forms.PictureBox();
+            this.lblRegistrar = new System.Windows.Forms.Label();
             this.tabEventos.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,27 +78,26 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.tabEventos.Controls.Add(this.tabPage1);
             this.tabEventos.Controls.Add(this.tabHistorial);
-            this.tabEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabEventos.Location = new System.Drawing.Point(0, 95);
-            this.tabEventos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabEventos.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEventos.Location = new System.Drawing.Point(0, 77);
             this.tabEventos.Name = "tabEventos";
             this.tabEventos.SelectedIndex = 0;
-            this.tabEventos.Size = new System.Drawing.Size(1352, 660);
+            this.tabEventos.Size = new System.Drawing.Size(1014, 536);
             this.tabEventos.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.lblRegistrar);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.btnDetInscritos);
             this.tabPage1.Controls.Add(this.lblEventosInscritos);
             this.tabPage1.Controls.Add(this.dvgInscritos);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1344, 629);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(1006, 505);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Eventos inscritos";
             // 
@@ -109,49 +109,56 @@ namespace ProyectoOOIA.Ventanas
             this.panel2.Controls.Add(this.dtpFechaInscritos);
             this.panel2.Controls.Add(this.btnBuscarInscritos);
             this.panel2.Controls.Add(this.lblFechaInscritos);
-            this.panel2.Location = new System.Drawing.Point(33, 7);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(22, 38);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(901, 153);
+            this.panel2.Size = new System.Drawing.Size(719, 89);
             this.panel2.TabIndex = 44;
             // 
             // lblNombreInscritos
             // 
             this.lblNombreInscritos.AutoSize = true;
-            this.lblNombreInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreInscritos.Location = new System.Drawing.Point(4, 18);
-            this.lblNombreInscritos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreInscritos.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreInscritos.Location = new System.Drawing.Point(3, 15);
             this.lblNombreInscritos.Name = "lblNombreInscritos";
-            this.lblNombreInscritos.Size = new System.Drawing.Size(154, 20);
+            this.lblNombreInscritos.Size = new System.Drawing.Size(116, 18);
             this.lblNombreInscritos.TabIndex = 28;
             this.lblNombreInscritos.Text = "Nombre del evento:";
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(228)))), ((int)(((byte)(75)))));
+            this.btnRegistrar.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(525, 15);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(164, 30);
+            this.btnRegistrar.TabIndex = 40;
+            this.btnRegistrar.Text = "Registrarse a evento";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtNombreEvento
             // 
             this.txtNombreEvento.Enabled = false;
             this.txtNombreEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreEvento.Location = new System.Drawing.Point(183, 18);
-            this.txtNombreEvento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreEvento.Location = new System.Drawing.Point(137, 15);
             this.txtNombreEvento.Name = "txtNombreEvento";
-            this.txtNombreEvento.Size = new System.Drawing.Size(384, 27);
+            this.txtNombreEvento.Size = new System.Drawing.Size(289, 23);
             this.txtNombreEvento.TabIndex = 29;
             // 
             // dtpFechaInscritos
             // 
             this.dtpFechaInscritos.Enabled = false;
-            this.dtpFechaInscritos.Location = new System.Drawing.Point(183, 63);
-            this.dtpFechaInscritos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaInscritos.Location = new System.Drawing.Point(137, 51);
             this.dtpFechaInscritos.Name = "dtpFechaInscritos";
-            this.dtpFechaInscritos.Size = new System.Drawing.Size(347, 24);
+            this.dtpFechaInscritos.Size = new System.Drawing.Size(261, 21);
             this.dtpFechaInscritos.TabIndex = 42;
             // 
             // btnBuscarInscritos
             // 
-            this.btnBuscarInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarInscritos.Location = new System.Drawing.Point(576, 18);
-            this.btnBuscarInscritos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarInscritos.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarInscritos.Location = new System.Drawing.Point(432, 15);
             this.btnBuscarInscritos.Name = "btnBuscarInscritos";
-            this.btnBuscarInscritos.Size = new System.Drawing.Size(116, 32);
+            this.btnBuscarInscritos.Size = new System.Drawing.Size(87, 26);
             this.btnBuscarInscritos.TabIndex = 38;
             this.btnBuscarInscritos.Text = "Buscar";
             this.btnBuscarInscritos.UseVisualStyleBackColor = true;
@@ -160,34 +167,19 @@ namespace ProyectoOOIA.Ventanas
             // lblFechaInscritos
             // 
             this.lblFechaInscritos.AutoSize = true;
-            this.lblFechaInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaInscritos.Location = new System.Drawing.Point(4, 66);
-            this.lblFechaInscritos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaInscritos.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaInscritos.Location = new System.Drawing.Point(3, 54);
             this.lblFechaInscritos.Name = "lblFechaInscritos";
-            this.lblFechaInscritos.Size = new System.Drawing.Size(60, 20);
+            this.lblFechaInscritos.Size = new System.Drawing.Size(42, 18);
             this.lblFechaInscritos.TabIndex = 34;
             this.lblFechaInscritos.Text = "Fecha:";
             // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(228)))), ((int)(((byte)(75)))));
-            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(700, 18);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(190, 32);
-            this.btnRegistrar.TabIndex = 40;
-            this.btnRegistrar.Text = "Registrarse a evento";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
             // btnDetInscritos
             // 
-            this.btnDetInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetInscritos.Location = new System.Drawing.Point(1180, 167);
-            this.btnDetInscritos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDetInscritos.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetInscritos.Location = new System.Drawing.Point(885, 136);
             this.btnDetInscritos.Name = "btnDetInscritos";
-            this.btnDetInscritos.Size = new System.Drawing.Size(127, 36);
+            this.btnDetInscritos.Size = new System.Drawing.Size(95, 29);
             this.btnDetInscritos.TabIndex = 39;
             this.btnDetInscritos.Text = "Ver detalles";
             this.btnDetInscritos.UseVisualStyleBackColor = true;
@@ -196,11 +188,10 @@ namespace ProyectoOOIA.Ventanas
             // lblEventosInscritos
             // 
             this.lblEventosInscritos.AutoSize = true;
-            this.lblEventosInscritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEventosInscritos.Location = new System.Drawing.Point(25, 182);
-            this.lblEventosInscritos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEventosInscritos.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventosInscritos.Location = new System.Drawing.Point(17, 141);
             this.lblEventosInscritos.Name = "lblEventosInscritos";
-            this.lblEventosInscritos.Size = new System.Drawing.Size(155, 20);
+            this.lblEventosInscritos.Size = new System.Drawing.Size(163, 27);
             this.lblEventosInscritos.TabIndex = 37;
             this.lblEventosInscritos.Text = "Eventos Inscritos";
             // 
@@ -209,14 +200,14 @@ namespace ProyectoOOIA.Ventanas
             this.dvgInscritos.AllowUserToAddRows = false;
             this.dvgInscritos.AllowUserToDeleteRows = false;
             this.dvgInscritos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgInscritos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgInscritos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dvgInscritos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgInscritos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreEvento,
@@ -225,15 +216,149 @@ namespace ProyectoOOIA.Ventanas
             this.HoraFin,
             this.Categoria});
             this.dvgInscritos.EnableHeadersVisualStyles = false;
-            this.dvgInscritos.Location = new System.Drawing.Point(29, 210);
-            this.dvgInscritos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dvgInscritos.Location = new System.Drawing.Point(22, 171);
             this.dvgInscritos.Name = "dvgInscritos";
             this.dvgInscritos.ReadOnly = true;
+            this.dvgInscritos.RowHeadersVisible = false;
             this.dvgInscritos.RowHeadersWidth = 51;
-            this.dvgInscritos.Size = new System.Drawing.Size(1277, 402);
+            this.dvgInscritos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dvgInscritos.Size = new System.Drawing.Size(958, 322);
             this.dvgInscritos.TabIndex = 36;
             this.dvgInscritos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgInscritos_CellContentClick);
             this.dvgInscritos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgInscritos_CellFormatting);
+            // 
+            // tabHistorial
+            // 
+            this.tabHistorial.BackColor = System.Drawing.SystemColors.Control;
+            this.tabHistorial.Controls.Add(this.btnAgregarOpinion);
+            this.tabHistorial.Controls.Add(this.lblEventosPasados);
+            this.tabHistorial.Controls.Add(this.btnDetHistorial);
+            this.tabHistorial.Controls.Add(this.dvgHistorial);
+            this.tabHistorial.Location = new System.Drawing.Point(4, 27);
+            this.tabHistorial.Name = "tabHistorial";
+            this.tabHistorial.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabHistorial.Size = new System.Drawing.Size(1006, 505);
+            this.tabHistorial.TabIndex = 1;
+            this.tabHistorial.Text = "Historial de eventos";
+            // 
+            // btnAgregarOpinion
+            // 
+            this.btnAgregarOpinion.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarOpinion.Location = new System.Drawing.Point(714, 36);
+            this.btnAgregarOpinion.Name = "btnAgregarOpinion";
+            this.btnAgregarOpinion.Size = new System.Drawing.Size(154, 29);
+            this.btnAgregarOpinion.TabIndex = 42;
+            this.btnAgregarOpinion.Text = "Agregar Opinion";
+            this.btnAgregarOpinion.UseVisualStyleBackColor = true;
+            this.btnAgregarOpinion.Click += new System.EventHandler(this.btnAgregarOpinion_Click);
+            // 
+            // lblEventosPasados
+            // 
+            this.lblEventosPasados.AutoSize = true;
+            this.lblEventosPasados.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventosPasados.Location = new System.Drawing.Point(19, 38);
+            this.lblEventosPasados.Name = "lblEventosPasados";
+            this.lblEventosPasados.Size = new System.Drawing.Size(175, 30);
+            this.lblEventosPasados.TabIndex = 41;
+            this.lblEventosPasados.Text = "Eventos Pasados";
+            // 
+            // btnDetHistorial
+            // 
+            this.btnDetHistorial.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetHistorial.Location = new System.Drawing.Point(885, 36);
+            this.btnDetHistorial.Name = "btnDetHistorial";
+            this.btnDetHistorial.Size = new System.Drawing.Size(95, 29);
+            this.btnDetHistorial.TabIndex = 40;
+            this.btnDetHistorial.Text = "Ver detalles";
+            this.btnDetHistorial.UseVisualStyleBackColor = true;
+            this.btnDetHistorial.Click += new System.EventHandler(this.btnDetHistorial_Click);
+            // 
+            // dvgHistorial
+            // 
+            this.dvgHistorial.AllowUserToAddRows = false;
+            this.dvgHistorial.AllowUserToDeleteRows = false;
+            this.dvgHistorial.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dvgHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgHistorial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dvgHistorial.EnableHeadersVisualStyles = false;
+            this.dvgHistorial.Location = new System.Drawing.Point(22, 71);
+            this.dvgHistorial.Name = "dvgHistorial";
+            this.dvgHistorial.ReadOnly = true;
+            this.dvgHistorial.RowHeadersVisible = false;
+            this.dvgHistorial.RowHeadersWidth = 51;
+            this.dvgHistorial.Size = new System.Drawing.Size(958, 327);
+            this.dvgHistorial.TabIndex = 37;
+            this.dvgHistorial.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgHistorial_CellFormatting);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.lblEventos);
+            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1014, 71);
+            this.panel1.TabIndex = 43;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackgroundImage = global::ProyectoOOIA.Properties.Resources.logout_white;
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(967, 29);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(35, 34);
+            this.btnLogout.TabIndex = 14;
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // lblEventos
+            // 
+            this.lblEventos.AutoSize = true;
+            this.lblEventos.Font = new System.Drawing.Font("Gill Sans MT", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventos.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblEventos.Location = new System.Drawing.Point(60, 28);
+            this.lblEventos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEventos.Name = "lblEventos";
+            this.lblEventos.Size = new System.Drawing.Size(168, 33);
+            this.lblEventos.TabIndex = 3;
+            this.lblEventos.Text = "Lista de Eventos";
+            // 
+            // btnHome
+            // 
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(16, 28);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(25, 25);
+            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnHome.TabIndex = 2;
+            this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // NombreEvento
             // 
@@ -273,91 +398,11 @@ namespace ProyectoOOIA.Ventanas
             // 
             // Categoria
             // 
+            this.Categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Categoria.HeaderText = "Categoria";
             this.Categoria.MinimumWidth = 6;
             this.Categoria.Name = "Categoria";
             this.Categoria.ReadOnly = true;
-            this.Categoria.Width = 140;
-            // 
-            // tabHistorial
-            // 
-            this.tabHistorial.BackColor = System.Drawing.SystemColors.Control;
-            this.tabHistorial.Controls.Add(this.btnAgregarOpinion);
-            this.tabHistorial.Controls.Add(this.lblEventosPasados);
-            this.tabHistorial.Controls.Add(this.btnDetHistorial);
-            this.tabHistorial.Controls.Add(this.dvgHistorial);
-            this.tabHistorial.Location = new System.Drawing.Point(4, 27);
-            this.tabHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabHistorial.Name = "tabHistorial";
-            this.tabHistorial.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabHistorial.Size = new System.Drawing.Size(1344, 629);
-            this.tabHistorial.TabIndex = 1;
-            this.tabHistorial.Text = "Historial de eventos";
-            // 
-            // btnAgregarOpinion
-            // 
-            this.btnAgregarOpinion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarOpinion.Location = new System.Drawing.Point(953, 18);
-            this.btnAgregarOpinion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAgregarOpinion.Name = "btnAgregarOpinion";
-            this.btnAgregarOpinion.Size = new System.Drawing.Size(205, 36);
-            this.btnAgregarOpinion.TabIndex = 42;
-            this.btnAgregarOpinion.Text = "Agregar Opinion";
-            this.btnAgregarOpinion.UseVisualStyleBackColor = true;
-            this.btnAgregarOpinion.Click += new System.EventHandler(this.btnAgregarOpinion_Click);
-            // 
-            // lblEventosPasados
-            // 
-            this.lblEventosPasados.AutoSize = true;
-            this.lblEventosPasados.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEventosPasados.Location = new System.Drawing.Point(25, 47);
-            this.lblEventosPasados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEventosPasados.Name = "lblEventosPasados";
-            this.lblEventosPasados.Size = new System.Drawing.Size(154, 20);
-            this.lblEventosPasados.TabIndex = 41;
-            this.lblEventosPasados.Text = "Eventos Pasados";
-            // 
-            // btnDetHistorial
-            // 
-            this.btnDetHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetHistorial.Location = new System.Drawing.Point(1179, 18);
-            this.btnDetHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnDetHistorial.Name = "btnDetHistorial";
-            this.btnDetHistorial.Size = new System.Drawing.Size(127, 36);
-            this.btnDetHistorial.TabIndex = 40;
-            this.btnDetHistorial.Text = "Ver detalles";
-            this.btnDetHistorial.UseVisualStyleBackColor = true;
-            this.btnDetHistorial.Click += new System.EventHandler(this.btnDetHistorial_Click);
-            // 
-            // dvgHistorial
-            // 
-            this.dvgHistorial.AllowUserToAddRows = false;
-            this.dvgHistorial.AllowUserToDeleteRows = false;
-            this.dvgHistorial.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dvgHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgHistorial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.dvgHistorial.EnableHeadersVisualStyles = false;
-            this.dvgHistorial.Location = new System.Drawing.Point(29, 87);
-            this.dvgHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dvgHistorial.Name = "dvgHistorial";
-            this.dvgHistorial.ReadOnly = true;
-            this.dvgHistorial.RowHeadersWidth = 51;
-            this.dvgHistorial.Size = new System.Drawing.Size(1277, 402);
-            this.dvgHistorial.TabIndex = 37;
-            this.dvgHistorial.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgHistorial_CellFormatting);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -397,79 +442,30 @@ namespace ProyectoOOIA.Ventanas
             // 
             // dataGridViewTextBoxColumn5
             // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn5.HeaderText = "Categoria";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 140;
             // 
-            // panel1
+            // lblRegistrar
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.panel1.Controls.Add(this.btnLogout);
-            this.panel1.Controls.Add(this.lblEventos);
-            this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1352, 87);
-            this.panel1.TabIndex = 43;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.BackgroundImage = global::ProyectoOOIA.Properties.Resources.logout_white;
-            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(1289, 36);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(47, 42);
-            this.btnLogout.TabIndex = 14;
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // lblEventos
-            // 
-            this.lblEventos.AutoSize = true;
-            this.lblEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEventos.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblEventos.Location = new System.Drawing.Point(53, 37);
-            this.lblEventos.Name = "lblEventos";
-            this.lblEventos.Size = new System.Drawing.Size(230, 33);
-            this.lblEventos.TabIndex = 3;
-            this.lblEventos.Text = "Lista de Eventos";
-            // 
-            // btnHome
-            // 
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(15, 37);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(33, 31);
-            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnHome.TabIndex = 2;
-            this.btnHome.TabStop = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.lblRegistrar.AutoSize = true;
+            this.lblRegistrar.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistrar.Location = new System.Drawing.Point(23, 8);
+            this.lblRegistrar.Name = "lblRegistrar";
+            this.lblRegistrar.Size = new System.Drawing.Size(188, 27);
+            this.lblRegistrar.TabIndex = 45;
+            this.lblRegistrar.Text = "Registrar un Evento";
             // 
             // frmRegistroEvento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1352, 752);
+            this.ClientSize = new System.Drawing.Size(1014, 609);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabEventos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRegistroEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eventos";
@@ -512,16 +508,17 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label lblEventosPasados;
         private System.Windows.Forms.DateTimePicker dtpFechaInscritos;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button btnAgregarOpinion;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreEvento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.Button btnAgregarOpinion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Label lblRegistrar;
     }
 }

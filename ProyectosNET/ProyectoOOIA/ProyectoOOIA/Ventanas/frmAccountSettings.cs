@@ -208,7 +208,7 @@ namespace ProyectoOOIA.Ventanas
             }
             if (entrada.Text == "") errorUsuario.SetError(entrada, "Debe ingresar un usuario");
             else
-            if (new GestionHumanaWS.GestionHumanaWSClient().validar_usuario_unico(entrada.Text) == 1)
+            if (new GestionAtencionWS.GestionAtencionWSClient().validar_usuario_unico(entrada.Text) == 1)
             {
                 errorUsuario.SetError(entrada, "El usuario ya existe");
             }
@@ -258,7 +258,7 @@ namespace ProyectoOOIA.Ventanas
                     return;
                 }
                 else if (txtUsuario.Text != usuarioAnt &&
-                         new GestionHumanaWS.GestionHumanaWSClient().validar_usuario_unico(txtUsuario.Text) == 1)
+                         new GestionAtencionWS.GestionAtencionWSClient().validar_usuario_unico(txtUsuario.Text) == 1)
                 {
                     MessageBox.Show("El usuario ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

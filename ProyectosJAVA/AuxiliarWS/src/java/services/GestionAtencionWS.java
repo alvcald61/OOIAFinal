@@ -37,9 +37,9 @@ public class GestionAtencionWS {
     private HorarioDAO horario;
     private CitaDAO cita;
     private CodigoAtencionDAO daoCodigo;
-        private EncuestaDAO daoEncuesta;
+    private EncuestaDAO daoEncuesta;
     private HorarioAsesorDAO daoHorarioAsesor;
-    private AutenticarPersonaDAO autenticarPersona;
+    private AutenticarPersonaDAO daoAutenticar;
     
     public GestionAtencionWS() {
             cita=new CitaMySQL();
@@ -47,8 +47,22 @@ public class GestionAtencionWS {
             horario=new HorarioMySQL();
             daoHorarioAsesor = new HorarioAsesorMySQL();
             daoEncuesta = new EncuestaMySQL();
-            autenticarPersona = new AutenticarPersonaMySQL();
+            daoAutenticar = new AutenticarPersonaMySQL();
     }
+    
+    
+    @WebMethod(operationName = "validar_usuario_unico")
+    public int validar_usuario_unico(@WebParam(name = "usuario")String usuario){
+        int retorno=0;
+        try{
+           retorno=this.daoAutenticar.autenticarUsuarioUnico(usuario);
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return retorno;
+    }
+    
    @WebMethod(operationName = "listarCitaHistorico")
     public ArrayList<Cita> listarCitaHistorico(@WebParam(name = "id_alumno" )int id_alumno) {
         ArrayList<Cita>lista=new ArrayList<>();
@@ -319,7 +333,7 @@ public class GestionAtencionWS {
             @WebParam(name = "id_horario")int id_horario,@WebParam(name = "cita")Cita cita ){
         int retorno=0;
         try{
-           retorno=this.autenticarPersona.validarRegistroACita(id_alumno,id_horario,cita);
+           retorno=this.daoAutenticar.validarRegistroACita(id_alumno,id_horario,cita);
         }
         catch(Exception e){
             System.out.println(e.getMessage());

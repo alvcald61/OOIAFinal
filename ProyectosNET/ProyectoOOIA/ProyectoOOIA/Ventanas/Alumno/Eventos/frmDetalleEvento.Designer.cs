@@ -29,6 +29,7 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblPonentes = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.pbEvento = new System.Windows.Forms.PictureBox();
@@ -38,7 +39,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblLugar = new System.Windows.Forms.Label();
             this.lblCupo = new System.Windows.Forms.Label();
             this.txtLugar = new System.Windows.Forms.TextBox();
             this.txtCupo = new System.Windows.Forms.TextBox();
@@ -48,6 +49,9 @@ namespace ProyectoOOIA.Ventanas
             this.dtpHoraInicio = new System.Windows.Forms.DateTimePicker();
             this.dgvPonentes = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.dtpHoraFin = new System.Windows.Forms.DateTimePicker();
+            this.lblHoraFin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbEvento)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
@@ -59,7 +63,7 @@ namespace ProyectoOOIA.Ventanas
             this.lblPonentes.BackColor = System.Drawing.Color.Transparent;
             this.lblPonentes.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPonentes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblPonentes.Location = new System.Drawing.Point(32, 289);
+            this.lblPonentes.Location = new System.Drawing.Point(32, 247);
             this.lblPonentes.Name = "lblPonentes";
             this.lblPonentes.Size = new System.Drawing.Size(128, 30);
             this.lblPonentes.TabIndex = 2;
@@ -71,7 +75,7 @@ namespace ProyectoOOIA.Ventanas
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFecha.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblFecha.Location = new System.Drawing.Point(32, 106);
+            this.lblFecha.Location = new System.Drawing.Point(32, 77);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(91, 30);
             this.lblFecha.TabIndex = 4;
@@ -81,27 +85,27 @@ namespace ProyectoOOIA.Ventanas
             // pbEvento
             // 
             this.pbEvento.Image = global::ProyectoOOIA.Properties.Resources.placeholder_profile;
-            this.pbEvento.Location = new System.Drawing.Point(420, 77);
+            this.pbEvento.Location = new System.Drawing.Point(443, 77);
             this.pbEvento.Name = "pbEvento";
-            this.pbEvento.Size = new System.Drawing.Size(368, 242);
+            this.pbEvento.Size = new System.Drawing.Size(345, 200);
             this.pbEvento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbEvento.TabIndex = 7;
             this.pbEvento.TabStop = false;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(420, 329);
+            this.txtDescripcion.Location = new System.Drawing.Point(443, 322);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(368, 109);
+            this.txtDescripcion.Size = new System.Drawing.Size(345, 116);
             this.txtDescripcion.TabIndex = 10;
             // 
             // dtpFecha
             // 
-            this.dtpFecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.dtpFecha.Location = new System.Drawing.Point(129, 111);
+            this.dtpFecha.CalendarFont = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Location = new System.Drawing.Point(143, 82);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(212, 20);
+            this.dtpFecha.Size = new System.Drawing.Size(263, 20);
             this.dtpFecha.TabIndex = 14;
             // 
             // panel1
@@ -120,8 +124,8 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Image = global::ProyectoOOIA.Properties.Resources.arrowWhite;
-            this.btnBack.Location = new System.Drawing.Point(11, 34);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(16, 28);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(25, 25);
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,33 +155,33 @@ namespace ProyectoOOIA.Ventanas
             // lblHeader
             // 
             this.lblHeader.AutoSize = true;
-            this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Font = new System.Drawing.Font("Gill Sans MT", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblHeader.Location = new System.Drawing.Point(40, 34);
+            this.lblHeader.Location = new System.Drawing.Point(60, 28);
             this.lblHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(215, 29);
+            this.lblHeader.Size = new System.Drawing.Size(197, 33);
             this.lblHeader.TabIndex = 3;
             this.lblHeader.Text = "Nombre de Evento";
             // 
-            // label1
+            // lblLugar
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(32, 168);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 30);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "Lugar:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLugar.BackColor = System.Drawing.Color.Transparent;
+            this.lblLugar.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLugar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblLugar.Location = new System.Drawing.Point(32, 142);
+            this.lblLugar.Name = "lblLugar";
+            this.lblLugar.Size = new System.Drawing.Size(91, 30);
+            this.lblLugar.TabIndex = 46;
+            this.lblLugar.Text = "Lugar:";
+            this.lblLugar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblCupo
             // 
             this.lblCupo.BackColor = System.Drawing.Color.Transparent;
             this.lblCupo.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCupo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCupo.Location = new System.Drawing.Point(32, 247);
+            this.lblCupo.Location = new System.Drawing.Point(32, 204);
             this.lblCupo.Name = "lblCupo";
             this.lblCupo.Size = new System.Drawing.Size(170, 30);
             this.lblCupo.TabIndex = 47;
@@ -187,15 +191,15 @@ namespace ProyectoOOIA.Ventanas
             // txtLugar
             // 
             this.txtLugar.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLugar.Location = new System.Drawing.Point(37, 201);
+            this.txtLugar.Location = new System.Drawing.Point(37, 175);
             this.txtLugar.Name = "txtLugar";
-            this.txtLugar.Size = new System.Drawing.Size(304, 26);
+            this.txtLugar.Size = new System.Drawing.Size(369, 26);
             this.txtLugar.TabIndex = 48;
             // 
             // txtCupo
             // 
             this.txtCupo.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCupo.Location = new System.Drawing.Point(208, 248);
+            this.txtCupo.Location = new System.Drawing.Point(208, 208);
             this.txtCupo.Name = "txtCupo";
             this.txtCupo.Size = new System.Drawing.Size(47, 26);
             this.txtCupo.TabIndex = 49;
@@ -205,7 +209,7 @@ namespace ProyectoOOIA.Ventanas
             this.lblSlash.BackColor = System.Drawing.Color.Transparent;
             this.lblSlash.Font = new System.Drawing.Font("Gill Sans MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSlash.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblSlash.Location = new System.Drawing.Point(261, 244);
+            this.lblSlash.Location = new System.Drawing.Point(261, 204);
             this.lblSlash.Name = "lblSlash";
             this.lblSlash.Size = new System.Drawing.Size(27, 30);
             this.lblSlash.TabIndex = 50;
@@ -215,7 +219,7 @@ namespace ProyectoOOIA.Ventanas
             // txtCapacidad
             // 
             this.txtCapacidad.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCapacidad.Location = new System.Drawing.Point(294, 248);
+            this.txtCapacidad.Location = new System.Drawing.Point(294, 208);
             this.txtCapacidad.Name = "txtCapacidad";
             this.txtCapacidad.Size = new System.Drawing.Size(47, 26);
             this.txtCapacidad.TabIndex = 51;
@@ -225,17 +229,19 @@ namespace ProyectoOOIA.Ventanas
             this.lblHora.BackColor = System.Drawing.Color.Transparent;
             this.lblHora.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblHora.Location = new System.Drawing.Point(32, 132);
+            this.lblHora.Location = new System.Drawing.Point(32, 112);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(91, 30);
+            this.lblHora.Size = new System.Drawing.Size(105, 30);
             this.lblHora.TabIndex = 52;
-            this.lblHora.Text = "Hora:";
+            this.lblHora.Text = "Hora Inicial:";
             this.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dtpHoraInicio
             // 
-            this.dtpHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHoraInicio.Location = new System.Drawing.Point(129, 137);
+            this.dtpHoraInicio.CalendarFont = new System.Drawing.Font("Gill Sans MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHoraInicio.CustomFormat = "hh:mm";
+            this.dtpHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHoraInicio.Location = new System.Drawing.Point(143, 117);
             this.dtpHoraInicio.Name = "dtpHoraInicio";
             this.dtpHoraInicio.Size = new System.Drawing.Size(73, 20);
             this.dtpHoraInicio.TabIndex = 54;
@@ -244,30 +250,79 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.dgvPonentes.AllowUserToAddRows = false;
             this.dgvPonentes.AllowUserToDeleteRows = false;
+            this.dgvPonentes.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPonentes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPonentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPonentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre});
-            this.dgvPonentes.Location = new System.Drawing.Point(37, 322);
+            this.dgvPonentes.EnableHeadersVisualStyles = false;
+            this.dgvPonentes.Location = new System.Drawing.Point(37, 280);
             this.dgvPonentes.Name = "dgvPonentes";
             this.dgvPonentes.ReadOnly = true;
+            this.dgvPonentes.RowHeadersVisible = false;
             this.dgvPonentes.RowHeadersWidth = 51;
-            this.dgvPonentes.Size = new System.Drawing.Size(304, 116);
+            this.dgvPonentes.Size = new System.Drawing.Size(383, 158);
             this.dgvPonentes.TabIndex = 55;
             this.dgvPonentes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPonentes_CellFormatting);
             // 
             // Nombre
             // 
-            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.HeaderText = "Nombre del ponente";
             this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 304;
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescripcion.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDescripcion.Location = new System.Drawing.Point(438, 289);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(128, 30);
+            this.lblDescripcion.TabIndex = 56;
+            this.lblDescripcion.Text = "Descripción:";
+            this.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dtpHoraFin
+            // 
+            this.dtpHoraFin.CalendarFont = new System.Drawing.Font("Gill Sans MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHoraFin.CustomFormat = "hh:mm";
+            this.dtpHoraFin.Enabled = false;
+            this.dtpHoraFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHoraFin.Location = new System.Drawing.Point(333, 117);
+            this.dtpHoraFin.Name = "dtpHoraFin";
+            this.dtpHoraFin.Size = new System.Drawing.Size(73, 20);
+            this.dtpHoraFin.TabIndex = 57;
+            // 
+            // lblHoraFin
+            // 
+            this.lblHoraFin.BackColor = System.Drawing.Color.Transparent;
+            this.lblHoraFin.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoraFin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblHoraFin.Location = new System.Drawing.Point(222, 112);
+            this.lblHoraFin.Name = "lblHoraFin";
+            this.lblHoraFin.Size = new System.Drawing.Size(105, 30);
+            this.lblHoraFin.TabIndex = 58;
+            this.lblHoraFin.Text = "Hora Fin:";
+            this.lblHoraFin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmDetalleEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblHoraFin);
+            this.Controls.Add(this.dtpHoraFin);
+            this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.dgvPonentes);
             this.Controls.Add(this.dtpHoraInicio);
             this.Controls.Add(this.lblHora);
@@ -276,7 +331,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.txtCupo);
             this.Controls.Add(this.txtLugar);
             this.Controls.Add(this.lblCupo);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLugar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.txtDescripcion);
@@ -286,7 +341,6 @@ namespace ProyectoOOIA.Ventanas
             this.Name = "frmDetalleEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vista de evento";
-            this.Load += new System.EventHandler(this.frmDetalleEvento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbEvento)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -307,7 +361,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.PictureBox btnBack;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLugar;
         private System.Windows.Forms.Label lblCupo;
         private System.Windows.Forms.TextBox txtLugar;
         private System.Windows.Forms.TextBox txtCupo;
@@ -316,6 +370,9 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.DateTimePicker dtpHoraInicio;
         private System.Windows.Forms.DataGridView dgvPonentes;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.DateTimePicker dtpHoraFin;
+        private System.Windows.Forms.Label lblHoraFin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }

@@ -62,12 +62,12 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(23, 80);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 21);
+            this.label1.Size = new System.Drawing.Size(122, 23);
             this.label1.TabIndex = 39;
             this.label1.Text = "Lista de Alumnos";
             // 
@@ -109,7 +109,7 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(559, 80);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 23);
@@ -122,6 +122,7 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             // 
             this.dgvAlumnos.AllowUserToAddRows = false;
             this.dgvAlumnos.AllowUserToDeleteRows = false;
+            this.dgvAlumnos.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,8 +137,10 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             this.Nombre,
             this.Especialidad,
             this.Asistencia});
+            this.dgvAlumnos.EnableHeadersVisualStyles = false;
             this.dgvAlumnos.Location = new System.Drawing.Point(27, 114);
             this.dgvAlumnos.Name = "dgvAlumnos";
+            this.dgvAlumnos.RowHeadersVisible = false;
             this.dgvAlumnos.Size = new System.Drawing.Size(644, 312);
             this.dgvAlumnos.TabIndex = 0;
             this.dgvAlumnos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAlumnos_CellFormatting);
@@ -164,6 +167,7 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
             // 
             // Asistencia
             // 
+            this.Asistencia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Asistencia.HeaderText = "Asistencia";
             this.Asistencia.Name = "Asistencia";
             // 
