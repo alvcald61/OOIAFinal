@@ -46,7 +46,7 @@ namespace ProyectoOOIA.Ventanas
             lblUsername.Text = usuario.nombre;
             try
             {
-                imagen.BackgroundImage = new Bitmap(new MemoryStream(((miembroPUCP)usuario).imagenDePerfil));
+                displayImage(usuario.imagenDePerfil);
             }
             catch (Exception exception)
             {

@@ -24,6 +24,8 @@ import pe.edu.pucp.ooia.gest_atencion.mysql.CodigoAtencionMySQL;
 import pe.edu.pucp.ooia.gest_atencion.mysql.EncuestaMySQL;
 import pe.edu.pucp.ooia.gest_atencion.mysql.HorarioAsesorMySQL;
 import pe.edu.pucp.ooia.gest_atencion.mysql.HorarioMySQL;
+import pe.edu.pucp.ooia.gest_humana.dao.AutenticarPersonaDAO;
+import pe.edu.pucp.ooia.gest_humana.mysql.AutenticarPersonaMySQL;
 
 
 /**
@@ -35,8 +37,9 @@ public class GestionAtencionWS {
     private HorarioDAO horario;
     private CitaDAO cita;
     private CodigoAtencionDAO daoCodigo;
-        private EncuestaDAO daoEncuesta;
+    private EncuestaDAO daoEncuesta;
     private HorarioAsesorDAO daoHorarioAsesor;
+    private AutenticarPersonaDAO daoAutenticar;
     
     public GestionAtencionWS() {
             cita=new CitaMySQL();
@@ -44,7 +47,22 @@ public class GestionAtencionWS {
             horario=new HorarioMySQL();
             daoHorarioAsesor = new HorarioAsesorMySQL();
             daoEncuesta = new EncuestaMySQL();
+            daoAutenticar = new AutenticarPersonaMySQL();
     }
+    
+    
+    @WebMethod(operationName = "validar_usuario_unico")
+    public int validar_usuario_unico(@WebParam(name = "usuario")String usuario){
+        int retorno=0;
+        try{
+           retorno=this.daoAutenticar.autenticarUsuarioUnico(usuario);
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return retorno;
+    }
+    
    @WebMethod(operationName = "listarCitaHistorico")
     public ArrayList<Cita> listarCitaHistorico(@WebParam(name = "id_alumno" )int id_alumno) {
         ArrayList<Cita>lista=new ArrayList<>();

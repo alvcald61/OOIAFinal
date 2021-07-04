@@ -33,8 +33,9 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             try
             {
                 arreglo = daoReporte.generarReporteEvento(this.idEvento);
-            }catch
+            }catch (Exception ex)
             {
+                MessageBox.Show(ex.Message, "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             

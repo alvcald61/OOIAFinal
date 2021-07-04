@@ -456,7 +456,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 if (datosAnteriores[2] == txtUsuario.Text) return;
             if (textBox.Text == "") errorUsuario.SetError(textBox,"Debe ingresar un usuario");
             else 
-            if(new GestionHumanaWS.GestionHumanaWSClient().validar_usuario_unico(textBox.Text)==1)
+            if(new GestionAtencionWS.GestionAtencionWSClient().validar_usuario_unico(textBox.Text)==1)
             {
                 errorUsuario.SetError(textBox, "El usuario ya existe");
             }

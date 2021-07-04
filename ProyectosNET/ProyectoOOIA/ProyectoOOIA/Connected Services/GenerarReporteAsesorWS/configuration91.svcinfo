@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="npGjoUqlNAmQzZ5Ofro7Vm7ksKHOI+7rPzqT91W0hKk=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="eux1Ve1jTtkznnkC2oDw6UfWrMt9staN3zLNlvKTgYo=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="ReporteAsesorOpinionWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ReporteAsesorOpinionWSPort" contract="GenerarReporteAsesorWS.ReporteAsesorOpinionWS" bindingType="basicHttpBinding" address="http://localhost:8080/AuxiliarWS/ReporteAsesorOpinionWS" bindingConfiguration="ReporteAsesorOpinionWSPortBinding">
+    <endpoint name="ReporteAsesorOpinionWSPort" contract="GenerarReporteAsesorWS.ReporteAsesorOpinionWS" bindingType="basicHttpBinding" address="http://localhost:8082/AuxiliarWS/ReporteAsesorOpinionWS" bindingConfiguration="ReporteAsesorOpinionWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/AuxiliarWS/ReporteAsesorOpinionWS</serializedValue>
+          <serializedValue>http://localhost:8082/AuxiliarWS/ReporteAsesorOpinionWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

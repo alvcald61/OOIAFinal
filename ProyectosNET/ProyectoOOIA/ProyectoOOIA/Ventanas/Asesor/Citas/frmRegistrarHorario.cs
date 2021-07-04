@@ -167,5 +167,10 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
                 loadHorario();
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

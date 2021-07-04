@@ -316,25 +316,30 @@ namespace ProyectoOOIA.Ventanas
         {
             try
             {
-                GestionAtencionWS.cita cita_seleccionado =
-                  (GestionAtencionWS.cita)dgvHistorialCitas.CurrentRow.DataBoundItem;
-                if (alumno.id_alumno > 0)
+                if (dgvHistorialCitas.CurrentRow != null)
                 {
-                    System.Console.WriteLine("El alumno no es null");
+                    GestionAtencionWS.cita cita_seleccionado =
+                      (GestionAtencionWS.cita)dgvHistorialCitas.CurrentRow.DataBoundItem;
+                    if (alumno.id_alumno > 0)
+                    {
+                        System.Console.WriteLine("El alumno no es null");
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("El alumno si es null");
+                    }
+                    if (cita_seleccionado.asesor.id_miembro_pucp > 0)
+                    {
+                        System.Console.WriteLine("El asesor no es null");
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("El asesor si es null");
+                    }
+                    new frmAgregarOpinion(cita_seleccionado.id_cita, cita_seleccionado.asesor, asignarAlumno(alumno)).ShowDialog();
                 }
-                else
-                {
-                    System.Console.WriteLine("El alumno si es null");
-                }
-                if (cita_seleccionado.asesor.id_miembro_pucp > 0)
-                {
-                    System.Console.WriteLine("El asesor no es null");
-                }
-                else
-                {
-                    System.Console.WriteLine("El asesor si es null");
-                }
-                new frmAgregarOpinion(cita_seleccionado.id_cita, cita_seleccionado.asesor, asignarAlumno(alumno)).ShowDialog();
+                else MessageBox.Show("Debe Seleccionar una cita", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             catch (Exception ex){
                 return;
