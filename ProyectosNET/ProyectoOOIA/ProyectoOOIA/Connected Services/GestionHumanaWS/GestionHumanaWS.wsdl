@@ -203,12 +203,6 @@
   <message name="modificarPsicologoResponse">
     <part name="parameters" element="tns:modificarPsicologoResponse" />
   </message>
-  <message name="validar_usuario_unico">
-    <part name="parameters" element="tns:validar_usuario_unico" />
-  </message>
-  <message name="validar_usuario_unicoResponse">
-    <part name="parameters" element="tns:validar_usuario_unicoResponse" />
-  </message>
   <message name="modificarProfesores">
     <part name="parameters" element="tns:modificarProfesores" />
   </message>
@@ -365,10 +359,6 @@
     <operation name="modificarPsicologo">
       <input wsam:Action="http://services/GestionHumanaWS/modificarPsicologoRequest" message="tns:modificarPsicologo" />
       <output wsam:Action="http://services/GestionHumanaWS/modificarPsicologoResponse" message="tns:modificarPsicologoResponse" />
-    </operation>
-    <operation name="validar_usuario_unico">
-      <input wsam:Action="http://services/GestionHumanaWS/validar_usuario_unicoRequest" message="tns:validar_usuario_unico" />
-      <output wsam:Action="http://services/GestionHumanaWS/validar_usuario_unicoResponse" message="tns:validar_usuario_unicoResponse" />
     </operation>
     <operation name="modificarProfesores">
       <input wsam:Action="http://services/GestionHumanaWS/modificarProfesoresRequest" message="tns:modificarProfesores" />
@@ -678,15 +668,6 @@
       </output>
     </operation>
     <operation name="modificarPsicologo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="validar_usuario_unico">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

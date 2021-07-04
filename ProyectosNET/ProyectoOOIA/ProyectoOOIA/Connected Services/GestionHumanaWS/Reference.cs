@@ -35,14 +35,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -55,8 +53,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -78,8 +76,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -113,14 +111,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -133,8 +129,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -156,8 +152,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -191,14 +187,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -211,8 +205,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -234,8 +228,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -269,14 +263,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -289,8 +281,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -312,8 +304,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -347,14 +339,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -367,8 +357,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -390,8 +380,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -425,14 +415,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -445,8 +433,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -468,8 +456,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -503,14 +491,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -523,8 +509,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -546,8 +532,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -581,14 +567,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -601,8 +585,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -624,8 +608,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -659,14 +643,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -679,8 +661,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -702,8 +684,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -737,14 +719,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -757,8 +737,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -780,8 +760,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -815,14 +795,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -835,8 +813,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -858,8 +836,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -893,14 +871,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -913,8 +889,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -936,8 +912,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -971,14 +947,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -991,8 +965,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -1014,8 +988,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -1049,14 +1023,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -1069,8 +1041,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -1092,8 +1064,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -1127,14 +1099,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -1147,8 +1117,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -1170,8 +1140,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -1180,10 +1150,10 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse1 modificarCoordinador(ProyectoOOIA.GestionHumanaWS.modificarCoordinadorRequest request);
+        ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse modificarCoordinador(ProyectoOOIA.GestionHumanaWS.modificarCoordinadorRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/modificarCoordinadorRequest", ReplyAction="http://services/GestionHumanaWS/modificarCoordinadorResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse1> modificarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.modificarCoordinadorRequest request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse> modificarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.modificarCoordinadorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/eliminarCoordinadorRequest", ReplyAction="http://services/GestionHumanaWS/eliminarCoordinadorResponse")]
@@ -1205,14 +1175,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -1225,8 +1193,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -1248,8 +1216,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -1258,10 +1226,10 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse1 eliminarCoordinador(ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorRequest request);
+        ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse eliminarCoordinador(ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/eliminarCoordinadorRequest", ReplyAction="http://services/GestionHumanaWS/eliminarCoordinadorResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse1> eliminarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorRequest request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse> eliminarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarCoordinadorRequest", ReplyAction="http://services/GestionHumanaWS/insertarCoordinadorResponse")]
@@ -1283,14 +1251,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -1303,8 +1269,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -1326,8 +1292,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -1336,10 +1302,10 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologo))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse1 insertarCoordinador(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request);
+        ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse insertarCoordinador(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarCoordinadorRequest", ReplyAction="http://services/GestionHumanaWS/insertarCoordinadorResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse1> insertarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse> insertarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listar_alumno_x_eventoRequest", ReplyAction="http://services/GestionHumanaWS/listar_alumno_x_eventoResponse")]
@@ -1361,14 +1327,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -1381,8 +1345,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -1404,8 +1368,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -1439,14 +1403,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -1459,8 +1421,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -1482,8 +1444,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -1517,14 +1479,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -1537,8 +1497,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -1560,8 +1520,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -1595,14 +1555,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -1615,8 +1573,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -1638,8 +1596,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -1673,14 +1631,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -1693,8 +1649,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -1716,8 +1672,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -1751,14 +1707,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -1771,8 +1725,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -1794,8 +1748,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -1829,14 +1783,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -1849,8 +1801,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -1872,8 +1824,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -1907,14 +1859,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -1927,8 +1877,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -1950,8 +1900,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -1985,14 +1935,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -2005,8 +1953,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -2028,8 +1976,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -2063,14 +2011,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -2083,8 +2029,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -2106,8 +2052,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -2141,14 +2087,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -2161,8 +2105,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -2184,8 +2128,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -2219,14 +2163,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -2239,8 +2181,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -2262,8 +2204,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -2297,14 +2239,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -2317,8 +2257,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -2340,8 +2280,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -2375,14 +2315,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -2395,8 +2333,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -2418,8 +2356,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -2453,14 +2391,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -2473,8 +2409,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -2496,8 +2432,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -2531,14 +2467,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -2551,8 +2485,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -2574,8 +2508,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -2588,84 +2522,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/modificarPsicologoRequest", ReplyAction="http://services/GestionHumanaWS/modificarPsicologoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarPsicologoResponse1> modificarPsicologoAsync(ProyectoOOIA.GestionHumanaWS.modificarPsicologoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/validar_usuario_unicoRequest", ReplyAction="http://services/GestionHumanaWS/validar_usuario_unicoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAlumnoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarAlumno))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_registro_alumno_eventoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_registro_alumno_evento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_evento))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(tipoUsuarioResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(tipoUsuario))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEspecialidadResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarProfesoresResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarProfesores))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarCoordinador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumnoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEspecialidadResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticarUsuarioResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticarUsuario))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_coordinador_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_coordinador_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_registro_opinion_citaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_registro_opinion_cita))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarAlumno))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(cambiar_passwordResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(cambiar_password))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modifcar_asistenciaResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modifcar_asistencia))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPsicologoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProfesorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarProfesor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarProfesorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarProfesor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_usuario_correo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_idResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumno))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoResponse1 validar_usuario_unico(ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/validar_usuario_unicoRequest", ReplyAction="http://services/GestionHumanaWS/validar_usuario_unicoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoResponse1> validar_usuario_unicoAsync(ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/modificarProfesoresRequest", ReplyAction="http://services/GestionHumanaWS/modificarProfesoresResponse")]
@@ -2687,14 +2543,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -2707,8 +2561,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -2730,8 +2584,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -2765,14 +2619,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -2785,8 +2637,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -2808,8 +2660,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -2843,14 +2695,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -2863,8 +2713,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -2886,8 +2736,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -2921,14 +2771,12 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarAlumno))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_idResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_alumno_x_id))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unicoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(validar_usuario_unico))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dniResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(autenticar_persona_dni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarPonente))]
@@ -2941,8 +2789,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarEspecialidad))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonenteResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eliminarPonente))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesor))]
@@ -2964,8 +2812,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listar_psicologo_x_id))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologoResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarPsicologo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinador))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEventoResponse))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(insertarCoordinadorEvento))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorIdResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(listarProfesorId))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(modificarAlumnoResponse))]
@@ -4173,70 +4021,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class validar_usuario_unicoResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int returnField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int @return {
-            get {
-                return this.returnField;
-            }
-            set {
-                this.returnField = value;
-                this.RaisePropertyChanged("return");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class validar_usuario_unico : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string usuarioField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string usuario {
-            get {
-                return this.usuarioField;
-            }
-            set {
-                this.usuarioField = value;
-                this.RaisePropertyChanged("usuario");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
     public partial class autenticar_persona_dniResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int returnField;
@@ -4365,7 +4149,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class eliminarCoordinadorResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class eliminarCoordinadorEventoResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int returnField;
         
@@ -4397,7 +4181,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class eliminarCoordinador : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class eliminarCoordinadorEvento : object, System.ComponentModel.INotifyPropertyChanged {
         
         private coordinador coordinadorField;
         
@@ -4799,7 +4583,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class modificarCoordinadorResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class modificarCoordinadorEventoResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int returnField;
         
@@ -4831,7 +4615,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class modificarCoordinador : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class modificarCoordinadorEvento : object, System.ComponentModel.INotifyPropertyChanged {
         
         private coordinador coordinadorField;
         
@@ -5577,7 +5361,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class insertarCoordinadorResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class insertarCoordinadorEventoResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int returnField;
         
@@ -5609,7 +5393,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class insertarCoordinador : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class insertarCoordinadorEvento : object, System.ComponentModel.INotifyPropertyChanged {
         
         private coordinador coordinadorField;
         
@@ -6318,16 +6102,16 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCoordinadorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class modificarCoordinadorResponse1 {
+    public partial class modificarCoordinadorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarCoordinadorResponse1() {
+        public modificarCoordinadorResponse() {
         }
         
-        public modificarCoordinadorResponse1(int @return) {
+        public modificarCoordinadorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -6354,16 +6138,16 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCoordinadorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class eliminarCoordinadorResponse1 {
+    public partial class eliminarCoordinadorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarCoordinadorResponse1() {
+        public eliminarCoordinadorResponse() {
         }
         
-        public eliminarCoordinadorResponse1(int @return) {
+        public eliminarCoordinadorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -6390,16 +6174,16 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCoordinadorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarCoordinadorResponse1 {
+    public partial class insertarCoordinadorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarCoordinadorResponse1() {
+        public insertarCoordinadorResponse() {
         }
         
-        public insertarCoordinadorResponse1(int @return) {
+        public insertarCoordinadorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -6995,42 +6779,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validar_usuario_unico", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class validar_usuario_unicoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string usuario;
-        
-        public validar_usuario_unicoRequest() {
-        }
-        
-        public validar_usuario_unicoRequest(string usuario) {
-            this.usuario = usuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validar_usuario_unicoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class validar_usuario_unicoResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public validar_usuario_unicoResponse1() {
-        }
-        
-        public validar_usuario_unicoResponse1(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarProfesores", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class modificarProfesoresRequest {
         
@@ -7524,69 +7272,69 @@ namespace ProyectoOOIA.GestionHumanaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse1 ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.modificarCoordinador(ProyectoOOIA.GestionHumanaWS.modificarCoordinadorRequest request) {
+        ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.modificarCoordinador(ProyectoOOIA.GestionHumanaWS.modificarCoordinadorRequest request) {
             return base.Channel.modificarCoordinador(request);
         }
         
         public int modificarCoordinador(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
             ProyectoOOIA.GestionHumanaWS.modificarCoordinadorRequest inValue = new ProyectoOOIA.GestionHumanaWS.modificarCoordinadorRequest();
             inValue.coordinador = coordinador;
-            ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse1 retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).modificarCoordinador(inValue);
+            ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).modificarCoordinador(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse1> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.modificarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.modificarCoordinadorRequest request) {
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.modificarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.modificarCoordinadorRequest request) {
             return base.Channel.modificarCoordinadorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse1> modificarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse> modificarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
             ProyectoOOIA.GestionHumanaWS.modificarCoordinadorRequest inValue = new ProyectoOOIA.GestionHumanaWS.modificarCoordinadorRequest();
             inValue.coordinador = coordinador;
             return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).modificarCoordinadorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse1 ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.eliminarCoordinador(ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorRequest request) {
+        ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.eliminarCoordinador(ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorRequest request) {
             return base.Channel.eliminarCoordinador(request);
         }
         
         public int eliminarCoordinador(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
             ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorRequest inValue = new ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorRequest();
             inValue.coordinador = coordinador;
-            ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse1 retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).eliminarCoordinador(inValue);
+            ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).eliminarCoordinador(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse1> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.eliminarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorRequest request) {
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.eliminarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorRequest request) {
             return base.Channel.eliminarCoordinadorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse1> eliminarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse> eliminarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
             ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorRequest inValue = new ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorRequest();
             inValue.coordinador = coordinador;
             return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).eliminarCoordinadorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse1 ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.insertarCoordinador(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request) {
+        ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.insertarCoordinador(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request) {
             return base.Channel.insertarCoordinador(request);
         }
         
         public int insertarCoordinador(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
             ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest inValue = new ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest();
             inValue.coordinador = coordinador;
-            ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse1 retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).insertarCoordinador(inValue);
+            ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).insertarCoordinador(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse1> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.insertarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request) {
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.insertarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request) {
             return base.Channel.insertarCoordinadorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse1> insertarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse> insertarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
             ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest inValue = new ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest();
             inValue.coordinador = coordinador;
             return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).insertarCoordinadorAsync(inValue);
@@ -7964,29 +7712,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
             ProyectoOOIA.GestionHumanaWS.modificarPsicologoRequest inValue = new ProyectoOOIA.GestionHumanaWS.modificarPsicologoRequest();
             inValue.invitado = invitado;
             return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).modificarPsicologoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoResponse1 ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.validar_usuario_unico(ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoRequest request) {
-            return base.Channel.validar_usuario_unico(request);
-        }
-        
-        public int validar_usuario_unico(string usuario) {
-            ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoRequest inValue = new ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoRequest();
-            inValue.usuario = usuario;
-            ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoResponse1 retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).validar_usuario_unico(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoResponse1> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.validar_usuario_unicoAsync(ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoRequest request) {
-            return base.Channel.validar_usuario_unicoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoResponse1> validar_usuario_unicoAsync(string usuario) {
-            ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoRequest inValue = new ProyectoOOIA.GestionHumanaWS.validar_usuario_unicoRequest();
-            inValue.usuario = usuario;
-            return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).validar_usuario_unicoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

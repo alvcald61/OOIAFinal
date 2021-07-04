@@ -246,6 +246,16 @@ namespace ProyectoOOIA.GestionAtencionWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorResponse> listarEncuestaxAsesorAsync(ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/validar_usuario_unicoRequest", ReplyAction="http://services/GestionAtencionWS/validar_usuario_unicoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse validar_usuario_unico(ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/validar_usuario_unicoRequest", ReplyAction="http://services/GestionAtencionWS/validar_usuario_unicoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse> validar_usuario_unicoAsync(ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/validar_registro_alumno_citaRequest", ReplyAction="http://services/GestionAtencionWS/validar_registro_alumno_citaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -2064,6 +2074,42 @@ namespace ProyectoOOIA.GestionAtencionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validar_usuario_unico", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class validar_usuario_unicoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string usuario;
+        
+        public validar_usuario_unicoRequest() {
+        }
+        
+        public validar_usuario_unicoRequest(string usuario) {
+            this.usuario = usuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validar_usuario_unicoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class validar_usuario_unicoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public validar_usuario_unicoResponse() {
+        }
+        
+        public validar_usuario_unicoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="validar_registro_alumno_cita", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class validar_registro_alumno_citaRequest {
         
@@ -2665,6 +2711,29 @@ namespace ProyectoOOIA.GestionAtencionWS {
             ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.listarEncuestaxAsesorRequest();
             inValue.idAsesor = idAsesor;
             return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).listarEncuestaxAsesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.validar_usuario_unico(ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest request) {
+            return base.Channel.validar_usuario_unico(request);
+        }
+        
+        public int validar_usuario_unico(string usuario) {
+            ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest inValue = new ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest();
+            inValue.usuario = usuario;
+            ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).validar_usuario_unico(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.validar_usuario_unicoAsync(ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest request) {
+            return base.Channel.validar_usuario_unicoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse> validar_usuario_unicoAsync(string usuario) {
+            ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest inValue = new ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoRequest();
+            inValue.usuario = usuario;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).validar_usuario_unicoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
