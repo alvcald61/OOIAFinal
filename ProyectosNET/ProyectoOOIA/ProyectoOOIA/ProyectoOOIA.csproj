@@ -75,6 +75,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Componentes\CardEvento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\CardEvento.Designer.cs">
+      <DependentUpon>CardEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\CargarCSValumnosWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,12 +142,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="TipoUsuario.cs" />
-    <Compile Include="Ventanas\Old\CardEvento.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Ventanas\Old\CardEvento.Designer.cs">
-      <DependentUpon>CardEvento.cs</DependentUpon>
-    </Compile>
     <Compile Include="Componentes\Horario.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -536,7 +536,7 @@
     <Compile Include="Ventanas\ucProxEvento.Designer.cs">
       <DependentUpon>ucProxEvento.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Ventanas\Old\CardEvento.resx">
+    <EmbeddedResource Include="Componentes\CardEvento.resx">
       <DependentUpon>CardEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Componentes\Horario.resx">
@@ -925,6 +925,9 @@
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.obtener_estadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.validar_registro_alumno_citaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.validar_usuario_unicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1043,7 +1046,7 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarAlumnoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse11.datasource">
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse1.datasource">
@@ -1064,7 +1067,7 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarAlumnoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse11.datasource">
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarEspecialidadResponse1.datasource">
@@ -1121,7 +1124,7 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarAlumnoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse11.datasource">
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarEspecialidadResponse1.datasource">

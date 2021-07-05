@@ -1239,14 +1239,42 @@ begin
     where  (e.fecha < current_date()) and e.activo=1 and ea.fid_alumno = _id_alumno;
 end$
 
+/*
 delimiter $
 create procedure autenticarUsuario(
 in _usuario varchar(250),
 in _password varchar(250)
 )begin
+
 select * 
-from miembro_pucp
-where usuario=_usuario and password=md5(_password);
+from miembro_pucp mp 
+where usuario=_usuario and password=md5(_password) and (pf.activo=true or a.activo=true or ps.activo=true);
+end$
+*/
+
+delimiter $
+create procedure autenticarUsuario(
+in _usuario varchar(250),
+in _password varchar(250)
+)begin
+
+select * 
+from miembro_pucp mp 
+where mp.id_miembro_pucp is not null and usuario=_usuario and password=md5(_password) and  (
+(select activo 
+from alumno a
+where mp.id_miembro_pucp=a.fid_miembro_pucp) is true or 
+(select activo 
+from profesor p
+where mp.id_miembro_pucp=p.fid_miembro_pucp) is true or
+(select activo 
+from psicologo ps
+where mp.id_miembro_pucp=ps.fid_miembro_pucp) is true or
+(select activo 
+from coordinador co
+where mp.id_miembro_pucp=co.fid_miembro_pucp) is true 
+)
+ ;
 end$
 
 delimiter $
