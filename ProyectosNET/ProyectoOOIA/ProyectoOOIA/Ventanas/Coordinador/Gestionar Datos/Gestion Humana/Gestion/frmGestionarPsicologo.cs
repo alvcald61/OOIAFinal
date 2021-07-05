@@ -41,7 +41,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             errorDni.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             errorUsuario.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             
-        datosAnteriores = new string[4];
+            datosAnteriores = new string[4];
             for (int i = 0; i<datosAnteriores.Length; i++) datosAnteriores[i] = "";
 
         }
@@ -450,7 +450,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void validarDNI(TextBox sender)
         {
-            int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticar_persona_dni(Int32.Parse(txtDni.Text));
             string patronDNI = @"^[0-9]+$";
             regex = new Regex(patronDNI);
             if (estado == Estado.Modificar && datosAnteriores[0] == txtDni.Text) return;
@@ -458,8 +457,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 errorDni.SetError(sender, "El DNI debe estar compuesto por números");
             else if (txtDni.Text.Length != 8)
                 errorDni.SetError(sender, "El codigo debe tener 8 dígitos");
-            else if (cantUsuarios == 1)
-                errorDni.SetError(sender, "Este DNI ya está registrado");
+            else
+            {
+                int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticar_persona_dni(Int32.Parse(txtDni.Text));
+                if (cantUsuarios == 1)
+                    errorDni.SetError(sender, "Este DNI ya está registrado");
+            }
         }
     }
 }

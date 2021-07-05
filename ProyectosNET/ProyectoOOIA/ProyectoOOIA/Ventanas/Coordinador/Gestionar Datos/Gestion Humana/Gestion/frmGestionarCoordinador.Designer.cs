@@ -45,6 +45,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.btnImagen1 = new System.Windows.Forms.Button();
             this.pbPerfil1 = new System.Windows.Forms.PictureBox();
             this.pnlPersona = new System.Windows.Forms.Panel();
+            this.lblCampo1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -61,6 +62,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.btnImagen2 = new System.Windows.Forms.Button();
             this.pbPerfil2 = new System.Windows.Forms.PictureBox();
             this.pnlDatos = new System.Windows.Forms.Panel();
+            this.lblCampo2 = new System.Windows.Forms.Label();
             this.lblPag2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -71,8 +73,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.lblRol = new System.Windows.Forms.Label();
             this.txtRol = new System.Windows.Forms.TextBox();
             this.ofd_Imagen = new System.Windows.Forms.OpenFileDialog();
-            this.lblCampo1 = new System.Windows.Forms.Label();
-            this.lblCampo2 = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -257,6 +257,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pnlPersona.Size = new System.Drawing.Size(522, 246);
             this.pnlPersona.TabIndex = 9;
             // 
+            // lblCampo1
+            // 
+            this.lblCampo1.AutoSize = true;
+            this.lblCampo1.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampo1.Location = new System.Drawing.Point(3, 217);
+            this.lblCampo1.Name = "lblCampo1";
+            this.lblCampo1.Size = new System.Drawing.Size(144, 21);
+            this.lblCampo1.TabIndex = 25;
+            this.lblCampo1.Text = "* Campos obligatorios";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -281,6 +291,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(270, 23);
             this.txtCorreo.TabIndex = 21;
+            this.txtCorreo.Enter += new System.EventHandler(this.txt_Enter);
+            this.txtCorreo.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // lblCorreo
             // 
@@ -342,6 +354,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(100, 23);
             this.txtDni.TabIndex = 13;
+            this.txtDni.Enter += new System.EventHandler(this.txt_Enter);
+            this.txtDni.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // lblDni
             // 
@@ -415,6 +429,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pnlDatos.Size = new System.Drawing.Size(522, 246);
             this.pnlDatos.TabIndex = 3;
             // 
+            // lblCampo2
+            // 
+            this.lblCampo2.AutoSize = true;
+            this.lblCampo2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampo2.Location = new System.Drawing.Point(3, 217);
+            this.lblCampo2.Name = "lblCampo2";
+            this.lblCampo2.Size = new System.Drawing.Size(144, 21);
+            this.lblCampo2.TabIndex = 26;
+            this.lblCampo2.Text = "* Campos obligatorios";
+            // 
             // lblPag2
             // 
             this.lblPag2.AutoSize = true;
@@ -431,6 +455,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(150, 23);
             this.txtUsuario.TabIndex = 13;
+            this.txtUsuario.Enter += new System.EventHandler(this.txt_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // txtPassword
             // 
@@ -499,26 +525,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // ofd_Imagen
             // 
             this.ofd_Imagen.FileName = "Alumno_Perfil";
-            // 
-            // lblCampo1
-            // 
-            this.lblCampo1.AutoSize = true;
-            this.lblCampo1.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCampo1.Location = new System.Drawing.Point(3, 217);
-            this.lblCampo1.Name = "lblCampo1";
-            this.lblCampo1.Size = new System.Drawing.Size(144, 21);
-            this.lblCampo1.TabIndex = 25;
-            this.lblCampo1.Text = "* Campos obligatorios";
-            // 
-            // lblCampo2
-            // 
-            this.lblCampo2.AutoSize = true;
-            this.lblCampo2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCampo2.Location = new System.Drawing.Point(3, 217);
-            this.lblCampo2.Name = "lblCampo2";
-            this.lblCampo2.Size = new System.Drawing.Size(144, 21);
-            this.lblCampo2.TabIndex = 26;
-            this.lblCampo2.Text = "* Campos obligatorios";
             // 
             // frmGestionarCoordinador
             // 

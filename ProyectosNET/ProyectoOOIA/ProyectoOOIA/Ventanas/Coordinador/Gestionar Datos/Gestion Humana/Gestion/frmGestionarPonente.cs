@@ -308,7 +308,17 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             cambiarEstado();
         }
 
-        private void txtDni_Leave(object sender, EventArgs e)
+        private void txt_Enter(object sender, EventArgs e)
+        {
+            Control evento = (sender as Control);
+            if (evento.Name == "txtDni")
+                errorDni.Clear();
+            if (evento.Name == "txtCorreo")
+                errorCorreo.Clear();
+
+        }
+
+        private void txt_Leave(object sender, EventArgs e)
         {//validar que el dni tenga 8 digitos
             Control evento = (sender as Control);
             if (evento.Name == "txtDni")
@@ -320,48 +330,32 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         }
 
 
-
         private void validarCorreo(TextBox sender)
         {
             string patronCorreo = @"^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$";
             regex = new Regex(patronCorreo);
-            if (estado == Estado.Modificar)
-                if (datosAnteriores[1] == txtCorreo.Text) return;
-            if (!regex.IsMatch(txtCorreo.Text))
-            {
+            if (estado == Estado.Modificar && datosAnteriores[1] == txtCorreo.Text) return;
+            else if (!regex.IsMatch(txtCorreo.Text))
                 errorCorreo.SetError(sender, "El correo debe ser de la forma ejemplo@servidor.extension");
-
-            }
-
         }
 
         private void validarDNI(TextBox sender)
         {
-            string patronDNI = @"\d{8}";
+            string patronDNI = @"^[0-9]+$";
             regex = new Regex(patronDNI);
-            if (estado == Estado.Modificar)
-                if (datosAnteriores[0] == txtDni.Text) return;
-            if (!regex.IsMatch(txtDni.Text))
-                errorDni.SetError(sender, "El DNI debe tener 8 digitos");
+            if (estado == Estado.Modificar && datosAnteriores[0] == txtDni.Text) return;
+            else if (!regex.IsMatch(txtDni.Text))
+                errorDni.SetError(sender, "El DNI debe estar compuesto por números");
+            else if (txtDni.Text.Length != 8)
+                errorDni.SetError(sender, "El codigo debe tener 8 dígitos");
             else
             {
                 int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticar_persona_dni(Int32.Parse(txtDni.Text));
-                if (cantUsuarios == 1) errorDni.SetError(sender, "Este DNI ya está registrado");
+                if (cantUsuarios == 1)
+                    errorDni.SetError(sender, "Este DNI ya está registrado");
             }
         }
 
-        private void txtDni_Enter(object sender, EventArgs e)
-        {
-            Control evento = (sender as Control);
-            if (evento.Name == "txtDni")
-                errorDni.Clear();
-            if (evento.Name == "txtCorreo")
-                errorCorreo.Clear();
-            
-        }
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
+        
     }
 }
