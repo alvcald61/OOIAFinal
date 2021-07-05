@@ -133,7 +133,7 @@ namespace ProyectoOOIA.Ventanas
                 listaEventos = new BindingList<evento>(aux);
                 foreach (evento e in listaEventos)
                 {
-                    ucProxEvento uc = new ucProxEvento(e.nombre, e.categoria.nombre, e.fecha);
+                    ucProxEvento uc = new ucProxEvento(e);
                     pnlProxEventos.Controls.Add(uc);
                     uc.Dock = DockStyle.Top;
                 }

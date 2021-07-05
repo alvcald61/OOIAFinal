@@ -154,12 +154,12 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.dgvHorarioProf.AllowUserToAddRows = false;
             this.dgvHorarioProf.AllowUserToDeleteRows = false;
-            this.dgvHorarioProf.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvHorarioProf.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHorarioProf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -176,6 +176,7 @@ namespace ProyectoOOIA.Ventanas
             this.dgvHorarioProf.Location = new System.Drawing.Point(21, 202);
             this.dgvHorarioProf.Name = "dgvHorarioProf";
             this.dgvHorarioProf.ReadOnly = true;
+            this.dgvHorarioProf.RowHeadersVisible = false;
             this.dgvHorarioProf.RowHeadersWidth = 51;
             this.dgvHorarioProf.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHorarioProf.Size = new System.Drawing.Size(1132, 397);
@@ -359,17 +360,18 @@ namespace ProyectoOOIA.Ventanas
             this.Correo.HeaderText = "Correo";
             this.Correo.Name = "Correo";
             this.Correo.ReadOnly = true;
-            this.Correo.Width = 200;
+            this.Correo.Width = 180;
             // 
             // DGVEstado
             // 
             this.DGVEstado.HeaderText = "Estado de Cita";
             this.DGVEstado.Name = "DGVEstado";
             this.DGVEstado.ReadOnly = true;
-            this.DGVEstado.Width = 110;
+            this.DGVEstado.Width = 140;
             // 
             // llamada
             // 
+            this.llamada.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.llamada.HeaderText = "Iniciar Llamada";
             this.llamada.Name = "llamada";
             this.llamada.ReadOnly = true;

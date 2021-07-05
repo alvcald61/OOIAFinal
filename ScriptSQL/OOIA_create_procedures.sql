@@ -539,10 +539,10 @@ end$
 
 delimiter $
 create procedure ELIMINAR_PONENTE(
-	in _id_invitado int
+	in _id_ponente int
 )
 begin
-	update invitado set activo = false where id_ponente = _id_ponente;
+	update ponente set activo = false where id_ponente = _id_ponente;
 end$
 
 delimiter $

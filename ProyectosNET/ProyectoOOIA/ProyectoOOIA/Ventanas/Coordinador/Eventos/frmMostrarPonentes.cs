@@ -77,5 +77,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
 
              this.Dispose();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

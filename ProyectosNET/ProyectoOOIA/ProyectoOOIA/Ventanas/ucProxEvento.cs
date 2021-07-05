@@ -12,13 +12,14 @@ namespace ProyectoOOIA.Ventanas
 {
     public partial class ucProxEvento : UserControl
     {
-        public ucProxEvento(string nombre, string categoria, DateTime fecha)
+        public ucProxEvento(GestionEventoWS.evento evento)
         {
             InitializeComponent();
-            lblNombre.Text = nombre;
-            lblCategoria.Text = categoria;
-            lblFecha.Text = fecha.ToString("D");
-            lblDia.Text = fecha.ToString("dd");
+            lblNombre.Text = evento.nombre;
+            lblCategoria.Text = evento.categoria.nombre;
+            lblFecha.Text = evento.fecha.ToString("D");
+            lblHora.Text = evento.horaInicio.ToString("hh:mm") + " a " + evento.horaFin.ToString("hh:mm");
+            lblDia.Text = evento.fecha.ToString("dd");
         }
     }
 }

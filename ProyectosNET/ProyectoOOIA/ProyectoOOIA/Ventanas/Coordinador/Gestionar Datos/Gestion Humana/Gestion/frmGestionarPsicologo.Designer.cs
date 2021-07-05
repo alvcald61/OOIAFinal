@@ -283,8 +283,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(271, 23);
             this.txtCorreo.TabIndex = 21;
-            this.txtCorreo.Enter += new System.EventHandler(this.txtDni_Enter);
-            this.txtCorreo.Leave += new System.EventHandler(this.txtDni_Leave);
+            this.txtCorreo.Enter += new System.EventHandler(this.txt_Enter);
+            this.txtCorreo.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // lblCorreo
             // 
@@ -346,8 +346,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(100, 23);
             this.txtDni.TabIndex = 13;
-            this.txtDni.Enter += new System.EventHandler(this.txtDni_Enter);
-            this.txtDni.Leave += new System.EventHandler(this.txtDni_Leave);
+            this.txtDni.Enter += new System.EventHandler(this.txt_Enter);
+            this.txtDni.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // lblDni
             // 
@@ -437,8 +437,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(150, 23);
             this.txtUsuario.TabIndex = 13;
-            this.txtUsuario.Enter += new System.EventHandler(this.txtDni_Enter);
-            this.txtUsuario.MouseHover += new System.EventHandler(this.txtDni_Leave);
+            this.txtUsuario.Enter += new System.EventHandler(this.txt_Enter);
+            this.txtUsuario.MouseHover += new System.EventHandler(this.txt_Leave);
             // 
             // txtPassword
             // 

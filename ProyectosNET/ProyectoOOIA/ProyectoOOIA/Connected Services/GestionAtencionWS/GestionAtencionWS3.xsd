@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://services/" targetNamespace="http://services/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="eliminarCita" type="tns:eliminarCita" />
   <xs:element name="eliminarCitaResponse" type="tns:eliminarCitaResponse" />
+  <xs:element name="eliminarCodigo" type="tns:eliminarCodigo" />
+  <xs:element name="eliminarCodigoResponse" type="tns:eliminarCodigoResponse" />
   <xs:element name="eliminarHorario" type="tns:eliminarHorario" />
   <xs:element name="eliminarHorarioAsesor" type="tns:eliminarHorarioAsesor" />
   <xs:element name="eliminarHorarioAsesorResponse" type="tns:eliminarHorarioAsesorResponse" />
@@ -50,33 +52,6 @@
   <xs:element name="validar_registro_alumno_citaResponse" type="tns:validar_registro_alumno_citaResponse" />
   <xs:element name="validar_usuario_unico" type="tns:validar_usuario_unico" />
   <xs:element name="validar_usuario_unicoResponse" type="tns:validar_usuario_unicoResponse" />
-  <xs:complexType name="modificarHorarioAsesor">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="horarioAsesor" type="tns:horarioAsesor" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="horarioAsesor">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="estado" type="xs:string" />
-      <xs:element name="fid_asesor" type="xs:int" />
-      <xs:element minOccurs="0" name="horario" type="tns:horario" />
-      <xs:element name="id_horario_asesor" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="horario">
-    <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
-      <xs:element name="dia" type="xs:int" />
-      <xs:element minOccurs="0" name="horaFin" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="horaInicio" type="xs:dateTime" />
-      <xs:element name="id_horario" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarHorarioAsesorResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarEncuesta">
     <xs:sequence>
       <xs:element minOccurs="0" name="encuesta" type="tns:encuesta" />
@@ -143,6 +118,33 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="modificarHorarioAsesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="horarioAsesor" type="tns:horarioAsesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="horarioAsesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element name="fid_asesor" type="xs:int" />
+      <xs:element minOccurs="0" name="horario" type="tns:horario" />
+      <xs:element name="id_horario_asesor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="horario">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="dia" type="xs:int" />
+      <xs:element minOccurs="0" name="horaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaInicio" type="xs:dateTime" />
+      <xs:element name="id_horario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarHorarioAsesorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="validar_usuario_unico">
     <xs:sequence>
       <xs:element minOccurs="0" name="usuario" type="xs:string" />
@@ -159,16 +161,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarHorarioAsesorResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarHorarioAsesorSinID">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="horarioAsesor" type="tns:horarioAsesor" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarHorarioAsesorSinIDResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -206,6 +198,16 @@
       <xs:element minOccurs="0" name="codigo" type="xs:string" />
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element name="id_codigo_atencion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarHorarioAsesorSinID">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="horarioAsesor" type="tns:horarioAsesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarHorarioAsesorSinIDResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarEncuestaxAlumno">
@@ -378,14 +380,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="validar_registro_alumno_cita">
+  <xs:complexType name="eliminarCodigo">
     <xs:sequence>
-      <xs:element name="id_alumno" type="xs:int" />
-      <xs:element name="id_horario" type="xs:int" />
-      <xs:element minOccurs="0" name="cita" type="tns:cita" />
+      <xs:element name="id_codigo_atencion" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="validar_registro_alumno_citaResponse">
+  <xs:complexType name="eliminarCodigoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -396,6 +396,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarCodigoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validar_registro_alumno_cita">
+    <xs:sequence>
+      <xs:element name="id_alumno" type="xs:int" />
+      <xs:element name="id_horario" type="xs:int" />
+      <xs:element minOccurs="0" name="cita" type="tns:cita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validar_registro_alumno_citaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

@@ -154,7 +154,25 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
 
         private void tsbEliminar_Click(object sender, EventArgs e)
         {
-
+            if (dgvCodigosAtencion.CurrentRow != null)
+            {
+                codigoAtencion = (GestionAtencionWS.codigoAtencion)dgvCodigosAtencion.CurrentRow.DataBoundItem;
+                DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar este código de atención?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dr == DialogResult.Yes)
+                {
+                    int resultado = daoCodigoAtencion.eliminarCodigo(codigoAtencion.id_codigo_atencion);
+                    if (resultado != 0)
+                    {
+                        MessageBox.Show("Se ha eliminado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.estado = Estado.Inicial;
+                        cambiarEstado();
+                        listarCodigos();
+                    }
+                    else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+                MessageBox.Show("Debe seleccionar una código de atención para eliminar.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void tsbCancelar_Click(object sender, EventArgs e)
