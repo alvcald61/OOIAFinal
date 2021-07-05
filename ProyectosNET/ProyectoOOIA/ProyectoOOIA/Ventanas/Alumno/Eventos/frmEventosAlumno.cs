@@ -104,7 +104,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBuscarInscritos_Click(object sender, EventArgs e)
         {
-            frmBuscarEventoAlumno aux = new frmBuscarEventoAlumno();
+            frmBuscarEventoAlumno aux = new frmBuscarEventoAlumno(1);
             aux.ShowDialog();
             this.evento = aux.Evento;
             if (this.evento == null) return;
@@ -255,6 +255,9 @@ namespace ProyectoOOIA.Ventanas
         {
             GestionEventoWS.evento data = dvgInscritos.Rows[e.RowIndex].DataBoundItem
             as GestionEventoWS.evento;
+            dvgInscritos.Rows[e.RowIndex].Cells[1].Value = data.fecha.Date.ToString("dd/MM/yyyy");
+            dvgInscritos.Rows[e.RowIndex].Cells[2].Value = data.horaInicio.ToString("hh:mm");
+            dvgInscritos.Rows[e.RowIndex].Cells[3].Value = data.horaFin.ToString("hh:mm");
             dvgInscritos.Rows[e.RowIndex].Cells[4].Value = data.categoria.nombre;
 
         }
@@ -263,6 +266,9 @@ namespace ProyectoOOIA.Ventanas
         {
             GestionEventoWS.evento data = dvgHistorial.Rows[e.RowIndex].DataBoundItem
             as GestionEventoWS.evento;
+            dvgHistorial.Rows[e.RowIndex].Cells[1].Value = data.fecha.Date.ToString("dd/MM/yyyy");
+            dvgHistorial.Rows[e.RowIndex].Cells[2].Value = data.horaInicio.ToString("hh:mm");
+            dvgHistorial.Rows[e.RowIndex].Cells[3].Value = data.horaFin.ToString("hh:mm");
             dvgHistorial.Rows[e.RowIndex].Cells[4].Value = data.categoria.nombre;
         }
 

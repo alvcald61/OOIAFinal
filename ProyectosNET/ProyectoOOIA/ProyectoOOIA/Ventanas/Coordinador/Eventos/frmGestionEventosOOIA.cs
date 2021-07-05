@@ -196,22 +196,29 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            frmBuscarEventoAlumno aux=new frmBuscarEventoAlumno();
+            frmBuscarEventoAlumno aux=new frmBuscarEventoAlumno(2);
             aux.ShowDialog();
             evento = aux.Evento;
             //txtNombrePonente.Text = evento.id_evento.ToString();
             if (evento != null)
             {
-                componentes(Estado.Busqueda);
-                txtNombre.Text = evento.nombre;
-                txtDescripcion.Text = evento.descripcion;
-                txtLugar.Text = evento.lugar;
-                dtpFechaEvento.Value = evento.fecha;
-                dtpInicio.Value = evento.horaInicio;
-                dtpFin.Value = evento.horaFin;
-                cboCategoria.SelectedItem = evento.categoria;
-                imagen = evento.imagen;
-                npdCapacidad.Value = evento.capacidad;
+                try
+                {
+                    componentes(Estado.Busqueda);
+                    txtNombre.Text = evento.nombre;
+                    txtDescripcion.Text = evento.descripcion;
+                    txtLugar.Text = evento.lugar;
+                    dtpFechaEvento.Value = evento.fecha;
+                    dtpInicio.Value = evento.horaInicio;
+                    dtpFin.Value = evento.horaFin;
+                    cboCategoria.SelectedItem = evento.categoria;
+                    imagen = evento.imagen;
+                    npdCapacidad.Value = evento.capacidad;
+                }
+                catch
+                {
+                    return;
+                }
                 if (evento.fecha <= DateTime.Today)
                 {
                     btnReporte.Visible = true;

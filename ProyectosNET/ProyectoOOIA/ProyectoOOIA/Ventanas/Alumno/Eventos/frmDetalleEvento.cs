@@ -26,7 +26,7 @@ namespace ProyectoOOIA.Ventanas
             dtpHoraFin.Value = evento.horaFin;
             txtLugar.Text = evento.lugar;
             txtCapacidad.Text = evento.capacidad.ToString();
-            txtCupo.Text = evento.capacidad.ToString();
+            txtCupo.Text = evento.cupo.ToString();
             txtDescripcion.Text = evento.descripcion;
             MemoryStream ms;
             if (evento.imagen != null)

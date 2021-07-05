@@ -39,6 +39,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.lblBuscarEventos = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cupos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +55,7 @@ namespace ProyectoOOIA.Ventanas
             this.dgvEventos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -63,25 +64,28 @@ namespace ProyectoOOIA.Ventanas
             this.dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEventos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
+            this.Cupos,
             this.fecha,
             this.horaInicio,
             this.horaFin});
             this.dgvEventos.EnableHeadersVisualStyles = false;
-            this.dgvEventos.Location = new System.Drawing.Point(20, 108);
+            this.dgvEventos.Location = new System.Drawing.Point(27, 133);
+            this.dgvEventos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvEventos.Name = "dgvEventos";
             this.dgvEventos.ReadOnly = true;
             this.dgvEventos.RowHeadersVisible = false;
             this.dgvEventos.RowHeadersWidth = 51;
-            this.dgvEventos.Size = new System.Drawing.Size(812, 316);
+            this.dgvEventos.Size = new System.Drawing.Size(1083, 389);
             this.dgvEventos.TabIndex = 36;
             this.dgvEventos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEventos_CellFormatting);
             // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(736, 76);
+            this.btnSeleccionar.Location = new System.Drawing.Point(981, 94);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(96, 26);
+            this.btnSeleccionar.Size = new System.Drawing.Size(128, 32);
             this.btnSeleccionar.TabIndex = 35;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -90,9 +94,10 @@ namespace ProyectoOOIA.Ventanas
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(533, 76);
+            this.btnBuscar.Location = new System.Drawing.Point(711, 94);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(88, 26);
+            this.btnBuscar.Size = new System.Drawing.Size(117, 32);
             this.btnBuscar.TabIndex = 34;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -101,18 +106,20 @@ namespace ProyectoOOIA.Ventanas
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(223, 76);
+            this.txtNombre.Location = new System.Drawing.Point(297, 94);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(304, 23);
+            this.txtNombre.Size = new System.Drawing.Size(404, 27);
             this.txtNombre.TabIndex = 33;
             // 
             // lblNombreEvento
             // 
             this.lblNombreEvento.AutoSize = true;
             this.lblNombreEvento.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEvento.Location = new System.Drawing.Point(16, 76);
+            this.lblNombreEvento.Location = new System.Drawing.Point(21, 94);
+            this.lblNombreEvento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreEvento.Name = "lblNombreEvento";
-            this.lblNombreEvento.Size = new System.Drawing.Size(201, 23);
+            this.lblNombreEvento.Size = new System.Drawing.Size(256, 29);
             this.lblNombreEvento.TabIndex = 32;
             this.lblNombreEvento.Text = "Ingrese el nombre de evento:";
             // 
@@ -123,17 +130,18 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.Controls.Add(this.lblBuscarEventos);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(844, 71);
+            this.pnlHeader.Size = new System.Drawing.Size(1125, 87);
             this.pnlHeader.TabIndex = 38;
             // 
             // btnBack
             // 
             this.btnBack.Image = global::ProyectoOOIA.Properties.Resources.arrowWhite;
-            this.btnBack.Location = new System.Drawing.Point(16, 28);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Location = new System.Drawing.Point(21, 34);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(25, 25);
+            this.btnBack.Size = new System.Drawing.Size(33, 31);
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBack.TabIndex = 39;
             this.btnBack.TabStop = false;
@@ -144,10 +152,9 @@ namespace ProyectoOOIA.Ventanas
             this.lblBuscarEventos.AutoSize = true;
             this.lblBuscarEventos.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscarEventos.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblBuscarEventos.Location = new System.Drawing.Point(60, 28);
-            this.lblBuscarEventos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBuscarEventos.Location = new System.Drawing.Point(80, 34);
             this.lblBuscarEventos.Name = "lblBuscarEventos";
-            this.lblBuscarEventos.Size = new System.Drawing.Size(194, 30);
+            this.lblBuscarEventos.Size = new System.Drawing.Size(250, 38);
             this.lblBuscarEventos.TabIndex = 38;
             this.lblBuscarEventos.Text = "Buscador de Eventos";
             // 
@@ -158,6 +165,14 @@ namespace ProyectoOOIA.Ventanas
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
             this.Nombre.Width = 330;
+            // 
+            // Cupos
+            // 
+            this.Cupos.HeaderText = "Cupos";
+            this.Cupos.MinimumWidth = 6;
+            this.Cupos.Name = "Cupos";
+            this.Cupos.ReadOnly = true;
+            this.Cupos.Width = 90;
             // 
             // fecha
             // 
@@ -185,17 +200,18 @@ namespace ProyectoOOIA.Ventanas
             // 
             // frmBuscarEventoAlumno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(844, 450);
+            this.ClientSize = new System.Drawing.Size(1125, 554);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.dgvEventos);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombreEvento);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmBuscarEventoAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -220,6 +236,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label lblBuscarEventos;
         private System.Windows.Forms.PictureBox btnBack;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cupos;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn horaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn horaFin;

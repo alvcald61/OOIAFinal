@@ -163,6 +163,9 @@ namespace ProyectoOOIA.Ventanas
                     daoCita.eliminarCita(dgvCitasProgramadas.CurrentRow.DataBoundItem as cita);
                     MessageBox.Show("La cita ha sido cancelada exitosamente", "Cita cancelada", MessageBoxButtons.OK);
                     listarCitasProgramadas();
+                    horarioAsesor = new horarioAsesor();
+                    horarioAsesor.horario = (dgvCitasProgramadas.CurrentRow.DataBoundItem as cita).horario;
+                    horarioAsesor.fid_asesor = (dgvCitasProgramadas.CurrentRow.DataBoundItem as cita).asesor.id_miembro_pucp;
                     horarioAsesor.estado = "disponible";
 
                     daoCita.modificarHorarioAsesor(horarioAsesor);
@@ -271,6 +274,7 @@ namespace ProyectoOOIA.Ventanas
                     daoCita.modificarHorarioAsesor(horarioAsesor);
                     this.estado = Estado.Inicial;
                         cambiarEstado();
+                        clearall();
                     }
                     else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
