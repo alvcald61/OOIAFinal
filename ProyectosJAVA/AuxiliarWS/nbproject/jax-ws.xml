@@ -7,6 +7,9 @@
     <service name="GestionAtencionWS">
       <implementation-class>services.GestionAtencionWS</implementation-class>
     </service>
+    <service name="ReporteEventoAlumnoWS">
+      <implementation-class>services.ReporteEventoAlumnoWS</implementation-class>
+    </service>
     <service name="GestionHumanaWS">
       <implementation-class>services.GestionHumanaWS</implementation-class>
     </service>
@@ -22,17 +25,14 @@
     <service name="ProfesoresCSVcargaWS">
       <implementation-class>services.ProfesoresCSVcargaWS</implementation-class>
     </service>
+    <service name="ReporteAsesorOpinionWS">
+      <implementation-class>services.ReporteAsesorOpinionWS</implementation-class>
+    </service>
     <service name="CursosLlevadosCSVcargaWS">
       <implementation-class>services.CursosLlevadosCSVcargaWS</implementation-class>
     </service>
     <service name="PsicologosCSVcargaWS">
       <implementation-class>services.PsicologosCSVcargaWS</implementation-class>
-    </service>
-    <service name="ReporteAsesorOpinionWS">
-      <implementation-class>services.ReporteAsesorOpinionWS</implementation-class>
-    </service>
-    <service name="ReporteEventoAlumnoWS">
-      <implementation-class>services.ReporteEventoAlumnoWS</implementation-class>
     </service>
   </services>
   <clients/>
