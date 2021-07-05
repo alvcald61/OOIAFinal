@@ -166,11 +166,13 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtPassword
             // 
+            this.txtPassword.Enabled = false;
             this.txtPassword.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(582, 43);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(292, 30);
             this.txtPassword.TabIndex = 30;
+            this.txtPassword.Visible = false;
             this.txtPassword.Enter += new System.EventHandler(this.errorEntrada);
             this.txtPassword.Leave += new System.EventHandler(this.errorSalida);
             // 
@@ -280,12 +282,14 @@ namespace ProyectoOOIA.Ventanas
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.Enabled = false;
             this.lblPassword.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Location = new System.Drawing.Point(577, 13);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(159, 27);
             this.lblPassword.TabIndex = 23;
             this.lblPassword.Text = "Contraseña Actual:";
+            this.lblPassword.Visible = false;
             // 
             // ofd_Imagen
             // 

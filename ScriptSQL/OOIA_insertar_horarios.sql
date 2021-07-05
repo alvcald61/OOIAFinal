@@ -130,7 +130,6 @@ insert into especialidad(nombre) values ('Estadística',true);
 insert into especialidad(nombre) values ('Física',true);
 insert into especialidad(nombre) values ('Matemáticas',true);
 insert into especialidad(nombre) values ('Química',true);
-
 insert into especialidad(nombre) values ('Ingeniería Ambiental',true);
 insert into especialidad(nombre) values ('Ingeniería Biomédica',true);
 insert into especialidad(nombre) values ('Ingeniería Civil',true);

@@ -35,13 +35,13 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblPonentes = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ocupacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.organizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.lblPonentes = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
@@ -115,36 +115,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 250;
-            // 
-            // ocupacion
-            // 
-            this.ocupacion.DataPropertyName = "ocupacion";
-            this.ocupacion.HeaderText = "Ocupación";
-            this.ocupacion.Name = "ocupacion";
-            this.ocupacion.ReadOnly = true;
-            this.ocupacion.Width = 150;
-            // 
-            // organizacion
-            // 
-            this.organizacion.DataPropertyName = "organizacion";
-            this.organizacion.HeaderText = "Organización";
-            this.organizacion.Name = "organizacion";
-            this.organizacion.ReadOnly = true;
-            this.organizacion.Width = 150;
-            // 
-            // Especialidad
-            // 
-            this.Especialidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Especialidad.HeaderText = "Correo";
-            this.Especialidad.Name = "Especialidad";
-            this.Especialidad.ReadOnly = true;
-            // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
@@ -182,6 +152,34 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 250;
+            // 
+            // ocupacion
+            // 
+            this.ocupacion.HeaderText = "Ocupación";
+            this.ocupacion.Name = "ocupacion";
+            this.ocupacion.ReadOnly = true;
+            this.ocupacion.Width = 150;
+            // 
+            // organizacion
+            // 
+            this.organizacion.HeaderText = "Organización";
+            this.organizacion.Name = "organizacion";
+            this.organizacion.ReadOnly = true;
+            this.organizacion.Width = 150;
+            // 
+            // Especialidad
+            // 
+            this.Especialidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Especialidad.HeaderText = "Correo";
+            this.Especialidad.Name = "Especialidad";
+            this.Especialidad.ReadOnly = true;
+            // 
             // frmMostrarPonentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,12 +208,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.Label lblPonentes;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ocupacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn organizacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Especialidad;
-        private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.Label lblPonentes;
-        private System.Windows.Forms.Button btnBack;
     }
 }

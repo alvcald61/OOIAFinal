@@ -145,6 +145,16 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="eliminarHorarioAsesor">
+    <xs:sequence>
+      <xs:element name="id_horario_asesor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarHorarioAsesorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="validar_usuario_unico">
     <xs:sequence>
       <xs:element minOccurs="0" name="usuario" type="xs:string" />
@@ -155,12 +165,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarHorarioAsesor">
+  <xs:complexType name="modificarHorarioAsesorSinID">
     <xs:sequence>
-      <xs:element name="id_horario_asesor" type="xs:int" />
+      <xs:element minOccurs="0" name="horarioAsesor" type="tns:horarioAsesor" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarHorarioAsesorResponse">
+  <xs:complexType name="modificarHorarioAsesorSinIDResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -200,14 +210,15 @@
       <xs:element name="id_codigo_atencion" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarHorarioAsesorSinID">
+  <xs:complexType name="listarCitaHistoricoXNombre">
     <xs:sequence>
-      <xs:element minOccurs="0" name="horarioAsesor" type="tns:horarioAsesor" />
+      <xs:element name="id_alumno" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_profesor" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarHorarioAsesorSinIDResponse">
+  <xs:complexType name="listarCitaHistoricoXNombreResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cita" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarEncuestaxAlumno">
@@ -218,17 +229,6 @@
   <xs:complexType name="listarEncuestaxAlumnoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:encuesta" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarCitaHistoricoXNombre">
-    <xs:sequence>
-      <xs:element name="id_alumno" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre_profesor" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarCitaHistoricoXNombreResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cita" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarCodigo">

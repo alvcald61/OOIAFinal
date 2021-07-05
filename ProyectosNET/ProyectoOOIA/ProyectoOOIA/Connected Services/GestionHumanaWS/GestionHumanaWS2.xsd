@@ -265,18 +265,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="validar_registro_opinion_cita">
-    <xs:sequence>
-      <xs:element name="id_alumno" type="xs:int" />
-      <xs:element name="id_asesor" type="xs:int" />
-      <xs:element name="id_cita" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="validar_registro_opinion_citaResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="cambiar_password">
     <xs:sequence>
       <xs:element name="id" type="xs:int" />
@@ -296,6 +284,18 @@
   <xs:complexType name="listarAlumnoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alumno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validar_registro_opinion_cita">
+    <xs:sequence>
+      <xs:element name="id_alumno" type="xs:int" />
+      <xs:element name="id_asesor" type="xs:int" />
+      <xs:element name="id_cita" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validar_registro_opinion_citaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarProfesor">
@@ -399,12 +399,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarCoordinador">
+  <xs:complexType name="insertarPonente">
     <xs:sequence>
-      <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
+      <xs:element minOccurs="0" name="ponente" type="tns:ponente" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarCoordinadorResponse">
+  <xs:complexType name="insertarPonenteResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -419,12 +419,12 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ponente" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarPonente">
+  <xs:complexType name="eliminarCoordinador">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ponente" type="tns:ponente" />
+      <xs:element minOccurs="0" name="coordinador" type="tns:coordinador" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarPonenteResponse">
+  <xs:complexType name="eliminarCoordinadorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -459,16 +459,6 @@
       <xs:element minOccurs="0" name="return" type="tns:alumno" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCoordinador">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarCoordinadorResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:coordinador" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarAlumno">
     <xs:sequence>
       <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
@@ -477,6 +467,16 @@
   <xs:complexType name="insertarAlumnoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCoordinador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCoordinadorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:coordinador" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarProfesores">

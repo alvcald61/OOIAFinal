@@ -76,6 +76,9 @@ namespace ProyectoOOIA.Ventanas.Coordinador.Eventos
                     bool estado=(bool)row.Cells[3].Value;
                     daoAlumno.modifcar_asistencia(evento.id_evento, id_alumno, estado);
             }
+
+            MessageBox.Show("Registro de asistencia actualizado", "Exito", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
 
 

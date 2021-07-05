@@ -396,6 +396,12 @@ namespace ProyectoOOIA.Ventanas
             if(evento != null)
                 evento.coordinador = null;
             txtNombrePonente.Text = "";
+            errorDescripcion.Clear();
+            errorFecha.Clear();
+            errorFin.Clear();
+            errorInicio.Clear();
+            errorLugar.Clear();
+            errorNombre.Clear();
         }
         private void btnModificar_Click(object sender, EventArgs e)
         {

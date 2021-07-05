@@ -70,11 +70,11 @@ namespace ProyectoOOIA.Ventanas
             this.lblPassIncorrecto.AutoSize = true;
             this.lblPassIncorrecto.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassIncorrecto.ForeColor = System.Drawing.Color.Salmon;
-            this.lblPassIncorrecto.Location = new System.Drawing.Point(280, 298);
+            this.lblPassIncorrecto.Location = new System.Drawing.Point(201, 315);
             this.lblPassIncorrecto.Name = "lblPassIncorrecto";
-            this.lblPassIncorrecto.Size = new System.Drawing.Size(156, 23);
+            this.lblPassIncorrecto.Size = new System.Drawing.Size(231, 23);
             this.lblPassIncorrecto.TabIndex = 7;
-            this.lblPassIncorrecto.Text = "Contraseña Incorrecta";
+            this.lblPassIncorrecto.Text = "Usuarui y/o contraseña Incorrecta";
             this.lblPassIncorrecto.Visible = false;
             // 
             // lblOOIA

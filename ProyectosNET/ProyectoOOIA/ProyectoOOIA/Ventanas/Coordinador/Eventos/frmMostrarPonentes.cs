@@ -52,7 +52,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             GestionHumanaWS.ponente aux = (GestionHumanaWS.ponente)dgvPonentes.Rows[e.RowIndex].DataBoundItem ;
             
                 dgvPonentes.Rows[e.RowIndex].Cells[0].Value = aux.nombre;
-                dgvPonentes.Rows[e.RowIndex].Cells[1].Value = aux.correo;
+                dgvPonentes.Rows[e.RowIndex].Cells[1].Value = aux.ocupacion;
+                dgvPonentes.Rows[e.RowIndex].Cells[2].Value = aux.organizacion;
+                dgvPonentes.Rows[e.RowIndex].Cells[3].Value = aux.correo;
             
         }
 

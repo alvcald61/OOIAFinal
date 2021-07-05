@@ -59,7 +59,7 @@ namespace ProyectoOOIA.Ventanas
             usuarioAnt = this.usuario.usuario;
              txtPasswordNew.Enabled = true;
              txtConfirmacion.Enabled = true;
-             ttContra.SetToolTip(txtPassword,"Dejar vacio si no quiere cambiar su contraseña");
+             ttContra.SetToolTip(txtPasswordNew,"Dejar vacio si no quiere cambiar su contraseña");
         }
 
         public miembroPUCP Usuario
@@ -269,24 +269,23 @@ namespace ProyectoOOIA.Ventanas
                 usuario.fecha_inclusionSpecified = true;
                 usuario.fecha_nacimientoSpecified = true;
                 GestionHumanaWS.GestionHumanaWSClient dao = new GestionHumanaWSClient();
-                if(txtPassword.Text!="" )
-                    if (new GestionHumanaWS.GestionHumanaWSClient().autenticarUsuario(usuario.usuario, txtPassword.Text) == 1)
-                        if (txtPasswordNew.Text == txtConfirmacion.Text)
-                        {
-                            dao.cambiar_password(usuario.id_miembro_pucp, txtPasswordNew.Text);
-                            MessageBox.Show("Registro Exitoso", "Usuario Actualizado", MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Confirmación de contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
+                if (txtPasswordNew.Text != "")
+                {
+
+                    if (txtPasswordNew.Text == txtConfirmacion.Text)
+                    {
+                        dao.cambiar_password(usuario.id_miembro_pucp, txtPasswordNew.Text);
+                        MessageBox.Show("Registro Exitoso", "Usuario Actualizado", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                    }
                     else
                     {
-                        MessageBox.Show("La contraseña actual no coincide", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Confirmación de contraseña incorrecta", "Error", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
                         return;
                     }
+                }
+
 
                 if (usuario is GestionHumanaWS.alumno) dao.modificarAlumno(usuario as alumno);
                 else if (usuario is coordinador) dao.modificarCoordinador(usuario as coordinador);

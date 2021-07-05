@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/AuxiliarWS/PlantillasCSVcargaWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.187.65:8080/AuxiliarWS/PlantillasCSVcargaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PlantillasCSVcargaWS.wsdl" MetadataType="Wsdl" ID="eb2884e2-ea40-4567-aebe-4fa2ea4bbe77" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/PlantillasCSVcargaWS?WSDL" />
-    <MetadataFile FileName="PlantillasCSVcargaWS.xsd" MetadataType="Schema" ID="4aafeb1d-63e8-40e0-934d-3e5229b3c2c5" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/PlantillasCSVcargaWS?xsd=1" />
+    <MetadataFile FileName="PlantillasCSVcargaWS11.wsdl" MetadataType="Wsdl" ID="27409e37-5c49-47d9-9b04-6c3e02c23462" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/PlantillasCSVcargaWS?WSDL" />
+    <MetadataFile FileName="PlantillasCSVcargaWS11.xsd" MetadataType="Schema" ID="4487b40f-2e4a-4f99-b09d-4616e66342ab" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/PlantillasCSVcargaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

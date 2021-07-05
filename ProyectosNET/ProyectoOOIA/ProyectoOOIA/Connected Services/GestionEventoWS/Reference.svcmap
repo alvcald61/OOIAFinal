@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8082/AuxiliarWS/GestionEventoWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.187.65:8080/AuxiliarWS/GestionEventoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestionEventoWS3.xsd" MetadataType="Schema" ID="a787026b-c81f-4a3f-b357-9b72851a83cb" SourceId="1" SourceUrl="http://localhost:8082/AuxiliarWS/GestionEventoWS?xsd=1" />
-    <MetadataFile FileName="GestionEventoWS3.wsdl" MetadataType="Wsdl" ID="1469f23f-5a28-428e-b7a2-591f24f2fba0" SourceId="1" SourceUrl="http://localhost:8082/AuxiliarWS/GestionEventoWS?WSDL" />
+    <MetadataFile FileName="GestionEventoWS3.wsdl" MetadataType="Wsdl" ID="90e31b75-43bd-4eea-86c2-752f9de6093b" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/GestionEventoWS?WSDL" />
+    <MetadataFile FileName="GestionEventoWS3.xsd" MetadataType="Schema" ID="47f0ab36-701e-4d50-8e63-d5a3bc4b2093" SourceId="1" SourceUrl="http://54.157.187.65:8080/AuxiliarWS/GestionEventoWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
