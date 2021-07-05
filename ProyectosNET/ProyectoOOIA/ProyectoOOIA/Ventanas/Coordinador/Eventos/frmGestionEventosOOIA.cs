@@ -291,8 +291,8 @@ namespace ProyectoOOIA.Ventanas
                         {
                             MessageBox.Show("El registro ha sido exitoso", "Exito", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
-                            evento = null;
                             limpiar();
+                            evento = null;
                         }
                         else
                             MessageBox.Show("Ha habido un error", "Error", MessageBoxButtons.RetryCancel,
@@ -309,9 +309,8 @@ namespace ProyectoOOIA.Ventanas
                         {
                             MessageBox.Show("La modificacion ha sido exitoso", "Exito", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
-                            evento = null;
                             limpiar();
-
+                            evento = null;
                         }
                         else
                             MessageBox.Show("Ha habido un error en la modificación", "Error", MessageBoxButtons.RetryCancel,
@@ -351,9 +350,8 @@ namespace ProyectoOOIA.Ventanas
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             componentes(Estado.Nuevo);
+            evento = new evento();
             estado = Estado.Nuevo;
-
-
         }
 
         private void btnAgregarImagen_Click(object sender, EventArgs e)
@@ -388,7 +386,8 @@ namespace ProyectoOOIA.Ventanas
             txtDescripcion.Text="";
             pictureBox1.Image = null;
             lista.Clear();
-            evento.coordinador = null;
+            if(evento != null)
+                evento.coordinador = null;
             txtNombrePonente.Text = "";
         }
         private void btnModificar_Click(object sender, EventArgs e)
@@ -404,7 +403,10 @@ namespace ProyectoOOIA.Ventanas
 
             if (estado == Estado.Nuevo)
             {
-                
+                if(ponente == null)
+                {
+                    return;
+                }
                 foreach (ponente aux in lista)
                     if (aux.id_ponente == ponente.id_ponente)
                     {

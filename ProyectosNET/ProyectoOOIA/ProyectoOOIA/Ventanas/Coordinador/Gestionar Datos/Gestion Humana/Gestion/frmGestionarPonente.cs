@@ -14,10 +14,17 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private GestionHumanaWS.ponente ponente;
         private Estado estado;
         private Regex regex;
-
+        private ErrorProvider errorDni;
+        private ErrorProvider errorCorreo;
+        private string[] datosAnteriores;
         public frmGestionarPonente()
         {
             InitializeComponent();
+            errorDni = new ErrorProvider();
+            errorCorreo = new ErrorProvider();
+            errorDni.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorCorreo.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            dtpFechaNacimiento.MaxDate = DateTime.Now.AddDays(-5840);
             estado = Estado.Inicial;
             clearall();
             cambiarEstado();
@@ -29,7 +36,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             /*Persona*/
             txtDni.Text = "";
             txtNombre.Text = "";
-            dtpFechaNacimiento.Value = DateTime.Today;
+            dtpFechaNacimiento.Value = DateTime.Today.AddDays(-5840);
             txtDireccion.Text = "";
             txtCorreo.Text = "";
             /*Miembro PUCP*/
@@ -168,9 +175,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             }
 
             //Validacion de persona repetida
-            //int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticarPersona(
-                //int.Parse(txtDni.Text));
-            int cantUsuarios = 1;
+            int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticar_persona_dni(
+            int.Parse(txtDni.Text));
             if (cantUsuarios == 1)
             {
                 MessageBox.Show("Ya existe una persona registrada con el mismo DNI", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -217,48 +223,48 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         }
         private bool validarPersona()
         {
-            bool retorno = true;
+            
             if (txtDni.Text == "")
             {
                 MessageBox.Show("No ha ingresado el DNI", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
+                return false;
             }
             if (txtNombre.Text == "")
             {
                 MessageBox.Show("No ha ingresado el nombre", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
+                return false;
             }
             if (dtpFechaNacimiento.Value == DateTime.Today)
             {
                 MessageBox.Show("No ha ingresado correctamente la fecha de nacimiento", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
+                return false;
             }
             if (txtDireccion.Text == "")
             {
                 MessageBox.Show("No ha ingresado la dirección", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
+                return false;
             }
             if (txtCorreo.Text == "")
             {
                 MessageBox.Show("No ha ingresado el correo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
+                return false;
             }
 
-            string patronDNI = @"\d{8}";
+            string patronDNI = @"^\d{8}(?:[-\s]\d{4})?$";
             regex = new Regex(patronDNI);
             if (!regex.IsMatch(txtDni.Text))
             {
                 MessageBox.Show("El dni debe ser una cadena de 8 numeros", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
+                return false;
             }
             string patronCorreo = @"^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$";
             regex = new Regex(patronCorreo);
             if (!regex.IsMatch(txtCorreo.Text))
             {
                 MessageBox.Show("Correo Invalido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
+                return false;
             }
-            return retorno;
+            return true;
         }
 
         private void tsbModificar_Click(object sender, EventArgs e)
@@ -302,6 +308,57 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             cambiarEstado();
         }
 
+        private void txtDni_Leave(object sender, EventArgs e)
+        {//validar que el dni tenga 8 digitos
+            Control evento = (sender as Control);
+            if (evento.Name == "txtDni")
+                validarDNI(evento as TextBox);
+            if (evento.Name == "txtCorreo")
+                validarCorreo(evento as TextBox);
+            
+
+        }
+
+
+
+        private void validarCorreo(TextBox sender)
+        {
+            string patronCorreo = @"^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$";
+            regex = new Regex(patronCorreo);
+            if (estado == Estado.Modificar)
+                if (datosAnteriores[1] == txtCorreo.Text) return;
+            if (!regex.IsMatch(txtCorreo.Text))
+            {
+                errorCorreo.SetError(sender, "El correo debe ser de la forma ejemplo@servidor.extension");
+
+            }
+
+        }
+
+        private void validarDNI(TextBox sender)
+        {
+            string patronDNI = @"\d{8}";
+            regex = new Regex(patronDNI);
+            if (estado == Estado.Modificar)
+                if (datosAnteriores[0] == txtDni.Text) return;
+            if (!regex.IsMatch(txtDni.Text))
+                errorDni.SetError(sender, "El DNI debe tener 8 digitos");
+            else
+            {
+                int cantUsuarios = new GestionHumanaWS.GestionHumanaWSClient().autenticar_persona_dni(Int32.Parse(txtDni.Text));
+                if (cantUsuarios == 1) errorDni.SetError(sender, "Este DNI ya está registrado");
+            }
+        }
+
+        private void txtDni_Enter(object sender, EventArgs e)
+        {
+            Control evento = (sender as Control);
+            if (evento.Name == "txtDni")
+                errorDni.Clear();
+            if (evento.Name == "txtCorreo")
+                errorCorreo.Clear();
+            
+        }
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 

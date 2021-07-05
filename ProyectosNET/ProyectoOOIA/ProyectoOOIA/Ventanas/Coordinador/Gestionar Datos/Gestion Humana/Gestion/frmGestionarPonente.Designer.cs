@@ -43,6 +43,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPersona = new System.Windows.Forms.TabPage();
             this.pnlPersona = new System.Windows.Forms.Panel();
+            this.lblCampo1 = new System.Windows.Forms.Label();
             this.lblPag1 = new System.Windows.Forms.Label();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -57,6 +58,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.lblPersona = new System.Windows.Forms.Label();
             this.tabPonente = new System.Windows.Forms.TabPage();
             this.pnlDatos = new System.Windows.Forms.Panel();
+            this.lblCampo2 = new System.Windows.Forms.Label();
             this.lblPag2 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtOcupacion = new System.Windows.Forms.TextBox();
@@ -66,8 +68,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.lblOrganizacion = new System.Windows.Forms.Label();
             this.txtOrganizacion = new System.Windows.Forms.TextBox();
             this.ofd_Imagen = new System.Windows.Forms.OpenFileDialog();
-            this.lblCampo1 = new System.Windows.Forms.Label();
-            this.lblCampo2 = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -105,7 +105,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             // txtHeader
             // 
-            this.txtHeader.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.txtHeader.Location = new System.Drawing.Point(66, 28);
             this.txtHeader.Name = "txtHeader";
@@ -189,7 +189,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabControl.Controls.Add(this.tabPersona);
             this.tabControl.Controls.Add(this.tabPonente);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabControl.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.Location = new System.Drawing.Point(0, 95);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -199,10 +199,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // tabPersona
             // 
             this.tabPersona.Controls.Add(this.pnlPersona);
-            this.tabPersona.Location = new System.Drawing.Point(4, 27);
+            this.tabPersona.Location = new System.Drawing.Point(4, 25);
             this.tabPersona.Name = "tabPersona";
             this.tabPersona.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPersona.Size = new System.Drawing.Size(736, 252);
+            this.tabPersona.Size = new System.Drawing.Size(736, 254);
             this.tabPersona.TabIndex = 1;
             this.tabPersona.Text = "Información Personal";
             this.tabPersona.UseVisualStyleBackColor = true;
@@ -225,16 +225,26 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pnlPersona.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlPersona.Location = new System.Drawing.Point(3, 3);
             this.pnlPersona.Name = "pnlPersona";
-            this.pnlPersona.Size = new System.Drawing.Size(730, 246);
+            this.pnlPersona.Size = new System.Drawing.Size(730, 248);
             this.pnlPersona.TabIndex = 9;
+            // 
+            // lblCampo1
+            // 
+            this.lblCampo1.AutoSize = true;
+            this.lblCampo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampo1.Location = new System.Drawing.Point(3, 217);
+            this.lblCampo1.Name = "lblCampo1";
+            this.lblCampo1.Size = new System.Drawing.Size(156, 18);
+            this.lblCampo1.TabIndex = 28;
+            this.lblCampo1.Text = "* Campos obligatorios";
             // 
             // lblPag1
             // 
             this.lblPag1.AutoSize = true;
-            this.lblPag1.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPag1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPag1.Location = new System.Drawing.Point(635, 217);
             this.lblPag1.Name = "lblPag1";
-            this.lblPag1.Size = new System.Drawing.Size(90, 21);
+            this.lblPag1.Size = new System.Drawing.Size(97, 18);
             this.lblPag1.TabIndex = 27;
             this.lblPag1.Text = "Página 1 de 2";
             // 
@@ -244,23 +254,25 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(160, 91);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(89, 23);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(89, 22);
             this.dtpFechaNacimiento.TabIndex = 23;
             // 
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(160, 149);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(271, 23);
+            this.txtCorreo.Size = new System.Drawing.Size(271, 22);
             this.txtCorreo.TabIndex = 21;
+            this.txtCorreo.Enter += new System.EventHandler(this.txtDni_Enter);
+            this.txtCorreo.Leave += new System.EventHandler(this.txtDni_Leave);
             // 
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.Location = new System.Drawing.Point(3, 150);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(66, 21);
+            this.lblCorreo.Size = new System.Drawing.Size(65, 18);
             this.lblCorreo.TabIndex = 20;
             this.lblCorreo.Text = "Correo *";
             // 
@@ -268,26 +280,26 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.txtDireccion.Location = new System.Drawing.Point(160, 120);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(271, 23);
+            this.txtDireccion.Size = new System.Drawing.Size(271, 22);
             this.txtDireccion.TabIndex = 19;
             // 
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.Location = new System.Drawing.Point(3, 121);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(80, 21);
+            this.lblDireccion.Size = new System.Drawing.Size(81, 18);
             this.lblDireccion.TabIndex = 18;
             this.lblDireccion.Text = "Dirección *";
             // 
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaNacimiento.Location = new System.Drawing.Point(3, 93);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(148, 21);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(158, 18);
             this.lblFechaNacimiento.TabIndex = 16;
             this.lblFechaNacimiento.Text = "Fecha de Nacimiento *";
             // 
@@ -295,16 +307,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.txtNombre.Location = new System.Drawing.Point(160, 62);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(271, 23);
+            this.txtNombre.Size = new System.Drawing.Size(271, 22);
             this.txtNombre.TabIndex = 15;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(3, 63);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(137, 21);
+            this.lblNombre.Size = new System.Drawing.Size(141, 18);
             this.lblNombre.TabIndex = 14;
             this.lblNombre.Text = "Nombre Completo *";
             // 
@@ -312,36 +324,38 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.txtDni.Location = new System.Drawing.Point(160, 33);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(100, 23);
+            this.txtDni.Size = new System.Drawing.Size(100, 22);
             this.txtDni.TabIndex = 13;
+            this.txtDni.Enter += new System.EventHandler(this.txtDni_Enter);
+            this.txtDni.Leave += new System.EventHandler(this.txtDni_Leave);
             // 
             // lblDni
             // 
             this.lblDni.AutoSize = true;
-            this.lblDni.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDni.Location = new System.Drawing.Point(3, 34);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(47, 21);
+            this.lblDni.Size = new System.Drawing.Size(43, 18);
             this.lblDni.TabIndex = 10;
             this.lblDni.Text = "DNI *";
             // 
             // lblPersona
             // 
             this.lblPersona.AutoSize = true;
-            this.lblPersona.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPersona.Location = new System.Drawing.Point(3, 3);
             this.lblPersona.Name = "lblPersona";
-            this.lblPersona.Size = new System.Drawing.Size(201, 27);
+            this.lblPersona.Size = new System.Drawing.Size(207, 24);
             this.lblPersona.TabIndex = 8;
             this.lblPersona.Text = "Información Personal";
             // 
             // tabPonente
             // 
             this.tabPonente.Controls.Add(this.pnlDatos);
-            this.tabPonente.Location = new System.Drawing.Point(4, 27);
+            this.tabPonente.Location = new System.Drawing.Point(4, 25);
             this.tabPonente.Name = "tabPonente";
             this.tabPonente.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPonente.Size = new System.Drawing.Size(736, 252);
+            this.tabPonente.Size = new System.Drawing.Size(736, 254);
             this.tabPonente.TabIndex = 0;
             this.tabPonente.Text = "Datos de Contacto";
             this.tabPonente.UseVisualStyleBackColor = true;
@@ -360,16 +374,26 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlDatos.Location = new System.Drawing.Point(3, 3);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(730, 246);
+            this.pnlDatos.Size = new System.Drawing.Size(730, 248);
             this.pnlDatos.TabIndex = 3;
+            // 
+            // lblCampo2
+            // 
+            this.lblCampo2.AutoSize = true;
+            this.lblCampo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampo2.Location = new System.Drawing.Point(3, 217);
+            this.lblCampo2.Name = "lblCampo2";
+            this.lblCampo2.Size = new System.Drawing.Size(156, 18);
+            this.lblCampo2.TabIndex = 29;
+            this.lblCampo2.Text = "* Campos obligatorios";
             // 
             // lblPag2
             // 
             this.lblPag2.AutoSize = true;
-            this.lblPag2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPag2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPag2.Location = new System.Drawing.Point(635, 217);
             this.lblPag2.Name = "lblPag2";
-            this.lblPag2.Size = new System.Drawing.Size(90, 21);
+            this.lblPag2.Size = new System.Drawing.Size(97, 18);
             this.lblPag2.TabIndex = 18;
             this.lblPag2.Text = "Página 2 de 2";
             // 
@@ -377,53 +401,53 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.txtTelefono.Location = new System.Drawing.Point(160, 33);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(200, 23);
+            this.txtTelefono.Size = new System.Drawing.Size(200, 22);
             this.txtTelefono.TabIndex = 13;
             // 
             // txtOcupacion
             // 
             this.txtOcupacion.Location = new System.Drawing.Point(160, 62);
             this.txtOcupacion.Name = "txtOcupacion";
-            this.txtOcupacion.Size = new System.Drawing.Size(200, 23);
+            this.txtOcupacion.Size = new System.Drawing.Size(200, 22);
             this.txtOcupacion.TabIndex = 12;
             // 
             // lblOcupacion
             // 
             this.lblOcupacion.AutoSize = true;
-            this.lblOcupacion.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcupacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOcupacion.Location = new System.Drawing.Point(3, 63);
             this.lblOcupacion.Name = "lblOcupacion";
-            this.lblOcupacion.Size = new System.Drawing.Size(87, 21);
+            this.lblOcupacion.Size = new System.Drawing.Size(90, 18);
             this.lblOcupacion.TabIndex = 10;
             this.lblOcupacion.Text = "Ocupación *";
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.Location = new System.Drawing.Point(3, 34);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(74, 21);
+            this.lblTelefono.Size = new System.Drawing.Size(76, 18);
             this.lblTelefono.TabIndex = 9;
             this.lblTelefono.Text = "Telefono *";
             // 
             // lblMiembroExterno
             // 
             this.lblMiembroExterno.AutoSize = true;
-            this.lblMiembroExterno.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiembroExterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMiembroExterno.Location = new System.Drawing.Point(3, 3);
             this.lblMiembroExterno.Name = "lblMiembroExterno";
-            this.lblMiembroExterno.Size = new System.Drawing.Size(153, 27);
+            this.lblMiembroExterno.Size = new System.Drawing.Size(150, 24);
             this.lblMiembroExterno.TabIndex = 7;
             this.lblMiembroExterno.Text = "Datos Contacto";
             // 
             // lblOrganizacion
             // 
             this.lblOrganizacion.AutoSize = true;
-            this.lblOrganizacion.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrganizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrganizacion.Location = new System.Drawing.Point(3, 92);
             this.lblOrganizacion.Name = "lblOrganizacion";
-            this.lblOrganizacion.Size = new System.Drawing.Size(89, 21);
+            this.lblOrganizacion.Size = new System.Drawing.Size(96, 18);
             this.lblOrganizacion.TabIndex = 1;
             this.lblOrganizacion.Text = "Organización";
             // 
@@ -431,32 +455,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.txtOrganizacion.Location = new System.Drawing.Point(160, 91);
             this.txtOrganizacion.Name = "txtOrganizacion";
-            this.txtOrganizacion.Size = new System.Drawing.Size(200, 23);
+            this.txtOrganizacion.Size = new System.Drawing.Size(200, 22);
             this.txtOrganizacion.TabIndex = 0;
             // 
             // ofd_Imagen
             // 
             this.ofd_Imagen.FileName = "Alumno_Perfil";
-            // 
-            // lblCampo1
-            // 
-            this.lblCampo1.AutoSize = true;
-            this.lblCampo1.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCampo1.Location = new System.Drawing.Point(3, 217);
-            this.lblCampo1.Name = "lblCampo1";
-            this.lblCampo1.Size = new System.Drawing.Size(144, 21);
-            this.lblCampo1.TabIndex = 28;
-            this.lblCampo1.Text = "* Campos obligatorios";
-            // 
-            // lblCampo2
-            // 
-            this.lblCampo2.AutoSize = true;
-            this.lblCampo2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCampo2.Location = new System.Drawing.Point(3, 217);
-            this.lblCampo2.Name = "lblCampo2";
-            this.lblCampo2.Size = new System.Drawing.Size(144, 21);
-            this.lblCampo2.TabIndex = 29;
-            this.lblCampo2.Text = "* Campos obligatorios";
             // 
             // frmGestionarPonente
             // 
