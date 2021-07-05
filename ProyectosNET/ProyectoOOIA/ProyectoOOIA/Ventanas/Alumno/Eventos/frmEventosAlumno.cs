@@ -128,6 +128,12 @@ namespace ProyectoOOIA.Ventanas
         {
             if (txtNombreEvento.Text != "")
             {
+                if (evento.cupo == 0)
+                {
+                    MessageBox.Show("Actualmente, el evento ya no tiene cupos", "Inscripción a Evento",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 DialogResult dr =
                    MessageBox.Show("¿Desea inscribirse a este evento?", "Inscripción a Evento",
                    MessageBoxButtons.YesNo, MessageBoxIcon.None);
@@ -150,8 +156,9 @@ namespace ProyectoOOIA.Ventanas
                         return;
                     }
                     int resultado = daoEvento.insertarEncuestaEvento(eventoAlumno);
+                    int resultado2 = daoEvento.reducir_cupo(evento);
 
-                    if (resultado != 0)
+                    if (resultado != 0 && resultado2 != 0)
                     {
                         MessageBox.Show("El registro ha sido exitoso", "Éxito", MessageBoxButtons.OK,
                                MessageBoxIcon.Exclamation);

@@ -81,6 +81,9 @@
     <Compile Include="Componentes\CardEvento.Designer.cs">
       <DependentUpon>CardEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Componentes\OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Connected Services\CargarCSValumnosWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -149,9 +152,6 @@
       <DependentUpon>Horario.cs</DependentUpon>
     </Compile>
     <Compile Include="Estado.cs" />
-    <Compile Include="Componentes\OvalPictureBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Componentes\toggle.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -755,10 +755,6 @@
     <None Include="Connected Services\CargarCSValumnosWS\ProyectoOOIA.CargarCSValumnosWS.CargarCSValumnosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CargarCSVcursosLlevadosWS\CursosLlevadosCSVcargaWS.wsdl" />
-    <None Include="Connected Services\CargarCSVcursosLlevadosWS\CursosLlevadosCSVcargaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\CargarCSVcursosLlevadosWS\CursosLlevadosCSVcargaWS1.wsdl" />
     <None Include="Connected Services\CargarCSVcursosLlevadosWS\CursosLlevadosCSVcargaWS1.xsd">
       <SubType>Designer</SubType>
@@ -769,10 +765,6 @@
     </None>
     <None Include="Connected Services\CargarCSVcursosLlevadosWS\ProyectoOOIA.CargarCSVcursosLlevadosWS.CargarCSVcursosLlevadosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CargarCSVevaluacionesWS\EvaluacionesCSVcargaWS.wsdl" />
-    <None Include="Connected Services\CargarCSVevaluacionesWS\EvaluacionesCSVcargaWS.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CargarCSVevaluacionesWS\EvaluacionesCSVcargaWS1.wsdl" />
     <None Include="Connected Services\CargarCSVevaluacionesWS\EvaluacionesCSVcargaWS1.xsd">
@@ -822,6 +814,10 @@
     <None Include="Connected Services\GenerarReporteAsesorWS\ReporteAsesorOpinionWS1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\GenerarReporteAsesorWS\ReporteAsesorOpinionWS11.wsdl" />
+    <None Include="Connected Services\GenerarReporteAsesorWS\ReporteAsesorOpinionWS11.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\GenerarReporteAsesorWS\ReporteAsesorOpinionWS2.wsdl" />
     <None Include="Connected Services\GenerarReporteAsesorWS\ReporteAsesorOpinionWS2.xsd">
       <SubType>Designer</SubType>
@@ -834,8 +830,12 @@
     <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS11.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS2.wsdl" />
-    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS2.xsd">
+    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS12.wsdl" />
+    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS3.wsdl" />
+    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.cita.datasource">
@@ -939,8 +939,12 @@
     <None Include="Connected Services\GestionEventoWS\GestionEventoWS11.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\GestionEventoWS\GestionEventoWS2.wsdl" />
-    <None Include="Connected Services\GestionEventoWS\GestionEventoWS2.xsd">
+    <None Include="Connected Services\GestionEventoWS\GestionEventoWS12.wsdl" />
+    <None Include="Connected Services\GestionEventoWS\GestionEventoWS12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionEventoWS\GestionEventoWS3.wsdl" />
+    <None Include="Connected Services\GestionEventoWS\GestionEventoWS3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.categoriaEvento.datasource">
@@ -1024,8 +1028,15 @@
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.ponente1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS.wsdl" />
-    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS.xsd">
+    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.reducir_cupoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS1.wsdl" />
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS2.wsdl" />
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.alumno.datasource">
@@ -1049,6 +1060,9 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarCoordinadorResponse12.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1068,6 +1082,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse12.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarEspecialidadResponse1.datasource">
@@ -1127,6 +1144,9 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarCoordinadorResponse12.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarEspecialidadResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1177,6 +1197,10 @@
     </None>
     <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS11.wsdl" />
     <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS12.wsdl" />
+    <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS12.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ReporteEventoAlumnoWS\ReporteEventoAlumnoWS2.wsdl" />
