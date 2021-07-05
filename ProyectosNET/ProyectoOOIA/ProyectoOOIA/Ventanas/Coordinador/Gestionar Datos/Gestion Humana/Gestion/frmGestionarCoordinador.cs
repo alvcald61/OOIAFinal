@@ -236,6 +236,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 int resultado = daoCoordinador.modificarCoordinador(coordinador);
                 if (resultado != 0)
                 {
+                    if (txtPassword.Text != "")
+                        new GestionHumanaWS.GestionHumanaWSClient().cambiar_password(coordinador.id_miembro_pucp, txtPassword.Text);
+
                     MessageBox.Show("Se ha actualizado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.estado = Estado.Inicial;
                     cambiarEstado();

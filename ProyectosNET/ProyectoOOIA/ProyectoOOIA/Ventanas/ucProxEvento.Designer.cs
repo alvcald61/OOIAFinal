@@ -34,6 +34,7 @@ namespace ProyectoOOIA.Ventanas
             this.lblCategoria = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDia = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@ namespace ProyectoOOIA.Ventanas
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(80, 54);
+            this.lblFecha.Location = new System.Drawing.Point(80, 44);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(121, 23);
             this.lblFecha.TabIndex = 1;
@@ -64,7 +65,7 @@ namespace ProyectoOOIA.Ventanas
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.Color.Black;
-            this.lblCategoria.Location = new System.Drawing.Point(80, 85);
+            this.lblCategoria.Location = new System.Drawing.Point(80, 89);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(74, 23);
             this.lblCategoria.TabIndex = 2;
@@ -94,11 +95,23 @@ namespace ProyectoOOIA.Ventanas
             this.lblDia.Text = "DD";
             this.lblDia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.Black;
+            this.lblHora.Location = new System.Drawing.Point(80, 67);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(117, 23);
+            this.lblHora.TabIndex = 13;
+            this.lblHora.Text = "Hora del Evento";
+            // 
             // ucProxEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.lblHora);
             this.Controls.Add(this.lblDia);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblCategoria);
@@ -119,5 +132,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblDia;
+        private System.Windows.Forms.Label lblHora;
     }
 }

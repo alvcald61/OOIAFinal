@@ -264,6 +264,16 @@ namespace ProyectoOOIA.GestionAtencionWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarHorarioAsesorRequest", ReplyAction="http://services/GestionAtencionWS/eliminarHorarioAsesorResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorResponse> eliminarHorarioAsesorAsync(ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarCodigoRequest", ReplyAction="http://services/GestionAtencionWS/eliminarCodigoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.GestionAtencionWS.eliminarCodigoResponse eliminarCodigo(ProyectoOOIA.GestionAtencionWS.eliminarCodigoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionAtencionWS/eliminarCodigoRequest", ReplyAction="http://services/GestionAtencionWS/eliminarCodigoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarCodigoResponse> eliminarCodigoAsync(ProyectoOOIA.GestionAtencionWS.eliminarCodigoRequest request);
     }
     
     /// <remarks/>
@@ -2153,6 +2163,42 @@ namespace ProyectoOOIA.GestionAtencionWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCodigo", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class eliminarCodigoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_codigo_atencion;
+        
+        public eliminarCodigoRequest() {
+        }
+        
+        public eliminarCodigoRequest(int id_codigo_atencion) {
+            this.id_codigo_atencion = id_codigo_atencion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCodigoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class eliminarCodigoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarCodigoResponse() {
+        }
+        
+        public eliminarCodigoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface GestionAtencionWSChannel : ProyectoOOIA.GestionAtencionWS.GestionAtencionWS, System.ServiceModel.IClientChannel {
     }
@@ -2761,6 +2807,29 @@ namespace ProyectoOOIA.GestionAtencionWS {
             ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest inValue = new ProyectoOOIA.GestionAtencionWS.eliminarHorarioAsesorRequest();
             inValue.id_horario_asesor = id_horario_asesor;
             return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).eliminarHorarioAsesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.GestionAtencionWS.eliminarCodigoResponse ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.eliminarCodigo(ProyectoOOIA.GestionAtencionWS.eliminarCodigoRequest request) {
+            return base.Channel.eliminarCodigo(request);
+        }
+        
+        public int eliminarCodigo(int id_codigo_atencion) {
+            ProyectoOOIA.GestionAtencionWS.eliminarCodigoRequest inValue = new ProyectoOOIA.GestionAtencionWS.eliminarCodigoRequest();
+            inValue.id_codigo_atencion = id_codigo_atencion;
+            ProyectoOOIA.GestionAtencionWS.eliminarCodigoResponse retVal = ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).eliminarCodigo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarCodigoResponse> ProyectoOOIA.GestionAtencionWS.GestionAtencionWS.eliminarCodigoAsync(ProyectoOOIA.GestionAtencionWS.eliminarCodigoRequest request) {
+            return base.Channel.eliminarCodigoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionAtencionWS.eliminarCodigoResponse> eliminarCodigoAsync(int id_codigo_atencion) {
+            ProyectoOOIA.GestionAtencionWS.eliminarCodigoRequest inValue = new ProyectoOOIA.GestionAtencionWS.eliminarCodigoRequest();
+            inValue.id_codigo_atencion = id_codigo_atencion;
+            return ((ProyectoOOIA.GestionAtencionWS.GestionAtencionWS)(this)).eliminarCodigoAsync(inValue);
         }
     }
 }

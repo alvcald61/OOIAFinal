@@ -159,7 +159,18 @@ public class GestionAtencionWS {
             System.out.println(e.getMessage());
         }
                 return resultado;
-    } 
+    }
+    
+    @WebMethod(operationName = "eliminarCodigo")
+    public int eliminarCodigo(@WebParam(name = "id_codigo_atencion") int id_codigo_atencion){
+        int resultado=0;
+        try {
+            resultado=this.daoCodigo.eliminar(id_codigo_atencion);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+                return resultado;
+    }
   
     @WebMethod(operationName = "listarHorarioAsesor")
     public ArrayList<HorarioAsesor> listarHorarioAsesor(@WebParam(name = "idAsesor") int idAsesor){

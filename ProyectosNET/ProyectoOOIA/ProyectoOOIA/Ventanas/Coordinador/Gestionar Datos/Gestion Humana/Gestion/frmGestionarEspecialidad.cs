@@ -117,7 +117,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             if (dgvEspecialidad.CurrentRow != null)
             {
                 especialidad = (GestionHumanaWS.especialidad)dgvEspecialidad.CurrentRow.DataBoundItem;
-                DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar este empleado?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar esta especialidad?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
                     int resultado = daoEspecialidad.eliminarEspecialidad(especialidad.id_especialidad);

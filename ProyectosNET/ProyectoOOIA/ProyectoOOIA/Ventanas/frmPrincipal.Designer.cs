@@ -35,6 +35,7 @@ namespace ProyectoOOIA.Ventanas
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.imagen = new OvalPictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.pnlProxEventos = new System.Windows.Forms.Panel();
             this.imagenes = new System.Windows.Forms.PictureBox();
@@ -47,13 +48,12 @@ namespace ProyectoOOIA.Ventanas
             this.pnlBody = new System.Windows.Forms.Panel();
             this.pnlImage = new System.Windows.Forms.Panel();
             this.pnlFoot = new System.Windows.Forms.Panel();
-            this.imagen = new OvalPictureBox();
             this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).BeginInit();
             this.pnlMenu.SuspendLayout();
             this.pnlBody.SuspendLayout();
             this.pnlImage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -123,6 +123,19 @@ namespace ProyectoOOIA.Ventanas
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // imagen
+            // 
+            this.imagen.BackColor = System.Drawing.Color.Transparent;
+            this.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imagen.Image = global::ProyectoOOIA.Properties.Resources.placeholder_profile;
+            this.imagen.Location = new System.Drawing.Point(20, 5);
+            this.imagen.Name = "imagen";
+            this.imagen.Size = new System.Drawing.Size(60, 60);
+            this.imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagen.TabIndex = 27;
+            this.imagen.TabStop = false;
+            // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
@@ -191,7 +204,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnInfo.ForeColor = System.Drawing.SystemColors.Control;
             this.btnInfo.Location = new System.Drawing.Point(248, 6);
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(138, 38);
+            this.btnInfo.Size = new System.Drawing.Size(147, 38);
             this.btnInfo.TabIndex = 2;
             this.btnInfo.Text = "Base de Datos";
             this.btnInfo.UseVisualStyleBackColor = true;
@@ -258,19 +271,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlFoot.Size = new System.Drawing.Size(984, 54);
             this.pnlFoot.TabIndex = 29;
             // 
-            // imagen
-            // 
-            this.imagen.BackColor = System.Drawing.Color.Transparent;
-            this.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imagen.Image = global::ProyectoOOIA.Properties.Resources.placeholder_profile;
-            this.imagen.Location = new System.Drawing.Point(20, 5);
-            this.imagen.Name = "imagen";
-            this.imagen.Size = new System.Drawing.Size(60, 60);
-            this.imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imagen.TabIndex = 27;
-            this.imagen.TabStop = false;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,12 +286,12 @@ namespace ProyectoOOIA.Ventanas
             this.Text = "Portal OOIA";
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.pnlBody.ResumeLayout(false);
             this.pnlBody.PerformLayout();
             this.pnlImage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             this.ResumeLayout(false);
 
         }

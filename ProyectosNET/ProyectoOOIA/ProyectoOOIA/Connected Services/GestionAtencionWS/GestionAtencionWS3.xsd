@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://services/" targetNamespace="http://services/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="eliminarCita" type="tns:eliminarCita" />
   <xs:element name="eliminarCitaResponse" type="tns:eliminarCitaResponse" />
+  <xs:element name="eliminarCodigo" type="tns:eliminarCodigo" />
+  <xs:element name="eliminarCodigoResponse" type="tns:eliminarCodigoResponse" />
   <xs:element name="eliminarHorario" type="tns:eliminarHorario" />
   <xs:element name="eliminarHorarioAsesor" type="tns:eliminarHorarioAsesor" />
   <xs:element name="eliminarHorarioAsesorResponse" type="tns:eliminarHorarioAsesorResponse" />
@@ -374,6 +376,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarHorarioAsesorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCodigo">
+    <xs:sequence>
+      <xs:element name="id_codigo_atencion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCodigoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

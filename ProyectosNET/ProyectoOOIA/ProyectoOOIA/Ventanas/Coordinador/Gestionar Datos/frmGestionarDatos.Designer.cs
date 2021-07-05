@@ -644,15 +644,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.axAcroPDF1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(0, 39);
+            this.axAcroPDF1.Location = new System.Drawing.Point(6, 39);
             this.axAcroPDF1.Name = "axAcroPDF1";
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(639, 447);
+            this.axAcroPDF1.Size = new System.Drawing.Size(647, 447);
             this.axAcroPDF1.TabIndex = 1;
             // 
             // btnDescargarPlantilla
             // 
-            this.btnDescargarPlantilla.Location = new System.Drawing.Point(275, 4);
+            this.btnDescargarPlantilla.Location = new System.Drawing.Point(525, 6);
             this.btnDescargarPlantilla.Name = "btnDescargarPlantilla";
             this.btnDescargarPlantilla.Size = new System.Drawing.Size(128, 29);
             this.btnDescargarPlantilla.TabIndex = 0;
