@@ -99,6 +99,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnHome
             // 
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.Image = global::ProyectoOOIA.Properties.Resources.arrowWhite;
             this.btnHome.Location = new System.Drawing.Point(16, 28);
             this.btnHome.Margin = new System.Windows.Forms.Padding(2);
@@ -235,9 +236,9 @@ namespace ProyectoOOIA.Ventanas
             this.label2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(400, -2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 21);
+            this.label2.Size = new System.Drawing.Size(186, 21);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Nombre del alumno";
+            this.label2.Text = "Nombre/Apellido del alumno";
             // 
             // cbTipoHorario
             // 
@@ -347,7 +348,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // Nombre
             // 
-            this.Nombre.HeaderText = "Nombre del Alumno";
+            this.Nombre.HeaderText = "Nombre Completo de Alumno";
             this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
@@ -373,7 +374,6 @@ namespace ProyectoOOIA.Ventanas
             this.llamada.Name = "llamada";
             this.llamada.ReadOnly = true;
             this.llamada.Text = "Iniciar Llamada";
-            
             // 
             // frmCitasAsesor
             // 

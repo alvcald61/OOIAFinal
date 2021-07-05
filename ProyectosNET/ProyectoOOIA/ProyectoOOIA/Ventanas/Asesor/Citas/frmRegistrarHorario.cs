@@ -33,6 +33,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             daoHorario = new GestionAtencionWS.GestionAtencionWSClient();
             loadHorario();
             pbCarga.Visible = false;
+            label1.Visible = false;
 
         }
 
@@ -138,7 +139,10 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
               MessageBoxButtons.YesNo, MessageBoxIcon.None);
                 if (dr == DialogResult.Yes)
                 {
+                    label1.Visible = true;
                     pbCarga.Visible = true;
+                    
+
                     pbCarga.Maximum = 90;
                     pbCarga.Value = 0;
                     for (int i = 0; i < 90; i++)

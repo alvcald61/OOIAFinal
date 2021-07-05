@@ -804,7 +804,7 @@ create procedure MODIFICAR_HORARIO_ASESOR(
     	in _estado varchar(50)
 )begin
 	update horario_asesor set fid_horario = _fid_horario, fid_asesor = _fid_asesor, estado = _estado
-    	where id_horario_asesor = _id_horario_asesor; 
+    	where id_horario_asesor = _id_horario_asesor or (fid_horario=_fid_horario and fid_asesor=_fid_asesor); 
 end$
 
 delimiter $

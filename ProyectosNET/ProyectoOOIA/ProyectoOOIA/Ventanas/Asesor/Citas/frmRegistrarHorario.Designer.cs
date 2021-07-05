@@ -69,12 +69,17 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1100 = new System.Windows.Forms.Label();
             this.lbl1030 = new System.Windows.Forms.Label();
             this.lbl1630 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnlSide.SuspendLayout();
             this.pnlLeyenda.SuspendLayout();
             this.pnlSchedule.SuspendLayout();
             this.tlpHorario.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -85,7 +90,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(814, 70);
+            this.pnlHeader.Size = new System.Drawing.Size(856, 70);
             this.pnlHeader.TabIndex = 19;
             // 
             // btnBack
@@ -114,9 +119,10 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             // 
             // pbCarga
             // 
-            this.pbCarga.Location = new System.Drawing.Point(21, 522);
+            this.pbCarga.Location = new System.Drawing.Point(55, 31);
             this.pbCarga.Name = "pbCarga";
             this.pbCarga.Size = new System.Drawing.Size(752, 23);
+            this.pbCarga.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pbCarga.TabIndex = 24;
             // 
             // pnlSide
@@ -125,9 +131,9 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.pnlSide.Controls.Add(this.btnModificar);
             this.pnlSide.Controls.Add(this.pnlLeyenda);
             this.pnlSide.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlSide.Location = new System.Drawing.Point(614, 70);
+            this.pnlSide.Location = new System.Drawing.Point(656, 0);
             this.pnlSide.Name = "pnlSide";
-            this.pnlSide.Size = new System.Drawing.Size(200, 471);
+            this.pnlSide.Size = new System.Drawing.Size(200, 445);
             this.pnlSide.TabIndex = 25;
             // 
             // btnCancelar
@@ -141,6 +147,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.btnCancelar.TabIndex = 26;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnModificar
             // 
@@ -153,6 +160,7 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.btnModificar.TabIndex = 25;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // pnlLeyenda
             // 
@@ -240,9 +248,9 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             // 
             this.pnlSchedule.Controls.Add(this.tlpHorario);
             this.pnlSchedule.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlSchedule.Location = new System.Drawing.Point(0, 70);
+            this.pnlSchedule.Location = new System.Drawing.Point(0, 0);
             this.pnlSchedule.Name = "pnlSchedule";
-            this.pnlSchedule.Size = new System.Drawing.Size(614, 471);
+            this.pnlSchedule.Size = new System.Drawing.Size(656, 445);
             this.pnlSchedule.TabIndex = 26;
             // 
             // tlpHorario
@@ -649,14 +657,43 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.lbl1630.Text = "4:30 pm";
             this.lbl1630.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pbCarga);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 515);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(856, 66);
+            this.panel1.TabIndex = 27;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pnlSchedule);
+            this.panel2.Controls.Add(this.pnlSide);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 70);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(856, 445);
+            this.panel2.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(376, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 21);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Actualizando Horario...";
+            // 
             // frmRegistrarHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 541);
-            this.Controls.Add(this.pnlSchedule);
-            this.Controls.Add(this.pnlSide);
-            this.Controls.Add(this.pbCarga);
+            this.ClientSize = new System.Drawing.Size(856, 581);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlHeader);
             this.Name = "frmRegistrarHorario";
             this.Text = "Horario de Disponibilidad";
@@ -669,6 +706,9 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
             this.pnlSchedule.ResumeLayout(false);
             this.tlpHorario.ResumeLayout(false);
             this.tlpHorario.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -714,5 +754,8 @@ namespace ProyectoOOIA.Ventanas.Asesor.Citas
         private System.Windows.Forms.Label lbl1100;
         private System.Windows.Forms.Label lbl1030;
         private System.Windows.Forms.Label lbl1630;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -62,6 +62,10 @@ namespace ProyectoOOIA.Ventanas
             txtCompromiso.Enabled = false;
             rbAsistio.Enabled = false;
             rbNoAsistio.Enabled = false;
+            cbCodigoAtencion.Text = cita.codigo_atencion.descripcion;
+            txtCompromiso.Text = cita.compromiso;
+            if (cita.asistio == 1) rbAsistio.Checked = true;
+            else rbNoAsistio.Checked = true;
             //cbCodigoAtencion.Text = this.cita.codigo_atencion.descripcion;
         }
 
@@ -77,6 +81,7 @@ namespace ProyectoOOIA.Ventanas
           
             rbAsistio.Enabled = true;
             rbNoAsistio.Enabled = true;
+            
             
 
         }
@@ -233,6 +238,7 @@ namespace ProyectoOOIA.Ventanas
                     txtCompromiso.ReadOnly = true;
                     rbAsistio.Enabled = false;
                     rbNoAsistio.Enabled = false;
+
                 }
                 else
                 {

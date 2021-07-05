@@ -279,9 +279,9 @@ namespace ProyectoOOIA.Ventanas
             foreach (cita aux in listaCitas)
             {
                 //si esta ocupado en esa semana
-                if (aux.fecha >= mes[numWeek - 1][0] && aux.fecha <= mes[numWeek - 1][1])
+                if (aux.fecha.Date >= mes[numWeek - 1][0].Date && aux.fecha.Date <= mes[numWeek - 1][1].Date)
                 {
-                    if (aux.fecha > DateTime.Now.Date)
+                    if (aux.fecha.Date > DateTime.Now.Date)
                     {
                         botones[aux.horario.id_horario - 1].BackColor = Color.MidnightBlue;
                         botones[aux.horario.id_horario - 1].Enabled = false;

@@ -27,14 +27,16 @@ namespace ProyectoOOIA.Ventanas
             daoCita = new GestionAtencionWS.GestionAtencionWSClient();
             dgvHorarioProf.AutoGenerateColumns = false;
             tipos_horarios = new BindingList<String>();
+            tipos_horarios.Add("Todos");
             tipos_horarios.Add("Pendiente");
             tipos_horarios.Add("Finalizada");
             tipos_horarios.Add("Cancelada");
             cbTipoHorario.DataSource = tipos_horarios;
+            rbTipoNombre.Checked = true;
             
             listarCitas(this.asesor.id_miembro_pucp, "");
             //inicialmente las citas activas y pendientes
-            listarCitasPendientes(this.asesor.id_miembro_pucp,"");
+            //listarCitasPendientes(this.asesor.id_miembro_pucp,"");
             
         }
 
@@ -96,6 +98,7 @@ namespace ProyectoOOIA.Ventanas
                (aux.ToList());
 
             citasCompletas = citasProfesor;
+            dgvHorarioProf.DataSource = citasCompletas;
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -119,16 +122,26 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnModificarHorario_Click(object sender, EventArgs e)
         {
-            
-             new frmCancelarCitaAsesor(dgvHorarioProf.CurrentRow.DataBoundItem as GestionAtencionWS.cita,asesor).ShowDialog();
+            if(dgvHorarioProf.CurrentRow.Index >=0)
+            {
+                if (dgvHorarioProf.Rows[dgvHorarioProf.CurrentRow.Index].Cells[5].Value == "Pendiente")
 
-            GestionAtencionWS.horarioAsesor horario = new GestionAtencionWS.horarioAsesor();
-            horario.horario = (dgvHorarioProf.CurrentRow.DataBoundItem as GestionAtencionWS.cita).horario;
-            horario.fid_asesor = asesor.id_miembro_pucp;
-            horario.estado = "disponible";
-            //MessageBox.Show(horario.horario.id_horario + " " + horario.id_horario_asesor);
-            //daoCita.modificarHorarioAsesorSinID(horario);
-            daoCita.modificarHorarioAsesor(horario);
+                {
+                    new frmCancelarCitaAsesor(dgvHorarioProf.CurrentRow.DataBoundItem as GestionAtencionWS.cita, asesor)
+                        .ShowDialog();
+
+                    GestionAtencionWS.horarioAsesor horario = new GestionAtencionWS.horarioAsesor();
+                    horario.horario = (dgvHorarioProf.CurrentRow.DataBoundItem as GestionAtencionWS.cita).horario;
+                    horario.fid_asesor = asesor.id_miembro_pucp;
+                    horario.estado = "disponible";
+                    //MessageBox.Show(horario.horario.id_horario + " " + horario.id_horario_asesor);
+                    //daoCita.modificarHorarioAsesorSinID(horario);
+                    daoCita.modificarHorarioAsesor(horario);
+                }
+                else
+                    MessageBox.Show("No se pueden cancelar citas finalizadas o canceladas", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
         }
 
@@ -138,7 +151,13 @@ namespace ProyectoOOIA.Ventanas
 
             if (rbTipoNombre.Checked == true)
             {
-               
+
+                if (cbTipoHorario.Text == "Todos" && tbNombre.Text != "")
+                    listarCitas(this.asesor.id_miembro_pucp, tbNombre.Text);
+
+                if (cbTipoHorario.Text == "Todos" && tbNombre.Text == "")
+                    listarCitas(this.asesor.id_miembro_pucp, "");
+
                 if (cbTipoHorario.Text == "Pendiente" && tbNombre.Text != "")
                     listarCitasPendientes(this.asesor.id_miembro_pucp, tbNombre.Text);
 

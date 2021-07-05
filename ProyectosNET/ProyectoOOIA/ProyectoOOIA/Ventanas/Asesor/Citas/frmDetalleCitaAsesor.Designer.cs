@@ -29,10 +29,10 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtHeader = new System.Windows.Forms.Label();
             this.tabDetalleCita = new System.Windows.Forms.TabControl();
             this.tabDatosAlumnos = new System.Windows.Forms.TabPage();
@@ -41,6 +41,7 @@ namespace ProyectoOOIA.Ventanas
             this.pImageAlumno = new System.Windows.Forms.PictureBox();
             this.lbEspecialidad = new System.Windows.Forms.Label();
             this.lblFechaNac = new System.Windows.Forms.Label();
+            this.txtFechaNac = new System.Windows.Forms.TextBox();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtEspecialidad = new System.Windows.Forms.TextBox();
@@ -62,17 +63,16 @@ namespace ProyectoOOIA.Ventanas
             this.btnDetEventosPrev = new System.Windows.Forms.Button();
             this.btnDetCitasPrev = new System.Windows.Forms.Button();
             this.dvgEventosPasados = new System.Windows.Forms.DataGridView();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dvgCitasPasadas = new System.Windows.Forms.DataGridView();
+            this.FechaCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MiembroOOIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEventosPrev = new System.Windows.Forms.Label();
             this.lblCitasPrev = new System.Windows.Forms.Label();
             this.lbNombre_eventos_cita = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MiembroOOIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtFechaNac = new System.Windows.Forms.TextBox();
             this.tabDetalleCita.SuspendLayout();
             this.tabDatosAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pImageAlumno)).BeginInit();
@@ -122,7 +122,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabDatosAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDatosAlumnos.Location = new System.Drawing.Point(4, 27);
             this.tabDatosAlumnos.Name = "tabDatosAlumnos";
-            this.tabDatosAlumnos.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabDatosAlumnos.Padding = new System.Windows.Forms.Padding(3);
             this.tabDatosAlumnos.Size = new System.Drawing.Size(792, 341);
             this.tabDatosAlumnos.TabIndex = 0;
             this.tabDatosAlumnos.Text = "Datos Alumno";
@@ -175,6 +175,16 @@ namespace ProyectoOOIA.Ventanas
             this.lblFechaNac.TabIndex = 37;
             this.lblFechaNac.Text = "Fecha de nacimiento";
             // 
+            // txtFechaNac
+            // 
+            this.txtFechaNac.Enabled = false;
+            this.txtFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaNac.Location = new System.Drawing.Point(149, 136);
+            this.txtFechaNac.Name = "txtFechaNac";
+            this.txtFechaNac.ReadOnly = true;
+            this.txtFechaNac.Size = new System.Drawing.Size(208, 24);
+            this.txtFechaNac.TabIndex = 38;
+            // 
             // lblDireccion
             // 
             this.lblDireccion.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -219,7 +229,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabFichaAtencion.Controls.Add(this.pnlScrollFicha);
             this.tabFichaAtencion.Location = new System.Drawing.Point(4, 27);
             this.tabFichaAtencion.Name = "tabFichaAtencion";
-            this.tabFichaAtencion.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabFichaAtencion.Padding = new System.Windows.Forms.Padding(3);
             this.tabFichaAtencion.Size = new System.Drawing.Size(792, 341);
             this.tabFichaAtencion.TabIndex = 1;
             this.tabFichaAtencion.Text = "Ficha de atencion";
@@ -250,7 +260,7 @@ namespace ProyectoOOIA.Ventanas
             this.cbCodigoAtencion.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCodigoAtencion.FormattingEnabled = true;
             this.cbCodigoAtencion.Location = new System.Drawing.Point(6, 68);
-            this.cbCodigoAtencion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbCodigoAtencion.Margin = new System.Windows.Forms.Padding(2);
             this.cbCodigoAtencion.Name = "cbCodigoAtencion";
             this.cbCodigoAtencion.Size = new System.Drawing.Size(378, 26);
             this.cbCodigoAtencion.TabIndex = 60;
@@ -259,7 +269,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(228)))), ((int)(((byte)(75)))));
             this.btnGuardar.Location = new System.Drawing.Point(400, 68);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(86, 28);
             this.btnGuardar.TabIndex = 59;
@@ -292,7 +302,7 @@ namespace ProyectoOOIA.Ventanas
             this.rbNoAsistio.Enabled = false;
             this.rbNoAsistio.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNoAsistio.Location = new System.Drawing.Point(198, 216);
-            this.rbNoAsistio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbNoAsistio.Margin = new System.Windows.Forms.Padding(2);
             this.rbNoAsistio.Name = "rbNoAsistio";
             this.rbNoAsistio.Size = new System.Drawing.Size(48, 25);
             this.rbNoAsistio.TabIndex = 56;
@@ -306,7 +316,7 @@ namespace ProyectoOOIA.Ventanas
             this.rbAsistio.Enabled = false;
             this.rbAsistio.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbAsistio.Location = new System.Drawing.Point(134, 216);
-            this.rbAsistio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbAsistio.Margin = new System.Windows.Forms.Padding(2);
             this.rbAsistio.Name = "rbAsistio";
             this.rbAsistio.Size = new System.Drawing.Size(38, 25);
             this.rbAsistio.TabIndex = 55;
@@ -405,14 +415,14 @@ namespace ProyectoOOIA.Ventanas
             this.dvgEventosPasados.AllowUserToAddRows = false;
             this.dvgEventosPasados.AllowUserToDeleteRows = false;
             this.dvgEventosPasados.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgEventosPasados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgEventosPasados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dvgEventosPasados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgEventosPasados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
@@ -423,27 +433,43 @@ namespace ProyectoOOIA.Ventanas
             this.dvgEventosPasados.ReadOnly = true;
             this.dvgEventosPasados.RowHeadersVisible = false;
             this.dvgEventosPasados.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.dvgEventosPasados.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dvgEventosPasados.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dvgEventosPasados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgEventosPasados.Size = new System.Drawing.Size(520, 120);
             this.dvgEventosPasados.TabIndex = 52;
             this.dvgEventosPasados.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgEventosPasados_CellFormatting);
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha del Evento";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 160;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.HeaderText = "Nombre del Evento";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // dvgCitasPasadas
             // 
             this.dvgCitasPasadas.AllowUserToAddRows = false;
             this.dvgCitasPasadas.AllowUserToDeleteRows = false;
             this.dvgCitasPasadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgCitasPasadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgCitasPasadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dvgCitasPasadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgCitasPasadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FechaCita,
@@ -454,13 +480,29 @@ namespace ProyectoOOIA.Ventanas
             this.dvgCitasPasadas.ReadOnly = true;
             this.dvgCitasPasadas.RowHeadersVisible = false;
             this.dvgCitasPasadas.RowHeadersWidth = 51;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            this.dvgCitasPasadas.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dvgCitasPasadas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dvgCitasPasadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgCitasPasadas.Size = new System.Drawing.Size(520, 114);
             this.dvgCitasPasadas.TabIndex = 51;
             this.dvgCitasPasadas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgCitasPasadas_CellFormatting);
+            // 
+            // FechaCita
+            // 
+            this.FechaCita.HeaderText = "Fecha de la cita";
+            this.FechaCita.MinimumWidth = 6;
+            this.FechaCita.Name = "FechaCita";
+            this.FechaCita.ReadOnly = true;
+            this.FechaCita.Width = 180;
+            // 
+            // MiembroOOIA
+            // 
+            this.MiembroOOIA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MiembroOOIA.HeaderText = "Tutor/Psicólogo";
+            this.MiembroOOIA.MinimumWidth = 6;
+            this.MiembroOOIA.Name = "MiembroOOIA";
+            this.MiembroOOIA.ReadOnly = true;
             // 
             // lblEventosPrev
             // 
@@ -491,9 +533,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnBack
             // 
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Image = global::ProyectoOOIA.Properties.Resources.arrowWhite;
             this.btnBack.Location = new System.Drawing.Point(16, 28);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(25, 25);
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -511,48 +554,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(800, 70);
             this.pnlHeader.TabIndex = 10;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha del Evento";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 160;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.HeaderText = "Nombre del Evento";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // FechaCita
-            // 
-            this.FechaCita.HeaderText = "Fecha de la cita";
-            this.FechaCita.MinimumWidth = 6;
-            this.FechaCita.Name = "FechaCita";
-            this.FechaCita.ReadOnly = true;
-            this.FechaCita.Width = 180;
-            // 
-            // MiembroOOIA
-            // 
-            this.MiembroOOIA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MiembroOOIA.HeaderText = "Tutor/Psicólogo";
-            this.MiembroOOIA.MinimumWidth = 6;
-            this.MiembroOOIA.Name = "MiembroOOIA";
-            this.MiembroOOIA.ReadOnly = true;
-            // 
-            // txtFechaNac
-            // 
-            this.txtFechaNac.Enabled = false;
-            this.txtFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechaNac.Location = new System.Drawing.Point(149, 136);
-            this.txtFechaNac.Name = "txtFechaNac";
-            this.txtFechaNac.ReadOnly = true;
-            this.txtFechaNac.Size = new System.Drawing.Size(208, 24);
-            this.txtFechaNac.TabIndex = 38;
             // 
             // frmDetalleCitaAsesor
             // 

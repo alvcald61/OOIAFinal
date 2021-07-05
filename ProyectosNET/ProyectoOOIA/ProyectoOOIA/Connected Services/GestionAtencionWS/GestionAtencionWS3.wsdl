@@ -5,53 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/AuxiliarWS/GestionAtencionWS?xsd=1" namespace="http://services/" />
     </xsd:schema>
   </types>
-  <message name="listarCitaHistoricoXNombre">
-    <part name="parameters" element="tns:listarCitaHistoricoXNombre" />
+  <message name="validar_registro_alumno_cita">
+    <part name="parameters" element="tns:validar_registro_alumno_cita" />
   </message>
-  <message name="listarCitaHistoricoXNombreResponse">
-    <part name="parameters" element="tns:listarCitaHistoricoXNombreResponse" />
-  </message>
-  <message name="modificarHorarioAsesor">
-    <part name="parameters" element="tns:modificarHorarioAsesor" />
-  </message>
-  <message name="modificarHorarioAsesorResponse">
-    <part name="parameters" element="tns:modificarHorarioAsesorResponse" />
-  </message>
-  <message name="modificarHorarioAsesorSinID">
-    <part name="parameters" element="tns:modificarHorarioAsesorSinID" />
-  </message>
-  <message name="modificarHorarioAsesorSinIDResponse">
-    <part name="parameters" element="tns:modificarHorarioAsesorSinIDResponse" />
-  </message>
-  <message name="eliminarHorarioAsesor">
-    <part name="parameters" element="tns:eliminarHorarioAsesor" />
-  </message>
-  <message name="eliminarHorarioAsesorResponse">
-    <part name="parameters" element="tns:eliminarHorarioAsesorResponse" />
-  </message>
-  <message name="insertarHorarioAsesor">
-    <part name="parameters" element="tns:insertarHorarioAsesor" />
-  </message>
-  <message name="insertarHorarioAsesorResponse">
-    <part name="parameters" element="tns:insertarHorarioAsesorResponse" />
-  </message>
-  <message name="listarCitasProfesor">
-    <part name="parameters" element="tns:listarCitasProfesor" />
-  </message>
-  <message name="listarCitasProfesorResponse">
-    <part name="parameters" element="tns:listarCitasProfesorResponse" />
-  </message>
-  <message name="listarHorarioAsesor">
-    <part name="parameters" element="tns:listarHorarioAsesor" />
-  </message>
-  <message name="listarHorarioAsesorResponse">
-    <part name="parameters" element="tns:listarHorarioAsesorResponse" />
-  </message>
-  <message name="listarEncuestaxAsesor">
-    <part name="parameters" element="tns:listarEncuestaxAsesor" />
-  </message>
-  <message name="listarEncuestaxAsesorResponse">
-    <part name="parameters" element="tns:listarEncuestaxAsesorResponse" />
+  <message name="validar_registro_alumno_citaResponse">
+    <part name="parameters" element="tns:validar_registro_alumno_citaResponse" />
   </message>
   <message name="validar_usuario_unico">
     <part name="parameters" element="tns:validar_usuario_unico" />
@@ -59,23 +17,23 @@
   <message name="validar_usuario_unicoResponse">
     <part name="parameters" element="tns:validar_usuario_unicoResponse" />
   </message>
+  <message name="insertarHorarioAsesor">
+    <part name="parameters" element="tns:insertarHorarioAsesor" />
+  </message>
+  <message name="insertarHorarioAsesorResponse">
+    <part name="parameters" element="tns:insertarHorarioAsesorResponse" />
+  </message>
+  <message name="modificarHorarioAsesorSinID">
+    <part name="parameters" element="tns:modificarHorarioAsesorSinID" />
+  </message>
+  <message name="modificarHorarioAsesorSinIDResponse">
+    <part name="parameters" element="tns:modificarHorarioAsesorSinIDResponse" />
+  </message>
   <message name="listarEncuestaxAlumno">
     <part name="parameters" element="tns:listarEncuestaxAlumno" />
   </message>
   <message name="listarEncuestaxAlumnoResponse">
     <part name="parameters" element="tns:listarEncuestaxAlumnoResponse" />
-  </message>
-  <message name="insertar_links_reunion">
-    <part name="parameters" element="tns:insertar_links_reunion" />
-  </message>
-  <message name="insertar_links_reunionResponse">
-    <part name="parameters" element="tns:insertar_links_reunionResponse" />
-  </message>
-  <message name="insertarEncuesta">
-    <part name="parameters" element="tns:insertarEncuesta" />
-  </message>
-  <message name="insertarEncuestaResponse">
-    <part name="parameters" element="tns:insertarEncuestaResponse" />
   </message>
   <message name="listarCitaPendiente">
     <part name="parameters" element="tns:listarCitaPendiente" />
@@ -83,17 +41,77 @@
   <message name="listarCitaPendienteResponse">
     <part name="parameters" element="tns:listarCitaPendienteResponse" />
   </message>
+  <message name="eliminarHorarioAsesor">
+    <part name="parameters" element="tns:eliminarHorarioAsesor" />
+  </message>
+  <message name="eliminarHorarioAsesorResponse">
+    <part name="parameters" element="tns:eliminarHorarioAsesorResponse" />
+  </message>
+  <message name="modificarHorarioAsesor">
+    <part name="parameters" element="tns:modificarHorarioAsesor" />
+  </message>
+  <message name="modificarHorarioAsesorResponse">
+    <part name="parameters" element="tns:modificarHorarioAsesorResponse" />
+  </message>
+  <message name="listarHorarioAsesor">
+    <part name="parameters" element="tns:listarHorarioAsesor" />
+  </message>
+  <message name="listarHorarioAsesorResponse">
+    <part name="parameters" element="tns:listarHorarioAsesorResponse" />
+  </message>
+  <message name="listarCitaHistoricoXNombre">
+    <part name="parameters" element="tns:listarCitaHistoricoXNombre" />
+  </message>
+  <message name="listarCitaHistoricoXNombreResponse">
+    <part name="parameters" element="tns:listarCitaHistoricoXNombreResponse" />
+  </message>
+  <message name="listarCitasProfesor">
+    <part name="parameters" element="tns:listarCitasProfesor" />
+  </message>
+  <message name="listarCitasProfesorResponse">
+    <part name="parameters" element="tns:listarCitasProfesorResponse" />
+  </message>
+  <message name="insertar_links_reunion">
+    <part name="parameters" element="tns:insertar_links_reunion" />
+  </message>
+  <message name="insertar_links_reunionResponse">
+    <part name="parameters" element="tns:insertar_links_reunionResponse" />
+  </message>
   <message name="listarCitaHistorico">
     <part name="parameters" element="tns:listarCitaHistorico" />
   </message>
   <message name="listarCitaHistoricoResponse">
     <part name="parameters" element="tns:listarCitaHistoricoResponse" />
   </message>
-  <message name="listarCodigo">
-    <part name="parameters" element="tns:listarCodigo" />
+  <message name="listarEncuestaxAsesor">
+    <part name="parameters" element="tns:listarEncuestaxAsesor" />
   </message>
-  <message name="listarCodigoResponse">
-    <part name="parameters" element="tns:listarCodigoResponse" />
+  <message name="listarEncuestaxAsesorResponse">
+    <part name="parameters" element="tns:listarEncuestaxAsesorResponse" />
+  </message>
+  <message name="insertarCita">
+    <part name="parameters" element="tns:insertarCita" />
+  </message>
+  <message name="insertarCitaResponse">
+    <part name="parameters" element="tns:insertarCitaResponse" />
+  </message>
+  <message name="eliminarCita">
+    <part name="parameters" element="tns:eliminarCita" />
+  </message>
+  <message name="eliminarCitaResponse">
+    <part name="parameters" element="tns:eliminarCitaResponse" />
+  </message>
+  <message name="modificarCita">
+    <part name="parameters" element="tns:modificarCita" />
+  </message>
+  <message name="modificarCitaResponse">
+    <part name="parameters" element="tns:modificarCitaResponse" />
+  </message>
+  <message name="insertarEncuesta">
+    <part name="parameters" element="tns:insertarEncuesta" />
+  </message>
+  <message name="insertarEncuestaResponse">
+    <part name="parameters" element="tns:insertarEncuestaResponse" />
   </message>
   <message name="insertarCodigo">
     <part name="parameters" element="tns:insertarCodigo" />
@@ -107,35 +125,11 @@
   <message name="modificarCodigoResponse">
     <part name="parameters" element="tns:modificarCodigoResponse" />
   </message>
-  <message name="modificarCita">
-    <part name="parameters" element="tns:modificarCita" />
-  </message>
-  <message name="modificarCitaResponse">
-    <part name="parameters" element="tns:modificarCitaResponse" />
-  </message>
-  <message name="eliminarCita">
-    <part name="parameters" element="tns:eliminarCita" />
-  </message>
-  <message name="eliminarCitaResponse">
-    <part name="parameters" element="tns:eliminarCitaResponse" />
-  </message>
-  <message name="insertarCita">
-    <part name="parameters" element="tns:insertarCita" />
-  </message>
-  <message name="insertarCitaResponse">
-    <part name="parameters" element="tns:insertarCitaResponse" />
-  </message>
   <message name="eliminarHorario">
     <part name="parameters" element="tns:eliminarHorario" />
   </message>
   <message name="eliminarHorarioResponse">
     <part name="parameters" element="tns:eliminarHorarioResponse" />
-  </message>
-  <message name="listarHorario">
-    <part name="parameters" element="tns:listarHorario" />
-  </message>
-  <message name="listarHorarioResponse">
-    <part name="parameters" element="tns:listarHorarioResponse" />
   </message>
   <message name="modificarHorario">
     <part name="parameters" element="tns:modificarHorario" />
@@ -149,72 +143,90 @@
   <message name="insertarHorarioResponse">
     <part name="parameters" element="tns:insertarHorarioResponse" />
   </message>
-  <message name="validar_registro_alumno_cita">
-    <part name="parameters" element="tns:validar_registro_alumno_cita" />
+  <message name="listarHorario">
+    <part name="parameters" element="tns:listarHorario" />
   </message>
-  <message name="validar_registro_alumno_citaResponse">
-    <part name="parameters" element="tns:validar_registro_alumno_citaResponse" />
+  <message name="listarHorarioResponse">
+    <part name="parameters" element="tns:listarHorarioResponse" />
+  </message>
+  <message name="listarCodigo">
+    <part name="parameters" element="tns:listarCodigo" />
+  </message>
+  <message name="listarCodigoResponse">
+    <part name="parameters" element="tns:listarCodigoResponse" />
   </message>
   <portType name="GestionAtencionWS">
-    <operation name="listarCitaHistoricoXNombre">
-      <input wsam:Action="http://services/GestionAtencionWS/listarCitaHistoricoXNombreRequest" message="tns:listarCitaHistoricoXNombre" />
-      <output wsam:Action="http://services/GestionAtencionWS/listarCitaHistoricoXNombreResponse" message="tns:listarCitaHistoricoXNombreResponse" />
-    </operation>
-    <operation name="modificarHorarioAsesor">
-      <input wsam:Action="http://services/GestionAtencionWS/modificarHorarioAsesorRequest" message="tns:modificarHorarioAsesor" />
-      <output wsam:Action="http://services/GestionAtencionWS/modificarHorarioAsesorResponse" message="tns:modificarHorarioAsesorResponse" />
-    </operation>
-    <operation name="modificarHorarioAsesorSinID">
-      <input wsam:Action="http://services/GestionAtencionWS/modificarHorarioAsesorSinIDRequest" message="tns:modificarHorarioAsesorSinID" />
-      <output wsam:Action="http://services/GestionAtencionWS/modificarHorarioAsesorSinIDResponse" message="tns:modificarHorarioAsesorSinIDResponse" />
-    </operation>
-    <operation name="eliminarHorarioAsesor">
-      <input wsam:Action="http://services/GestionAtencionWS/eliminarHorarioAsesorRequest" message="tns:eliminarHorarioAsesor" />
-      <output wsam:Action="http://services/GestionAtencionWS/eliminarHorarioAsesorResponse" message="tns:eliminarHorarioAsesorResponse" />
-    </operation>
-    <operation name="insertarHorarioAsesor">
-      <input wsam:Action="http://services/GestionAtencionWS/insertarHorarioAsesorRequest" message="tns:insertarHorarioAsesor" />
-      <output wsam:Action="http://services/GestionAtencionWS/insertarHorarioAsesorResponse" message="tns:insertarHorarioAsesorResponse" />
-    </operation>
-    <operation name="listarCitasProfesor">
-      <input wsam:Action="http://services/GestionAtencionWS/listarCitasProfesorRequest" message="tns:listarCitasProfesor" />
-      <output wsam:Action="http://services/GestionAtencionWS/listarCitasProfesorResponse" message="tns:listarCitasProfesorResponse" />
-    </operation>
-    <operation name="listarHorarioAsesor">
-      <input wsam:Action="http://services/GestionAtencionWS/listarHorarioAsesorRequest" message="tns:listarHorarioAsesor" />
-      <output wsam:Action="http://services/GestionAtencionWS/listarHorarioAsesorResponse" message="tns:listarHorarioAsesorResponse" />
-    </operation>
-    <operation name="listarEncuestaxAsesor">
-      <input wsam:Action="http://services/GestionAtencionWS/listarEncuestaxAsesorRequest" message="tns:listarEncuestaxAsesor" />
-      <output wsam:Action="http://services/GestionAtencionWS/listarEncuestaxAsesorResponse" message="tns:listarEncuestaxAsesorResponse" />
+    <operation name="validar_registro_alumno_cita">
+      <input wsam:Action="http://services/GestionAtencionWS/validar_registro_alumno_citaRequest" message="tns:validar_registro_alumno_cita" />
+      <output wsam:Action="http://services/GestionAtencionWS/validar_registro_alumno_citaResponse" message="tns:validar_registro_alumno_citaResponse" />
     </operation>
     <operation name="validar_usuario_unico">
       <input wsam:Action="http://services/GestionAtencionWS/validar_usuario_unicoRequest" message="tns:validar_usuario_unico" />
       <output wsam:Action="http://services/GestionAtencionWS/validar_usuario_unicoResponse" message="tns:validar_usuario_unicoResponse" />
     </operation>
+    <operation name="insertarHorarioAsesor">
+      <input wsam:Action="http://services/GestionAtencionWS/insertarHorarioAsesorRequest" message="tns:insertarHorarioAsesor" />
+      <output wsam:Action="http://services/GestionAtencionWS/insertarHorarioAsesorResponse" message="tns:insertarHorarioAsesorResponse" />
+    </operation>
+    <operation name="modificarHorarioAsesorSinID">
+      <input wsam:Action="http://services/GestionAtencionWS/modificarHorarioAsesorSinIDRequest" message="tns:modificarHorarioAsesorSinID" />
+      <output wsam:Action="http://services/GestionAtencionWS/modificarHorarioAsesorSinIDResponse" message="tns:modificarHorarioAsesorSinIDResponse" />
+    </operation>
     <operation name="listarEncuestaxAlumno">
       <input wsam:Action="http://services/GestionAtencionWS/listarEncuestaxAlumnoRequest" message="tns:listarEncuestaxAlumno" />
       <output wsam:Action="http://services/GestionAtencionWS/listarEncuestaxAlumnoResponse" message="tns:listarEncuestaxAlumnoResponse" />
-    </operation>
-    <operation name="insertar_links_reunion">
-      <input wsam:Action="http://services/GestionAtencionWS/insertar_links_reunionRequest" message="tns:insertar_links_reunion" />
-      <output wsam:Action="http://services/GestionAtencionWS/insertar_links_reunionResponse" message="tns:insertar_links_reunionResponse" />
-    </operation>
-    <operation name="insertarEncuesta">
-      <input wsam:Action="http://services/GestionAtencionWS/insertarEncuestaRequest" message="tns:insertarEncuesta" />
-      <output wsam:Action="http://services/GestionAtencionWS/insertarEncuestaResponse" message="tns:insertarEncuestaResponse" />
     </operation>
     <operation name="listarCitaPendiente">
       <input wsam:Action="http://services/GestionAtencionWS/listarCitaPendienteRequest" message="tns:listarCitaPendiente" />
       <output wsam:Action="http://services/GestionAtencionWS/listarCitaPendienteResponse" message="tns:listarCitaPendienteResponse" />
     </operation>
+    <operation name="eliminarHorarioAsesor">
+      <input wsam:Action="http://services/GestionAtencionWS/eliminarHorarioAsesorRequest" message="tns:eliminarHorarioAsesor" />
+      <output wsam:Action="http://services/GestionAtencionWS/eliminarHorarioAsesorResponse" message="tns:eliminarHorarioAsesorResponse" />
+    </operation>
+    <operation name="modificarHorarioAsesor">
+      <input wsam:Action="http://services/GestionAtencionWS/modificarHorarioAsesorRequest" message="tns:modificarHorarioAsesor" />
+      <output wsam:Action="http://services/GestionAtencionWS/modificarHorarioAsesorResponse" message="tns:modificarHorarioAsesorResponse" />
+    </operation>
+    <operation name="listarHorarioAsesor">
+      <input wsam:Action="http://services/GestionAtencionWS/listarHorarioAsesorRequest" message="tns:listarHorarioAsesor" />
+      <output wsam:Action="http://services/GestionAtencionWS/listarHorarioAsesorResponse" message="tns:listarHorarioAsesorResponse" />
+    </operation>
+    <operation name="listarCitaHistoricoXNombre">
+      <input wsam:Action="http://services/GestionAtencionWS/listarCitaHistoricoXNombreRequest" message="tns:listarCitaHistoricoXNombre" />
+      <output wsam:Action="http://services/GestionAtencionWS/listarCitaHistoricoXNombreResponse" message="tns:listarCitaHistoricoXNombreResponse" />
+    </operation>
+    <operation name="listarCitasProfesor">
+      <input wsam:Action="http://services/GestionAtencionWS/listarCitasProfesorRequest" message="tns:listarCitasProfesor" />
+      <output wsam:Action="http://services/GestionAtencionWS/listarCitasProfesorResponse" message="tns:listarCitasProfesorResponse" />
+    </operation>
+    <operation name="insertar_links_reunion">
+      <input wsam:Action="http://services/GestionAtencionWS/insertar_links_reunionRequest" message="tns:insertar_links_reunion" />
+      <output wsam:Action="http://services/GestionAtencionWS/insertar_links_reunionResponse" message="tns:insertar_links_reunionResponse" />
+    </operation>
     <operation name="listarCitaHistorico">
       <input wsam:Action="http://services/GestionAtencionWS/listarCitaHistoricoRequest" message="tns:listarCitaHistorico" />
       <output wsam:Action="http://services/GestionAtencionWS/listarCitaHistoricoResponse" message="tns:listarCitaHistoricoResponse" />
     </operation>
-    <operation name="listarCodigo">
-      <input wsam:Action="http://services/GestionAtencionWS/listarCodigoRequest" message="tns:listarCodigo" />
-      <output wsam:Action="http://services/GestionAtencionWS/listarCodigoResponse" message="tns:listarCodigoResponse" />
+    <operation name="listarEncuestaxAsesor">
+      <input wsam:Action="http://services/GestionAtencionWS/listarEncuestaxAsesorRequest" message="tns:listarEncuestaxAsesor" />
+      <output wsam:Action="http://services/GestionAtencionWS/listarEncuestaxAsesorResponse" message="tns:listarEncuestaxAsesorResponse" />
+    </operation>
+    <operation name="insertarCita">
+      <input wsam:Action="http://services/GestionAtencionWS/insertarCitaRequest" message="tns:insertarCita" />
+      <output wsam:Action="http://services/GestionAtencionWS/insertarCitaResponse" message="tns:insertarCitaResponse" />
+    </operation>
+    <operation name="eliminarCita">
+      <input wsam:Action="http://services/GestionAtencionWS/eliminarCitaRequest" message="tns:eliminarCita" />
+      <output wsam:Action="http://services/GestionAtencionWS/eliminarCitaResponse" message="tns:eliminarCitaResponse" />
+    </operation>
+    <operation name="modificarCita">
+      <input wsam:Action="http://services/GestionAtencionWS/modificarCitaRequest" message="tns:modificarCita" />
+      <output wsam:Action="http://services/GestionAtencionWS/modificarCitaResponse" message="tns:modificarCitaResponse" />
+    </operation>
+    <operation name="insertarEncuesta">
+      <input wsam:Action="http://services/GestionAtencionWS/insertarEncuestaRequest" message="tns:insertarEncuesta" />
+      <output wsam:Action="http://services/GestionAtencionWS/insertarEncuestaResponse" message="tns:insertarEncuestaResponse" />
     </operation>
     <operation name="insertarCodigo">
       <input wsam:Action="http://services/GestionAtencionWS/insertarCodigoRequest" message="tns:insertarCodigo" />
@@ -224,25 +236,9 @@
       <input wsam:Action="http://services/GestionAtencionWS/modificarCodigoRequest" message="tns:modificarCodigo" />
       <output wsam:Action="http://services/GestionAtencionWS/modificarCodigoResponse" message="tns:modificarCodigoResponse" />
     </operation>
-    <operation name="modificarCita">
-      <input wsam:Action="http://services/GestionAtencionWS/modificarCitaRequest" message="tns:modificarCita" />
-      <output wsam:Action="http://services/GestionAtencionWS/modificarCitaResponse" message="tns:modificarCitaResponse" />
-    </operation>
-    <operation name="eliminarCita">
-      <input wsam:Action="http://services/GestionAtencionWS/eliminarCitaRequest" message="tns:eliminarCita" />
-      <output wsam:Action="http://services/GestionAtencionWS/eliminarCitaResponse" message="tns:eliminarCitaResponse" />
-    </operation>
-    <operation name="insertarCita">
-      <input wsam:Action="http://services/GestionAtencionWS/insertarCitaRequest" message="tns:insertarCita" />
-      <output wsam:Action="http://services/GestionAtencionWS/insertarCitaResponse" message="tns:insertarCitaResponse" />
-    </operation>
     <operation name="eliminarHorario">
       <input wsam:Action="http://services/GestionAtencionWS/eliminarHorarioRequest" message="tns:eliminarHorario" />
       <output wsam:Action="http://services/GestionAtencionWS/eliminarHorarioResponse" message="tns:eliminarHorarioResponse" />
-    </operation>
-    <operation name="listarHorario">
-      <input wsam:Action="http://services/GestionAtencionWS/listarHorarioRequest" message="tns:listarHorario" />
-      <output wsam:Action="http://services/GestionAtencionWS/listarHorarioResponse" message="tns:listarHorarioResponse" />
     </operation>
     <operation name="modificarHorario">
       <input wsam:Action="http://services/GestionAtencionWS/modificarHorarioRequest" message="tns:modificarHorario" />
@@ -252,77 +248,18 @@
       <input wsam:Action="http://services/GestionAtencionWS/insertarHorarioRequest" message="tns:insertarHorario" />
       <output wsam:Action="http://services/GestionAtencionWS/insertarHorarioResponse" message="tns:insertarHorarioResponse" />
     </operation>
-    <operation name="validar_registro_alumno_cita">
-      <input wsam:Action="http://services/GestionAtencionWS/validar_registro_alumno_citaRequest" message="tns:validar_registro_alumno_cita" />
-      <output wsam:Action="http://services/GestionAtencionWS/validar_registro_alumno_citaResponse" message="tns:validar_registro_alumno_citaResponse" />
+    <operation name="listarHorario">
+      <input wsam:Action="http://services/GestionAtencionWS/listarHorarioRequest" message="tns:listarHorario" />
+      <output wsam:Action="http://services/GestionAtencionWS/listarHorarioResponse" message="tns:listarHorarioResponse" />
+    </operation>
+    <operation name="listarCodigo">
+      <input wsam:Action="http://services/GestionAtencionWS/listarCodigoRequest" message="tns:listarCodigo" />
+      <output wsam:Action="http://services/GestionAtencionWS/listarCodigoResponse" message="tns:listarCodigoResponse" />
     </operation>
   </portType>
   <binding name="GestionAtencionWSPortBinding" type="tns:GestionAtencionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarCitaHistoricoXNombre">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarHorarioAsesor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarHorarioAsesorSinID">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarHorarioAsesor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarHorarioAsesor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarCitasProfesor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarHorarioAsesor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarEncuestaxAsesor">
+    <operation name="validar_registro_alumno_cita">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -340,25 +277,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="insertarHorarioAsesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarHorarioAsesorSinID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarEncuestaxAlumno">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertar_links_reunion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarEncuesta">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -376,6 +313,60 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="eliminarHorarioAsesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarHorarioAsesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarHorarioAsesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCitaHistoricoXNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCitasProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertar_links_reunion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarCitaHistorico">
       <soap:operation soapAction="" />
       <input>
@@ -385,7 +376,43 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarCodigo">
+    <operation name="listarEncuestaxAsesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEncuesta">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -412,43 +439,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarCita">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarCita">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarCita">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarHorario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarHorario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -475,7 +466,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="validar_registro_alumno_cita">
+    <operation name="listarHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCodigo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
